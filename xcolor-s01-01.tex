@@ -27,6 +27,7 @@
 
 
 
+
 % ---------------------------------------
 % MARGINS
 % ---------------------------------------
@@ -58,6 +59,13 @@
 
 
 
+% ---------------------------------------
+% Packages for scientific writing
+% ---------------------------------------
+
+
+
+
 
 
 
@@ -65,16 +73,6 @@
 % Packages written by us
 % ---------------------------------------
 % \usepackage{demopack}
-
-
-
-
-
-
-
-% ---------------------------------------
-% Packages for scientific writing
-% ---------------------------------------
 
 
 
@@ -167,18 +165,29 @@
 
 \tikz \filldraw[fill=-green!40!yellow] (0,0) rectangle (0.485,0.3);
 
-% \color{rgb:-green!40!yellow:3;green!40!yellow:2;red:1}
+% \color{}
 % \tikz \filldraw[fill=red] (0,0) rectangle (0.485,0.3);
 
 $3 \times$ \tikz \filldraw[fill=-green!40!yellow] (0,0) rectangle (0.485,0.3);
 $+ 2 \times$ \tikz \filldraw[fill=green!40!yellow] (0,0) rectangle (0.485,0.3);
 $+ 1 \times$ \tikz \filldraw[fill=red] (0,0) rectangle (0.485,0.3);
-= \red{????}
+= \tikz \filldraw[fill={rgb:-green!40!yellow,3;green!40!yellow,2;red,1}]
+(0,0) rectangle (0.485,0.3);
 
-Light with wave length $485$ nm has color: \red{???}% \tikz \filldraw[fill=\color[wave]{485}] (0,0) rectangle (0.485,0.3);
+% \definecolor{}
+Light with wave length $485$ nm has color: % \tikz \filldraw[fill={\color[wave]{485}}] (0,0) rectangle (0.485,0.3);
 
+\textcolor[cmy]{0.7,0.5,0.3}{foo} \textcolor[HTML]{AFFE90}{bar}
 
-
+\tikz \filldraw[fill=red] (0,0) rectangle (0.485,0.3);
+\tikz \filldraw[fill=-red] (0,0) rectangle (0.485,0.3);
+\tikz \filldraw[fill={--red!50!green!12.345}] (0,0) rectangle (0.485,0.3);
+\tikz \filldraw[fill=red!50!green!12.345] (0,0) rectangle (0.485,0.3);
+\tikz \filldraw[fill=-red!50!green!12.345] (0,0) rectangle (0.485,0.3);
+\tikz \filldraw[fill=red!50!green!20!blue] (0,0) rectangle (0.485,0.3);
+\tikz \filldraw[fill={rgb:red,1}] (0,0) rectangle (0.485,0.3);
+\tikz \filldraw[fill={cmyk:red,1;-green!25!blue!60,11.25;blue,-2}]
+(0,0) rectangle (0.485,0.3);
 
 
 
