@@ -1,0 +1,350 @@
+% ####################################################################
+% Author: Kamil Ziemian
+% ####################################################################
+
+% ---------------------------------------------------------------------
+% Basic configuraton of LaTeX document and Polish language
+% ---------------------------------------------------------------------
+\RequirePackage[l2tabu, orthodox]{nag}  % Find out deprecated part of LaTeX.
+% More information in l2tabu English version.
+
+
+\documentclass[a4paper,11pt]{article}
+% {rozmiar papieru, rozmiar fontu}[klasa dokumentu]
+\usepackage[utf8]{inputenc} % Włączenie kodowania UTF-8, co daje dostęp
+% do polskich znaków.
+\usepackage{lmodern} % Wprowadza fonty Latin Modern.
+\usepackage[T1]{fontenc} % Potrzebne do używania fontów Latin Modern.
+
+\usepackage[MeX]{polski} % Polonizacja LaTeXa, bez niej będzie pracował
+% w języku angielskim.
+
+
+
+
+
+
+
+
+
+
+% ---------------------------------------
+% MARGINS
+% ---------------------------------------
+\usepackage{vmargin}  % Pozwala na prostą kontrolę rozmiaru marginesów,
+% za pomocą komend poniżej. Rozmiar odstępów jest mierzony w calach.
+\setmarginsrb
+{ 0.7in}  % left margin
+{ 0.6in}  % top margin
+{ 0.7in}  % right margin
+{ 0.8in}  % bottom margin
+{  20pt}  % head height
+{0.25in}  % head sep
+{   9pt}  % foot height
+{ 0.3in}  % foot sep
+
+
+
+
+
+
+
+% ---------------------------------------
+% Basic packages
+% ---------------------------------------
+
+
+
+
+
+
+
+% ---------------------------------------
+% Packages for scientific writing
+% ---------------------------------------
+
+
+
+
+
+
+
+% ---------------------------------------
+% Packages written by us
+% ---------------------------------------
+% \usepackage{demopack}
+
+
+
+
+
+
+
+% ---------------------------------------
+% Configuration for this particular file
+% ---------------------------------------
+\usepackage{tikz}  % Great package PGF/TikZ.
+
+\usepackage{xcolor}
+
+
+
+
+
+
+
+% ---------------------------------------
+% Some useful commands
+% ---------------------------------------
+\newcommand{\red}[1]{{\color{red} #1}}
+
+
+
+
+
+
+
+
+
+% ---------------------------------------
+% Packages "hyperref"
+% They say that you should put it at the end of the preamble
+% ---------------------------------------
+\usepackage{hyperref}  % Pozwala tworzyć hiperlinki i zamienia odwołania
+% do bibliografii na hiperlinki.
+
+
+
+
+
+
+
+
+
+
+% ---------------------------------------------------------------------
+% Tytuł, autor, data
+\title{\href{https://repo.skni.umcs.pl/ctan/macros/latex/contrib/xcolor/xcolor.pdf}{\texttt{xcolor}} testy \\
+  s. 01, 03}
+
+\author{}
+
+
+
+% \date{}
+% ---------------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+% ####################################################################
+\begin{document}
+% ####################################################################
+
+
+
+
+
+% ######################################
+\maketitle % Tytuł całego tekstu
+% ######################################
+
+
+
+% 400-750
+
+% \noindent
+% \fcolorbox{black}[wave]{400}{wave model},
+% \fcolorbox{black}[wave]{401}{wave model},
+% \fcolorbox{black}[wave]{402}{wave model},
+% \fcolorbox{black}[wave]{403}{wave model},
+% \fcolorbox{black}[wave]{404}{wave model},
+% \fcolorbox{black}[wave]{405}{wave model},
+% \fcolorbox{black}[wave]{406}{wave model}, \\
+% \fcolorbox{black}[wave]{407}{wave model},
+% \fcolorbox{black}[wave]{408}{wave model},
+% \fcolorbox{black}[wave]{409}{wave model},
+% \fcolorbox{black}[wave]{410}{wave model},
+% \fcolorbox{black}[wave]{411}{wave model},
+% \fcolorbox{black}[wave]{412}{wave model},
+% \fcolorbox{black}[wave]{413}{wave model}, \\
+% \fcolorbox{black}[wave]{414}{wave model},
+% \fcolorbox{black}[wave]{415}{wave model},
+% \fcolorbox{black}[wave]{416}{wave model},
+% \fcolorbox{black}[wave]{417}{wave model},
+% \fcolorbox{black}[wave]{418}{wave model},
+% \fcolorbox{black}[wave]{419}{wave model},
+% \fcolorbox{black}[wave]{420}{wave model}, \\
+% \fcolorbox{black}[wave]{421}{wave model},
+% \fcolorbox{black}[wave]{422}{wave model},
+% \fcolorbox{black}[wave]{423}{wave model},
+% \fcolorbox{black}[wave]{424}{wave model},
+% \fcolorbox{black}[wave]{425}{wave model},
+% \fcolorbox{black}[wave]{426}{wave model},
+% \fcolorbox{black}[wave]{427}{wave model}, \\
+% \fcolorbox{black}[wave]{428}{wave model},
+% \fcolorbox{black}[wave]{429}{wave model},
+% \fcolorbox{black}[wave]{430}{wave model},
+% \fcolorbox{black}[wave]{431}{wave model},
+% \fcolorbox{black}[wave]{432}{wave model},
+% \fcolorbox{black}[wave]{433}{wave model},
+% \fcolorbox{black}[wave]{434}{wave model}, \\
+% \fcolorbox{black}[wave]{435}{wave model},
+% \fcolorbox{black}[wave]{436}{wave model},
+% \fcolorbox{black}[wave]{437}{wave model},
+% \fcolorbox{black}[wave]{438}{wave model},
+% \fcolorbox{black}[wave]{439}{wave model},
+% \fcolorbox{black}[wave]{440}{wave model},
+% \fcolorbox{black}[wave]{441}{wave model}, \\
+% \fcolorbox{black}[wave]{442}{wave model},
+% \fcolorbox{black}[wave]{443}{wave model},
+% \fcolorbox{black}[wave]{444}{wave model},
+% \fcolorbox{black}[wave]{445}{wave model},
+% \fcolorbox{black}[wave]{446}{wave model},
+% \fcolorbox{black}[wave]{447}{wave model},
+% \fcolorbox{black}[wave]{448}{wave model}, \\
+% \fcolorbox{black}[wave]{449}{wave model},
+% \fcolorbox{black}[wave]{450}{wave model},
+% \fcolorbox{black}[wave]{451}{wave model},
+% \fcolorbox{black}[wave]{452}{wave model},
+% \fcolorbox{black}[wave]{453}{wave model},
+% \fcolorbox{black}[wave]{454}{wave model},
+% \fcolorbox{black}[wave]{455}{wave model}, \\
+% \fcolorbox{black}[wave]{456}{wave model},
+% \fcolorbox{black}[wave]{457}{wave model},
+% \fcolorbox{black}[wave]{458}{wave model},
+% \fcolorbox{black}[wave]{459}{wave model},
+% \fcolorbox{black}[wave]{460}{wave model},
+% \fcolorbox{black}[wave]{461}{wave model},
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+% ####################################################################
+% ####################################################################
+
+% Koniec dokumentu
+\end{document}
