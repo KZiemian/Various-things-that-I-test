@@ -1,0 +1,277 @@
+% ####################################################################
+% Author: Kamil Ziemian
+% ####################################################################
+
+% ---------------------------------------------------------------------
+% Podstawowe ustawienia i pakiety
+% ---------------------------------------------------------------------
+\RequirePackage[l2tabu, orthodox]{nag} % Wykrywa przestarzałe i niewłaściwe
+% sposoby używania LaTeXa. Więcej jest w l2tabu English version.
+
+
+\documentclass[a4paper,11pt]{article}
+% {rozmiar papieru, rozmiar fontu}[klasa dokumentu]
+\usepackage[utf8]{inputenc} % Włączenie kodowania UTF-8, co daje dostęp
+% do polskich znaków.
+\usepackage{lmodern} % Wprowadza fonty Latin Modern.
+\usepackage[T1]{fontenc} % Potrzebne do używania fontów Latin Modern.
+
+\usepackage[MeX]{polski} % Polonizacja LaTeXa, bez niej będzie pracował
+% w języku angielskim.
+
+
+
+
+% ------------------------------
+% Podstawowe pakiety
+% ------------------------------
+% \usepackage{textcomp} % Dodaje takie symbole jak stopnie Celciusa,
+% wprowadzane bezpośrednio w tekście.
+% \usepackage{graphicx} % Wprowadza bardzo potrzebne komendy do wstawiania
+% grafiki.
+% \usepackage{verbatim} % Poprawia otoczenie VERBATIME.
+% \usepackage[all]{xy} % Paczka do rysowania grafów. Opcja ALL jest
+% polecana i włącza wszystkie opcje paczki. Należy go dołączyć po paczce
+% POLSKI, bo obie definiują polecenie "\ar". W ten sposób "XY-pic"
+% nadpisze "\ar" z pakietu POLSKI
+% \usepackage{array} % Przedefiniuje otoczenie "tabular"
+% \usepackage{booktabs} % Do robienia profesjonalnych tabeli
+% \usepackage{multirow} % Do łączenia komórek z różnych wierszy
+\usepackage{graphicx} % Podstawowy pakiet do wstawiania grafiki
+
+
+
+% ----------------------------
+% Zdefiniowana przez nas paczka
+% ----------------------------
+% \usepackage{demopack}
+
+
+
+% ------------------------------
+% Pakiety do tekstów naukowych
+% ------------------------------
+\let\lll\undefined % Amsmath gryzie się z językiem pakietami do języka
+% polskiego, bo oba definiują komendę \lll. Aby rozwiązać ten problem
+% oddefiniowuję tę komendę, ale może tym samym pozbywam się dużego Ł.
+\usepackage[intlimits]{amsmath}
+% Wsparcie od American Mathematical Society (w skrócie AMS)
+\usepackage{amsfonts, amssymb, amscd, amsthm} % Dalsze wsparcie od AMS
+\usepackage{siunitx} % Łatwiejsze używanie jednostek fizycznych
+\usepackage{upgreek} % Ładniejsze greckie litery
+% Przykładowa składnia: pi = \uppi
+\usepackage{slashed} % Pozwala pisać w prosty sposób slash Feynmana.
+\usepackage{calrsfs} % Zmienia czcionkę kaligraficzną w \mathcal
+% na ładniejszą. Może w innych miejscach robi to samo, ale o tym nic
+% nie wiem.
+\let\qed\undefined
+% \usepackage{mandi}  % Pakiet do symboli w elementarnej fizyce. Ładuje pakiet
+% "tensor"
+
+\usepackage[dvipsnames]{xcolor}  % Rekomendowana paczka do zmiany kolorów w LaTeXu
+
+\definecolor{mypink1}{rgb}{0.858, 0.188, 0.478}
+\definecolor{mypink2}{RGB}{219, 48, 122}
+\definecolor{mypink3}{cmyk}{0, 0.7808, 0.4429, 0.1412}
+\definecolor{mygray}{gray}{0.6}
+
+\colorlet{LightRubineRed}{RubineRed!70}
+\colorlet{Mycolor1}{green!10!orange!90!}
+\definecolor{Mycolor2}{HTML}{00F9DE}
+
+
+
+% ##########
+% Tworzenie otoczeń "Twierdzenie", "Definicja", "Lemat", etc.
+\newtheorem{twr}{Twierdzenie}
+\newtheorem{lem}[twr]{Lemat}
+
+% \newstyletheorem{twierdzenie}
+% \newtheorem{mur}{Murphy}[section]
+
+
+
+% ----------------------------
+% Ustawienia różnych parametrów tekstu
+% ----------------------------
+\setlength\arraycolsep{2pt} % Zmniejsza odstęp między kolumnami w eqnarray.
+
+
+
+% ------------------------------
+% Pakiet "hyperref"
+% Polecano by umieszczać go na końcu preambuły.
+% ------------------------------
+\usepackage{hyperref}  % Pozwala tworzyć hiperlinki i zamienia odwołania
+% do bibliografii na hiperlinki.
+
+
+
+
+
+
+% ---------------------------------------
+% Configuration for this particular file
+% ---------------------------------------
+
+
+
+
+
+
+
+
+
+
+% ---------------------------------------------------------------------
+% Tytuł, autor, data
+\title{Using colours in \LaTeX{} (Overleaf)}
+
+\author{}
+
+
+
+% \date{}
+% ---------------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+% ####################################################################
+\begin{document}
+% ####################################################################
+
+
+
+% ######################################
+\maketitle % Tytuł całego tekstu
+% ######################################
+
+
+
+% ######################################
+\section{\href{https://www.overleaf.com/learn/latex/Using\_colours\_in\_LaTeX}{Using
+    colours in \LaTeX}}
+
+\vspace{2em}
+
+% ######################################
+
+
+
+This example shows different examples on how to use the
+\texttt{xcolor} package to change the colour of elements in \LaTeX.
+
+\begin{itemize}
+  \color{blue}
+\item First item
+
+\item Second item
+
+\end{itemize}
+
+\noindent {\color{red} \rule{\linewidth}{0.5mm} }
+
+
+
+{\color{white} white}, {\color{black} black}, {\color{yellow} yellow},
+{\color{green} green}, {\color{blue} blue}, {\color{purple} purple},
+{\color{cyan} cyan}, {\color{magenta} magenta}
+
+
+\begin{itemize}
+  \color{ForestGreen}
+\item First item
+
+\item Second item
+
+\end{itemize}
+
+\noindent {\color{RubineRed} \rule{\linewidth}{0.5mm}}
+
+
+The~background colour~of some text can also be~\textcolor{red}{easily}
+set. For instance, you can change to~orange the~background~of
+\colorbox{BurntOrange}{this text} and then continue typing.
+
+
+User-defined colours with different colour models:
+
+\begin{enumerate}
+\item \textcolor{mypink1}{Pink with rgb}
+
+\item \textcolor{mypink2}{Pink with RGB}
+
+\item \textcolor{mypink3}{Pink with cmyk}
+
+\item \textcolor{mygray}{Gray with gray}
+\end{enumerate}
+
+
+
+% \pagecolor{black} \color{white}
+
+This document present several examples on how to use
+the~\texttt{xcolor} package to~change the~colour~of elements
+in~\LaTeX.
+
+\begin{itemize}
+\item \textcolor{Mycolor1}{First item}
+
+\item \textcolor{Mycolor2}{Second item}
+\end{itemize}
+
+
+\noindent {\color{LightRubineRed} \rule{\linewidth}{1mm} }
+
+\noindent {\color{RubineRed} \rule{\linewidth}{1mm} }
+
+
+\noindent {\color{Apricot} Apricot}, {\color{Aquamarine} Aquamarine},
+{\color{Bittersweet} Bitersweet}, {\color{Black} Black}, {\color{Blue}
+  Blue}, {\color{BlueGreen} BlueGreen}, {\color{BlueViolet}
+  BlueViolet}, {\color{BrickRed} BrickRed}, {\color{Brown} Brown},
+{\color{BurntOrange} BurntOrange}, {\color{CadetBlue} CadetBlue},
+{\color{CarnationPink} CarnationPink}, {\color{Cerulean} Cerulean},
+{\color{CornflowerBlue} CornflowerBlue}, {\color{Cyan} Cyan},
+{\color{Dandelion} Dandelion}, {\color{DarkOrchid} DarkOrchid},
+{\color{Emerald} Emerald}, {\color{ForestGreen} ForestGreen},
+{\color{Fuchsia} Fuschia}, {\color{Goldenrod} Goldenrod},
+{\color{Gray} Gray}, {\color{Green} Green}, {\color{GreenYellow}
+  GreenYellow}, {\color{JungleGreen} JungleGreen}, {\color{Lavender}
+  Lavender}, {\color{LimeGreen} LimeGreen}, {\color{Magenta} Magenta},
+{\color{Mahogany} Mahogany}, {\color{Maroon} Maroon}, {\color{Melon}
+  Melon}, {\color{MidnightBlue} MidnightBlue}, {\color{Mulberry}
+  Mulberry}, {\color{NavyBlue} NavyBlue}, {\color{OliveGreen}
+  OliveGreen}, {\color{Orange} Orange}, {\color{OrangeRed} OrangeRed},
+{\color{Orchid} Orchid}, {\color{Peach} Peach}, {\color{Periwinkle}
+  Periwinkle}, {\color{PineGreen} PineGreen}, {\color{Plum} Plum},
+{\color{ProcessBlue} ProcessBlue}, {\color{Purple} Purple},
+{\color{RawSienna} RawSienna}, {\color{Red} Red}, {\color{RedOrange}
+  RedOrange}, {\color{RedViolet} RedViolet}, {\color{Rhodamine}
+  Rhodaminie}, {\color{RoyalBlue} RoyalBlue}, {\color{RoyalPurple}
+  RoyalPurple}, {\color{RubineRed} RubineRed}, {\color{Salmon}
+  Salmon}, {\color{SeaGreen} SeaGreen}, {\color{Sepia} Sepia},
+{\color{YellowOrange} YellowOrange}, {\color{SkyBlue} SkyBlue},
+{\color{SpringGreen} SpringGreen}, {\color{Tan} Tan},
+{\color{TealBlue} TealBlue}, {\color{Thistle} Thistle},
+{\color{Turquoise} Turquoise}, {\color{Violet} Violet},
+{\color{VioletRed} VioletRed}, {\color{White} White},
+{\color{WildStrawberry} WildStrawberry}, {\color{Yellow} Yellow},
+{\color{YellowGreen} YellowGreen}.
+
+
+
+
+
+
+% ####################################################################
+% ####################################################################
+% Koniec dokumentu
+\end{document}
