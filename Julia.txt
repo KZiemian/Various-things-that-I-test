@@ -1,0 +1,344 @@
+Computing complex multi-valued functions in Julia and beyond
+
+In my previous work I relied heavily on use of analytic functions on complex plain and now I struggle with problem how to use `log` function from Julia Base to achieve correct numerical results. Below I stated my problem in maybe over-verbose way, with the hope, that my consideration will be clear.
+
+Description of `log` in [documentation](https://docs.julialang.org/en/v1/base/math/#Mathematical-Functions-1) in full.
+"Compute the natural logarithm of x. Throws DomainError for negative Real arguments. Use complex negative arguments to obtain complex results."
+
+Are Julia internals documented somewhere or I need to read source code?
+
+Recently, I need to check some properties of functions from Julia Base that was not mentioned in documentation. In such situation I know that few possible way to find answer.
+1) Read blog post/watch JuliaCon talk about this subject. But, you don't know if they exists.
+2) Post your problem on Julia Discourse.
+3) Figure it out by try-and-error method.
+4) Read source code.
+
+Now I wonder, are Julia internals documented in depth outside source code? Or the only documentation is source code and commentaries in it?
+
+Also, about point 1. Does anyone fill that many valuable Julia teaching materials are scattered across internet? Or I just don't know where to look?
+
+How to understand place of numbers with Irrational type in Julia?
+
+I recently try to understand how numbers of Irrational type as $\pi$, $e$, $\gamma$ (Euler-Mascheroni constant) works in Julia. At these moment I think of them as living in vast space between constants floating points approximation as 3.14 and symbols in symbolic computation (via Mathematica). These is most probably wrong, but this topic is very murky for me.
+
+I search documentation and find little information about Irrational number type (maybe I don't know which keywords I need to type), so I will be grateful for any materials about them.
+
+Thank to someones post on Discourse I find blog post [Some fun with $\pi$ in Julia](https://julialang.org/blog/2017/03/piday/), which explains many things about inner working of $\pi$. I wonder why Documentation doesn't have link to it (maybe I miss that section).
+
+
+
+Second. Now I see that 1000 x 1000 matrices are too small for benchmarking on such machine, so in most cases results don't tell us too much. I will try to test this code for bigger matrices in the future.
+
+Third. I checked that my code is identical with that on GitHub, but in the future I will benchmark code directly copy-pasted from tutorial, to be sure that I don't make some stupid mistake, that I totally miss.
+
+Fourth. Proper bechmarking of Gierer-Meinhardt Reaction-Diffusion PDE require more work from my side, so I hope this will done it in the following week.
+
+Thing worth nothing. On two computer function `test8!(...)`, which use `map!(...)` is over 1.5 times slower than rest of examples.
+
+
+Vectorized "dot" operators
+
+Numeric Comparisons \ne vs \neq, \ge vs \geq
+
+
+The Hidden Fortress 1958 Kurosawa
+
+https://www.youtube.com/watch?v=VEH11VwC86A
+
+
+
+Strings in Julia can contain invalid UTF-8 code unit sequences. This convention allows to treat any byte sequence as a String. In such situations a rule is that when parsing a sequence of code units from left to right characters are formed by the longest sequence of 8-bit code units that matches the start of one of the following bit patterns (each x can be 0 or 1):
+
+0xxxxxxx;
+110xxxxx 10xxxxxx;
+1110xxxx 10xxxxxx 10xxxxxx;
+11110xxx 10xxxxxx 10xxxxxx 10xxxxxx;
+10xxxxxx;
+11111xxx.
+
+https://docs.julialang.org/en/stable/manual/strings/
+
+
+represented as \cdot, *, or a similar????
+
+
+I apologized for not answering earlier, people around turn recently to many screws on me, so I must take a break from everything I can. Maybe this sound silly but it's truth (but not the whole story).
+
+
+
+
+David P. Sanders
+
+Thank you for pointing this out to me. I several times read "subscript" not "superscript" in this table and superscript A^y is defined. That is double silly, why subscripts are not compatible with superscripts?
+
+Unicode limits Julia abilitis to use super- and subscripts.
+
+Current list of acronyms and shortcuts.
+
+AD = Automatic Differentiation,
+PR = Pull Request (on GitHub),
+
+This article make excellent job explaining why Unicode is needed and why is co complicated. https://www.joelonsoftware.com/2003/10/08/the-absolute-minimum-every-software-developer-absolutely-positively-must-know-about-unicode-and-character-sets-no-excuses/
+To be honest is sometimes silly, like defining A^y (A is wide bunch of symbols), but not A_y. After you read it I recommend Julia documentation on string and chars. https://docs.julialang.org/en/v1/manual/strings/
+
+
+
+
+
+
+
+OP = Original poster
+
+
+
+New type definition: Galois field in Julia 1.x
+
+
+I try to work very nice examples of defining new type, $\textrm{GF}( p ) = \mathbb{Z} / p$ where $p$ is prime number. It looks like there syntax is not working in 1.x version. Can it be recover with few changes here and there or better to give up it and come back after reading documentation of new version?
+
+Code is in @johnfgibson repository:
+
+
+Examples don't work in Julia 1.x
+
+In new version of language code don't work and looks like a many changes are needed. For example in Galois fields `immutable` should be replaced by `struct`, in "Julia code for KS-CNAB2 algorithm" `plan_fft!` is not defined and I don't know in which library it is.
+
+If I make enough of this code working, I will made a pull request.
+
+
+I make title and abstract to my talk, I will be happy if you say what is wrong, what bad and good and what to change.
+
+
+
+This article is good at what is analyzed, but it conclusion is wrong. I am a Pole and I just see how many allusions to Poland was missed, because authors search in wrong places. And the conclusion that Sapkowski want "bring a smile to the Polish reader’s face" is wrong, because he more often bring tears, pain and shame.
+
+I will note limit myself to question of Redania, because this constrains topic to much. First of all, the main historically source of war in Witcher books is II World War, not wars from XVII century. Some examples. When in 1939 Poland was conquered by Nazi and Soviets they met in Brześć-Litewski and conduct together military parade https://en.wikipedia.org/wiki/German%E2%80%93Soviet_military_parade_in_Brest-Litotes. Probably untrue but famous in Poland story said that they meet on the bridge and shake hands.
+
+Second in 1939 Poland Commander-in-Chief of Poland's and most important men in country marshal Edward Rydz-Śmigły escape country for which was then and is still loathed as unworthy coward. King Radovid who also abound it country during Nilfgaard invasion is not far away from him. https://en.wikipedia.org/wiki/Edward_Rydz-%C5%9Amig%C5%82y
+
+Third. After war in books ends, there is a story of outbreak of violence toward the dwarfs. This is just retelling of Kielce pogrom, which happen 1946, after ending of II World War in 1946 and left 42 Jews dead. I guarantee to you that these not bring smiles to our faces. https://en.wikipedia.org/wiki/Kielce_pogrom
+
+Some more examples in the next post.
+
+
+
+
+
+Julia internal works: what everybody need to know?
+
+
+This was not easy month, so I apologized for not responding for so long. Now I write some remarks about seminar and respond in few days to posts here.
+
+Talk was in form of combination of slides and programming using Jupyter Notebook, mostly in the form of running written before code, with some short, true live coding. Given time constrains, 50 or so minutes, I think that was good choice, showing in what way Julia is dynamic language and how compilation of code and reusing it really looks like. Even if compiling take some time I think that is the best way to show nature of working in Julia (at least how experinced working with it). I only reloaded some packages like `Plots` to not used to much time for that.
+
+I get one major criticism: that I started from reason to not learn Julia. Maybe I also listed to much such reasons, since I really don't want oversell anything and I generally not very optimistic person, so naturally talk about problems. I don't know how much this critic is valid, since colleagues of mine who makes this comment is quite odd fellow, hard to say if others have similar feelings.
+
+For I think was big mistake, I don't make one slide for methods of optimizing Julia. I was thinking that things like type stability was to specific topic for such talk, but in retrospect even this is in someway esoteric topic, make information how optimization looks like was big mistake. Even if type stability may sound scarier that it is, it better make a point, that you must learn something new to make your code fast.
+
+There were also two comments from younger part of audience, that I don't consider as strict criticism. One that Julia optimization is very odd, while C is very natural. Personally, I don't see anything natural in C optimization, we just learn it from the cradle, so it looks like natural thing. Also Julia optimization don't look odd to me, just different than in languages like C.
+
+Second was, that C can be hard to learn, but after learning it we can do anything since, we know what compiler is doing with our code and this is reason why we should prefer C. Recently I lost my personal faith in that I understand what compiler is doing and I start thinking since every language separate (assembler and things like that excluded) me from hardware, it should separate me as much as it can reasonably do it. I didn't have any other answer to this person.
+
+Response. From older people one was interesting in Julia, one decided that is better to learn again Maple (he was never computer stuff guy, so this was predictable), about younger part I write above.
+
+I want to thanks everyone from Discourse, that help to make this presentation or say how can be improved.
+
+
+
+Thank you so much Mr Willems for this videoessey is great. I watch countless action scenes in my life and never be able to see this scheme of things. And after you explain it is so clear and obvious, I can see it in so many movies.
+
+I think that is more then that to action scenes, probably not all feet 1:1 in this model, but it explain so many things. After all if this explain everything, there will be no need for more "Blue Flame Special Episodes".
+
+
+
+What to tell people students about Julia on workshops?
+
+I am PhD student and there is a chance that I will lead small workshops for undergraduates and graduates student, about Python or Julia, depend what they choose. As such I wonder about
+
+
+I make few tutorials, watch probably 30 hour or longer videos (intros and specific), read parts of documentation and try to dig into some internals.
+
+
+
+
+
+
+| Test name | Memory used (MiB) | Median of running time in ms (rounded) |
+|-----------|-------------------|----------------------------------------|
+| test  | 7.63 | 3.8 |
+| test2 | 7.63 | 4 |
+| test3 | 7.63 | 3.8 |
+| test4 | 7.63 | 3.8 |
+| test5 | 7.63 | 4 |
+| test6! | 0 | 3.6 |
+| test7! | 0 | 3.8 |
+| test8! | 0 | 6.7 |
+
+
+
+| Solver name | Memory used (MiB) | Median of running time in ms (rounded) |
+|-------------|-------------------|----------------------------------------|
+| basic_version | 185 | 300 |
+| gm2! | 9.48 | 10 |
+| gm3! | 30 | 130 |
+| gm4! | 30 | 100 |
+| fast_gm | 30 | 30 |
+| | | |
+
+
+
+
+
+a02cd57a-63ab-44c8-901a-dc8c2aeec5a0
+
+This code still have a problem and I don't know how to solve it.
+
+```julia
+# Type definiton
+struct GF{p, T} <: Number where {p, T<:Integer}
+    rep::T  # Representation: intyger which holds the value of element in GF(p)
+
+    function GF{p, T}(x::Integer) where {p, T<:Integer}
+        return new(mod(x, p))
+    end
+end
+GF{p}(x::T) where {p, T<:Integer} = GF{p, T}(x)
+
+import Base: convert, inv, one, promote_rule, show, zero
+
+function call(::Type{GF{p}}, x::Integer) where p
+    if !isprime(p)
+        throw(ArgumentError("p must be prime"))
+    end
+    return GF{p, typeof(x)}(mod(x, p))
+end
+
+convert(::Type{GF{p, T}}, x::Integer) where {p, T} = GF{p}(x)
+convert(::Type{GF{p}}, x::Integer) where p = GF{p}(x)
+convert(::Type{GF{p, T}}, x::GF{p}) where {p, T} = GF{p, T}(x.rep)
+promote_rule(::Type{GF{p, T1}}, ::Type{T2}) where {p, T1, T2<:Integer} = GF{p, promote_type(T1, T2)}
+
+# To be able show and print GF(p)
+show(io::IO, x::GF) = show(io, x.rep)
+```
+
+Since `isprime` is now not defined in global scope `GF{4}(5)` is valid expression and return `0`, of type `GF{4, Int64}`. I confused, why there is no error of using undefined `!isprime(p)` in conditional statement?
+
+Second question: why `GF{4,5}` works and what this expression mean?
+
+
+
+
+
+https://github.com/JuliaAcademy/DataScience/blob/main/01.%20Data.ipynb
+Line with "wget" Copland is missing.
+
+"P,H = readdlm("programming_languages.csv",',';header=true);" -> "P, H",
+"','; header=true"
+
+
+C[1:10,:] -> String31
+
+@btime P,H = readdlm("programming_languages.csv",',';header=true);
+->
+@btime P, H = readdlm("programming_languages.csv", ','; header=true);
+
+
+Various surprising benchmarks
+
+I try to learn some data science in Julia from Julia Academy's [*Julia for Data Science*](https://github.com/JuliaAcademy/DataScience/blob/main/01.%20Data.ipynb) and simple benchmark from it is quite surprising for me. I made it code below compact and probably use more packages that it need, just because I don't know which are needed.
+
+```julia
+using BenchmarkTools
+using DataFrames
+using DelimitedFiles
+using CSV
+using XLSX
+using Downloads
+
+P = Downloads.download("https://raw.githubusercontent.com/nassarhuda/easy_data/master/programming_languages.csv",
+    "programming_languages.csv")
+
+@btime P, H = readdlm("programming_languages.csv", ','; header=true);
+@btime C = CSV.read("programming_languages.csv", DataFrame);
+```
+
+I get result like that.
+```julia
+125.375 μs (325 allocations: 51.19 KiB)
+229.006 μs (428 allocations: 40.95 KiB)
+
+```
+Benchmarks show in the [Jupyter notebook](https://github.com/JuliaAcademy/DataScience/blob/main/01.%20Data.ipynb) are below.
+```julia
+87.708 μs (325 allocations: 51.19 KiB)
+35.417 μs (227 allocations: 22.02 KiB)
+```
+
+I have CSV.jl v0.9.11 and here is my machine info.
+```julia
+Julia Version 1.6.4
+Commit 35f0c911f4 (2021-11-19 03:54 UTC)
+Platform Info:
+  OS: Linux (x86_64-pc-linux-gnu)
+  CPU: Intel(R) Core(TM) i5-3210M CPU @ 2.50GHz
+  WORD_SIZE: 64
+  LIBM: libopenlibm
+  LLVM: libLLVM-11.0.1 (ORCJIT, ivybridge)
+```
+
+
+
+
+JuliaCon 2021, videos that need timestamps.
+
+Geostatistical Learning | Júlio Hoffimann https://www.youtube.com/watch?v=75A6zyn5pIE&list=PLP8iPy9hna6Q343_8sSq4f306VGLW4TLK&index=2
+
+Put some constraints into your life with JuliaCon(straints) | Jean-François Baffier
+
+
+
+
+
+
+JuliaCommunity / YouTubeVideoTimestamps https://github.com/JuliaCommunity/YouTubeVideoTimestamps/issues
+
+Closed issues done by me.
+How to install Julia and Pluto | Week 1 | 18.S191 MIT Fall 2020
+Arrays: slices and views | Week 2 | 18.S191 MIT Fall 2020 | David P. Sanders
+Defining new types | Week 3 | 18.S191 MIT Fall 2020
+Functions and types: Multiple dispatch | Week 3 | 18.S191 MIT Fall 2020
+Environments for programming with Julia | Week 3 | 18.S191 MIT Fall 2020
+Functions are Objects | Week 4 | 18.S191 MIT Fall 2020
+Convolutions on GPUs | Week 2 | 18.S191 MIT Fall 2020
+https://github.com/JuliaCommunity/YouTubeVideoTimestamps/issues?page=4&q=is%3Aissue+is%3Aclosed
+
+
+
+Hello.
+
+Here are three more videos with mistakes and typos in the descriptions.
+
+_Environments for programming with Julia_, [https://www.youtube.com/watch?v=PgeLMzw_-Ww](https://www.youtube.com/watch?v=PgeLMzw_-Ww)
+
+> S/o to https://github.com/rafaelchp for the video timestamps! 00:00 Welcome!
+> 00:10 Help us add time stamps or captions to this video! See the description for details.
+
+We see standard problems here. "S/o" -> "S/O"? And outdated part need to be removed.
+
+_Functions are Objects_, [https://www.youtube.com/watch?v=_O-HBDZMLrM](https://www.youtube.com/watch?v=_O-HBDZMLrM)
+
+> S/o to https://github.com/rafaelchp for the video timestamps. 00:00 Welcome!
+> 00:10 Help us add time stamps or captions to this video! See the description for details.
+
+Again. "S/o" -> "S/O"? And outdated part need to be removed.
+
+_Convolutions on GPUs_, [https://www.youtube.com/watch?v=aa3JkX_cj_I](https://www.youtube.com/watch?v=aa3JkX_cj_I)
+
+> S/o to https://github.com/rafaelchp for the video timestamps. 00:00 Welcome!
+> 00:10 Help us add time stamps or captions to this video! See the description for details.
+
+Again. "S/o" -> "S/O"? And outdated part need to be removed.
+
+Best,
+Kamil Ziemian

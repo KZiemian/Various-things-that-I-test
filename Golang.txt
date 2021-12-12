@@ -1,0 +1,460 @@
+How to think about gorutines?
+
+Hello,
+
+I read and watch quite a few materials about gorutines and channels, but this topic still from time to time left me in wilderness. In "A Tour of Go" we read that "A goroutine is a lightweight thread managed by the Go runtime." (https://tour.golang.org/concurrency/1), when in the talk "Go Concurrency Patterns" Rob "Commander" Pike, says "It's not a thread." (9:50, https://www.youtube.com/watch?v=f6kdp27TYZs), so I'm now lost. "Commander" talk is from 2012, but this is highly improbable that such essential concept was changed since giving this presentation.
+
+Can you point me to so resources, that explain this part of Go in sufficient depth? Maybe this is explained in Go Spec, but I need to learn extended Backus–Naur form, before I can read it. I try it recently and without EBNF I can't crack anything after introduction, so this will take time.
+
+Best,
+Kamil
+
+
+
+func (*Regexp) FindAllSubmatchIndex
+
+pattern := regexp.MustCompile(`(?m)(?P<key>\w+):\s+(?P<value>\w+)$`)
+
+
+func (*Regexp) Expand
+
+Tu wykorzystujemy w pełni
+
+pattern := regexp.MustCompile(`(?m)(?P<key>\w+):\s+(?P<value>\w+)$`)
+
+fmt.Println(string(result)) czy fmt.Printf(string(result))
+
+
+func (*Regexp) ExpandString
+
+fmt.Println(string(result)) czy fmt.Printf(string(result))
+
+
+func (*Regexp) NumSubexp
+
+re0 := regexp.MustCompile(`a.`)
+fmt.Printf("%d\n", re0.NumSubexp())
+
+re := regexp.MustCompile(`(.*)((a)b)(.*)a`)
+fmt.Println(re.NumSubexp())
+
+Czemu nie dwa razy Println
+
+
+Thank you for answer and opinion Briana Candler.
+
+I ask about unset only because of cryptic to me text in description of RE2.
+
+(https://github.com/google/re2/wiki/Syntax)
+
+I try to google about changes in examples in Go's stdlib, maybe this can be done?
+
+
+In example in method func (*Regexp) FindIndex (https://pkg.go.dev/regexp@go1.17#Regexp.FindIndex) we have line
+
+pattern := regexp.MustCompile(`(?m)(?P<key>\w+):\s+(?P<value>\w+)$`)
+
+Does (?m) set value of flag m to true and if I want set it to false I should write (?-m) or not? By default m should be false, but as example it is fine.
+
+As a side note, this regular expression is used in other examples, when we need <key> and <value>, but looks unnecessary complex for method FindIndex. I guess
+`(?m)\w+:\s+\w+$`
+would work fine. Am I wrong?
+
+
+Questions raised by "Understanding Allocations: the Stack and the Heap - GopherCon SG 2019"
+
+Hello,
+
+I often punch above my weight trying to understand various problem, so when I saw talk "Understanding Allocations: the Stack and the Heap - GopherCon SG 2019" by Jacob Walker (https://www.youtube.com/watch?v=ZMZpH4yT7M0), I cannot resist it. I'm basically compiler front-end user and nothing more, but this talk is very clear, so I learn something.
+
+I'm using "go version go1.17 linux/amd64" and I puzzled by what I get when i run "go build -gcflags="-m -l" go_program.go", which should print optimization decisions with disable inlining (I hope that I get it correctly). When Jacob Walker use "println" I follow what he said at the beginning and use "fmt.Println".
+
+For the program presented at 13:20 I get
+
+x does not escape
+ ... argument does not escape
+n escapes to heap
+
+while at presentation you have "&n does not escape". It seems to me, that on my computer much more things "escapes to heap". Can anyone point me in the right direction, to understand why I get "n escapes to heap"? Two simple answer that I can think about is "You don't use println" or "Compiler has changed.", but I want to know more about that. (I probably again punch above my weight.)
+
+I also reworked first code shown at 16:47 to form
+
+package main
+
+import "fmt"
+
+func main() {
+	b := read()
+	fmt.Println("b:", b)
+}
+
+func read() []byte {
+	b := make([]byte, 32)
+	return b
+}
+
+and get
+make([]byte, 32) escapes to heap
+... argument does not escape
+"b:" escapes to heap
+b escapes to heap
+I guess fmt.Println can force "b:" to be of type interface{}, but this is still puzzling, why such simple thing "escapes to heap", since in the talk he says that "interfaces may escapes to the heap".
+
+By the way, if someone can explain me what is going on with "println", I would be gratefully. This isn't important to me, since "fmt" give me what I need, but I just curious what Walker used it.
+
+
+Thank you Brian Candler. I finally need to learn EBNF, because it kill me when I tried to read Go Spec last time.
+
+Best
+Kamil
+
+Hello,
+
+In the post "Concurrency is not parallelism" by Andrew Gerrand (https://go.dev/blog/waza-talk) under the paragraph starting with "To clear up this conflation, Rob Pike gave a talk at Heroku’s Waza" in my browser is big blank space. I believe that that I can see rectangle in it, with slightly different hue of with, but I can't be sure.
+
+Is it my browser not working or something goes wrong with the page? Can someone check if he/she has the same problem? I use Mozilla Firefox for Ubuntu canonical - 1.0, version 91.0.2 (64 bits).
+
+Best,
+Kamil
+
+God create computer
+
+Devil wrote the software
+
+
+
+O co tu chodzi?
+Unlike regular parameter lists, in type parameter lists names are required for the type parameters. This avoids a syntactic ambiguity, and, as it happens, there is no reason to ever omit the type parameter names.
+
+
+
+„finally, some totally pedantic hair splitting”
+
+Hello,
+
+I finish reading this proposal (https://go.googlesource.com/proposal/+/refs/heads/master/design/43651-type-parameters.md). It is hard to judge how much I understand of it probably between 40% and 70%, so I apologize if I make some stupid comment below, because I just miss something. Understand this whole text without running code in compiler is just above my mediocre (at best) programming skills. Compilers errors are one of mine favorite teachers. Also section "Discarded ideas" and "Examples" are quite easy to understand but I didn't count it my estimation above.
+
+I need to say that I like what I understand. This proposal have a Go feeling, which is quite hard to describe. One part of it is stress on minimalism and simplicity, even as stated there this make Go more complicated. Other part is clearness of writing of these proposal in this part which I understand.
+
+On the beginning of "More on type sets" (https://go.googlesource.com/proposal/+/refs/heads/master/design/43651-type-parameters.md#more-on-type-sets) we read "These are not additional rules or concepts, but are consequences of how type sets work.". And in the subsection of it "Composite types in constraints" (https://go.googlesource.com/proposal/+/refs/heads/master/design/43651-type-parameters.md#composite-types-in-constraints) under second code is stated "For composite types (string, pointer, array, slice, struct, function, map, channel) we impose an additional restriction: an operation may only be used if the operator accepts identical input types (if any) and produces identical result types for all of the types in the type set.".
+
+I probably don't understand part of text that stated this rule before, but since I can't find it out, I wrote it down here to be sure.
+
+In "What happened to contracts?" (https://go.googlesource.com/proposal/+/refs/heads/master/design/43651-type-parameters.md#what-happened-to-contracts) we have "Type sets appeared only in contracts, rather than on interface types.". My English is not good enough to decide should it be "on interface types" or "in interface types". I have the same problem with title "Why not put type parameters on packages?" (https://go.googlesource.com/proposal/+/refs/heads/master/design/43651-type-parameters.md#why-not-put-type-parameters-on-packages). "On packages" or "in packages"?
+
+Pure curiosity. Why in "Containers" (https://go.googlesource.com/proposal/+/refs/heads/master/design/43651-type-parameters.md#containers) in body of definition (?) of method "func (m *Map[K, V]) InOrder() *Iterator[K, V]", we have
+var f func(*node[K, V]) bool
+f = func(n *node[K, V]) bool { ... }
+instead of code:
+f := func(n *node[K, V]) bool { ... }
+
+In "Type inference for composite literals" (https://go.googlesource.com/proposal/+/refs/heads/master/design/43651-type-parameters.md#type-inference-for-composite-literals) in comment in the code (so this have no impact on the proposed code working) we have "inferred as Pair(int){1, 2}". Maybe I still don't understand this proposal enough, because I think it should be "Pair[int]{1, 2}".
+
+Finally, some hair splitting.
+
+In first code in "Both elements and methods in constraints" (https://go.googlesource.com/proposal/+/refs/heads/master/design/43651-type-parameters.md#both-elements-and-methods-in-constraints), we have
+"~int32| ~int64"
+more consistent with rest of the code would be
+"~int32 | ~int64".
+
+In section "List transform" (https://go.googlesource.com/proposal/+/refs/heads/master/design/43651-type-parameters.md#list-transform) in method func (lst *List[T]) Push(v T) we have
+lst.tail.next = &element[T]{val: v }
+For my money, space before last bracket should be removed to be consistent with other examples.
+
+Best regards
+Kamil
+
+
+"microsecond resolution: 01:23:23.123123.  assumes Ltime."
+->?
+"microsecond resolution: 01:23:23.123123. assumes Ltime"
+https://pkg.go.dev/log@go1.17.1#pkg-constants
+
+
+func Output(calldepth int, s string) error
+Output writes the output for a logging event. The string s contains the text to print after the prefix specified by the flags of the Logger. A newline is appended if the last character of s is not already a newline. Calldepth is the count of the number of frames to skip when computing the file name and line number if Llongfile or Lshortfile is set; a value of 1 will print the details for the caller of Output.
+func (l *Logger) Output(calldepth int, s string) error
+Output writes the output for a logging event. The string s contains the text to print after the prefix specified by the flags of the Logger. A newline is appended if the last character of s is not already a newline. Calldepth is used to recover the PC and is provided for generality, although at the moment on all pre-defined paths it will be 2.
+https://pkg.go.dev/log
+
+
+
+https://pkg.go.dev/os@go1.17.1
+func Expand
+
+	fmt.Println(os.Expand("Good ${DAY_PART}, $NAME!", mapper))
+
+}
+zastąpić?
+	fmt.Println(os.Expand("Good ${DAY_PART}, $NAME!", mapper))
+}
+
+I inne przykłady w tej bibliotece.
+
+func LookupEnv
+
+
+Też przykłady w io.
+func Copy(dst Writer, src Reader) (written int64, err error)
+
+
+Hello,
+
+I currently read about "io" package and again I read that "io.EOF" is not treated as error, since it is what you expect to end file, which is almost tautology. At the same time it satisfies error interface and is created busing errors.New function.
+
+I understand why this is done, doing it other way would probably make serious mess in the code, but pedantic said of me is unsettled by this. Does any experience Gopher can give my advice how to think about situation when some object satisfy interface, but it is exception that proves the rule? I should just get used to it, or is it some better way of thinking?
+
+Best
+Kamil
+
+
+
+4. If an operand implements the error interface, the Error method will be invoked to convert the object to a string, which will then be formatted as required by the verb (if any).
+
+5. If an operand implements method String() string, that method will be invoked to convert the object to a string, which will then be formatted as required by the verb (if any).
+
+
+
+"%b %e %E %f %F %g %G %x %X and %v" -> "%b, %e, %E, %f, %F, %g, %G, %x, %X and %v"
+
+Sscanf(" 1234567 ", "%5s%d", &s, &i), s - var of string type, i - var of Inter typ???
+
+
+
+// Strings are formatted with %v and %s as-is, with %q as quoted strings,
+Co to jest "as-is"?
+
+Przenieść do głównego tekstu?
+// The n and err return values from Fprint are
+// those returned by the underlying io.Writer.
+
+func Fscan(r io.Reader, a ...interface{}) (n int, err error)
+Czy do tej funkcji muszę przesłać wskaźnik/adres do argumentu? Tekst tego nie precyzuje.
+
+
+// Token skips space in the input if skipSpace is true, then returns the
+// run of Unicode code points c satisfying f(c).  If f is nil,
+
+"run" -> "rune"???
+
+
+// Write is the function to call to emit formatted output to be printed.
+Write(b []byte) (n int, err error)
+
+"function" -> "method"? Przemyśl co to ma znaczyć?
+
+
+"decimalless scientific notation with exponent a power of two"
+Czy to poprawne językowo?
+
+"decimalless scientific notation with exponent a power of two" Czy to na pewno poprawne?
+
+
+"Either or both of the flags may be replaced with the character '*', causing their values to be obtained from the next operand (preceding the one to format), which must be of type int."
+Czy to poprawne?
+
+
+
+Sprawdzić jak funkcje z bibliotek math zachowują się gdy ich argumentem jest NaN. Niektóre mają w opisie co się stanie, inne nie.
+
+
+Dim(x, y float64) float64 co z Dim(-Inf, +Inf), Dim(+Inf, -Inf)?
+
+Log(x < 0) = NaN
+
+Sqrt(x < 0) = NaN
+
+Y0(x < 0) = NaN
+
+Y1(x < 0) = NaN
+
+Yn(n ≥ 0, 0) = -Inf
+Yn(n < 0, 0) = +Inf if n is odd, -Inf if n is even
+Yn(n, x < 0) = NaN
+
+
+https://golang.org/doc/code
+Executable commands must always use package main.
+
+
+// init sets initial values for variables used in the function.
+https://golang.org/doc/tutorial/random-greeting
+
+// Init sets initial values for variables used in the function.
+https://golang.org/doc/tutorial/greetings-multiple-people
+
+messages, err := greetings.Hellos(names)
+Linia z greetings.Hellos(names) powinna być pogrubiona.
+https://golang.org/doc/tutorial/greetings-multiple-people
+
+
+Absent an unexpected serious problem, Go 1.18 will include support for generics. Generics are the most significant change to Go since the release of Go 1, and certainly the largest single language change we've ever made. This mail explains a bit what the inclusion of generics does and does not mean for us and for users.
+
+Any new Go feature, whether in the language or the library, carries uncertainty with it: uncertainty about how to use it, uncertainty about how not to use it, and uncertainty about what subtle bugs have gotten past the existing tests. Generics is not immune to this uncertainty; in fact, because it is a large new feature, the uncertainty is correspondingly larger too.
+
+Because we will not know what the best practices are for using generics, our docs will not be able to give precise, definitive answers about when to use them and when not to. We can and will still give rough guidelines. For comparison, we wrote the initial version of Effective Go after an intense full year of writing Go code non-stop. We don't have the same level of experience yet with generics, so while we will of course provide docs about how to use generics, we can't provide anything as prescriptive about style and best practices. We simply don't know them yet.
+
+Because we will not know what the best practices are for writing generic packages, the initial generic code we release—in particular, the maps and slices packages that went through the proposal process—will land first in golang.org/x/exp, where there is no guarantee of backwards compatibility. Once we have more experience, we hope to promote some of those packages to the standard library. The exception is the constraints package, which is fundamental to writing certain generic code and will be added to the standard library in Go 1.18.
+
+Because we will not have any production experience with generics, we will make clear in the release notes that production uses of generics should be approached with appropriate caution. This is not a criticism of the team’s excellent work. It is simply an observation that generics is different from most Go changes. When we rewrite the garbage collector or change the calling convention, we run all of Google’s Go programs, in test and in production, using the new implementation, which exercises the change quite a bit and shakes out hard-to-find bugs. In contrast, rebuilding non-generic code with the in-progress Go 1.18 toolchain does not exercise the support for generics, meaning we can't build the same confidence.
+
+All that said, Go 1.18 carries with it the same backwards compatibility promise that other Go 1.x releases have: we will not break code that builds with Go 1.18, including code using generics. In the worst case, if we discover some fatal problem with the Go 1.18 semantics and need to change them (in, say, Go 1.19), we will use the go.mod file's go line to determine whether the source files within that module expect Go 1.18 or Go 1.19+ semantics. (We do not anticipate needing to do that!)
+
+We expect that some package authors will be eager to adopt generics. If you are updating your package to use generics, please consider isolating the new generic API into its own file, build-tagged for Go 1.18 (//go:build go1.18), so that Go 1.17 users can keep building and using the non-generic parts.
+
+It is also worth noting that third-party tools may not support generics in full at the Go 1.18 release. We are talking to the many tools authors and trying to make sure they get updated appropriately, but individual tools each have their own timelines.
+
+One common question we've gotten is: given all this uncertainty, why not make generics opt-in? The answer is that, at this point, the only way to reduce the uncertainty is to make generics available by default. When we made vendoring opt-in back in Go 1.5, what happened was that almost no one really used it until Go 1.6 when it was turned on by default, and so the Go 1.5 release did nothing to reduce our uncertainty about how well vendoring would work for people. On the other hand, the Go 1.5 release definitely bifurcated the ecosystem into “code that worked with standard Go” and “code that worked with vendoring enabled.” We want to avoid that outcome here, as much as possible.
+
+The most important thing everyone here can do is write some generic code and let us know if you find bugs, unclear compiler errors, and so on. I have written some generic data structures recently and am very happy with the overall experience. I hope you will be too; please file bugs if not. Thanks!
+
+
+
+Best
+Kamil
+
+
+Hello,
+
+I don't have energy today to read Go language spec or learning how UTF-8 works, so I decided to make a look at Go blog post "Using Go Modules" (https://go.dev/blog/using-go-modules). I have a simple question: is this post up to date?
+
+I guess not, here is my reason why. According to it if I run command "go test" outside $GOPATH and in director without go.mod file I should get result similar to
+
+PASS
+ok      _/some path/hello 0.020s
+
+When I run it in my go version go1.17.1 linux/amd64, result is
+
+go: go.mod file not found in current directory or any parent directory; see 'go help modules'
+
+This is one of the Go blog post listed on Documentation page (https://golang.org/doc/), so I guess it should have note "If you use Go in version x.y.z or latter, some code may not work", but maybe I just think about it in the wrong way.
+
+From practical reason this particular thing isn't important, because go.mod file is the way to go (or at least this is what I read in last week).
+
+Best
+Kamil
+
+
+kamil@kamil:~/Good-things/Programming/Go/Module$ go test
+hello.go:3:8: no required module provides package rsc.io/quote; to add it:
+	go get rsc.io/quote
+kamil@kamil:~/Good-things/Programming/Go/Module$ go mod tidy
+go: finding module for package rsc.io/quote
+go: found rsc.io/quote in rsc.io/quote v1.5.2
+
+This is probably silly thing, but I will write it down just in case.
+
+I mentioned before Go blog post "Using Go Modules" (https://go.dev/blog/using-go-modules), we first write a function
+
+func Hello() string {
+    return "Hello, world."
+}
+
+and test for it which basically check condition
+
+Hello() == "Hello, world."
+
+In the next step we change our function to
+
+func Hello() string {
+    return quote.Hello()
+}
+
+using module "rsc.io/quote". But this is "not portable example" and when test on my computer PASS when using first version of our Hello() function, it FAILS with the second.
+
+According to description quote.Hello() (https://pkg.go.dev/rsc.io/quote#Hello), but from source code we know that in fact it returns string returned by sampler.Hello(prefs ...language.Tag). The last function "returns a localized greeting. If no prefs are given, Hello uses DefaultUserPrefs." (https://pkg.go.dev/rsc.io/sampler#Hello).
+
+On my computer it rightful detected polish language so quote.Hello() return "Witaj świecie." and since "Witaj świecie." != "Hello, world." test now fails.
+
+Best
+Kamil
+
+"Using Go Modules" (https://go.dev/blog/using-go-modules)
+
+I found few another places where "Using Go Modules" (https://go.dev/blog/using-go-modules) is not up to date with out of box Go version 1.17.2.
+
+1) According to part "Adding a dependency" (end of fourth block of text) "Only direct dependencies are recorded in the go.mod file". But my go.mod file contains lines.
+
+require (
+	golang.org/x/text v0.0.0-20170915032832-14c0d48ead0c // indirect
+	rsc.io/sampler v1.3.0 // indirect
+)
+
+2) After using "go get golang.org/x/text" command "go list -m all" I get one line more that in blog post
+
+golang.org/x/tools v0.0.0-20180917221912-90fa682c2a6e
+
+3) After function TestProverb(t *testing.T) is and running "go test" (I'm quite sure that when I did this few years ago, this was the command that I used) I get
+
+hello.go:5:2: no required module provides package rsc.io/quote/v3; to add it:
+	go get rsc.io/quote/v3
+
+This is easy to solve by running "go get rsc.io/quote/v3", but still annoying when you are going through this post.
+
+Best
+Kamil
+
+Hello,
+
+I go back to reading Go spec and I read about omitting semicolon in Go code. I know from some Rob Pike talks on YT or similar source, that compiler inserts semicolon in "places where C programmer would expected it to write". And since I try to follow Go style of writing code (Emacs also helps), outside "if", "for", "switch" and maybe "select" (I really works with channels), I probably never need to write semicolon myself.
+
+To avoid making myself looking stupid by not knowing why simple Go program doesn't compile, when I read part of spec  "Semicolons" (https://golang.org/ref/spec#Semicolons), I try to work out where these semicolons are placed. First rule is easy, but second "To allow complex statements to occupy a single line, a semicolon may be omitted before a closing ")" or "}".", is quite hard to me.
+
+Can anyone give me explicit example when semicolon is omitted in accordance to the second rule and explanation where it should be? I probably see such situations dozens of times, I just not know that they would needed semicolon in some places.
+
+Best
+Kamil
+
+
+"<-" tylko taka strzałka jest dopuszczona.
+
+
+
+Additionally, one-liners often obscure the necessary operations to execute that line of code. This creates a tension between code that is terse, and a targeted implementation that is efficient.
+
+https://www.gonum.org/post/intro_to_gonum/
+
+
+probability distributions, https://pkg.go.dev/gonum.org/v1/gonum/stat/distuv, https://pkg.go.dev/gonum.org/v1/gonum/stat/distmv
+
+top of python, -> Python https://www.gonum.org/post/intro_to_gonum/
+Tutaj dowód że Python z dużej litery https://www.python.org/
+
+
+We also recommend reading the Go FAQ and effective Go pages. If you have specific questions, check out the Go language specification, which provides an official description of the behavior of the language. The Go specification is remarkably short and legible compared with other language specifications, and a better situation than for the many languages without an official specification.
+
+
+General questions about Gonum project and community
+
+
+
+
+octal_byte_value = `\` octal_digit octal_digit octal_digit .
+Dlaczego tu jest `\` choć nie wytłumaczono do czego służy ``.
+
+
+Amateur question: where you should use runes?
+
+Hello,
+
+I read quite a few blog posts, articles, listen to nice number to talks about strings, runes and encoding in Go. I now reading Go Language Spec and I just stuck in the section about runes. I mean, it isn't hard as itself, but it raises to much questions to me. I decided that I need to learn more about Unicode and UTF-8, so from today I'm reading Unicode Technical Site (?), currently the Glossary (https://www.unicode.org/glossary/). But I can't understand one thing: when in practice you should use runes?
+
+My understanding at this moment is like that. Unicode assign every symbol a number (at this moment I disregard normalization and any other more advance stuff), rune is alias for int32 that stores integer representation of this number. UTF-8 is variable size encoding using one or more bytes to encode symbol and shouldn't and DOESN'T represent integer value of symbols Unicode number. Virtues of UTF-8 are clear as how it allows to save a space is clear to me, but I can't find a reason why I should transform my text to runes? In Go stdlib there is a RuneReader interface (?) so this reason must exists, but I just can't find anything. Maybe it have something to do with sending information using internet? I don't know, this is totally outside my humble knowledge.
+
+You can say, that since I don't see a reason to use runes, I probably shouldn't care about it. This is a valid point, but I want to know Go reasonable well and constantly find code with runes which reason of existence I don't understand (e.g. functions in stdlib that operates on runes) is quite demoralising to me.
+
+Best
+Kamil
+
+
+
+What Jeff Bezanson thinks is bad about in Julia in 2021?
+
+Jeff Bezanson's talk [*What's Bad About Julia*](https://www.youtube.com/watch?v=TPuJsgyu87U) from JuliaCon 2019 is one of my favorite Julia talks every and the most funny period. Is there any chance that we see something like updated version of this talk in any shape or form? We now have Julia 1.6 and 1.7 should be soon available and I would love to here some more substance griping about Julia in the style of Jeff Bezanson.
+
+
+
+https://go.dev/doc/tutorial/database-access
+Change to the database you just created so you can add tables.
+
+Go-MySQL-Driver: MySQL
