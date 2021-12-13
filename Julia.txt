@@ -311,6 +311,18 @@ Functions and types: Multiple dispatch | Week 3 | 18.S191 MIT Fall 2020
 Environments for programming with Julia | Week 3 | 18.S191 MIT Fall 2020
 Functions are Objects | Week 4 | 18.S191 MIT Fall 2020
 Convolutions on GPUs | Week 2 | 18.S191 MIT Fall 2020
+Convolutions in the Real World | Week 2 | 18.S191 MIT Fall 2020
+Introduction to macros | Week 3 | 18.S191 MIT Fall 2020
+Course Welcome! MIT Computational Thinking Spring 2021 | Lecture 1 | 6.S083 / 18.S191 / 22.S092
+Transforming Images , MIT Computational Thinking Spring 2021 | Lecture 2
+Transformations & AutoDiff | MIT Computational Thinking Spring 2021 | Lecture 3
+Introduction to your professors | Week 1 | 18.S191 MIT Fall 2020
+Seam Carving: Live Coding Session | Week 2 | MIT 18.S191 Fall 2020 | James Schloss
+Structure | Week3 | 18.S191 MIT Fall 2020
+Understanding structure in data | Week 3 | MIT 18.S191 Fall 2020 | David Sanders
+
+
+
 https://github.com/JuliaCommunity/YouTubeVideoTimestamps/issues?page=4&q=is%3Aissue+is%3Aclosed
 
 
@@ -319,26 +331,43 @@ Hello.
 
 Here are three more videos with mistakes and typos in the descriptions.
 
-_Environments for programming with Julia_, [https://www.youtube.com/watch?v=PgeLMzw_-Ww](https://www.youtube.com/watch?v=PgeLMzw_-Ww)
+_Seam Carving: Live Coding Session_, [https://www.youtube.com/watch?v=ALcohd1q3dk](https://www.youtube.com/watch?v=ALcohd1q3dk)
 
-> S/o to https://github.com/rafaelchp for the video timestamps! 00:00 Welcome!
+> S/o to https://github.com/rashktech for the video timestamps.
+
+"S/o" -> "S/O"? Outdated part need to be removed.
+
+_Structure_, [https://www.youtube.com/watch?v=ConoBmjlivs](https://www.youtube.com/watch?v=ConoBmjlivs)
+
+> 16:46 Another kind of image compression-Outer Product(Multiplication tables), factorizing the Multiplication tables
+
+I guess it should be "Product (Multiplication tables)".
+
+> 23:54 Singular value decomposition(SVD)
+
+It should be "decomposition (SVD)".
+
+> S/o to https://github.com/rashktech for the video timestamps. 00:00 Welcome!
 > 00:10 Help us add time stamps or captions to this video! See the description for details.
 
-We see standard problems here. "S/o" -> "S/O"? And outdated part need to be removed.
+Outdated part need to be removed. "S/o" -> "S/O"?
 
-_Functions are Objects_, [https://www.youtube.com/watch?v=_O-HBDZMLrM](https://www.youtube.com/watch?v=_O-HBDZMLrM)
+_Understanding structure in data_, [https://www.youtube.com/watch?v=KrQV6mZ8hvI](https://www.youtube.com/watch?v=KrQV6mZ8hvI)
 
-> S/o to https://github.com/rafaelchp for the video timestamps. 00:00 Welcome!
+
+> S/o to https://github.com/rashktech for the video timestamps.
+
+"S/o" -> "S/O"?
+
+
+_Introspection_, [https://www.youtube.com/watch?v=IuOXXQR7dAo](https://www.youtube.com/watch?v=IuOXXQR7dAo)
+
+> S/o to https://github.com/rashktech for the video timestamps. 00:00 Welcome!
 > 00:10 Help us add time stamps or captions to this video! See the description for details.
 
-Again. "S/o" -> "S/O"? And outdated part need to be removed.
+Outdated part need to be removed. "S/o" -> "S/O"?
 
-_Convolutions on GPUs_, [https://www.youtube.com/watch?v=aa3JkX_cj_I](https://www.youtube.com/watch?v=aa3JkX_cj_I)
-
-> S/o to https://github.com/rafaelchp for the video timestamps. 00:00 Welcome!
-> 00:10 Help us add time stamps or captions to this video! See the description for details.
-
-Again. "S/o" -> "S/O"? And outdated part need to be removed.
+This is enough for today. If you approve what I did, I will continue. If not, I will try to improve my work to match your needs.
 
 Best,
 Kamil Ziemian
