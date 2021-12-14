@@ -352,9 +352,17 @@ Solving optimization problems at Fonterra | Oleg Barbin | JuliaCon2021
 Tomographic Image Reconstruction with Julia | Tobias Knopp | JuliaCon2021
 GPU programming in Julia | Workshop | JuliaCon 2021
 Pluto.jl — one year later | Fons van der Plas | JuliaCon2021
-
-
-
+Bias Audit and Mitigation in Julia | Ashrya Agrawal | JuliaCon2021
+Code, docs, and tests: what’s in the General registry? Mosè Giordano, Eric P Hanson | JuliaCon2021
+Keynote: William Kahan - Debugging Tools for Floating-Point Code
+Designing Spacecraft Trajectories with Julia | Dan Padilha | JuliaCon2021
+Solving Pokemon Go Battles using Julia | Ian Slagle | JuliaCon2021
+JuliaCon 2021: Julia in VS Code - What's New
+What's new in COSMO? | Michael Garstka | JuliaCon2021
+JuliaCon 2021: Roadmap to Julia BLAS and LinearAlgebra
+Shaped Data with Acsets | Owen Lynch | JuliaCon2021
+New tools to solve PDEs in Julia with Gridap.jl | Francesc Verdugo et al | JuliaCon2021
+Relational AI Sponsor Talk | JuliaCon 2021
 
 
 https://github.com/JuliaCommunity/YouTubeVideoTimestamps/issues?page=4&q=is%3Aissue+is%3Aclosed
@@ -369,92 +377,6 @@ https://github.com/JuliaCommunity/YouTubeVideoTimestamps/issues?page=4&q=is%3Ais
 
 
 
-Hello.
-
-Here are three more videos with mistakes and typos in the descriptions.
-
-_Managing Packages_, [https://www.youtube.com/watch?v=KldNhe4kvuk](https://www.youtube.com/watch?v=KldNhe4kvuk)
-
-> S/o too: https://github.com/vnegi10 for the video timestamps.
-
-"S/o" -> "S/O"?
-
-_Modeling climate change_, [https://www.youtube.com/watch?v=nm86_hDwYTU](https://www.youtube.com/watch?v=nm86_hDwYTU)
-
-> Timestamps:
-> 0:00 - Welcome
-> 0:41 - Introduction to MARGO
-> 1:24 - Henri on the motivation behind MARGO
-> 3:00 - How to interact with the climate model
-> 5:16 - Emission mitigation and carbon dioxide removal to minimize climate suffering
-> 9:30 - Mitigation, Removal, Geo-engineering
-> 9:50 - Adaptation: Henri explaining the equations
-> 17:20 - Mitigating emissions
-
-For aesthetics reasons we should add "0" at the beginning of the first seven positions in the list.
-
-> S/o to https://github.com/ntmt2903 for the video time stamps.
-
-"S/o" -> "S/O"?
-
-_DataFrames.jl 1.0 tutorial_, [https://www.youtube.com/watch?v=tJf24gfcSto](https://www.youtube.com/watch?v=tJf24gfcSto)
-
-> * reading and writing data frames using [CSV.jl](https://github.com/JuliaData/CSV.jl) and [Arrow.jl](https://github.com/JuliaData/Arrow.jl)
-
-I think we should change it "CSV.jl https://github.com/JuliaData/CSV.jl" (I removed brackets due to Markdown) to "CSV.jl (https://github.com/JuliaData/CSV.jl)" and "Arrow.jl https://github.com/JuliaData/Arrow.jl" (again, brackets removed) "Arrow.jl (https://github.com/JuliaData/Arrow.jl)".
-
-> 50.10 CSV.read (cell 6)
-
-It should be "50:10". Maybe this will bring back hyperlink?
-
-Best,
-Kamil Ziemian
-
-
-
-Hello.
-
-Here are three more videos with mistakes and typos in the descriptions.
-
-_Package development: improving engineering quality & latency_, [https://www.youtube.com/watch?v=wXRMwJdEjX4](https://www.youtube.com/watch?v=wXRMwJdEjX4)
-
-> 0:20 Julia internals: compiler specialization, dispatch, backedges, invalidation, precompilation
-> 31:50 Catching errors and inference failures with JET
-
-For aesthetics reasons we should add "0" at the beginning of the first positions in the list.
-
-_hPF-MD.jl: Hybrid Particle-Field Molecular-Dynamics Simulation_, [https://www.youtube.com/watch?v=nclG1k6GAiA](https://www.youtube.com/watch?v=nclG1k6GAiA)
-
-User caprilesport is not mentioned as author of [timestamps](https://github.com/JuliaCommunity/YouTubeVideoTimestamps/issues/39).
-
-> 00:00 Welcome!
-> 0:36 : Background and Motivation
-> 2:24 : Theory and Method
-> 3:58 : Hybrid Particle-Field Method
-> 5:56 : hPF-MD.jl Motivation
-> 7:24 : hPF-MD.jl Example
-> 8:30 : Conclusion and Future Works
-
-For aesthetics reasons we should add "0" at the beginning of the positions 2 to 7 in the list. Also, probably we should do something with the colons.
-
-_Exploiting Structure in Kernel Matrices_, [https://www.youtube.com/watch?v=VJjVYxBsT0Y](https://www.youtube.com/watch?v=VJjVYxBsT0Y)
-
-> 00:00 Welcome!
-> 0:23 : Why do we care about Kernel Methods
-> 1:02 : Motivation
-> 1:59 : Lazy Representation of a Kernel Matrix
-> 2:59 : Structure of Fast Kernel Matrices
-> 4:42 : Fast Kernel Transform
-> 6:23 : Experiments
-
-Again, for aesthetics reasons we should add "0" at the beginning of the positions 2 to 7 in the list. Also, probably we should do something with the colons.
-
-> S/o to https://github.com/Sov-trotter for the video timestamps!
-
-"S/o" -> "S/O"?
-
-Best,
-Kamil Ziemian
 
 
 
@@ -595,6 +517,115 @@ _Pluto.jl — one year later_, [https://www.youtube.com/watch?v=HiI4jgDyDhY](htt
 > S/o to https://github.com/fonsp for the video timestamps and for making Pluto.jl!
 
 "S/o" -> "S/O"?
+
+Best,
+Kamil Ziemian
+
+
+
+Hello.
+
+Here are three more videos with mistakes and typos in the descriptions.
+
+_Bias Audit and Mitigation in Julia_, [https://www.youtube.com/watch?v=Ij0exPwmT2w](https://www.youtube.com/watch?v=Ij0exPwmT2w)
+
+> S/o to https://github.com/ashryaagr for the video timestamps!
+
+"S/o" -> "S/O"?
+
+_Code, docs, and tests: what's in the General registry?_, [https://www.youtube.com/watch?v=9YWwiFbaRx8](https://www.youtube.com/watch?v=9YWwiFbaRx8)
+
+> S/o to https://github.com/tylerjthomas9 for the video timestamps!
+
+"S/o" -> "S/O"?
+
+_Designing Spacecraft Trajectories with Julia_, [https://www.youtube.com/watch?v=iJr_lU7_7Go](https://www.youtube.com/watch?v=iJr_lU7_7Go)
+
+> 00:00 Welcome!
+> 0:23 What do astrodynamicists do?
+> 1:20 Why Julia?
+> 2:13 Simulating spacecraft motion
+> 3:34 Composing functionality
+> 4:32 The nitty-gritty details
+> 5:18 Simulation performance
+> 5:45 Differentiation for State Transition Matrices (STMs)
+> 6:49 Generating quasi-periodic orbits
+> 7:26 Summary
+> 9:09 Reference & Acknowledgements
+
+For aesthetics reasons we should add "0" at the beginning of the positions from 2 upward.
+
+There is no hyperlink in "9:09".
+
+> S/o to https://github.com/dpad for the video timestamps!
+
+"S/o" -> "S/O"?
+
+Best,
+Kamil Ziemian
+
+
+
+
+
+Hello.
+
+Here are three more videos with mistakes and typos in the descriptions.
+
+_Roadmap to Julia BLAS and LinearAlgebra_, [https://www.youtube.com/watch?v=KQ8nvlURX4M](https://www.youtube.com/watch?v=KQ8nvlURX4M)
+
+> S/o to https://github.com/waldyrious for the video timestamps!
+
+"S/o" -> "S/O"?
+
+_Shaped Data with Acsets_, [https://www.youtube.com/watch?v=ZzTJ3Hrw2w8](https://www.youtube.com/watch?v=ZzTJ3Hrw2w8)
+
+> 00:00 Welcome!
+> 0:07 Introduction
+> 0:58 Outline
+> 1:41 What are acsets?
+> 3:38 Graphs as Relational Databases
+> 4:42 Compose with Dataframes: Attributes
+> 5:14 Acset Schemas (A more formal definition)
+> 6:50 Acsets on a Schema
+> 7:45 Previous Example in a new Framework
+> 9:07 Other data structures using acsets
+
+For aesthetics reasons we should add "0" at the beginning of the positions from 2 to 9.
+
+> S/o to https://github.com/ajahraus for the video timestamps!
+
+"S/o" -> "S/O"?
+
+_New tools to solve PDEs in Julia with Gridap.jl_, [https://www.youtube.com/watch?v=hsQiFP4S5RY](https://www.youtube.com/watch?v=hsQiFP4S5RY)
+
+> 00:00 Welcome!
+> 00:25 : Some PDEs Solved With Gridap In 2021
+> 00:39 : Outline
+> 01:00 : New User API
+
+We should do something with colons.
+
+> S/o to https://github.com/cmdenis for the video timestamps!
+
+"S/o" -> "S/O"?
+
+Best,
+Kamil Ziemian
+
+
+
+Hello.
+
+Here are three more videos with mistakes and typos in the descriptions.
+
+_Relational AI Sponsor Talk_, [https://www.youtube.com/watch?v=BTmmjTAwNgI](https://www.youtube.com/watch?v=BTmmjTAwNgI)
+
+> S/o to https://github.com/tylerjthomas9 for the video timestamps!
+
+"S/o" -> "S/O"?
+
+
 
 Best,
 Kamil Ziemian
