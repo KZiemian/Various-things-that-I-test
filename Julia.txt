@@ -364,6 +364,26 @@ Shaped Data with Acsets | Owen Lynch | JuliaCon2021
 New tools to solve PDEs in Julia with Gridap.jl | Francesc Verdugo et al | JuliaCon2021
 Relational AI Sponsor Talk | JuliaCon 2021
 Matlab to Julia: Hours to Minutes for MRI Image Analysis | Jonathan Doucette | JuliaCon2021
+Javis.jl - Julia Animations and Visualizations
+JuliaCon 2021: The OSCAR Computer Algebra System
+JuliaCon 2021: Atomic fields: the new primitives on the block
+JuliaCon 2021: Symbolics.jl - fast and flexible symbolic programming
+JuliaCon 2021: Diversity and Inclusion in the Julia community
+JuliaCon 2021: Unleashing Algebraic Metaprogramming in Julia with Metatheory.jl
+JuliaSim: Machine Learning Accelerated Modeling and Simulation | Chris Rackauckas | JuliaCon2021
+Hierarchical Multiple Instance Learning | Tomas Pevny | JuliaCon 2021
+Julia for Biologists | Elisabeth Roesch | JuliaCon2021
+Adaptive and extendable simulations with Trixi.jl | M Schlottke-Lakemper, H Ranocha | JuliaCon2021
+Enabling Rapid Microservice Development with a Julia SDK | Malcolm Miller | JuliaCon2021
+Transpilers.jl - Transpile all the things | Kusti Skytén | JuliaCon2021
+A deep dive into MakieLayout | Julius Krumbiegel | JuliaCon2021
+Infinite-Dimensional Optimization with InfiniteOpt.jl | Joshua Pulsipher | JuliaCon2021
+Auto-Parallelization at Cloud Scale with Banyan | Caleb Winston | JuliaCon2021
+Julog.jl: Prolog-like Logic Programming in Julia (JuliaCon2021)
+Easy, Featureful Parallelism with Dagger.jl
+Optimal control problems in Chemical Engineering with Julia | Oswaldo A.M | JuliaCon2021
+The Julia SciML Ecosystem: Scientific Machine Learning as a Software Problem - Chris Rackauckas
+Modeling Spacecraft Separation Dynamics in Julia - Jonathan Diegelman
 
 
 https://github.com/JuliaCommunity/YouTubeVideoTimestamps/issues?page=4&q=is%3Aissue+is%3Aclosed
@@ -380,190 +400,6 @@ https://github.com/JuliaCommunity/YouTubeVideoTimestamps/issues?page=4&q=is%3Ais
 
 
 
-
-
-Hello.
-
-Here are three more videos with mistakes and typos in the descriptions.
-
-_Dictionaries.jl - for improved productivity and performance_, [https://www.youtube.com/watch?v=Y-hAZcqAw28](https://www.youtube.com/watch?v=Y-hAZcqAw28)
-
-> 00:00 Welcome!
-> 00:30 : What is Dictionaries.jl
-> 01:02 : Why Dictionaries.jl
-> 05:08 : Implementation
-> 13:47 : Performance
-> 16:52 : The Interface
-> 18:56 : Usage
-> 19:01 : Basic Usage in REPL
-> 23:46 : Grouping and Aggregation in REPL
-> 25:14 : Table operations - TypedTables.jl
-> 27:01 : Conclusion
-
-Probably we should do something with the colons.
-
-> S/o to https://github.com/Sov-trotter for the video timestamps!
-
-"S/o" -> "S/O"?
-
-_Changing Physics education with Julia_, [https://www.youtube.com/watch?v=04HAQXl5aj4](https://www.youtube.com/watch?v=04HAQXl5aj4)
-
-> 00:00 Welcome!
-> 00:40 : I Have A Dream...
-> 02:11 : Putting Things Into Perspective
-> 04:23 : How It Works
-> 05:16 : Actual Pages
-> 05:38 : Benefits Of Showing Real Code
-> 07:56 : Delay Coordinates Embedding
-> 10:49 : Code ↔️ Figure
-> 13:41 : Interactive Applications
-> 16:14 : Makie.jl = 2 stronk 2 be true
-> 17:13 : Exercises Like In Practice
-> 19:39 : Careful: Don't Abuse Pre-Made Libraries
-> 21:59 : Online Repository
-> 22:25 : Live Polling During The Lecture
-> 23:48 : DynamicalSystems.jl 2.0
-> 24:12 : Summary
-
-Probably we should do something with the colons.
-
-> S/o to https://github.com/cmdenis for the video timestamps!
-
-"S/o" -> "S/O"?
-
-_Building on AlphaZero with Julia_, [https://www.youtube.com/watch?v=nbLmR0aDumo](https://www.youtube.com/watch?v=nbLmR0aDumo)
-
-> S/o to https://github.com/filchristou for the video timestamps!
-
-"S/o" -> "S/O"?
-
-Best,
-Kamil Ziemian
-
-
-
-Hello.
-
-Here are three more videos with mistakes and typos in the descriptions.
-
-_Agents.jl and the next chapter in agent based modelling_, [https://www.youtube.com/watch?v=Iaco6v6TVXk](https://www.youtube.com/watch?v=Iaco6v6TVXk)
-
-> 00:00 Welcome!
-> 0:08 Introduction to agent based modelling
-> 3:02 Philosophy of Agents.jl
-> 3:27 Agents.jl is Simple
-> 8:15 Agents.jl is Performant
-
-For aesthetics reasons we should add "0" at the beginning of the positions 2 to 5 in the list. Also, probably we should do something with the colons.
-
-> S/o to https://github.com/Hasnep for the video timestamps!
-
-"S/o" -> "S/O"?
-
-_An individual-based model to simulate Coffee Leaf Rust epidemics_, [https://www.youtube.com/watch?v=cpYVvXID1k4](https://www.youtube.com/watch?v=cpYVvXID1k4)
-
-> 00:00 Welcome!
-> 0:20 Introduction to Coffee Leaf Rust
-> 2:50 The SpatialRust model
-> 4:12 Model implementation
-> 5:23 Examples
-> 5:52 Preliminary Results
-> 6:49 Pending work
-
-For aesthetics reasons we should add "0" at the beginning of the positions from 2 upward.
-
-> S/o to https://github.com/Hasnep for the video timestamps!
-
-"S/o" -> "S/O"?
-
-_Solving optimization problems at Fonterra_, [https://www.youtube.com/watch?v=cG8edieOlug](https://www.youtube.com/watch?v=cG8edieOlug)
-
-> 00:00 Welcome!
-> 0:29 Agenda
-> 0:45 Problem Background
-> 2:12 Organic Milk Planning Process
-
-For aesthetics reasons we should add "0" at the beginning of the positions from 2 upward.
-
-> S/o to https://github.com/dominiqueplante for the video timestamps!
-
-"S/o" -> "S/O"?
-
-Best,
-Kamil Ziemian
-
-
-
-Hello.
-
-Here are three more videos with mistakes and typos in the descriptions.
-
-_Tomographic Image Reconstruction with Julia_, [https://www.youtube.com/watch?v=cDZq_vr10CQ](https://www.youtube.com/watch?v=cDZq_vr10CQ)
-
-> S/o to https://github.com/nHackel for the video timestamps!
-
-"S/o" -> "S/O"?
-
-_GPU programming in Julia_, [https://www.youtube.com/watch?v=Hz9IMJuW5hU](https://www.youtube.com/watch?v=Hz9IMJuW5hU)
-
-> 00:00 Welcome!
-> 00:24 Welcome
-
-We have two "welcome" in the list, in [issue](https://www.youtube.com/watch?v=Hz9IMJuW5hU) timestamps starts from 00:24.
-
-Also, ignace-computing is not mentioned as [author of timestamps](https://github.com/JuliaCommunity/YouTubeVideoTimestamps/issues/49).
-
-_Pluto.jl — one year later_, [https://www.youtube.com/watch?v=HiI4jgDyDhY](https://www.youtube.com/watch?v=HiI4jgDyDhY)
-
-> S/o to https://github.com/fonsp for the video timestamps and for making Pluto.jl!
-
-"S/o" -> "S/O"?
-
-Best,
-Kamil Ziemian
-
-
-
-Hello.
-
-Here are three more videos with mistakes and typos in the descriptions.
-
-_Bias Audit and Mitigation in Julia_, [https://www.youtube.com/watch?v=Ij0exPwmT2w](https://www.youtube.com/watch?v=Ij0exPwmT2w)
-
-> S/o to https://github.com/ashryaagr for the video timestamps!
-
-"S/o" -> "S/O"?
-
-_Code, docs, and tests: what's in the General registry?_, [https://www.youtube.com/watch?v=9YWwiFbaRx8](https://www.youtube.com/watch?v=9YWwiFbaRx8)
-
-> S/o to https://github.com/tylerjthomas9 for the video timestamps!
-
-"S/o" -> "S/O"?
-
-_Designing Spacecraft Trajectories with Julia_, [https://www.youtube.com/watch?v=iJr_lU7_7Go](https://www.youtube.com/watch?v=iJr_lU7_7Go)
-
-> 00:00 Welcome!
-> 0:23 What do astrodynamicists do?
-> 1:20 Why Julia?
-> 2:13 Simulating spacecraft motion
-> 3:34 Composing functionality
-> 4:32 The nitty-gritty details
-> 5:18 Simulation performance
-> 5:45 Differentiation for State Transition Matrices (STMs)
-> 6:49 Generating quasi-periodic orbits
-> 7:26 Summary
-> 9:09 Reference & Acknowledgements
-
-For aesthetics reasons we should add "0" at the beginning of the positions from 2 upward.
-
-There is no hyperlink in "9:09".
-
-> S/o to https://github.com/dpad for the video timestamps!
-
-"S/o" -> "S/O"?
-
-Best,
-Kamil Ziemian
 
 
 
@@ -672,14 +508,207 @@ Kamil Ziemian
 
 
 
+Hello.
 
-00:00 Welcome!
-0:21 What is @atomic?
-0:47 Not atomic: Single-threaded example
-1:41 Not atomic: Broken example
-2:44 @atomic: Fixed example
-3:04 What @atomic does not do
-4:18 Other atomic operators
-9:06 Conclusion
+Here are three more videos with mistakes and typos in the descriptions.
 
-S/o to https://github.com/waldyrious for the video timestamps!
+_Unleashing Algebraic Metaprogramming in Julia with Metatheory.jl_, [https://www.youtube.com/watch?v=tdXfsTliRJk](https://www.youtube.com/watch?v=tdXfsTliRJk)
+
+> S/o to https://github.com/waldyrious for the video timestamps!
+
+"S/o" -> "S/O"?
+
+_JuliaSim: Machine Learning Accelerated Modeling and Simulation_, [https://www.youtube.com/watch?v=lNbU5jNp67s](https://www.youtube.com/watch?v=lNbU5jNp67s)
+
+> 00:00 Welcome!
+> 00:10 Help us add time stamps for this video! See the description for details.
+> 00:42 Industrial application of Julia
+> 02:44 Fast Differential Equation Solvers
+
+Two first lines should be [replaced](https://github.com/JuliaCommunity/YouTubeVideoTimestamps/issues/69) by
+> 00:07 Introduction
+
+> S/o to https://github.com/rtyasdf for the video timestamps!
+
+"S/o" -> "S/O"?
+
+_Hierarchical Multiple Instance Learning_, [https://www.youtube.com/watch?v=Bf0CvltIDbE](https://www.youtube.com/watch?v=Bf0CvltIDbE)
+
+> 00:00 Welcome!
+> 00:10 Help us add time stamps for this video! See the description for details.
+> 1:07 Possible solutions to the deviceID problem
+> 2:52 HMIL approach
+> 6:32 Comparison to SOTA
+> 7:20 Theoretical guarantees
+> 8:29 Mill.jl: node types
+> 9:11 Mill.jl: representing leafs
+> 10:58 Mill.jl: representing dicts
+
+First two lines should be [replaced](https://github.com/JuliaCommunity/YouTubeVideoTimestamps/issues/70) by
+> 00:08 Introduction and Motivation
+
+Maybe "deviceID" should be replaced by "device ID"?
+
+For aesthetics reasons we should add "0" at the beginning of the positions from 2 to 7.
+
+> S/o to https://github.com/SimonMandlik for the video timestamps!
+
+"S/o" -> "S/O"?
+
+Best,
+Kamil Ziemian
+
+
+
+Hello.
+
+Here are three more videos with mistakes and typos in the descriptions.
+
+_Julia for Biologists_, [https://www.youtube.com/watch?v=gRj7E5kYG1I](https://www.youtube.com/watch?v=gRj7E5kYG1I)
+
+> 00:00 Welcome!
+> 00:10 Help us add time stamps for this video! See the description for details.
+> 00:48 : Further resources and contact details
+> 01:25 : Contents
+
+Two first lines should be removed. We should do something with colons.
+
+_Adaptive and extendable simulations with Trixi.jl_, [https://www.youtube.com/watch?v=hoViWRAhCBE](https://www.youtube.com/watch?v=hoViWRAhCBE)
+
+> S/o to https://github.com/sloede for the video timestamps!
+
+"S/o" -> "S/O"?
+
+_Enabling Rapid Microservice Development with a Julia SDK_, [https://www.youtube.com/watch?v=KixO3udfcKA](https://www.youtube.com/watch?v=KixO3udfcKA)
+
+> 00:00 Welcome!
+> 0:18 Talk overview
+> 0:56 The challenges of developing microservices
+> 3:57 Our situation at Deloitte and why we created an SDK
+> 4:36 SDK overview
+> 5:09 Hosting the SDK
+> 5:56 Microservice template package
+> 11:21 Utility packages
+
+For aesthetics reasons we should add "0" at the beginning of the positions from 2 to 7.
+
+> S/o to https://github.com/mmiller-max for the video timestamps!
+
+"S/o" -> "S/O"?
+
+Best,
+Kamil Ziemian
+
+
+Hello.
+
+Here are three more videos with mistakes and typos in the descriptions.
+
+_Transpilers.jl - Transpile all the things | Kusti Skytén | JuliaCon2021_, [https://www.youtube.com/watch?v=-SgiRVpDdhQ](https://www.youtube.com/watch?v=-SgiRVpDdhQ)
+
+> S/o to https://github.com/benchislett for the video timestamps!
+
+"S/o" -> "S/O"?
+
+_A deep dive into MakieLayout_, [https://www.youtube.com/watch?v=AtqXFfaMZqo](https://www.youtube.com/watch?v=AtqXFfaMZqo)
+
+>as well as highlight features that make creating complex multi-plot figures a breeze.
+>For more info on the Julia Programming Language, follow us on Twitter:
+
+We should add one blank line.
+>as well as highlight features that make creating complex multi-plot figures a breeze.
+>
+>For more info on the Julia Programming Language, follow us on Twitter:
+
+> S/o to https://github.com/tp2750 for the video timestamps!
+
+"S/o" -> "S/O"?
+
+_Infinite-Dimensional Optimization with InfiniteOpt.jl_, [https://www.youtube.com/watch?v=z03Fjvz90os](https://www.youtube.com/watch?v=z03Fjvz90os)
+
+> S/o to https://github.com/pulsipher for the video timestamps!
+
+"S/o" -> "S/O"?
+
+Best,
+Kamil Ziemian
+
+
+
+Hello.
+
+Here are three more videos with mistakes and typos in the descriptions.
+
+_Auto-Parallelization at Cloud Scale with Banyan_, [https://www.youtube.com/watch?v=AtqXFfaMZqo](https://www.youtube.com/watch?v=AtqXFfaMZqo)
+
+> S/o to https://github.com/clarisw for the video timestamps!
+
+"S/o" -> "S/O"?
+
+_Julog.jl: Prolog-like Logic Programming in Julia_, [https://www.youtube.com/watch?v=FzHML1bbcSU](https://www.youtube.com/watch?v=FzHML1bbcSU)
+
+> S/o to https://github.com/waldyrious for the video timestamps!
+
+"S/o" -> "S/O"?
+
+_Easy, Featureful Parallelism with Dagger.jl_, [https://www.youtube.com/watch?v=t3S8W6A4Ago](https://www.youtube.com/watch?v=t3S8W6A4Ago)
+
+> 0:00 - Introduction
+> 0:45 - Overview
+> 1:28 - When and why use Dagger instead of Distributed?
+> 2:48 - Coding example
+
+For aesthetics reasons we should add "0" at the beginning of the positions from 1 to 9.
+
+> S/o to https://github.com/plafer for the video timestamps!
+
+"S/o" -> "S/O"?
+
+Best,
+Kamil Ziemian
+
+
+
+Hello.
+
+Here are three more videos with mistakes and typos in the descriptions.
+
+_Optimal control problems in Chemical Engineering with Julia_, [https://www.youtube.com/watch?v=l6KSqUgnttw](https://www.youtube.com/watch?v=l6KSqUgnttw)
+
+> 00:00 Welcome!
+> 0:10 Introduction
+> 0:16 Discretization of nonlinear optimal control problems
+
+For aesthetics reasons we should add "0" at the beginning of the positions from 2 to 6.
+
+> S/o to https://github.com/dnadlinger for the video timestamps
+
+"S/o" -> "S/O"?
+
+_The Julia SciML Ecosystem: Scientific Machine Learning as a Software Problem - Chris Rackauckas_ [https://www.youtube.com/watch?v=XRJ-rtP2fVE](https://www.youtube.com/watch?v=XRJ-rtP2fVE)
+
+> S/o to https://github.com/pitmonticone for the video timestamps!
+
+"S/o" -> "S/O"?
+
+_Modeling Spacecraft Separation Dynamics in Julia_, [https://www.youtube.com/watch?v=tQpqsmwlfY0](https://www.youtube.com/watch?v=tQpqsmwlfY0)
+
+> S/o to https://github.com/pitmonticone for the video timestamps!
+
+"S/o" -> "S/O"?
+
+Best,
+Kamil Ziemian
+
+
+
+Hello.
+
+Here are three more videos with mistakes and typos in the descriptions.
+
+_Differentiable Programming for Quantum Control with SciML_, [https://www.youtube.com/watch?v=uDUwdAqKzYM](https://www.youtube.com/watch?v=uDUwdAqKzYM)
+
+
+
+Best,
+Kamil Ziemian
