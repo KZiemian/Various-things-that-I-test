@@ -320,6 +320,40 @@ Introduction to your professors | Week 1 | 18.S191 MIT Fall 2020
 Seam Carving: Live Coding Session | Week 2 | MIT 18.S191 Fall 2020 | James Schloss
 Structure | Week3 | 18.S191 MIT Fall 2020
 Understanding structure in data | Week 3 | MIT 18.S191 Fall 2020 | David Sanders
+Analysing COVID-19 data | Week 4 | 18.S191 MIT Fall 2020
+Transformations 2: Composability and Linearity | MIT Computational Thinking Spring 2021 | Lecture 4
+Introduction to DataFrames.jl | Week 4 | 18.S191 MIT Fall 2020
+Probability via computation | Week 4 | MIT 18.S191 Fall 2020 | David Sanders
+Computational Thinking Illustrated | Week 5 | MIT 18.S191 Fall 2020 | Alan Edelman
+Graphs, trees, and spreading disease | Week 5 | MIT 18.S191 Fall 2020 | James Schloss [EDIT]
+Macroscopic models of epidemic dynamics | Week 6 | 18.S191 MIT Fall 2020 | David Sanders
+Principal Component Analysis | MIT Computational Thinking | Spring 2021 | Lecture 8
+Sampling and random variables | MIT Computational Thinking Spring | Lecture 9
+Modeling with stochastic simulation | MIT Computational Thinking Spring 2021 | Lecture 10
+Random variables as types | MIT Computational Thinking Spring 2021 | Lecture 11
+Random walks | MIT Computational Thinking Spring 2021 | Lecture 12
+Random walks II | MIT Computational Thinking Spring | Lecture 13
+Discrete & Continuous | MIT Computational Thinking Spring 2021 | Lecture 14L
+Linear models and simulations | MIT Computational Thinking Spring 2021 | Lecture 15
+Optimization | MIT Computational Thinking Spring 2021 | Lecture 16
+Inverses and Newton method | MIT Computational Thinking Spring 2021 | Lecture 5
+Managing Packages | Intro to Julia (for Programmers) | on Julia Academy | with Logan Kilpatrick
+Modeling climate change | MIT Computational Thinking Spring 2021 | Lecture 25
+DataFrames.jl 1.0 tutorial | Workshop | JuliaCon 2021
+Package development: improving engineering quality & latency
+hPF-MD.jl: Hybrid Particle-Field Molecular-Dynamics Simulation
+Exploiting Structure in Kernel Matrices
+Dictionaries.jl - for improved productivity and performance
+Changing Physics education with Julia | George Datseris | JuliaCon2021
+Building on AlphaZero with Julia
+Agents.jl and the next chapter in agent based modelling
+An individual-based model to simulate Coffee Leaf Rust epidemics | Manuela Vanegas F | JuliaCon2021
+Solving optimization problems at Fonterra | Oleg Barbin | JuliaCon2021
+Tomographic Image Reconstruction with Julia | Tobias Knopp | JuliaCon2021
+GPU programming in Julia | Workshop | JuliaCon 2021
+Pluto.jl — one year later | Fons van der Plas | JuliaCon2021
+
+
 
 
 
@@ -327,47 +361,240 @@ https://github.com/JuliaCommunity/YouTubeVideoTimestamps/issues?page=4&q=is%3Ais
 
 
 
+
+
+
+
+
+
+
+
 Hello.
 
 Here are three more videos with mistakes and typos in the descriptions.
 
-_Seam Carving: Live Coding Session_, [https://www.youtube.com/watch?v=ALcohd1q3dk](https://www.youtube.com/watch?v=ALcohd1q3dk)
+_Managing Packages_, [https://www.youtube.com/watch?v=KldNhe4kvuk](https://www.youtube.com/watch?v=KldNhe4kvuk)
 
-> S/o to https://github.com/rashktech for the video timestamps.
-
-"S/o" -> "S/O"? Outdated part need to be removed.
-
-_Structure_, [https://www.youtube.com/watch?v=ConoBmjlivs](https://www.youtube.com/watch?v=ConoBmjlivs)
-
-> 16:46 Another kind of image compression-Outer Product(Multiplication tables), factorizing the Multiplication tables
-
-I guess it should be "Product (Multiplication tables)".
-
-> 23:54 Singular value decomposition(SVD)
-
-It should be "decomposition (SVD)".
-
-> S/o to https://github.com/rashktech for the video timestamps. 00:00 Welcome!
-> 00:10 Help us add time stamps or captions to this video! See the description for details.
-
-Outdated part need to be removed. "S/o" -> "S/O"?
-
-_Understanding structure in data_, [https://www.youtube.com/watch?v=KrQV6mZ8hvI](https://www.youtube.com/watch?v=KrQV6mZ8hvI)
-
-
-> S/o to https://github.com/rashktech for the video timestamps.
+> S/o too: https://github.com/vnegi10 for the video timestamps.
 
 "S/o" -> "S/O"?
 
+_Modeling climate change_, [https://www.youtube.com/watch?v=nm86_hDwYTU](https://www.youtube.com/watch?v=nm86_hDwYTU)
 
-_Introspection_, [https://www.youtube.com/watch?v=IuOXXQR7dAo](https://www.youtube.com/watch?v=IuOXXQR7dAo)
+> Timestamps:
+> 0:00 - Welcome
+> 0:41 - Introduction to MARGO
+> 1:24 - Henri on the motivation behind MARGO
+> 3:00 - How to interact with the climate model
+> 5:16 - Emission mitigation and carbon dioxide removal to minimize climate suffering
+> 9:30 - Mitigation, Removal, Geo-engineering
+> 9:50 - Adaptation: Henri explaining the equations
+> 17:20 - Mitigating emissions
 
-> S/o to https://github.com/rashktech for the video timestamps. 00:00 Welcome!
-> 00:10 Help us add time stamps or captions to this video! See the description for details.
+For aesthetics reasons we should add "0" at the beginning of the first seven positions in the list.
 
-Outdated part need to be removed. "S/o" -> "S/O"?
+> S/o to https://github.com/ntmt2903 for the video time stamps.
 
-This is enough for today. If you approve what I did, I will continue. If not, I will try to improve my work to match your needs.
+"S/o" -> "S/O"?
+
+_DataFrames.jl 1.0 tutorial_, [https://www.youtube.com/watch?v=tJf24gfcSto](https://www.youtube.com/watch?v=tJf24gfcSto)
+
+> * reading and writing data frames using [CSV.jl](https://github.com/JuliaData/CSV.jl) and [Arrow.jl](https://github.com/JuliaData/Arrow.jl)
+
+I think we should change it "CSV.jl https://github.com/JuliaData/CSV.jl" (I removed brackets due to Markdown) to "CSV.jl (https://github.com/JuliaData/CSV.jl)" and "Arrow.jl https://github.com/JuliaData/Arrow.jl" (again, brackets removed) "Arrow.jl (https://github.com/JuliaData/Arrow.jl)".
+
+> 50.10 CSV.read (cell 6)
+
+It should be "50:10". Maybe this will bring back hyperlink?
+
+Best,
+Kamil Ziemian
+
+
+
+Hello.
+
+Here are three more videos with mistakes and typos in the descriptions.
+
+_Package development: improving engineering quality & latency_, [https://www.youtube.com/watch?v=wXRMwJdEjX4](https://www.youtube.com/watch?v=wXRMwJdEjX4)
+
+> 0:20 Julia internals: compiler specialization, dispatch, backedges, invalidation, precompilation
+> 31:50 Catching errors and inference failures with JET
+
+For aesthetics reasons we should add "0" at the beginning of the first positions in the list.
+
+_hPF-MD.jl: Hybrid Particle-Field Molecular-Dynamics Simulation_, [https://www.youtube.com/watch?v=nclG1k6GAiA](https://www.youtube.com/watch?v=nclG1k6GAiA)
+
+User caprilesport is not mentioned as author of [timestamps](https://github.com/JuliaCommunity/YouTubeVideoTimestamps/issues/39).
+
+> 00:00 Welcome!
+> 0:36 : Background and Motivation
+> 2:24 : Theory and Method
+> 3:58 : Hybrid Particle-Field Method
+> 5:56 : hPF-MD.jl Motivation
+> 7:24 : hPF-MD.jl Example
+> 8:30 : Conclusion and Future Works
+
+For aesthetics reasons we should add "0" at the beginning of the positions 2 to 7 in the list. Also, probably we should do something with the colons.
+
+_Exploiting Structure in Kernel Matrices_, [https://www.youtube.com/watch?v=VJjVYxBsT0Y](https://www.youtube.com/watch?v=VJjVYxBsT0Y)
+
+> 00:00 Welcome!
+> 0:23 : Why do we care about Kernel Methods
+> 1:02 : Motivation
+> 1:59 : Lazy Representation of a Kernel Matrix
+> 2:59 : Structure of Fast Kernel Matrices
+> 4:42 : Fast Kernel Transform
+> 6:23 : Experiments
+
+Again, for aesthetics reasons we should add "0" at the beginning of the positions 2 to 7 in the list. Also, probably we should do something with the colons.
+
+> S/o to https://github.com/Sov-trotter for the video timestamps!
+
+"S/o" -> "S/O"?
+
+Best,
+Kamil Ziemian
+
+
+
+
+Hello.
+
+Here are three more videos with mistakes and typos in the descriptions.
+
+_Dictionaries.jl - for improved productivity and performance_, [https://www.youtube.com/watch?v=Y-hAZcqAw28](https://www.youtube.com/watch?v=Y-hAZcqAw28)
+
+> 00:00 Welcome!
+> 00:30 : What is Dictionaries.jl
+> 01:02 : Why Dictionaries.jl
+> 05:08 : Implementation
+> 13:47 : Performance
+> 16:52 : The Interface
+> 18:56 : Usage
+> 19:01 : Basic Usage in REPL
+> 23:46 : Grouping and Aggregation in REPL
+> 25:14 : Table operations - TypedTables.jl
+> 27:01 : Conclusion
+
+Probably we should do something with the colons.
+
+> S/o to https://github.com/Sov-trotter for the video timestamps!
+
+"S/o" -> "S/O"?
+
+_Changing Physics education with Julia_, [https://www.youtube.com/watch?v=04HAQXl5aj4](https://www.youtube.com/watch?v=04HAQXl5aj4)
+
+> 00:00 Welcome!
+> 00:40 : I Have A Dream...
+> 02:11 : Putting Things Into Perspective
+> 04:23 : How It Works
+> 05:16 : Actual Pages
+> 05:38 : Benefits Of Showing Real Code
+> 07:56 : Delay Coordinates Embedding
+> 10:49 : Code ↔️ Figure
+> 13:41 : Interactive Applications
+> 16:14 : Makie.jl = 2 stronk 2 be true
+> 17:13 : Exercises Like In Practice
+> 19:39 : Careful: Don't Abuse Pre-Made Libraries
+> 21:59 : Online Repository
+> 22:25 : Live Polling During The Lecture
+> 23:48 : DynamicalSystems.jl 2.0
+> 24:12 : Summary
+
+Probably we should do something with the colons.
+
+> S/o to https://github.com/cmdenis for the video timestamps!
+
+"S/o" -> "S/O"?
+
+_Building on AlphaZero with Julia_, [https://www.youtube.com/watch?v=nbLmR0aDumo](https://www.youtube.com/watch?v=nbLmR0aDumo)
+
+> S/o to https://github.com/filchristou for the video timestamps!
+
+"S/o" -> "S/O"?
+
+Best,
+Kamil Ziemian
+
+
+
+Hello.
+
+Here are three more videos with mistakes and typos in the descriptions.
+
+_Agents.jl and the next chapter in agent based modelling_, [https://www.youtube.com/watch?v=Iaco6v6TVXk](https://www.youtube.com/watch?v=Iaco6v6TVXk)
+
+> 00:00 Welcome!
+> 0:08 Introduction to agent based modelling
+> 3:02 Philosophy of Agents.jl
+> 3:27 Agents.jl is Simple
+> 8:15 Agents.jl is Performant
+
+For aesthetics reasons we should add "0" at the beginning of the positions 2 to 5 in the list. Also, probably we should do something with the colons.
+
+> S/o to https://github.com/Hasnep for the video timestamps!
+
+"S/o" -> "S/O"?
+
+_An individual-based model to simulate Coffee Leaf Rust epidemics_, [https://www.youtube.com/watch?v=cpYVvXID1k4](https://www.youtube.com/watch?v=cpYVvXID1k4)
+
+> 00:00 Welcome!
+> 0:20 Introduction to Coffee Leaf Rust
+> 2:50 The SpatialRust model
+> 4:12 Model implementation
+> 5:23 Examples
+> 5:52 Preliminary Results
+> 6:49 Pending work
+
+For aesthetics reasons we should add "0" at the beginning of the positions from 2 upward.
+
+> S/o to https://github.com/Hasnep for the video timestamps!
+
+"S/o" -> "S/O"?
+
+_Solving optimization problems at Fonterra_, [https://www.youtube.com/watch?v=cG8edieOlug](https://www.youtube.com/watch?v=cG8edieOlug)
+
+> 00:00 Welcome!
+> 0:29 Agenda
+> 0:45 Problem Background
+> 2:12 Organic Milk Planning Process
+
+For aesthetics reasons we should add "0" at the beginning of the positions from 2 upward.
+
+> S/o to https://github.com/dominiqueplante for the video timestamps!
+
+"S/o" -> "S/O"?
+
+Best,
+Kamil Ziemian
+
+
+
+Hello.
+
+Here are three more videos with mistakes and typos in the descriptions.
+
+_Tomographic Image Reconstruction with Julia_, [https://www.youtube.com/watch?v=cDZq_vr10CQ](https://www.youtube.com/watch?v=cDZq_vr10CQ)
+
+> S/o to https://github.com/nHackel for the video timestamps!
+
+"S/o" -> "S/O"?
+
+_GPU programming in Julia_, [https://www.youtube.com/watch?v=Hz9IMJuW5hU](https://www.youtube.com/watch?v=Hz9IMJuW5hU)
+
+> 00:00 Welcome!
+> 00:24 Welcome
+
+We have two "welcome" in the list, in [issue](https://www.youtube.com/watch?v=Hz9IMJuW5hU) timestamps starts from 00:24.
+
+Also, ignace-computing is not mentioned as [author of timestamps](https://github.com/JuliaCommunity/YouTubeVideoTimestamps/issues/49).
+
+_Pluto.jl — one year later_, [https://www.youtube.com/watch?v=HiI4jgDyDhY](https://www.youtube.com/watch?v=HiI4jgDyDhY)
+
+> S/o to https://github.com/fonsp for the video timestamps and for making Pluto.jl!
+
+"S/o" -> "S/O"?
 
 Best,
 Kamil Ziemian
