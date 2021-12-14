@@ -363,6 +363,7 @@ JuliaCon 2021: Roadmap to Julia BLAS and LinearAlgebra
 Shaped Data with Acsets | Owen Lynch | JuliaCon2021
 New tools to solve PDEs in Julia with Gridap.jl | Francesc Verdugo et al | JuliaCon2021
 Relational AI Sponsor Talk | JuliaCon 2021
+Matlab to Julia: Hours to Minutes for MRI Image Analysis | Jonathan Doucette | JuliaCon2021
 
 
 https://github.com/JuliaCommunity/YouTubeVideoTimestamps/issues?page=4&q=is%3Aissue+is%3Aclosed
@@ -625,7 +626,60 @@ _Relational AI Sponsor Talk_, [https://www.youtube.com/watch?v=BTmmjTAwNgI](http
 
 "S/o" -> "S/O"?
 
+_Matlab to Julia: Hours to Minutes for MRI Image Analysis_, [https://www.youtube.com/watch?v=6OxsK2R5VkA](https://www.youtube.com/watch?v=6OxsK2R5VkA)
 
+> 00:00 Welcome!
+> 0:22 Introduction and motivation
+> 0:42 MRI crash course
+> 1:05 Quantitative susceptibility mapping
+> 1:38 Success of Matlab in traditional MRI
+> 2:01 Struggles of Matlab in modern MRI
+> 2:47 Myelin water imaging
+> 3:21 Non-negative least squares problem
+> 4:07 Bottlenecks
+> 4:50 Switching to Julia: EPG algorithm
+> 5:53 Switching to Julia: NNLS solver
+> 6:30 Switching to Julia: parallelism
+> 7:26 Switching to Julia: 60X faster
+> 7:35 DECAES.jl
+> 7:55 Acknowledgements and contact information
+
+For aesthetics reasons we should add "0" at the beginning of the positions from 2 upward.
+
+> S/o to https://github.com/jondeuce for the video timestamps!
+
+"S/o" -> "S/O"?
+
+_Javis.jl - Julia Animations and Visualizations_, [https://www.youtube.com/watch?v=ckvsc6ukdOc](https://www.youtube.com/watch?v=ckvsc6ukdOc)
+
+> 00:00 Welcome!
+> 0:33 Introduction
+> 3:06 Technical: Intro
+> 4:05 Technical: Manim
+> 4:59 Technical: Processing
+> 5:47 Technical: Javis
+> 8:29 Notebooks: Example
+> 11:29 Notebooks: Jupyter
+
+For aesthetics reasons we should add "0" at the beginning of the positions from 2 to 7.
+
+> S/o to https://github.com/Wikunia for the video timestamps!
+
+"S/o" -> "S/O"?
 
 Best,
 Kamil Ziemian
+
+
+
+
+00:00 Welcome!
+0:21 What is @atomic?
+0:47 Not atomic: Single-threaded example
+1:41 Not atomic: Broken example
+2:44 @atomic: Fixed example
+3:04 What @atomic does not do
+4:18 Other atomic operators
+9:06 Conclusion
+
+S/o to https://github.com/waldyrious for the video timestamps!
