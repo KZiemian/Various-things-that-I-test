@@ -384,6 +384,14 @@ Easy, Featureful Parallelism with Dagger.jl
 Optimal control problems in Chemical Engineering with Julia | Oswaldo A.M | JuliaCon2021
 The Julia SciML Ecosystem: Scientific Machine Learning as a Software Problem - Chris Rackauckas
 Modeling Spacecraft Separation Dynamics in Julia - Jonathan Diegelman
+Differentiable Programming for Quantum Control with SciML - Frank Schäfer
+Musical Julia | Radhika Ivaturi | JuliaCon2021
+Accelerating Scientific Machine Learning with Automatic Differentiable Surrogates - Ludovico Bessi
+Automated Solution of Symbolic Partial Differential Equations via Physics-Informed Neural Networks
+Modeling Biochemical Systems with Catalyst.jl - Samuel Isaacson
+Automatic Numerical Bifurcation Analysis with Applications to Neurosciences with BifurcationKit
+Mixed Feedbacks and Noise, How Bacteria Modulate their Stress Response - Torkel Loman
+Simplifying Delays in Systems Biology | Julia SciML | SIAM CSE 2021 | Niklas Korsbo
 
 
 https://github.com/JuliaCommunity/YouTubeVideoTimestamps/issues?page=4&q=is%3Aissue+is%3Aclosed
@@ -708,7 +716,65 @@ Here are three more videos with mistakes and typos in the descriptions.
 
 _Differentiable Programming for Quantum Control with SciML_, [https://www.youtube.com/watch?v=uDUwdAqKzYM](https://www.youtube.com/watch?v=uDUwdAqKzYM)
 
+> S/o to https://github.com/pitmonticone for the video timestamps!
 
+"S/o" -> "S/O"?
+
+_Musical Julia_, [https://www.youtube.com/watch?v=S2DgKcndHr0](https://www.youtube.com/watch?v=S2DgKcndHr0)
+
+> 00:00 Welcome!
+> 0:10 Musical Julia - The Journey
+> 0:38 The Little Book Of Julia Algorithms
+> 0:47 Introduction to Western and Indian Musical Notation
+> 1:30 Musical Julia - Understanding the problem
+> 1:17 Musical Julia - Solving the problem using an if-else loop
+> 1:26 Additional learning: Arrays, push, file writing & reading
+> 1:36 Musical Julia - Current Status
+> 1:51 Musical Julia - Roadmap: App, Sheet Music reader
+> 2:30 Musical Julia - Acknowledgements to all who helped and Juliacon community & organizers
+> 2:23 Musical Julia - Code run through
+> 2:33 Musical Julia - Github link to the code: github.com/RadsPad7/MusicalJulia
+
+There is now hyperlink in the last line "Github link to the code: github.com/RadsPad7/MusicalJulia".
+
+For aesthetics reasons we should add "0" at the beginning of the positions from 2 upward.
+
+> S/o to https://github.com/sachholden for the video timestamps!
+
+"S/o" -> "S/O"?
+
+_Accelerating Scientific Machine Learning with Automatic Differentiable Surrogates_, [https://www.youtube.com/watch?v=QlOwlPNlVNo](https://www.youtube.com/watch?v=QlOwlPNlVNo)
+
+> S/o to https://github.com/pitmonticone for the video timestamps!
+
+"S/o" -> "S/O"?
 
 Best,
 Kamil Ziemian
+
+
+
+
+
+
+I read some many timestamps over last few days, that I decided to give it a try, without waiting for more guidelines. If they are bad, it is my fault. And I know my English is bad, so correct it in any way necessary.
+
+00:00 Welcome!
+00:50 Purpose of the talk
+02:04 Users should speak about their problems with Julia
+02:34 Widely know bad things about Julia
+06:54 Is the presented list of problems exhaustive?
+07:30 Why some problems were chosen as the main topics of this talk
+07:53 Modularity
+09:14 Example of modules we want to keep separate
+12:03 Problem with isolating constructors
+13:01 Types
+14:06 How to handle Missing type in code
+15:17 Compiler problem with some types definitions
+16:25 Opaque method specificity rules
+17:40 First, the most important rule of method specification
+18:09 Second "rule" of method specification
+18:45 Why we have problem with second "rule"
+21:34 Problem of "X is more specific that Y. Example 1
+23:32 Problem of "X is more specific that Y. Example 2
+25:20 Conclusions
