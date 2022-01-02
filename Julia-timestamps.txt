@@ -1,0 +1,103 @@
+JuliaCon 2021 | Day 1 Single Track | Prof. Jan Vitek Keynote
+[https://www.youtube.com/watch?v=LT4AP7CUMAw](https://www.youtube.com/watch?v=LT4AP7CUMAw)
+
+
+Todd A. Anderson et al., "Parallelizing Julia with a Non-Invasive DSL",
+DOI: 10.4230/LIPIcs.ECOOP.2017.4
+
+Jeff Bezanson et al, "Julia: dynamism and performance reconciled by design"
+[https://doi.org/10.1145/3276490](https://doi.org/10.1145/3276490)
+
+Benjamin Chung, Francesco Zappa Nardelli, Jan Vitek, "Julia’s Efficient
+Algorithm for Subtyping Unions and Covariant Tuples",
+DOI: 10.4230/LIPIcs.ECOOP.2019.24
+
+Francesco Zappa Nardelli et al., "Julia subtyping: a rational
+reconstruction", [https://doi.org/10.1145/3276914](https://doi.org/10.1145/3276914)
+
+Julia Belyakova et al., "World age in Julia: optimizing method dispatch in
+the presence of eval",
+[https://doi.org/10.1145/3428275](https://doi.org/10.1145/3428275)
+
+Artem Pelenitsyn et al., "Type Stability in Julia: Avoiding Performance Pathologies in JIT Compilation", https://doi.org/10.1145/3485527, [arXiv:2109.01950](https://arxiv.org/abs/2109.01950)
+
+
+
+JuliaCon 2020 | Minisymposium on Partial Differential Equations BEAST.jl | Kristof Cools [https://www.youtube.com/watch?v=PmJqqqg8bjg](https://www.youtube.com/watch?v=PmJqqqg8bjg)
+
+00:00 Welcome!
+
+
+
+Everything you need to know about ChainRules 1.0
+
+_Everything you need to know about ChainRules 1.0_, [https://www.youtube.com/watch?v=a8ol-1l84gc](https://www.youtube.com/watch?v=a8ol-1l84gc)
+
+
+
+
+
+I changed order of packages to align it more with presentation. You can find my proposition of timestamps [here](https://github.com/JuliaCommunity/YouTubeVideoTimestamps/issues/119).
+
+
+
+
+JuliaCon 2021 | Day 3 Single Track | Soumith Chintala Keynote
+
+_JuliaCon 2021 | Day 3 Single Track | Soumith Chintala Keynote_, [https://www.youtube.com/watch?v=6V6jk_OdH-w](https://www.youtube.com/watch?v=6V6jk_OdH-w)
+
+It is very nontechnical talk, while I prefer technical ones, so making timestamps was especially hard to me. Correct every one of my mistakes that you find and change anything you want.
+
+I think we should replace line in the description
+"Keynote ( Soumith Chintala): PyTorch and my journey in open source"
+with
+"Keynote by Soumith Chintala: PyTorch and my journey in open source".
+
+Here you can find my propositions for [timestamps](https://github.com/JuliaCommunity/YouTubeVideoTimestamps/issues/125).
+
+00:00 Welcome!
+01:40 Introduction by the speaker
+03:19 What is PyTorch?
+04:57 Implementation of PyTorch
+05:20 Example: neural network in PyTorch
+06:34 General principles of PyTorch
+07:40 PyTorch team needs collaborate with others
+08:42 PyTorch ecosystem
+09:16 State of PyTorch in year 2020
+10:00 Community and funding of PyTorch
+11:49 PyTorch ecosystem
+13:03 The journey of PyTorch
+13:45 Where we came from?
+15:05 Philosophy/principles of open source project
+17:17 User and technology centric projects
+21:22 Migrating from Torch to PyTorch
+25:32 Interactions with other communities
+28:52 Scope & risk
+35:17 Measurement/metric
+38:43 Scaling
+40:45 Vertical and horizontal integration
+42:17 Q&A: Do you see TorchScript becoming independent programming language?
+44:35 Q&A: Do you imagine PyTorch first class front-end for languages other than Python?
+
+
+JuliaCon 2019 | Raising Diversity & Inclusion among Julia users
+
+_Raising Diversity & Inclusion among Julia users_, [https://www.youtube.com/watch?v=9cedY6zyo8I](https://www.youtube.com/watch?v=9cedY6zyo8I)
+
+00:00 Welcome!
+01:24 Julia Diversity and Inclusion Grant
+01:53 Outline of the talk
+
+
+
+_State of DataFrames.jl_, [https://www.youtube.com/watch?v=ErAAV4u2Fuk](https://www.youtube.com/watch?v=ErAAV4u2Fuk)
+
+00:00 Welcome!
+01:20 What is [JuliaData](https://github.com/JuliaData)?
+01:35 Place of [DataFrames.jl](https://github.com/JuliaData/DataFrames.jl) in [JuliaData](https://github.com/JuliaData) landscape
+02:11 [DataFrames.jl](https://github.com/JuliaData/DataFrames.jl): designed with production in mind
+04:44 Key features of [DataFrames.jl](https://github.com/JuliaData/DataFrames.jl)
+06:57 DataFrames.jl development survey, July 2020, [Julia Discourse](https://discourse.julialang.org/t/dataframes-jl-development-survey/44022)
+07:32 With arriving of [DataFrames.jl 1.0](https://github.com/JuliaData/DataFrames.jl) API is now stable
+08:59 Performance
+10:30 Compilation latency
