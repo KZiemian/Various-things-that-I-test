@@ -393,71 +393,6 @@ Automatic Numerical Bifurcation Analysis with Applications to Neurosciences with
 Mixed Feedbacks and Noise, How Bacteria Modulate their Stress Response - Torkel Loman
 Simplifying Delays in Systems Biology | Julia SciML | SIAM CSE 2021 | Niklas Korsbo
 
-_JuliaCon 2020 | Keynote: Scientific Machine Learning | Prof Karen Willcox_, [https://www.youtube.com/watch?v=Bk4PJnjuPps](https://www.youtube.com/watch?v=Bk4PJnjuPps)
-
-It was quite a challenge, but here is my attempt at making timestamps to this lecture. You can change anything, especially my bad English, if you want.
-
-00:00 Welcome and information about JuliaCon 2020
-01:42 Introduction and acknowledgments
-02:50 Outline of the talk
-03:25 What is Scientific Machine Learning (SciML)?
-05:04 What are the opportunities and challenges of SciML?
-10:32 BIG DATA alone is not enough
-11:27 Using physics base models means that we are doing Computational Science
-13:19 Problem 1: Complex multiscale multiphysics phenomena
-14:46 Problem 2: High dimensional parameters
-15:54 Problem 3: Data are sparse, intrusive and expensive to acquire
-16:48 Problem 4: Rare events
-17:33 Problem 5: Uncertainty qualification
-18:11 SciML and Computational Science, summary
-18:47 Example: flow inside a rocket engine combustor
-20:08 Example: equations of flow inside a rocket engine combustor
-20:41 Physics-based model are powerful but computational expensive
-23:10 Overview of model reduction methods
-26:04 Similarities and differences between model reduction and ML
-27:17 Can we have best of two words (model reduction and ML)?
-30:05 Overview of Lift & Learn approach
-33:00 Example: Lift & Learn approach to 2D flow in a rocket engine
-34:34 Example: Training of the model
-36:04 Example: Comparing results for pressure and temperature
-37:38 Outlook of Sci ML
-38:42 Diverse future of computational science and programming languages
-39:31 Q&A: Advice for people bringing ML approach to scientific problems
-42:09 Q&A: Pitfalls of interplay between domains knowledge and ML
-43:33 Q&A: Does presented approach improves fidelity of solution of highly non-linear systems?
-
-
-
-
-_Native Elementary Functions in Julia_, [https://www.youtube.com/watch?v=B03F6EFUm78](https://www.youtube.com/watch?v=B03F6EFUm78)
-
-It was small challenge, I don't hear to well question on 12:07, so what I write at this timestamp is to some extents guess work. Change anything that you find bad or wrong in them.
-
-00:00 Welcome
-00:25 Speaker introduction
-00:53 How I get involved in this project?
-01:59 What is a libm?
-03:30 Types of algorithms for evaluating mathematical functions
-04:55 Why use range reduction?
-05:26 Why use polynomials?
-05:47 Numerical algorithm and multiple dispatch
-07:50 Previous Julia's standard mathematical libraries
-08:38 Julia's standard mathematical libraries today
-09:05 Challenges that I faced
-10:36 What mathematical functions are missing?
-11:02 Future of Julia's standard mathematical libraries
-12:07 Q&A: Can you do clibm in Julia now?
-12:47 Q&A: Do you measure speed of functions new implementations?
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -472,29 +407,6 @@ It was small challenge, I don't hear to well question on 12:07, so what I write 
 ##############################
 ON JULIA DISCOURSE
 
-Robert Rosati _`SymbolicTensors.jl` -- high-level tensor manipulation in Julia" [https://www.youtube.com/watch?v=_b4JIv044GY](https://www.youtube.com/watch?v=_b4JIv044GY)
-
-In description we have.
-
-Many numerical tensor manipulation packages exist (e.g. Einsum.jl), but treating tensors at a purely numeric level throws away a lot of potential optimizations.
-Often, it's possible to exploit the symmetries of a problem to dramatically reduce the calculation steps necessary, or perform some tensor contractions symbolically rather than numerically.
-
-I think it would look nicer if it was formatted as follow.
-
-Many numerical tensor manipulation packages exist (e.g. Einsum.jl), but treating tensors at a purely numeric level throws away a lot of potential optimizations. Often, it's possible to exploit the symmetries of a problem to dramatically reduce the calculation steps necessary, or perform some tensor contractions symbolically rather than numerically.
-
-
-
-
-Is Jeff Bezanson's 2014 _Introduction to Julia Internals_ relevant in 2021 onward?
-
-I'm kind of fan of Jeff Bezanson's talks and recently I watched his talk from first JuliaCon 2014 titled [_Introduction to Julia Internals_](https://www.youtube.com/watch?v=osdeT-tWjzk). I found there many information that were totally new to me about internal working of the Julia, but since talk is from 2014 many things may or may not change. My knowledge about such things is approximately 0, so I don't know what part of Julia, or any programming language, is stable and what is in flux.
-
-If most of the talk is still relevant, it is very valuable source of information, since I didn't find any other talk on YT diving so much into internal working of Julia. In such situation I think it would be good idea for me to watch it again and at timestamps to it. This is small thing, but I can't do much more.
-
-If is too outdated, is there any other similar source with such information to watch/read? This is probably silly question, but to this moment I didn't find anything like that. I don't count Julia documentation, since it now over 1000 pages long and I never read beyond first part of it.
-
-I apologize for all language mistakes. My English is bad and not good.
 
 
 

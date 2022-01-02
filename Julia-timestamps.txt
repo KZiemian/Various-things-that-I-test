@@ -37,47 +37,10 @@ _Everything you need to know about ChainRules 1.0_, [https://www.youtube.com/wat
 
 
 
-I changed order of packages to align it more with presentation. You can find my proposition of timestamps [here](https://github.com/JuliaCommunity/YouTubeVideoTimestamps/issues/119).
 
 
 
 
-JuliaCon 2021 | Day 3 Single Track | Soumith Chintala Keynote
-
-_JuliaCon 2021 | Day 3 Single Track | Soumith Chintala Keynote_, [https://www.youtube.com/watch?v=6V6jk_OdH-w](https://www.youtube.com/watch?v=6V6jk_OdH-w)
-
-It is very nontechnical talk, while I prefer technical ones, so making timestamps was especially hard to me. Correct every one of my mistakes that you find and change anything you want.
-
-I think we should replace line in the description
-"Keynote ( Soumith Chintala): PyTorch and my journey in open source"
-with
-"Keynote by Soumith Chintala: PyTorch and my journey in open source".
-
-Here you can find my propositions for [timestamps](https://github.com/JuliaCommunity/YouTubeVideoTimestamps/issues/125).
-
-00:00 Welcome!
-01:40 Introduction by the speaker
-03:19 What is PyTorch?
-04:57 Implementation of PyTorch
-05:20 Example: neural network in PyTorch
-06:34 General principles of PyTorch
-07:40 PyTorch team needs collaborate with others
-08:42 PyTorch ecosystem
-09:16 State of PyTorch in year 2020
-10:00 Community and funding of PyTorch
-11:49 PyTorch ecosystem
-13:03 The journey of PyTorch
-13:45 Where we came from?
-15:05 Philosophy/principles of open source project
-17:17 User and technology centric projects
-21:22 Migrating from Torch to PyTorch
-25:32 Interactions with other communities
-28:52 Scope & risk
-35:17 Measurement/metric
-38:43 Scaling
-40:45 Vertical and horizontal integration
-42:17 Q&A: Do you see TorchScript becoming independent programming language?
-44:35 Q&A: Do you imagine PyTorch first class front-end for languages other than Python?
 
 
 JuliaCon 2019 | Raising Diversity & Inclusion among Julia users
@@ -87,17 +50,3 @@ _Raising Diversity & Inclusion among Julia users_, [https://www.youtube.com/watc
 00:00 Welcome!
 01:24 Julia Diversity and Inclusion Grant
 01:53 Outline of the talk
-
-
-
-_State of DataFrames.jl_, [https://www.youtube.com/watch?v=ErAAV4u2Fuk](https://www.youtube.com/watch?v=ErAAV4u2Fuk)
-
-00:00 Welcome!
-01:20 What is [JuliaData](https://github.com/JuliaData)?
-01:35 Place of [DataFrames.jl](https://github.com/JuliaData/DataFrames.jl) in [JuliaData](https://github.com/JuliaData) landscape
-02:11 [DataFrames.jl](https://github.com/JuliaData/DataFrames.jl): designed with production in mind
-04:44 Key features of [DataFrames.jl](https://github.com/JuliaData/DataFrames.jl)
-06:57 DataFrames.jl development survey, July 2020, [Julia Discourse](https://discourse.julialang.org/t/dataframes-jl-development-survey/44022)
-07:32 With arriving of [DataFrames.jl 1.0](https://github.com/JuliaData/DataFrames.jl) API is now stable
-08:59 Performance
-10:30 Compilation latency
