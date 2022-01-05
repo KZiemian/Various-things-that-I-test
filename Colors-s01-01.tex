@@ -1,0 +1,279 @@
+% ---------------------------------------------------------------------
+% Podstawowe ustawienia i pakiety
+% ---------------------------------------------------------------------
+\RequirePackage[l2tabu, orthodox]{nag}  % Wykrywa przestarzałe i niewłaściwe
+% sposoby używania LaTeXa. Więcej jest w l2tabu English version.
+\documentclass[a4paper,11pt]{article}
+% {rozmiar papieru, rozmiar fontu}[klasa dokumentu]
+\usepackage[MeX]{polski}  % Polonizacja LaTeXa, bez niej będzie pracował
+% w języku angielskim.
+\usepackage[utf8]{inputenc} % Włączenie kodowania UTF-8, co daje dostęp
+% do polskich znaków.
+\usepackage{lmodern}  % Wprowadza fonty Latin Modern.
+\usepackage[T1]{fontenc}  % Potrzebne do używania fontów Latin Modern.
+
+
+
+% ------------------------------
+% Podstawowe pakiety (niezwiązane z ustawieniami języka)
+% ------------------------------
+\usepackage{microtype}  % Twierdzi, że poprawi rozmiar odstępów w tekście.
+% \usepackage{graphicx}  % Wprowadza bardzo potrzebne komendy do wstawiania
+% % grafiki.
+\usepackage{vmargin}  % Pozwala na prostą kontrolę rozmiaru marginesów,
+% za pomocą komend poniżej. Rozmiar odstępów jest mierzony w calach.
+% ------------------------------
+% MARGINS
+% ------------------------------
+\setmarginsrb
+{ 0.7in}  % left margin
+{ 0.6in}  % top margin
+{ 0.7in}  % right margin
+{ 0.8in}  % bottom margin
+{  20pt}  % head height
+{0.25in}  % head sep
+{   9pt}  % foot height
+{ 0.3in}  % foot sep
+
+
+
+
+
+% ------------------------------
+% Paczki, biblioteki i ich ustawienia dla tego pliku
+% ------------------------------
+\usepackage{tikz}  % Wspaniały pakiet PGF/TikZ.
+% \usetikzlibrary{}
+
+\usepackage{./packages/ColorsForTikZPictures}
+\usepackage{./packages/JagiellonianColors}
+\usepackage{./packages/VariousColors}
+
+
+
+
+
+% ------------------------------
+% TikZ pics i inne ustawienia dla tego pliku
+% ------------------------------
+\tikzset{
+  point/.pic={
+    \fill[color=\MathFGColor] (0,0) circle [radius=0.1];
+  },
+    cube/.pic={
+    \fill[gray!40!black] (0,1,0) -- (1,1,0) -- (1,1,-1) -- (0,1,-1) -- cycle;
+
+    \fill[gray!55!black] (0,1,0) -- (1,1,0) -- (1,0,0) -- (0,0,0) -- cycle;
+
+    \fill[gray!70!black] (1,0,-1) -- (1,1,-1)
+    -- (1,1,0) -- (1,0,0) -- cycle;
+
+  }
+}
+
+
+
+
+
+
+
+% ------------------------------
+% Ustawienie dla tego konkretnego pliku
+% ------------------------------
+% Light
+\def\StylPliku{1}
+% Dark
+% \def\StylPliku{2}
+
+
+\if\StylPliku1
+\newcommand{\backgroundcolor}{jNormalMathTextBackgroundLight}
+\newcommand{\MathFGColor}{jMathTextForegroundGrey}
+\else
+\newcommand{\backgroundcolor}{jNormalMathTextBackgroundDark}
+\newcommand{\MathFGColor}{jMathTextForegroundWhite}
+\fi
+
+
+
+
+
+
+
+% ------------------------------
+% Pakiet „hyperref”
+% Polecano by umieszczać go na końcu preambuły
+% ------------------------------
+\usepackage{hyperref}  % Pozwala tworzyć hiperlinki i zamienia odwołania
+% do bibliografii na hiperlinki.
+
+
+
+
+
+
+
+
+
+
+% ---------------------------------------------------------------------
+% Tytuł, autor, data
+\title{Kolory Jagielloniana, wykładów z~Geometrii~3D i~Programowania Symulacji Fizyki}
+
+\author{}
+
+% \date{}
+% ---------------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+% ####################################################################
+\begin{document}
+% ####################################################################
+
+
+
+
+
+% ######################################
+\maketitle % Tytuł całego tekstu
+% ######################################
+
+
+
+
+
+\pagecolor{\backgroundcolor}
+
+
+
+\begin{tabular}{l|l}
+  \textbf{Kolory trybu light (J)} & \textbf{Kolory trybu dark (J)} \\
+  \hline
+  \tikz \draw[color=black,fill=jNormalTextForegroundGrey] (0,0) rectangle
+  (0.5,0.25); jNormalTextForegroundGrey: 7E7E7E
+                                  & \tikz \draw[color=black,fill=jNormalTextForegroundBlueGrey]
+                                    (0,0) rectangle (0.5,0.25);
+                                    jNormalTextForegroundBlueGrey: 818F9B \\
+  \tikz \draw[color=black,fill=jMathTextForegroundGrey] (0,0) rectangle
+  (0.5,0.25); jMathTextForegroundGrey: 4E4E4E
+                                  & \tikz \draw[color=black,fill=jMathTextForegroundWhite]
+                                    (0,0) rectangle (0.5,0.25);
+                                    jMathTextForegroundWhite: D6DEE5 \\
+  \tikz \draw[color=black,fill=jNormalMathTextBackgroundLight]
+  (0,0) rectangle (0.5,0.25); jNormalMathTextBackgroundLight: FAFAFA
+                                  & \tikz \draw[color=black,fill=jNormalMathTextBackgroundLight]
+                                    (0,0) rectangle (0.5,0.25);
+                                    jNormalMathTextBackgroundLight: 023159
+\end{tabular}
+
+\vspace{2em}
+
+
+
+\begin{tabular}{l|l}
+  \textbf{Kolory osi (J)}
+  & \textbf{Kolor dla współrzędnych jednorodnych (3D)} \\
+  \hline
+  \tikz \draw[color=black,fill=jAxisRed] (0,0) rectangle (0.5,0.25);
+  jAxisRed: A21C0E
+  & \tikz \draw[color=black,fill=homcolor] (0,0) rectangle (0.5,0.25);
+    homcolor: DD5345 \\
+  \tikz \draw[color=black,fill=jAxisGreen] (0,0) rectangle (0.5,0.25);
+  jAxisGreen: 7FAA60
+  & \textbf{Kolor światła (3D)} \\
+  \tikz \draw[color=black,fill=jAxisBlue] (0,0) rectangle (0.5,0.25);
+  jAxisBlue: 0089FF
+  & \tikz \draw[color=black,fill=LightYellow] (0,0) rectangle (0.5,0.25);
+    LightYellow: FBCA33
+\end{tabular}
+
+\vspace{2em}
+
+
+
+
+
+\begin{tabular}{l|l|l}
+  \textbf{Kolory (J)} & \multicolumn{2}{|l}{\textbf{Kolory brył 3D
+                        (Symulacje)}} \\
+  \hline
+  \tikz \draw[color=black,fill=jAxisGreen] (0,0) rectangle (0.5,0.25);
+  jAxisGreen: 14B03D
+                      & \tikz \draw[color=black,fill=StrongGreen]
+                        (0,0) rectangle (0.5,0.25);
+                        StrongGreen: 52, 111, 72 (RGB)
+                                                & \tikz \draw[color=black,fill=SoftGreen] (0,0) rectangle (0.5,0.25);
+                                                  SoftGreen:
+                                                  91, 173, 69 (RGB) \\
+  \tikz \draw[color=black,fill=jAxisBlue] (0,0) rectangle (0.5,0.25);
+  jAxisBlue: 0089FF
+                      & \tikz \draw[color=black,fill=StrongBlue]
+                        (0,0) rectangle (0.5,0.25);
+                        StrongBlue: 29689E
+                                                & \tikz \draw[color=black,fill=SoftBlue] (0,0) rectangle (0.5,0.25);
+                                                  SoftBlue: 2B8ADB \\
+                        \tikz \draw[color=black,fill=jViolet] (0,0) rectangle (0.5,0.25);
+                        jViolet: 8E58CB
+                                                & \tikz \draw[color=black,fill=StrongViolet]
+                                                  (0,0) rectangle (0.5,0.25); Strong Violet: 523886F
+                & \tikz \draw[color=black,fill=SoftViolet] (0,0) rectangle (0.5,0.25);
+                  SoftViolet: 8E48CB \\
+  \tikz \draw[color=black,fill=jDarkOrange] (0,0) rectangle (0.5,0.25);
+  jDarkOrange: EB811B
+                      & \tikz \draw[color=black,fill=StrongOrange]
+                        (0,0) rectangle (0.5,0.25);
+                        StrongOrange: A46933
+                & \tikz \draw[color=black,fill=SoftOrange]
+                  (0,0) rectangle (0.5,0.25); SoftOrange: 219, 144, 79 (RGB) \\
+  \tikz \draw[color=black,fill=jGrey] (0,0) rectangle (0.5,0.25);
+  jGrey: 8F8E8E & % \tikz \draw[color=black,fill=DarkGrey]
+                  % (0,0) rectangle (0.5,0.25); DarkGrey: 757575
+                & % \tikz \draw[color=black,fill=SoftGrey]
+                  % (0,0) rectangle (0.5,0.25); SoftGrey: BEBEBE
+  \\
+  \tikz \draw[color=black,fill=jStrongWhite] (0,0) rectangle (0.5,0.25);
+  jStrongWhite: FBFBFB & &
+\end{tabular}
+
+\vspace{2em}
+
+
+
+\begin{tabular}{l|l}
+  \multicolumn{2}{l}{\textbf{Kolory jeszcze nie użyte}} \\
+  \hline
+  \tikz \draw[color=black,fill=SoftGrey] (0,0) rectangle (0.5,0.25);
+  SoftGrey: BEBEBE
+  & \tikz \draw[color=black,fill=DarkGrey] (0,0) rectangle (0.5,0.25);
+    DarkGrey: 757575 \\
+  \tikz \draw[color=black,fill=VerySoftBlue] (0,0) rectangle (0.5,0.25);
+  VerySoftBlue: D8D3EA & \\
+  \tikz \draw[color=black,fill=StrongCone] (0,0) rectangle (0.5,0.25);
+  StrongCone: 212C36 & \tikz \draw[color=black,fill=SoftCone]
+                       (0,0) rectangle (0.5,0.25); SoftCone: 048FBC
+\end{tabular}
+
+
+\tikz \draw[color=black,fill=alternatywnyStrongViolet] (0,0) rectangle
+(0.5,0.25); alternatywnyStrongViolet: 5C3F7D
+
+
+
+
+
+
+
+
+
+% ############################
+
+% Koniec dokumentu
+\end{document}

@@ -1,0 +1,79 @@
+Page 5.
+
+"485nm" -> "485 nm"???
+
+Page 6.
+"complement: a color C ∗ that yields white if superposed with the original
+color C," In proportion 50\%/50\%.
+
+the original colors are being physically mixed even
+dependent on the targeted kind of paper.??
+
+Page 7.
+tend to use the same words to describe color properties,
+however meaning sometimes very different facts
+
+positions (n±1 / 2n) · 360 -> positions + (n±1 / 2n) · 360
+
+Page 9.
+Przez tabelę, koniec ostatniego zdanie na tej stronie pojawia się dopiero dwie strony dalej.
+
+
+Page 11.
+"Hsb is a ‘user interface’ model, mapping hue ∈ [0, 1] onto hue ◦ ∈ [0, H]"
+Nie zgadza się z tabelą.
+
+Page 14.
+Co to jest "ext id"?
+
+Czemu <id-list> jest z przecinkami, a <model-list> z slaszami.
+
+⟨ext expr⟩ co to jest?
+
+Co to jest <arg>.
+
+Page 15.
+⟨model-spec⟩ co to jest?
+
+Page 16.
+is an abbreviation for the special (and probably most used) case, chyba chodzi o to, że to jest skrót dla specjalnego przypadku formy która następuje po nim. Która to szczególna funkcja jest najczęściej używana.
+
+is being interpreted and processed: (tu chyba powinna być kropka).
+
+Page 22.
+"see the source code for the full command" To powinno być w dokumentacji.
+
+Page 23.
+"By default, definitions via \definecolor, \providecolor, . . . are available only within the current group. By setting \globalcolorstrue, all such definitions are being made globally available — until the current group ends" Ciężko to zrozumieć.
+
+Page 24.
+
+"Remark: all of these commands except" Ten tekst jest w dziwnym miejscu.
+
+Page 25.
+
+"Option xcdraw uses PostScript commands to draw frames and color boxes in case
+of the dvips driver and PDF code to draw frames in case of the pdftex and
+dvipdfm drivers. This is still experimental code that may confuse .dvi viewers.
+The opposite option noxcdraw forces usage of the generic (driver-independent)
+code"
+
+Ten tekst jest dziwny.
+
+Page 26.
+
+Więcej objaśnień dla \testcolor.
+
+\ifmaskcolors nie jest wspomniane w teście.
+
+\maskcolors opisz to trochę jaśniej.
+
+Wzór (8) dopisać co to jest <div>.
+
+Page 32.
+"\convertcolorspec{cmyk}{0.81,1,0,0.07}{HTML}\tmp" ->
+"\convertcolorspec{cmyk}{0.81,1,0,0.07}{HTML}{\tmp}"
+
+
+
+Remarks za blisko tekstu.
