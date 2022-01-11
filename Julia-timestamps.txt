@@ -1,37 +1,18 @@
-JuliaCon 2021 | Day 1 Single Track | Prof. Jan Vitek Keynote
-[https://www.youtube.com/watch?v=LT4AP7CUMAw](https://www.youtube.com/watch?v=LT4AP7CUMAw)
-
-
-Todd A. Anderson et al., "Parallelizing Julia with a Non-Invasive DSL",
-DOI: 10.4230/LIPIcs.ECOOP.2017.4
-
-Jeff Bezanson et al, "Julia: dynamism and performance reconciled by design"
-[https://doi.org/10.1145/3276490](https://doi.org/10.1145/3276490)
-
-Benjamin Chung, Francesco Zappa Nardelli, Jan Vitek, "Julia’s Efficient
-Algorithm for Subtyping Unions and Covariant Tuples",
-DOI: 10.4230/LIPIcs.ECOOP.2019.24
-
-Francesco Zappa Nardelli et al., "Julia subtyping: a rational
-reconstruction", [https://doi.org/10.1145/3276914](https://doi.org/10.1145/3276914)
-
-Julia Belyakova et al., "World age in Julia: optimizing method dispatch in
-the presence of eval",
-[https://doi.org/10.1145/3428275](https://doi.org/10.1145/3428275)
-
-Artem Pelenitsyn et al., "Type Stability in Julia: Avoiding Performance Pathologies in JIT Compilation", https://doi.org/10.1145/3485527, [arXiv:2109.01950](https://arxiv.org/abs/2109.01950)
-
-
-
-JuliaCon 2020 | Minisymposium on Partial Differential Equations BEAST.jl | Kristof Cools [https://www.youtube.com/watch?v=PmJqqqg8bjg](https://www.youtube.com/watch?v=PmJqqqg8bjg)
+JuliaCon 2020 | Keynote: Adventures in Computing | Prof Linda Petzold
+[https://www.youtube.com/watch?v=BY2qijwB33Y](https://www.youtube.com/watch?v=BY2qijwB33Y)
 
 00:00 Welcome!
-
-
-
-Everything you need to know about ChainRules 1.0
-
-_Everything you need to know about ChainRules 1.0_, [https://www.youtube.com/watch?v=a8ol-1l84gc](https://www.youtube.com/watch?v=a8ol-1l84gc)
+01:19 Programming with punch cards
+01:49 My first serious encounter with numerical methods for ODEs
+02:34 Why should users have to decide whether their problem is stiff or not?
+04:02 Livermore Solver for Ordinary Differential Equations Automatic (LSODA) is now available in Julia by [LSODA.jl](https://github.com/rveltz/LSODA.jl)
+04:14 Computational combustion (see [DASSL.jl](https://github.com/SciML/DASSL.jl)) and lessons about releasing code
+06:35 Solar power plan and challenges that it provided
+08:29 True problem wasn't in the code, but in our math
+09:36 "DAEs are not ODEs" (Differential Algebraic Equations)
+10:55 Development of theory and algorithms for Differential Algebraic Equations (DAE, see [DASKR.jl](https://github.com/SciML/DASKR.jl))
+14:53 Solving F = ma with constraints
+19:42 DAEs and various problems on which I was working around 1991
 
 
 
@@ -50,3 +31,44 @@ _Raising Diversity & Inclusion among Julia users_, [https://www.youtube.com/watc
 00:00 Welcome!
 01:24 Julia Diversity and Inclusion Grant
 01:53 Outline of the talk
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+_Working with images in Julia_, https://www.youtube.com/watch?v=DGojI9xcCfg
+
+_How to install Julia and Pluto_, https://www.youtube.com/watch?v=OOjKEgbt8AI
+
+
+
+
+
+
+What's Bad About Julia - Jeff Bezanson [https://www.youtube.com/watch?v=TPuJsgyu87U](https://www.youtube.com/watch?v=TPuJsgyu87U)
+
+Today I will complaining about timestamps that I made [myself](https://github.com/JuliaCommunity/YouTubeVideoTimestamps/issues/107). It is quite fitting, after all if I criticize what others did, I should also criticize what I did wrong.
+
+Now we have in timestamps
+> 21:34 Problem of "X is more specific that Y. Example 1
+> 23:32 Problem of "X is more specific that Y. Example 2
+
+I probably should write something like text below.
+> 21:34 Problem with "X is more specific that Y". Example 1
+> 23:32 Problem with "X is more specific that Y". Example 2
+
+But someone more skilled with English should judge which form is better. In any case, closing quotation mark need to added.
