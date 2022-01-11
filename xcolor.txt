@@ -74,6 +74,35 @@ Page 32.
 "\convertcolorspec{cmyk}{0.81,1,0,0.07}{HTML}\tmp" ->
 "\convertcolorspec{cmyk}{0.81,1,0,0.07}{HTML}{\tmp}"
 
+Page 33.
+\documentclass{minimal}
+\usepackage{xcolor}
+\begin{document}
+black\color{red}red1\newpage red2\color{black}black
+\end{document}
 
+Sprawdź czy to wciąż jest problem w nowym pdfLaTeX
+
+Page 38.
+\rowcolors nie działa u mnie.
+
+
+Page 46.
+gobbled final zeros here . . .
+
+Page 47.
+{named}{ Plum}
 
 Remarks za blisko tekstu.
+
+Page 50.
+Linia 10. Powinno być x \in \mathca{R}^{ \circ }_{ n }
+
+Page 57.
+(!=) w równanie 78.
+s ′ -> s*.
+
+
+Zrób Figure 3, Figure 4, Figure 8, Figure 9, Figure 11.
+
+Zrób punkty 4.3, 4.4
