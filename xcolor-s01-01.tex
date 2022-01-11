@@ -355,29 +355,30 @@ Light with wave length $485$ nm has color: % \tikz \filldraw[fill={\color[wave]{
 
 \href{https://www.crisismagazine.com/2021/the-theological-illiteracy-of-dare-we-hope}{Link.}
 
-% \tikz \filldraw[fill=red]   (0,0) rectangle (0.485,0.3);
-% \tikz \filldraw[fill=green] (0,0) rectangle (0.485,0.3);
-% \tikz \filldraw[fill=blue]  (0,0) rectangle (0.485,0.3);
 
 
-% \definecolor{red1}{rgb}{1,0,0}
 
-% \tikz \filldraw[fill=red1]   (0,0) rectangle (0.485,0.3);
-% \tikz \filldraw[fill=green] (0,0) rectangle (0.485,0.3);
-% \tikz \filldraw[fill=blue]  (0,0) rectangle (0.485,0.3);
 
-% \def\temp{cyan}\ifx\colormask\temp \includegraphics{foo_c}\else
-% \def\temp{magenta}\ifx\colormask\temp \includegraphics{foo_m}\else
-% ...
-% \fi\fi
 
 
 
 
 
+\newcount\WL \unitlength0.75pt
 
+\begin{picture}(460,60)(355,-10)
 
+  \sffamily \tiny \linethickness{1.25\unitlength} \WL=360
+  \multiput(360,0)(1,0){456}%
+  {{\color[wave]{\the\WL}\line(0,1){50}}\global\advance\WL1}
+  \linethickness{0.25\unitlength}\WL=360
+  \multiput(360,0)(20,0){23}%
+  {\picture(0,0)
+    \line(0,-1){5} \multiput(5,0)(5,0){3}{\line(0,-1){2.5}}
+    \put(0,-10){\makebox(0,0){\the\WL}}\global\advance\WL20
+  \endpicture}
 
+\end{picture}
 
 
 
@@ -388,15 +389,62 @@ Light with wave length $485$ nm has color: % \tikz \filldraw[fill={\color[wave]{
 
 
 
+\sffamily
 
+\begin{testcolors}[rgb,cmyk,hsb,HTML,gray]
 
+  \testcolor{olive}
+  \testcolor{red!50!green}
+  \testcolor{-cyan!50!magenta}
+  \testcolor[cmyk]{0,0,1,0.5}
+  \testcolor[cmyk]{0,0,0.5,0.5}
+  \testcolor[rgb:cmyk]{0,0,0.5,0.5}
 
+\end{testcolors}
 
 
 
+\tikz \filldraw[fill=red]           (0,0) rectangle (0.485,0.3);
+\tikz \filldraw[fill=-red]          (0,0) rectangle (0.485,0.3);
+\tikz \filldraw[fill=red!75]        (0,0) rectangle (0.485,0.3);
+\tikz \filldraw[fill=-red!75]       (0,0) rectangle (0.485,0.3);
+\tikz \filldraw[fill=red!75!green]  (0,0) rectangle (0.485,0.3);
+\tikz \filldraw[fill=-red!75!green] (0,0) rectangle (0.485,0.3);
+\tikz \filldraw[fill=red!75!green!50]  (0,0) rectangle (0.485,0.3);
+\tikz \filldraw[fill=-red!75!green!50] (0,0) rectangle (0.485,0.3);
+\tikz \filldraw[fill=red!75!green!50!blue]     (0,0) rectangle (0.485,0.3);
+\tikz \filldraw[fill=-red!75!green!50!blue]    (0,0) rectangle (0.485,0.3);
+\tikz \filldraw[fill=red!75!green!50!blue!25]  (0,0) rectangle (0.485,0.3);
+\tikz \filldraw[fill=-red!75!green!70!blue!25] (0,0) rectangle (0.485,0.3);
+\tikz \filldraw[fill=red!75!green!70!blue!25!gray]
+(0,0) rectangle (0.485,0.3);
+\tikz \filldraw[fill=-red!75!green!70!blue!25!gray]
+(0,0) rectangle (0.485,0.3);
 
+\fboxrule6pt
+\fcolorbox
+{red!70!green}% outer frame
+{yellow!30!blue}% outer background
+{\fcolorbox
+{-yellow!30!blue}% inner frame
+{-red!70!green}% inner background
+{Test\textcolor{red!72.75}{Test}\color{-green}Test}}
 
+\tikz \filldraw[fill=red!70!green] (0,0) rectangle (0.485,0.3);
+\tikz \filldraw[fill=yellow!30!blue] (0,0) rectangle (0.485,0.3);
+\tikz \filldraw[fill=-yellow!30!blue] (0,0) rectangle (0.485,0.3);
+\tikz \filldraw[fill=-red!70!green] (0,0) rectangle (0.485,0.3);
+\tikz \filldraw[fill=red!72.75] (0,0) rectangle (0.485,0.3);
+\tikz \filldraw[fill=-green] (0,0) rectangle (0.485,0.3);
 
+\def\test{current, \textcolor{.!50}{50\%},
+  \textcolor{-.}{complement},
+  \textcolor{yellow!50!.}{MIC}}
+\textcolor{blue}{\test} \\
+and \textcolor{red}{\test} \\
+\def\Test{\color{.!80} Test}
+\textcolor{blue}{\Test\Test\Test\Test\Test} \\
+and \textcolor{red}{\Test\Test\Test\Test\Test}
 
 
 
@@ -407,75 +455,71 @@ Light with wave length $485$ nm has color: % \tikz \filldraw[fill={\color[wave]{
 
 
 
+\definecolorseries{test1}{rgb}{step}[rgb]{0.95,0.85,0.55}{0.17,0.47,0.37}
 
+\resetcolorseries[12]{test1}
 
+\begin{figure}
 
+  % \rowcolors[\hline]{1}{testOne!!+}{testOne!!+}
 
+  \begin{tabular}{c}
+    % \number\rownum \\          % 1
+    % \number\rownum \\          % 2
+    % \number\rownum \\          % 3
+  \end{tabular}
 
+  \caption{$S_{ 1 }$}
 
+\end{figure}
 
 
 
 
 
+\definecolorseries{test2}{hsb}{step}[hsb]{0.575,1,1}{0.11,-0.05,0}
 
 
 
 
 
+\definecolorseries{test3}{rgb}{grad}[rgb]{0.95,0.85,0.55}{3,11,17}
 
 
 
 
 
+\definecolorseries{test4}{rgb}{grad}[hsb]{0.575,1,1}{0.987,-0.234,0}
 
 
 
 
 
+\definecolorseries{test5}{rgb}{last}[rgb]{0.95,0.85,0.55}[rgb]{0.05,0.15,0.55}
 
 
 
 
 
+\definecolorseries{test6}{hsb}{last}[hsb]{0.575,1,1}[hsb]{-0.425,0.15,1}
 
 
 
 
 
+\definecolorseries{test7}{rgb}{last}{yellow!50}{blue}
 
 
 
 
 
+\definecolorseries{test8}{hsb}{last}{yellow!50}{blue}
 
 
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+\definecolorseries{test9}{cmy}{last}{yellow!50}{blue}
 
 
 

@@ -1,0 +1,242 @@
+% ####################################################################
+% Author: Kamil Ziemian
+% ####################################################################
+
+% ---------------------------------------------------------------------
+% Basic configuraton of LaTeX document and Polish language
+% ---------------------------------------------------------------------
+\RequirePackage[l2tabu, orthodox]{nag}  % Find out deprecated part of LaTeX.
+% More information in l2tabu English version.
+
+
+\documentclass[a4paper,11pt]{article}
+% {rozmiar papieru, rozmiar fontu}[klasa dokumentu]
+\usepackage[utf8]{inputenc} % Włączenie kodowania UTF-8, co daje dostęp
+% do polskich znaków.
+\usepackage{lmodern} % Wprowadza fonty Latin Modern.
+\usepackage[T1]{fontenc} % Potrzebne do używania fontów Latin Modern.
+
+\usepackage[MeX]{polski} % Polonizacja LaTeXa, bez niej będzie pracował
+% w języku angielskim.
+
+
+
+
+
+
+
+
+
+
+% ---------------------------------------
+% MARGINS
+% ---------------------------------------
+\usepackage{vmargin}  % Pozwala na prostą kontrolę rozmiaru marginesów,
+% za pomocą komend poniżej. Rozmiar odstępów jest mierzony w calach.
+\setmarginsrb
+{ 0.7in}  % left margin
+{ 0.6in}  % top margin
+{ 0.7in}  % right margin
+{ 0.8in}  % bottom margin
+{  20pt}  % head height
+{0.25in}  % head sep
+{   9pt}  % foot height
+{ 0.3in}  % foot sep
+
+
+
+
+
+
+
+% ---------------------------------------
+% Basic packages
+% ---------------------------------------
+
+
+
+
+
+
+
+% ---------------------------------------
+% Packages for scientific writing
+% ---------------------------------------
+
+
+
+
+
+
+
+% ---------------------------------------
+% Packages written by us
+% ---------------------------------------
+% \usepackage{demopack}
+
+
+
+
+
+
+
+% ---------------------------------------
+% Configuration for this particular file
+% ---------------------------------------
+\usepackage[dvipsnames]{xcolor}
+% Packages enabling use of many color models and many additional colors.
+
+\usepackage{tikz}  % Great package PGF/TikZ.
+
+
+
+
+
+
+
+% ---------------------------------------
+% Some useful commands
+% ---------------------------------------
+\newcommand{\red}[1]{{\color{red} #1}}
+
+
+
+
+
+
+
+
+
+% ---------------------------------------
+% Packages "hyperref"
+% They say that you should put it at the end of the preamble
+% ---------------------------------------
+\usepackage{hyperref}  % Pozwala tworzyć hiperlinki i zamienia odwołania
+% do bibliografii na hiperlinki.
+\hypersetup{urlcolor=orange}
+
+
+
+
+
+
+
+
+
+
+% ---------------------------------------------------------------------
+% Tytuł, autor, data
+\title{\href{https://repo.skni.umcs.pl/ctan/macros/latex/contrib/xcolor/xcolor.pdf}{\texttt{xcolor}} testy \\
+  s. 01, 07}
+
+\author{}
+% \date{}
+% ---------------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+% ####################################################################
+\begin{document}
+% ####################################################################
+
+
+
+
+
+% ######################################
+\maketitle % Tytuł całego tekstu
+% ######################################
+
+
+
+
+
+\noindent
+\tikz \filldraw[fill=Apricot]        (0,0) rectangle (0.485,0.3);
+\tikz \filldraw[fill=Aquamarine]     (0,0) rectangle (0.485,0.3);
+\tikz \filldraw[fill=Bittersweet]    (0,0) rectangle (0.485,0.3);
+\tikz \filldraw[fill=Black]          (0,0) rectangle (0.485,0.3);
+\tikz \filldraw[fill=Blue]           (0,0) rectangle (0.485,0.3);
+\tikz \filldraw[fill=BlueGreen]      (0,0) rectangle (0.485,0.3);
+\tikz \filldraw[fill=BrickRed]       (0,0) rectangle (0.485,0.3);
+\tikz \filldraw[fill=Brown]          (0,0) rectangle (0.485,0.3);
+\tikz \filldraw[fill=BurntOrange]    (0,0) rectangle (0.485,0.3);
+\tikz \filldraw[fill=CadetBlue]      (0,0) rectangle (0.485,0.3);
+\tikz \filldraw[fill=CarnationPink]  (0,0) rectangle (0.485,0.3);
+\tikz \filldraw[fill=Cerulean]       (0,0) rectangle (0.485,0.3);
+\tikz \filldraw[fill=CornflowerBlue] (0,0) rectangle (0.485,0.3);
+\tikz \filldraw[fill=Cyan]           (0,0) rectangle (0.485,0.3);
+\tikz \filldraw[fill=Dandelion]      (0,0) rectangle (0.485,0.3);
+\tikz \filldraw[fill=DarkOrchid]     (0,0) rectangle (0.485,0.3);
+\tikz \filldraw[fill=Emerald]        (0,0) rectangle (0.485,0.3);
+\tikz \filldraw[fill=ForestGreen]    (0,0) rectangle (0.485,0.3);
+\tikz \filldraw[fill=Fuchsia]        (0,0) rectangle (0.485,0.3);
+\tikz \filldraw[fill=Goldenrod]      (0,0) rectangle (0.485,0.3);
+\tikz \filldraw[fill=Gray]           (0,0) rectangle (0.485,0.3);
+\tikz \filldraw[fill=Green]          (0,0) rectangle (0.485,0.3);
+\tikz \filldraw[fill=GreenYellow]    (0,0) rectangle (0.485,0.3);
+\tikz \filldraw[fill=JungleGreen]    (0,0) rectangle (0.485,0.3);
+\tikz \filldraw[fill=Lavender]       (0,0) rectangle (0.485,0.3);
+\tikz \filldraw[fill=LimeGreen]      (0,0) rectangle (0.485,0.3);
+\tikz \filldraw[fill=Magenta]        (0,0) rectangle (0.485,0.3);
+\tikz \filldraw[fill=Mahogany]       (0,0) rectangle (0.485,0.3);
+\tikz \filldraw[fill=Maroon]         (0,0) rectangle (0.485,0.3);
+\tikz \filldraw[fill=Melon]          (0,0) rectangle (0.485,0.3);
+\tikz \filldraw[fill=MidnightBlue]   (0,0) rectangle (0.485,0.3);
+\tikz \filldraw[fill=Mulberry]       (0,0) rectangle (0.485,0.3);
+\tikz \filldraw[fill=NavyBlue]       (0,0) rectangle (0.485,0.3);
+\tikz \filldraw[fill=OliveGreen]     (0,0) rectangle (0.485,0.3);
+\tikz \filldraw[fill=Orange]         (0,0) rectangle (0.485,0.3);
+\tikz \filldraw[fill=OrangeRed]      (0,0) rectangle (0.485,0.3);
+\tikz \filldraw[fill=Orchid]         (0,0) rectangle (0.485,0.3);
+\tikz \filldraw[fill=Peach]          (0,0) rectangle (0.485,0.3);
+\tikz \filldraw[fill=Periwinkle]     (0,0) rectangle (0.485,0.3);
+\tikz \filldraw[fill=PineGreen]      (0,0) rectangle (0.485,0.3);
+\tikz \filldraw[fill=Plum]           (0,0) rectangle (0.485,0.3);
+\tikz \filldraw[fill=ProcessBlue]    (0,0) rectangle (0.485,0.3);
+\tikz \filldraw[fill=Purple]         (0,0) rectangle (0.485,0.3);
+\tikz \filldraw[fill=RawSienna]      (0,0) rectangle (0.485,0.3);
+\tikz \filldraw[fill=Red]            (0,0) rectangle (0.485,0.3);
+\tikz \filldraw[fill=RedOrange]      (0,0) rectangle (0.485,0.3);
+\tikz \filldraw[fill=RedViolet]      (0,0) rectangle (0.485,0.3);
+\tikz \filldraw[fill=Rhodamine]      (0,0) rectangle (0.485,0.3);
+\tikz \filldraw[fill=RoyalBlue]      (0,0) rectangle (0.485,0.3);
+\tikz \filldraw[fill=RubineRed]      (0,0) rectangle (0.485,0.3);
+\tikz \filldraw[fill=Salmon]         (0,0) rectangle (0.485,0.3);
+\tikz \filldraw[fill=SeaGreen]       (0,0) rectangle (0.485,0.3);
+\tikz \filldraw[fill=Sepia]          (0,0) rectangle (0.485,0.3);
+\tikz \filldraw[fill=SkyBlue]        (0,0) rectangle (0.485,0.3);
+\tikz \filldraw[fill=SpringGreen]    (0,0) rectangle (0.485,0.3);
+\tikz \filldraw[fill=Tan]            (0,0) rectangle (0.485,0.3);
+\tikz \filldraw[fill=TealBlue]       (0,0) rectangle (0.485,0.3);
+\tikz \filldraw[fill=Thistle]        (0,0) rectangle (0.485,0.3);
+\tikz \filldraw[fill=Turquoise]      (0,0) rectangle (0.485,0.3);
+\tikz \filldraw[fill=Violet]         (0,0) rectangle (0.485,0.3);
+\tikz \filldraw[fill=VioletRed]      (0,0) rectangle (0.485,0.3);
+\tikz \filldraw[fill=White]          (0,0) rectangle (0.485,0.3);
+\tikz \filldraw[fill=WildStrawberry] (0,0) rectangle (0.485,0.3);
+\tikz \filldraw[fill=Yellow]         (0,0) rectangle (0.485,0.3);
+\tikz \filldraw[fill=YellowGreen]    (0,0) rectangle (0.485,0.3);
+\tikz \filldraw[fill=YellowOrange]   (0,0) rectangle (0.485,0.3);
+
+
+
+
+
+
+
+
+
+
+% ####################################################################
+% ####################################################################
+
+% Koniec dokumentu
+\end{document}

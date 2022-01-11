@@ -113,6 +113,7 @@
 % ---------------------------------------
 \usepackage{hyperref}  % Pozwala tworzyć hiperlinki i zamienia odwołania
 % do bibliografii na hiperlinki.
+\hypersetup{urlcolor=orange}
 
 
 
@@ -126,12 +127,9 @@
 % ---------------------------------------------------------------------
 % Tytuł, autor, data
 \title{\href{https://repo.skni.umcs.pl/ctan/macros/latex/contrib/xcolor/xcolor.pdf}{\texttt{xcolor}} testy \\
-  s. 01, 05}
+  s. 01, 06}
 
 \author{}
-
-
-
 % \date{}
 % ---------------------------------------------------------------------
 
@@ -160,77 +158,70 @@
 
 
 
-black
-\color{red}
-red1
-\newpage
-red2
+\noindent
 \color{black}
-black
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+\colorbox{red}{ABC},
+\colorbox{green}{ABC},
+\colorbox{blue}{ABC},
+\colorbox{cyan}{ABC},
+\colorbox{magenta}{ABC},
+\colorbox{yellow}{ABC},
+\color{white} \colorbox{black}{ABC}, \color{black}
+\colorbox{gray}{ABC},
+\colorbox{white}{ABC},
+\colorbox{darkgray}{ABC},
+\colorbox{lightgray}{ABC},
+\colorbox{brown}{ABC},
+\colorbox{lime}{ABC},
+\colorbox{olive}{ABC},
+\colorbox{orange}{ABC},
+\colorbox{pink}{ABC},
+\colorbox{purple}{ABC},
+\colorbox{teal}{ABC},
+\colorbox{violet}{ABC}
+
+\vspace{1em}
+
+
+
+
+
+\begingroup
+
+\color{black}
+
+\maskcolors[cmyk]{cyan}
+
+\noindent
+\colorbox{red}{ABC},
+\colorbox{green}{ABC},
+\colorbox{blue}{ABC},
+\colorbox{cyan}{ABC},
+\colorbox{magenta}{ABC},
+\colorbox{yellow}{ABC},
+\colorbox{black}{ABC},
+\colorbox{yellow}{ABC},
+\colorbox{black}{ABC},
+\colorbox{gray}{ABC},
+\colorbox{white}{ABC},
+\colorbox{darkgray}{ABC},
+\colorbox{lightgray}{ABC},
+\colorbox{brown}{ABC},
+\colorbox{lime}{ABC},
+\colorbox{olive}{ABC},
+\colorbox{orange}{ABC},
+\colorbox{pink}{ABC},
+\colorbox{purple}{ABC},
+\colorbox{teal}{ABC},
+\colorbox{violet}{ABC}
+
+\endgroup
+
+
+
+
+
+% \rowcolors[\hline]{3}{green!25}{yellow!50}
 
 
 
