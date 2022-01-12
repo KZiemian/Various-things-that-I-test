@@ -105,4 +105,4 @@ s ′ -> s*.
 
 Zrób Figure 3, Figure 4, Figure 8, Figure 9, Figure 11.
 
-Zrób punkty 4.3, 4.4
+Zrób punkty 4.4.
