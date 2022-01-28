@@ -11,13 +11,6 @@
 
 \documentclass[a4paper,11pt]{article}
 % {rozmiar papieru, rozmiar fontu}[klasa dokumentu]
-\usepackage[utf8]{inputenc} % Włączenie kodowania UTF-8, co daje dostęp
-% do polskich znaków.
-\usepackage{lmodern} % Wprowadza fonty Latin Modern.
-\usepackage[T1]{fontenc} % Potrzebne do używania fontów Latin Modern.
-
-\usepackage[MeX]{polski} % Polonizacja LaTeXa, bez niej będzie pracował
-% w języku angielskim.
 
 
 
@@ -49,55 +42,15 @@
 
 
 
-% ---------------------------------------
-% Basic packages
-% ---------------------------------------
-
-
-
-
-
-
-
-% ---------------------------------------
-% Packages for scientific writing
-% ---------------------------------------
-
-
-
-
-
-
-
-% ---------------------------------------
-% Packages written by us
-% ---------------------------------------
-% \usepackage{demopack}
-
-
-
-
 
 
 
 % ---------------------------------------
 % Configuration for this particular file
 % ---------------------------------------
-\usepackage{tikz}  % Great package PGF/TikZ.
-
 \usepackage{xcolor}  % Packages enabling use of many color models and many
 % additional colors.
 
-
-
-
-
-
-
-% ---------------------------------------
-% Some useful commands
-% ---------------------------------------
-\newcommand{\red}[1]{{\color{red} #1}}
 
 
 
@@ -173,7 +126,7 @@
 \colorbox{lightgray}{ABC},
 \colorbox{brown}{ABC},
 \colorbox{lime}{ABC},
-\colorbox{olive}{ABC},
+\colorbox{olive}{ABC}, \\[0.5em]
 \colorbox{orange}{ABC},
 \colorbox{pink}{ABC},
 \colorbox{purple}{ABC},
@@ -206,7 +159,7 @@
 \colorbox{white}{ABC},
 \colorbox{darkgray}{ABC},
 \colorbox{lightgray}{ABC},
-\colorbox{brown}{ABC},
+\colorbox{brown}{ABC}, \\[0.5em]
 \colorbox{lime}{ABC},
 \colorbox{olive}{ABC},
 \colorbox{orange}{ABC},
@@ -216,29 +169,6 @@
 \colorbox{violet}{ABC}
 
 \endgroup
-
-
-
-
-
-% \rowcolors[\hline]{3}{green!25}{yellow!50}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 

@@ -11,13 +11,6 @@
 
 \documentclass[a4paper,11pt]{article}
 % {rozmiar papieru, rozmiar fontu}[klasa dokumentu]
-\usepackage[utf8]{inputenc} % Włączenie kodowania UTF-8, co daje dostęp
-% do polskich znaków.
-\usepackage{lmodern} % Wprowadza fonty Latin Modern.
-\usepackage[T1]{fontenc} % Potrzebne do używania fontów Latin Modern.
-
-\usepackage[MeX]{polski} % Polonizacja LaTeXa, bez niej będzie pracował
-% w języku angielskim.
 
 
 
@@ -50,37 +43,6 @@
 
 
 % ---------------------------------------
-% Basic packages
-% ---------------------------------------
-
-
-
-
-
-
-
-% ---------------------------------------
-% Packages for scientific writing
-% ---------------------------------------
-
-
-
-
-
-
-
-% ---------------------------------------
-% Packages written by us
-% ---------------------------------------
-% \usepackage{demopack}
-
-
-
-
-
-
-
-% ---------------------------------------
 % Configuration for this particular file
 % ---------------------------------------
 \usepackage{tikz}  % Great package PGF/TikZ.
@@ -88,16 +50,6 @@
 \usepackage{xcolor}  % Packages enabling use of many color models and many
 % additional colors.
 
-
-
-
-
-
-
-% ---------------------------------------
-% Some useful commands
-% ---------------------------------------
-\newcommand{\red}[1]{{\color{red} #1}}
 
 
 
@@ -158,26 +110,28 @@
 
 
 
+\noindent
 40\% \tikz \filldraw[fill=green] (0,0) rectangle (0.485,0.3);
 + 60\% \tikz \filldraw[fill=yellow] (0,0) rectangle (0.485,0.3);
 = \tikz \filldraw[fill=green!40!yellow] (0,0) rectangle (0.485,0.3);
 
+\noindent
 \tikz \filldraw[fill=-green!40!yellow] (0,0) rectangle (0.485,0.3);
 
-% \color{}
-% \tikz \filldraw[fill=red] (0,0) rectangle (0.485,0.3);
-
+\noindent
 $3 \times$ \tikz \filldraw[fill=-green!40!yellow] (0,0) rectangle (0.485,0.3);
 $+ 2 \times$ \tikz \filldraw[fill=green!40!yellow] (0,0) rectangle (0.485,0.3);
 $+ 1 \times$ \tikz \filldraw[fill=red] (0,0) rectangle (0.485,0.3);
 = \tikz \filldraw[fill={rgb:-green!40!yellow,3;green!40!yellow,2;red,1}]
 (0,0) rectangle (0.485,0.3);
 
-% \definecolor{}
+\noindent
 Light with wave length $485$ nm has color: % \tikz \filldraw[fill={\color[wave]{485}}] (0,0) rectangle (0.485,0.3);
 
+\noindent
 \textcolor[cmy]{0.7,0.5,0.3}{foo} \textcolor[HTML]{AFFE90}{bar}
 
+\noindent
 \tikz \filldraw[fill=red] (0,0) rectangle (0.485,0.3);
 \tikz \filldraw[fill=-red] (0,0) rectangle (0.485,0.3);
 \tikz \filldraw[fill={--red!50!green!12.345}] (0,0) rectangle (0.485,0.3);
@@ -195,6 +149,7 @@ Light with wave length $485$ nm has color: % \tikz \filldraw[fill={\color[wave]{
 \tikz \filldraw[fill={rgb,9:red,4;green,2;yellow,1}]
 (0,0) rectangle (0.485,0.3);
 
+\noindent
 \tikz \filldraw[fill=red]       (0,0) rectangle (0.485,0.3);
 \tikz \filldraw[fill=green]     (0,0) rectangle (0.485,0.3);
 \tikz \filldraw[fill=blue]      (0,0) rectangle (0.485,0.3);
@@ -216,13 +171,17 @@ Light with wave length $485$ nm has color: % \tikz \filldraw[fill={\color[wave]{
 \tikz \filldraw[fill=violet]    (0,0) rectangle (0.485,0.3);
 
 \definecolor{red1}{rgb}{1,0,0}
+\noindent
 \tikz \filldraw[fill=red1] (0,0) rectangle (0.485,0.3);
 \definecolor{red2}{rgb/cmyk}{1,0,0/0,1,1,0}
 \tikz \filldraw[fill=red2] (0,0) rectangle (0.485,0.3);
 % \definecolor{red3}{hsb:rgb/cmyk}{1,0,0/0,1,1,0}
 % \tikz \filldraw[fill=red3] (0,0) rectangle (0.485,0.3);
 % ERROR: Package pgf Error: Unsupported color model `hsb'. Sorry.
+
 \definecolor[named]{Black1}{cmyk}{0,0,0,1}
+
+\noindent
 \tikz \filldraw[fill=Black1,draw=red] (0,0) rectangle (0.485,0.3);
 \definecolor{Black2}{named}{Black1}
 \tikz \filldraw[fill=Black2,draw=red] (0,0) rectangle (0.485,0.3);
@@ -230,14 +189,20 @@ Light with wave length $485$ nm has color: % \tikz \filldraw[fill={\color[wave]{
 \tikz \filldraw[fill=Black3,draw=red] (0,0) rectangle (0.485,0.3);
 
 \colorlet{tableheadcolor}{gray!25}
+
+\noindent
 \tikz \filldraw[fill=tableheadcolor] (0,0) rectangle (0.485,0.3);
 
 \definecolorset{rgb}{}{}{red3,1,0,0;green3,0,1,0;blue3,0,0,1}
+
+\noindent
 \tikz \filldraw[fill=red3]   (0,0) rectangle (0.485,0.3);
 \tikz \filldraw[fill=green3] (0,0) rectangle (0.485,0.3);
 \tikz \filldraw[fill=blue3]  (0,0) rectangle (0.485,0.3);
 
 \definecolorset{rgb}{x}{10}{red,1,0,0;green,0,1,0;blue,0,0,1}
+
+\noindent
 \tikz \filldraw[fill=xred10]   (0,0) rectangle (0.485,0.3);
 \tikz \filldraw[fill=xgreen10] (0,0) rectangle (0.485,0.3);
 \tikz \filldraw[fill=xblue10]  (0,0) rectangle (0.485,0.3);
@@ -246,6 +211,7 @@ Light with wave length $485$ nm has color: % \tikz \filldraw[fill={\color[wave]{
 
 \definecolor{color1}{rgb}{0.5,0.6,0.2}
 
+\noindent
 \tikz \filldraw[fill=color1] (0,0) rectangle (0.485,0.3);
 
 \endgroup
@@ -256,20 +222,25 @@ Light with wave length $485$ nm has color: % \tikz \filldraw[fill={\color[wave]{
 
 \begingroup
 
+\noindent
 \color{red} ABCDEFGH
 
 \endgroup
 
 \begingroup
 
+\noindent
 \color[rgb]{1,0,0} ABCDEFGH
 
 \endgroup
 
+\noindent
 \textcolor{green}{IJKLMNO} \textcolor[rgb]{0,1,0}{IJKLMNO}
 
+\noindent
 \colorbox{green}{PQRSTUV} \colorbox[rgb]{0,1,0}{PQRSTUV}
 
+\noindent
 \fcolorbox{gray}{yellow}{test},
 \fcolorbox[cmyk]{0,0,0,0.5}{0,0,1,0}{test},
 \fcolorbox[gray]{0.5}[wave]{580}{test},
@@ -277,6 +248,7 @@ Light with wave length $485$ nm has color: % \tikz \filldraw[fill={\color[wave]{
 
 % !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 % Sprawdzić jaką mam wersję xcolor i napisać o tych błędach.
+\noindent
 \fcolorbox{red}{green}{ABCDEFGH}
 % \fcolorbox[rgb]{green}{blue}{ABCDEFGH}
 % ERROR: Argument of \c@lor@@rgb has an extra }.
@@ -288,41 +260,49 @@ Light with wave length $485$ nm has color: % \tikz \filldraw[fill={\color[wave]{
 \fcolorbox{green}[rgb]{0,0,1}{ABCDEFGH}
 
 \blendcolors{!50!yellow}
+\noindent
 \colorbox{red}{ABC}
 \colorbox{green}{ABC}
 \colorbox{blue}{ABC}
 \blendcolors{}
 
+\noindent
 \colorbox{red}{ABC}
 \colorbox{green}{ABC}
 \colorbox{blue}{ABC}
 
 \blendcolors{!50!yellow}
+\noindent
 \colorbox{red}{ABC}
 \colorbox{green}{ABC}
 \colorbox{blue}{ABC}
 
 \blendcolors{!50!yellow}
+\noindent
 \colorbox{red}{ABC}
 \colorbox{green}{ABC}
 \colorbox{blue}{ABC}
 \blendcolors{}
 
+\noindent
 \colorbox{red}{ABC}
 \colorbox{green}{ABC}
 \colorbox{blue}{ABC}
 
 \blendcolors{!50!yellow}
+\noindent
 \colorbox{red}{ABC}
 \colorbox{green}{ABC}
 \colorbox{blue}{ABC}
 \blendcolors*{!50}
 
+\noindent
 \colorbox{red}{ABC}
 \colorbox{green}{ABC}
 \colorbox{blue}{ABC}
 \blendcolors{}
 
+\noindent
 \colorbox{red}{ABC}
 \colorbox{green}{ABC}
 \colorbox{blue}{ABC}
@@ -330,6 +310,7 @@ Light with wave length $485$ nm has color: % \tikz \filldraw[fill={\color[wave]{
 \vspace{1em}
 
 
+\noindent
 \colorbox{red}{ABC}
 \colorbox{green}{ABC}
 \colorbox{blue}{ABC}
@@ -340,12 +321,14 @@ Light with wave length $485$ nm has color: % \tikz \filldraw[fill={\color[wave]{
 
 \maskcolors[rgb]{color1}
 
+\noindent
 \colorbox{red}{ABC}
 \colorbox{green}{ABC}
 \colorbox{blue}{ABC}
 
 \endgroup
 
+\noindent
 \colorbox{red}{ABC}
 \colorbox{green}{ABC}
 \colorbox{blue}{ABC}
@@ -353,6 +336,7 @@ Light with wave length $485$ nm has color: % \tikz \filldraw[fill={\color[wave]{
 \vspace{1em}
 
 
+\noindent
 \href{https://www.crisismagazine.com/2021/the-theological-illiteracy-of-dare-we-hope}{Link.}
 
 
@@ -404,6 +388,7 @@ Light with wave length $485$ nm has color: % \tikz \filldraw[fill={\color[wave]{
 
 
 
+\noindent
 \tikz \filldraw[fill=red]           (0,0) rectangle (0.485,0.3);
 \tikz \filldraw[fill=-red]          (0,0) rectangle (0.485,0.3);
 \tikz \filldraw[fill=red!75]        (0,0) rectangle (0.485,0.3);
@@ -421,6 +406,7 @@ Light with wave length $485$ nm has color: % \tikz \filldraw[fill={\color[wave]{
 \tikz \filldraw[fill=-red!75!green!70!blue!25!gray]
 (0,0) rectangle (0.485,0.3);
 
+\noindent
 \fboxrule6pt
 \fcolorbox
 {red!70!green}% outer frame
@@ -430,6 +416,7 @@ Light with wave length $485$ nm has color: % \tikz \filldraw[fill={\color[wave]{
 {-red!70!green}% inner background
 {Test\textcolor{red!72.75}{Test}\color{-green}Test}}
 
+\noindent
 \tikz \filldraw[fill=red!70!green] (0,0) rectangle (0.485,0.3);
 \tikz \filldraw[fill=yellow!30!blue] (0,0) rectangle (0.485,0.3);
 \tikz \filldraw[fill=-yellow!30!blue] (0,0) rectangle (0.485,0.3);
@@ -437,9 +424,11 @@ Light with wave length $485$ nm has color: % \tikz \filldraw[fill={\color[wave]{
 \tikz \filldraw[fill=red!72.75] (0,0) rectangle (0.485,0.3);
 \tikz \filldraw[fill=-green] (0,0) rectangle (0.485,0.3);
 
+
 \def\test{current, \textcolor{.!50}{50\%},
   \textcolor{-.}{complement},
   \textcolor{yellow!50!.}{MIC}}
+\noindent
 \textcolor{blue}{\test} \\
 and \textcolor{red}{\test} \\
 \def\Test{\color{.!80} Test}
