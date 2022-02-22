@@ -181,7 +181,39 @@
   Oblicz $c_{ V }( T )$ i pokaż, że dla $T \searrow 0$,
   $c_{ V }( T ) \propto T^{ 3 }$.
 
-  % \item Roger Scruton, \emph{Zielona filozofia};
+\item Dystrybucję $\delta( x )$ Diraca można określić jako granicę funkcji regualarnych
+  \begin{equation}
+    \label{eq:1}
+    \delta( x ) = \lim_{ a \to 0 } \rho_{ a }( x ), \qquad
+    \rho_{ a }( x ) = \frac{ 1 }{ a \sqrt{ \pi } } e^{ -\frac{ x^{ 2 } }{ a^{ 2 } } }
+  \end{equation}
+  Mówimy, że ciąg funkcji $\rho_{ a }( x )$ jest modelem dla funkcji $\delta( x )$. Udowodnić, że $\delta( x )$ ma następujące własności
+  \begin{align}
+    &\int_{ a }^{ b } \delta( x - x_{ 0 } ) \, dx = 1, \qquad
+      x_{ 0 } \in ( a, b ) \\
+    &\int_{ a }^{ b } \delta( x - x_{ 0 } ) \, dx = 0, \qquad
+      x_{ 0 } \notin ( a, b ) \\
+    &\int_{ -\infty }^{ +\infty } \delta( x - x_{ 0 } ) \phi( x ) \, dx = \phi( x_{ 0 } )
+  \end{align}
+  dla dowolnej funkcji próbnej (tj. regularnej) $\phi( x )$. \\
+  Wykorzystując
+  ostatnią własność, oraz właściwości odwrotnej transformaty Fouriera udowodnić, że
+  \begin{equation}
+    \label{eq:2}
+    \delta( x ) = \frac{ 1 }{ 2\pi } \int_{ -\infty }^{ +\infty } e^{ i p x } \, dp
+  \end{equation}
+  Zapisując ostatnią całkę jako
+  \begin{equation}
+    \label{eq:3}
+    \lim_{ \varepsilon \to 0 } \frac{ 1 }{ 2\pi } \int_{ -\infty }^{ +\infty } e^{ ipx - \varepsilon | p | } \, dp,
+  \end{equation}
+  udowodnić inną, równoważną, reprezentację dystrybucji $\delta( x )$
+  \begin{equation}
+    \label{eq:4}
+    \delta( x ) = \lim_{ \varepsilon \to 0 } f_{ \varepsilon }( x ), \qquad
+    f_{ \varepsilon }( x ) = \frac{ 1 }{ \pi } \frac{ \varepsilon }{ x^{ 2 } + \varepsilon^{ 2 } }
+  \end{equation}
+
 
   % \item Andrew Klavan, \emph{Prawdziwa zbrodnia};
 
