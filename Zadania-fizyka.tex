@@ -31,14 +31,14 @@
 % MARGINS
 % ---------------------------------------
 \setmarginsrb
-{ 0.7in} % left margin
-{ 0.6in} % top margin
-{ 0.7in} % right margin
-{ 0.8in} % bottom margin
-{  20pt} % head height
-{0.25in} % head sep
-{   9pt} % foot height
-{ 0.3in} % foot sep
+{ 0.7in}  % left margin
+{ 0.6in}  % top margin
+{ 0.7in}  % right margin
+{ 0.8in}  % bottom margin
+{  20pt}  % head height
+{0.25in}  % head sep
+{   9pt}  % foot height
+{ 0.3in}  % foot sep
 
 
 
@@ -46,8 +46,6 @@
 % Często używane pakiety
 % ---------------------------------------
 % \usepackage{csquotes} % Pozwala w prosty sposób wstawiać cytaty do tekstu.
-% \usepackage{xcolor} % Pozwala używać kolorowych czcionek (zapewne dużo
-% więcej, ale ja nie potrafię nic o tym powiedzieć).
 
 
 
@@ -170,24 +168,27 @@
   ($C_{ 1 } \neq C_{ 2 }$).
 
 \item Oblicz $c_{ V }( T )$ przyjmujące
-  $D( \omega ) = 3 N \delta( \omega - \omega_{ E } )$, gdzie $N$ to liczba atomów
-  w~krysztale. Dla $T \to \infty$ pokaż, że $c_{ V }( T )$ spełnia prawo
-  Dulonga-Petita.
+  $D( \omega ) = 3 N \delta( \omega - \omega_{ E } )$, gdzie $N$ to
+  liczba atomów w~krysztale. Dla $T \to \infty$ pokaż, że
+  $c_{ V }( T )$ spełnia prawo Dulonga-Petita.
 
 \item Pokaż, że dla $N$ atomów w sześcianie o~bloku $L$, gęstość stanów w~przestrzeni pędów jest dana przez $\rho( k ) = \left( \frac{ L }{ 2\pi } \right)^{ 3 }$. \\
   Używając zależności dyspersyjnej $\omega = \nu k$, pokaż że
-  $D( \omega ) = \frac{ 3 \omega^{ 2 } L^{ 3 } }{ 2\pi^{ 2 } \nu^{ 3 } }$ dla
-  $\omega < \omega_{ D } = ( 6 \pi^{ 2 } N )^{ \frac{ 1 }{ 3 } } \frac{ V }{ L }$.
-  Oblicz $c_{ V }( T )$ i pokaż, że dla $T \searrow 0$,
-  $c_{ V }( T ) \propto T^{ 3 }$.
+  $D( \omega ) = \frac{ 3 \omega^{ 2 } L^{ 3 } }{ 2\pi^{ 2 } \nu^{ 3 }
+  }$ dla
+  $\omega < \omega_{ D } = ( 6 \pi^{ 2 } N )^{ \frac{ 1 }{ 3 } }
+  \frac{ V }{ L }$. Oblicz $c_{ V }( T )$ i pokaż, że dla
+  $T \searrow 0$, $c_{ V }( T ) \propto T^{ 3 }$.
 
-\item Dystrybucję $\delta( x )$ Diraca można określić jako granicę funkcji regualarnych
+\item Dystrybucję $\delta( x )$ Diraca można określić jako granicę funkcji
+  regualarnych
   \begin{equation}
     \label{eq:1}
     \delta( x ) = \lim_{ a \to 0 } \rho_{ a }( x ), \qquad
     \rho_{ a }( x ) = \frac{ 1 }{ a \sqrt{ \pi } } e^{ -\frac{ x^{ 2 } }{ a^{ 2 } } }
   \end{equation}
-  Mówimy, że ciąg funkcji $\rho_{ a }( x )$ jest modelem dla funkcji $\delta( x )$. Udowodnić, że $\delta( x )$ ma następujące własności
+  Mówimy, że ciąg funkcji $\rho_{ a }( x )$ jest modelem dla funkcji
+  $\delta( x )$. Udowodnić, że $\delta( x )$ ma następujące własności
   \begin{align}
     &\int_{ a }^{ b } \delta( x - x_{ 0 } ) \, dx = 1, \qquad
       x_{ 0 } \in ( a, b ) \\
@@ -196,8 +197,8 @@
     &\int_{ -\infty }^{ +\infty } \delta( x - x_{ 0 } ) \phi( x ) \, dx = \phi( x_{ 0 } )
   \end{align}
   dla dowolnej funkcji próbnej (tj. regularnej) $\phi( x )$. \\
-  Wykorzystując
-  ostatnią własność, oraz właściwości odwrotnej transformaty Fouriera udowodnić, że
+  Wykorzystując ostatnią własność, oraz właściwości odwrotnej
+  transformaty Fouriera udowodnić, że
   \begin{equation}
     \label{eq:2}
     \delta( x ) = \frac{ 1 }{ 2\pi } \int_{ -\infty }^{ +\infty } e^{ i p x } \, dp
@@ -213,6 +214,33 @@
     \delta( x ) = \lim_{ \varepsilon \to 0 } f_{ \varepsilon }( x ), \qquad
     f_{ \varepsilon }( x ) = \frac{ 1 }{ \pi } \frac{ \varepsilon }{ x^{ 2 } + \varepsilon^{ 2 } }
   \end{equation}
+
+  Wykreślić funkcje modelujące dla kilku wartości $\varepsilon$. Uzasadnić, że
+  rzeczywiście jest to dobry model funkcji $\delta$. W~szczególności,
+  sprawdzić warunek normalizacji oraz że dla dowolnej funkcji próbnej
+  zachodzi
+  \begin{equation}
+    \label{eq:5}
+    \lim_{ \varepsilon \to 0} \int_{ -\infty }^{ +\infty } f_{ \varepsilon }( x - x_{ 0 } ) \phi( x ) \, dx
+    =
+    \phi( x_{ 0 } )
+  \end{equation}
+  Ostatnią całkę wykonać metodą residuów zakładając wystarczająco
+  szybkie znikanie funkcji próbnej na dużych okręgach.
+
+  Udowodnić, że fale płaskie są znormalizowane do $\delta$ Diraca.
+
+\item Rozwiązać zależne od czasu równanie Schr\"{o}dingera dla cząstki
+  swobodnej w jednym i trzech wymiarach, za pomocą separacji
+  zmiennych. Jako warunek początkowy przyjąć, że gęstość
+  prawdopodobieństwa znalezienia cząstki w~przestrzeni ma rozkład
+  gaussowski o~dyspersji $\sigma^{ 2 } = a^{ 2 }$ i że pakiet ma średnią
+  prędkość $v_{ 0 }$. Wykonać \emph{explicite} wszystkie transformaty
+  Fouriera i~uzyskać jawne wyrażenie na $\Psi( x, t )$. Obliczyć gęstość
+  prawdopodobieństwa $\rho( x, t )$ i gęstość strumienia
+  prawdopodobieństwa $\vec{ j }( x, t )$. Sprawdzić równanie
+  ciągłości. Wyprowadzić analogiczne wzory (np. na
+  $\vec{ j }( x, t )$) dla zbioru cząstek klasycznych.
 
 
   % \item Andrew Klavan, \emph{Prawdziwa zbrodnia};
@@ -537,934 +565,955 @@
   % \item A.~Wolff-Powęzka, \emph{Pamięć --~brzemię i~uwolnienie.
   %   Niemcy wobec nazistowskiej przeszłości (1945--2010)};
 
-% \item Valentin L. Popov, \emph{Contact Mechanics and Friction: Physics
-%     Principles and Applications};
+  % \item Valentin L. Popov, \emph{Contact Mechanics and Friction:
+  %   Physics Principles and Applications};
 
-% \item L. Ambrosio, N. Dancer, \emph{Calculus of Variations and Partial
-%     Differential Equations: Topics on Geometrical Evolution Problems
-%     and Degree Theory};
+  % \item L. Ambrosio, N. Dancer, \emph{Calculus of Variations and
+  %   Partial Differential Equations: Topics on Geometrical Evolution
+  %   Problems and Degree Theory};
 
-% \item Stephen Wiggins, \emph{Global Bifurcations and Chaos: Analytical
-%     Methods};
+  % \item Stephen Wiggins, \emph{Global Bifurcations and Chaos:
+  %   Analytical Methods};
 
-% \item Serbio Albeverio, \emph{Operator Methods in Ordinary and Partial
-%     Differential Equations};
+  % \item Serbio Albeverio, \emph{Operator Methods in Ordinary and
+  %   Partial Differential Equations};
 
-% \item D. Boccaletti, G. Pucacco, \emph{Theory of Orbits. 1: Integrable
-%     Systems and Non-perturbative Methods};
+  % \item D. Boccaletti, G. Pucacco, \emph{Theory of Orbits. 1:
+  %   Integrable Systems and Non-perturbative Methods};
 
-% \item Vasil E. Tarasov, \emph{Fractional Dynamics: Applications of
-%     Fractional Calculus to Dynamics of Particles, Fields and Media};
+  % \item Vasil E. Tarasov, \emph{Fractional Dynamics: Applications of
+  %   Fractional Calculus to Dynamics of Particles, Fields and Media};
 
-% \item E. C. Curtius;
+  % \item E. C. Curtius;
 
-% \item Ch. West, \emph{Teologia ciała dla początkujących};
+  % \item Ch. West, \emph{Teologia ciała dla początkujących};
 
-% \item R. Hilbert, \emph{Zagłada Żydów Europejskich};
+  % \item R. Hilbert, \emph{Zagłada Żydów Europejskich};
 
-% \item J. Delumeau, \emph{Cywilizacja odrodzenia};
+  % \item J. Delumeau, \emph{Cywilizacja odrodzenia};
 
-% \item P. Manent, \emph{Intelektualna historia liberalizmu};
+  % \item P. Manent, \emph{Intelektualna historia liberalizmu};
 
-% \item B. Baczko, \emph{Filozofia francuskiego oświecenia};
+  % \item B. Baczko, \emph{Filozofia francuskiego oświecenia};
 
-% \item J. Juszczak, \emph{Ordoliberalizm};
+  % \item J. Juszczak, \emph{Ordoliberalizm};
 
-% \item Albaro Vargas Llosa, \emph{Mit Che a przyszłość wolności};
+  % \item Albaro Vargas Llosa, \emph{Mit Che a przyszłość wolności};
 
-% \item T. Snyder, \emph{Rekonstrukcja narodów};
+  % \item T. Snyder, \emph{Rekonstrukcja narodów};
 
-% \item Red. M. Rechowicz, \emph{Dzieje teologii katolickiej w Polsce};
+  % \item Red. M. Rechowicz, \emph{Dzieje teologii katolickiej w
+  %   Polsce};
 
-% \item Ricceure, \emph{Symbolika zła};
+  % \item Ricceure, \emph{Symbolika zła};
 
-% \item J. Śniadecki;
+  % \item J. Śniadecki;
 
-% \item S. McMeekin, \emph{Największa grabież w historii. Jak bolszewicy
-%     złupili Rosję};
+  % \item S. McMeekin, \emph{Największa grabież w historii. Jak
+  %   bolszewicy złupili Rosję};
 
-% \item R. Syme, \emph{Rewolucja rzymska};
+  % \item R. Syme, \emph{Rewolucja rzymska};
 
-% \item E. von Kuchnelt-Leddhin, \emph{Ślepy tor};
+  % \item E. von Kuchnelt-Leddhin, \emph{Ślepy tor};
 
-% \item A. McGrath, \emph{Jan Kalwin. Studium kształtowania się kultury
-%     Zachodu};
+  % \item A. McGrath, \emph{Jan Kalwin. Studium kształtowania się
+  %   kultury Zachodu};
 
-% \item P. Kuncewicz, \emph{Samotni wobec historii};
+  % \item P. Kuncewicz, \emph{Samotni wobec historii};
 
-% \item C. Ginzburg, \emph{Ser i~robak};
+  % \item C. Ginzburg, \emph{Ser i~robak};
 
-% \item James Conrayd Martin, \emph{Nie ponaglaj rzeki};
+  % \item James Conrayd Martin, \emph{Nie ponaglaj rzeki};
 
-% \item W. Zajewski, \emph{Czy historycy piszą prawdę};
+  % \item W. Zajewski, \emph{Czy historycy piszą prawdę};
 
-% \item S. Węgrzynowicz, \emph{Patrioci i zdrajcy};
+  % \item S. Węgrzynowicz, \emph{Patrioci i zdrajcy};
 
-% \item F. Musiał, \emph{Raj grabarzy narodu};
+  % \item F. Musiał, \emph{Raj grabarzy narodu};
 
-% \item Red. Marek Kornat, \emph{Pius XII --~papież w~epoce
-%     totalitaryzmów};
+  % \item Red. Marek Kornat, \emph{Pius XII --~papież w~epoce
+  %   totalitaryzmów};
 
-% \item H. Głębocki, \emph{,,Diabeł Asmodeusz'' w~niebieskich binoklach
-%     i~kraj przyszłości. Henryk Gurowski i~Rosja};
+  % \item H. Głębocki, \emph{,,Diabeł Asmodeusz'' w~niebieskich
+  %   binoklach i~kraj przyszłości. Henryk Gurowski i~Rosja};
 
-% \item R. Fiegut, \emph{Zaproszenie do „Quidama”};
+  % \item R. Fiegut, \emph{Zaproszenie do „Quidama”};
 
-% \item M. Goliczak, \emph{Związek Radziecki w~myśli politycznej
-%     polskiej opozycji 1976-1989};
+  % \item M. Goliczak, \emph{Związek Radziecki w~myśli politycznej
+  %   polskiej opozycji 1976-1989};
 
-% \item M. Urbankowski, \emph{Romans z~Polską};
+  % \item M. Urbankowski, \emph{Romans z~Polską};
 
-% \item E. J\"{u}nger, \emph{Węzeł gordyjski. Eseistyka lat
-%     pięćdziesiątych};
+  % \item E. J\"{u}nger, \emph{Węzeł gordyjski. Eseistyka lat
+  %   pięćdziesiątych};
 
-% \item J. Besal, \emph{Stanisław Żółkiewski};
+  % \item J. Besal, \emph{Stanisław Żółkiewski};
 
-% \item J. Skowronek, \emph{Adam Jerzy Czartoryski, 1770-1861};
+  % \item J. Skowronek, \emph{Adam Jerzy Czartoryski, 1770-1861};
 
-% \item C. Shindler, \emph{Historia współczesnego Izraela};
+  % \item C. Shindler, \emph{Historia współczesnego Izraela};
 
-% \item W. Bernacki, \emph{Myśl polityczna I Rzeczpospolitej};
+  % \item W. Bernacki, \emph{Myśl polityczna I Rzeczpospolitej};
 
-% \item \emph{Polsko, uwierz w~swoją siłę};
+  % \item \emph{Polsko, uwierz w~swoją siłę};
 
-% \item Encyclopedia of Mathematical Sciences;
+  % \item Encyclopedia of Mathematical Sciences;
 
-% \item \emph{Open GL. Księga eksperta};
+  % \item \emph{Open GL. Księga eksperta};
 
-% \item A. Nowak, \emph{Putin. Źródła imperialnej agresji};
+  % \item A. Nowak, \emph{Putin. Źródła imperialnej agresji};
 
-% \item Red. P. Musiewicz, \emph{Ronald Reagan. Nowa odsłona w 100-lecie
-%     urodzin};
+  % \item Red. P. Musiewicz, \emph{Ronald Reagan. Nowa odsłona w
+  %   100-lecie urodzin};
 
-% \item H. Pilus, \emph{Własność i zasady w katolickiej myśli
-%     społecznej};
+  % \item H. Pilus, \emph{Własność i zasady w katolickiej myśli
+  %   społecznej};
 
-% \item N. von Below, \emph{Byłem adiunktem Hitlera};
+  % \item N. von Below, \emph{Byłem adiunktem Hitlera};
 
-% \item G. Kucharczyk, \emph{Czerwone karty Kościoła};
+  % \item G. Kucharczyk, \emph{Czerwone karty Kościoła};
 
-% \item G. Kucharczyk, \emph{Kielnią i cyrklem. Laicyzacja Francji w
-%     latach 1870-1914};
+  % \item G. Kucharczyk, \emph{Kielnią i cyrklem. Laicyzacja Francji w
+  %   latach 1870-1914};
 
-% \item F. Koneczny, \emph{Dzieje Polski opowiedziane dla młodzieży};
+  % \item F. Koneczny, \emph{Dzieje Polski opowiedziane dla
+  %   młodzieży};
 
-% \item M. Ekstein, \emph{Święto Wiosny. Wielka wojna i narodziny nowego
-%     wieku};
+  % \item M. Ekstein, \emph{Święto Wiosny. Wielka wojna i narodziny
+  %   nowego wieku};
 
-% \item B. Kiereś, \emph{Tylko rodzina!};
+  % \item B. Kiereś, \emph{Tylko rodzina!};
 
-% \item M. Soska, \emph{Za Świętą Ruś. Współczesny nacjonalizm Rosyjski
-%     -- zarys ideologi};
+  % \item M. Soska, \emph{Za Świętą Ruś. Współczesny nacjonalizm
+  %   Rosyjski -- zarys ideologi};
 
-% \item H. Pająk, \emph{Rytualna zemsta na~„kolebce” Solidarności
-%     1981-2011};
+  % \item H. Pająk, \emph{Rytualna zemsta na~„kolebce” Solidarności
+  %   1981-2011};
 
-% \item M. Skousen, \emph{Narodziny współczesnej ekonomii};
+  % \item M. Skousen, \emph{Narodziny współczesnej ekonomii};
 
-% \item P. Gontarczyk, \emph{Najnowsze kłopoty z~historią};
+  % \item P. Gontarczyk, \emph{Najnowsze kłopoty z~historią};
 
-% \item L. de~Whol;
+  % \item L. de~Whol;
 
-% \item G. Bardy, \emph{Charles de~Gaulle. Biografia katolika i~męża
-%     stanu};
+  % \item G. Bardy, \emph{Charles de~Gaulle. Biografia katolika i~męża
+  %   stanu};
 
-% \item J. Garrison, \emph{Ameryka jako imperium. Przywódcy świata czy
-%     bandycka potęga};
+  % \item J. Garrison, \emph{Ameryka jako imperium. Przywódcy świata
+  %   czy bandycka potęga};
 
-% \item E. Lucas, \emph{Operacja Snowden};
+  % \item E. Lucas, \emph{Operacja Snowden};
 
-% \item C. S. Lewis, \emph{Ostatnia noc świata};
+  % \item C. S. Lewis, \emph{Ostatnia noc świata};
 
-% \item N. Janner SJ, \emph{Krótka historia Kościoła Katolickiego. Nowe
-%     spojrzenie};
+  % \item N. Janner SJ, \emph{Krótka historia Kościoła Katolickiego.
+  %   Nowe spojrzenie};
 
-% \item \emph{Eklektyzmy, synkretyzmy, uniwersa};
+  % \item \emph{Eklektyzmy, synkretyzmy, uniwersa};
 
-% \item \emph{Literahistorica};
+  % \item \emph{Literahistorica};
 
-% \item \emph{Bóg Zła};
+  % \item \emph{Bóg Zła};
 
-% \item J. Wieliczka-Szarkowa, \emph{III Rzesza. Zbrodnia bez kary};
+  % \item J. Wieliczka-Szarkowa, \emph{III Rzesza. Zbrodnia bez kary};
 
-% \item P. Gontarczyk, \emph{Polska Partia Robotnicza. Droga do władzy
-%     1941-1944};
+  % \item P. Gontarczyk, \emph{Polska Partia Robotnicza. Droga do
+  %   władzy 1941-1944};
 
-% \item P. Moa, \emph{Mity wojny domowej w Hiszpania 1936--1939};
+  % \item P. Moa, \emph{Mity wojny domowej w Hiszpania 1936--1939};
 
-% \item Władymir Arnold, \emph{Lectures on Partial Differential
-%     Equations};
+  % \item Władymir Arnold, \emph{Lectures on Partial Differential
+  %   Equations};
 
-% \item Herman H. Goldstein, \emph{A History of Numerical Analysis. From
-%     the 16th through the 19th century};
+  % \item Herman H. Goldstein, \emph{A History of Numerical Analysis.
+  %   From the 16th through the 19th century};
 
-% \item G. Edward Griffin, \emph{Finansowy potwór z Jekyll Island};
+  % \item G. Edward Griffin, \emph{Finansowy potwór z Jekyll Island};
 
-% \item L. Ulicka, \emph{Daniel Stein, tłumacz};
+  % \item L. Ulicka, \emph{Daniel Stein, tłumacz};
 
-% \item R. Scruton, \emph{Kultura jest ważna};
+  % \item R. Scruton, \emph{Kultura jest ważna};
 
-% \item P. Gottfried, \emph{Wojna i demokracja};
+  % \item P. Gottfried, \emph{Wojna i demokracja};
 
-% \item S. Didler, \emph{Rola neofitów w dziejach Polskich};
+  % \item S. Didler, \emph{Rola neofitów w dziejach Polskich};
 
-% \item A. Wielomski, \emph{Konserwatyzm. Główne idee i postaci};
+  % \item A. Wielomski, \emph{Konserwatyzm. Główne idee i postaci};
 
-% \item C. S. Lewis, \emph{Bóg na ławie oskarżonych};
+  % \item C. S. Lewis, \emph{Bóg na ławie oskarżonych};
 
-% \item R. Spałek, \emph{Komuniści przeciw komunistom};
+  % \item R. Spałek, \emph{Komuniści przeciw komunistom};
 
-% \item Doug Stanton, \emph{Dwunastu odważnych. Odtajniona historia
-%     konnych żołnierzy};
+  % \item Doug Stanton, \emph{Dwunastu odważnych. Odtajniona historia
+  %   konnych żołnierzy};
 
-% \item Wicek Warszawiak, \emph{Humor w~czasie okupacji};
+  % \item Wicek Warszawiak, \emph{Humor w~czasie okupacji};
 
-% \item Lawrence Wright, \emph{Wyniosłe wieże. Al-Kaida i~atak
-%     na~Amerykę};
+  % \item Lawrence Wright, \emph{Wyniosłe wieże. Al-Kaida i~atak
+  %   na~Amerykę};
 
-% \item Robert Mason, \emph{Powiedz, że się boisz};
+  % \item Robert Mason, \emph{Powiedz, że się boisz};
 
-% \item Dla taty: Chufo Llorens;
+  % \item Dla taty: Chufo Llorens;
 
-% \item Jearl Walker, \emph{Latający cyrk fizyki};
+  % \item Jearl Walker, \emph{Latający cyrk fizyki};
 
-% \item David J.~Griffits, \emph{Introduction to~Quantum Mechanics};
+  % \item David J.~Griffits, \emph{Introduction to~Quantum Mechanics};
 
-% \item B. Dembowski, \emph{O filozofii chrześcijańskiej w Ameryce
-%     Północnej};
+  % \item B. Dembowski, \emph{O filozofii chrześcijańskiej w Ameryce
+  %   Północnej};
 
-% \item Wiesław Caban, \emph{Powstanie styczniowe. Polacy i Rosjanie w
-%     XIX wieku};
+  % \item Wiesław Caban, \emph{Powstanie styczniowe. Polacy i Rosjanie
+  %   w XIX wieku};
 
-% \item Jacek Wegner, \emph{Biesy sarmackie};
+  % \item Jacek Wegner, \emph{Biesy sarmackie};
 
-% \item Andrzej Józef Kamiński, \emph{Koszmar niewolnictwa. Obozy
-%     koncentracyjne od 1896 do dziś. Analiza};
+  % \item Andrzej Józef Kamiński, \emph{Koszmar niewolnictwa. Obozy
+  %   koncentracyjne od 1896 do dziś. Analiza};
 
-% \item Jochen B\"{o}hler, \emph{Wojna domowa. Nowe spojrzenie
-%     na~odrodzenie Polski};
+  % \item Jochen B\"{o}hler, \emph{Wojna domowa. Nowe spojrzenie
+  %   na~odrodzenie Polski};
 
-% \item F. Wesołowski, \emph{Zasady muzyki};
+  % \item F. Wesołowski, \emph{Zasady muzyki};
 
-% \item Red. A. Czarniecka-Stefańska, \emph{Szukając prawdy. Edyta Stein
-%     w~kulturze polskiej};
+  % \item Red. A. Czarniecka-Stefańska, \emph{Szukając prawdy. Edyta
+  %   Stein w~kulturze polskiej};
 
-% \item E. Stein, \emph{Kobieta. Jej zadanie według natury i~łaski};
+  % \item E. Stein, \emph{Kobieta. Jej zadanie według natury i~łaski};
 
-% \item Red. Umberto Eco, \emph{Historia piękna};
+  % \item Red. Umberto Eco, \emph{Historia piękna};
 
-% \item Zdzisław Krasnodębski, \emph{Rozumienie ludzkiego zachowania.
-%     Rozważania o~filozoficznych podstawach nauk humanistycznych
-%     i~społecznych};
+  % \item Zdzisław Krasnodębski, \emph{Rozumienie ludzkiego
+  %   zachowania. Rozważania o~filozoficznych podstawach nauk
+  %   humanistycznych i~społecznych};
 
-% \item Adam Przechrzta, \emph{Chorągiew Michała Archanioła};
+  % \item Adam Przechrzta, \emph{Chorągiew Michała Archanioła};
 
-% \item Anna Sobolewska, \emph{Mapy duchowe współczesności: co~nam
-%     zostało z~Nowej Ery?};
+  % \item Anna Sobolewska, \emph{Mapy duchowe współczesności: co~nam
+  %   zostało z~Nowej Ery?};
 
-% \item Blake J. Harris, \emph{Wojny konsolowe};
+  % \item Blake J. Harris, \emph{Wojny konsolowe};
 
-% \item Nikołaj Zieńkowicz, \emph{Tajemnice mijającego wieku. Władza
-%     zakulisowe działania zatargi};
+  % \item Nikołaj Zieńkowicz, \emph{Tajemnice mijającego wieku. Władza
+  %   zakulisowe działania zatargi};
 
-% \item Nikołaj Zieńkowicz, \emph{Od~Lenina do~Jelcyna. Kremlowska
-%     księga zamachów};
+  % \item Nikołaj Zieńkowicz, \emph{Od~Lenina do~Jelcyna. Kremlowska
+  %   księga zamachów};
 
-% \item Marek Jan Chodakiewicz, \emph{Transformacja czy~niepodległość?};
+  % \item Marek Jan Chodakiewicz, \emph{Transformacja
+  %   czy~niepodległość?};
 
-% \item Helmuth Plessner, \emph{Śmiech i~płacz. Badania nad~granicami
-%     ludzkiego zachowania};
+  % \item Helmuth Plessner, \emph{Śmiech i~płacz. Badania
+  %   nad~granicami ludzkiego zachowania};
 
-% \item Samuel M.~Katz, \emph{Aman. Wywiad wojskowy Izraela};
+  % \item Samuel M.~Katz, \emph{Aman. Wywiad wojskowy Izraela};
 
-% \item Praca zbiorowa, \emph{Rosja --Chiny. Dwa modele transformacji};
+  % \item Praca zbiorowa, \emph{Rosja --Chiny. Dwa modele
+  %   transformacji};
 
-% \item Mariola Marczak, \emph{Poetyka filmu religijnego};
+  % \item Mariola Marczak, \emph{Poetyka filmu religijnego};
 
-% \item Lech Bukowski, \emph{Sade, Kafka, Kierkegaard. Między rozkoszą a
-%     opresją};
+  % \item Lech Bukowski, \emph{Sade, Kafka, Kierkegaard. Między
+  %   rozkoszą a opresją};
 
-% \item Philip Earl Steele, \emph{Nawrócenie i chrzest Mieszka I};
+  % \item Philip Earl Steele, \emph{Nawrócenie i chrzest Mieszka I};
 
-% \item Henryk Samsonowicz, \emph{My o sobie. Portret własny mieszkańców
-%     ziem polskich u schyłku średniowiecza};
+  % \item Henryk Samsonowicz, \emph{My o sobie. Portret własny
+  %   mieszkańców ziem polskich u schyłku średniowiecza};
 
-% \item \emph{Piłsudski (nie)znany. Historia i popkultura};
+  % \item \emph{Piłsudski (nie)znany. Historia i popkultura};
 
-% \item Jakub Z.~Lichański, \emph{Niepopularnie o popularnej. O
-%     narzędziach badań literatury};
+  % \item Jakub Z.~Lichański, \emph{Niepopularnie o popularnej. O
+  %   narzędziach badań literatury};
 
-% \item Tadeusz Manteuffel, \emph{Historia Powszechna. Średniowiecze};
+  % \item Tadeusz Manteuffel, \emph{Historia Powszechna.
+  %   Średniowiecze};
 
-% \item Robert Jung, \emph{Jaśniej niż tysiąc słońc. Losy badaczy
-%     atomu};
+  % \item Robert Jung, \emph{Jaśniej niż tysiąc słońc. Losy badaczy
+  %   atomu};
 
-% \item Wiesław Bator, \emph{Religia starożytnego Egiptu. Perspektywa
-%     religioznawcza};
+  % \item Wiesław Bator, \emph{Religia starożytnego Egiptu.
+  %   Perspektywa religioznawcza};
 
-% \item Gabriela Matuszek, \emph{Maski i demony wczesnego modernizmu};
+  % \item Gabriela Matuszek, \emph{Maski i demony wczesnego
+  %   modernizmu};
 
-% \item Artur Szarecki, \emph{Kapitalizm somatyczny. Ciało i władza w
-%     kulturze korporacyjnej};
+  % \item Artur Szarecki, \emph{Kapitalizm somatyczny. Ciało i władza
+  %   w kulturze korporacyjnej};
 
-% \item \emph{Francuskie pisma o dramacie (1537-1631)};
+  % \item \emph{Francuskie pisma o dramacie (1537-1631)};
 
-% \item John A. McClure, \emph{Półwiary};
+  % \item John A. McClure, \emph{Półwiary};
 
-% \item Jerzy Axer, Tadeusz Bujnicki, \emph{Wokół "W pustyni i w
-%     puszczy". W stulecie pierwodruku powieści};
+  % \item Jerzy Axer, Tadeusz Bujnicki, \emph{Wokół "W pustyni i w
+  %   puszczy". W stulecie pierwodruku powieści};
 
-% \item Gerd-Klaus Kaltenbrunner;
+  % \item Gerd-Klaus Kaltenbrunner;
 
-% \item Steve Brusatte, \emph{Era dinozaurów - od narodzin do upadku.
-%     Nowe odkrycia i fakty o zaginionym świecie};
+  % \item Steve Brusatte, \emph{Era dinozaurów - od narodzin do
+  %   upadku. Nowe odkrycia i fakty o zaginionym świecie};
 
-% \item Robert Fabbri, \emph{Wespazjan, trybun Rzymu};
+  % \item Robert Fabbri, \emph{Wespazjan, trybun Rzymu};
 
-% \item Michael Billing, \emph{Banalny nacjonalizm};
+  % \item Michael Billing, \emph{Banalny nacjonalizm};
 
-% \item Ernest Gellner, \emph{Narody i~nacjonalizm};
+  % \item Ernest Gellner, \emph{Narody i~nacjonalizm};
 
-% \item \emph{Oświecenie, nieoświecone. Człowiek, natura, magia};
+  % \item \emph{Oświecenie, nieoświecone. Człowiek, natura, magia};
 
-% \item Eric Hobsbawm, Terence Ranger, \emph{Tradycja wynaleziona};
+  % \item Eric Hobsbawm, Terence Ranger, \emph{Tradycja wynaleziona};
 
-% \item Aleksander Śpiewakowski, \emph{Samuraje};
+  % \item Aleksander Śpiewakowski, \emph{Samuraje};
 
-% \item N. Davies, \emph{Serce Europy};
+  % \item N. Davies, \emph{Serce Europy};
 
-% \item Thomas Hylland Eriksen, \emph{Etniczność i~nacjonalizm};
+  % \item Thomas Hylland Eriksen, \emph{Etniczność i~nacjonalizm};
 
-% \item Benedict Andreson, \emph{Wspólnoty wyobrażone};
+  % \item Benedict Andreson, \emph{Wspólnoty wyobrażone};
 
-% \item Karol Tarnowski, \emph{W~mroku uczonej niewiedzy};
+  % \item Karol Tarnowski, \emph{W~mroku uczonej niewiedzy};
 
-% \item Barbary Tuchman, \emph{Odległe zwierciadło, czyli rozlicznymi
-%     plagami nękane XIV stulecie};
+  % \item Barbary Tuchman, \emph{Odległe zwierciadło, czyli
+  %   rozlicznymi plagami nękane XIV stulecie};
 
-% \item Homi K. Bhabha, \emph{Miejsca kultury};
+  % \item Homi K. Bhabha, \emph{Miejsca kultury};
 
-% \item Tim Edensor, \emph{Tożsamość narodowa, kultura popularna i~życie
-%     codzienne};
+  % \item Tim Edensor, \emph{Tożsamość narodowa, kultura popularna
+  %   i~życie codzienne};
 
-% \item Justyna Balisz-Schmelz, \emph{Przeszłość niepokonana. Sztuka
-%     niemiecka po 1945 roku jako przestrzeń i medium pamięci};
+  % \item Justyna Balisz-Schmelz, \emph{Przeszłość niepokonana. Sztuka
+  %   niemiecka po 1945 roku jako przestrzeń i medium pamięci};
 
-% \item Anthony D.~Smith, \emph{Etniczne źródła narodów};
+  % \item Anthony D.~Smith, \emph{Etniczne źródła narodów};
 
-% \item Anthony D.~Smith, \emph{Kulturowe podstawy narodów};
+  % \item Anthony D.~Smith, \emph{Kulturowe podstawy narodów};
 
-% \item Piotr Eberhardt, \emph{Rozwój światowej myśli geopolitycznej};
+  % \item Piotr Eberhardt, \emph{Rozwój światowej myśli
+  %   geopolitycznej};
 
-% \item P. Bąk, \emph{Gramatyka języka polskiego. Zarys popularny};
+  % \item P. Bąk, \emph{Gramatyka języka polskiego. Zarys popularny};
 
-% \item Jacek Wegner, \emph{Rzeczpospolita. Duma i~wstyd};
+  % \item Jacek Wegner, \emph{Rzeczpospolita. Duma i~wstyd};
 
-% \item Wassily Kandinsky, \emph{Punkt i~linia a~płaszczyzna. Przyczynek
-%     do~analizy elementów malarskich};
+  % \item Wassily Kandinsky, \emph{Punkt i~linia a~płaszczyzna.
+  %   Przyczynek do~analizy elementów malarskich};
 
-% \item Red. Aneta Pawłowska, Julia Sowińska-Heim, \emph{Afryka
-%     i~(post)kolonializm};
+  % \item Red. Aneta Pawłowska, Julia Sowińska-Heim, \emph{Afryka
+  %   i~(post)kolonializm};
 
-% \item Robert J. C. Young, \emph{Postkolonializm. Wprowadzenie};
+  % \item Robert J. C. Young, \emph{Postkolonializm. Wprowadzenie};
 
-% \item G.~Michaelson, \emph{An Introduction to~Functional Programming
-%     through Lambda Calculus};
+  % \item G.~Michaelson, \emph{An Introduction to~Functional
+  %   Programming through Lambda Calculus};
 
-% \item Gilberto Freyre, \emph{Panowie i niewolnicy};
+  % \item Gilberto Freyre, \emph{Panowie i niewolnicy};
 
-% \item H. P. Barendregt, \emph{The Lambda Calculus: Its Syntax and
-%     Semantics};
+  % \item H. P. Barendregt, \emph{The Lambda Calculus: Its Syntax and
+  %   Semantics};
 
-% \item Leon Degrelle, \emph{Wiek Hitlera};
+  % \item Leon Degrelle, \emph{Wiek Hitlera};
 
-% \item N. D. Jones, \emph{Computability and Complexity: From
-%     a~Programming Perspective};
+  % \item N. D. Jones, \emph{Computability and Complexity: From
+  %   a~Programming Perspective};
 
-% \item Ks. Marcin Worbs, \emph{Człowiek w~misterium liturgii};
+  % \item Ks. Marcin Worbs, \emph{Człowiek w~misterium liturgii};
 
-% \item Anna Grześkowiak-Krwawicz, \emph{Dyskurs polityczny
-%     Rzeczypospolitej Obojga Narodów};
+  % \item Anna Grześkowiak-Krwawicz, \emph{Dyskurs polityczny
+  %   Rzeczypospolitej Obojga Narodów};
 
-% \item Nowak \emph{Dzieje Polski};
+  % \item Nowak \emph{Dzieje Polski};
 
-% \item Margaret Atwood, \emph{Dług. Rozrachunek z~ciemną stroną
-%     bogactwa};
+  % \item Margaret Atwood, \emph{Dług. Rozrachunek z~ciemną stroną
+  %   bogactwa};
 
-% \item Jared Diamond, \emph{Strzelby, zarazki, maszyny. Losy ludzkich
-%     społeczeństw};
+  % \item Jared Diamond, \emph{Strzelby, zarazki, maszyny. Losy
+  %   ludzkich społeczeństw};
 
-% \item Edward E. Evans\dywiz Pritchard, \emph{Czary, wyrocznie i~magia
-%     u~Azande};
+  % \item Edward E. Evans\dywiz Pritchard, \emph{Czary, wyrocznie
+  %   i~magia u~Azande};
 
-% \item W. Szumowski, \emph{Historia medycyny filozoficznie ujęta};
+  % \item W. Szumowski, \emph{Historia medycyny filozoficznie ujęta};
 
-% \item Michał Dondzik, Krzysztof Jajko, Emil Swoiński, \emph{Elementarz
-%     Wytwórni Filmów Oświatowych};
+  % \item Michał Dondzik, Krzysztof Jajko, Emil Swoiński,
+  %   \emph{Elementarz Wytwórni Filmów Oświatowych};
 
-% \item James M. Murray, \emph{Brugia: Kolebka kapitalizmu};
+  % \item James M. Murray, \emph{Brugia: Kolebka kapitalizmu};
 
-% \item Maciej Janowski, \emph{Narodziny inteligencji: 1750--1831};
+  % \item Maciej Janowski, \emph{Narodziny inteligencji: 1750--1831};
 
-% \item Jerzy Jedlicki, \emph{Jakiej cywilizacji Polacy potrzebują:
-%     studia z dziejów idei i~wyobraźni XIX wieku};
+  % \item Jerzy Jedlicki, \emph{Jakiej cywilizacji Polacy potrzebują:
+  %   studia z dziejów idei i~wyobraźni XIX wieku};
 
-% \item Jerzy Jedlicki, \emph{Droga do narodowej klęski};
+  % \item Jerzy Jedlicki, \emph{Droga do narodowej klęski};
 
-% \item Jerzy Jedlicki, \emph{Błędne koło: 1832-1864};
+  % \item Jerzy Jedlicki, \emph{Błędne koło: 1832-1864};
 
-% \item Jerzy Jedlicki, \emph{Nieudana próba kapitalistycznej
-%     industrializacji: analiza państwowego gospodarstwa przemysłowego
-%     w~Królestwie Polskim XIX w.};
+  % \item Jerzy Jedlicki, \emph{Nieudana próba kapitalistycznej
+  %   industrializacji: analiza państwowego gospodarstwa przemysłowego
+  %   w~Królestwie Polskim XIX w.};
 
-% \item Jerzy Jedlicki, \emph{Klejnot i~bariery społeczne: przeobrażenia
-%     szlachectwa polskiego w~schyłkowym okresie feudalizmu};
+  % \item Jerzy Jedlicki, \emph{Klejnot i~bariery społeczne:
+  %   przeobrażenia szlachectwa polskiego w~schyłkowym okresie
+  %   feudalizmu};
 
-% \item Jerzy Jedlicki, \emph{Świat zwyrodniały: lęki i~wyroki krytyków
-%     nowoczesności};
+  % \item Jerzy Jedlicki, \emph{Świat zwyrodniały: lęki i~wyroki
+  %   krytyków nowoczesności};
 
-% \item Rob Riemen, \emph{Wieczny powrót faszyzmu};
+  % \item Rob Riemen, \emph{Wieczny powrót faszyzmu};
 
-% \item Łukasz A. Plesnar, \emph{Twarze Westernu};
+  % \item Łukasz A. Plesnar, \emph{Twarze Westernu};
 
-% \item S. Prat, \emph{Język C++. Szkoła programowania};
+  % \item S. Prat, \emph{Język C++. Szkoła programowania};
 
-% \item L. Strauss, \emph{Prawo naturalne w~świetle historii};
+  % \item L. Strauss, \emph{Prawo naturalne w~świetle historii};
 
-% \item Oskar Halecki, \emph{Tysiąc lat polski katolickiej};
+  % \item Oskar Halecki, \emph{Tysiąc lat polski katolickiej};
 
-% \item Krzysztof Mazur, \emph{Przekroczyć nowoczesność. Projekt
-%     polityczny ruchu społecznego Solidarność};
+  % \item Krzysztof Mazur, \emph{Przekroczyć nowoczesność. Projekt
+  %   polityczny ruchu społecznego Solidarność};
 
-% \item Marian Henryk Serejski, \emph{Europa a rozbiory Polski: studium
-%     historiograficzne};
+  % \item Marian Henryk Serejski, \emph{Europa a rozbiory Polski:
+  %   studium historiograficzne};
 
-% \item Jerzy Łanowski, \emph{Antologia anegdoty antycznej: teraz trzeci
-%     raz wydane historyjki budujące i niebudujące z autorów greckich i
-%     rzymskich};
+  % \item Jerzy Łanowski, \emph{Antologia anegdoty antycznej: teraz
+  %   trzeci raz wydane historyjki budujące i niebudujące z autorów
+  %   greckich i rzymskich};
 
-% \item Artur Domosłowski, \emph{Kapuściński non-fiction};
+  % \item Artur Domosłowski, \emph{Kapuściński non-fiction};
 
-% \item Michael Moran, \emph{Kraj z Księżyca: podróże do serca Polski};
+  % \item Michael Moran, \emph{Kraj z Księżyca: podróże do serca
+  %   Polski};
 
-% \item Pierre Hadot, \emph{Filozofia jako ćwiczenie duchowe};
+  % \item Pierre Hadot, \emph{Filozofia jako ćwiczenie duchowe};
 
-% \item Robert D. Richtmayer, \emph{Principles of advanced mathematical
-%     physics};
+  % \item Robert D. Richtmayer, \emph{Principles of advanced
+  %   mathematical physics};
 
-% \item Walter Burkert, \emph{Stwarzanie świętości. Ślady biologii
-%     we~wczesnych wierzeniach religijnych};
+  % \item Walter Burkert, \emph{Stwarzanie świętości. Ślady biologii
+  %   we~wczesnych wierzeniach religijnych};
 
-% \item A. I. Anselm, \emph{Podstawy fizyki statystycznej
-%     i~termodynamiki};
+  % \item A. I. Anselm, \emph{Podstawy fizyki statystycznej
+  %   i~termodynamiki};
 
-% \item Z. Krasnodębski, \emph{Demokracja peryferii};
+  % \item Z. Krasnodębski, \emph{Demokracja peryferii};
 
-% \item Maria Dzielska, \emph{Hypatia z~Aleksandrii};
+  % \item Maria Dzielska, \emph{Hypatia z~Aleksandrii};
 
-% \item Paweł Śpiewak, \emph{Spór o~Polskę, 1989--99};
+  % \item Paweł Śpiewak, \emph{Spór o~Polskę, 1989--99};
 
-% \item Tadeusz Zieliński, \emph{Religia starożytnej Grecji};
+  % \item Tadeusz Zieliński, \emph{Religia starożytnej Grecji};
 
-% \item Ernest Gellner, \emph{Postmodernizm, rozum i~religia};
+  % \item Ernest Gellner, \emph{Postmodernizm, rozum i~religia};
 
-% \item Daniel Beauvois, \emph{Polacy na Ukrainie 1831-1863. Szlachta
-%     polska na Wołyniu, Podolu i Kijowszczyźnie};
+  % \item Daniel Beauvois, \emph{Polacy na Ukrainie 1831-1863.
+  %   Szlachta polska na Wołyniu, Podolu i Kijowszczyźnie};
 
-% \item \emph{Polskie mity polityczne XIX i XX wieku};
+  % \item \emph{Polskie mity polityczne XIX i XX wieku};
 
-% \item \emph{O nas bez nas. Historia Polski w historiografiach
-%     obcojęzycznych};
+  % \item \emph{O nas bez nas. Historia Polski w historiografiach
+  %   obcojęzycznych};
 
-% \item Leibniz, \emph{Wyznanie wiary filozofa, Rozprawa metafizyczna;
-%     Monadologia; Zasady natury i łaski oraz inne pisma filozoficzne};
+  % \item Leibniz, \emph{Wyznanie wiary filozofa, Rozprawa
+  %   metafizyczna; Monadologia; Zasady natury i łaski oraz inne pisma
+  %   filozoficzne};
 
-% \item Hanna Świda-Ziemba, \emph{Człowiek wewnętrznie zniewolony.
-%     Mechanizmy i konsekwencje minionej formacji --~analiza
-%     psychologiczna};
+  % \item Hanna Świda-Ziemba, \emph{Człowiek wewnętrznie zniewolony.
+  %   Mechanizmy i konsekwencje minionej formacji --~analiza
+  %   psychologiczna};
 
-% \item Paul Johnson, \emph{Historia świata XX wieku};
+  % \item Paul Johnson, \emph{Historia świata XX wieku};
 
-% \item Braudel Fernand, \emph{Dynamika kapitalizmu};
+  % \item Braudel Fernand, \emph{Dynamika kapitalizmu};
 
-% \item I. Berlin, \emph{Korzenie romantyzmu};
+  % \item I. Berlin, \emph{Korzenie romantyzmu};
 
-% \item Bod Rens, \emph{Historia humanistyki};
+  % \item Bod Rens, \emph{Historia humanistyki};
 
-% \item \emph{Teologia i filozofia żydowska wobec Holocaustu};
+  % \item \emph{Teologia i filozofia żydowska wobec Holocaustu};
 
-% \item Acton, \emph{Historia wolności: wybór esejów};
+  % \item Acton, \emph{Historia wolności: wybór esejów};
 
-% \item Andrzej Żbikowski, \emph{Żydzi};
+  % \item Andrzej Żbikowski, \emph{Żydzi};
 
-% \item Stefan Bartkowski, \emph{Pod wspólnym niebem: krótka historia
-%     Żydów w~Polsce i~stosunków polsko-żydowskich};
+  % \item Stefan Bartkowski, \emph{Pod wspólnym niebem: krótka
+  %   historia Żydów w~Polsce i~stosunków polsko-żydowskich};
 
-% \item Arystoteles, \emph{Retoryka};
+  % \item Arystoteles, \emph{Retoryka};
 
-% \item Agnieszka Urbańczyk, Diamentowy Grant, \emph{Polityczność
-%     science fiction w recepcji fanowskie};
+  % \item Agnieszka Urbańczyk, Diamentowy Grant, \emph{Polityczność
+  %   science fiction w recepcji fanowskie};
 
-% \item \emph{Lech Wzbudzony};
+  % \item \emph{Lech Wzbudzony};
 
-% \item \emph{Unintended Reformation};
+  % \item \emph{Unintended Reformation};
 
-% \item J. Polit, \emph{Chiny};
+  % \item J. Polit, \emph{Chiny};
 
-% \item Paweł Śpiewak, \emph{Teologia i~filozofia żydowska wobec
-%     Holocaustu};
+  % \item Paweł Śpiewak, \emph{Teologia i~filozofia żydowska wobec
+  %   Holocaustu};
 
-% \item J.K. Fairbank, \emph{Historia Chin. Nowe spojrzenie};
+  % \item J.K. Fairbank, \emph{Historia Chin. Nowe spojrzenie};
 
-% \item \emph{Nowożytna historia Chin}, red. R. Sławiński;
+  % \item \emph{Nowożytna historia Chin}, red. R. Sławiński;
 
-% \item R. Sławiński, \emph{Geneza Chińskiej Republiki Ludowej};
+  % \item R. Sławiński, \emph{Geneza Chińskiej Republiki Ludowej};
 
-% \item K. Seitz, \emph{Chiny. Powrót Olbrzyma};
+  % \item K. Seitz, \emph{Chiny. Powrót Olbrzyma};
 
-% \item A. Bolesta, \emph{Chiny w okresie transformacji};
+  % \item A. Bolesta, \emph{Chiny w okresie transformacji};
 
-% \item \emph{Chiny. Przemiany państwa i społeczeństwa w okresie reform
-%     1978--2000}, red. K. Tomala;
+  % \item \emph{Chiny. Przemiany państwa i społeczeństwa w okresie
+  %   reform 1978--2000}, red. K. Tomala;
 
-% \item Andrzej Napiórkowski OSPPE, \emph{Teologie XX i~XXI wieku};
+  % \item Andrzej Napiórkowski OSPPE, \emph{Teologie XX i~XXI wieku};
 
-% \item Alfred V.~Aho, Jeffrey D.~Ullman, \emph{Wykłady z~informatyki
-%     z~przykładami w~języku~C};
+  % \item Alfred V.~Aho, Jeffrey D.~Ullman, \emph{Wykłady
+  %   z~informatyki z~przykładami w~języku~C};
 
-% \item Jerzy Eisler, \emph{Co nam zostało z tamtych lat. Dziedzictwo
-%     PRL};
+  % \item Jerzy Eisler, \emph{Co nam zostało z tamtych lat.
+  %   Dziedzictwo PRL};
 
-% \item Peter Burke;
+  % \item Peter Burke;
 
-% \item B. Kozera, \emph{Literatura a~religia. Polska współczesna
-%     powieść katolicka};
+  % \item B. Kozera, \emph{Literatura a~religia. Polska współczesna
+  %   powieść katolicka};
 
-% \item \emph{Physics of living systems};
+  % \item \emph{Physics of living systems};
 
-% \item Jadwiga Staniszkis, \emph{Samoograniczająca~się rewolucja};
+  % \item Jadwiga Staniszkis, \emph{Samoograniczająca~się rewolucja};
 
-% \item Jadwiga Staniszkis, \emph{Postkomunizm. Próba opisu};
+  % \item Jadwiga Staniszkis, \emph{Postkomunizm. Próba opisu};
 
-% \item Z. Wójcik, \emph{Dzikie Pola w~ogniu. O~Kozaczyźnie w~dawnej
-%     Rzeczypospolitej};
+  % \item Z. Wójcik, \emph{Dzikie Pola w~ogniu. O~Kozaczyźnie w~dawnej
+  %   Rzeczypospolitej};
 
-% \item Jan Kofman, Wojciech Roszkowski, \emph{Transformacja
-%     i~postkomunizm};
+  % \item Jan Kofman, Wojciech Roszkowski, \emph{Transformacja
+  %   i~postkomunizm};
 
-% \item M. Gołaszewska, \emph{Estetyka współczesna};
+  % \item M. Gołaszewska, \emph{Estetyka współczesna};
 
-% \item E. Badinter, \emph{XY --~tożsamość mężczyzny};
+  % \item E. Badinter, \emph{XY --~tożsamość mężczyzny};
 
-% \item R. Bly, \emph{Żelazny Jan. Rzecz o~mężczyznach};
+  % \item R. Bly, \emph{Żelazny Jan. Rzecz o~mężczyznach};
 
-% \item Z. Wójcik, \emph{Wojny kozackie w dawnej Polsce};
+  % \item Z. Wójcik, \emph{Wojny kozackie w dawnej Polsce};
 
-% \item Z. Wójcik, \emph{Dzieje Rosji: 1533-1801};
+  % \item Z. Wójcik, \emph{Dzieje Rosji: 1533-1801};
 
-% \item Vigarello Georges, \emph{Historia gwałtu};
+  % \item Vigarello Georges, \emph{Historia gwałtu};
 
-% \item Tannahill Reay, \emph{Historia kuchni};
+  % \item Tannahill Reay, \emph{Historia kuchni};
 
-% \item Éliphas Lévi, \emph{Historia magii};
+  % \item Éliphas Lévi, \emph{Historia magii};
 
-% \item Meyer Michel (red.), \emph{Historia retoryki od Greków do dziś};
+  % \item Meyer Michel (red.), \emph{Historia retoryki od Greków do
+  %   dziś};
 
-% \item Simmel Georg, \emph{Filozofia pieniądza};
+  % \item Simmel Georg, \emph{Filozofia pieniądza};
 
-% \item Dahl Robert, \emph{Demokracja i~jej krytycy};
+  % \item Dahl Robert, \emph{Demokracja i~jej krytycy};
 
-% \item Z. Wojcik, \emph{Jan Sobieski: 1629-1696};
+  % \item Z. Wojcik, \emph{Jan Sobieski: 1629-1696};
 
-% \item Z. Wójcik, \emph{Jan III Sobieski};
+  % \item Z. Wójcik, \emph{Jan III Sobieski};
 
-% \item Ariès Philippe, \emph{Historia dzieciństwa. Dziecko i rodzina w
-%     czasach ancien régime’u};
+  % \item Ariès Philippe, \emph{Historia dzieciństwa. Dziecko i
+  %   rodzina w czasach ancien régime’u};
 
-% \item Bataille Georges, \emph{Historia erotyzmu};
+  % \item Bataille Georges, \emph{Historia erotyzmu};
 
-% \item Vigarello Georges, \emph{Historia otyłości};
+  % \item Vigarello Georges, \emph{Historia otyłości};
 
-% \item Flandrin Jean-Louis, \emph{Historia rodziny};
+  % \item Flandrin Jean-Louis, \emph{Historia rodziny};
 
-% \item Z. Wójcik, \emph{Jan Kazimierz Waza};
+  % \item Z. Wójcik, \emph{Jan Kazimierz Waza};
 
-% \item Z. Wójcik, \emph{Józef Piłsudski 1867-1935};
+  % \item Z. Wójcik, \emph{Józef Piłsudski 1867-1935};
 
-% \item \emph{Legendy uświęcone. Twórczość J. R. R. Tolkiena a
-%     chrześcijaństwo};
+  % \item \emph{Legendy uświęcone. Twórczość J. R. R. Tolkiena a
+  %   chrześcijaństwo};
 
-% \item Stefan Bratkowski, \emph{Nieco inna historia cywilizacji: dzieje
-%     banków, bankierów i obrotu pieniężnego};
+  % \item Stefan Bratkowski, \emph{Nieco inna historia cywilizacji:
+  %   dzieje banków, bankierów i obrotu pieniężnego};
 
-% \item Izrael Szahad, \emph{Żydowskie dzieje i religia; Żydzi i goje –
-%     XXX wieków historii};
+  % \item Izrael Szahad, \emph{Żydowskie dzieje i religia; Żydzi i
+  %   goje – XXX wieków historii};
 
-% \item Izrael Szahak, \emph{Tel Awiw za zamkniętymi drzwiami};
+  % \item Izrael Szahak, \emph{Tel Awiw za zamkniętymi drzwiami};
 
-% \item Andrzej Żbikowski, \emph{Ideologia antysemicka w~Polsce
-%     1848-1918};
+  % \item Andrzej Żbikowski, \emph{Ideologia antysemicka w~Polsce
+  %   1848-1918};
 
-% \item Władysław Bruliński, \emph{Antykościół};
+  % \item Władysław Bruliński, \emph{Antykościół};
 
-% \item Władysław Bruliński, \emph{Co to jest marksizm?};
+  % \item Władysław Bruliński, \emph{Co to jest marksizm?};
 
-% \item Władysław Bruliński, \emph{Czerwone palmy historii};
+  % \item Władysław Bruliński, \emph{Czerwone palmy historii};
 
-% \item Władysław Bruliński, \emph{Dokąd idziesz Polsko?};
+  % \item Władysław Bruliński, \emph{Dokąd idziesz Polsko?};
 
-% \item \emph{Żydzi i judaizm we współczesnych badaniach polskich};
+  % \item \emph{Żydzi i judaizm we współczesnych badaniach polskich};
 
-% \item Artur Eisenbach, \emph{Emancypacja Żydów na ziemiach polskich
-%     1785-1870 na tle europejskim};
+  % \item Artur Eisenbach, \emph{Emancypacja Żydów na ziemiach
+  %   polskich 1785-1870 na tle europejskim};
 
-% \item Artur Eisenbach, \emph{Z dziejów ludności żydowskiej w Polsce w
-%     XVIII i XIX w.};
+  % \item Artur Eisenbach, \emph{Z dziejów ludności żydowskiej w
+  %   Polsce w XVIII i XIX w.};
 
-% \item Artur Eisenbach, \emph{Kwestia równouprawnienia Żydów w
-%     Królestwie Polskim};
+  % \item Artur Eisenbach, \emph{Kwestia równouprawnienia Żydów w
+  %   Królestwie Polskim};
 
-% \item Marian Fuks, \emph{Humor Żydów polskich (do 1939 r.)};
+  % \item Marian Fuks, \emph{Humor Żydów polskich (do 1939 r.)};
 
-% \item Marian Fuks, \emph{Żydzi w Polsce – Dawniej i dziś};
+  % \item Marian Fuks, \emph{Żydzi w Polsce – Dawniej i dziś};
 
-% \item Marian Fuks, \emph{Prasa żydowska w Warszawie 1823-1939};
+  % \item Marian Fuks, \emph{Prasa żydowska w Warszawie 1823-1939};
 
-% \item Marian Fuks, \emph{Z dziejów wielkiej katastrofy narodu
-%     żydowskiego};
+  % \item Marian Fuks, \emph{Z dziejów wielkiej katastrofy narodu
+  %   żydowskiego};
 
-% \item August Grabski, \emph{Studia z dziejów i kultury Żydów w Polsce
-%     po 1945 r.};
+  % \item August Grabski, \emph{Studia z dziejów i kultury Żydów w
+  %   Polsce po 1945 r.};
 
-% \item Robert Fabbri, \emph{Wespazjan, trybun Rzymu};
+  % \item Robert Fabbri, \emph{Wespazjan, trybun Rzymu};
 
-% \item Michael Hesemann, \emph{Kłamstwa Hitlera};
+  % \item Michael Hesemann, \emph{Kłamstwa Hitlera};
 
-% \item David Hockney, \emph{Wiedza tajemna. Sekrety technik malarskich
-%     Dawnych Mistrzów};
+  % \item David Hockney, \emph{Wiedza tajemna. Sekrety technik
+  %   malarskich Dawnych Mistrzów};
 
-% \item Anna Magdalena Mandrela, \emph{Tomizm Garrigou-Lagrange’a wobec
-%     wizji filozoficznej Teilharda de Chardin};
+  % \item Anna Magdalena Mandrela, \emph{Tomizm Garrigou-Lagrange’a
+  %   wobec wizji filozoficznej Teilharda de Chardin};
 
-% \item Leonie Swann, \emph{Powiększ Sprawiedliwość owiec. Filozoficzna
-%     powieść kryminalna};
+  % \item Leonie Swann, \emph{Powiększ Sprawiedliwość owiec.
+  %   Filozoficzna powieść kryminalna};
 
-% \item Antoine de Saint-Exupéry, \emph{Twierdza};
+  % \item Antoine de Saint-Exupéry, \emph{Twierdza};
 
-% \item Umberto Eco, \emph{Historia brzydoty};
+  % \item Umberto Eco, \emph{Historia brzydoty};
 
-% \item Brian Reynolds Myers, \emph{Najczystsza rasa: Propaganda Korei
-%     Północnej};
+  % \item Brian Reynolds Myers, \emph{Najczystsza rasa: Propaganda
+  %   Korei Północnej};
 
-% \item Tomasz Strzyżewski, \emph{Wielka księga cenzury PRL w
-%     dokumentach};
+  % \item Tomasz Strzyżewski, \emph{Wielka księga cenzury PRL w
+  %   dokumentach};
 
-% \item Orlando Figes, \emph{Tragedia narodu. Rewolucja rosyjska
-%     1891-1924};
+  % \item Orlando Figes, \emph{Tragedia narodu. Rewolucja rosyjska
+  %   1891-1924};
 
-% \item Jon Savage, \emph{Teenage: The Creation of Youth Culture};
+  % \item Jon Savage, \emph{Teenage: The Creation of Youth Culture};
 
-% \item Lawrence Weschler, \emph{Mr. Wilson's Cabinet of Wonder: Pronged
-%     Ants, Horned Humans, Mice on Toast, and Other Marvels of Jurassic
-%     Technology};
+  % \item Lawrence Weschler, \emph{Mr. Wilson's Cabinet of Wonder:
+  %   Pronged Ants, Horned Humans, Mice on Toast, and Other Marvels of
+  %   Jurassic Technology};
 
-% \item Christophe Galfard, \emph{Wszechświat w twojej dłoni};
+  % \item Christophe Galfard, \emph{Wszechświat w twojej dłoni};
 
-% \item Swietłana Aleksijewicz, \emph{Cynkowi chłopcy};
+  % \item Swietłana Aleksijewicz, \emph{Cynkowi chłopcy};
 
-% \item Aleksander Hertz, \emph{Amerykańskie stronnictwa polityczne};
+  % \item Aleksander Hertz, \emph{Amerykańskie stronnictwa
+  %   polityczne};
 
-% \item Aleksander Hertz, \emph{Żydzi w kulturze polskiej};
+  % \item Aleksander Hertz, \emph{Żydzi w kulturze polskiej};
 
-% \item Aleksander Hertz, \emph{Wyznania starego człowieka};
+  % \item Aleksander Hertz, \emph{Wyznania starego człowieka};
 
-% \item Maurycy Horn, \emph{Żydowskie bractwa rzemieślnicze na ziemiach
-%     polskich, litewskich, białoruskich i ukraińskich w latach
-%     1613-1850};
+  % \item Maurycy Horn, \emph{Żydowskie bractwa rzemieślnicze na
+  %   ziemiach polskich, litewskich, białoruskich i ukraińskich w
+  %   latach 1613-1850};
 
-% \item Maurycy Horn, \emph{Walka chłopów czerwonoruskich z wyzyskiem
-%     feudalnym w latach 1600-1643};
+  % \item Maurycy Horn, \emph{Walka chłopów czerwonoruskich z
+  %   wyzyskiem feudalnym w latach 1600-1643};
 
 
-% \item Adam Kaźmierczyk, \emph{Sejmy i sejmiki szlacheckie wobec Żydów
-%     w II połowie XVII wieku};
+  % \item Adam Kaźmierczyk, \emph{Sejmy i sejmiki szlacheckie wobec
+  %   Żydów w II połowie XVII wieku};
 
-% \item Adam Kaźmierczyk, \emph{Żydzi w dobrach prywatnych. W świetle
-%     sądowniczej i administracyjnej praktyki dóbr magnackich w wiekach
-%     XVI-XVIII};
+  % \item Adam Kaźmierczyk, \emph{Żydzi w dobrach prywatnych. W
+  %   świetle sądowniczej i administracyjnej praktyki dóbr magnackich
+  %   w wiekach XVI-XVIII};
 
-% \item Krystyna Kersten, \emph{Polacy-Żydzi-Komunizm. Anatomia półprawd
-%     1939-1968};
+  % \item Krystyna Kersten, \emph{Polacy-Żydzi-Komunizm. Anatomia
+  %   półprawd 1939-1968};
 
-% \item Krystyna Kersten, \emph{Pogrom Żydów w Kielcach 4 lipca 1946
-%     r.};
+  % \item Krystyna Kersten, \emph{Pogrom Żydów w Kielcach 4 lipca 1946
+  %   r.};
 
-% \item Andrzej Sulima Kamiński, \emph{Historia Rzeczypospolitej Wielu
-%     Narodów 1505-1795. Obywatele, ich państwa, społeczeństwo,
-%     kultura};
+  % \item Andrzej Sulima Kamiński, \emph{Historia Rzeczypospolitej
+  %   Wielu Narodów 1505-1795. Obywatele, ich państwa, społeczeństwo,
+  %   kultura};
 
-% \item Cynarski S., \emph{Zygmunt August};
+  % \item Cynarski S., \emph{Zygmunt August};
 
-% \item Cyra A., \emph{Rotmistrz Pilecki. Ochotnik do Auschwitz};
+  % \item Cyra A., \emph{Rotmistrz Pilecki. Ochotnik do Auschwitz};
 
-% \item \emph{Czy ktoś przebije ten mur? Sprawa Pyjasa};
+  % \item \emph{Czy ktoś przebije ten mur? Sprawa Pyjasa};
 
-% \item Dudek A., Zblewski Z., \emph{Utopia nad Wisłą. Historia
-%     Peerelu};
+  % \item Dudek A., Zblewski Z., \emph{Utopia nad Wisłą. Historia
+  %   Peerelu};
 
-% \item Czapliński W., \emph{Władysław IV i jego czasy};
+  % \item Czapliński W., \emph{Władysław IV i jego czasy};
 
-% \item Dybiec J., \emph{Nie tylko szablą. Nauka i kultura polska w
-%     walce o~utrzymanie tożsamości narodowej 1795--1918};
+  % \item Dybiec J., \emph{Nie tylko szablą. Nauka i kultura polska w
+  %   walce o~utrzymanie tożsamości narodowej 1795--1918};
 
-% \item Eisler J., \emph{Zarys dziejów politycznych Polski 1944--1989};
+  % \item Eisler J., \emph{Zarys dziejów politycznych Polski
+  %   1944--1989};
 
-% \item Grzybowski S., \emph{Henryk Walezy};
+  % \item Grzybowski S., \emph{Henryk Walezy};
 
-% \item Ignatowicz I., \emph{Społeczeństwo polskie 1864--1914};
+  % \item Ignatowicz I., \emph{Społeczeństwo polskie 1864--1914};
 
-% \item \emph{Inteligencja polska XIX i XX wieku. Studia}, red. R.
-%   Czapulis-Rastenis, t.1-6;
+  % \item \emph{Inteligencja polska XIX i XX wieku. Studia}, red. R.
+  %   Czapulis-Rastenis, t.1-6;
 
-% \item Jedynak B., \emph{Obyczaje domu polskiego w~czasach niewoli
-%     1795--1918};
+  % \item Jedynak B., \emph{Obyczaje domu polskiego w~czasach niewoli
+  %   1795--1918};
 
-% \item Kaczmarczyk J., \emph{Bohdan Chmielnicki};
+  % \item Kaczmarczyk J., \emph{Bohdan Chmielnicki};
 
-% \item Kawalec K., \emph{Roman Dmowski};
+  % \item Kawalec K., \emph{Roman Dmowski};
 
-% \item \emph{Kobieta i kultura życia codziennego. Wiek XIX i XX. Zbiór
-%     studiów}, red. A. Żarnowska, A. Szwarc;
+  % \item \emph{Kobieta i kultura życia codziennego. Wiek XIX i XX.
+  %   Zbiór studiów}, red. A. Żarnowska, A. Szwarc;
 
-% \item \emph{Kobieta i społeczeństwo na ziemiach polskich w XIX wieku,
-%     zbiór studiów}, red. A. Żarnowska, A. Szwarc;
+  % \item \emph{Kobieta i społeczeństwo na ziemiach polskich w XIX
+  %   wieku, zbiór studiów}, red. A. Żarnowska, A. Szwarc;
 
-% \item Konopczyński W., \emph{Dzieje Polski nowożytnej};
+  % \item Konopczyński W., \emph{Dzieje Polski nowożytnej};
 
-% \item Kowecka E., \emph{W salonie i w kuchni. Opowieść o kulturze
-%     materialnej pałaców i dworów polskich w XIX wieku};
+  % \item Kowecka E., \emph{W salonie i w kuchni. Opowieść o kulturze
+  %   materialnej pałaców i dworów polskich w XIX wieku};
 
-% \item Krawczak T., \emph{W szlacheckim zaścianku};
+  % \item Krawczak T., \emph{W szlacheckim zaścianku};
 
-% \item Kuchowicz Z., \emph{Miłość staropolska};
+  % \item Kuchowicz Z., \emph{Miłość staropolska};
 
-% \item Kuchowicz Z., \emph{Obyczaje staropolskie XVII-XVIII w.};
+  % \item Kuchowicz Z., \emph{Obyczaje staropolskie XVII-XVIII w.};
 
-% \item Litak S., \emph{Od reformacji do Oświecenia. Kościół katolicki
-%     w~Polsce nowożytnej};
+  % \item Litak S., \emph{Od reformacji do Oświecenia. Kościół
+  %   katolicki w~Polsce nowożytnej};
 
-% \item Mączak A., \emph{Klientela. Nieformalne systemy władzy w Polsce
-%     Europie XVI-XVIII w.};
+  % \item Mączak A., \emph{Klientela. Nieformalne systemy władzy w
+  %   Polsce Europie XVI-XVIII w.};
 
-% \item Łuczak C., \emph{Polska i Polacy w drugiej wojnie światowej};
+  % \item Łuczak C., \emph{Polska i Polacy w drugiej wojnie
+  %   światowej};
 
-% \item Molenda J., \emph{Chłopi. Naród. Niepodległość. Kształtowanie
-%     się postaw narodowych i~obywatelskich chłopów w~Galicji
-%     i~Królestwie polskim w~przededniu odrodzenia Polski};
+  % \item Molenda J., \emph{Chłopi. Naród. Niepodległość.
+  %   Kształtowanie się postaw narodowych i~obywatelskich chłopów
+  %   w~Galicji i~Królestwie polskim w~przededniu odrodzenia Polski};
 
-% \item Możdżyńska-Nawotka M., \emph{O~modach i~strojach};
+  % \item Możdżyńska-Nawotka M., \emph{O~modach i~strojach};
 
-% \item \emph{Obyczaje w Polsce. Od średniowiecza do czasów
-%     współczesnych};
+  % \item \emph{Obyczaje w Polsce. Od średniowiecza do czasów
+  %   współczesnych};
 
-% \item Olszewski D., \emph{Polska kultura religijna na przełomie XIX
-%     i~XX wieku};
+  % \item Olszewski D., \emph{Polska kultura religijna na przełomie
+  %   XIX i~XX wieku};
 
-% \item Olszewski H., \emph{O skutecznym rad sposobie};
+  % \item Olszewski H., \emph{O skutecznym rad sposobie};
 
-% \item \emph{Polska XVII wieku. Państwo, społeczeństwo, kultura}, red.
-%   J. Tazbir;
+  % \item \emph{Polska XVII wieku. Państwo, społeczeństwo, kultura},
+  %   red. J. Tazbir;
 
-% \item Paczkowski A., \emph{Pół wieku dziejów Polski, 1939--1989};
+  % \item Paczkowski A., \emph{Pół wieku dziejów Polski, 1939--1989};
 
-% \item \emph{Polska na przestrzeni wieków}, red. J. Tazbir;
+  % \item \emph{Polska na przestrzeni wieków}, red. J. Tazbir;
 
-% \item Przyboś A., \emph{Michał Korybut Wiśniowiecki 1640-1673};
+  % \item Przyboś A., \emph{Michał Korybut Wiśniowiecki 1640-1673};
 
-% \item Rok B., \emph{Człowiek wobec śmierci w kulturze staropolskiej};
+  % \item Rok B., \emph{Człowiek wobec śmierci w kulturze
+  %   staropolskiej};
 
-% \item \emph{Rzeczpospolita wielu narodów i jej tradycje}, red. M.
-%   Markiewicz, A. Link-Lenczewski;
+  % \item \emph{Rzeczpospolita wielu narodów i jej tradycje}, red. M.
+  %   Markiewicz, A. Link-Lenczewski;
 
-% \item \emph{Społeczeństwo polskie od X do XX wieku}, red. I.
-%   Ignatowicz, A. Mączak, B. Zientara, J. Żarnowski;
+  % \item \emph{Społeczeństwo polskie od X do XX wieku}, red. I.
+  %   Ignatowicz, A. Mączak, B. Zientara, J. Żarnowski;
 
-% \item Staszewski J., \emph{August II Mocny};
+  % \item Staszewski J., \emph{August II Mocny};
 
-% \item Staszewski J., \emph{August III Sas};
+  % \item Staszewski J., \emph{August III Sas};
 
-% \item Suleja W., \emph{Józef Piłsudski};
+  % \item Suleja W., \emph{Józef Piłsudski};
 
-% \item Szubarczyk P., \emph{Inka. Zachowałam się jak trzeba\ldots};
+  % \item Szubarczyk P., \emph{Inka. Zachowałam się jak trzeba\ldots};
 
-% \item Topolski J., \emph{Polska w czasach nowożytnych. Od europejskiej
-%     potęgi do utraty niepodległości};
+  % \item Topolski J., \emph{Polska w czasach nowożytnych. Od
+  %   europejskiej potęgi do utraty niepodległości};
 
-% \item Terlecki R., \emph{Miecz i tarcza komunizmu. Historia aparatu
-%     bezpieczeństwa 1944--1990};
+  % \item Terlecki R., \emph{Miecz i tarcza komunizmu. Historia
+  %   aparatu bezpieczeństwa 1944--1990};
 
-% \item \emph{Tradycje polityczne dawnej Polski}, red. A.
-%   Sucheni-Grabowska, A. Dybowska;
+  % \item \emph{Tradycje polityczne dawnej Polski}, red. A.
+  %   Sucheni-Grabowska, A. Dybowska;
 
-% \item Wandycz P., \emph{Pod zaborami. Ziemie Rzeczypospolitej w latach
-%     1795--1918};
+  % \item Wandycz P., \emph{Pod zaborami. Ziemie Rzeczypospolitej w
+  %   latach 1795--1918};
 
-% \item Wisner H., \emph{Władysław IV Waza};
+  % \item Wisner H., \emph{Władysław IV Waza};
 
-% \item Wisner H., \emph{Zygmunt III Waza};
+  % \item Wisner H., \emph{Zygmunt III Waza};
 
-% \item Zielińska Z., \emph{Ostatnie lata Pierwszej Rzeczypospolitej};
+  % \item Zielińska Z., \emph{Ostatnie lata Pierwszej
+  %   Rzeczypospolitej};
 
-% \item Zblewski Z, \emph{Abecadło Peerelu};
+  % \item Zblewski Z, \emph{Abecadło Peerelu};
 
-% \item Zienkowska K., \emph{Stanisław August Poniatowski};
+  % \item Zienkowska K., \emph{Stanisław August Poniatowski};
 
-% \item Zdrada J., \emph{Historia Polski 1795--1914};
+  % \item Zdrada J., \emph{Historia Polski 1795--1914};
 
-% \item Żarnowski, J., \emph{Polska 1918--1939. Praca, technika,
-%     społeczeństwo};
+  % \item Żarnowski, J., \emph{Polska 1918--1939. Praca, technika,
+  %   społeczeństwo};
 
-% \item Ziejka F., \emph{Złota legenda chłopów polskich};
+  % \item Ziejka F., \emph{Złota legenda chłopów polskich};
 
-% \item Żołądź D., \emph{Ideały edukacyjne doby staropolskiej. Stanowe
-%     modele i potrzeby edukacyjne szesnastego i siedemnastego wieku};
+  % \item Żołądź D., \emph{Ideały edukacyjne doby staropolskiej.
+  %   Stanowe modele i potrzeby edukacyjne szesnastego i siedemnastego
+  %   wieku};
 
-% \item R. Wapiński, \emph{Historia polskiej myśli politycznej XIX
-%     i~XX~wieku};
+  % \item R. Wapiński, \emph{Historia polskiej myśli politycznej XIX
+  %   i~XX~wieku};
 
-% \item R.R. Ludwikowski, \emph{Historia polskiej myśli politycznej};
+  % \item R.R. Ludwikowski, \emph{Historia polskiej myśli
+  %   politycznej};
 
-% \item W. Bernacki, \emph{Liberalizm polski};
+  % \item W. Bernacki, \emph{Liberalizm polski};
 
-% \item B. Szlachta, \emph{Z dziejów polskiego konserwatyzmu};
+  % \item B. Szlachta, \emph{Z dziejów polskiego konserwatyzmu};
 
-% \item M. Śliwa, \emph{Polska myśl socjalistyczna 1892--1948};
+  % \item M. Śliwa, \emph{Polska myśl socjalistyczna 1892--1948};
 
-% \item Z. Ogonowski, \emph{Filozofia polityczna w~Polsce XVII w.
-%     i~tradycje demokracji europejskiej};
+  % \item Z. Ogonowski, \emph{Filozofia polityczna w~Polsce XVII w.
+  %   i~tradycje demokracji europejskiej};
 
-% \item S. Tarnowski, \emph{Pisarze polityczni XVI wieku};
+  % \item S. Tarnowski, \emph{Pisarze polityczni XVI wieku};
 
-% \item S. Tarnowski, \emph{Historia literatury polskiej, t.2};
+  % \item S. Tarnowski, \emph{Historia literatury polskiej, t.2};
 
-% \item W. Konopczyński, \emph{Polscy pisarze polityczni XVIII w.};
+  % \item W. Konopczyński, \emph{Polscy pisarze polityczni XVIII w.};
 
-% \item H. Olszewski, \emph{Doktryny prawno-ustrojowe czasów saskich};
-% \item K. Waliszewski, \emph{Potoccy i Czartoryscy, walka stronnictw i
-%     programów politycznych przed upadkiem Rzeczypospolitej 1734--1763};
+  % \item H. Olszewski, \emph{Doktryny prawno-ustrojowe czasów
+  %   saskich};
+  % \item K. Waliszewski, \emph{Potoccy i Czartoryscy, walka
+  %   stronnictw i programów politycznych przed upadkiem
+  %   Rzeczypospolitej 1734--1763};
 
-% \item Red. Tomasz Dołęgowski, \emph{Przewodnik po moralnym
-%     kapitalizmie};
+  % \item Red. Tomasz Dołęgowski, \emph{Przewodnik po moralnym
+  %   kapitalizmie};
 
-% \item Besala J., \emph{Stefan Batory};
+  % \item Besala J., \emph{Stefan Batory};
 
-% \item Cieślak E., \emph{Stanisław Leszczyński};
+  % \item Cieślak E., \emph{Stanisław Leszczyński};
 
-% \item Bogucka M., \emph{Staropolskie obyczaje XVI-XVII w};
+  % \item Bogucka M., \emph{Staropolskie obyczaje XVI-XVII w};
 
-% \item Cz. Michalski, \emph{Western};
+  % \item Cz. Michalski, \emph{Western};
 
-% \item A. Chwalba, \emph{III Rzeczpospolita --~raport specjalny};
+  % \item A. Chwalba, \emph{III Rzeczpospolita --~raport specjalny};
 
-% \item Jean-Paul Bled, \emph{Bismarck. Żelazny kanclerz};
+  % \item Jean-Paul Bled, \emph{Bismarck. Żelazny kanclerz};
 
-% \item Marcin Król, \emph{Byliśmy głupi};
+  % \item Marcin Król, \emph{Byliśmy głupi};
 
-% \item J. Wójcik, \emph{Labirynt światła};
+  % \item J. Wójcik, \emph{Labirynt światła};
 
-% \item A. Chwalba, \emph{Historia Polski 1795-1918};
+  % \item A. Chwalba, \emph{Historia Polski 1795-1918};
 
-% \item Brzoza C., Sowa A., \emph{Historia Polski 1918-1945};
+  % \item Brzoza C., Sowa A., \emph{Historia Polski 1918-1945};
 
-% \item Cz. Michalski, \emph{Western i~jego bohaterowie};
+  % \item Cz. Michalski, \emph{Western i~jego bohaterowie};
 
-% \item Rafał Marszałek, \emph{Pamflet na kino codzienne};
+  % \item Rafał Marszałek, \emph{Pamflet na kino codzienne};
 
-% \item Rafał Marszałek, \emph{Polska wojna w obcym filmie};
+  % \item Rafał Marszałek, \emph{Polska wojna w obcym filmie};
 
-% \item Rafał Marszałek, \emph{Filmowa pop-historia};
+  % \item Rafał Marszałek, \emph{Filmowa pop-historia};
 
-% \item Rafał Marszałek, \emph{Kino rzeczy znalezionych};
+  % \item Rafał Marszałek, \emph{Kino rzeczy znalezionych};
 
-% \item J. Skwara, \emph{Western odrzuca legendę};
+  % \item J. Skwara, \emph{Western odrzuca legendę};
 
-% \item Władysław Konopczyński, \emph{Konfederacja barska};
+  % \item Władysław Konopczyński, \emph{Konfederacja barska};
 
-% \item Michał Łuczewski, \emph{Odwieczny naród. Polak i~katolik
-%     w~Żmiącej};
+  % \item Michał Łuczewski, \emph{Odwieczny naród. Polak i~katolik
+  %   w~Żmiącej};
 
-% \item Alan Bullock, \emph{Hitler. Studium tyrani};
+  % \item Alan Bullock, \emph{Hitler. Studium tyrani};
 
-% \item Tadeusz Lubelski, \emph{Historia Kina Polskiego, Twórcy, Filmy,
-%     Konteksty};
+  % \item Tadeusz Lubelski, \emph{Historia Kina Polskiego, Twórcy,
+  %   Filmy, Konteksty};
 
-% \item Marek Haltof, \emph{Kino polskie};
+  % \item Marek Haltof, \emph{Kino polskie};
 
-% \item \emph{Kino bez tajemnic};
+  % \item \emph{Kino bez tajemnic};
 
-% \item David Bordwell, Kristin Thompson, \emph{Film Art. Sztuka
-%     filmowa. Wprowadzenie};
+  % \item David Bordwell, Kristin Thompson, \emph{Film Art. Sztuka
+  %   filmowa. Wprowadzenie};
 
-% \item W. Stróżewski, \emph{Estetyka};
+  % \item W. Stróżewski, \emph{Estetyka};
 
-% \item Vigarello Georges, \emph{Historia czystości i brudu};
+  % \item Vigarello Georges, \emph{Historia czystości i brudu};
 
-% \item Muchembled Robert, \emph{Orgazm i Zachód};
+  % \item Muchembled Robert, \emph{Orgazm i Zachód};
 
-% \item Sloterdijk Peter, \emph{Pogarda mas};
+  % \item Sloterdijk Peter, \emph{Pogarda mas};
 
-% \item Gately Iain, \emph{Kulturowa historia alkoholu};
+  % \item Gately Iain, \emph{Kulturowa historia alkoholu};
 
-% \item Eco Umberto, \emph{Poszukiwanie języka doskonałego w kulturze
-%     europejskiej};
+  % \item Eco Umberto, \emph{Poszukiwanie języka doskonałego w
+  %   kulturze europejskiej};
 
-% \item Coogan Michael, \emph{Bóg i~seks. Co naprawdę mówi Biblia};
+  % \item Coogan Michael, \emph{Bóg i~seks. Co naprawdę mówi Biblia};
 
-% \item Secher Reynald, \emph{Ludobójstwo francusko-francuskie};
+  % \item Secher Reynald, \emph{Ludobójstwo francusko-francuskie};
 
-% \item Vigarello Georges, \emph{Historia urody};
+  % \item Vigarello Georges, \emph{Historia urody};
 
-% \item Higman B.W., \emph{Historia żywności};
+  % \item Higman B.W., \emph{Historia żywności};
 
-% \item Tannahill Reay, \emph{Historia seksu};
+  % \item Tannahill Reay, \emph{Historia seksu};
 
-% \item Ramamurti Rajaraman, \emph{Solitons and~instantons};
+  % \item Ramamurti Rajaraman, \emph{Solitons and~instantons};
 
-% \item Wilson Edward O., \emph{Znaczenie ludzkiego istnienia};
+  % \item Wilson Edward O., \emph{Znaczenie ludzkiego istnienia};
 
-% \item Karl Loewith, \emph{Historia powszechna i dzieje zbawienia};
+  % \item Karl Loewith, \emph{Historia powszechna i dzieje zbawienia};
 
-% \item Tony Judt, \emph{Historia niedokończona. Francuscy
-%     intelektualiści 1944-1956};
+  % \item Tony Judt, \emph{Historia niedokończona. Francuscy
+  %   intelektualiści 1944-1956};
 
-% \item Karl Loewith, \emph{Od Hegla do Nietzschego. Rewolucyjny przełom
-%     w myśli XIX wieku};
+  % \item Karl Loewith, \emph{Od Hegla do Nietzschego. Rewolucyjny
+  %   przełom w myśli XIX wieku};
 
-% \item J. Fiske \emph{Zrozumieć kulturę popularną};
+  % \item J. Fiske \emph{Zrozumieć kulturę popularną};
 
-% \item Anatol Taras, \emph{Anatomia nienawiści};
+  % \item Anatol Taras, \emph{Anatomia nienawiści};
 
-% \item R. Rodes, \emph{Jak powstała bomba atomowa?};
+  % \item R. Rodes, \emph{Jak powstała bomba atomowa?};
 
-% \item A. Tarski;
+  % \item A. Tarski;
 
-% \item Karol Buczek, \emph{Studia z dziejów ustroju
-%     społeczno-gospodarczego Polski piastowskiej};
+  % \item Karol Buczek, \emph{Studia z dziejów ustroju
+  %   społeczno-gospodarczego Polski piastowskiej};
 
-% \item Red. S. Kowalczyk, E. Balawajder, \emph{Jacques Maritain,
-%     prekursor soborowego humanizmu};
+  % \item Red. S. Kowalczyk, E. Balawajder, \emph{Jacques Maritain,
+  %   prekursor soborowego humanizmu};
 
-% \item T. M. Jaroszewski, \emph{Osobowość i wspólnota. Problemy
-%     osobowości we współczesnej antropologii filozoficznej --~marksizm,
-%     strukturalizm, egzystencjalizm, personalizm chrześcijański};
+  % \item T. M. Jaroszewski, \emph{Osobowość i wspólnota. Problemy
+  %   osobowości we współczesnej antropologii filozoficznej
+  %   --~marksizm, strukturalizm, egzystencjalizm, personalizm
+  %   chrześcijański};
 
-% \item Roman Graczyk, \emph{Od uwikłania do autentyczności. Biografia
-%     polityczna Tadeusza Mazowieckiego};
+  % \item Roman Graczyk, \emph{Od uwikłania do autentyczności.
+  %   Biografia polityczna Tadeusza Mazowieckiego};
 
-% \item S. Wiggins, \emph{Introduction to Applied Nonlinear Dynamical
-%     Systems and Chaos};
+  % \item S. Wiggins, \emph{Introduction to Applied Nonlinear
+  %   Dynamical Systems and Chaos};
 
-% \item Władymir Arnold, \emph{Catastrophe Theory};
+  % \item Władymir Arnold, \emph{Catastrophe Theory};
 
   % \item
 
@@ -1496,21 +1545,19 @@
 
   % \item
 
-% \item Donald Ritchie, \emph{The Films of Akira Kurosawa};
+  % \item Donald Ritchie, \emph{The Films of Akira Kurosawa};
 
-% \item Martin Konings, \emph{The Emotional Logic of Capitalism. What
-%     Progressives Have Missed};
+  % \item Martin Konings, \emph{The Emotional Logic of Capitalism.
+  %   What Progressives Have Missed};
 
-% \item David Sloan Wilson, \emph{Darwin's Cathedral: Evolution,
-%     Religion, and the~Nature~of Society};
+  % \item David Sloan Wilson, \emph{Darwin's Cathedral: Evolution,
+  %   Religion, and the~Nature~of Society};
 
-% \item Ch.~R.~Browning, \emph{Zwykli ludzie. 101~Policyjny Batalion
-%     Rezerwowy i~„ostateczne rozwiązanie” w~Polsce}
+  % \item Ch.~R.~Browning, \emph{Zwykli ludzie. 101~Policyjny Batalion
+  %   Rezerwowy i~„ostateczne rozwiązanie” w~Polsce}
 
-% \item Viviana A. Zelizer, \emph{The Social Meaning of Money: Pin
-%     Money, Paychecks, Poor Relief, and Other Currencies};
-
-  % \item
+  % \item Viviana A. Zelizer, \emph{The Social Meaning of Money: Pin
+  %   Money, Paychecks, Poor Relief, and Other Currencies};
 
   % \item
 
@@ -1524,9 +1571,12 @@
 
   % \item
 
-% \item I. Wallerstein, \emph{Europejski uniwersalizm. Retoryka władzy};
+  % \item
 
-% \item Abbé Jacques Meinvielle, \emph{De Lamennais ŕ Maritain};
+  % \item I. Wallerstein, \emph{Europejski uniwersalizm. Retoryka
+  %   władzy};
+
+  % \item Abbé Jacques Meinvielle, \emph{De Lamennais ŕ Maritain};
 
   % \item
 
@@ -1632,11 +1682,11 @@
 % \begin{enumerate}
 
 % \item Edward Witten, \emph{Notes on Some Entanglement Properties of
-%     Quantum Field Theory},
+%   Quantum Field Theory},
 %   \href{https://arxiv.org/abs/1803.04993}{arXiv:1803.04993};
 
-% \item Jeff Bezanson et al, "Julia: dynamism and performance reconciled
-%   by design"
+% \item Jeff Bezanson et al, "Julia: dynamism and performance
+%   reconciled by design"
 %   \href{https://doi.org/10.1145/3276490}{https://doi.org/10.1145/3276490};
 
 % \item Francesco Zappa Nardelli et al., "Julia subtyping: a rational
@@ -1655,7 +1705,7 @@
 %   \href{https://spotbugs.github.io/}{https://spotbugs.github.io/};
 
 % \item \emph{A tool to detect bugs in Java and C/C++/Objective-C code
-%     before it ships},
+%   before it ships},
 %   \href{https://fbinfer.com/}{https://fbinfer.com/la};
 
 % \item \emph{Go 1 and the Future of Go Programs},
@@ -1674,18 +1724,19 @@
 %   \href{https://research.swtch.com/vgo}{https://research.swtch.com/vgo};
 
 % \item \emph{Why Google stores billions of lines of code in a single
-%     repository},
+%   repository},
 %   \href{https://dl.acm.org/doi/10.1145/2854146}{https://dl.acm.org/doi/10.1145/2854146};
 
-% \item \emph{Testing Chromium: ThreadSanitizer v2, a next-gen data race
-%     detector}, \\
+% \item \emph{Testing Chromium: ThreadSanitizer v2, a next-gen data
+%   race
+%   detector}, \\
 %   \href{https://blog.chromium.org/2014/04/testing-chromium-threadsanitizer-v2.html}{https://blog.chromium.org/2014/04/testing-chromium-threadsanitizer-v2.html};
 
 % \item \emph{Search Vulnerability Database},
 %   \href{https://nvd.nist.gov/vuln/search}{https://nvd.nist.gov/vuln/search};
 
 % \item \emph{Regular Expression Matching with a Trigram Index or How
-%     Google Code Search Worked}, \\
+%   Google Code Search Worked}, \\
 %   \href{https://swtch.com/~rsc/regexp/regexp4.html}{https://swtch.com/~rsc/regexp/regexp4.html};
 
 % \item \emph{Licenses},
@@ -1707,7 +1758,7 @@
 %   \href{https://go-proverbs.github.io/}{https://go-proverbs.github.io/};
 
 % \item \emph{RE2: a principled approach to regular expression
-%     matching}, \\
+%   matching}, \\
 %   \href{https://opensource.googleblog.com/2010/03/re2-principled-approach-to-regular.html}{https://opensource.googleblog.com/2010/03/re2-principled-approach-to-regular.html};
 
 % \item \emph{Details about the event-stream incident}, \\
@@ -1718,15 +1769,15 @@
 
 % \item Samuel R. Buss, Alexander S. Kechris, Anand Pillay, Richard A.
 %   Shore, \emph{The prospects for mathematical logic in the
-%     twenty-first century},
+%   twenty-first century},
 %   \href{https://arxiv.org/abs/cs/0205003v1}{arXiv:cs/0205003v1};
 
 % \item Christian Retore, \emph{On the system F as a glue language for
-%     natural-language compositional-semantics},
+%   natural-language compositional-semantics},
 %   \href{https://arxiv.org/abs/1108.5084}{arXiv:1108.5084};
 
 % \item Robert Harper, \emph{An Equational Logical Framework for Type
-%     Theories},
+%   Theories},
 %   \href{https://arxiv.org/abs/2106.01484}{arXiv:2106.01484};
 
 % \item Jan Leike, et al., \emph{AI Safety Gridworlds},
@@ -1736,7 +1787,7 @@
 %   \href{https://arxiv.org/abs/0809.0305}{https://arxiv.org/abs/0809.0305};
 
 % \item R. Estrada, J. M. Gracia-Bondia, J. C. Varilly, \emph{On
-%     summability of distributions and spectral geometry},
+%   summability of distributions and spectral geometry},
 %   \href{https://arxiv.org/abs/funct-an/9702001v1}{arXiv:funct-an/9702001};
 
 % \item Ghanashyam Date, \emph{Lectures on Constrained Systems},
@@ -1746,94 +1797,95 @@
 %   \href{https://arxiv.org/abs/hep-th/9803075v2}{arXiv:hep-th/9803075};
 
 % \item Karl Michael Schmidt, Karl Michael Schmidt, \emph{Schnol’s
-%     Theorem and Spectral Properties of Massless Dirac Operators with
-%     Scalar Potentials};
+%   Theorem and Spectral Properties of Massless Dirac Operators with
+%   Scalar Potentials};
 
 % \item Peter J. Olver, \emph{Dirac’s theory of constraints in fields
-%     theory and the canonical form of Hamiltonian differential
-%     operators};
+%   theory and the canonical form of Hamiltonian differential
+%   operators};
 
 
 % \item Lorenzo Iorio, \emph{Editorial for the Special Issue 100 Years
-%     of Chronogeometrodynamics: The Status of the Einstein's Theory of
-%     Gravitation in Its Centennial Year},
+%   of Chronogeometrodynamics: The Status of the Einstein's Theory of
+%   Gravitation in Its Centennial Year},
 %   \href{https://arxiv.org/abs/1504.05789v2}{arXiv:1504.05789};
 
 % \item B. Mutet, P. Grang\'{e}, E. Werner, \emph{Taylor–Lagrange
-%     renormalization and gauge theories in four dimensions};
+%   renormalization and gauge theories in four dimensions};
 
 
 % \item \emph{Surviving Software Dependencies},
 %   \href{https://queue.acm.org/detail.cfm?id=3344149}{https://queue.acm.org/detail.cfm?id=3344149};
 
 % \item Clifford M. Will, \emph{The Confrontation between General
-%     Relativity and Experiment};
+%   Relativity and Experiment};
 
 % \item Paul Lopes, \emph{Culture and Stigma: Popular Culture and the
-%     Case of Comic Books};
+%   Case of Comic Books};
 
 % \item Marina S.Butuzova 1, Alexander B. Pushkarev, \emph{Is OJ 287 a
-%     Single Supermassive Black Hole?};
+%   Single Supermassive Black Hole?};
 
 % \item Peter Selinger, \emph{Lecture notes on the lambda calculus},
 %   \href{https://arxiv.org/abs/0804.3434v2}{arXiv:0804.3434};
 
 % \item Alex Eskin, Maryam Mirzakhani, \emph{Counting closed geodesics
-%     in Moduli space},
+%   in Moduli space},
 %   \href{https://arxiv.org/abs/0811.2362v3}{arXiv:0811.2362};
 
 % \item Jacques Carette, James H. Davenport, \emph{The Power of
-%     Vocabulary: The Case of Cyclotomic Polynomials},
+%   Vocabulary: The Case of Cyclotomic Polynomials},
 %   \href{https://arxiv.org/abs/1002.0012v1}{arXiv:1002.0012};
 
 % \item Chris Kapulkin, Peter LeFanu Lumsdaine, \emph{The Simplicial
-%     Model of Univalent Foundations (after Voevodsky)},
+%   Model of Univalent Foundations (after Voevodsky)},
 %   \href{https://arxiv.org/abs/1211.2851v5}{arXiv:1211.2851};
 
 % \item Christopher J. Fewster, Rainer Verch, \emph{Quantum fields and
-%     local measurements},
+%   local measurements},
 %   \href{https://arxiv.org/abs/1810.06512}{arXiv:1810.06512};
 
-% \item Paweł Duch, \emph{Infrared problem in perturbative quantum field
-%     theory},
+% \item Paweł Duch, \emph{Infrared problem in perturbative quantum
+%   field theory},
 %   \href{https://arxiv.org/abs/1906.00940}{arXiv:1906.00940};
 
-% \item Christopher J. Fewster, \emph{A generally covariant measurement
-%     scheme for quantum field theory in curved spacetimes},
+% \item Christopher J. Fewster, \emph{A generally covariant
+%   measurement scheme for quantum field theory in curved spacetimes},
 %   \href{https://arxiv.org/abs/1904.06944v1}{arXiv:1904.06944};
 
 % \item Jacob Lurie, \emph{Higher Topos Theory},
 %   \href{https://arxiv.org/abs/math/0608040v4}{arXiv:math/0608040};
 
 % \item Konrad Osterwalder, and Robert Schrader, \emph{Axioms for
-%     Euclidean Green's Functions};
+%   Euclidean Green's Functions};
 
 % \item Vladimir Voevodsky, \emph{A very short note on homotopy
-%     $\lambda$-calculus};
+%   $\lambda$-calculus};
 
 % \item Charles Rezk, \emph{Toposes and homotopy toposes};
 
 % \item Fredrik Nordvall Forsberg, Anton Setzer, \emph{A finite
-%     axiomatisation of inductive-inductive definitions};
+%   axiomatisation of inductive-inductive definitions};
 
 % \item Egbert Rilke, \emph{Introduction to homotopy type theory};
 
-% \item \'{A}lvaro Pelayo, Michael A. Warren, \emph{Homotopy type theory
-%     and Voevodsky’s Univalent Foundations};
+% \item \'{A}lvaro Pelayo, Michael A. Warren, \emph{Homotopy type
+%   theory and Voevodsky’s Univalent Foundations};
 
 % \item H. Simmons, A. Schalk, \emph{An introduction to
-%     $\lambda$-calculi and arithmetics};
+%   $\lambda$-calculi and arithmetics};
 
 % \item Roderich Tumulka, \emph{Lecture Notes on Mathematical
-%     Statistical Physics};
+%   Statistical Physics};
 
 % \item Martin Hofmann, \emph{Extensional concepts in intensional type
-%     theory};
+%   theory};
 
-% \item Eugenio Moggi, \emph{Computational $\lambda$-calculus and monads};
+% \item Eugenio Moggi, \emph{Computational $\lambda$-calculus and
+%   monads};
 
 % \item \emph{Proof-theoretic semantics. Assessment and Future
-%     Perspectives};
+%   Perspectives};
 
 % \item Philip Walder, \emph{Propostions as Types};
 
@@ -1842,10 +1894,10 @@
 % \item Eugenio Moggi, \emph{Notions of computation and monads};
 
 % \item Bruno Barras, Thierry Coquand and Simon Huber, \emph{A
-%     Generalization of Takeuti-Gandy Interpretation};
+%   Generalization of Takeuti-Gandy Interpretation};
 
 % \item Michael Alton Warren, \emph{Homotopy Theoretic Aspects of
-%     Constructive Type Theory};
+%   Constructive Type Theory};
 
 % \item Vladimir Voevodsky, \emph{A universe polymorphic type system};
 
@@ -1854,39 +1906,42 @@
 
 % \item Paweł Duch, Michael Duetsch, Jose M. Gracia-Bondia,
 %   \emph{Diphoton decay of the higgs from the Epstein--Glaser
-%     viewpoint},
+%   viewpoint},
 %   \href{https://arxiv.org/abs/2011.12675v2}{arXiv:2011.12675};
 
-% \item Juliette Kennedy, Menachem Magidor, Jouko V\"{a}\"{a}n\"{a}nen,
-%   \emph{ Inner Models from Extended Logics: Part 1},
+% \item Juliette Kennedy, Menachem Magidor, Jouko
+%   V\"{a}\"{a}n\"{a}nen, \emph{ Inner Models from Extended Logics:
+%   Part 1},
 %   \href{https://arxiv.org/abs/2007.10764}{arXiv:2007.10764};
 
 % \item Paul W. Gross, P. Robert Kotiuga, \emph{Electromagnetic Theory
-%     and Computation: A Topological Approach};
+%   and Computation: A Topological Approach};
 
 % \item Andreas R. Blass, Jeffry L. Hirst, and Stephen G. Simpson,
 %   Logical analysis of some theorems of combinatorics and topological
 %   dynamics, Logic and combinatorics (Arcata, Calif., 1985), Contemp.
-%   Math., vol. 65, Amer. Math. Soc., Providence, RI, 1987, pp. 125–156.
+%   Math., vol. 65, Amer. Math. Soc., Providence, RI, 1987, pp.
+%   125–156.
 
-% \item Jared Corduan, Marcia Groszek, and Joseph Mileti, Draft: A note
-%   on reverse mathematics and partitions of trees.
+% \item Jared Corduan, Marcia Groszek, and Joseph Mileti, Draft: A
+%   note on reverse mathematics and partitions of trees.
 
 % \item Jennifer Chubb, Jeffry Hirst, and Tim McNichol, Reverse
-%   mathematics and partitions of trees. To appear in J. Symbolic Logic.
+%   mathematics and partitions of trees. To appear in J. Symbolic
+%   Logic.
 
-% \item Damir Dzhafarov and Jeffry Hirst, The polarized Ramsey theorem.
-%   Archive for Math. Logic, Online First: 2008.
+% \item Damir Dzhafarov and Jeffry Hirst, The polarized Ramsey
+%   theorem. Archive for Math. Logic, Online First: 2008.
 
-% \item Neil Hindman, The existence of certain ultra-filters on N and a
-%   conjecture of Graham and Rothschild, Proc. Amer. Math. Soc. 36
+% \item Neil Hindman, The existence of certain ultra-filters on N and
+%   a conjecture of Graham and Rothschild, Proc. Amer. Math. Soc. 36
 %   (1972), 341–346.
 
 % \item Jeffry L. Hirst, Hindman’s theorem, ultrafilters, and reverse
 %   mathematics, J. Symbolic Logic 69 (2004), no. 1, 65–72.
 
-% \item Carl G. Jockusch Jr., Ramsey’s theorem and recursion theory, J.
-%   Symbolic Logic 37 (1972), 268–280.
+% \item Carl G. Jockusch Jr., Ramsey’s theorem and recursion theory,
+%   J. Symbolic Logic 37 (1972), 268–280.
 
 % \item J. Mileti, Partition theory and computability theory. Ph.D.
 %   Thesis.
