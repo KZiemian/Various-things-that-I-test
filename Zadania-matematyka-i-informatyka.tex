@@ -85,7 +85,7 @@
 % Mają być w tym samym katalogu to ten plik .tex
 % ---------------------------------------
 % \usepackage{latexshortcuts}
-% \usepackage{mathshortcuts}
+\usepackage{mathcommands}
 
 
 
@@ -224,32 +224,43 @@
 
 \item Oblicz objętość kuli w $2, 3, 4$ i~$n$ wymiarach.
 
-% \item Podobnie jak w poprzednim zadaniu, porównać odległość między
-%   jonami dla związków o~strukturze ZnS (blendy cynkowej): CuF, stała
-%   sieci $a = 4.26$ \AA, ZnS, stała sieci $a = 5.41$ \AA{} i~InSb, stała
-%   sieci $a = 6.46$ \AA, biorąc pod uwagę promienie atomów przy
-%   tetraedrycznym wiązaniu kowalencyjnym.
+\item Wyznaczyć parametr naturalny krzywej
+  \begin{equation}
+    \label{eq:1}
+    \gamma( u ) = \left[ e^{ -u } \cos u, e^{ -u } \sin u, 1 - e^{ -u } \right]
+  \end{equation}
 
-% \item Używając potencjału Lennarda-Jonesa, oblicz stosunek energii
-%   wiązania kryształu gazu szlachetnego krystalizującego w~strukturach
-%   \textbf{bcc} i~\textbf{fcc}.
+\item Dana jest krzywa
+  \begin{equation}
+    \label{eq:2}
+    \delta( t )
+    =
+    \big[ a ( t - \sin t ), a ( 1 - \cos t ), 4a \sin \frac{ t }{ 2 } \big]
+  \end{equation}
+  Obliczyć krzywiznę i~skręcenie krzywej
+  \begin{equation}
+    \label{eq:3}
+    \gamma( t )
+    =
+    \delta( t )
+    + a \vecnbold \sqrt{ 1 + \left( \sin \frac{ t }{ 2 } \right)^{ 2 } }
+  \end{equation}
 
-% \item Oszacować wartość stałej Madelunga dla struktury NaCl na trzy
-%   sposoby.
+\item Wykazać, że dla krzywej $\alpha( s )$ klasy $\Ccal^{ 4 }$ zachodzi tożsamosć
+  \begin{equation}
+    \label{eq:4}
+    \left( \frac{ d^{ 3 } \alpha }{ d s^{ 3 } } \right)^{ 2 }
+    =
+    \kappa^{ 4 } + \kappa^{ 2 } \tau^{ 2 } + \left( \frac{ d \kappa }{ d s } \right)^{ 2 }
+  \end{equation}
 
-%   \begin{itemize}
-%   \item[a)] Stosując dodawanie energii oddziaływania kolejnych
-%     ładunków całkowitych, wyliczyć kilka pierwszych wyrazów szeregu
-%     wprost z~definicji.
-
-%   \item[b)] Wyliczyć stałą Madelunga numerycznie.
-
-%   \item[c)] Stosując metodę Evjena (ułamkowych ładunków) dla sześcianu
-%     zawierającego 26 ładunków.
-
-%   \end{itemize}
-
-  % \item
+\item Znaleźć repery Freneta $\vectbold$, $\vecnbold$, $\vecbbold$ w punkcie
+  $P = (1, 1, 1)$ krzywej powstałej z~przecięcia powierzchni
+  \begin{equation}
+    \label{eq:5}
+    z^{ 2 } = xy, \quad
+    x^{ 2 } + y^{ 2 } - z^{ 2 } = 1
+  \end{equation}
 
   % \item
 
