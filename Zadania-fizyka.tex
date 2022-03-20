@@ -59,7 +59,7 @@
 % Mathematical Society (w skrócie AMS)
 \usepackage{amsfonts, amssymb, amscd, amsthm} % Dalsze wsparcie od AMS
 % % \usepackage{siunitx} % Dla prostszego pisania jednostek fizycznych
-% \usepackage{upgreek} % Ładniejsze greckie litery
+\usepackage{upgreek} % Ładniejsze greckie litery
 % % Przykładowa składnia: pi = \uppi
 % \usepackage{slashed} % Pozwala w prosty sposób pisać slash Feynmana.
 % \usepackage{calrsfs} % Zmienia czcionkę kaligraficzną w \mathcal
@@ -85,7 +85,7 @@
 % Mają być w tym samym katalogu to ten plik .tex
 % ---------------------------------------
 % \usepackage{latexshortcuts}
-% \usepackage{mathshortcuts}
+\usepackage{mathcommands}
 
 
 
@@ -244,8 +244,8 @@
 
 \item Podobnie jak w poprzednim zadaniu, porównać odległość między
   jonami dla związków o~strukturze ZnS (blendy cynkowej): CuF, stała
-  sieci $a = 4.26$ \AA, ZnS, stała sieci $a = 5.41$ \AA{} i~InSb, stała
-  sieci $a = 6.46$ \AA, biorąc pod uwagę promienie atomów przy
+  sieci $a = 4.26$ \AA, ZnS, stała sieci $a = 5.41$ \AA{} i~InSb,
+  stała sieci $a = 6.46$ \AA, biorąc pod uwagę promienie atomów przy
   tetraedrycznym wiązaniu kowalencyjnym.
 
 \item Używając potencjału Lennarda-Jonesa, oblicz stosunek energii
@@ -267,14 +267,110 @@
 
   \end{itemize}
 
-  % \item
+\item Dla zespolonego pola skalarnego (postać operatora tego pola
+  zawiera poprzedni zestaw zadań) proszę wyznaczyć (w~postaci
+  \emph{czterowymiarowej} całki Fourierowskiej) postać propagatora
+  \begin{equation}
+    \label{eq:6}
+    i \Delta_{ F }( x - y )
+    =
+    \left\langle 0 \left| T\left( \widehat{\phi}( x ) \widehat{\phi}^{ \dagger }( x )
+        \right) \right| 0 \right\rangle,
+  \end{equation}
+  gdzie $T$ jest operatorem uporządkowania chronologicznego.
+  \begin{equation}
+    \label{eq:7}
+    T\left( \widehat{\phi}( x^{ 0 }, \vecxbold )
+      \widehat{\phi}^{ \dagger }( y^{ 0 }, \vecybold ) \right)
+    =
+    \widehat{\phi}( x^{ 0 }, \vecxbold ) \widehat{\phi}^{ \dagger }( y^{ 0 }, \vecybold)
+    \theta( x^{ 0 } - y^{ 0 } )
+    +
+    \widehat{\phi}^{ \dagger }( y^{ 0 }, \vecybold ) \widehat{\phi}( x^{ 0 }, \vecxbold )
+    \theta( y^{ 0 } - x^{ 0 } )
+  \end{equation}
 
-  % \item
-
-  % \item
-
-  % \item
-
+\item Prosty model (bezspinowego) pola nukleonów oddziałującego
+  z~polem skalarnym pionów opisany jest hamiltonianem
+  \begin{align}
+    H &= H_{ 0 } + H_{ I }, \\
+    H_{ 0 }
+      &=
+        m_{ 0 } \int d^{ 3 }\vecpbold \, \psi^{ \dagger }( \vecpbold )
+        \psi( \vecpbold )
+        + \int d^{ 3 } \veckbold \, \omega( \veckbold ) a^{ \dagger }( \veckbold )
+        a( \veckbold ),
+        \quad
+        \omega( \veckbold ) = \sqrt{ \veckbold^{ 2 } + \mu^{ 2 } }, \\
+    H_{ I }
+      &=
+        \frac{ \lambda }{ \sqrt{ 2\pi }^{ 3 } }
+        \int d^{ 3 } \vecpbold
+        \int \frac{ d^{ 3 } \veckbold }{ 2\omega( \veckbold ) }
+        f( \veckbold^{ 2 } ) \psi^{ \dagger }( \vecpbold + \veckbold )
+        \psi( \vecpbold )
+        \left( a( \veckbold ) + a^{ \dagger }( \veckbold ) \right),
+  \end{align}
+  gdzie $f( \veckbold^{ 2 } )$ jest funkcją opisującą strukturę
+  elektronu. Zakładamy, że~$f( \veckbold^{ 2 } )$ dostatecznie szybko
+  znika dla duży wartości $\veckbold^{ 2 }$. Operatory
+  $a( \veckbold )$, $a^{ \dagger }( \veckbold )$, $\psi( \vecpbold )$,
+  $\psi^{ \dagger }( \vecpbold )$ spełniają reguły komutacji i~antykomutacji
+  \begin{align}
+    \left[ \psi( \vecpbold ), \psi^{ \dagger }( \vecpbold ) \right]_{ + }
+    &= \delta^{ ( 3 ) }( \vecpbold - \vecpbold' ), \\
+    \left[ \psi( \vecpbold ), \psi( \vecpbold' ) \right]_{ + }
+    &=
+      \left[ \psi^{ \dagger }( \vecpbold ), \psi^{ \dagger }( \vecpbold' ) \right]_{ + } = 0 \\
+    \left[ a( \veckbold ), a^{ \dagger }( \veckbold' ) \right]
+    &= \delta^{ ( 3 ) }( \veckbold - \veckbold' ), \\
+    \left[ a( \veckbold), a( \veckbold' ) \right]
+    &=
+      \left[ a^{ \dagger }( \veckbold ), a^{ \dagger }( \veckbold' ) \right] = 0, \\
+    \left[ \psi( \vecpbold ), a( \veckbold ) \right]
+    = \left[ \psi( \vecpbold ), a^{ \dagger }( \veckbold ) \right]
+    &=
+      \left[ \psi^{ \dagger }( \vecpbold ), a( \veckbold ) \right]
+      = \left[ \psi^{ \dagger }( \vecpbold ), a^{ \dagger }( \veckbold ) \right].
+  \end{align}
+  a) Proszę pokazać, że~pęd oraz liczba nukleonów są w~tym modelu
+  wielkościami zachowanymi, t.j. że~operator
+  \begin{equation}
+    \vecPbold
+    =
+    \int d^{ 3 } \vecpbold \, \vecpbold \, \psi^{ \dagger }( \vecpbold )
+    \psi( \vecpbold )
+    + \int d^{ 3 } \veckbold \, \veckbold \, a^{ \dagger }( \veckbold )
+    a( \veckbold ), \quad
+    N_{ \psi } = \int d^{ 3 } \vecpbold \, \psi^{ \dagger }( \vecpbold ) \psi( \vecpbold ),
+  \end{equation}
+  komutują z~\emph{pełnym} hamiltonianem $H$. \\
+  b) Proszę pokazać, że~stan perturbacyjny próżni $| 0 \rangle$ zdefiniowany
+  poprze
+  \begin{equation}
+    \label{eq:8}
+    \psi( \vecpbold ) | 0 \rangle = a( \veckbold ) | 0 \rangle = 0, \quad
+    \forall \, \vecpbold, \veckbold
+  \end{equation}
+  oraz stan jednomezonowy
+  \begin{equation}
+    \label{eq:9}
+    | \veckbold \rangle = a^{ \dagger }( \veckbold ) | 0 \rangle
+  \end{equation}
+  są stanami własnymi $H$. \\
+  c) Proszę pokazać, że~stanem własnym hamiltonianu $H$, będącym równocześnie stanem własnym operatorem $N_{ \psi }$ z~wartością własną 1, czyli stanem własnym pełnego hamiltonianu zawierającego jeden nukleon) jest
+  \begin{equation}
+    \label{eq:10}
+    | \Psi^{ ( 1 ) }( \vecpbold )
+    =
+    \frac{ \sqrt{ Z } }{ ( 2\pi )^{ 3 } }
+    \int d^{ 3 } \vecpbold \int d^{ 3 } \vecxbold
+    e^{ i ( \vecqbold - \vecpbold ) \cdot \vecxbold }
+    \exp \left\{ \int \frac{ d^{ 3 } \veckbold }{ 2 ( 2\pi )^{ 3 }
+        \omega^{ 3 }( \veckbold ) } f( \veckbold^{ 2 } )
+      e^{ i \veckbold \cdot \vecxbold } a^{ \dagger }( \veckbold ) \right\}
+    \psi^{ \dagger }( \vecqbold ) | 0 \rangle.
+  \end{equation}
   % \item
 
   % \item
