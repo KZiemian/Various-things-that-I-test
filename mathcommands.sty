@@ -8,13 +8,18 @@
 
 
 
-% --------------------------------------
-% Komendy do trybu matematycznego
-% --------------------------------------
+% ---------------------------------------
+% Command for mathematical mode
+% ---------------------------------------
 
 
-% #############
-% Podstawy
+
+
+
+% ##################
+% Sets
+% ##################
+
 
 % Ładniejszy zbiór pusty
 \let\oldemptyset\emptyset
@@ -84,6 +89,7 @@
 
 % Wartość bezwzględna i normy
 \providecommand{\abs}[1]{\lvert{ #1 }\rvert}
+
 \newcommand{\abso}[1]{|\, { #1 } \,|}  % ABSolute value One
 \newcommand{\abstw}[1]{\left| \, { #1 } \, \right|}
 \newcommand{\absth}[1]{\left| { #1 } \right|}
@@ -145,30 +151,30 @@
 
 % \mc = \MathCal
 \newcommand{\Ccal}{\mathcal{C}}
-\newcommand{\Dc}{\mathcal{D}}
-\newcommand{\Ec}{\mathcal{E}}
-\newcommand{\Hc}{\mathcal{H}} % A co z \ell
-\newcommand{\lc}{\mathcal{l}}
-\newcommand{\Lc}{\mathcal{L}}
-\newcommand{\Oc}{\mathcal{O}}
-\newcommand{\Rc}{\mathcal{R}}
+% \newcommand{\Dc}{\mathcal{D}}
+% \newcommand{\Ec}{\mathcal{E}}
+% \newcommand{\Hc}{\mathcal{H}} % A co z \ell
+% \newcommand{\lc}{\mathcal{l}}
+% \newcommand{\Lc}{\mathcal{L}}
+% \newcommand{\Oc}{\mathcal{O}}
+% \newcommand{\Rc}{\mathcal{R}}
 
 
 
 % Rzadziej używane oznaczenia literowe
 % \mc = \mathcal
-\newcommand{\Ac}{\mathcal{A}}
-\newcommand{\Bc}{\mathcal{B}}
-\newcommand{\Fc}{\mathcal{F}}
-\newcommand{\Lcal}{\mathcal{L}}
-\newcommand{\Mc}{\mathcal{M}}
-\newcommand{\Nc}{\mathcal{N}}
-\newcommand{\Ocal}{\mathcal{O}}
-\newcommand{\Tc}{\mathcal{T}}
-\newcommand{\Ucal}{\mathcal{U}}
-\newcommand{\Vcal}{\mathcal{V}}
-\newcommand{\Pc}{\mathcal{P}}
-\newcommand{\Zc}{\mathcal{Z}}
+% \newcommand{\Ac}{\mathcal{A}}
+% \newcommand{\Bc}{\mathcal{B}}
+% \newcommand{\Fc}{\mathcal{F}}
+% \newcommand{\Lcal}{\mathcal{L}}
+% \newcommand{\Mc}{\mathcal{M}}
+% \newcommand{\Nc}{\mathcal{N}}
+% \newcommand{\Ocal}{\mathcal{O}}
+% \newcommand{\Tc}{\mathcal{T}}
+% \newcommand{\Ucal}{\mathcal{U}}
+% \newcommand{\Vcal}{\mathcal{V}}
+% \newcommand{\Pc}{\mathcal{P}}
+% \newcommand{\Zc}{\mathcal{Z}}
 
 
 
@@ -182,7 +188,7 @@
 % \newcommand{\ti}{\times}
 % \newcommand{\com}{\complement}
 
-\newcommand{\set}[1]{\{ #1 \}}
+% \newcommand{\set}[1]{\{ #1 \}}
 
 
 
@@ -229,10 +235,18 @@
 \newcommand{\vecxt}{\vec{ x }( t )}
 
 
-% Wersory
-\newcommand{\vectbold}{\mathbf{t}}
-\newcommand{\vecnbold}{\mathbf{n}}
+% Vectors, bold font
 \newcommand{\vecbbold}{\mathbf{b}}
+\newcommand{\vecnbold}{\mathbf{n}}
+\newcommand{\veckbold}{\mathbf{k}}
+\newcommand{\vecPbold}{\mathbf{P}}
+\newcommand{\vecpbold}{\mathbf{p}}
+\newcommand{\vecqbold}{\mathbf{q}}
+\newcommand{\vectbold}{\mathbf{t}}
+\newcommand{\vecxbold}{\mathbf{x}}
+\newcommand{\vecybold}{\mathbf{y}}
+
+
 
 
 % Przestrzenie macierzy
@@ -430,6 +444,16 @@
 % #############
 % Analiza wektorowa
 \newcommand{\divergence}{\textrm{div}}
+
+
+
+% ##################
+% Functions
+% ##################
+
+
+% \newcommand{\arg}{\textrm{arg}}
+
 
 
 
