@@ -59,8 +59,8 @@
 % Mathematical Society (w skrócie AMS)
 \usepackage{amsfonts, amssymb, amscd, amsthm} % Dalsze wsparcie od AMS
 % % \usepackage{siunitx} % Dla prostszego pisania jednostek fizycznych
-% \usepackage{upgreek} % Ładniejsze greckie litery
-% % Przykładowa składnia: pi = \uppi
+\usepackage{upgreek} % Ładniejsze greckie litery
+% Przykładowa składnia: pi = \uppi
 % \usepackage{slashed} % Pozwala w prosty sposób pisać slash Feynmana.
 % \usepackage{calrsfs} % Zmienia czcionkę kaligraficzną w \mathcal
 % % na ładniejszą. Może w innych miejscach robi to samo, ale o tym nic
@@ -250,8 +250,8 @@
     + a \vecnbold \sqrt{ 1 + \left( \sin \frac{ t }{ 2 } \right)^{ 2 } }
   \end{equation}
 
-\item Wykazać, że dla krzywej $\alpha( s )$ klasy $\Ccal^{ 4 }$
-  zachodzi tożsamość
+\item Wykazać, że dla krzywej $\alpha( s )$ klasy $\Ccal^{ 4 }$ zachodzi
+  tożsamość
   \begin{equation}
     \label{eq:4}
     \left( \frac{ d^{ 3 } \alpha }{ d s^{ 3 } } \right)^{ 2 }
@@ -267,40 +267,99 @@
     x^{ 2 } + y^{ 2 } - z^{ 2 } = 1
   \end{equation}
 
-\item The topologica spaces $X$, $Y$ are homotopic to each other if there exist maps $f : X \to Y$ and $f^{ -1 } : Y \to X$ such that $f \circ f^{ -1 }$ and $f^{ -1 } \circ f$ are homotopic, respectively, to identity on $X$ and $Y$. Show that this is an equivalence relation.
+\item The topologica spaces $X$, $Y$ are homotopic to each other if
+  there exist maps $f : X \to Y$ and $f^{ -1 } : Y \to X$ such that
+  $f \circ f^{ -1 }$ and $f^{ -1 } \circ f$ are homotopic,
+  respectively, to identity on $X$ and $Y$. Show that this is an
+  equivalence relation.
 
-\item Show that $\Rbb^{ n }$ is homotopic to a point. Use the result to calculate the singular homology groups of $\Rbb^{ n }$.
+\item Show that $\Rbb^{ n }$ is homotopic to a point. Use the result
+  to calculate the singular homology groups of $\Rbb^{ n }$.
 
-\item Show that a $n$-dimensional ball $\{ x \in \Rbb^{ n }, \abs{ x } < 1 \}$ is homotopic to $\Rbb^{ n }$ and use the previous result to determine its singualar homology (using homotopy equivalence).
+\item Show that a $n$-dimensional ball
+  $\{ x \in \Rbb^{ n }, \abs{ x } < 1 \}$ is homotopic to $\Rbb^{ n }$
+  and use the previous result to determine its singualar homology
+  (using homotopy equivalence).
 
-\item Consider $S^{ 1 }$ and its open cover by three open sets $U_{ 1 }$, $U_{ 2 }$, $U_{ 3 }$:
+\item Consider $S^{ 1 }$ and its open cover by three open sets
+  $U_{ 1 }$, $U_{ 2 }$, $U_{ 3 }$:
   \begin{equation}
     \label{eq:7}
     U_{ k } =
     \left\{ z \in S^{ 1 } : \frac{ k - 1 }{ 3 } 2\pi - \frac{ \pi }{ 2 }
       \arg( z ) < \frac{ k - 1 }{ 3 } 2\pi + \frac{ \pi }{ 2 } \right\}
   \end{equation}
-  and consider \v{C}ech complex and its cohomology relative to this cover.
+  and consider \v{C}ech complex and its cohomology relative to this
+  cover.
 
-  \item Let $U_{ i }$ be an open cover of a compact manifold $M$ and $g_{ i j } : U_{ i } \cap U_{ j } = U_{ i j } \to U( 1 )$ be a collection of maps from their intersections. Show the condition which the maps need to satisfy in order to define a line bundle or a $U( 1 )$ principle fibre bundle. When are these bundles trivial?
+\item Let $U_{ i }$ be an open cover of a compact manifold $M$ and
+  $g_{ i j } : U_{ i } \cap U_{ j } = U_{ i j } \to U( 1 )$ be a
+  collection of maps from their intersections. Show the condition
+  which the maps need to satisfy in order to define a line bundle or a
+  $U( 1 )$ principle fibre bundle. When are these bundles trivial?
 
-  \item Consider an open cover $U_{ i }$ of a compact manifold $M$ and a collection of one-forms $A_{ i }$ over the open sets. Please find a necessary condition for the forms over the intersection in order for the curvarture $dA_{ i }$ to be a well-defined global 2-form.
+\item Consider an open cover $U_{ i }$ of a compact manifold $M$ and a
+  collection of one-forms $A_{ i }$ over the open sets. Please find a
+  necessary condition for the forms over the intersection in order for
+  the curvarture $dA_{ i }$ to be a well-defined global 2-form.
 
-  % \item
+\item Consider an open cover $U_{ i }$ of a compact manifold $M$ and a
+  collection of maps $g_{ ij }$ from
+  $U_{ ij } = U_{ i } \cap U_{ j } \to U( 1 )$. Find a compatibility
+  condition so that over a triple intersection their composition is
+  not trivial but is a \v{C}ech cocycle $\lambda_{ i j k }$. Would
+  this work for a nonabelian (valued in $\GL( n )$) transition
+  functions?
 
-  % \item
+\item Consider an open cover $U_{ i }$. Let $\lambda_{ i j k }$ be the
+  \v{C}ech cocyle, and let $A_{ i j }$ be a collections of one forms
+  that satisfy:
+  \begin{equation}
+    \label{eq:8}
+    A_{ i j } + A_{ j k } + A_{ k i } = d\lambda_{ i j k },
+  \end{equation}
+  and $F_{ i }$ collection of two-forms such that
+  $F_{ i } = F_{ j } + dA_{ i j }$. In this construction correct? What
+  can one say about $dF$?
 
-  % \item
+\item Let $P( M, G )$ be a principal fibre bundle and $\rho$ a
+  finite-dimensional representation of $G$ on a vector space $V$. Show
+  that $P \times V / \sim$ is a vector bundle over $M$. Relation
+  $\sim$ is defined by
+  \begin{equation}
+    \label{eq:9}
+    ( p, v ) \sim \left( pg, \rho\left( g^{ -1 } \right) v \right).
+  \end{equation}
 
-  % \item
+\item Let $E( M )$ be a vector bundle over $M$ and $\nabla$ be a
+  connection. Show that, if $U_{ i }$ is an open cover which locally
+  trivializes $E$ and $g_{ i j }$ are transition functions on the
+  intersections then the connection is determined over each $U_{ i }$
+  by a one form $A_{ i }$. Show the relation between $A_{ i }$ and
+  $A_{ j }$ over the intersection.
 
-  % \item
+\item When a global two-form over a manifold $M$ is a curvature form
+  of a connection on a line bundle.
 
-  % \item
+\item If $p( x )$ is a projection over $m$ (seen as matrix acting on
+  $\Cbb^{ n }$) then constuct a connection over the vector bundle
+  $p( M \times \Cbb^{ n } )$.
 
-  % \item
+\item For the sphere parametrized by $z \in \Cbb$ and the line bundle
+  defined through the Bott projector
+  \begin{equation}
+    \label{eq:10}
+    p( z ) =
+    \frac{ 1 }{ 1 + \abs{ z }^{ 2 } }
+    \begin{pmatrix}
+      1 & \bar{z} \\
+      z & \abs{ z }^{ 2 }
+    \end{pmatrix},
+  \end{equation}
+  take a connection and compute its curvature and the Chern number.
 
-  % \item
+\item Please verify whether Chern classes for connections over trivial
+  vector bundles vanish.
 
   % \item
 
