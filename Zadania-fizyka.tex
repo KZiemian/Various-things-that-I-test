@@ -240,7 +240,7 @@
 
 % ##################
 \begin{enumerate}
-  \item Dystrybucję $\delta( x )$ Diraca można określić jako granicę funkcji
+\item Dystrybucję $\delta( x )$ Diraca można określić jako granicę funkcji
   regularnych
   \begin{equation}
     \label{eq:1}
@@ -281,7 +281,7 @@
   zachodzi
   \begin{equation}
     \label{eq:5}
-    \lim_{ \varepsilon \to 0} \int_{ -\infty }^{ +\infty } f_{ \varepsilon }( x - x_{ 0 } ) \phi( x ) \, dx
+    \lim_{ \varepsilon \to 0 } \int_{ -\infty }^{ +\infty } f_{ \varepsilon }( x - x_{ 0 } ) \phi( x ) \, dx
     =
     \phi( x_{ 0 } )
   \end{equation}
@@ -301,6 +301,118 @@
   strumienia prawdopodobieństwa $\vec{ j }( x, t )$. Sprawdzić
   równanie ciągłości. Wyprowadzić analogiczne wzory (np. na
   $\vec{ j }( x, t )$) dla zbioru cząstek klasycznych.
+
+\item Show that if the spinors $w^{ r }( \vec{ p } )$ satisfy the
+  normalization
+  $w^{ r }( \epsilon_{ r } \vec{ p } )^{ \dagger } w^{ r' }( \epsilon'_{ r } \vec{ p } ) =
+  2 E_{ p } \delta_{ r, \, r' }$ it follows that
+  $\bar{w}^{ r }( \vec{ p } ) w^{ r' }( \vec{ p } ) = 2 \epsilon_{ r } m c^{
+    2 } \delta_{ r,\, r' }$. Here
+  \begin{equation}
+    \label{eq:11}
+    \bar{w}^{ r }( \vec{ p } )
+    = w^{ r }( \vec{ p } )^{ \dagger } \gamma^{ 0 }.
+  \end{equation}
+  Calculate quantities
+  \begin{equation}
+    \label{eq:12}
+    a_{ r }^{ \mu }
+    = \bar{w}^{ r }( \vec{ p } ) \gamma^{ \mu } w^{ r }( \vec{ p } ), \quad
+    b_{ r }^{ \mu \nu }
+    = \bar{w}^{ r }( \vec{ p } ) \sigma^{ \mu \nu } w^{ r }( \vec{ p } ), \quad
+    c_{ r }
+    = \bar{w}^{ r }( \vec{ p } ) \gamma_{ 5 } w^{ r }( \vec{ p } ).
+  \end{equation}
+
+\item Show that if we boost the solution of the Dirac equation
+  \begin{equation}
+    \label{eq:13}
+    \Psi_{ \vec{ p } }^{ r }( x )
+    = e^{ -i \epsilon_{ r } m c^{ 2 } t } w^{ r }( \vec{ p } = 0 )
+  \end{equation}
+  to a reference frame $x'$ where the particle has momentum
+  $\vec{ p }$ we obtain
+  \begin{equation}
+    \label{eq:14}
+    \Psi_{ \vec{ p } }^{ r }( x )
+    \to e^{ -i \epsilon_{ r } p_{ \mu } x'^{ \mu } } w^{ r }( \vec{ p } ).
+  \end{equation}
+  \textbf{Hint.} We need a boost in a direction
+  $\vec{ n } = -\vec{ p } / \lvert \vec{ p } \lvert$ with a bost
+  parameter which transforms $m c^{ 2 }$ to $E_{ p }$.
+
+\item The parity transformation $P$ transforms coordinate
+  $x = \{ x^{ 0 }, x^{ 1 }, x^{ 2 }, x^{ 3 } \}$ to
+  $\widetilde{x} = \{ x^{ 0 }, -x^{ 1 }, -x^{ 2 }, -x^{ 3 } \}$. Find a
+  form of the transformation $U_{ P }$ such that
+  \begin{equation}
+    \label{eq:15}
+    \widetilde{\Psi}( \widetilde{x} ) = U_{ P } \Psi( x )
+  \end{equation}
+  which preserves a form of the Dirac equation
+  \begin{equation}
+    \label{eq:17}
+    \left( i \hbar c \gamma^{ \mu } \partial_{ \mu } - m c^{ 2 } \right) \Psi( x ) = 0.
+  \end{equation}
+  Determine how this transformation changes special solutions
+  \begin{equation}
+    \label{eq:18}
+    \Psi_{ \vec{ p } }^{ r }( x )
+    = e^{ -i \epsilon_{ r } p_{ \mu } x^{ \mu } } w^{ r }( \vec{ p } ).
+  \end{equation}
+
+\item The charge conjugation transformation $C$ transform a spinor
+  $\Psi( x )$ to $\Psi_{ C }( x ) = U_{ C } \Psi^{ * }( x )$. Find a form of
+  the transformation $U_{ C }$ which preserves a form of the Dirac
+  equation. Determine how this transformation changes special
+  solutions
+  \begin{equation}
+    \label{eq:19}
+    \Psi_{ \vec{ p } }^{ r }( x )
+    = e^{ -i \epsilon_{ r } p_{ \mu } x^{ \mu } } w^{ r }( \vec{ p } )
+  \end{equation}
+  \textbf{Note.} Here $*$ means complex conjugation and not Herimitian
+  conjugation!
+
+\item The time inversion transformation $T$ transforms coordinates $x = \{ x^{ 0 }, x^{ 1 }, x^{ 2 }, x^{ 3 } \}$ to $x' = \{ -x^{ 0 }, x^{ 1 }, x^{ 2 }, x^{ 3 } \}$. Find a form of the transformation $U_{ T }$ such that
+  \begin{equation}
+    \label{eq:20}
+    \Psi_{ T }( x' ) = U_{ T } \Psi^{ * }( x )
+  \end{equation}
+  which preserves a form of the Dirac equation
+  \begin{equation}
+    \label{eq:21}
+    \left( i\hbar c \gamma^{ \mu } \partial_{ \mu } - m c^{ 2 } \right) \Psi( x ) = 0.
+  \end{equation}
+  Determine how this transformation changes special solutions
+  \begin{equation}
+    \label{eq:22}
+    \Psi_{ \vec{ p } }^{ r }( x )
+    = e^{ -i\epsilon_{ r } p_{ \mu } x^{ \mu } } w^{ r }( \vec{ p } \, ).
+  \end{equation}
+
+\item We define matrices
+  \begin{equation}
+    \label{eq:23}
+    \Lambda_{ \pm }( p )
+    = \frac{ \pm\gamma^{ \mu } p_{ \mu } + m c^{ 2 } }{ 2 m c^{ 2 } }.
+  \end{equation}
+  Show that these matrices are projections in the space of spinors, i.e.
+  \begin{equation}
+    \label{eq:24}
+    \Lambda_{ + }^{ \, 2 } = \Lambda_{ + }, \quad
+    \Lambda_{ - }^{ \, 2 } = \Lambda_{ - }, \quad
+    \Lambda_{ + } \cdot \Lambda_{ - } = 0.
+  \end{equation}
+  Check the result of $\Lambda_{ \pm } w^{ r }( \vec{ p } \,a )$.
+
+
+
+
+
+
+
+
 
 \end{enumerate}
 % ##################
