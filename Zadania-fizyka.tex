@@ -304,10 +304,11 @@
 
 \item Show that if the spinors $w^{ r }( \vec{ p } )$ satisfy the
   normalization
-  $w^{ r }( \epsilon_{ r } \vec{ p } )^{ \dagger } w^{ r' }( \epsilon'_{ r } \vec{ p } ) =
-  2 E_{ p } \delta_{ r, \, r' }$ it follows that
-  $\bar{w}^{ r }( \vec{ p } ) w^{ r' }( \vec{ p } ) = 2 \epsilon_{ r } m c^{
-    2 } \delta_{ r,\, r' }$. Here
+  $w^{ r }( \epsilon_{ r } \vec{ p } )^{ \dagger } w^{ r' }(
+  \epsilon'_{ r } \vec{ p } ) = 2 E_{ p } \delta_{ r, \, r' }$ it
+  follows that
+  $\bar{w}^{ r }( \vec{ p } ) w^{ r' }( \vec{ p } ) = 2 \epsilon_{ r }
+  m c^{ 2 } \delta_{ r,\, r' }$. Here
   \begin{equation}
     \label{eq:11}
     \bar{w}^{ r }( \vec{ p } )
@@ -343,8 +344,8 @@
 
 \item The parity transformation $P$ transforms coordinate
   $x = \{ x^{ 0 }, x^{ 1 }, x^{ 2 }, x^{ 3 } \}$ to
-  $\widetilde{x} = \{ x^{ 0 }, -x^{ 1 }, -x^{ 2 }, -x^{ 3 } \}$. Find a
-  form of the transformation $U_{ P }$ such that
+  $\widetilde{x} = \{ x^{ 0 }, -x^{ 1 }, -x^{ 2 }, -x^{ 3 } \}$. Find
+  a form of the transformation $U_{ P }$ such that
   \begin{equation}
     \label{eq:15}
     \widetilde{\Psi}( \widetilde{x} ) = U_{ P } \Psi( x )
@@ -362,9 +363,9 @@
   \end{equation}
 
 \item The charge conjugation transformation $C$ transform a spinor
-  $\Psi( x )$ to $\Psi_{ C }( x ) = U_{ C } \Psi^{ * }( x )$. Find a form of
-  the transformation $U_{ C }$ which preserves a form of the Dirac
-  equation. Determine how this transformation changes special
+  $\Psi( x )$ to $\Psi_{ C }( x ) = U_{ C } \Psi^{ * }( x )$. Find a
+  form of the transformation $U_{ C }$ which preserves a form of the
+  Dirac equation. Determine how this transformation changes special
   solutions
   \begin{equation}
     \label{eq:19}
@@ -374,7 +375,10 @@
   \textbf{Note.} Here $*$ means complex conjugation and not Herimitian
   conjugation!
 
-\item The time inversion transformation $T$ transforms coordinates $x = \{ x^{ 0 }, x^{ 1 }, x^{ 2 }, x^{ 3 } \}$ to $x' = \{ -x^{ 0 }, x^{ 1 }, x^{ 2 }, x^{ 3 } \}$. Find a form of the transformation $U_{ T }$ such that
+\item The time inversion transformation $T$ transforms coordinates
+  $x = \{ x^{ 0 }, x^{ 1 }, x^{ 2 }, x^{ 3 } \}$ to
+  $x' = \{ -x^{ 0 }, x^{ 1 }, x^{ 2 }, x^{ 3 } \}$. Find a form of the
+  transformation $U_{ T }$ such that
   \begin{equation}
     \label{eq:20}
     \Psi_{ T }( x' ) = U_{ T } \Psi^{ * }( x )
@@ -397,7 +401,8 @@
     \Lambda_{ \pm }( p )
     = \frac{ \pm\gamma^{ \mu } p_{ \mu } + m c^{ 2 } }{ 2 m c^{ 2 } }.
   \end{equation}
-  Show that these matrices are projections in the space of spinors, i.e.
+  Show that these matrices are projections in the space of spinors,
+  i.e.
   \begin{equation}
     \label{eq:24}
     \Lambda_{ + }^{ \, 2 } = \Lambda_{ + }, \quad
@@ -406,11 +411,133 @@
   \end{equation}
   Check the result of $\Lambda_{ \pm } w^{ r }( \vec{ p } \,a )$.
 
+\item Repeat the properties of the Pauli matrices $\sigma_{ i }$,
+  $i = 1, 2, 3$
+  \begin{equation}
+    \label{eq:16}
+    \sigma_{ i } \sigma_{ j } = \delta_{ i j } + i \epsilon_{ i j k } \sigma_{ k }, \quad
+    \left( \vec{ \sigma } \cdot \vec{ a } \right)
+    \left( \vec{ \sigma } \cdot \vec{ b } \, \right)
+    =
+    \vec{ a } \cdot \vec{ b }
+    + i \vec{ \sigma } \cdot \left( \vec{ a } \times \vec{ b } \, \right).
+  \end{equation}
 
+\item Start with the Dirac equation in the form:
+  \begin{equation}
+    \label{eq:25}
+    i \hbar \partial \Psi( x )
+    =
+    \left( -ic\hbar \left( \vec{ \alpha } \cdot \vec{ \nabla } \right)
+      + \beta m c^{ 2 } + V( x ) \right) \Psi( x ).
+  \end{equation}
+  Show that.
 
+  \textbf{a)} This equations can be interpreted as describing
+  interaction of the electron with the electromagnetic field
+  ($\partial_{ \mu } \to D_{ \mu }$) in the case $\vec{ A }( x ) = 0$,
+  $V( x ) = e A_{ 0 }( x )$.
 
+  \textbf{b)} Show that the equation is invariant under
+  $\vec{ x } \to -\vec{ x }$ and
+  $\Psi( \vec{ x }, t ) \to \beta \Psi( -\vec{ x }, t )$.
 
+  \textbf{c)} Rewrite the equation as an equation for a stationary
+  state and show that the Hamiltionia commutes with the rotation
+  operators $J_{ i } = L_{ i } + S_{ i }$, where
+  \begin{equation}
+    \label{eq:26}
+    S_{ i } = \frac{ \hbar }{ 2 } \Sigma_{ i }, \quad
+    \Sigma_{ i }
+    =
+    \begin{pmatrix}
+      \sigma_{ i } & 0 \\
+      0 & \sigma_{ i }
+    \end{pmatrix}.
+  \end{equation}
 
+  \textbf{d)} Using the operators $2 \times 2$:
+  $j_{ i } = L_{ i } + \hbar \sigma_{ i } / 2$ construct the
+  eigenstates $\vec{ j }^{ 2 }$, $\vec{ L }^{ 2 }$, $j_{ 3 }$ in the
+  form
+  \begin{equation}
+    \label{eq:27}
+    \Omega_{ j l m } =
+    \begin{pmatrix}
+      \alpha_{ 1 } Y_{ l, \, m - 1/2 }( \theta, \phi ) \\
+      \alpha_{ 2 } Y_{ l, \, m + 1/2 }( \theta, \phi )
+    \end{pmatrix}
+  \end{equation}
+  find the eigenvalues $\alpha_{ 1 }$ and $\alpha_{ 2 }$. What is the eigenvalue
+  of $j_{ 3 }$? Show that eigenstates with a given $j$ can be
+  constructed only from $l$ or $l'$ with $l + l' = 2j$, i.e.
+  $l, l' = j \pm \frac{ 1 }{ 2 }$.
+
+  \textbf{e)} Find a form of the Dirac equation in the parametrization
+  \begin{equation}
+    \label{eq:28}
+    \Psi( \vec{ x }, t ) =
+    e^{ -\frac{ i }{ \hbar } E t }
+    \begin{pmatrix}
+      f( r ) \Omega_{ j, l, m } \\
+      g( r ) \Omega_{ j, l', m }
+    \end{pmatrix}
+  \end{equation}
+  where $l' = 2j - l$ and determine the set of equations for $f( r )$
+  and $g( r )$.
+
+  \textbf{Hint.} Assume a simplified relation (without referring to
+  the standard phase factor convention):
+  \begin{equation}
+    \label{eq:29}
+    \frac{ \vec{ \sigma } \cdot \vec{ r } }{ r } \Omega_{ j, l, m }
+    = \Omega_{ j, l', m }, \quad
+    \frac{ \vec{ \sigma } \cdot \vec{ r } }{ r } \Omega_{ j, l', m }
+    = \Omega_{ j, l, m }
+  \end{equation}
+  where $l + l' = 2 j$.
+
+\item Using the reduced from of the Dirac equation analyze the
+  eigenvalue spectrum of the ``hydrogen-like'' atom
+  $V( \vec{ x } ) = -Z e^{ 2 } / r$:
+
+  \textbf{a)} Rewrite the Dirac equation as a set of two equations
+  satisfied by functions $f( r )$ and $g( r )$ at fixed values of
+  quantum numbers $j, m, l, l' = 2j - l$.
+
+  \textbf{b)} Check the asymptotic behavior at $r \to \infty$. What
+  restriction should be satisfied by the localized eigenstate? Show
+  that in this limit $f( r )$ and $g( r )$ should behave as
+  $e^{ -kr }$. Calculate $k$. Check the asymptotics $r \to 0$ (behavior
+  $\varpropto r^{ \alpha }$).
+
+  \textbf{c)} Find a form of the reduced equation (eliminating the
+  asymptotic behavior at $r \to \infty$) for $F( r )$ i~$G( r )$ (where
+  $f( r ) = F( r ) e^{ -kr }$, similarly $G( r )$).
+
+  \textbf{d)} Determine the recurrence equation for coefficients of
+  the power expansion
+  \begin{equation}
+    \label{eq:30}
+    F( r ) = \sum_{ n } f_{ n } r^{ n + \alpha } \quad \textrm{and} \quad
+    G( r ) = \sum_{ n } g_{ n } r^{ n + \alpha }
+  \end{equation}
+  as a two-component matrix equation
+  \begin{equation}
+    \label{eq:31}
+    \begin{pmatrix}
+      f_{ n + 1 } \\
+      g_{ n + 1 }
+    \end{pmatrix}
+    =
+    A_{ n }
+    \begin{pmatrix}
+      f_{ n } \\
+      g_{ n }
+    \end{pmatrix}.
+  \end{equation}
+  Find eigenvalues $A_{ n }$ and show that this equation permits a
+  determination of the spectrum of localized states.
 
 
 
@@ -621,7 +748,8 @@
       \left[ \psi^{ \dagger }( \vecpbold ), a( \veckbold ) \right]
       = \left[ \psi^{ \dagger }( \vecpbold ), a^{ \dagger }( \veckbold ) \right].
   \end{align}
-  a) Proszę pokazać, że~pęd oraz liczba nukleonów są w~tym modelu
+
+  \textbf{a)} Proszę pokazać, że~pęd oraz liczba nukleonów są w~tym modelu
   wielkościami zachowanymi, t.j. że~operator
   \begin{equation}
     \vecPbold
@@ -632,8 +760,9 @@
     a( \veckbold ), \quad
     N_{ \psi } = \int d^{ 3 } \vecpbold \, \psi^{ \dagger }( \vecpbold ) \psi( \vecpbold ),
   \end{equation}
-  komutują z~\emph{pełnym} hamiltonianem $H$. \\
-  b) Proszę pokazać, że~stan perturbacyjny próżni $| 0 \rangle$ zdefiniowany
+  komutują z~\emph{pełnym} hamiltonianem $H$.
+
+  \textbf{b)} Proszę pokazać, że~stan perturbacyjny próżni $| 0 \rangle$ zdefiniowany
   poprze
   \begin{equation}
     \label{eq:8}
@@ -645,8 +774,9 @@
     \label{eq:9}
     | \veckbold \rangle = a^{ \dagger }( \veckbold ) | 0 \rangle
   \end{equation}
-  są stanami własnymi $H$. \\
-  c) Proszę pokazać, że~stanem własnym hamiltonianu $H$, będącym
+  są stanami własnymi $H$.
+
+  \textbf{c)} Proszę pokazać, że~stanem własnym hamiltonianu $H$, będącym
   równocześnie stanem własnym operatorem $N_{ \psi }$ z~wartością własną
   1, czyli stanem własnym pełnego hamiltonianu zawierającego jeden
   nukleon) jest
@@ -1387,150 +1517,113 @@
 
   % \item Marian Fuks, \emph{Żydzi w Polsce – Dawniej i dziś};
 
-  % \item Marian Fuks, \emph{Prasa żydowska w Warszawie 1823-1939};
+  % \item
 
-  % \item Marian Fuks, \emph{Z dziejów wielkiej katastrofy narodu
-  %   żydowskiego};
+  % \item
 
-  % \item August Grabski, \emph{Studia z dziejów i kultury Żydów w
-  %   Polsce po 1945 r.};
+  % \item
 
-  % \item Robert Fabbri, \emph{Wespazjan, trybun Rzymu};
+  % \item
 
-  % \item Michael Hesemann, \emph{Kłamstwa Hitlera};
+  % \item
 
-  % \item David Hockney, \emph{Wiedza tajemna. Sekrety technik
-  %   malarskich Dawnych Mistrzów};
+  % \item
 
-  % \item Anna Magdalena Mandrela, \emph{Tomizm Garrigou-Lagrange’a
-  %   wobec wizji filozoficznej Teilharda de Chardin};
+  % \item
 
-  % \item Leonie Swann, \emph{Powiększ Sprawiedliwość owiec.
-  %   Filozoficzna powieść kryminalna};
+  % \item
 
-  % \item Antoine de Saint-Exupéry, \emph{Twierdza};
+  % \item
 
-  % \item Umberto Eco, \emph{Historia brzydoty};
+  % \item
 
-  % \item Brian Reynolds Myers, \emph{Najczystsza rasa: Propaganda
-  %   Korei Północnej};
+  % \item
 
-  % \item Tomasz Strzyżewski, \emph{Wielka księga cenzury PRL w
-  %   dokumentach};
+  % \item
 
-  % \item Orlando Figes, \emph{Tragedia narodu. Rewolucja rosyjska
-  %   1891-1924};
+  % \item
 
-  % \item Jon Savage, \emph{Teenage: The Creation of Youth Culture};
+  % \item
 
-  % \item Lawrence Weschler, \emph{Mr. Wilson's Cabinet of Wonder:
-  %   Pronged Ants, Horned Humans, Mice on Toast, and Other Marvels of
-  %   Jurassic Technology};
+  % \item
 
-  % \item Christophe Galfard, \emph{Wszechświat w twojej dłoni};
+  % \item
 
-  % \item Swietłana Aleksijewicz, \emph{Cynkowi chłopcy};
+  % \item
 
-  % \item Aleksander Hertz, \emph{Amerykańskie stronnictwa
-  %   polityczne};
+  % \item
 
-  % \item Aleksander Hertz, \emph{Żydzi w kulturze polskiej};
+  % \item
 
-  % \item Aleksander Hertz, \emph{Wyznania starego człowieka};
+  % \item
 
-  % \item Maurycy Horn, \emph{Żydowskie bractwa rzemieślnicze na
-  %   ziemiach polskich, litewskich, białoruskich i ukraińskich w
-  %   latach 1613-1850};
+  % \item
 
-  % \item Maurycy Horn, \emph{Walka chłopów czerwonoruskich z
-  %   wyzyskiem feudalnym w latach 1600-1643};
+  % \item
 
+  % \item
 
-  % \item Adam Kaźmierczyk, \emph{Sejmy i sejmiki szlacheckie wobec
-  %   Żydów w II połowie XVII wieku};
+  % \item
 
-  % \item Adam Kaźmierczyk, \emph{Żydzi w dobrach prywatnych. W
-  %   świetle sądowniczej i administracyjnej praktyki dóbr magnackich
-  %   w wiekach XVI-XVIII};
+  % \item
 
-  % \item Krystyna Kersten, \emph{Polacy-Żydzi-Komunizm. Anatomia
-  %   półprawd 1939-1968};
+  % \item
 
-  % \item Krystyna Kersten, \emph{Pogrom Żydów w Kielcach 4 lipca 1946
-  %   r.};
+  % \item
 
-  % \item Andrzej Sulima Kamiński, \emph{Historia Rzeczypospolitej
-  %   Wielu Narodów 1505-1795. Obywatele, ich państwa, społeczeństwo,
-  %   kultura};
+  % \item
 
-  % \item Cynarski S., \emph{Zygmunt August};
+  % \item
 
-  % \item Cyra A., \emph{Rotmistrz Pilecki. Ochotnik do Auschwitz};
+  % \item
 
-  % \item \emph{Czy ktoś przebije ten mur? Sprawa Pyjasa};
+  % \item
 
-  % \item Dudek A., Zblewski Z., \emph{Utopia nad Wisłą. Historia
-  %   Peerelu};
+  % \item
 
-  % \item Czapliński W., \emph{Władysław IV i jego czasy};
+  % \item
 
-  % \item Dybiec J., \emph{Nie tylko szablą. Nauka i kultura polska w
-  %   walce o~utrzymanie tożsamości narodowej 1795--1918};
+  % \item
 
-  % \item Eisler J., \emph{Zarys dziejów politycznych Polski
-  %   1944--1989};
+  % \item
 
-  % \item Grzybowski S., \emph{Henryk Walezy};
+  % \item
 
-  % \item Ignatowicz I., \emph{Społeczeństwo polskie 1864--1914};
+  % \item
 
-  % \item \emph{Inteligencja polska XIX i XX wieku. Studia}, red. R.
-  %   Czapulis-Rastenis, t.1-6;
+  % \item
 
-  % \item Jedynak B., \emph{Obyczaje domu polskiego w~czasach niewoli
-  %   1795--1918};
+  % \item
 
-  % \item Kaczmarczyk J., \emph{Bohdan Chmielnicki};
+  % \item
 
-  % \item Kawalec K., \emph{Roman Dmowski};
+  % \item
 
-  % \item \emph{Kobieta i kultura życia codziennego. Wiek XIX i XX.
-  %   Zbiór studiów}, red. A. Żarnowska, A. Szwarc;
+  % \item
 
-  % \item \emph{Kobieta i społeczeństwo na ziemiach polskich w XIX
-  %   wieku, zbiór studiów}, red. A. Żarnowska, A. Szwarc;
+  % \item
 
-  % \item Konopczyński W., \emph{Dzieje Polski nowożytnej};
+  % \item
 
-  % \item Kowecka E., \emph{W salonie i w kuchni. Opowieść o kulturze
-  %   materialnej pałaców i dworów polskich w XIX wieku};
+  % \item
 
-  % \item Krawczak T., \emph{W szlacheckim zaścianku};
+  % \item
 
-  % \item Kuchowicz Z., \emph{Miłość staropolska};
+  % \item
 
-  % \item Kuchowicz Z., \emph{Obyczaje staropolskie XVII-XVIII w.};
+  % \item
 
-  % \item Litak S., \emph{Od reformacji do Oświecenia. Kościół
-  %   katolicki w~Polsce nowożytnej};
+  % \item
 
-  % \item Mączak A., \emph{Klientela. Nieformalne systemy władzy w
-  %   Polsce Europie XVI-XVIII w.};
+  % \item
 
-  % \item Łuczak C., \emph{Polska i Polacy w drugiej wojnie
-  %   światowej};
+  % \item
 
-  % \item Molenda J., \emph{Chłopi. Naród. Niepodległość.
-  %   Kształtowanie się postaw narodowych i~obywatelskich chłopów
-  %   w~Galicji i~Królestwie polskim w~przededniu odrodzenia Polski};
+  % \item
 
-  % \item Możdżyńska-Nawotka M., \emph{O~modach i~strojach};
+  % \item
 
-  % \item \emph{Obyczaje w Polsce. Od średniowiecza do czasów
-  %   współczesnych};
-
-  % \item Olszewski D., \emph{Polska kultura religijna na przełomie
-  %   XIX i~XX wieku};
+  % \item
 
   % \item Olszewski H., \emph{O skutecznym rad sposobie};
 
