@@ -143,11 +143,12 @@
 
 
 % ######################################
-\section{Zrób te zadania, mechanika teoretyczna}
+\section{Mechanika teoretyczna, zrób te zadania}
 
 % \vspace{\spaceTwo}
 
 % ######################################
+
 
 
 % ##################
@@ -231,11 +232,12 @@
 
 
 % ######################################
-\section{Zrób te zadania, mechanika kwantowa}
+\section{Mechanika kwantowa, zrób te zadania}
 
 % \vspace{\spaceTwo}
 
 % ######################################
+
 
 
 % ##################
@@ -554,7 +556,7 @@
 
 
 % ######################################
-\section{Zrób te zadania, fizyka fazy skondensowanej}
+\section{Fizyka fazy skondensowanej, zrób te zadania}
 
 % \vspace{\spaceTwo}
 
@@ -672,7 +674,7 @@
 
 
 % ######################################
-\section{Zrób te zadania, QFT}
+\section{QFT, zrób te zadania}
 
 % \vspace{\spaceTwo}
 
@@ -793,16 +795,60 @@
     \psi^{ \dagger }( \vecqbold ) | 0 \rangle.
   \end{equation}
 
-  % \item
+\item Gaussian integrals.
 
-  % \item
+  \textbf{a)} Let $D_{ nm }$ be a symmetric positive-definite square matrix. Show that
+  \begin{equation}
+    \label{eq:32}
+    \int \prod_{ n } d\phi_{ n } \, \exp\left( -\sum_{ n,\, m } \phi_{ n } D_{ nm }
+      \phi_{ m } \right)
+    = \pi^{ n/2 } ( \det D )^{ -1/2 }.
+  \end{equation}
 
-  % \item
+  \textbf{b)} Show that
+  \begin{equation}
+    \label{eq:33}
+    \det{ }^{ -1/2 } ( 2 \pi D ) \int \prod_{ n } d\phi_{ n } \,
+    \exp\left( -\frac{ 1 }{ 2 } \sum_{ n,\, m } \phi_{ n } D_{ nm }^{ -1 }
+      \phi_{ m } + i \sum_{ n } J^{ n } \phi_{ n } \right)
+    =
+    \exp\left( -\frac{ 1 }{ 2 } \sum_{ n,\, m } J^{ n } D_{ nm } J^{ m } \right)
+  \end{equation}
+  and verify that, up to the determinant, the result is exactly what you would expect from the method of the steepest descent (evaluate the integrated at the extremum of the argument inside the exponential).
 
-  % \item
+\item From the Hamiltonian to the Lagrangian path integral. Assume that the Hamiltonian is quadratic in $\vec{ \pi }$, and that the coefficients of such quadratic terms do not depend on $\vec{ \phi }$. Show that
+  \begin{equation}
+    \label{eq:34}
+    \int \Dcal \phi \Dcal \pi \, \exp\left( i \int dt \left( ( \vec{ \pi }
+        \cdot \dot{ \vec{ \phi } } ) - H( \vec{ \phi }, \vec{ \pi }, t )
+      \right) \right)
+    =
+    \Ncal \int \Dcal \phi \, \exp\left( L( \vec{ \phi }, \dot{ \vec{ \phi } }, t )
+    \right)
+  \end{equation}
+  where $\Ncal$ is a constant.
 
-  % \item
+\item Let us consider the one-dimensional harmonic oscillator interacting with an external source (forced oscillator):
+  \begin{equation}
+    \label{eq:35}
+    L =
+    \frac{ m \dot{ x }^{ 2 } }{ 2 } - \frac{ k^{ 2 } x^{ 2 } }{ 2 } + J x
+  \end{equation}
+  where $J( t )$ is a time dependent external source (e.g., an electric field if the oscillator is supposed to carry an electric charge).
+  Evaluate the path integral for such a system using the saddle point approximation under assumption that $J( 0 ) = J( T ) = 0$.
 
+\item A formal substitution $\tau = it$ defines the Euclidean real time $\tau$. One could imagine this transformation as the analytic continuation from the Minkowski space with coordinates $( x, t )$ to the Euclidean space.
+
+  \textbf{a)} Write the corresponding Euclidean action of the forced harmonic oscillator which arises as a results of such an analytic continuation. What becomes of the corresponding Schr\"{o}dinger equation? Discuss the properties of the corresponding Green functions in the Euclidean space.
+
+  \textbf{b)} The group of the space-time symmetry of $( 3 + 1 )$-dimensional Minkowski space is the group of hyperbolic rotations $\SO( 3, 1 )$. What is the group of symmetry of Euclidean space?
+
+\item Let us consider the non-relativistic Hamiltonian operator in one-dimensional space $H = -\frac{ \hbar^{ 2 } }{ 2m } \frac{ d^{ 2 } }{ dx^{ 2 } } + V( x )$ where the double-well potential is
+  \begin{equation}
+    \label{eq:36}
+    V( x ) = \lambda ( x^{ 2 } - a^{ 2 } )^{ 2 }
+  \end{equation}
+and $\lambda$ and $a$ are some constants. The operator of spacial parity $P$ which commutes with the Hamiltonian has its eigenfunctions $\psi( x )$. It action is defined as $P : \psi( x ) = \pm\psi( -x )$. What are the corresponding eigenstates of the Hamiltonian.
   % \item
 
   % \item
@@ -1322,8 +1368,7 @@
   % \item Krzysztof Mazur, \emph{Przekroczyć nowoczesność. Projekt
   %   polityczny ruchu społecznego Solidarność};
 
-  % \item Marian Henryk Serejski, \emph{Europa a rozbiory Polski:
-  %   studium historiograficzne};
+  % \item
 
   % \item Jerzy Łanowski, \emph{Antologia anegdoty antycznej: teraz
   %   trzeci raz wydane historyjki budujące i niebudujące z autorów
