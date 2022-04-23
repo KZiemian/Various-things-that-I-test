@@ -302,22 +302,20 @@
 \begin{enumerate}
 \item Wyznaczyć parametr naturalny krzywej
   \begin{equation}
-    \label{eq:1}
+    \label{DiffGeo:01}
     \gamma( u ) = \left[ e^{ -u } \cos u, e^{ -u } \sin u, 1 - e^{ -u } \right]
   \end{equation}
 
 \item Dana jest krzywa
   \begin{equation}
-    \label{eq:2}
-    \delta( t )
-    =
+    \label{DiffGeo:02}
+    \delta( t ) =
     \big[ a ( t - \sin t ), a ( 1 - \cos t ), 4a \sin \frac{ t }{ 2 } \big]
   \end{equation}
   Obliczyć krzywiznę i~skręcenie krzywej
   \begin{equation}
-    \label{eq:3}
-    \gamma( t )
-    =
+    \label{DiffGeo:03}
+    \gamma( t ) =
     \delta( t )
     + a \vecnbold \sqrt{ 1 + \left( \sin \frac{ t }{ 2 } \right)^{ 2 } }
   \end{equation}
@@ -325,7 +323,7 @@
 \item Wykazać, że dla krzywej $\alpha( s )$ klasy $\Ccal^{ 4 }$ zachodzi
   tożsamość
   \begin{equation}
-    \label{eq:4}
+    \label{DiffGeo:04}
     \left( \frac{ d^{ 3 } \alpha }{ d s^{ 3 } } \right)^{ 2 }
     =
     \kappa^{ 4 } + \kappa^{ 2 } \tau^{ 2 } + \left( \frac{ d \kappa }{ d s } \right)^{ 2 }
@@ -334,7 +332,7 @@
 \item Znaleźć repery Freneta $\vectbold$, $\vecnbold$, $\vecbbold$ w
   punkcie $P = (1, 1, 1)$ krzywej powstałej z~przecięcia powierzchni
   \begin{equation}
-    \label{eq:5}
+    \label{DiffGeo:05}
     z^{ 2 } = xy, \quad
     x^{ 2 } + y^{ 2 } - z^{ 2 } = 1
   \end{equation}
@@ -356,7 +354,7 @@
 \item Consider $S^{ 1 }$ and its open cover by three open sets
   $U_{ 1 }$, $U_{ 2 }$, $U_{ 3 }$:
   \begin{equation}
-    \label{eq:7}
+    \label{DiffGeo:06}
     U_{ k } =
     \left\{ z \in S^{ 1 } : \frac{ k - 1 }{ 3 } 2\pi - \frac{ \pi }{ 2 }
       \arg( z ) < \frac{ k - 1 }{ 3 } 2\pi + \frac{ \pi }{ 2 } \right\}
@@ -387,7 +385,7 @@
   \v{C}ech cocyle, and let $A_{ i j }$ be a collections of one forms
   that satisfy:
   \begin{equation}
-    \label{eq:8}
+    \label{DiffGeo:07}
     A_{ i j } + A_{ j k } + A_{ k i } = d\lambda_{ i j k },
   \end{equation}
   and $F_{ i }$ collection of two-forms such that
@@ -399,7 +397,7 @@
   that $P \times V / \sim$ is a vector bundle over $M$. Relation
   $\sim$ is defined by
   \begin{equation}
-    \label{eq:9}
+    \label{DiffGeo:09}
     ( p, v ) \sim \left( pg, \rho\left( g^{ -1 } \right) v \right).
   \end{equation}
 
@@ -420,7 +418,7 @@
 \item For the sphere parametrized by $z \in \Cbb$ and the line bundle
   defined through the Bott projector
   \begin{equation}
-    \label{eq:10}
+    \label{DiffGeo:10}
     p( z ) =
     \frac{ 1 }{ 1 + \abs{ z }^{ 2 } }
     \begin{pmatrix}
@@ -490,13 +488,14 @@
   $s( S^{ 1 } ) = S^{ 2 }$.
 
 \item In definition of the twisted vector bundle we have
-  $g_{ kj } g_{ ji } = g_{ ki } \lambda_{ kji }$. What should we require of
-  $\lambda_{ kji }$. Is there some cocycle condition for $\lambda_{ kji }$?
+  $g_{ kj } g_{ ji } = g_{ ki } \lambda_{ kji }$. What should we
+  require of $\lambda_{ kji }$. Is there some cocycle condition for
+  $\lambda_{ kji }$?
 
 \item Show that for a bundle $E \to M$ with fibre $V = \Cbb^{ n }$
   relation below hold:
   \begin{equation}
-    \label{eq:11}
+    \label{DiffGeo:11}
     \ch( E ) =
     V + c_{ 1 }( E )
     + \frac{ 1 }{ 2 } ( c_{ 1 }( E )^{ 2 } - 2 c_{ 2 }( E ) )
@@ -534,77 +533,91 @@
     &= \sum f_{ J_{ i } } \theta^{ J }, \quad
       i \in J
   \end{align}
-  construct all derivative. Are they form module over $\Rbb^{ p / q }$?
+  construct all derivative. Are they form module over
+  $\Rbb^{ p / q }$?
 
-  \item (Coś tu jest nie tak.) Rewrite Poincar\'{e}-Birkhoff-Witt theorem super Lie algebra.
+\item (Coś tu jest nie tak.) Rewrite Poincar\'{e}-Birkhoff-Witt
+  theorem super Lie algebra.
 
-  % \item
+\item Afiniczna przestrzeń euklidesowa, współrzędne afiniczne.
 
-  % \item
+\item Współrzędne krzywoliniowe w $\Ebold^{ n }$.
 
-  % \item
+\item Definicja rozmaitości różniczkowej, zgodność map, atlasy,
+  przykłady.
 
-  % \item
+\item Odwzorowanie rozmaitości: funkcje rzeczywiste i dyfeomorfizmy.
 
-  % \item
+\item Krzywe gładkie na rozmaitości.
 
-  % \item
+\item Wektor styczny do krzywej jako operator różniczkowy.
 
-  % \item
+\item Przestrzeń styczna i jej baza.
 
-  % \item
+\item Gładkie pola wektorowe.
 
-  % \item
+\item Kowektory, baza dualna, gradient, różniczka funkcji.
 
-  % \item
+\item Tensory i pola tensorowe, symetryczne i antysymetryzacja.
 
-  % \item
+\item Tensor metryczny, przestrzeń Riemanna i Lorentza, kąt między
+  wektorami.
 
-  % \item
+\item Odległość punktów bliskich, długość krzywej.
 
-  % \item
+\item Metryka kowariantna, podnoszenie i opuszczanie indeksów
+  tensorów.
 
-  % \item
+\item Konstrukcja pochodnej absolutnej, pojęcie koneksji afinicznej,
+  wyprowadzenie prawa transformacji koneksji.
 
-  % \item
+\item Pochodna kowariantna tensora, związek z pochodną absolutną.
 
-  % \item
+\item Wyprowadzenie wzoru na pochodną kowariantną kowektora ze wzoru
+  na pochodną wektora kontrawariantnego.
 
-  % \item
+\item Definicja i własność przeniesienia równoległego wektora wzdłuż
+  krzywej.
 
-  % \item
+\item Definicja geodetyki, parametr afiniczny, pole geodetyk.
 
-  % \item
+\item Koneksja metryczna i wyprowadzenie symboli Christoffela.
 
-  % \item
+\item Geodetyki jako linie ekstremalne w przestrzeni Riemanna.
 
-  % \item
+\item Konstrukcja układu lokalnie geodezyjnego.
 
-  % \item
+\item Rozpisanie drugiej pochodnej kowariantnej wektora.
 
-  % \item
+\item Operator dywergencji, rotacji i operator Laplace’a-Beltramiego.
 
-  % \item
+\item Krzywizna wewnętrzna i zewnętrzna przestrzeni, trójkąt na
+  sferze.
 
-  % \item
+\item Dwie definicje tensora krzywizny: jako komutator pochodnej
+  kowariantnych i jako efekt przeniesienia równoległego wektora po
+  krzywej zamkniętej; wyprowadzenie wzoru na ten tensor obiema
+  metodami.
 
-  % \item
+\item Wyprowadzenie własności algebraicznych tensora Riemanna,
+  definicja tensora Ricciego.
 
-  % \item
+\item Pola wektorowe kowariantne stałe a tensor krzywizny.
 
-  % \item
+\item Tensor krzywizny w wymiarach od 1 do 4.
 
-  % \item
+\item Pojęcie niezmienników tensora.
 
-  % \item
+\item Wyprowadzenie ogólnej i zwykłej tożsamości Bianchiego.
 
-  % \item
+\item Definicja pola Killinga i wyprowadzenie równania Killinga.
 
-  % \item
+\item Wyprowadzenie kowariantnej postaci równania Killinga.
 
-  % \item
+\item Obliczanie pól Killinga dla obrotów przestrzeni $\Ebold^{ 3 }$.
 
-  % \item
+\item Pole Killinga generuje prawo zachowania dla stycznego do
+  geodetyki.
 
   % \item
 
