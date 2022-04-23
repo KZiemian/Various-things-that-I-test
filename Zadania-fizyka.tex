@@ -245,7 +245,7 @@
 \item Dystrybucję $\delta( x )$ Diraca można określić jako granicę funkcji
   regularnych
   \begin{equation}
-    \label{eq:1}
+    \label{QM:01}
     \delta( x ) = \lim_{ a \to 0 } \rho_{ a }( x ), \qquad
     \rho_{ a }( x ) = \frac{ 1 }{ a \sqrt{ \pi } } e^{ -\frac{ x^{ 2 } }{ a^{ 2 } } }
   \end{equation}
@@ -262,17 +262,17 @@
   Wykorzystując ostatnią własność, oraz właściwości odwrotnej
   transformaty Fouriera udowodnić, że
   \begin{equation}
-    \label{eq:2}
+    \label{QM:02}
     \delta( x ) = \frac{ 1 }{ 2\pi } \int_{ -\infty }^{ +\infty } e^{ i p x } \, dp
   \end{equation}
   Zapisując ostatnią całkę jako
   \begin{equation}
-    \label{eq:3}
+    \label{QM:03}
     \lim_{ \varepsilon \to 0 } \frac{ 1 }{ 2\pi } \int_{ -\infty }^{ +\infty } e^{ ipx - \varepsilon | p | } \, dp,
   \end{equation}
   udowodnić inną, równoważną, reprezentację dystrybucji $\delta( x )$
   \begin{equation}
-    \label{eq:4}
+    \label{QM:04}
     \delta( x ) = \lim_{ \varepsilon \to 0 } f_{ \varepsilon }( x ), \qquad
     f_{ \varepsilon }( x ) = \frac{ 1 }{ \pi } \frac{ \varepsilon }{ x^{ 2 } + \varepsilon^{ 2 } }
   \end{equation}
@@ -282,7 +282,7 @@
   sprawdzić warunek normalizacji oraz że dla dowolnej funkcji próbnej
   zachodzi
   \begin{equation}
-    \label{eq:5}
+    \label{QM:05}
     \lim_{ \varepsilon \to 0 } \int_{ -\infty }^{ +\infty } f_{ \varepsilon }( x - x_{ 0 } ) \phi( x ) \, dx
     =
     \phi( x_{ 0 } )
@@ -312,13 +312,13 @@
   $\bar{w}^{ r }( \vec{ p } ) w^{ r' }( \vec{ p } ) = 2 \epsilon_{ r }
   m c^{ 2 } \delta_{ r,\, r' }$. Here
   \begin{equation}
-    \label{eq:11}
+    \label{QM:06}
     \bar{w}^{ r }( \vec{ p } )
     = w^{ r }( \vec{ p } )^{ \dagger } \gamma^{ 0 }.
   \end{equation}
   Calculate quantities
   \begin{equation}
-    \label{eq:12}
+    \label{QM:07}
     a_{ r }^{ \mu }
     = \bar{w}^{ r }( \vec{ p } ) \gamma^{ \mu } w^{ r }( \vec{ p } ), \quad
     b_{ r }^{ \mu \nu }
@@ -329,14 +329,14 @@
 
 \item Show that if we boost the solution of the Dirac equation
   \begin{equation}
-    \label{eq:13}
+    \label{QM:08}
     \Psi_{ \vec{ p } }^{ r }( x )
     = e^{ -i \epsilon_{ r } m c^{ 2 } t } w^{ r }( \vec{ p } = 0 )
   \end{equation}
   to a reference frame $x'$ where the particle has momentum
   $\vec{ p }$ we obtain
   \begin{equation}
-    \label{eq:14}
+    \label{QM:09}
     \Psi_{ \vec{ p } }^{ r }( x )
     \to e^{ -i \epsilon_{ r } p_{ \mu } x'^{ \mu } } w^{ r }( \vec{ p } ).
   \end{equation}
@@ -349,17 +349,17 @@
   $\widetilde{x} = \{ x^{ 0 }, -x^{ 1 }, -x^{ 2 }, -x^{ 3 } \}$. Find
   a form of the transformation $U_{ P }$ such that
   \begin{equation}
-    \label{eq:15}
+    \label{QM:10}
     \widetilde{\Psi}( \widetilde{x} ) = U_{ P } \Psi( x )
   \end{equation}
   which preserves a form of the Dirac equation
   \begin{equation}
-    \label{eq:17}
+    \label{QM:11}
     \left( i \hbar c \gamma^{ \mu } \partial_{ \mu } - m c^{ 2 } \right) \Psi( x ) = 0.
   \end{equation}
   Determine how this transformation changes special solutions
   \begin{equation}
-    \label{eq:18}
+    \label{QM:12}
     \Psi_{ \vec{ p } }^{ r }( x )
     = e^{ -i \epsilon_{ r } p_{ \mu } x^{ \mu } } w^{ r }( \vec{ p } ).
   \end{equation}
@@ -370,7 +370,7 @@
   Dirac equation. Determine how this transformation changes special
   solutions
   \begin{equation}
-    \label{eq:19}
+    \label{QM:13}
     \Psi_{ \vec{ p } }^{ r }( x )
     = e^{ -i \epsilon_{ r } p_{ \mu } x^{ \mu } } w^{ r }( \vec{ p } )
   \end{equation}
@@ -382,31 +382,31 @@
   $x' = \{ -x^{ 0 }, x^{ 1 }, x^{ 2 }, x^{ 3 } \}$. Find a form of the
   transformation $U_{ T }$ such that
   \begin{equation}
-    \label{eq:20}
+    \label{QM:14}
     \Psi_{ T }( x' ) = U_{ T } \Psi^{ * }( x )
   \end{equation}
   which preserves a form of the Dirac equation
   \begin{equation}
-    \label{eq:21}
+    \label{QM:15}
     \left( i\hbar c \gamma^{ \mu } \partial_{ \mu } - m c^{ 2 } \right) \Psi( x ) = 0.
   \end{equation}
   Determine how this transformation changes special solutions
   \begin{equation}
-    \label{eq:22}
+    \label{QM:16}
     \Psi_{ \vec{ p } }^{ r }( x )
     = e^{ -i\epsilon_{ r } p_{ \mu } x^{ \mu } } w^{ r }( \vec{ p } \, ).
   \end{equation}
 
 \item We define matrices
   \begin{equation}
-    \label{eq:23}
+    \label{QM:17}
     \Lambda_{ \pm }( p )
     = \frac{ \pm\gamma^{ \mu } p_{ \mu } + m c^{ 2 } }{ 2 m c^{ 2 } }.
   \end{equation}
   Show that these matrices are projections in the space of spinors,
   i.e.
   \begin{equation}
-    \label{eq:24}
+    \label{QM:18}
     \Lambda_{ + }^{ \, 2 } = \Lambda_{ + }, \quad
     \Lambda_{ - }^{ \, 2 } = \Lambda_{ - }, \quad
     \Lambda_{ + } \cdot \Lambda_{ - } = 0.
@@ -416,7 +416,7 @@
 \item Repeat the properties of the Pauli matrices $\sigma_{ i }$,
   $i = 1, 2, 3$
   \begin{equation}
-    \label{eq:16}
+    \label{QM:19}
     \sigma_{ i } \sigma_{ j } = \delta_{ i j } + i \epsilon_{ i j k } \sigma_{ k }, \quad
     \left( \vec{ \sigma } \cdot \vec{ a } \right)
     \left( \vec{ \sigma } \cdot \vec{ b } \, \right)
@@ -427,7 +427,7 @@
 
 \item Start with the Dirac equation in the form:
   \begin{equation}
-    \label{eq:25}
+    \label{QM:20}
     i \hbar \partial \Psi( x )
     =
     \left( -ic\hbar \left( \vec{ \alpha } \cdot \vec{ \nabla } \right)
@@ -448,7 +448,7 @@
   state and show that the Hamiltionia commutes with the rotation
   operators $J_{ i } = L_{ i } + S_{ i }$, where
   \begin{equation}
-    \label{eq:26}
+    \label{QM:21}
     S_{ i } = \frac{ \hbar }{ 2 } \Sigma_{ i }, \quad
     \Sigma_{ i }
     =
@@ -463,7 +463,7 @@
   eigenstates $\vec{ j }^{ 2 }$, $\vec{ L }^{ 2 }$, $j_{ 3 }$ in the
   form
   \begin{equation}
-    \label{eq:27}
+    \label{QM:22}
     \Omega_{ j l m } =
     \begin{pmatrix}
       \alpha_{ 1 } Y_{ l, \, m - 1/2 }( \theta, \phi ) \\
@@ -477,7 +477,7 @@
 
   \textbf{e)} Find a form of the Dirac equation in the parametrization
   \begin{equation}
-    \label{eq:28}
+    \label{QM:23}
     \Psi( \vec{ x }, t ) =
     e^{ -\frac{ i }{ \hbar } E t }
     \begin{pmatrix}
@@ -491,7 +491,7 @@
   \textbf{Hint.} Assume a simplified relation (without referring to
   the standard phase factor convention):
   \begin{equation}
-    \label{eq:29}
+    \label{QM:24}
     \frac{ \vec{ \sigma } \cdot \vec{ r } }{ r } \Omega_{ j, l, m }
     = \Omega_{ j, l', m }, \quad
     \frac{ \vec{ \sigma } \cdot \vec{ r } }{ r } \Omega_{ j, l', m }
@@ -510,23 +510,23 @@
   \textbf{b)} Check the asymptotic behavior at $r \to \infty$. What
   restriction should be satisfied by the localized eigenstate? Show
   that in this limit $f( r )$ and $g( r )$ should behave as
-  $e^{ -kr }$. Calculate $k$. Check the asymptotics $r \to 0$ (behavior
-  $\varpropto r^{ \alpha }$).
+  $e^{ -kr }$. Calculate $k$. Check the asymptotics $r \to 0$
+  (behavior $\varpropto r^{ \alpha }$).
 
   \textbf{c)} Find a form of the reduced equation (eliminating the
-  asymptotic behavior at $r \to \infty$) for $F( r )$ i~$G( r )$ (where
-  $f( r ) = F( r ) e^{ -kr }$, similarly $G( r )$).
+  asymptotic behavior at $r \to \infty$) for $F( r )$ i~$G( r )$
+  (where $f( r ) = F( r ) e^{ -kr }$, similarly $G( r )$).
 
   \textbf{d)} Determine the recurrence equation for coefficients of
   the power expansion
   \begin{equation}
-    \label{eq:30}
+    \label{QM:24}
     F( r ) = \sum_{ n } f_{ n } r^{ n + \alpha } \quad \textrm{and} \quad
     G( r ) = \sum_{ n } g_{ n } r^{ n + \alpha }
   \end{equation}
   as a two-component matrix equation
   \begin{equation}
-    \label{eq:31}
+    \label{QM:25}
     \begin{pmatrix}
       f_{ n + 1 } \\
       g_{ n + 1 }
@@ -541,7 +541,67 @@
   Find eigenvalues $A_{ n }$ and show that this equation permits a
   determination of the spectrum of localized states.
 
+\item Strumień cząstek pada z lewej strony na próg potencjału $E < U$.
+  Pokazać, że funkcję falową w obszarze dopuszczalnym klasycznie można
+  zapisać jako
+  \begin{equation}
+    \label{QM:26}
+    \psi( x ) = e^{ ikx } + e^{ -ikx + 2 i \delta( x ) }.
+  \end{equation}
+  Wyjaśnić czemu jest to możliwe? Obliczyć zależność przesunięcia
+  fazowego $\delta( E )$ od energii.
 
+\item Przedyskutować rozpraszanie na progu potencjału zależnego od
+  czasu \textit{pakietu falowego} (Messiah, rozdział II.3 i III.3).
+  Obliczyć opóźnienie kwantowe występujące przy odbiciu i powiązać je
+  z przesunięciem fazowym $\delta( E )$.
+
+\item Wykonując poniższą całkę metodą residuów
+  \begin{equation}
+    \label{QM:27}
+    \lim_{ \varepsilon \to 0 } \int_{ -\infty }^{ \infty } \frac{ f( x ) }{ x - x_{ 0 } + i \varepsilon },
+  \end{equation}
+  udowodnić tożsamość dystrybucyjną
+  \begin{equation}
+    \label{QM:28}
+    \lim_{ \varepsilon \to 0 } \frac{ 1 }{ x - x_{ 0 } + i \varepsilon } =
+    P \frac{ 1 }{ x - x_{ 0 } } - i \pi \delta( x - x_{ 0 } ),
+  \end{equation}
+  gdzie $P( 1 / x )$ oznacza dystrybucję znaną jako wartość główna
+  całki.
+  \begin{equation}
+    \label{QM:29}
+    P \frac{ 1 }{ x } \equiv
+    \lim_{ \varepsilon \to 0 } \left( \int_{ -\infty }^{ -i \varepsilon } dx \, \frac{ 1 }{ x }
+      + \int_{ i \varepsilon }^{ \infty } dx \, \frac{ 1 }{ x } \right).
+  \end{equation}
+  Wykorzystujący ten związek (i model delty dany przez krzywą
+  Lorentza) podać model dla wartości głównej. Przeanalizować jego
+  wykres dla kilku wartości $\varepsilon$.
+
+\item Operatory kreacji i anihilacji dla oscylatora harmonicznego
+  definiuje się jako
+  \begin{equation}
+    \label{QM:30}
+    a =
+    \sqrt{ \frac{ m \omega }{ 2 \hbar } } x
+    + \frac{ i }{ \sqrt{ 2 m \omega \hbar } } p, \quad
+    a^{ \dagger } =
+    \sqrt{ \frac{ m \omega }{ 2 \hbar } } x
+    - \frac{ i }{ \sqrt{ 2 m \omega \hbar } } p.
+  \end{equation}
+  Obliczyć, metodą algebraiczną tzn. wykorzystując tylko reguły
+  komutacji operatorów pędu i~położenia, następujące komutatory
+  \begin{equation}
+    \label{QM:31}
+    [ a, a ], \quad [ a^{ \dagger }, a^{ \dagger } ], \quad [ a, a^{ \dagger } ], \quad
+    [ a, N ], \quad [ a^{ \dagger }, N ]
+  \end{equation}
+  gdzie $N = a^{ \dagger } a$ jest operatorem „liczby kwantów”.
+
+\item Wyprowadzić te same reguły komutacji używając reprezentacji
+  położeń dla operatorów kreacji i anihilacji. Wsk. Użyć zmiennej
+  bezwymiarowej $\zeta = \sqrt{ m \omega / 2 \hbar } x$.
 
 \end{enumerate}
 % ##################
