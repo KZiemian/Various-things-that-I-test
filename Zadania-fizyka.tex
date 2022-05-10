@@ -85,8 +85,8 @@
 % Pakiety napisane przez użytkownika.
 % Mają być w tym samym katalogu to ten plik .tex
 % ---------------------------------------
-% \usepackage{latexshortcuts}
 \usepackage{mathcommands}
+\usepackage{functionalanalysiscommands}
 
 
 
@@ -277,7 +277,12 @@
   środka sfery $d < R$. Proszę policzyć potencjał wewnątrz i na
   zewnątrz sfery. Proszę policzyć i narysować pole na zewnątrz sfery.
 
-\item Proszę policzyć z definicji pojemność kondensatora (A) płaskiego, (B) zbudowanego z dwóch współśrodkowych sfer o promieniach $r_{ 1 }$ i $r_{ 2 }$, (C) zbudowanego z dwóch współosiowych walców o promieniach $r_{ 1 }$ i $r_{ 2 }$ oraz długości $l$. Kondensatory są wypełnione dielektrykiem o przenikalności elektrycznej $\epsilon$.
+\item Proszę policzyć z definicji pojemność kondensatora (A)
+  płaskiego, (B) zbudowanego z dwóch współśrodkowych sfer o
+  promieniach $r_{ 1 }$ i $r_{ 2 }$, (C) zbudowanego z dwóch
+  współosiowych walców o promieniach $r_{ 1 }$ i $r_{ 2 }$ oraz
+  długości $l$. Kondensatory są wypełnione dielektrykiem o
+  przenikalności elektrycznej $\epsilon$.
 
 \end{enumerate}
 % ##################
@@ -2171,6 +2176,62 @@
 
 
 
+
+
+% ######################################
+\section{Teoria grup i fizyka, zrób te zadania}
+
+% \vspace{\spaceTwo}
+
+% ######################################
+
+
+% ##################
+\begin{enumerate}
+
+\item Rozważmy reprezentację grupy $\SO( 3 )$ przez macierze
+  $\SU( 2 )$ w przestrzeni spinorów. W tej reprezentacji definiujemy
+  algebrę operatorów liniowych $\operatorA = A^{ i } \sigma_{ i }$, gdzie
+  $A^{ i }$ to zespolone współczynniki, $\sigma_{ i }$, $i = 1, 2, 3$ to
+  macierze Pauliego (stosujemy konwencję sumacyjną Einsteina).
+  Transformacje grupy $\SU( 2 )$ parametryzujemy wzorem
+  $U( \vecn ) = \exp( i \vec{ \sigma } \vecn )$. Proszę obliczyć jak
+  transformuje się operator $\operatorA$ przy obrotach. Czy operator
+  $\operatorA$ jest operatorem tensorowym?
+
+\item Analogicznie do poprzedniego zadania, definiujemy operator
+  $\operatorC = A^{ i } B^{ j } \sigma_{ i } \sigma_{ j }$. Proszę sprawdzić,
+  jak transformują się składowe tego operatora przy operatorach.
+  Proszę pokazać, że algebra operatorów $\operatorC$ tworzy
+  reprezentację redukowalną, przywiedlną grupy $\SO( 3 )$. Ze
+  składowych $A^{ i } B^{ j }$ proszę zbudować operatory tensorowe
+  transformują się w nieredukowalnych reprezentacjach $\SO( 3 )$.
+
+  \textbf{Wskazówka.} Przykładem reprezentacji nieredukowalnych
+  reprezentacji grupy obrotów o całkowitych wartościach krętu $j$ są
+  funkcje kuliste.
+
+\item Obroty $R( \alpha, \beta, \gamma )$ w przestrzeni trójwymiarowej można
+  sparametryzować za pomocą kątów Eulera $0 < \alpha < 2\pi$,
+  $0 < \beta < \pi$, $0 < \gamma < 2\pi$ w następujący sposób:
+  $R( \alpha, \beta, \gamma ) = R_{ z_{ 2 } }( \gamma ) R_{ y_{ 1 } }( \beta ) R_{ z }( \alpha )$,
+  gdzie $y_{ 1 }$ jest osią otrzymaną z osi $y$ po obrocie
+  $R_{ z }( \alpha )$ względem osi $z$, a $z_{ 2 }$ osią, w którą
+  przechodzi oś $z$ po dwóch obrotach, względem osi $z$ i $y_{ 1 }$.
+  Proszę wyliczyć jak transformują się składowe wektora $\vecr$ przy
+  obrotach $R( \alpha, \beta, \gamma )$. Czy taka transformacja ma wektory
+  niezmiennicze.
+
+\item Wiadomo z kursu mechaniki kwantowej, że operatory momentu pędu $\vecJ$ są proporcjonalne do generatorów grupy obrotów, czyli operatory obrotów skończonych można zapisać jako $\exp( -i \vec{ \theta } \vecJ \, )$ (przyjmujemy $\hbar = 1$), gdzie składowe $\vec{ \theta }$ parametryzują dowolny obrót. Pamiętając o tym, że w reprezentacji spinowej, dla $J = \frac{ 1 }{ 2 }$, $\vecJ = \vec{ \sigma } / 2$, proszę wyliczyć macierze operatorów obrotów $R( \alpha, \beta, \gamma )$ w tej reprezentacji.
+
+\item Proszę, korzystając ze znanych z mechaniki kwantowej wyników dla wartości elementów macierzowych operatorów $\vecJ$ w bazie $| j, m \rangle$ stanów własnych $\operatorJ^{ \; 2 }$ i $\operatorJ_{ z }^{ \; 2 }$, wyliczy macierze reprezentujące obroty skończone $R( \alpha, \beta, \gamma )$ w bazie $| j, m \rangle$, dla $j = 1$.
+
+  \textbf{Wskazówka.} Proszę pokazać, że dla $j = 1$, potęgę operatora $( \vec{ \theta } \vecJ \, )^{ n }$ dla $n > 2$ można wyrazić przez kombinację liniową wyrazów z $n = 0, 1$ i $2$.
+
+\item
+
+\end{enumerate}
+% ##################
 
 
 % % ######################################
