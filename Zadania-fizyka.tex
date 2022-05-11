@@ -308,8 +308,8 @@
 % ##################
 \begin{enumerate}
 
-\item Dystrybucję $\delta( x )$ Diraca można określić jako granicę funkcji
-  regularnych
+\item Dystrybucję $\delta( x )$ Diraca można określić jako granicę
+  funkcji regularnych
   \begin{equation}
     \label{QM:01}
     \delta( x ) = \lim_{ a \to 0 } \rho_{ a }( x ), \qquad
@@ -344,10 +344,10 @@
     f_{ \varepsilon }( x ) = \frac{ 1 }{ \pi } \frac{ \varepsilon }{ x^{ 2 } + \varepsilon^{ 2 } }
   \end{equation}
 
-  Wykreślić funkcje modelujące dla kilku wartości $\varepsilon$. Uzasadnić, że
-  rzeczywiście jest to dobry model funkcji $\delta$. W~szczególności,
-  sprawdzić warunek normalizacji oraz że dla dowolnej funkcji próbnej
-  zachodzi
+  Wykreślić funkcje modelujące dla kilku wartości $\varepsilon$.
+  Uzasadnić, że rzeczywiście jest to dobry model funkcji $\delta$.
+  W~szczególności, sprawdzić warunek normalizacji oraz że dla dowolnej
+  funkcji próbnej zachodzi
   \begin{equation}
     \label{QM:05}
     \lim_{ \varepsilon \to 0 } \int_{ -\infty }^{ +\infty } f_{ \varepsilon }( x - x_{ 0 } ) \phi( x ) \, dx
@@ -364,7 +364,7 @@
   zmiennych. Jako warunek początkowy przyjąć, że gęstość
   prawdopodobieństwa znalezienia cząstki w~przestrzeni ma rozkład
   gaussowski o~dyspersji $\sigma^{ 2 } = a^{ 2 }$ i że pakiet ma
-  średnią prędkość $v_{ 0 }$. Wykonać \emph{explicite} wszystkie
+  średnią prędkość $v_{ 0 }$. Wykonać \textit{explicite} wszystkie
   transformaty Fouriera i~uzyskać jawne wyrażenie na $\Psi( x, t )$.
   Obliczyć gęstość prawdopodobieństwa $\rho( x, t )$ i gęstość
   strumienia prawdopodobieństwa $\vec{ j }( x, t )$. Sprawdzić
@@ -537,9 +537,9 @@
       \alpha_{ 2 } Y_{ l, \, m + 1/2 }( \theta, \phi )
     \end{pmatrix}
   \end{equation}
-  find the eigenvalues $\alpha_{ 1 }$ and $\alpha_{ 2 }$. What is the eigenvalue
-  of $j_{ 3 }$? Show that eigenstates with a given $j$ can be
-  constructed only from $l$ or $l'$ with $l + l' = 2j$, i.e.
+  find the eigenvalues $\alpha_{ 1 }$ and $\alpha_{ 2 }$. What is the
+  eigenvalue of $j_{ 3 }$? Show that eigenstates with a given $j$ can
+  be constructed only from $l$ or $l'$ with $l + l' = 2j$, i.e.
   $l, l' = j \pm \frac{ 1 }{ 2 }$.
 
   \textbf{e)} Find a form of the Dirac equation in the parametrization
@@ -678,19 +678,19 @@
 \item Pokazać, że relacja $\vec{ L }^{ 2 } = l ( l + 1 )$ może zostać
   otrzymana na podstawie elementarnej wiedzy z rachunku
   prawdopodobieństwa. Założyć, że jedyne możliwe wartości rzutu na
-  dowolnie wybraną oś to $m = -l, l + 1, \ldots, l$ i że prawdopodobieństwo
-  otrzymania tych wartości są takie same, zaś wybór osi jest
-  symetryczny.
+  dowolnie wybraną oś to $m = -l, l + 1, \ldots, l$ i że
+  prawdopodobieństwo otrzymania tych wartości są takie same, zaś wybór
+  osi jest symetryczny.
 
 \item Obliczyć ślady następujących macierzy: $L_{ i }$,
   $L_{ i } L_{ k }$, $L_{ i } L_{ j } L_{ k }$,
   $L_{ i } L_{ j } L_{ k } L_{ m }$. Gdzie $L_{ i }$ to składowa
   momentu pędu.
 
-\item Operator mnożenia przez kąt biegunowy $\phi$ i operator składowej
-  $z$ momentu pędu $L_{ z }$ spełniają kanoniczną relację komutacji
-  $[ L_{ z }, \widehat{ \phi } ] = -i\hbar$. Czy zachodzi odpowiednia
-  zasada nieoznaczoności Heisenberga dla tej pary?
+\item Operator mnożenia przez kąt biegunowy $\phi$ i operator
+  składowej $z$ momentu pędu $L_{ z }$ spełniają kanoniczną relację
+  komutacji $[ L_{ z }, \widehat{ \phi } ] = -i\hbar$. Czy zachodzi
+  odpowiednia zasada nieoznaczoności Heisenberga dla tej pary?
 
 \item Zbudować jawnie operator $\vec{ s }_{ \vec{ n } }$ odpowiadający
   rzutowi spinu $1 / 2$ na kierunku $\vec{ n }$. Dla stanu o ustalonej
@@ -702,11 +702,376 @@
   wymiarach 256 na 256 każda. Macierze spełniają relacje komutacji
   $[ M_{ x }, M_{ y } ] = i M_{ z }$ (oraz ich cykliczne permutacje
   względem $x$, $y$, $z$). Macierz $M_{ x }$ ma wartości własne:
-  $\pm 2$ (niezdegenerowane), $\pm 3 / 2$ (ośmiokrotnie zdegenerowane),
-  $\pm 1$ (28-krotnie zdegenerowane), $\pm 1 / 2$ (56-krotnie
-  zdegenerowane) oraz 0 (70-krotnie zdegenerowane). Obliczyć wartości
-  własne macierzy
+  $\pm 2$ (niezdegenerowane), $\pm 3 / 2$ (ośmiokrotnie
+  zdegenerowane), $\pm 1$ (28-krotnie zdegenerowane), $\pm 1 / 2$
+  (56-krotnie zdegenerowane) oraz 0 (70-krotnie zdegenerowane).
+  Obliczyć wartości własne macierzy
   $M^{ 2 } = M_{ x }^{ 2 } + M_{ y }^{ 2 } + M_{ z }^{ 2 }$.
+
+\item Consider special solutions of Klein-Gordon equation
+  \begin{equation}
+    \label{eq:4}
+    ( \hbar^{ 2 } g^{ \mu \nu } \partial_{ \mu } \partial_{ \nu } + m^{ 2 } c^{ 4 } ) \Psi( \vecx, t )
+    = 0
+  \end{equation}
+  in a form
+  \begin{equation}
+    \label{eq:5}
+    \Psi^{ \pm }_{ \vecp }( \vecx, t ) =
+    e^{ \mp \frac{ i }{ \hbar } E_{ p } t + \frac{ i }{ \hbar } \vecp \cdot \vecx }, \qquad
+    E_{ p } = +\sqrt{ \vecp^{ 2 } c^{ 2 } + m^{ 2 } c^{ 4 } }.
+  \end{equation}
+  Check the norm of these states, i.e. calculate
+  \begin{equation}
+    \label{eq:11}
+    \int d^{ 3 } x \, i \hbar
+    \left( \Psi^{ \pm }_{ \vecq }( \vecx, t )
+      ( \partial_{ t } \Psi^{ \pm }_{ \vecp }( \vecx, t ) )
+      - ( \partial \Psi^{ \pm }_{ \vecq }( \vecx, t ) ) \Psi^{ \pm }_{ \vecp }( \vecx, t )
+    \right)
+  \end{equation}
+
+  How this norm transforms under orthochronous Lorentz
+  transformations?
+
+  What are the transformation rules for: $d^{ 3 } p$,
+  $d^{ 3 } p / ( 2 E_{ p } )$.
+
+\item We introduce interaction to the K-G equation:
+  \begin{equation}
+    \label{eq:12}
+    ( \hbar^{ 2 } g^{ \mu \nu } \partial_{ \mu } \partial_{ \nu } + m^{ 2 } c^{ 4 } + W( \vecx, t ) )
+    \Psi( \vecx, t )
+    = 0,
+  \end{equation}
+  where $W( \vecx, t )$ is a given function. Let us assume a
+  particular form of this function
+  \begin{equation}
+    \label{eq:13}
+    W( \vecx, t ) = -\frac{ C }{ r }
+  \end{equation}
+  (which means it is time independent and spherically symmetric, with
+  some constant $C$). We are looking for special solutions of this
+  equation in a form
+  \begin{equation}
+    \label{eq:14}
+    \Psi_{ E }( \vecx, t ) = e^{ -\frac{ i }{ \hbar } E t } \Phi_{ E }( \vecx ).
+  \end{equation}
+
+  Check if there are localized states ($\Phi_{ E }( \vecx )$ vanish in
+  spatial infinity). For which $C$? Is energy negative for these
+  states?
+
+  Find the energy spectrum of localized states. How are these energies
+  related to $m c^{ 2 }$?
+
+  Check if there are restrictions on the admissible values of $C$?
+
+  Check the transformation properties of solutions with respect to
+  $\Cbold$, $\Pbold$, $\Tbold$.
+
+  Find the non-relativistic limit of solutions (expand in $c$ around
+  $c = \infty$). Give the first 3 therms of the expansion.
+
+  \textbf{Hint.} Use the analogy with the nonrelativistic
+  Schr\"{o}dinger equation for the hydrogen atom. \textit{Do not}
+  derive the form of the spherical functions
+  $Y_{ l m }( \theta, \phi )$, only use their properties.
+
+\item We introduce electromagnetic interactions with an external field
+  $A_{ \mu }( \vecx, t )$ defining a \textit{covariant derivative}
+  \begin{equation}
+    \label{eq:15}
+    D_{ \mu } = \partial_{ \mu } + \frac{ i e }{ \hbar c } A_{ \mu },
+  \end{equation}
+  where $e$ is a \textit{charge} of the field. The modified K-G
+  equation has a form
+  \begin{equation}
+    \label{eq:16}
+    ( \hbar^{ 2 } g^{ \mu \nu } D_{ \mu } D_{ \nu } + m^{ 2 } c^{ 2 } ) \Psi( \vecx, t )
+    = 0.
+  \end{equation}
+  Check that this equation is invariant under a local gauge
+  transformation
+  \begin{align}
+    \Psi( \vecx, t )
+    &= e^{ \frac{ i e }{ \hbar c } \chi( \vecx, t ) } \Psi'( \vecx, t ), \\
+    A_{ \mu }( \vecx, t )
+    &= A_{ \mu }'( \vecx, t ) - \partial_{ \mu } \chi( \vecx, t ).
+  \end{align}
+
+\item Consider a special case of equation from the one of the previous
+  exercises, for which $A_{ \mu }( x )$ in some gauge have a form:
+  \begin{equation}
+    \label{eq:17}
+    A_{ 0 } = -\frac{ Z e }{ r }, \quad
+    A_{ i } = 0.
+  \end{equation}
+  Similarly as in one of previous exercises, find the stationary
+  solutions
+  \begin{equation}
+    \label{eq:18}
+    \Psi_{ E }( \vecx, t ) = e^{ -\frac{ i }{ \hbar } E t } \Phi_{ E }( \vecx ).
+  \end{equation}
+  Find the energy spectrum of these localized solutions.
+
+  Do we have localized states with positive and negative energy? How
+  does it depend on $Z$?
+
+  Are there constraints on $Z$?
+
+  Check the transformation of solutions under $\Cbold$, $\Pbold$ and
+  $\Tbold$.
+
+  Find the non-relativistic limit of solutions (expand in $c$ round
+  $c = \infty$). Give the first 3 terms of the expansion.
+
+\item We assume that the one-particle non-relativistic hamiltonian $H$
+  has discrete eigenstates $| n \rangle$
+  \begin{equation}
+    \label{eq:1}
+    H | n \rangle = E_{ n } | n \rangle, \quad
+    \langle n | m \rangle = \delta_{ n m }.
+  \end{equation}
+  A set of $N$ identical, indistinguishable particles of this type is
+  described by a hamiltonian $\Hcal$
+  \begin{equation}
+    \label{eq:2}
+    \Hcal = \sum_{ j = 1 }^{ N } H_{ j },
+  \end{equation}
+  where $H_{ j }$ is a hamiltonian for the particle $j$. The
+  eigenstates of $\Hcal$ in the Fock space have a form
+  $| N_{ 1 }, N_{ 2 }, \ldots, N_{ k }, \ldots \rangle$, where
+  $N_{ k } = 0, 1, 2, \ldots$ is a number of particles in the state
+  $k$. The \textit{vacuum} state
+  $| 0 \rangle = | 0, 0, \ldots, 0, \ldots \rangle$ is defined as a state without particles
+  with a norm $\langle 0 | 0 \rangle = 1$.
+
+  A one-particle state in the eigenstate
+  $| n \rangle \equiv | 0, 0, \ldots, 1_{ n }, 0, \ldots \rangle$ can be obtained acting
+  with a \textit{creation} operator $a_{ n }^{ \dagger } | 0 \rangle$. Defining a
+  conjugate operator of \textit{annihilation} $a_{ n }$ we assume that
+  \begin{equation}
+    \label{eq:3}
+    a_{ n } | 0 \rangle = 0.
+  \end{equation}
+  Operator of creation and annihilation of one-particle states satisfy
+  \begin{align}
+    &[ a_{ i }, a_{ j } ] = [ a_{ i }^{ \dagger }, a_{ j }^{ \dagger } ] = 0, \quad
+      [ a_{ i }, a_{ j }^{ \dagger } ] = \delta_{ i j }, \quad
+      \textrm{for bosons}, \\
+    &\{ a_{ i }, a_{ j } \} = \{ a_{ i }^{ \dagger }, a_{ j }^{ \dagger } \} = 0, \quad
+      \{ a_{ i }, a_{ j }^{ \dagger } \} = \delta_{ i j }, \quad
+      \textrm{for fermions}.
+  \end{align}
+
+  How can we construct an arbitrary state
+  $| N_{ 1 }, N_{ 2 }, \ldots, N_{ k }, \ldots \rangle$ acting with creation operators
+  on a vacuum state (both bosonic and fermionic case)? States should
+  be normalized to unity.
+
+  Show that both for bosons and fermions the hamiltonian is
+  \begin{equation}
+    \label{eq:19}
+    \Hcal = \sum_{ k } E_{ k } a_{ k }^{ \dagger } a_{ k }.
+  \end{equation}
+
+  Above definitions are for the Schr\"{o}dinger picture, where the states of the system depend on time and satisfy the Schr\"{o}dinger equation. In the Heisenberg picture states are time independent, but operators depend on time. Find the form of creation and annihilation operators in the Heisenberg picture (bosons and fermions).
+
+  Show that
+  \begin{equation}
+    \label{eq:22}
+    \Psi_{ n }( \vecx \, ) =
+    \langle 0 | \Phi( \vecx \, ) | 0, 0, \ldots, 0, 1_{ n }, 0, \ldots \rangle
+    = \langle \Phi( \vecx ) a_{ n }^{ \dagger } | 0 \rangle.
+  \end{equation}
+
+  The operator conjugate to $\Phi( \vecx \, )$ is
+  \begin{equation}
+    \label{eq:23}
+    \Phi^{ \dagger }( \vecx \, ) =
+    \sum_{ n } \Psi_{ n }^{ * }( \vecx \, ) a_{ n }^{ \dagger }.
+  \end{equation}
+  This operator acting on a vacuum state generates a one-particle state $| \vecx \rangle$ localized in the $\vecx$. Show that
+  \begin{align}
+    \textrm{for bosons} \;
+    &[ \Phi( \vecx \, ), \Phi( \vecx' \, ) ] = 0, \quad
+      [ \Phi( \vecx \, ), \Phi^{ \dagger }( \vecx' \, ) ]
+      = \delta^{ ( 3 ) }( \vecx - \vecx' \, ), \\
+    \textrm{for fermions}
+    &\{ \Phi( \vecx \, ), \Phi( \vecx' \, ) \} = 0, \quad
+    \{ \Phi( \vecx \, ), \Phi^{ \dagger }( \vecx' \, ) \}
+    = \delta^{ ( 3 ) }( \vecx - \vecx' \, ).
+  \end{align}
+
+  Show that in both cases $\langle \vecx | \vecy \rangle = \delta^{ ( 3 ) }( \vecx - \vecy \, )$.
+
+  Assuming that in a position representation the one-particle hamiltonian has a form
+  \begin{equation}
+    \label{eq:24}
+    H = -\frac{ \hbar^{ 2 } }{ 2m } \Delta_{ x } + V( \vecx \, ).
+  \end{equation}
+  Show that
+  \begin{equation}
+    \label{eq:25}
+    \Hcal =
+    \int d^{ 3 } x \, \Phi^{ \dagger }( \vecx \, ) \,
+    \left( -\frac{ \hbar^{ 2 } }{ 2m } \Delta_{ x } + V( \vecx \, ) \right)
+    \Phi( \vecx \, ).
+  \end{equation}
+
+  Find a form of $\Phi_{ H }( \vecx, t )$ in the Heisenberg picture.
+  Show that the operator in the Heisenberg picture $\Phi_{ H }( \vecx, t )$ satisfies the Schr\"{o}dinger equation
+  \begin{equation}
+    \label{eq:26}
+    i \hbar \frac{ \partial }{ \partial t } \Phi_{ H }( \vecx, t )
+    =
+    \left( -\frac{ \hbar^{ 2 } }{ 2m } \Delta_{ x } + V( \vecx \, ) \right)
+    \Phi_{ H }( \vecx, t ).
+  \end{equation}
+
+\item Find a form of a two-particle wave function (bosons and fermions)
+  \begin{equation}
+    \label{eq:27}
+    \Psi_{ n_{ 1 }, n_{ 2 } }( \vecx_{ 1 }, \vecx_{ 2 } ) =
+    \langle 0 | \Phi( \vecx_{ 1 } \, ) \Phi( \vecx_{ 2 } \, )
+    a_{ n_{ 1 } }^{ \dagger } a_{ n_{ 2 } }^{ \dagger } | 0 \rangle.
+  \end{equation}
+  Check the normalization.
+
+\item Particular case: a system contains \textit{free} particles in a cubic box with the edge $L$ (assuming periodic boundary conditions). Write explicit form of the field operator $\Phi( \vecx \, )$ in this case. Check what happens in the limit $L \to \infty$, when the discrete sum over the eigenstates should be replaced by the integral. How should we define the one-particle creation and annihilation operators and their (anit)commutation rules?
+
+  \textbf{Hint.} We aim at a new normalization of the one-particle states $| \vecp \, \rangle$ of a form
+  \begin{equation}
+    \label{eq:28}
+    \langle \vecp | \vecq \rangle = ( 2\pi \hbar )^{ 3 } \delta^{ ( 3 ) }( \vecp - \vecq ).
+  \end{equation}
+  Why?
+
+\item The wave function of the one-particle eigenstate $| n \rangle$ is defined by
+  \begin{equation}
+    \label{eq:20}
+    \Psi_{ n }( vecx ) = \langle \vecx \, | n \rangle.
+  \end{equation}
+  In the Schr\"{o}dinger picture we define a field operator
+  \begin{equation}
+    \label{eq:21}
+    \Phi( \vecx \, ) = \sum_{ n } \Psi_{ n }( \vecx \, ) a_{ n }.
+  \end{equation}
+
+\item Repeat the derivation of the Euler-Lagrange equations. The
+  action $S$ is given by
+  \begin{equation}
+    \label{eq:QM32}
+    S = \int\limits_{ t_{ 1 } }^{ t_{ 2 } } dt \, L
+  \end{equation}
+  where the Lagrangian $L$
+  \begin{equation}
+    \label{eq:QM33}
+    L =
+    \int d^{ 3 } x \, \Lcal\left( \Psi_{ \sigma }( \vecx, t ),
+      \frac{ \partial \Psi_{ \sigma }( \vecx, t ) }{ \partial x^{ \mu } } \right), \quad
+    \mu = 0, 1, 2, 3.
+  \end{equation}
+  $\Lcal$ is the Lagrangian \textit{density} and numbers the
+  \textit{fields}.
+
+  Show that from the variational principle $\delta S = 0$ under conditions
+  $\delta \Psi_{ \sigma }( \vecx, t_{ 1 } ) = \delta \Psi_{ \sigma }(
+  \vecx, t_{ 2 } ) = 0$ leads to
+  \begin{equation}
+    \label{eq:QM34}
+    \partial_{ \mu } \frac{ \partial \Lcal }{ \partial \big( \partial_{ \mu } \Psi_{ \sigma }( \vecx, t ) \big) }
+    - \frac{ \partial \Lcal }{ \partial \Psi_{ \sigma }( \vecx, t ) }
+    = 0.
+  \end{equation}
+  What are these equations if $x^{ 0 }$ is expressed by time $t$ and
+  spatial coordinates $\vecx$? We assume that fields
+  $\Psi_{ \sigma }( \vecx, t )$ vanish sufficiently fast for all $t$
+  when $\vecx \to \infty$.
+
+\item Show that if a Lagrangian density has a form
+  \begin{equation}
+    \label{eq:QM35}
+    \Lcal =
+    \frac{ \hbar^{ 2 } }{ 2m } \big( \partial_{ i } \Psi^{ * }( \vecx, t ) \big)
+    \big( \partial_{ i } \Psi( \vecx, t ) \big)
+    - \Psi^{ * }( \vecx, t ) V( \vecx ) \Psi( \vecx, t )
+    + \frac{ i \hbar }{ 2 } \left( \Psi^{ * } \frac{ \partial \Psi }{ \partial t }
+      - \frac{ \partial \Psi^{ * } }{ \partial t } \Psi \right)
+  \end{equation}
+  and assuming fields $\Psi$ and $\Psi^{ * }$ are independent, the E-L
+  equations are identical to the one-particle Schr\"{o}dinger equation
+  (both for $\Psi$ and $\Psi^{ * }$).
+
+  Check that the same equations are obtained if the term with time
+  derivatives is replaced by
+  \begin{equation}
+    \label{eq:QM36}
+    \textrm{a)} i \hbar \left( \Psi^{ * } \frac{ \partial \Psi }{ \partial t } \right), \qquad
+    \textrm{b)} -i \hbar \left( \frac{ \partial \Psi^{ * } }{ \partial t } \Psi \right).
+  \end{equation}
+  Why?
+
+\item Assume that the Lagrangian density has a form b) from previous
+  exercises. Perform the canonical quantization in this case: find the
+  canonical momentum conjugate to $\Psi^{ * }( \vecx, t )$, determine
+  the canonical relations, find the Hamiltonian and show that result
+  is the same as for the case presented on the lecture.
+
+\item Assume that the Lagrangian density has a form
+  \begin{equation}
+    \label{eq:QM37}
+    \Lcal =
+    \hbar^{ 2 } c^{ 2 } g^{ \mu \nu } \big( \partial_{ \mu } \phi^{ * }( x ) \big)
+    \big( \partial_{ \nu } \phi( x ) \big)
+    - m^{ 2 } c^{ 4 } \phi^{ * }( x ) \phi( x )
+  \end{equation}
+  with $x = \{ x^{ 0 }, x^{ 1 }, x^{ 2 }, x^{ 3 } \}$,
+  $x^{ 0 } = c t$.
+
+  Determine the E-L equations assuming that fields $\phi^{ * }$ and
+  $\phi$ are independent.
+
+  Rewrite the Lagrangian explicitly in time and space derivatives and
+  fields. Find canoncial momenta $\pi( x )$ and $\pi^{ * }( x )$
+  conjugate respectively to $\phi( x )$ and $\phi^{ * }( x )$.
+
+  Derive a form of the Hamiltonian.
+
+  \textbf{Hint.} Use the concept of a variational derivative
+  $\delta L / \delta \big( \partial_{ t } \phi( x ) \big)$.
+
+\item Assume that the Lagrangian density has a form
+  \begin{equation}
+    \label{eq:QM38}
+    \Lcal =
+    \frac{ \hbar^{ 2 } c^{ 2 } }{ 2 } g^{ \mu \nu }
+    \big( \partial_{ \mu } \phi( x ) \big) \big( \partial_{ \nu } \phi( x ) \big)
+    - \frac{ m^{ 2 } c^{ 4 } }{ 2 } \phi( x )^{ 2 }
+  \end{equation}
+  with $x = \{ x^{ 0 }, x^{ 1 }, x^{ 2 }, x^{ 3 } \}$, $x^{ 0 } = c t$
+  and $\phi( x )$ a real scalar field.
+
+  Determine the E-L equation.
+
+  Rewrite the Lagrangian explicitly in time and space derivatives of
+  fields. Assume that field $\phi( x )$ is periodic in a spatial box
+  $L \times L \times L$. Decompose field $\phi( x )$ as a combination
+  of momentum eigenstates in a periodic box
+  \begin{equation}
+    \label{eq:QM39}
+    \phi( x ) =
+    \sum_{ \vecn } c_{ \vecn }( t ) \psi_{ \vecn }( \vecx ), \qquad
+    \psi_{ \vecn }( \vecx ) =
+    \frac{ 1 }{ L^{ 3 / 2 } } e^{ i 2\pi \vecn \cdot \vecx / L }.
+  \end{equation}
+  What relations between coefficients $c_{ \vecn }( t )$ follow from
+  the fact that field $\phi( x )$ is real?
+
+  Derive a form of the Hamiltonian.
+
+  Find independent degrees of freedom and quantize the system.
 
 \end{enumerate}
 % ##################
@@ -850,7 +1215,7 @@
 \begin{enumerate}
 \item Dla zespolonego pola skalarnego (postać operatora tego pola
   zawiera poprzedni zestaw zadań) proszę wyznaczyć (w~postaci
-  \emph{czterowymiarowej} całki Fourierowskiej) postać propagatora
+  \textit{czterowymiarowej} całki Fourierowskiej) postać propagatora
   \begin{equation}
     \label{eq:6}
     i \Delta_{ F }( x - y )
@@ -927,7 +1292,7 @@
     a( \veckbold ), \quad
     N_{ \psi } = \int d^{ 3 } \vecpbold \, \psi^{ \dagger }( \vecpbold ) \psi( \vecpbold ),
   \end{equation}
-  komutują z~\emph{pełnym} hamiltonianem $H$.
+  komutują z~\textit{pełnym} hamiltonianem $H$.
 
   \textbf{b)} Proszę pokazać, że~stan perturbacyjny próżni
   $| 0 \rangle$ zdefiniowany poprze
@@ -1508,48 +1873,37 @@
 
   % \item
 
-  % \item Anna Grześkowiak-Krwawicz, \emph{Dyskurs polityczny
-  %   Rzeczypospolitej Obojga Narodów};
+  % \item
 
-  % \item Nowak \emph{Dzieje Polski};
+  % \item
 
-  % \item Margaret Atwood, \emph{Dług. Rozrachunek z~ciemną stroną
-  %   bogactwa};
+  % \item
 
-  % \item Jared Diamond, \emph{Strzelby, zarazki, maszyny. Losy
-  %   ludzkich społeczeństw};
+  % \item
 
-  % \item Edward E. Evans\dywiz Pritchard, \emph{Czary, wyrocznie
-  %   i~magia u~Azande};
+  % \item
 
-  % \item W. Szumowski, \emph{Historia medycyny filozoficznie ujęta};
+  % \item
 
-  % \item Michał Dondzik, Krzysztof Jajko, Emil Swoiński,
-  %   \emph{Elementarz Wytwórni Filmów Oświatowych};
+  % \item
 
-  % \item James M. Murray, \emph{Brugia: Kolebka kapitalizmu};
+  % \item
 
-  % \item Maciej Janowski, \emph{Narodziny inteligencji: 1750--1831};
+  % \item
 
-  % \item Jerzy Jedlicki, \emph{Jakiej cywilizacji Polacy potrzebują:
-  %   studia z dziejów idei i~wyobraźni XIX wieku};
+  % \item
 
-  % \item Jerzy Jedlicki, \emph{Droga do narodowej klęski};
+  % \item
 
-  % \item Jerzy Jedlicki, \emph{Błędne koło: 1832-1864};
+  % \item
 
-  % \item Jerzy Jedlicki, \emph{Nieudana próba kapitalistycznej
-  %   industrializacji: analiza państwowego gospodarstwa przemysłowego
-  %   w~Królestwie Polskim XIX w.};
+  % \item
 
-  % \item Jerzy Jedlicki, \emph{Klejnot i~bariery społeczne:
-  %   przeobrażenia szlachectwa polskiego w~schyłkowym okresie
-  %   feudalizmu};
+  % \item
 
-  % \item Jerzy Jedlicki, \emph{Świat zwyrodniały: lęki i~wyroki
-  %   krytyków nowoczesności};
+  % \item
 
-  % \item Rob Riemen, \emph{Wieczny powrót faszyzmu};
+  % \item
 
   % \item Łukasz A. Plesnar, \emph{Twarze Westernu};
 
@@ -1570,67 +1924,55 @@
 
   % \item Artur Domosłowski, \emph{Kapuściński non-fiction};
 
-  % \item Michael Moran, \emph{Kraj z Księżyca: podróże do serca
-  %   Polski};
+  % \item
 
-  % \item Pierre Hadot, \emph{Filozofia jako ćwiczenie duchowe};
+  % \item
 
-  % \item Robert D. Richtmayer, \emph{Principles of advanced
-  %   mathematical physics};
+  % \item
 
-  % \item Walter Burkert, \emph{Stwarzanie świętości. Ślady biologii
-  %   we~wczesnych wierzeniach religijnych};
+  % \item
 
-  % \item A. I. Anselm, \emph{Podstawy fizyki statystycznej
-  %   i~termodynamiki};
+  % \item
 
-  % \item Z. Krasnodębski, \emph{Demokracja peryferii};
+  % \item
 
-  % \item Maria Dzielska, \emph{Hypatia z~Aleksandrii};
+  % \item
 
-  % \item Paweł Śpiewak, \emph{Spór o~Polskę, 1989--99};
+  % \item
 
-  % \item Tadeusz Zieliński, \emph{Religia starożytnej Grecji};
+  % \item
 
-  % \item Ernest Gellner, \emph{Postmodernizm, rozum i~religia};
+  % \item
 
-  % \item Daniel Beauvois, \emph{Polacy na Ukrainie 1831-1863.
-  %   Szlachta polska na Wołyniu, Podolu i Kijowszczyźnie};
+  % \item
 
-  % \item \emph{Polskie mity polityczne XIX i XX wieku};
+  % \item
 
-  % \item \emph{O nas bez nas. Historia Polski w historiografiach
-  %   obcojęzycznych};
+  % \item
 
-  % \item Leibniz, \emph{Wyznanie wiary filozofa, Rozprawa
-  %   metafizyczna; Monadologia; Zasady natury i łaski oraz inne pisma
-  %   filozoficzne};
+  % \item
 
-  % \item Hanna Świda-Ziemba, \emph{Człowiek wewnętrznie zniewolony.
-  %   Mechanizmy i konsekwencje minionej formacji --~analiza
-  %   psychologiczna};
+  % \item
 
-  % \item Paul Johnson, \emph{Historia świata XX wieku};
+  % \item
 
-  % \item Braudel Fernand, \emph{Dynamika kapitalizmu};
+  % \item
 
-  % \item I. Berlin, \emph{Korzenie romantyzmu};
+  % \item
 
-  % \item Bod Rens, \emph{Historia humanistyki};
+  % \item
 
-  % \item \emph{Teologia i filozofia żydowska wobec Holocaustu};
+  % \item
 
-  % \item Acton, \emph{Historia wolności: wybór esejów};
+  % \item
 
-  % \item Andrzej Żbikowski, \emph{Żydzi};
+  % \item
 
-  % \item Stefan Bartkowski, \emph{Pod wspólnym niebem: krótka
-  %   historia Żydów w~Polsce i~stosunków polsko-żydowskich};
+  % \item
 
-  % \item Arystoteles, \emph{Retoryka};
+  % \item
 
-  % \item Agnieszka Urbańczyk, Diamentowy Grant, \emph{Polityczność
-  %   science fiction w recepcji fanowskie};
+  % \item
 
   % \item \emph{Lech Wzbudzony};
 
@@ -1741,20 +2083,17 @@
 
   % \item Władysław Bruliński, \emph{Dokąd idziesz Polsko?};
 
-  % \item \emph{Żydzi i judaizm we współczesnych badaniach polskich};
+  % \item
 
-  % \item Artur Eisenbach, \emph{Emancypacja Żydów na ziemiach
-  %   polskich 1785-1870 na tle europejskim};
+  % \item
 
-  % \item Artur Eisenbach, \emph{Z dziejów ludności żydowskiej w
-  %   Polsce w XVIII i XIX w.};
+  % \item
 
-  % \item Artur Eisenbach, \emph{Kwestia równouprawnienia Żydów w
-  %   Królestwie Polskim};
+  % \item
 
-  % \item Marian Fuks, \emph{Humor Żydów polskich (do 1939 r.)};
+  % \item
 
-  % \item Marian Fuks, \emph{Żydzi w Polsce – Dawniej i dziś};
+  % \item
 
   % \item
 
