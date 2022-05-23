@@ -66,7 +66,7 @@ MATHEMATICALANALYSISPATH="$MATHEMATICSPATH/Analiza-matematyczna-błędy-i-uwagi"
 
 
 ####################
-# Exercise to do path
+# Exercises to do path
 EXERCISESTODOLISTPATH="$HOME/Good-things/Various-writings/Zadania-zrób"
 ####################
 
@@ -480,95 +480,9 @@ rsync $LATEXFILEPATH $QFTPATH
 
 # rsync $LATEXFILEPATH $EXERCISETODOLISTPATH
 
-# rsync $latexfile $physicspath/Fizyka-czasoprzetrzeni-błędy-i-uwagi/
-# rsync $latexfile $physicspath/Mechanika-błędy-i-uwagi/
-# rsync $latexfile $physicspath/Mechanika-kwantowa-błędy-i-uwagi/
-# rsync $latexfile $physicspath/Teoria-pola-błędy-i-uwagi/
-# rsync $latexfile $physicspath/Wprowadzenie-do-fizyki-błędy-i-uwagi/
-
-
-# rsync $latexfile $mathpath/Algebra-błędy-i-uwagi/
-# rsync $latexfile $mathpath/Analiza-funkcjonalna-błędy-i-uwagi/
-# rsync $latexfile $mathpath/Analiza-matematyczna-błędy-i-uwagi/
-# rsync $latexfile $mathpath/Geometria-nieprzemienna-błędy-i-uwagi/
-# rsync $latexfile $mathpath/Geometria-różniczkowa-błędy-i-uwagi/
-# rsync $latexfile $mathpath/Logika-i-teoria-mnogości-błędy-i-uwagi/
-# rsync $latexfile $mathpath/Równania-różniczkowe-błędy-i-uwagi/
-
-
-# rsync $latexfile $aliadoctrinapath/Eseje-publicystyka-błędy-i-uwagi/
-# rsync $latexfile $aliadoctrinapath/Historia-błędy-i-uwagi/
-# rsync $latexfile $aliadoctrinapath/Kultura-błędy-i-uwagi/
-# rsync $latexfile $aliadoctrinapath/Książki-różne-błędy-i-uwagi/
-
-# rsync $latexfile $aliadoctrinapath/
-
-# rsync $latexfile $errorspath/Informatyka-błędy-i-uwagi/
-
-
-# rsync $latexfile $errorspath/Do-wydawnictwa/
-
-
-# rsync $latexfile $exercisespath
-
-
-# rsync $latexfile $towritepath
-
-
-# rsync $latexfile $presentimprovepath
-# rsync $latexfile $presentsomepath
-
-
-# #####
-# # Article
-# rsync $latexfile $articlepath
 
 
 
-
-
-
-
-# ##########
-# # Kopiowanie pakietu LaTeXa "mathshortcuts", zawierającej zdefiniowane
-# # przezemnie skróty do ułatwienia sobie pisania w LaTeXu
-
-
-
-# rsync $latexfile $errorspath/DEUS-i-filozofia-błędy-i-uwagi/
-
-
-# rsync $latexfile $physicspath/Fizyka-czasoprzetrzeni-błędy-i-uwagi/
-# rsync $latexfile $physicspath/Mechanika-błędy-i-uwagi/
-# rsync $latexfile $physicspath/Mechanika-kwantowa-błędy-i-uwagi/
-# rsync $latexfile $physicspath/Teoria-pola-błędy-i-uwagi/
-# rsync $latexfile $physicspath/Wprowadzenie-do-fizyki-błędy-i-uwagi/
-
-
-# rsync $latexfile $mathpath/Algebra-błędy-i-uwagi/
-# rsync $latexfile $mathpath/Analiza-funkcjonalna-błędy-i-uwagi/
-# rsync $latexfile $mathpath/Analiza-matematyczna-błędy-i-uwagi/
-# rsync $latexfile $mathpath/Geometria-nieprzemienna-błędy-i-uwagi/
-# rsync $latexfile $mathpath/Geometria-różniczkowa-błędy-i-uwagi/
-# rsync $latexfile $mathpath/Logika-i-teoria-mnogości-błędy-i-uwagi/
-# rsync $latexfile $mathpath/Równania-różniczkowe-błędy-i-uwagi/
-# rsync $latexfile $mathpath/Wprowadzenie-do-fizyki-błędy-i-uwagi/
-
-
-# rsync $latexfile $errorspath/Informatyka-błędy-i-uwagi/
-
-# rsync $latexfile $aliadoctrinapath/
-
-# rsync $latexfile $presentimprovepath
-# rsync $latexfile $presentsomepath
-
-
-# rsync $latexfile $errorspath/Do-wydawnictwa/
-
-
-# #####
-# # Article
-# rsync $latexfile $articlepath
 
 
 
