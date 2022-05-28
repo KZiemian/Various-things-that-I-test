@@ -1,5 +1,1 @@
 Julia YouTubes videos with good descriptions
-
-_Re-designing Optim_, Patrick Kofod Mogensen, JuliaCon 2019, [https://www.youtube.com/watch?v=GfRSPEhewwM](https://www.youtube.com/watch?v=GfRSPEhewwM)
-
-I have different issue with this video. You can see opening slide "JuliCon Baltimore 2019" for first 3m 33s, while whole video has 14m 59s. It will be to nice to cut out first 3m 20s, after that I will try to make timestamps for it. But, I can't promise anything.

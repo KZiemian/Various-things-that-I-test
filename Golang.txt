@@ -458,3 +458,318 @@ https://go.dev/doc/tutorial/database-access
 Change to the database you just created so you can add tables.
 
 Go-MySQL-Driver: MySQL
+
+
+
+Hello,
+
+I have one more think to say about Go blog post "Why generics?". Again, nothing really important.
+
+In the section "Generic data structures" in the second counting from the end code example we have line.
+> *pn = &node(E){val: v}
+It is commented by the sentence "Notice the type argument E to the type node.". Maybe it should be "Notice the type argument E send to the type node."? Currently it sound odd to my ears.
+
+Also, I found out that in "Go 1.18 Beta 1 is available, with generics" (https://go.dev/blog/go1.18beta1) written by Russ Cox on behalf of the Go team, post "Why generics?" is referenced in prominent place in third paragraph. I think it another reason to add block text to "Why generics?" to make clear for readers that they need to be aware, that actually implementation in beta of Go 18 at syntax level is quite different than that presented in this blog post.
+
+Best,
+Kamil Ziemian
+
+
+Hello,
+
+I have few other suggestions about [Tutorial: Getting started with fuzzing](https://go.dev/doc/tutorial/fuzz).
+
+In section "Fix the double reverse error", second "Write the code" point three states.
+> Don’t forget to import the new errors package. The first lines of main.go should look like the following.
+>
+> import (
+>     "fmt"
+>     "errors"
+      "unicode/utf8"
+> )
+
+From this text I read that we need new packages errors in main.go file. But fact we need to import two new packages, because unicode/utf8 wasn't previously used in this file, so it wouldn't compile. It was previously imported and used in reverse_test.go file and authors of tutorial probably forget about it when their wrote this part.
+
+Also I would change "The first lines of main.go should look like the following." to "The import statement of main.go should look like the following.". I like this more since first line on the file is "package main" and it is not shown in code example.
+
+Best regards,
+Kamil
+
+
+Hello,
+
+If you don't mind, I have few editorials suggestions to "Type parameters proposal".
+
+Last code example in section "Type parameters" (https://go.googlesource.com/proposal/+/refs/heads/master/design/43651-type-parameters.md#type-parameters) have very big and unecesary indentation, it should be removed.
+
+At the end of "The any constraint" (https://go.googlesource.com/proposal/+/refs/heads/master/design/43651-type-parameters.md#the-constraint) I would change "discussed separately)." to "discussed separately.)". This placement of dot before bracket is used in other parts of this document.
+
+In first code example in "Mutually referencing type parameters"
+(https://go.googlesource.com/proposal/+/refs/heads/master/design/43651-type-parameters.md#mutually-referencing-type-parameters) we have function signature
+"func New[Node NodeConstraint[Edge], Edge EdgeConstraint[Node]] (nodes []Node) *Graph[Node, Edge]".
+It would be more consistent with Go style as I know it, if we remove white space placed before "(nodes []Node)".
+
+Best,
+Kamil
+
+Why Go allow function with unused arguments?
+
+Hello,
+
+This is a question from ignorant in the meters of compilers and mediocre Go users at best, so it may be stupid.
+
+I really like that in Go unused variable or import is compiler time error. As such I wonder why function like
+> func funTest(x int) int {
+> 	return 3
+> }
+is allowed? I would guess that it is possible to check if function argument is used in function body or not, so it seem plausible to forbid it.
+
+Again, it maybe a stupid question from ignorant person. I have a lot things to learn about Go, but I'm stuck in learning about Unicode and UFT-8, so I guess it will be a long time before I can go back to learning proper Go. This is my excuse for asking this question.
+
+Best regards,
+Kamil Ziemian
+
+
+I agree that pain in this situation isn't worth a gain. Fortunately Go is successful and this means there is a lot code written in Go. And cost of barking changes is the language probably n^2 in number of projects written in it.
+
+At the same time I will write why I want to see this feature in Go 2. Even if I have little hope of Go 2 becoming reality. As Go [FAQ says](https://go.dev/doc/faq#Implementation) _If it's worth complaining about, it's worth fixing in the code. And if it's not worth fixing, it's not worth mentioning._. Unused variable is worth mentioning, so it is wort of fixing. For me unused parameter of the function is worth mentioning, so it is worth fixing, no less that unused variable.
+
+This is one of the places that for me are not wrong per say, but they feel inconsistency with Go philosophy. But, this may be only my feeling.
+
+
+
+Going thorough "Type parameters proposal" with Go 1.18 beta
+
+> package main
+>
+> import "fmt"
+>
+> type Stringer interface {
+> 	String() string
+> }
+>
+> type StringableVector[T Stringer] []T
+>
+> type someFloat float64
+>
+> func (sF someFloat) String() string {
+> 	return fmt.Sprintf("someFloat: %v", float64(sF))
+> }
+>
+> func main() {
+> 	var varStringer Stringer = someFloat(7)
+> 	sliceSomeFloat := make([]someFloat, 3)
+>
+> 	var varStringableVector StringableVector[someFloat] = sliceSomeFloat
+>
+> 	fmt.Printf("varStringer type: %T\n", varStringer)
+> 	fmt.Printf("sliceSomeFloat type: %T\n", sliceSomeFloat)
+> 	fmt.Printf("varStringableVector type: %T\n", varStringableVector)
+> }
+
+
+> package main
+>
+> import "fmt"
+>
+> type someFloat float64
+>
+> func main() {
+> 	var floatVar float64 = 1.0
+> 	var someFloatVar someFloat = floatVar
+>
+> 	fmt.Println(someFloatVar)
+> }
+
+We need explicit type conversion "someFloat(floatVar)" to make it compile.
+
+> stringerVar type: main.someFloat
+> sliceScomeFloat type: []main.someFloat
+> stringableVectorVar type: main.StringableVector[main.someFloat]
+
+Variable stringableVectorVar is not of interface type, because in such case its type printed by fmt.Printf should be []main.someFloat. So, it looks like to me as []main.someFloat is implicitly conversed to main.StringableVector[main.someFloat].
+
+Answer to my previous questions was that []stupidFloat/[]someFloat is not of type StringableVector[stupidFloat] so it doesn't have method String() string. But in my poor understanding of Go, this code shouldn't compile due to implicit conversion of two types.
+
+Can anyone explain to me, where am I wrong?
+
+Best,
+Kamil
+
+
+
+Strange cases of type definitions that use "[]"
+
+Hello,
+
+I should mention that I still don't read Go Language Specification (https://go.dev/ref/spec), due to my decision to first study Unicode and UTF-8, before reading it. It maybe strange thing to do, but I just how I need to deal with Unicode and UTF-8.
+
+Regardless of that I quickly check few sections of it and I still baffled by what I find that compiler accepts. I write this to ask some gophers to help me find a way to think about this. I hope that you forgive me some stupid questions, I have so knowledge of Go, but still very little of "feeling" of Go.
+
+I also have almost no knowledge about compilers. I just compiler front-end user.
+
+In all code examples I use two following versions of Go.
+go version go1.17.7 linux/amd64
+go version go1.18beta2 linux/amd64
+
+"Type parameters proposal" (https://go.googlesource.com/proposal/+/refs/heads/master/design/43651-type-parameters.md) add new "[]" in new role. It allows to write
+> func someFunction[T Constraint](...) { ... }
+> type someType[T Constraint] ...
+where "Constraint" is constraint on allowed type parameters and "T"" is a type parameter. (I hope that I didn't mess up names.)
+
+As a byproduct of some obvious mistakes I find that
+> type someInt[3] int
+work fine in both Go 17 and 18beta2. It defines someInt as new type with underling type [3]int. This looks weird and pouting something like that in the working code is probably a sin, but this is not that big issue.
+
+I'm now trying to play with compilers with this construction.
+> type someDifferentInt[float64] int
+In Go 1.17 I get this complain
+> invalid array bound float64
+> type float64 is not an expression
+while in Go 1.18beta2 I get
+> float64 (type) is not an expression
+It probably need be this way, that with using "[T Constraint]" to define (?) type parameters, compiler can't says that it is "invalid array bound float64", but new error message is still less useful. I guess we need to live with that.
+
+> type someOtherInt[float64 float64] int
+This is awful thing to write, but I still perplexed by what compilers say.
+Go 1.17:
+> syntax error: unexpected float64, expecting ]
+Go 1.18beta2:
+> cannot use a type parameter as constraint
+
+This example is to compare Go compilers with and without generics.
+> type someAnotherInt[T any] int
+Go 1.17:
+> syntax error: unexpected any, expecting ]
+
+Go 1.18beta2: it compile just fine. Can someone explain me, why compiler can't throw an error when it find unused type parameter? I like that in Go unused variable, or import, is compile time error and I would appreciate the same behavior with unused type parameters.
+
+I need to go for a while, I will go back with more questions about what you can get when using "[]" in Go.
+
+Best,
+Kamil
+
+"> type someDifferentInt[float64] int
+I can't see why the parser can't see that this should (if anything) be interpreted as an array type declaration. To me, this seems like a regression. I'd suggest maybe filing an issue."
+
+I think I know the reason. You can write
+> type someArrayWithThreeInt [3]int
+which is proper definition of new type that under the hood is just array of three int. Due to Go rules about names, white spaces and how Go parser work, this is equivalent (I think so) to
+> type someArrayWithThreeInt[3] int
+
+I check this last code in simple example and it seems to work "as you might think". It defines type which under the hood is, again, array of three ints. But writing such thing is probably a sin.
+
+I don't know if I should filing the issue. There is already 5k+ issues and a lot of work for Go developers, I don't want to add another if there is not good enough reasons. Since this can possible break some code, I heisted about that. Better gophers should look at that.
+
+Even if writing "type someArrayWithThreeInt[3] int" is evil, wicked thing, we know that everything can broke something to someone (https://xkcd.com/1172/) and Go backward compatibility police is quite strong. I want to write another 5k+ issue about thing that cannot be improved.
+
+Best,
+Kamil
+
+I'm seriously lost here. Code below works in both Go 1.17 and Go 1.18beta2
+
+> package main
+>
+> import "fmt"
+>
+> type someInterface[3] interface {
+> 	SomeMethod()
+> }
+>
+> func main() {
+> 	var varSI someInterface
+>
+> 	fmt.Printf("varSI value: %v\n", varSI)
+> 	fmt.Printf("varSI type:  %T\n", varSI)
+> }
+
+and give in both cases result
+> varSI value: [<nil> <nil> <nil>]
+> varSI type:  main.someInterface
+
+I didn't find any way to assign some new value to "varSI", but this is already disturbing to me.
+
+Best,
+Kamil
+
+
+
+> type someOtherInt[float64 float64] int
+This is awful thing to write, but I still perplexed by what compilers say.
+Go 1.17:
+> syntax error: unexpected float64, expecting ]
+Go 1.18beta2:
+> cannot use a type parameter as constraint
+
+"This error message seems reasonably clear to me. You are declaring a type parameter `float64` with constraint `float64`. It tells you that you can't use type parameters as constraints."
+I choose this example to be "straight to your face". I can't tell if it was the first example, this is silly code, I would find out what happens easily than in real code that I had. In this original example message wasn't to useful since thing used as a constraint wasn't the type.
+
+"Believe it or not, but I agree. It's just the least bad solution I could come up with, so far."
+I can relate somewhat to your situations. We all need to learn how to use type parameters in Go and it will take a while even for the best of us.
+
+
+
+
+
+
+
+
+Hello,
+
+I have so background in C and C++ so was used to that you CAN'T define variable with the name of predefined types. But, in Go 1.17 (go version go1.17.7 linux/amd64)
+> package main
+>
+> import "fmt"
+>
+> func main() {
+> 	var int float64 = 2.5
+>
+> 	fmt.Printf("int: %v, %T\n", int, int)
+>
+> 	// var varOne int = 1
+>
+> 	// fmt.Printf("varOne: %v", varOne)
+> }
+this code compile and produce result
+> int: 2.5, float64
+
+When you uncomment two lines in this example you will get error
+> int is not a type
+
+In Go 1.18beta2 (go version go1.18beta2 linux/amd64)
+> package main
+>
+> import (
+> 	"fmt"
+> 	// "math"
+> )
+>
+> type Constraint interface {
+> 	float64
+> }
+>
+> func someFunction[uint8 Constraint](x uint8) uint8 {
+> 	x += uint8(1)
+> 	return x
+> }
+>
+> func main() {
+> 	var x float64 = 1
+>
+> 	fmt.Printf("someFunction(%v): %v\n", x, someFunction(x))
+> 	fmt.Printf("x type: %T\n", x)
+> 	fmt.Printf("someFunction(x) type: %T\n", someFunction(x))
+> }
+this code compile and produce result
+> someFunction(1): 2
+> x type: float64
+> someFunction(x) type: float64
+
+Can anyone tell me why this behavior is possible in Go? In the past I never write "var int int" because it is wicked and possible sinful, but syntax for generic functions make easier for me to produce such evil things.
+
+I also check what happened when you use keywords as names.
+
+This is a bit too much for me for one day, I will be back tomorrow.
+
+Best,
+Kamil
