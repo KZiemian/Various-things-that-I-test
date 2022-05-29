@@ -33,47 +33,62 @@ ERRORSANDCOMMENTSPATH="$HOME/Good-things/Błędy-i-uwagi"
 
 
 ####################
-# DEUS and philosophy path
+# DEUS and philosophy paths
 DEUSPHILOSOPHYPATH="$ERRORSANDCOMMENTSPATH/DEUS-i-filozofia-błędy-i-uwagi/"
 ####################
 
 
 
 ####################
-# Economics path
+# Computer science paths
+COMPUTERSCIENCEPATH="$ERRORSANDCOMMENTSPATH/Pozostałe-dziedziny-błędy-i-uwagi/Informatyka-błędy-i-uwagi"
+####################
+
+
+
+####################
+# Economics paths
 ECONOMICSPATH="$ERRORSANDCOMMENTSPATH/Pozostałe-dziedziny-błędy-i-uwagi/Ekonomia-błędy-i-uwagi"
 ####################
 
 
 
 #####################
-# History path
+# History paths
 HISTORYPATH="$ERRORSANDCOMMENTSPATH/Historia-błędy-i-uwagi"
 ####################
 
 
 
 ####################
-# Mathematics path
+# Mathematics paths
 MATHEMATICSPATH="$ERRORSANDCOMMENTSPATH/Matematyka-błędy-i-uwagi"
 
+
+ALGEBRAPATH="$MATHEMATICSPATH/Algebra-błędy-i-uwagi"
+
+DIFFERENTIALGEOMETRYPATH="$MATHEMATICSPATH/Geometria-różniczkowa-błędy-i-uwagi"
+
+FUNCTIONALANALYSISPATH="$MATHEMATICSPATH/Analiza-funkcjonalna-błędy-i-uwagi"
 
 LOGICANDSETTHEORYPATH="$MATHEMATICSPATH/Podstawy-matematyki-błędy-i-uwagi/Logika-i-teoria-mnogości-błędy-i-uwagi"
 
 MATHEMATICALANALYSISPATH="$MATHEMATICSPATH/Analiza-matematyczna-błędy-i-uwagi"
+
+NONCOMMUTATIVEGEOMETRYPATH="$MATHEMATICSPATH/Geometria-nieprzemienna-błędy-i-uwagi"
 ####################
 
 
 
 ####################
-# Exercises to do path
+# Exercises to do paths
 EXERCISESTODOLISTPATH="$HOME/Good-things/Various-writings/Zadania-zrób"
 ####################
 
 
 
 ####################
-# Physics path
+# Physics paths
 PHYSICSPATH="$ERRORSANDCOMMENTSPATH/Fizyka-błędy-i-uwagi"
 
 
@@ -91,7 +106,11 @@ QUANTUMMECHANICSPATH="$PHYSICSPATH/Mechanika-kwantowa-błędy-i-uwagi"
 
 
 
+####################
+# Various temporary paths
 
+NOTESONEPATH="$HOME/Good-things/Various-writings/Notatki-do-oddziaływań-elektrosłabych"
+####################
 
 
 
@@ -131,9 +150,54 @@ rsync $latexfile $HISTORYPATH
 
 
 ####################
+# Synchronization of file "VariousFieldsBooks.bib"
+LATEXFILEPATH="$BIBLIOGRAPHYPATH/MathComScienceBooks.bib"
+
+
+# Computer science directory
+rsync $LATEXFILEPATH $COMPUTERSCIENCEPATH
+
+
+##########
+# Mathematical directories
+
+rsync $LATEXFILEPATH $ALGEBRAPATH
+
+rsync $LATEXFILEPATH $DIFFERENTIALGEOMETRYPATH
+
+rsync $LATEXFILEPATH $FUNCTIONALANALYSISPATH
+
+rsync $LATEXFILEPATH $MATHEMATICALANALYSISPATH
+
+rsync $LATEXFILEPATH $NONCOMMUTATIVEGEOMETRYPATH
+####################
+
+
+
+####################
+# Synchronization of file "VariousFieldsBooks.bib"
+LATEXFILEPATH="$BIBLIOGRAPHYPATH/VariousFieldsBooks.bib"
+
+
+# History directory
+rsync $LATEXFILEPATH $HISTORYPATH
+####################
+
+
+
+####################
 # Synchronization of file "PhilNaturBooks.bib"
 LATEXFILEPATH="$BIBLIOGRAPHYPATH/PhilNaturBooks.bib"
 
+
+##########
+# Mathematical directories
+
+rsync $LATEXFILEPATH $FUNCTIONALANALYSISPATH
+
+
+##########
+# Physics directories
 
 # Newtonian mechanics directory
 rsync $LATEXFILEPATH $NEWTONIANMECHANICSPATH
@@ -235,34 +299,6 @@ rsync $LATEXFILEPATH $HISTORYPATH
 # rsync $latexfile $physicspath/Wprowadzenie-do-fizyki-błędy-i-uwagi/
 
 
-# rsync $latexfile $presentimprovepath
-# rsync $latexfile $presentsomepath
-
-
-# rsync $latexfile $errorspath/Do-wydawnictwa/
-
-
-
-
-
-# # #####
-# # # Article
-# # rsync $latexfile $articlepath
-
-
-
-
-
-
-
-
-# rsync $latexfile $mathpath/Algebra-błędy-i-uwagi/
-# rsync $latexfile $mathpath/Analiza-funkcjonalna-błędy-i-uwagi/
-# rsync $latexfile $mathpath/Analiza-matematyczna-błędy-i-uwagi/
-# rsync $latexfile $mathpath/Geometria-różniczkowa-błędy-i-uwagi/
-# rsync $latexfile $mathpath/Geometria-nieprzemienna-błędy-i-uwagi/
-
-# rsync $latexfile $mathpath/Równania-różniczkowe-błędy-i-uwagi/
 
 
 # rsync $latexfile $errorspath/Informatyka-błędy-i-uwagi/
@@ -305,14 +341,6 @@ rsync $LATEXFILEPATH $HISTORYPATH
 
 # rsync $latexfile $presentimprovepath
 # rsync $latexfile $presentsomepath
-
-
-# rsync $latexfile $errorspath/Do-wydawnictwa/
-
-
-# ##########
-# # Kopiowanie pliku "ArticMathInfo.bib"
-# latexfile="$biblatexpath/ArticMathInfo.bib"
 
 
 # rsync $latexfile $mathpath/Algebra-błędy-i-uwagi/
@@ -388,8 +416,12 @@ rsync $LATEXFILEPATH $HISTORYPATH
 # It contains various general purpose macros.
 LATEXFILEPATH="$BIBLIOGRAPHYPATH/latexgeneralcommands.sty"
 
+
 # DEUS and philosophy directory
 rsync $LATEXFILEPATH $DEUSPHILOSOPHYPATH
+
+# Computer science directory
+rsync $LATEXFILEPATH $COMPUTERSCIENCEPATH
 
 # Economics directory
 rsync $LATEXFILEPATH $ECONOMICSPATH
@@ -398,24 +430,38 @@ rsync $LATEXFILEPATH $ECONOMICSPATH
 rsync $LATEXFILEPATH $HISTORYPATH
 
 
+
 ##########
 # Mathematical directories
+
+# Algebra path
+rsync $LATEXFILEPATH $ALGEBRAPATH
+
+# Differential geometry directory
+rsync $LATEXFILEPATH $DIFFERENTIALGEOMETRYPATH
+
+# Functional analysis directory
+rsync $LATEXFILEPATH $FUNCTIONALANALYSISPATH
+
+# Logic and set theory directory
+rsync $LATEXFILEPATH $LOGICANDSETTHEORYPATH
 
 # Mathematical analysis directory
 rsync $LATEXFILEPATH $MATHEMATICALANALYSISPATH
 
-# Logic and set theory directory
-rsync $LATEXFILEPATH $LOGICANDSETTHEORYPATH
+# Noncommutative geometry directory
+rsync $LATEXFILEPATH $NONCOMMUTATIVEGEOMETRYPATH
+
+
+
+##########
+# Physics directories
 
 # Analysis of experimental data directory
 rsync $LATEXFILEPATH $ANALYSISOFEXPERIMENTALDATA
 
 # Newtonian mechanics directory
 rsync $LATEXFILEPATH $NEWTONIANMECHANICSPATH
-
-
-##########
-# Physics directories
 
 # Physics of spacetime directory
 rsync $LATEXFILEPATH $PHYSICSOFSPACETIMEPATH
@@ -425,6 +471,13 @@ rsync $LATEXFILEPATH $QUANTUMMECHANICSPATH
 
 # QFT directory
 rsync $LATEXFILEPATH $QFTPATH
+
+
+
+##########
+# Various notes directories
+
+rsync $LATEXFILEPATH $NOTESONEPATH
 ####################
 
 
@@ -442,21 +495,33 @@ rsync $LATEXFILEPATH $DEUSPHILOSOPHYPATH
 ##########
 # Mathematical directories
 
-# Mathematical analysis directory
-rsync $LATEXFILEPATH $MATHEMATICALANALYSISPATH
+# Algebra path
+rsync $LATEXFILEPATH $ALGEBRAPATH
+
+# Differential geometry directory
+rsync $LATEXFILEPATH $DIFFERENTIALGEOMETRYPATH
+
+# Functional analysis path
+rsync $LATEXFILEPATH $FUNCTIONALANALYSISPATH
 
 # Logic and set theory directory
 rsync $LATEXFILEPATH $LOGICANDSETTHEORYPATH
+
+# Mathematical analysis directory
+rsync $LATEXFILEPATH $MATHEMATICALANALYSISPATH
+
+# Noncommutative geometry directory
+rsync $LATEXFILEPATH $NONCOMMUTATIVEGEOMETRYPATH
+
+
+##########
+# Physics directories
 
 # Analysis of experimental data directory
 rsync $LATEXFILEPATH $ANALYSISOFEXPERIMENTALDATA
 
 # Newtonian mechanics directory
 rsync $LATEXFILEPATH $NEWTONIANMECHANICSPATH
-
-
-##########
-# Physics directories
 
 # Physics of spacetime directory
 rsync $LATEXFILEPATH $PHYSICSOFSPACETIMEPATH
@@ -466,19 +531,25 @@ rsync $LATEXFILEPATH $QUANTUMMECHANICSPATH
 
 # QFT directory
 rsync $LATEXFILEPATH $QFTPATH
+
+
+##########
+# Various notes directories
+
+rsync $LATEXFILEPATH $NOTESONEPATH
 ####################
 
 
 
 
 ####################
-# Synchronization of package "functionalanalysiscommands"
+# Synchronization of file "functionalanalysiscommands.sty"
 # It contains various macros for symbols that often appeare in the context
 # of functional analysis
-# LATEXFILEPATH="$BIBLIOGRAPHYPATH/functionalanalysiscommands.sty"
+LATEXFILEPATH="$BIBLIOGRAPHYPATH/functionalanalysiscommands.sty"
 
 
-# rsync $LATEXFILEPATH $EXERCISETODOLISTPATH
+rsync $LATEXFILEPATH $FUNCTIONALANALYSISPATH
 
 
 
@@ -489,4 +560,3 @@ rsync $LATEXFILEPATH $QFTPATH
 
 
 # ##########
-# # Kopiowanie do artykułu
