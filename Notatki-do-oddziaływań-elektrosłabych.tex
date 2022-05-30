@@ -1,0 +1,620 @@
+% Autor: Kamil Ziemian
+% Korekta: Wojciech Dyba
+
+% --------------------------------------------------------------------
+% Podstawowe ustawienia i pakiety
+% --------------------------------------------------------------------
+\RequirePackage[l2tabu, orthodox]{nag} % Wykrywa przestarzałe i niewłaściwe
+% sposoby używania LaTeXa. Więcej jest w l2tabu English version.
+\documentclass[a4paper,11pt]{article}
+% {rozmiar papieru, rozmiar fontu}[klasa dokumentu]
+\usepackage[MeX]{polski} % Polonizacja LaTeXa, bez niej będzie pracował
+% w języku angielskim.
+\usepackage[utf8]{inputenc} % Włączenie kodowania UTF-8, co daje dostęp
+% do polskich znaków.
+\usepackage{lmodern} % Wprowadza fonty Latin Modern.
+\usepackage[T1]{fontenc} % Potrzebne do używania fontów Latin Modern.
+
+
+
+% ------------------------------
+% Podstawowe pakiety (niezwiązane z ustawieniami języka)
+% ------------------------------
+\usepackage{microtype} % Twierdzi, że poprawi rozmiar odstępów w tekście.
+\usepackage{graphicx} % Wprowadza bardzo potrzebne komendy do wstawiania
+% grafiki.
+\usepackage{verbatim} % Poprawia otoczenie VERBATIME.
+\usepackage{textcomp} % Dodaje takie symbole jak stopnie Celsiusa,
+% wprowadzane bezpośrednio w tekście.
+\usepackage{vmargin} % Pozwala na prostą kontrolę rozmiaru marginesów,
+% za pomocą komend poniżej. Rozmiar odstępów jest mierzony w calach.
+% ------------------------------
+% MARGINS
+% ------------------------------
+\setmarginsrb
+{ 0.7in}  % left margin
+{ 0.6in}  % top margin
+{ 0.7in}  % right margin
+{ 0.8in}  % bottom margin
+{  20pt}  % head height
+{0.25in}  % head sep
+{   9pt}  % foot height
+{ 0.3in}  % foot sep
+
+
+
+% ------------------------------
+% Często przydatne pakiety
+% ------------------------------
+\usepackage{csquotes} % Pozwala w prosty sposób wstawiać cytaty do tekstu.
+\usepackage{xcolor} % Pozwala używać kolorowych czcionek (zapewne dużo
+% więcej, ale ja nie potrafię nic o tym powiedzieć).
+
+
+
+% ------------------------------
+% Pakiety do tekstów z nauk przyrodniczych
+% ------------------------------
+\let\lll\undefined % Amsmath gryzie się z językiem pakietami do języka
+% polskiego, bo oba definiują komendę \lll. Aby rozwiązać ten problem
+% oddefiniowuję tę komendę, ale może tym samym pozbywam się dużego Ł.
+\usepackage[intlimits]{amsmath} % Podstawowe wsparcie od American
+% Mathematical Society (w skrócie AMS)
+\usepackage{amsfonts, amssymb, amscd, amsthm} % Dalsze wsparcie od AMS
+% \usepackage{siunitx} % Dla prostszego pisania jednostek fizycznych
+\usepackage{upgreek} % Ładniejsze greckie litery
+% Przykładowa składnia: pi = \uppi
+\usepackage{slashed} % Pozwala w prosty sposób pisać slash Feynmana.
+\usepackage{calrsfs} % Zmienia czcionkę kaligraficzną w \mathcal
+% na ładniejszą. Może w innych miejscach robi to samo, ale o tym nic
+% nie wiem.
+
+
+
+% ##########
+% Tworzenie otoczeń "Twierdzenie", "Definicja", "Lemat", etc.
+\newtheorem{theorem}{Twierdzenie}  % Komenda wprowadzająca otoczenie
+% „theorem” do pisania twierdzeń matematycznych
+\newtheorem{definition}{Definicja}  % Analogicznie jak powyżej
+\newtheorem{corollary}{Wniosek}
+
+
+
+% ---------------------------------------
+% Pakiety napisane przez użytkownika.
+% Mają być w tym samym katalogu to ten plik .tex
+% ---------------------------------------
+\usepackage{latexgeneralcommands}
+\usepackage{mathcommands}
+% \usepackage{calculuscommands}
+% \usepackage{SchwartzBooksCommands}  % Pakiet napisany m.in. dla tego pliku.
+
+
+
+% ---------------------------------------------------------------------
+% Dodatkowe ustawienia dla języka polskiego
+% ---------------------------------------------------------------------
+\renewcommand{\thesection}{\arabic{section}.}
+% Kropki po numerach rozdziału (polski zwyczaj topograficzny)
+\renewcommand{\thesubsection}{\thesection\arabic{subsection}}
+% Brak kropki po numerach podrozdziału
+
+
+
+% ------------------------------
+% Ustawienia różnych parametrów tekstu
+% ------------------------------
+\renewcommand{\arraystretch}{1.2} % Ustawienie szerokości odstępów między
+% wierszami w tabelach.
+
+
+
+% ------------------------------
+% Pakiet "hyperref"
+% Polecano by umieszczać go na końcu preambuły.
+% ------------------------------
+\usepackage{hyperref} % Pozwala tworzyć hiperlinki i zamienia odwołania
+% do bibliografii na hiperlinki.
+
+
+
+
+
+
+
+
+
+
+% ---------------------------------------------------------------------
+% Tytuł, autor, data
+\title{Notatki}
+
+% \author{}
+% \date{}
+% ---------------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+% ####################################################################
+\begin{document}
+% ####################################################################
+
+
+
+
+
+% ######################################
+\maketitle % Tytuł całego tekstu
+% ######################################
+
+
+
+
+
+
+% ############################
+\section{Możliwe człony w lagrangianie}
+% ############################
+
+
+Lagrangiany używane w teorii pola można w relatywnie krótki sposób scharakteryzować. Takie lagrangiany zawsze będą postaci wielomianu wielu zmiennych w polach i ich pochodnych. Przykładowo wielomiany wielu zmiennych
+\begin{equation}
+  \label{eq:1}
+  P_{ 1 }( x ) = x, \quad P_{ 2 }( x, y ) = xy, \quad P_{ 3 }( x, y ) = x^{ 2 } y, \quad
+  P_{ 4 }( x, y ) = xy + x^{ 3 },
+\end{equation}
+prowadzą do następujących członów lagrangianu, gdy dokonamy zamiany $x \mapsto \phi( t, x )$, $y \mapsto \partial_{ \mu } \phi( t, x )$.
+\begin{equation}
+  \label{eq:2}
+  \begin{split}
+    &P_{ 1 }( \phi( t, x ) ) = \phi( t, x ), \quad
+      P_{ 2 }( \phi( t, x ), \partial_{ \mu } \phi( t, x ) ), \quad
+      P_{ 3 }( \phi( t, x ), \partial_{ \mu } \phi( t, x ) )
+      = \phi^{ 2 }( t, x ) + \partial_{ \mu } \phi( t, x ), \quad \\
+    &P_{ 4 }( \phi( t, x ), \partial_{ \mu } \phi( t, x ) )
+      = \phi( t, x ) \partial_{ \mu } \phi( t, x ) + \phi( t, x )^{ 3 }.
+  \end{split}
+\end{equation}
+Kilka uwag porządkowych. W powyższym wzorach $t$ oznacza czas, a $x$ położenie na prostej. Możemy równie dobrze napisać $x$, $y$, $z$, po prostu mniej pisania.
+
+W wielomianie każda zmienna może być \textit{tylko} w potędze $0, 1, 2, 3, \ldots$. Stopień wyrazu $x$ to 1, $xy$ to 2, $x y^{ 2 }$ to 3, etc. Ten sam stopień przypisujemy wyrazowi w którym zmienne $x$, $y$, $z$ zastąpiliśmy odpowiednimi polami lub ich pochodnymi tych pól. To nie powinno sprawiać trudności.
+
+W ogólności każdy człon lagrangianu jest iloczynem pól i~pochodnych tych pól po $x^{ \mu }$. Dla wygody często mówimy, po prostu że człon ten jest iloczynem pól, w domyśle dopuszczając, że mogą tam też być pochodne odpowiednich pól.
+
+Rozważamy tylko \textbf{lokalne teorie pola}. To znaczy, że jeśli mamy dwa pola $\psi( t, x )$ i $\phi( t, x )$ to dopuszczamy tylko iloczyny postaci
+\begin{equation}
+  \label{eq:3}
+  \psi( t, x ), \quad \psi( t, x ) \phi( t, x ), \quad \psi( t, x )^{ 2 } \phi( t, x ), \quad
+  \psi( t, x ) \partial_{ \mu }\phi( t, x ), \ldots
+\end{equation}
+Mówiąc krótko pola w danym członie muszą być obliczone w tym samym punkcie czasoprzestrzeni. Inaczej mówiąc pole może oddziaływać z innym polem wtedy i tylko wtedy gdy znajdują się w tym samym czasie i w tym samym miejscu, stąd mówimy o \textit{lokalnej} teorii pola.
+
+Najprostszy przykład członu nielokalnego to
+
+
+
+
+
+
+% ############################
+\section{Klasyfikacja członów w lagrangianie ze względu na stopień}
+% ############################
+
+
+Niech $\phi( x )$ będzie zespolonym polem skalarnym i w tym podrozdziale
+$x$ oznacza cztery współrzędne czasoprzestrzenne. Możemy teraz
+sklasyfikować wszystkie możliwe człony naszych lagrangianów, ze
+względu na stopień.
+
+\textbf{Stopień 0.} Wtedy $\phi( x )^{ 0 } = 1$. Taki człon nie wprowadza
+żadnych zmian do teorii, bo to przesunięcie wszystkie o stałą, więc
+możemy go pominąć.
+
+\textbf{Stopień 1.} Człon postaci $\phi( x )$, $\bar{\phi}( x )$. Dodatnie
+takie członu zmienia lagrangian, ale okazuje się, że nie zmienia
+działania. Wszystkie wielkości które nie zmieniają działania możemy
+usunąć z lagrangianu, bez zmiany fizyki.
+
+\textbf{Stopień 2.} Mogą być to człony postaci $\phi( x )^{ 2 }$,
+$\bar{\phi}( x ) \phi( x )$, $\phi( x ) \partial_{ \mu } \phi( x )$,
+$\bar{\phi}( x ) \partial_{ \mu } \phi( x )$,
+$\partial_{ \mu } \phi( x ) \partial^{ \mu } \phi( x )$. Prawie wszystkie tego typu człony
+pojawiają się rozważanych teoriach.
+
+\begin{itemize}
+\item $\phi( x )^{ 2 }$, $\bar{\phi}( x ) \phi( x )$ -- człon masowe dla bozonu,
+  bądź fermionu,
+
+\item $\partial_{ \mu } \phi( x ) \partial^{ \mu } \phi( x )$ -- człon kinetyczny (odpowiadając
+  za ruch swobodny) bozonu,
+
+\item $\bar{\phi}( x ) \partial_{ \mu } \phi( x )$ -- człony tego typu opisują człon
+  kinetyczny fermionu.
+\end{itemize}
+
+\textbf{Stopień większy od 3.} Przykładowo $\phi( x )^{ 3 }$. Wszystkie
+tego typu człony opisują oddziaływanie między cząstkami. Mogą opisywać
+oddziaływanie różnych cząstek, np. elektronu, pozytronu i fotonu, lub
+cząstek tego samego typu, np. trzech jednakowych gluonów.
+
+W praktyce spotykamy tylko człony stopnia 3 i 4, więcej o tym w
+następnym punkcie.
+
+\textbf{Stopień większy od 5.} Przykładowo $\phi( x )^{ 5 }$. Człony tego
+typu opisują oddziaływanie w teorii, ale w praktyce ich nie spotykamy.
+Nie wiadomo dlaczego, jest to jednak bardzo dobra wiadomość. Człony
+tego typu nie są renormalizowalne, co sprowadza się do tego, że nie
+umiemy nic sensownego dla tej teorii obliczyć.
+
+
+
+
+
+
+
+
+
+
+% ############################
+\section{Typy członów lagrangianu spotykane w fizyce cząstek}
+% ############################
+
+
+
+
+
+
+
+% ############################
+\section{Zmienne Grassmana}
+% ############################
+
+
+Oprócz liczb zespolony $\Cbb$ będziemy potrzebowali jest antyprzemiennych \textbf{zmiennych (liczb) Grasmanna}. Zaczniemy od najprostszego przykładu gdy mamy tylko dwie \textbf{zmienne Grassmana}: $\theta_{ 1 }$, $\theta_{ 2 }$.
+
+Napije definiujemy iloczyn zmiennej Grasmanna przez liczbę zespoloną $\alpha$:
+\begin{equation}
+  \label{eq:Zmienne-Grassmana-01}
+  \alpha \theta_{ i } = \theta_{ i } \alpha.
+\end{equation}
+Takie wyrażenie przedstawia zmienną Grasmanna, ale jedyną naprawdę ważną rzeczą jest to, że mnożenie liczby zespolonej przez zmienną Grassmana jest przemienne.
+
+Definiujemy potęgę zerową zmiennych Grasmanna.
+\begin{equation}
+  \label{eq:Zmienne-Grassmana-02}
+  ( \theta_{ 1 } )^{ 0 } = ( \theta_{ 2 } )^{ 0 } = 1,
+\end{equation}
+gdzie 1 to liczba zespolona (nie musi to być oczywiste). Liczby zespolone traktujemy więc jako szczególny przypadek zmiennej Grassmana.
+
+Teraz określimy iloczyn dwóch zmiennych Grassmana.
+\begin{equation}
+  \label{eq:Zmienne-Grassmana-03}
+  \theta_{ i } \theta_{ j } = -\theta_{ j } \theta_{ i }.
+\end{equation}
+Widzimy więc, że $\theta_{ 1 } \theta_{ 2 }$ jest zmienną Grassmana, natomiast $\theta_{ 2 } \theta_{ 1 }$ jest zmienną Grassmana liniowo zależną od $\theta_{ 1 } \theta_{ 2 }$
+\begin{equation}
+  \label{eq:Zmienne-Grassmana-03}
+  \theta_{ 2 } \theta_{ 1 } = -\theta_{ 1 } \theta_{ 2 }.
+\end{equation}
+Z tego też wynika, że kwadrat dowolnej bazowej zmiennej Grassmana jest równy 0.
+\begin{equation}
+  \label{eq:Zmienne-Grassmana-05}
+  \theta_{ 1 } \theta_{ 1 } = ( \theta_{ 1 } )^{ 2 } = -\theta_{ 1 } \theta_{ 1 }.
+\end{equation}
+Dodając $\theta_{ 1 } \theta_{ 1 }$ do obu stron tej równości dostajemy.
+\begin{equation}
+  \label{eq:Zmienne-Grassmana-06}
+  2 \theta_{ 1 } \theta_{ 1 } = 0.
+\end{equation}
+Po podzieleniu przez dwa uzyskujemy porządany wynik
+
+Dwie dowolne zmienne Grassmana możemy do siebie dodać.
+\begin{subequations}
+  \begin{align}
+    \label{eq:Zmienne-Grassmana-07-A}
+    &\alpha + \theta_{ 1 } \\
+    \label{eq:Zmienne-Grassmana-07-B}
+    &\alpha \theta_{ 1 } + \beta \theta_{ 1 } = ( \alpha + \beta ) \theta_{ 1 } \\
+    \label{eq:Zmienne-Grassmana-07-C}
+    &\theta_{ 1 } + \theta_{ 2 } \\
+        \label{eq:Zmienne-Grassmana-07-D}
+    &\theta_{ 1 } + \theta_{ 1 } \theta_{ 2 }.
+  \end{align}
+\end{subequations}
+Dla dwóch bazowych zmiennych Grassmana mamy więc $4 = 2^2$ liniowo niezależne liczby Grassmana (liczba zespolona też jest zmienną Grassmana).
+\begin{equation}
+  \label{eq:Zmienne-Grassmana-08}
+  \alpha, \theta_{ 1 }, \theta_{ 2 }, \theta_{ 1 } \theta_{ 2 }, \quad \alpha \in \Cbb.
+\end{equation}
+Najogólniejsze wyrażeni jakie możemy utworzyć w tym przypadku ze zmiennych Grassmana, to
+\begin{equation}
+  \label{eq:Zmienne-Grassmana-09}
+  \alpha + \beta \theta_{ 1 } + \gamma \theta_{ 2 } + \delta \theta_{ 1 } \theta_{ 2 }, \quad
+  \alpha, \beta, \gamma, \delta \in \Cbb.
+\end{equation}
+
+Na koniec zwróćmy uwagę, że
+\begin{equation}
+  \label{eq:Zmienne-Grassmana-10}
+  ( \theta_{ 1 } \theta_{ 2 } )^{ 2 } = 0.
+\end{equation}
+Jest tak ponieważ
+\begin{equation}
+  \label{eq:Zmienne-Grassmana-10}
+  ( \theta_{ 1 } \theta_{ 2 } )^{ 2 } =
+  ( \theta_{ 1 } \theta_{ 2 } ) ( \theta_{ 1 } \theta_{ 2 } ) =
+  \theta_{ 1 } \theta_{ 2 } \theta_{ 1 } \theta_{ 2 } =
+  -\theta_{ 2 } \theta_{ 1 } \theta_{ 1 } \theta_{ 2 } =
+  -\theta_{ 1 } \theta_{ 2 } \theta_{ 2 } \theta_{ 1 } =
+  -\theta_{ 1 } 0 \theta_{ 1 } = 0.
+\end{equation}
+
+Przyjrzyjmy się jeszcze przypadkowi, gdy mielibyśmy trzy bazowe zmienne Grassmana: $\theta_{ 1 }$, $\theta_{ 2 }$, $\theta_{ 3 }$. Istniej wówczas $8 = 2^{ 3 }$ liniowo niezależnych zmiennych Grassmana.
+\begin{equation}
+  \label{eq:Zmienne-Grassmana-11}
+  \alpha, \theta_{ 1 }, \theta_{ 2 }, \theta_{ 3 }, \theta_{ 1 } \theta_{ 2 }, \theta_{ 1 } \theta_{ 3 },
+  \theta_{ 2 } \theta_{ 3 }, \theta_{ 1 } \theta_{ 2 } \theta_{ 3 }, \quad \alpha \in \Cbb.
+\end{equation}
+
+Ogólnie, dla $N$ bazowych zmiennych Grassmana mamy $2^{ N }$ liniowo niezależnych zmiennych Grassmana. Należy pamiętać, że jedną z nich są liczby zespolone.
+
+Na razie musimy przerwać nasze rozważania tutaj, bowiem czeka nas temat spinorowych zmiennych Grassmana.
+
+
+
+
+
+
+% ############################
+\subsection{Podnoszenie i opuszczenie wskaźników zmiennych Grassmana}
+% ############################
+
+
+W fizyce będą nam potrzebna „standardowa” przestrzeń zmiennych Grassmana, generowana przez dwie bazowe zmienne Grassmana: $\theta_{ 1 }$, $\theta_{ 2 }$. Opuszczanie i podnoszenie wskaźników takich zmiennych definiujemy za pomocą macierzy
+\begin{equation}
+  \label{eq:Zmienne-Grassmana-12}
+  \varepsilon^{ u } =
+  \begin{pmatrix}
+    \hphantom{-}0 & 1 \\
+    -1 & 0
+  \end{pmatrix}, \quad
+  \varepsilon_{ d } =
+  \begin{pmatrix}
+    0 & -1 \\
+    1 & \hphantom{-}0
+  \end{pmatrix}.
+\end{equation}
+Od razu widzimy, że
+\begin{equation}
+  \label{eq:Zmienne-Grassmana-13}
+  \varepsilon^{ u } = \varepsilon_{ d }^{ \,\: T }, \quad
+  ( \varepsilon^{ u } )^{ 2 } = ( \varepsilon_{ d } )^{ 2 }
+  = -\mathbf{1}_{ 2 }, \quad
+  \varepsilon^{ u } \varepsilon_{ d } = \mathbf{1}_{ 2 }, \quad
+  \varepsilon^{ u } = i \sigma_{ P, 2 },
+\end{equation}
+gdzie $\mathbf{1}_{ 2 }$ to dwuwymiarowa macierz $2 \times 2$, a $\sigma_{ P, 2 }$ to druga macierz Pauliego. Te same relacje w zapisie wskaźnikowym.
+\begin{subequations}
+  \begin{align}
+    \label{eq:Zmienne-Grassmana-14-A}
+    \varepsilon^{ \alpha \beta } &= \varepsilon_{ \beta \alpha }, \\
+    \varepsilon^{ \alpha \gamma } \varepsilon^{ \gamma \beta } &= \varepsilon_{ \alpha \gamma } \varepsilon_{ \gamma \beta } = -\delta^{ \alpha \beta }, \\
+    \varepsilon^{ \alpha \gamma } \varepsilon_{ \gamma \beta } &= \delta^{ \alpha }_{ \beta }.
+  \end{align}
+\end{subequations}
+
+Przyjmujemy konwekcję, że numery wierszy i kolumn macierzy $\varepsilon^{ u }$ piszemy na górze, zaś $\varepsilon_{ d }$ na dole. Wprowadzamy też oznaczenia
+\begin{equation}
+  \label{eq:Zmienne-Grassmana-14}
+  \varepsilon^{ \alpha \beta } := ( \varepsilon^{ u } )^{ \alpha \beta }, \quad
+  \varepsilon_{ \alpha \beta } := ( \varepsilon_{ d } )_{ \alpha \beta }.
+\end{equation}
+Standardowo $\alpha$ oznacza wiersz, a $\beta$ kolumnę.
+
+Stąd mamy dwie tożsamości
+\begin{subequations}
+  \begin{align}
+    \label{eq:Zmienne-Grassmana-15-A}
+    \theta^{ 1 }
+    &= ( \varepsilon^{ u } )^{ 1 \beta } \theta_{ \beta } = \varepsilon^{ 1 \beta } \theta_{ \beta }
+      = \varepsilon^{ 1 1 } \theta_{ 1 } + \varepsilon^{ 1 2 } \theta_{ 2 }
+      = 0 \theta_{ 1 } + 1 \theta_{ 2 } = \theta_{ 2 }, \\
+    \label{eq:Zmienne-Grassmana-15-B}
+    \theta^{ 2 } &= \varepsilon^{ 2 \beta } \theta_{ \beta } = -1 \theta_{ 1 } + 0 \theta_{ 2 } = -\theta_{ 1 }.
+  \end{align}
+\end{subequations}
+Stąd
+\begin{subequations}
+  \begin{align}
+    \label{eq:Zmienne-Grassmana-16-A}
+    \theta^{ 1 } \theta^{ 1 }
+    &= \theta_{ 2 } \theta_{ 2 } = 0, \\
+    \label{eq:Zmienne-Grassmana-16-B}
+    \theta^{ 2 } \theta^{ 2 }
+    &= ( -\theta_{ 1 } ) ( -\theta_{ 1 } ) = \theta_{ 1 }^{ 2 } = 0, \\
+    \label{eq:Zmienne-Grassmana-16-C}
+    \theta^{ 1 } \theta^{ 2 }
+    &= \theta_{ 2 } ( -\theta_{ 1 } ) = -\theta_{ 2 } \theta_{ 1 } = \theta_{ 1 } \theta_{ 2 } \neq 0.
+  \end{align}
+\end{subequations}
+Widzimy więc, że $\theta^{ 1 }$ i $\theta^{ 2 }$ to tylko wygodne nazwy dla $\theta_{ 2 }$ i $-\theta_{ 1 }$, nie zaś jakieś nowe byty matematyczne. Można też rozumować odwrotnie i uznać $\theta^{ 1 }$ i $\theta^{ 2 }$ za „wielości pierwotne”, wtedy $\theta_{ 1 }$ to wygodna nazwa na $-\theta^{ 2 }$, a $\theta_{ 2 }$ to wygodna nazwa na $\theta^{ 1 }$.
+
+Najważniejsze związki jakie otrzymaliśmy to
+\begin{subequations}
+  \begin{align}
+    \label{eq:Zmienne-Grassmana-17-A}
+    \theta^{ 1 } &= \theta_{ 2 }, \\
+    \label{eq:Zmienne-Grassmana-17-B}
+    \theta^{ 2 } &= -\theta_{ 1 }.
+  \end{align}
+\end{subequations}
+
+Wprowadzamy następującą notację.
+\begin{equation}
+  \label{eq:Zmienne-Grassmana-18}
+  \theta \theta := \theta^{ \alpha } \theta_{ \alpha } = \varepsilon^{ \alpha \beta } \theta_{ \beta } \theta_{ \alpha }.
+\end{equation}
+Wielkość tę możemy teraz łatwo obliczyć.
+\begin{equation}
+  \label{eq:Zmienne-Grassmana-19}
+  \theta \theta = \theta^{ \alpha } \theta_{ \alpha } = \theta^{ 1 } \theta_{ 1 } + \theta^{ 2 } \theta_{ 2 }
+  = \theta_{ 2 } \theta_{ 1 } - \theta_{ 1 } \theta_{ 2 } = 2 \theta_{ 2 } \theta_{ 1 }.
+\end{equation}
+Korzystając z~związku anty-przemienności i~\eqref{eq:Zmienne-Grassmana-17-A} i~\eqref{eq:Zmienne-Grassmana-17-B} szybko otrzymujemy kilka równoważnych postaci.
+\begin{equation}
+  \label{eq:Zmienne-Grassmana-20}
+  \theta \theta = 2 \theta_{ 2 } \theta_{ 1 } = -2 \theta_{ 1 } \theta_{ 2 } = 2 \theta^{ 2 } \theta_{ 2 }
+  = 2 \theta^{ 2 } \theta^{ 1 } = -2 \theta^{ 1 } \theta^{ 2 }.
+\end{equation}
+
+Teraz powinny być oczywiste następujące wnioski.
+\begin{subequations}
+  \begin{align}
+  \label{eq:13}
+    ( \theta \theta )^{ 2 } &= \theta \theta \, \theta \theta = 0, \\
+    \theta_{ \alpha } \theta \theta &= \theta \theta \theta_{ \alpha } = 0.
+  \end{align}
+\end{subequations}
+
+
+
+
+
+
+
+
+
+
+% ############################
+\subsection{Ćwiczenie, zmienne Grassmana}
+% ############################
+
+
+Dla lepszego zrozumienia zmiennych Grassmana wykonamy kilka ćwiczeń. Najpierw udowodnimy tożsamość
+\begin{equation}
+  \label{eq:4}
+  \theta^{ \alpha } \theta^{ \beta } = -\frac{ 1 }{ 2 } \varepsilon^{ \alpha \beta } \theta \theta.
+\end{equation}
+
+\textbf{Pierwszy dowód wzoru.} Dowód ten będzie polegać na rozważeniu wszystkich możliwych przypadków.
+\begin{itemize}
+\item $\alpha = 1$, $\beta = 1$. Lewa strona wynosi
+  \begin{equation}
+    \label{eq:5}
+    \theta^{ 1 } \theta^{ 1 } = 0.
+  \end{equation}
+  Dla prawej strony mamy
+  \begin{equation}
+    \label{eq:6}
+    -\frac{ 1 }{ 2 } \varepsilon^{ 1 1 } \theta \theta =
+    -\frac{ 1 }{ 2 } \varepsilon^{ 1 1 } (-2 \theta_{ 1 } \theta_{ 2 } )
+    =
+    \varepsilon^{ 1 1 } \theta_{ 1 } \theta_{ 2 } = 0 \theta_{ 1 } \theta_{ 2 } = 0.
+  \end{equation}
+
+\item $\alpha = 2$, $\beta = 2$. Wszystko jest tak samo jak w poprzednim punkcie.
+
+\item $\alpha = 1$, $\beta = 2$. Lewa strona
+  \begin{equation}
+    \label{eq:7}
+    \theta^{ 1 } \theta^{ 2 }
+  \end{equation}
+  Prawa strona
+  \begin{equation}
+    \label{eq:8}
+    -\frac{ 1 }{ 2 } \varepsilon^{ 1 2 } \theta \theta
+    = -\frac{ 1 }{ 2 } \varepsilon^{ 1 2 } ( -2 \theta_{ 1 } \theta_{ 2 } )
+    = \varepsilon^{ 1 2 } \theta_{ 1 } \theta_{ 2 } = 1 \theta_{ 1 } \theta_{ 2 }
+    = \theta_{ 1 } \theta_{ 2 }.
+  \end{equation}
+  Ten przypadek jest więc udowodniony.
+
+\item $\alpha = 2$, $\beta = 1$. Lewa strona
+  \begin{equation}
+    \label{eq:9}
+    \theta^{ 2 } \theta^{ 1 }
+  \end{equation}
+  Prawa stona
+  \begin{equation}
+    \label{eq:10}
+    -\frac{ 1 }{ 2 } \varepsilon^{ 2 1 } \theta \theta
+    = -\frac{ 1 }{ 2 } \varepsilon^{ 2 1 } ( -2 \theta_{ 1 } \theta_{ 2 } )
+    = \varepsilon^{ 2 1 } \theta_{ 1 } \theta_{ 2 } = ( -1 ) \theta_{ 1 } \theta_{ 2 }
+    = \theta_{ 2 } \theta_{ 1 }.
+  \end{equation}
+  Dowód zakończony.
+
+\end{itemize}
+Powyższe rozumowanie można byłoby uprościć, ale nam zależało by rachunki były możliwie jawne.
+
+\textbf{Drugi dowód wzoru.} W tym dowodzie posłużymy się macierzami $\varepsilon^{ u }$ i~$\varepsilon_{ d }$. Pokażemy, jak możemy przekształcić prawą stronę by otrzymać lewą.
+\begin{equation}
+  \label{eq:11}
+  -\frac{ 1 }{ 2 } \varepsilon^{ \alpha \beta } \theta \theta
+  = -\frac{ 1 }{ 2 } \varepsilon^{ \alpha \beta } \theta^{ \gamma } \theta_{ \gamma }
+  = -\frac{ 1 }{ 2 } \varepsilon^{ \alpha \beta } \theta^{ \gamma } \varepsilon_{ \gamma \delta } \theta^{ \delta }.
+\end{equation}
+Musiałem przerwać pisanie tego z braku czasu.
+% Potrzebujemy przekształcić w jakiś sposób człon $\varepsilon^{ \alpha \beta } \varepsilon_{ \gamma \delta }$. Tożsamości \eqref{eq:Zmienne-Grassmana-14-A} i dalsze wymagają by co najmniej jeden indeks w obu macierzach był indeksem sumowania, dokonamy więc przekształcenia
+% \begin{equation}
+%   \label{eq:12}
+%   \varepsilon^{ \alpha \beta } \varepsilon_{ \gamma \delta }
+%   = \sum_{ \sigma = 1, 2 } \varepsilon^{ \alpha \sigma } \varepsilon_{ \sigma \delta } \delta^{ \beta }_{ \sigma } \delta^{  }
+% \end{equation}
+
+
+
+
+
+% ############################
+\subsection{Dwie przestrzenie zmiennych Grassmana}
+% ############################
+
+
+W fizyce zachodzi czasem potrzeba, by rozważać dwie \textit{przestrzenie} zmiennych Grassmana. W tej sytuacji obok bazowych zmiennych Grassmana $\theta_{ 1 }$ i $\theta_{ 2 }$ w jednej przestrzeni, mamy jeszcze dwie bazowe zmienne Grassmana $\lambda_{ 1 }$, $\lambda_{ 2 }$. Obowiązują dla nich te same reguły co dla zmiennych $\theta{ i }$.
+\begin{subequations}
+  \begin{align}
+
+  \end{align}
+\end{subequations}
+
+
+
+
+% ############################
+\section{Spinorowe zmienne Grassmana}
+% ############################
+
+
+
+
+
+
+
+
+
+
+
+
+% #####################################################################
+% #####################################################################
+% Bibliografia
+\bibliographystyle{plalpha}
+
+\bibliography{MathComScienceBooks}{}
+
+
+
+
+
+% ############################
+
+% Koniec dokumentu
+\end{document}
