@@ -578,12 +578,59 @@ Musiałem przerwać pisanie tego z braku czasu.
 % ############################
 
 
-W fizyce zachodzi czasem potrzeba, by rozważać dwie \textit{przestrzenie} zmiennych Grassmana. W tej sytuacji obok bazowych zmiennych Grassmana $\theta_{ 1 }$ i $\theta_{ 2 }$ w jednej przestrzeni, mamy jeszcze dwie bazowe zmienne Grassmana $\lambda_{ 1 }$, $\lambda_{ 2 }$. Obowiązują dla nich te same reguły co dla zmiennych $\theta{ i }$.
+W fizyce zachodzi czasem potrzeba, by rozważać dwie \textit{przestrzenie} zmiennych Grassmana. W tej sytuacji obok bazowych zmiennych Grassmana $\theta_{ 1 }, \theta_{ 2 } \in \Theta$ w jednej przestrzeni, mamy jeszcze dwie bazowe zmienne Grassmana $\lambda_{ 1 }, \lambda_{ 2 } \in \Lambda$. Obowiązują dla nich te same reguły co dla zmiennych $\theta{ i }$.
 \begin{subequations}
   \begin{align}
-
+    \alpha \lambda_{ i } = \lambda_{ i } \alpha, \quad \alpha \in \Cbb, \\
+    \lambda_{ i } \lambda_{ j } = -\lambda_{ j } \lambda_{ i }, \\
+    \lambda^{ 2 } = -\lambda_{ 1 }, \quad \lambda^{ 1 } = \lambda_{ 2 }, \\
+    \lambda \lambda = \lambda^{ \alpha } \lambda_{ \alpha } = 2 \lambda_{ 2 } \lambda_{ 1 },
   \end{align}
 \end{subequations}
+i tak dalej. Możemy teraz rozpatrzyć iloczyn również iloczyn zmiennych Grassmana z różnych przestrzeni.
+\begin{equation}
+  \label{eq:14}
+  \lambda_{ 1 } \theta_{ 1 }, \quad \lambda \lambda \theta_{ 1 } = \lambda^{ \alpha } \lambda_{ \alpha } \theta_{ 1 }
+  = 2 \lambda_{ 2 } \lambda_{ 1 } \theta_{ 1 }, \ldots
+\end{equation}
+Iloczyn typu $\lambda_{ 1 } \theta_{ 1 }$ nie należy ani do $\Theta$ ani do $\Lambda$, jest obiektem nowego typu, możemy ten typ oznaczyć przez $\Theta \times \Lambda$.
+
+Zmienne Grassmana należą do różnych przestrzeni są \textit{przemienne} między sobą
+\begin{equation}
+  \label{eq:15}
+  \theta_{ 1 } \lambda_{ 1 } = \lambda_{ 1 } \theta_{ 1 }.
+\end{equation}
+Dodatkowa dla liczby zespolonej $\alpha$ zachodzi
+\begin{equation}
+  \label{eq:16}
+  \alpha \lambda_{ 1 } \theta_{ 1 } = \lambda_{ 1 } \alpha \theta_{ 1 } = \lambda_{ 1 } \theta_{ 1 } \alpha.
+\end{equation}
+
+Wprowadzamy następujące oznaczenie.
+\begin{equation}
+  \label{eq:19}
+  \theta \lambda := \theta^{ \alpha } \lambda_{ \alpha }.
+\end{equation}
+Wynosi ono
+\begin{equation}
+  \label{eq:20}
+  \theta \lambda = \theta_{ 2 } \lambda_{ 1 } - \theta_{ 1 } \lambda_{ 2 }.
+\end{equation}
+Choć zmienne Grassmana $\theta_{ i }$ i $\lambda_{ j }$ są przemienne, to we wzorze \eqref{eq:19} indeksy nie są umieszczone symetrycznie, a tym samym iloczyn $ \theta \lambda$ nie jest przemienny.
+\begin{equation}
+  \label{eq:21}
+  \lambda \theta = \lambda_{ 2 } \theta_{ 1 } - \lambda_{ 1 } \theta_{ 2 }
+  = \theta_{ 1 } \lambda_{ 2 } - \theta_{ 2 } \lambda_{ 1 }
+  = -\theta \lambda.
+\end{equation}
+Możemy teraz pokazać \textbf{ale brak mi czasu by to napisać}
+\begin{equation}
+  \label{eq:22}
+  \theta \lambda \theta \lambda = \frac{ 1 }{ 2 } \theta \theta \lambda \lambda \neq 0.
+\end{equation}
+
+
+
 
 
 
@@ -593,9 +640,21 @@ W fizyce zachodzi czasem potrzeba, by rozważać dwie \textit{przestrzenie} zmie
 % ############################
 
 
+Spinorowe zmienne Grassmana to zmienne z dodatkowej przestrzeni zmienny Grassmana $S \Theta$, której dwie (może być więcej, ale w fizyce zwykle wystarczą dwa) zmienne bazowe to $\bar{\theta}_{ \dot{ 1 } }$, $\bar{\theta}_{ \dot{ 2 } }$.
 
+Wszystkie własności, poza jedną, są takie jak dla pozostałych zmiennych Grassmana. \textbf{Napiszę je jak będę miał czas.}
 
-
+Jedynym wyjątkiem jest definicja symbolu $\bar{\theta} \bar{\theta}$
+\begin{equation}
+  \label{eq:17}
+  \bar{\theta} \bar{\theta} \equiv \overline{\theta \theta}
+  := \bar{\theta}_{ \dot{ \alpha } } \bar{\theta}^{ \dot{ \alpha } }.
+\end{equation}
+Porównaj położenie indeksów we wzorze \eqref{eq:Zmienne-Grassmana-18}. Możemy teraz obliczyć \textbf{nie możemy bo wzorów jeszcze nie napisałem}.
+\begin{equation}
+  \label{eq:18}
+  \overline{\theta \theta} = 2 \bar{\theta}_{ \dot{ 1 } } \bar{\theta}_{ \dot{ 2 } }.
+\end{equation}
 
 
 
