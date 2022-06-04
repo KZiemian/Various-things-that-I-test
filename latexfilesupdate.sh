@@ -208,20 +208,6 @@ rsync $LATEXFILEPATH $PROBABILTYTHEORYPATH
 
 
 ####################
-# Synchronization of file "VariousFieldsBooks.bib"
-LATEXFILEPATH="$BIBLIOGRAPHYPATH/VariousFieldsBooks.bib"
-
-
-# Economics directory
-rsync $LATEXFILEPATH $ECONOMICSPATH
-
-# History directory
-rsync $LATEXFILEPATH $HISTORYPATH
-####################
-
-
-
-####################
 # Synchronization of file "PhilNaturBooks.bib"
 LATEXFILEPATH="$BIBLIOGRAPHYPATH/PhilNaturBooks.bib"
 
@@ -271,81 +257,12 @@ rsync $LATEXFILEPATH $TERMOSTATICSETCPATH
 LATEXFILEPATH="$BIBLIOGRAPHYPATH/VariousFieldsBooks.bib"
 
 
+# Economics directory
+rsync $LATEXFILEPATH $ECONOMICSPATH
+
 # History directory
 rsync $LATEXFILEPATH $HISTORYPATH
 ####################
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-# ####################
-# # Kopiowanie pliku "LibHistoria.bib"
-# latexfile="$biblatexpath/LibHistoria.bib"
-
-
-# rsync $latexfile $historiapath/
-
-
-# rsync $latexfile $errorspath/Do-wydawnictwa/
-
-
-
-
-
-####################
-# Kopiowanie pliku "LibPhilNatur.bib"
-# latexfile="$biblatexpath/LibPhilNatur.bib"
-
-
-# rsync $latexfile $physicspath/Fizyka-czasoprzetrzeni-błędy-i-uwagi/
-# rsync $latexfile $physicspath/Mechanika-błędy-i-uwagi/
-# rsync $latexfile $physicspath/Mechanika-kwantowa-błędy-i-uwagi/
-# rsync $latexfile $physicspath/Teoria-pola-błędy-i-uwagi/
-# rsync $latexfile $physicspath/Wprowadzenie-do-fizyki-błędy-i-uwagi/
-
-
-# rsync $latexfile $presentimprovepath
-# rsync $latexfile $presentsomepath
-
-
-# rsync $latexfile $exercisespath
-
-
-# rsync $latexfile $errorspath/Do-wydawnictwa/
-
-
-
-
-
-# # #####
-# # # Article
-# # rsync $latexfile $articlepath
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
