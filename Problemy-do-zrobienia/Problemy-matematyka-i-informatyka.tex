@@ -1,0 +1,2117 @@
+% Autor: Kamil Ziemian
+
+% ---------------------------------------------------------------------
+% Podstawowe ustawienia i pakiety
+% ---------------------------------------------------------------------
+\RequirePackage[l2tabu, orthodox]{nag} % Wykrywa przestarzałe i niewłaściwe
+% sposoby używania LaTeXa. Więcej jest w l2tabu English version.
+\documentclass[a4paper,11pt]{article}
+% {rozmiar papieru, rozmiar fontu}[klasa dokumentu]
+\usepackage[MeX]{polski} % Polonizacja LaTeXa, bez niej będzie pracował
+% w języku angielskim.
+\usepackage[utf8]{inputenc} % Włączenie kodowania UTF-8, co daje dostęp
+% do polskich znaków.
+\usepackage{lmodern} % Wprowadza fonty Latin Modern.
+\usepackage[T1]{fontenc} % Potrzebne do używania fontów Latin Modern.
+
+
+
+% ---------------------------------------
+% Podstawowe pakiety (niezwiązane z ustawieniami języka)
+% ---------------------------------------
+\usepackage{microtype} % Twierdzi, że poprawi rozmiar odstępów w tekście.
+% \usepackage{graphicx} % Wprowadza bardzo potrzebne komendy do wstawiania
+% grafiki.
+% \usepackage{verbatim} % Poprawia otoczenie VERBATIME.
+% \usepackage{textcomp} % Dodaje takie symbole jak stopnie Celsiusa,
+% wprowadzane bezpośrednio w tekście.
+\usepackage{vmargin} % Pozwala na prostą kontrolę rozmiaru marginesów,
+% za pomocą komend poniżej. Rozmiar odstępów jest mierzony w calach.
+% ---------------------------------------
+% MARGINS
+% ---------------------------------------
+\setmarginsrb
+{ 0.7in}  % left margin
+{ 0.6in}  % top margin
+{ 0.7in}  % right margin
+{ 0.8in}  % bottom margin
+{  20pt}  % head height
+{0.25in}  % head sep
+{   9pt}  % foot height
+{ 0.3in}  % foot sep
+
+
+
+% ---------------------------------------
+% Często używane pakiety
+% ---------------------------------------
+% \usepackage{csquotes} % Pozwala w prosty sposób wstawiać cytaty do tekstu.
+
+
+
+% ---------------------------------------
+% Pakiety do tekstów z nauk przyrodniczych
+% ---------------------------------------
+\let\lll\undefined % Amsmath gryzie się z językiem pakietami do języka
+% % polskiego, bo oba definiują komendę \lll. Aby rozwiązać ten problem
+% % oddefiniowuję tę komendę, ale może tym samym pozbywam się dużego Ł.
+\usepackage[intlimits]{amsmath} % Podstawowe wsparcie od American
+% Mathematical Society (w skrócie AMS)
+\usepackage{amsfonts, amssymb, amscd, amsthm} % Dalsze wsparcie od AMS
+% % \usepackage{siunitx} % Dla prostszego pisania jednostek fizycznych
+\usepackage{upgreek} % Ładniejsze greckie litery
+% Przykładowa składnia: pi = \uppi
+% \usepackage{slashed} % Pozwala w prosty sposób pisać slash Feynmana.
+% \usepackage{calrsfs} % Zmienia czcionkę kaligraficzną w \mathcal
+% % na ładniejszą. Może w innych miejscach robi to samo, ale o tym nic
+% % nie wiem.
+
+
+
+
+
+% ---------------------------------------
+% Dodatkowe ustawienia dla języka polskiego
+% ---------------------------------------
+\renewcommand{\thesection}{\arabic{section}.}
+% Kropki po numerach rozdziału (polski zwyczaj topograficzny)
+\renewcommand{\thesubsection}{\thesection\arabic{subsection}}
+% Brak kropki po numerach podrozdziału
+
+
+
+% ---------------------------------------
+% Pakiety napisane przez użytkownika.
+% Mają być w tym samym katalogu to ten plik .tex
+% ---------------------------------------
+% \usepackage{latexshortcuts}
+\usepackage{mathcommands}
+
+
+
+
+
+% ---------------------------------------
+% Pakiet "hyperref"
+% Polecano by umieszczać go na końcu preambuły.
+% ---------------------------------------
+\usepackage{hyperref} % Pozwala tworzyć hiperlinki i zamienia odwołania
+% do bibliografii na hiperlinki.
+
+
+
+
+
+
+
+
+
+
+% ---------------------------------------------------------------------
+% Tytuł, autor, data
+\title{Matematyka i~informatyka, problemy do zrobienia}
+
+% \author{}
+% \date{}
+% ---------------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+% ####################################################################
+% Początek dokumentu
+\begin{document}
+% ####################################################################
+
+
+
+
+
+% ######################################
+\maketitle  % Tytuł całego tekstu
+% ######################################
+
+
+
+
+
+% ######################################
+\section{Algebra symboliczna, problemy do zrobienia}
+
+% \vspace{\spaceTwo}
+
+% ######################################
+
+
+
+% ##################
+\begin{enumerate}
+
+\item Obliczyć całki nieoznaczone podanych wyrażeń, narysuj ich
+  wykresy oraz sprawdź otrzymane wyniki, poprzez różniczkowanie.
+  \begin{align}
+    &\int \frac{ 1 }{ x } \, dx \\
+    &\int ( xt + 2x^{ 2 } )^{ n } \, dt \\
+    &\int \frac{ 1 }{ 1 + \sqrt{ x } } \, dx \\
+    &\int \frac{ 1 }{ \sin x } \, dx \\
+    &\int \frac{ 1 }{ \sqrt{ a^{ 4 } \pm x^{ 4 } } } \, dx, \quad
+      a > 0
+  \end{align}
+
+\item Znajdź rozwiązanie równania różniczkowego
+  \begin{equation}
+    \label{eq:6}
+    \frac{ d f( x ) }{ dx } = g( x )
+  \end{equation}
+  dla następujących przypadków
+  \begin{align}
+    g( x ) &= x^{ 2 } + x + 1, \quad
+             f( 0 ) = 0 \\
+    g( x ) &= e^{ -\sqrt{ x } }, \quad
+             f( 0 ) = -2 \\
+    g( x ) &= \frac{ 1 }{ x }, \quad
+             f( -1 ) = -1
+  \end{align}
+  \textbf{Wskazówka.} Oblicz całkę i wyznacz stałą całkowania, lub/i
+  wypróbuj \texttt{DSolve}.
+
+
+\item Wykazać, że podane wyrażenia
+  \begin{align}
+    &\tan^{ -1 }\left( \frac{ x^{ 3 } }{ 3 } - \frac{ x^{ 2 } }{ 2 }
+      - x + \frac{ 5 }{ 3 } \right)
+      - \tan^{ -1 }( 1 - x ) \\
+    &\frac{ 1 }{ 2 } \tan^{ -1 }\left( \frac{ x + 1 }{ 4 - x^{ 2 } } \right)
+      - \frac{ 1 }{ 2 } \tan^{ -1 }\left( \frac{ x + 1 }{ x^{ 2 } - 4 }
+      \right)
+  \end{align}
+  po zróżniczkowaniu dają taki sam wynik, tzn. obydwa są całką
+  nieoznaczoną tej samej funkcji. Wyjaśnić powstały problem.
+
+\item Na podane niże cztery sposoby oblicz całkę nieoznaczoną z~trzech
+  funkcji $f$
+  \begin{align}
+    f( x ) &= | x | \\
+    f( x ) &= \frac{ x^{ 2 } + 2x + 4 }{ x^{ 4 } - 7 x^{ 2 } + 2x + 17 } \\
+    f( x ) &= \frac{ 1 }{ \sqrt{ a^{ 2 } + x^{ 2 } } }
+  \end{align}
+  Wyniki porównać odejmując graficznie ich wykresy.
+
+  Cztery sposoby obliczania całki
+  \begin{align}
+    &\int f( t ) \, dt \\
+    &\int_{ 0 }^{ t } f( x ) \, dx \\
+    &\int_{ 0 }^{ t_{ n } } f( t ) \, dt, \quad
+      t_{ n } = 0, 1, 2, 3, \ldots \\
+    &\int_{ 0 }^{ t } f( x ) \, dx \simeq \sum_{ i = 1 }^{ N } f( x_{ i } ) \, dx_{ i },
+      \qquad
+      x_{ i } = \frac{ t }{ N } i,\; dx_{ i } = \frac{ t }{ N },
+  \end{align}
+  gdzie $N = 10, 100, 1000, \ldots$
+
+\item Oblicz całki oznaczone
+  \begin{align}
+    &\int_{ 0 }^{ \pi } \sin^{ k } x \, dx, \quad
+      k = 0, 1, 2, 3, 4, \ldots \\
+    &\int_{ -\infty }^{ +\infty } e^{ -\frac{ x^{ 2 } }{ a^{ 2 } } } \, dx \\
+    &\int_{ 0 }^{ 4 } \int_{ \frac{ y }{ 2 } }^{ \sqrt{ 2 } } x y^{ 2 } \, dx dy \\
+    &\int_{ 0 }^{ 2\pi } \int_{ 0 }^{ \alpha } \int_{ 0 }^{ \frac{ 1 }{ \cos \theta } } \cos\theta \sin\theta \,
+      dr d\theta d\phi
+  \end{align}
+
+\item Oblicz objętość kuli w $2, 3, 4$ i~$n$ wymiarach.
+
+\end{enumerate}
+% ##################
+
+
+
+
+
+
+
+
+
+
+% ######################################
+\section{Algebra matematyczna, problemy do zrobienia}
+
+% \vspace{\spaceTwo}
+
+% ######################################
+
+
+
+% ##################
+\begin{enumerate}
+
+\item Obliczyć całkę
+  \begin{equation}
+    \label{Calculus:01}
+    \int_{ 0 }^{ 1 } \int_{ 0 }^{ 1 } \frac{ ( x y )^{ s } }{ \sqrt{-\log( x y ) } }
+      \; dx \, dy, \quad
+      s > 0.
+  \end{equation}
+
+
+
+\end{enumerate}
+% ##################
+
+
+
+
+
+
+
+
+
+
+% ######################################
+\section{Geometria różniczkowa, problemy do zrobienia}
+
+% \vspace{\spaceTwo}
+
+% ######################################
+
+
+
+% ##################
+\begin{enumerate}
+\item Wyznaczyć parametr naturalny krzywej
+  \begin{equation}
+    \label{DiffGeo:01}
+    \gamma( u ) = \left[ e^{ -u } \cos u, e^{ -u } \sin u, 1 - e^{ -u } \right]
+  \end{equation}
+
+\item Dana jest krzywa
+  \begin{equation}
+    \label{DiffGeo:02}
+    \delta( t ) =
+    \big[ a ( t - \sin t ), a ( 1 - \cos t ), 4a \sin \frac{ t }{ 2 } \big]
+  \end{equation}
+  Obliczyć krzywiznę i~skręcenie krzywej
+  \begin{equation}
+    \label{DiffGeo:03}
+    \gamma( t ) =
+    \delta( t )
+    + a \vecnbold \sqrt{ 1 + \left( \sin \frac{ t }{ 2 } \right)^{ 2 } }
+  \end{equation}
+
+\item Wykazać, że dla krzywej $\alpha( s )$ klasy $\Ccal^{ 4 }$ zachodzi
+  tożsamość
+  \begin{equation}
+    \label{DiffGeo:04}
+    \left( \frac{ d^{ 3 } \alpha }{ d s^{ 3 } } \right)^{ 2 }
+    =
+    \kappa^{ 4 } + \kappa^{ 2 } \tau^{ 2 } + \left( \frac{ d \kappa }{ d s } \right)^{ 2 }
+  \end{equation}
+
+\item Znaleźć repery Freneta $\vectbold$, $\vecnbold$, $\vecbbold$ w
+  punkcie $P = (1, 1, 1)$ krzywej powstałej z~przecięcia powierzchni
+  \begin{equation}
+    \label{DiffGeo:05}
+    z^{ 2 } = xy, \quad
+    x^{ 2 } + y^{ 2 } - z^{ 2 } = 1
+  \end{equation}
+
+\item The topologica spaces $X$, $Y$ are homotopic to each other if
+  there exist maps $f : X \to Y$ and $f^{ -1 } : Y \to X$ such that
+  $f \circ f^{ -1 }$ and $f^{ -1 } \circ f$ are homotopic,
+  respectively, to identity on $X$ and $Y$. Show that this is an
+  equivalence relation.
+
+\item Show that $\Rbb^{ n }$ is homotopic to a point. Use the result
+  to calculate the singular homology groups of $\Rbb^{ n }$.
+
+\item Show that a $n$-dimensional ball
+  $\{ x \in \Rbb^{ n }, \abs{ x } < 1 \}$ is homotopic to $\Rbb^{ n }$
+  and use the previous result to determine its singualar homology
+  (using homotopy equivalence).
+
+\item Consider $S^{ 1 }$ and its open cover by three open sets
+  $U_{ 1 }$, $U_{ 2 }$, $U_{ 3 }$:
+  \begin{equation}
+    \label{DiffGeo:06}
+    U_{ k } =
+    \left\{ z \in S^{ 1 } : \frac{ k - 1 }{ 3 } 2\pi - \frac{ \pi }{ 2 }
+      \arg( z ) < \frac{ k - 1 }{ 3 } 2\pi + \frac{ \pi }{ 2 } \right\}
+  \end{equation}
+  and consider \v{C}ech complex and its cohomology relative to this
+  cover.
+
+\item Let $U_{ i }$ be an open cover of a compact manifold $M$ and
+  $g_{ i j } : U_{ i } \cap U_{ j } = U_{ i j } \to U( 1 )$ be a
+  collection of maps from their intersections. Show the condition
+  which the maps need to satisfy in order to define a line bundle or a
+  $U( 1 )$ principle fibre bundle. When are these bundles trivial?
+
+\item Consider an open cover $U_{ i }$ of a compact manifold $M$ and a
+  collection of one-forms $A_{ i }$ over the open sets. Please find a
+  necessary condition for the forms over the intersection in order for
+  the curvarture $dA_{ i }$ to be a well-defined global 2-form.
+
+\item Consider an open cover $U_{ i }$ of a compact manifold $M$ and a
+  collection of maps $g_{ ij }$ from
+  $U_{ ij } = U_{ i } \cap U_{ j } \to U( 1 )$. Find a compatibility
+  condition so that over a triple intersection their composition is
+  not trivial but is a \v{C}ech cocycle $\lambda_{ i j k }$. Would
+  this work for a nonabelian (valued in $\GL( n )$) transition
+  functions?
+
+\item Consider an open cover $U_{ i }$. Let $\lambda_{ i j k }$ be the
+  \v{C}ech cocyle, and let $A_{ i j }$ be a collections of one forms
+  that satisfy:
+  \begin{equation}
+    \label{DiffGeo:07}
+    A_{ i j } + A_{ j k } + A_{ k i } = d\lambda_{ i j k },
+  \end{equation}
+  and $F_{ i }$ collection of two-forms such that
+  $F_{ i } = F_{ j } + dA_{ i j }$. In this construction correct? What
+  can one say about $dF$?
+
+\item Let $P( M, G )$ be a principal fibre bundle and $\rho$ a
+  finite-dimensional representation of $G$ on a vector space $V$. Show
+  that $P \times V / \sim$ is a vector bundle over $M$. Relation
+  $\sim$ is defined by
+  \begin{equation}
+    \label{DiffGeo:09}
+    ( p, v ) \sim \left( pg, \rho\left( g^{ -1 } \right) v \right).
+  \end{equation}
+
+\item Let $E( M )$ be a vector bundle over $M$ and $\nabla$ be a
+  connection. Show that, if $U_{ i }$ is an open cover which locally
+  trivializes $E$ and $g_{ i j }$ are transition functions on the
+  intersections then the connection is determined over each $U_{ i }$
+  by a one form $A_{ i }$. Show the relation between $A_{ i }$ and
+  $A_{ j }$ over the intersection.
+
+\item When a global two-form over a manifold $M$ is a curvature form
+  of a connection on a line bundle.
+
+\item If $p( x )$ is a projection over $m$ (seen as matrix acting on
+  $\Cbb^{ n }$) then constuct a connection over the vector bundle
+  $p( M \times \Cbb^{ n } )$.
+
+\item For the sphere parametrized by $z \in \Cbb$ and the line bundle
+  defined through the Bott projector
+  \begin{equation}
+    \label{DiffGeo:10}
+    p( z ) =
+    \frac{ 1 }{ 1 + \abs{ z }^{ 2 } }
+    \begin{pmatrix}
+      1 & \bar{z} \\
+      z & \abs{ z }^{ 2 }
+    \end{pmatrix},
+  \end{equation}
+  take a connection and compute its curvature and the Chern number.
+
+\item Please verify whether Chern classes for connections over trivial
+  vector bundles vanish.
+
+\item Show that skyscraper sheaf is a sheaf.
+
+\item Consider sheaf $X = S^{ 1 }$, $F_{ 0 } = \Zbb$.
+
+  \textbf{a)} Take open cover
+  $\Ucal_{ 1 } = S^{ 1 } \setminus \{ -1 \}$,
+  $\Ucal_{ 2 } = S^{ 1 } \setminus \{ 1 \}$ and construct explicit
+  cochain complex. Try to compute its cohomology.
+
+  \textbf{b)} Try do previous exercise for try sets cover. What will
+  the \v{C}ech complex be?
+
+\item Let $G \hookrightarrow H$ ($V \subset W$) be abelian group (vector spaces). Is
+  sequence $0 \to G \to H \to G / H \to 0$ ($0 \to V \to W / V \to 0$) exact.
+
+\item Compute $H_{ \dR }^{ * }( \Rbb^{ n } )$.
+
+\item Show that for singular homology $d_{ n - 1 } \circ d_{ n } \equiv 0$.
+
+\item Consider bundle $P( M, F )$ with sets of diffeomorphism
+  $\phi_{ \alpha } : \Ucal_{ \alpha } \times F \to \pi^{ -1 }( \Ucal_{
+    \alpha } )$. Consider two situation: $F = V$, $G = \GL( V )$ and
+  $F = G$. Why also notice that
+  $\pi^{ -1 }( \Ucal_{ \alpha } ) \ni p = \phi_{ \alpha }( \pi( p ), g )$.
+
+  \textbf{a)} How define right action on this bundle?
+
+  \textbf{b)} Is this action free and transition?
+
+\item Suppose that we have cover and associated local trivialization
+  of $P( M, G )$.
+
+  \textbf{a)} What would be local trivialization of $P( M, F )_{ G }$?
+
+  \textbf{b)} Do we need to assume something of $F$ and action
+  $G( \rho )$ on $F$?
+
+  \textbf{c)} Do $F = \{ a \}$ or $F = \{ a, b \}$ with some nontrivial
+  action of the group, are allowed?
+
+\item (Treść zadania może być błędna.) We take two bundles
+  $P( M, G ) \leadsto E( M, V )$ with connections. Find a relation of
+  holonomy $\int_{ \gamma } ( A_{ \alpha } )_{ \mu } \, dx^{ \mu }$ of
+  this two bundles.
+
+\item Show that pullback of vector bundle is a vector bundle.
+
+\item Is there example (easy to find) of some $\Rbb$-vector bundle
+  with is not trivial but stable trivial?
+
+\item Show that sets of stable vector bundles over point
+  $\Vect_{ \Cbb } = \{ V = \Cbb^{ n }, n \geq 0 \}$ is equal to $\Nbb$.
+
+\item Show that suspension of the circle is a sphere
+  $s( S^{ 1 } ) = S^{ 2 }$.
+
+\item In definition of the twisted vector bundle we have
+  $g_{ kj } g_{ ji } = g_{ ki } \lambda_{ kji }$. What should we
+  require of $\lambda_{ kji }$. Is there some cocycle condition for
+  $\lambda_{ kji }$?
+
+\item Show that for a bundle $E \to M$ with fibre $V = \Cbb^{ n }$
+  relation below hold:
+  \begin{equation}
+    \label{DiffGeo:11}
+    \ch( E ) =
+    V + c_{ 1 }( E )
+    + \frac{ 1 }{ 2 } ( c_{ 1 }( E )^{ 2 } - 2 c_{ 2 }( E ) )
+    + \frac{ 1 }{ 6 } \left( c_{ 1 }( E )^{ 3 } - 3 c_{ 1 }( E ) c_{ 2 }( E )
+      + 3 c_{ 3 }( E ) \right) + \ldots
+  \end{equation}
+
+\item Show that Bott projector
+  $p = \frac{ 1 }{ 1 + \lvert z \rvert^{ 2 } }
+  \begin{pmatrix}
+    1 & \bar{z} \\
+    z & \lvert z \lvert^{ 2 }
+  \end{pmatrix}$ is really a projector.
+
+\item (Niejasny tekst.) We define $A = ( 1, \eta )$,
+  $a = \alpha 1 + \beta \eta$, $\alpha, \beta \in \Kbb$. Show that
+  $A^{ \opp }$, $\eta^{ 2 } = -1$.
+
+\item What would be natural definition of linear functional on super
+  vector space?
+
+\item If we take set of morphism between super vector spaces do they
+  form a superalgebra
+
+\item How define trace on superalgebra?
+
+\item Show that $\Rbb^{ 1 / 1 }$ form a supergroup.
+
+\item (Rówanania pewnie są błędne.) Using equations
+  \begin{align}
+    \partial_{ t } \left( f_{ I } \theta^{ I } \right)
+    &= \left( \partial_{ t_{ i } } f_{ I } \theta^{ I } \right), \\
+    \partial_{ \theta_{ i } } \left( f_{ I } \theta^{ I }
+    + f_{ J_{ i } } \theta^{ i } \theta^{ J } \right)
+    &= \sum f_{ J_{ i } } \theta^{ J }, \quad
+      i \in J
+  \end{align}
+  construct all derivative. Are they form module over
+  $\Rbb^{ p / q }$?
+
+\item (Coś tu jest nie tak.) Rewrite Poincar\'{e}-Birkhoff-Witt
+  theorem super Lie algebra.
+
+\item Afiniczna przestrzeń euklidesowa, współrzędne afiniczne.
+
+\item Współrzędne krzywoliniowe w $\Ebold^{ n }$.
+
+\item Definicja rozmaitości różniczkowej, zgodność map, atlasy,
+  przykłady.
+
+\item Odwzorowanie rozmaitości: funkcje rzeczywiste i dyfeomorfizmy.
+
+\item Krzywe gładkie na rozmaitości.
+
+\item Wektor styczny do krzywej jako operator różniczkowy.
+
+\item Przestrzeń styczna i jej baza.
+
+\item Gładkie pola wektorowe.
+
+\item Kowektory, baza dualna, gradient, różniczka funkcji.
+
+\item Tensory i pola tensorowe, symetryczne i antysymetryzacja.
+
+\item Tensor metryczny, przestrzeń Riemanna i Lorentza, kąt między
+  wektorami.
+
+\item Odległość punktów bliskich, długość krzywej.
+
+\item Metryka kowariantna, podnoszenie i opuszczanie indeksów
+  tensorów.
+
+\item Konstrukcja pochodnej absolutnej, pojęcie koneksji afinicznej,
+  wyprowadzenie prawa transformacji koneksji.
+
+\item Pochodna kowariantna tensora, związek z pochodną absolutną.
+
+\item Wyprowadzenie wzoru na pochodną kowariantną kowektora ze wzoru
+  na pochodną wektora kontrawariantnego.
+
+\item Definicja i własność przeniesienia równoległego wektora wzdłuż
+  krzywej.
+
+\item Definicja geodetyki, parametr afiniczny, pole geodetyk.
+
+\item Koneksja metryczna i wyprowadzenie symboli Christoffela.
+
+\item Geodetyki jako linie ekstremalne w przestrzeni Riemanna.
+
+\item Konstrukcja układu lokalnie geodezyjnego.
+
+\item Rozpisanie drugiej pochodnej kowariantnej wektora.
+
+\item Operator dywergencji, rotacji i operator Laplace’a-Beltramiego.
+
+\item Krzywizna wewnętrzna i zewnętrzna przestrzeni, trójkąt na
+  sferze.
+
+\item Dwie definicje tensora krzywizny: jako komutator pochodnej
+  kowariantnych i jako efekt przeniesienia równoległego wektora po
+  krzywej zamkniętej; wyprowadzenie wzoru na ten tensor obiema
+  metodami.
+
+\item Wyprowadzenie własności algebraicznych tensora Riemanna,
+  definicja tensora Ricciego.
+
+\item Pola wektorowe kowariantne stałe a tensor krzywizny.
+
+\item Tensor krzywizny w wymiarach od 1 do 4.
+
+\item Pojęcie niezmienników tensora.
+
+\item Wyprowadzenie ogólnej i zwykłej tożsamości Bianchiego.
+
+\item Definicja pola Killinga i wyprowadzenie równania Killinga.
+
+\item Wyprowadzenie kowariantnej postaci równania Killinga.
+
+\item Obliczanie pól Killinga dla obrotów przestrzeni $\Ebold^{ 3 }$.
+
+\item Pole Killinga generuje prawo zachowania dla stycznego do
+  geodetyki.
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\end{enumerate}
+% ##################
+
+
+
+
+
+
+
+
+
+% % ######################################
+% \newpage
+% \section{Zaczęte i~nieskończone}
+
+% \vspace{\spaceTwo}
+% % ######################################
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+% % ######################################
+% \newpage
+% \section{Articles}
+
+% \vspace{\spaceTwo}
+% % ######################################
+
+
+
+% \begin{enumerate}
+
+% \item
+
+% \item
+
+% \item
+
+% \item
+
+% \item
+
+% \item
+
+% \item
+
+% \item
+
+% \item
+
+% \item
+
+% \item
+
+% \item
+
+% \item
+
+% \item
+
+% \item
+
+% \item
+
+% \item
+
+% \item
+
+% \item
+
+% \item
+
+% \item
+
+% \item
+
+% \item
+
+% \item
+
+% \item
+
+% \item
+
+% \item
+
+% \item
+
+% \item
+
+% \item
+
+% \item
+
+% \item
+
+% \item
+
+% \item
+
+% \item
+
+
+% \item
+
+% \item
+
+% \item
+
+% \item
+
+% \item
+
+% \item
+
+% \item
+
+% \item
+
+% \item
+
+% \item
+
+% \item
+
+% \item
+
+% \item
+
+% \item
+
+% \item
+
+% \item
+
+% \item
+
+% \item
+
+% \item
+
+% \item
+
+% \item
+
+% \item
+
+% \item
+
+% \item
+
+% \item
+
+% \item
+
+% \item
+
+% \item
+
+% \item
+
+% \item
+
+% \item
+
+% \item
+
+% \item
+
+% \item
+
+% \item
+
+% \item
+
+% \item
+
+% \item
+
+% \item
+
+% \item
+
+% \item
+
+% \item
+
+% \item
+
+% \item
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+% \end{enumerate}
+% % \bibliographystyle{alpha} \bibliography{Bibliography}{}
+
+
+
+
+
+
+
+
+
+
+% ############################
+
+% Koniec dokumentu
+\end{document}
