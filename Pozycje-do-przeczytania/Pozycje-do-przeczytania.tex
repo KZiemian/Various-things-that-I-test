@@ -1,1 +1,2134 @@
-Test
+% Autor: Kamil Ziemian
+
+% ---------------------------------------------------------------------
+% Podstawowe ustawienia i pakiety
+% ---------------------------------------------------------------------
+\RequirePackage[l2tabu, orthodox]{nag} % Wykrywa przestarzałe i niewłaściwe
+% sposoby używania LaTeXa. Więcej jest w l2tabu English version.
+\documentclass[a4paper,11pt]{article}
+% {rozmiar papieru, rozmiar fontu}[klasa dokumentu]
+\usepackage[MeX]{polski} % Polonizacja LaTeXa, bez niej będzie pracował
+% w języku angielskim.
+\usepackage[utf8]{inputenc} % Włączenie kodowania UTF-8, co daje dostęp
+% do polskich znaków.
+\usepackage{lmodern} % Wprowadza fonty Latin Modern.
+\usepackage[T1]{fontenc} % Potrzebne do używania fontów Latin Modern.
+
+
+
+% ---------------------------------------
+% Podstawowe pakiety (niezwiązane z ustawieniami języka)
+% ---------------------------------------
+\usepackage{microtype} % Twierdzi, że poprawi rozmiar odstępów w tekście.
+% \usepackage{graphicx} % Wprowadza bardzo potrzebne komendy do wstawiania
+% grafiki.
+% \usepackage{verbatim} % Poprawia otoczenie VERBATIME.
+% \usepackage{textcomp} % Dodaje takie symbole jak stopnie Celsiusa,
+% wprowadzane bezpośrednio w tekście.
+\usepackage{vmargin} % Pozwala na prostą kontrolę rozmiaru marginesów,
+% za pomocą komend poniżej. Rozmiar odstępów jest mierzony w calach.
+% ---------------------------------------
+% MARGINS
+% ---------------------------------------
+\setmarginsrb
+{ 0.7in}  % left margin
+{ 0.6in}  % top margin
+{ 0.7in}  % right margin
+{ 0.8in}  % bottom margin
+{  20pt}  % head height
+{0.25in}  % head sep
+{   9pt}  % foot height
+{ 0.3in}  % foot sep
+
+
+
+% ---------------------------------------
+% Często używane pakiety
+% ---------------------------------------
+% \usepackage{csquotes} % Pozwala w prosty sposób wstawiać cytaty do tekstu.
+% \usepackage{xcolor} % Pozwala używać kolorowych czcionek (zapewne dużo
+% więcej, ale ja nie potrafię nic o tym powiedzieć).
+
+
+
+% ---------------------------------------
+% Pakiety do tekstów z nauk przyrodniczych
+% ---------------------------------------
+% \let\lll\undefined % Amsmath gryzie się z językiem pakietami do języka
+% % polskiego, bo oba definiują komendę \lll. Aby rozwiązać ten problem
+% % oddefiniowuję tę komendę, ale może tym samym pozbywam się dużego Ł.
+% \usepackage[intlimits]{amsmath} % Podstawowe wsparcie od American
+% % Mathematical Society (w skrócie AMS)
+% \usepackage{amsfonts, amssymb, amscd, amsthm} % Dalsze wsparcie od AMS
+% % \usepackage{siunitx} % Dla prostszego pisania jednostek fizycznych
+% \usepackage{upgreek} % Ładniejsze greckie litery
+% % Przykładowa składnia: pi = \uppi
+% \usepackage{slashed} % Pozwala w prosty sposób pisać slash Feynmana.
+% \usepackage{calrsfs} % Zmienia czcionkę kaligraficzną w \mathcal
+% % na ładniejszą. Może w innych miejscach robi to samo, ale o tym nic
+% % nie wiem.
+
+
+
+
+
+% ---------------------------------------
+% Dodatkowe ustawienia dla języka polskiego
+% ---------------------------------------
+\renewcommand{\thesection}{\arabic{section}.}
+% Kropki po numerach rozdziału (polski zwyczaj topograficzny)
+\renewcommand{\thesubsection}{\thesection\arabic{subsection}}
+% Brak kropki po numerach podrozdziału
+
+
+
+% ---------------------------------------
+% Pakiety napisane przez użytkownika.
+% Mają być w tym samym katalogu to ten plik .tex
+% ---------------------------------------
+\usepackage{latexshortcuts}
+\usepackage{mathshortcuts}
+
+
+
+% ---------------------------------------
+% Ustawienia różnych parametrów tekstu
+% ---------------------------------------
+\renewcommand{\arraystretch}{1.2} % Ustawienie szerokości odstępów między
+% wierszami w tabelach.
+
+
+
+
+
+% ---------------------------------------
+% Pakiet "hyperref"
+% Polecano by umieszczać go na końcu preambuły.
+% ---------------------------------------
+\usepackage{hyperref} % Pozwala tworzyć hiperlinki i zamienia odwołania
+% do bibliografii na hiperlinki.
+
+
+
+
+
+
+
+
+
+
+% ---------------------------------------------------------------------
+% Tytuł, autor, data
+\title{Do przeczytania}
+
+% \author{}
+% \date{}
+% ---------------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+% ####################################################################
+% Początek dokumentu
+\begin{document}
+% ####################################################################
+
+
+
+
+
+% ######################################
+\maketitle  % Tytuł całego tekstu
+% ######################################
+
+
+
+
+
+% ######################################
+\section{Przeczytaj}
+
+\vspace{\spaceTwo}
+% ######################################
+
+
+
+
+
+\begin{enumerate}
+
+\item Biblia;
+
+\item Red. Piotr Kletowski, \textit{Europejskie kino gatunków};
+
+\item Gene Wolf, \textit{Cień kata};
+
+\item Roger Scruton, \textit{Zielona filozofia};
+
+\item Andrew Klavan, \textit{Prawdziwa zbrodnia};
+
+\item \textit{Teoria pomiarów};
+
+\item Wojciech Roszkowski, \textit{Świat Chrystusa. Tom I};
+
+\item Michał Heller, Józef Życiński, \textit{Wszechświat --~maszyna
+    czy~myśl?};
+
+\item Red. L. A. Steen, \textit{Matematyka współczesna. Dwanaście
+    esejów};
+
+\item S. J. Gould, \textit{Niewczesny pogrzeb Darwina};
+
+\item Olga Tokarczuk, \textit{Bieguni};
+
+\item Hanya Yanagihara, \textit{Małe życie};
+
+\item Homer, \textit{Iliada}, \textit{Odyseja};
+
+\item Ks. Jelonek, \textit{Wprowadzenie do Biblii};
+
+\item Gustaw Meyrink, \textit{Golem};
+
+\item Tomasz Mann, \textit{Dokotor Faustus};
+
+\item Roger Scruton, \textit{Przewodnik po~kulturze współczesnej dla
+    inteligentnych};
+
+\item Radek Rak, \textit{Baśń o wężowym sercu albo wtóre słowo o Jakubie
+    Szeli};
+
+\item Alain Besancon, \textit{Anatomia widma};
+
+\item Red. E. Tarkowska, \textit{Zrozumieć biednego. O~dawnej i~obecnej
+    biedzie w~Polsce};
+
+\item Mario Vatgas Lloysa, \textit{Rozmowa w katedrze};
+
+\item Juan Gabriel Vasquez, \textit{Kształt ruin};
+
+\item Marquez, \textit{Miłość w czasach zarazy};
+
+\item Wiesław Myśliwski, \textit{Traktat o łuskaniu fasoli},
+  \textit{Widnokrąg}, \textit{Kamień na kamieniu};
+
+\item Bourbaki, \textit{Elementy historii matematyki};
+
+\item Platon, \textit{Państwo};
+
+\item Arystoteles, \textit{Etyka Nikomochejska};
+
+\item \textit{Recepcja w~Polsce nowych kierunków i~teorii naukowych};
+
+\item Herodot;
+
+\item H. Steinhaus;
+
+\item \textit{Liryka polska. Interpretacje};
+
+\item \textit{Zarys dziejów filozofii w~Polsce};
+
+\item \textit{Państwo Boże};
+
+\item \textit{Drabina Raju};
+
+\item Tomas Halik, \textit{Co nie jest chwiejne jest nietrwałe};
+
+\item Bernard Korzeniewski, \textit{Trzy ewolucje};
+
+\item R. Krasowski;
+
+\item Benedict, \textit{Wzory kultury};
+
+\item I. Bokwa, \textit{Wprowadzenie do teologii Karla Rahnera};
+
+\item R. Brandstaetter, \textit{Patriarchowie};
+
+\item G. K. Chesterton, \textit{Ortodoksja};
+
+\item M. Davies, \textit{Liturgiczne bomby zegarowe Vaticanum II.
+    Zniszczenie katolickiej wiary przez zmiany w katolickim kulcie};
+
+\item Michał Heller, \textit{Filozofia przyrody};
+
+\item A. MacIntyre, \textit{Dziedzictwo cnoty};
+
+\item Ks. Józef Tishner, \textit{Nieszczęsny dar wolności};
+
+\item M. Takesaki, \textit{Theory of operator algebras};
+
+\item R. Penrose, \textit{Droga do rzeczywistości};
+
+\item P. Johnson, \textit{Historia świata XX wieku};
+
+\item M. Dzielski;
+
+\item A. Zamoyski, \textit{Własną drogą};
+
+\item P. Johnson, \textit{Narodziny nowoczesności};
+
+\item R. Terlecki, \textit{Dzieje sowieckiej kolonii};
+
+\item B. Cywiński, \textit{Rodowody niepokornych};
+
+\item A. Nowak, \textit{Od Polski do postpolityki};
+
+\item P. Gay;
+
+\item A. Leder, \textit{Prześniona rewolucja};
+
+\item \textit{Oświecenie dzisiaj};
+
+\item E. J. Hobsbawn, \textit{Tradycje wynalezione};
+
+\item \textit{Słowacki. Szat-Anioł};
+
+\item T. Enderson, \textit{Kultura popularna, tożsamość narodowa i~życie
+    codzienne};
+
+\item A. Friszke, \textit{Rok 1989~r.};
+
+\item R. Legutko, \textit{Esej o~duszy polskiej};
+
+\item K. Brodacki, \textit{Trzy twarze Juliana Haraschina};
+
+\item J. Kurtyka, \textit{Z dziejów agonii i~podboju. Prace zebrane
+    z~zakresu najnowszej historii Polski};
+
+\item G. Kucharczyk, \textit{Polska myśl polityczna po 1939~r.};
+
+\item A. L. Sowa, \textit{Historia polityczna Polski 1944-1991};
+
+\item K. Janicki, \textit{Epoka hipokryzji. Seks i~erotyka
+    w~przedwojennej Polsce};
+
+\item A. Wielomski, \textit{Prawica w~XX wieku};
+
+\item N. Ferguson, \textit{Niebezpieczne związki};
+
+\item W. Roszkowski, \textit{Najnowsza historia Polski};
+
+\item Frank E. Manuel, (książka o~religioznawstwie);
+
+\item Urs Alterman;
+
+\item \textit{Chrześcijaństwo, demokracja, kapitalizm};
+
+\item J. Aumont, M. Marie, \textit{Analiza filmu};
+
+\item J. Osterhammel, \textit{Historia XIX wieku. Przebudowa świata};
+
+\item P. Holmes, \textit{Wiek cudów};
+
+\item E. Black, \textit{Wojna przeciw słabym};
+
+\item \textit{Polska poezja baroku};
+
+\item J. Gray, \textit{Liberalizm};
+
+\item E. Gellner;
+
+\item A. Golicyn, \textit{Nowe kłamstwa w~miejsce starych};
+
+\item \textit{Monografie historii nauki \textsc{pau}};
+
+\item J. Browne, \textit{Darwin, o~powstawaniu gatunków. Biografia};
+
+\item R. Butterwick, \textit{Polska rewolucja a~Kościół Katolicki};
+
+\item B. Gogol, \textit{Czerwony Sztandar. Rzecz o~sowietyzacji ziem
+    Małopolski Wschodniej};
+
+\item Timothy Gray Ash, \textit{Polska rewolucja. Solidarność};
+
+\item A. Brzezicki, \textit{Tadeusz Mazowiecki. Biografia naszego
+    premiera};
+
+\item I. Berlin, \textit{Korzenie romantyzmu};
+
+\item E. Lucas, \textit{Nowa zimna wojna};
+
+\item A. R. Hall, \textit{Rewolucja naukowa 1500-1800};
+
+\item P. Jenkis, \textit{Historia Stanów Zjednoczonych};
+
+\item Lew Gumilow;
+
+\item M. Janowski, \textit{Polska myśl liberalna do~1918 roku};
+
+\item M. Blondel;
+
+\item K. Wyka, \textit{Pan Tadeusz. Studia o~poemacie};
+
+\item M. Zaremba, \textit{Wielka trwoga};
+
+\item \textit{Eklektyzm, synkretyzm, uniwersa};
+
+\item P. Fiegut, \textit{Poezja w fazie krytycznej};
+
+\item T. Snyder, \textit{Nacjonalizm, marksizm i współczesna Europa
+    Środkowa};
+
+\item Ziemkiewicz, \textit{Polactwo};
+
+\item M. Voelle, et al., \textit{Człowiek Oświecenia};
+
+\item Ks. J. Tischner, \textit{Polski kształt dialogu};
+
+\item F. Collins, \textit{Język Boga};
+
+\item F. Braudel;
+
+\item Ks. J. Tischner, \textit{Nieszczęsny dar wolności};
+
+\item Ks. J. Tischner, \textit{Ksiądz na manowcach};
+
+\item \textit{Darwin, żywot uczonego};
+
+\item Roger Kimball, \textit{The rape of the masters: how political
+    correctness sabotages art};
+
+\item Arnold Janssen;
+
+\item Ludwik von Mises, \textit{Socjalizm};
+
+\item Robert Conquest, \textit{Wielki terror};
+
+\item S. Runciman, \textit{Dzieje wypraw krzyżowych};
+
+\item R. Graves, \textit{Mity greckie};
+
+\item R. Graves, \textit{Mity hebrajskie};
+
+\item L. Strauss, \textit{Prawo naturalne w świetle historii};
+
+\item Berlinski, \textit{Szatańskie urojnie};
+
+\item R. Wiltgen, \textit{Ren wpada do Tybru};
+
+\item Sokal, Briemont;
+
+\item Paul Davies;
+
+\item Wolfgang Schivelbusch, \textit{Culture of Defeat: On National
+    Trauma, Mourning, and Recovery};
+
+\item Bockenheim K., \textit{Dworek, kontusz, karabela};
+
+\item Paweł Śpiewak, \textit{Gramsci};
+
+\item Polska 1989-2009: ilustrowany komentarz historyczny;
+
+\item Spór o Polskę 1989-99: wybór tekstów prasowych;
+
+\item J. Tazbir, \textit{Świat panów Pasków};
+
+\item A. Sosnowska, \textit{Zrozumieć zacofanie: spory historyków
+    o~Europę Wschodnią, 1947-1994};
+
+\item \textit{Patron i dwór. Magnateria Rzeczypospolitej w XVI-XVIII
+    wieku.};
+
+\item Jon Dover, Helen W.~Kennedy, \textit{Kultura gier komputerowych};
+
+\item Diarmaid MacCulloch, \textit{The Reformation: A History},
+  alternatywny tytuł to \textit{Reformation: Europe's House Divided};
+
+\item \textit{Skonsumowani: jak rynek psuje dzieci, infantylizuje
+    dorosłych i~połyka obywateli};
+
+\item Bartłomiej Dobroczyński, \textit{New Age};
+
+\item Leszek Kołakowski, \textit{Główne nurty marksizmu};
+
+\item \textit{Państwo Boże Osiemnastowiecznych Filozofów};
+
+\item \textit{Liberty. The god that Failed};
+
+\item Ron Jeffery, \textit{Wisła jak krew czerwona};
+
+\item R. Browning, \textit{Cesarstwo Bizantyńskie}, \textit{Justynian
+    i~Teodora};
+
+\item H. Chadwick, \textit{Historia rozłamu Kościoła Wschodniego
+    i~Zachodniego. Od~czasów apostolskich do~soboru florenckiego};
+
+\item P. K. Hitti, \textit{Dzieje Arabów};
+
+\item H. Kennedy, \textit{Wielkie arabskie podboje};
+
+\item \textit{Historia Persji. Tom~I. Od~czasów najważniejszych
+    do~najazdu arabów};
+
+\item Michał Lubina, \textit{Niedźwiedź w~cieniu smoka. Rosja-Chiny
+    1991--2014};
+
+\item Bronisław Wildstein, \textit{Śmieszna dwuznaczność świata, który
+    oszalał};
+
+\item Bronisław Wildstein, \textit{Długi cień PRL-u, czyli dekomunizacja
+    której nie było};
+
+\item D. Góra-Szopiński, \textit{Zakorzenienie wolności. Myśl polityczna
+    Michaela Novaka};
+
+\item J. Grzybowski, \textit{Jacques Maritain i nowa cywilizacja
+    chrześcijańska};
+
+\item Roger Kimball, \textit{Długi marsz: jak rewolucja kulturalna z lat
+    60. zmieniła Amerykę};
+
+\item Bellantoni Patti, \textit{Jeśli to fiolet, ktoś umrze. Teoria
+    koloru w~filmie};
+
+\item A.~Wolff-Powęzka, \textit{Pamięć~-- brzemię i~uwolnienie. Niemcy
+    wobec nazistowskiej przeszłości (1945--2010)};
+
+\item Valentin L. Popov, \textit{Contact Mechanics and Friction: Physics
+    Principles and Applications};
+
+\item L. Ambrosio, N. Dancer, \textit{Calculus of Variations and Partial
+    Differential Equations: Topics on Geometrical Evolution Problems
+    and Degree Theory};
+
+\item Stephen Wiggins, \textit{Global Bifurcations and Chaos: Analytical
+    Methods};
+
+\item Serbio Albeverio, \textit{Operator Methods in Ordinary and Partial
+    Differential Equations};
+
+\item D. Boccaletti, G. Pucacco, \textit{Theory of Orbits. 1: Integrable
+    Systems and Non-perturbative Methods};
+
+\item Vasil E. Tarasov, \textit{Fractional Dynamics: Applications of
+    Fractional Calculus to Dynamics of Particles, Fields and Media};
+
+\item E. C. Curtius;
+
+\item Ch. West, \textit{Teologia ciała dla początkujących};
+
+\item R. Hilbert, \textit{Zagłada Żydów Europejskich};
+
+\item J. Delumeau, \textit{Cywilizacja odrodzenia};
+
+\item P. Manent, \textit{Intelektualna historia liberalizmu};
+
+\item B. Baczko, \textit{Filozofia francuskiego oświecenia};
+
+\item J. Juszczak, \textit{Ordoliberalizm};
+
+\item Albaro Vargas Llosa, \textit{Mit Che a przyszłość wolności};
+
+\item T. Snyder, \textit{Rekonstrukcja narodów};
+
+\item Red. M. Rechowicz, \textit{Dzieje teologii katolickiej w Polsce};
+
+\item Ricceure, \textit{Symbolika zła};
+
+\item J. Śniadecki;
+
+\item S. McMeekin, \textit{Największa grabież w historii. Jak bolszewicy
+    złupili Rosję};
+
+\item R. Syme, \textit{Rewolucja rzymska};
+
+\item E. von Kuchnelt-Leddhin, \textit{Ślepy tor};
+
+\item A. McGrath, \textit{Jan Kalwin. Studium kształtowania się kultury
+    Zachodu};
+
+\item P. Kuncewicz, \textit{Samotni wobec historii};
+
+\item C. Ginzburg, \textit{Ser i~robak};
+
+\item James Conrayd Martin, \textit{Nie ponaglaj rzeki};
+
+\item W. Zajewski, \textit{Czy historycy piszą prawdę};
+
+\item S. Węgrzynowicz, \textit{Patrioci i zdrajcy};
+
+\item F. Musiał, \textit{Raj grabarzy narodu};
+
+\item Red. Marek Kornat, \textit{Pius XII --~papież w~epoce
+    totalitaryzmów};
+
+\item H. Głębocki, \textit{„Diabeł Asmodeusz” w~niebieskich binoklach
+    i~kraj przyszłości. Henryk Gurowski i~Rosja};
+
+\item R. Fiegut, \textit{Zaproszenie do „Quidama”};
+
+\item M. Goliczak, \textit{Związek Radziecki w~myśli politycznej
+    polskiej opozycji 1976-1989};
+
+\item M. Urbankowski, \textit{Romans z~Polską};
+
+\item E. J\"{u}nger, \textit{Węzeł gordyjski. Eseistyka lat
+    pięćdziesiątych};
+
+\item J. Besal, \textit{Stanisław Żółkiewski};
+
+\item J. Skowronek, \textit{Adam Jerzy Czartoryski, 1770-1861};
+
+\item C. Shindler, \textit{Historia współczesnego Izraela};
+
+\item W. Bernacki, \textit{Myśl polityczna I Rzeczpospolitej};
+
+\item \textit{Polsko, uwierz w~swoją siłę};
+
+\item Encyclopedia of Mathematical Sciences;
+
+\item \textit{Open GL. Księga eksperta};
+
+\item A. Nowak, \textit{Putin. Źródła imperialnej agresji};
+
+\item Red. P. Musiewicz, \textit{Ronald Reagan. Nowa odsłona w 100-lecie
+    urodzin};
+
+\item H. Pilus, \textit{Własność i zasady w katolickiej myśli
+    społecznej};
+
+\item N. von Below, \textit{Byłem adiunktem Hitlera};
+
+\item G. Kucharczyk, \textit{Czerwone karty Kościoła};
+
+\item G. Kucharczyk, \textit{Kielnią i cyrklem. Laicyzacja Francji w
+    latach 1870-1914};
+
+\item F. Koneczny, \textit{Dzieje Polski opowiedziane dla młodzieży};
+
+\item M. Ekstein, \textit{Święto Wiosny. Wielka wojna i narodziny nowego
+    wieku};
+
+\item B. Kiereś, \textit{Tylko rodzina!};
+
+\item M. Soska, \textit{Za Świętą Ruś. Współczesny nacjonalizm Rosyjski
+    -- zarys ideologi};
+
+\item H. Pająk, \textit{Rytualna zemsta na~„kolebce” Solidarności
+    1981-2011};
+
+\item M. Skousen, \textit{Narodziny współczesnej ekonomii};
+
+\item P. Gontarczyk, \textit{Najnowsze kłopoty z~historią};
+
+\item L. de~Whol;
+
+\item G. Bardy, \textit{Charles de~Gaulle. Biografia katolika i~męża
+    stanu};
+
+\item J. Garrison, \textit{Ameryka jako imperium. Przywódcy świata czy
+    bandycka potęga};
+
+\item E. Lucas, \textit{Operacja Snowden};
+
+\item C. S. Lewis, \textit{Ostatnia noc świata};
+
+\item N. Janner SJ, \textit{Krótka historia Kościoła Katolickiego. Nowe
+    spojrzenie};
+
+\item \textit{Literahistorica};
+
+\item \textit{Bóg Zła};
+
+\item J. Wieliczka-Szarkowa, \textit{III Rzesza. Zbrodnia bez kary};
+
+\item P. Gontarczyk, \textit{Polska Partia Robotnicza. Droga do władzy
+    1941-1944};
+
+\item P. Moa, \textit{Mity wojny domowej w Hiszpania 1936--1939};
+
+\item Władymir Arnold, \textit{Lectures on Partial Differential
+    Equations};
+
+\item Herman H. Goldstein, \textit{A History of Numerical Analysis. From
+    the 16th through the 19th century};
+
+\item G. Edward Griffin, \textit{Finansowy potwór z Jekyll Island};
+
+\item L. Ulicka, \textit{Daniel Stein, tłumacz};
+
+\item R. Scruton, \textit{Kultura jest ważna};
+
+\item P. Gottfried, \textit{Wojna i demokracja};
+
+\item S. Didler, \textit{Rola neofitów w dziejach Polskich};
+
+\item A. Wielomski, \textit{Konserwatyzm. Główne idee i postaci};
+
+\item C. S. Lewis, \textit{Bóg na ławie oskarżonych};
+
+\item R. Spałek, \textit{Komuniści przeciw komunistom};
+
+\item Doug Stanton, \textit{Dwunastu odważnych. Odtajniona historia
+    konnych żołnierzy};
+
+\item Wicek Warszawiak, \textit{Humor w~czasie okupacji};
+
+\item Lawrence Wright, \textit{Wyniosłe wieże. Al-Kaida i~atak
+    na~Amerykę};
+
+\item Robert Mason, \textit{Powiedz, że się boisz};
+
+\item Dla taty: Chufo Llorens;
+
+\item Jearl Walker, \textit{Latający cyrk fizyki};
+
+\item David J.~Griffits, \textit{Introduction to~Quantum Mechanics};
+
+\item B. Dembowski, \textit{O filozofii chrześcijańskiej w Ameryce
+    Północnej};
+
+\item Wiesław Caban, \textit{Powstanie styczniowe. Polacy i Rosjanie w
+    XIX wieku};
+
+\item Jacek Wegner, \textit{Biesy sarmackie};
+
+\item Andrzej Józef Kamiński, \textit{Koszmar niewolnictwa. Obozy
+    koncentracyjne od 1896 do dziś. Analiza};
+
+\item Jochen B\"{o}hler, \textit{Wojna domowa. Nowe spojrzenie
+    na~odrodzenie Polski};
+
+\item F. Wesołowski, \textit{Zasady muzyki};
+
+\item Red. A. Czarniecka-Stefańska, \textit{Szukając prawdy. Edyta Stein
+    w~kulturze polskiej};
+
+\item E. Stein, \textit{Kobieta. Jej zadanie według natury i~łaski};
+
+\item Red. Umberto Eco, \textit{Historia piękna};
+
+\item Zdzisław Krasnodębski, \textit{Rozumienie ludzkiego zachowania.
+    Rozważania o~filozoficznych podstawach nauk humanistycznych
+    i~społecznych};
+
+\item Adam Przechrzta, \textit{Chorągiew Michała Archanioła};
+
+\item Anna Sobolewska, \textit{Mapy duchowe współczesności: co~nam
+    zostało z~Nowej Ery?};
+
+\item Blake J. Harris, \textit{Wojny konsolowe};
+
+\item Nikołaj Zieńkowicz, \textit{Tajemnice mijającego wieku. Władza
+    zakulisowe działania zatargi};
+
+\item Nikołaj Zieńkowicz, \textit{Od~Lenina do~Jelcyna. Kremlowska
+    księga zamachów};
+
+\item Marek Jan Chodakiewicz, \textit{Transformacja czy~niepodległość?};
+
+\item Helmuth Plessner, \textit{Śmiech i~płacz. Badania nad~granicami
+    ludzkiego zachowania};
+
+\item Samuel M.~Katz, \textit{Aman. Wywiad wojskowy Izraela};
+
+\item Praca zbiorowa, \textit{Rosja -- Chiny. Dwa modele transformacji};
+
+\item Mariola Marczak, \textit{Poetyka filmu religijnego};
+
+\item Lech Bukowski, \textit{Sade, Kafka, Kierkegaard. Między rozkoszą a
+    opresją};
+
+\item Philip Earl Steele, \textit{Nawrócenie i chrzest Mieszka I};
+
+\item Henryk Samsonowicz, \textit{My o sobie. Portret własny mieszkańców
+    ziem polskich u schyłku średniowiecza};
+
+\item \textit{Piłsudski (nie)znany. Historia i popkultura};
+
+\item Jakub Z.~Lichański, \textit{Niepopularnie o popularnej. O
+    narzędziach badań literatury};
+
+\item Tadeusz Manteuffel, \textit{Historia Powszechna. Średniowiecze};
+
+\item Robert Jung, \textit{Jaśniej niż tysiąc słońc. Losy badaczy
+    atomu};
+
+\item Wiesław Bator, \textit{Religia starożytnego Egiptu. Perspektywa
+    religioznawcza};
+
+\item Gabriela Matuszek, \textit{Maski i demony wczesnego modernizmu};
+
+\item Artur Szarecki, \textit{Kapitalizm somatyczny. Ciało i władza w
+    kulturze korporacyjnej};
+
+\item \textit{Francuskie pisma o dramacie (1537-1631)};
+
+\item John A. McClure, \textit{Półwiary};
+
+\item Jerzy Axer, Tadeusz Bujnicki, \textit{Wokół „W pustyni i w
+    puszczy”. W stulecie pierwodruku powieści};
+
+\item Gerd-K1laus Kaltenbrunner;
+
+\item Steve Brusatte, \textit{Era dinozaurów - od narodzin do upadku.
+    Nowe odkrycia i fakty o zaginionym świecie};
+
+\item Robert Fabbri, \textit{Wespazjan, trybun Rzymu};
+
+\item Michael Billing, \textit{Banalny nacjonalizm};
+
+\item Ernest Gellner, \textit{Narody i~nacjonalizm};
+
+\item \textit{Oświecenie, nieoświecone. Człowiek, natura, magia};
+
+\item Eric Hobsbawm, Terence Ranger, \textit{Tradycja wynaleziona};
+
+\item Aleksander Śpiewakowski, \textit{Samuraje};
+
+\item N. Davies, \textit{Serce Europy};
+
+\item Thomas Hylland Eriksen, \textit{Etniczność i~nacjonalizm};
+
+\item Benedict Andreson, \textit{Wspólnoty wyobrażone};
+
+\item Karol Tarnowski, \textit{W~mroku uczonej niewiedzy};
+
+\item Barbary Tuchman, \textit{Odległe zwierciadło, czyli rozlicznymi
+    plagami nękane XIV stulecie};
+
+\item Homi K. Bhabha, \textit{Miejsca kultury};
+
+\item Tim Edensor, \textit{Tożsamość narodowa, kultura popularna i~życie
+    codzienne};
+
+\item Justyna Balisz-Schmelz, \textit{Przeszłość niepokonana. Sztuka
+    niemiecka po 1945 roku jako przestrzeń i medium pamięci};
+
+\item Anthony D.~Smith, \textit{Etniczne źródła narodów};
+
+\item Anthony D.~Smith, \textit{Kulturowe podstawy narodów};
+
+\item Piotr Eberhardt, \textit{Rozwój światowej myśli geopolitycznej};
+
+\item P. Bąk, \textit{Gramatyka języka polskiego. Zarys popularny};
+
+\item Jacek Wegner, \textit{Rzeczpospolita. Duma i~wstyd};
+
+\item Wassily Kandinsky, \textit{Punkt i~linia a~płaszczyzna. Przyczynek
+    do~analizy elementów malarskich};
+
+\item Red. Aneta Pawłowska, Julia Sowińska-Heim, \textit{Afryka
+    i~(post)kolonializm};
+
+\item Robert J. C. Young, \textit{Postkolonializm. Wprowadzenie};
+
+\item G.~Michaelson, \textit{An Introduction to~Functional Programming
+    through Lambda Calculus};
+
+\item Gilberto Freyre, \textit{Panowie i niewolnicy};
+
+\item H. P. Barendregt, \textit{The Lambda Calculus: Its Syntax and
+    Semantics};
+
+\item Leon Degrelle, \textit{Wiek Hitlera};
+
+\item N. D. Jones, \textit{Computability and Complexity: From
+    a~Programming Perspective};
+
+\item Ks. Marcin Worbs, \textit{Człowiek w~misterium liturgii};
+
+\item Anna Grześkowiak-Krwawicz, \textit{Dyskurs polityczny
+    Rzeczypospolitej Obojga Narodów};
+
+\item Nowak \textit{Dzieje Polski};
+
+\item Margaret Atwood, \textit{Dług. Rozrachunek z~ciemną stroną
+    bogactwa};
+
+\item Jared Diamond, \textit{Strzelby, zarazki, maszyny. Losy ludzkich
+    społeczeństw};
+
+\item Edward E. Evans-Pritchard, \textit{Czary, wyrocznie i~magia
+    u~Azande};
+
+\item W. Szumowski, \textit{Historia medycyny filozoficznie ujęta};
+
+\item Michał Dondzik, Krzysztof Jajko, Emil Swoiński, \textit{Elementarz
+    Wytwórni Filmów Oświatowych};
+
+\item James M. Murray, \textit{Brugia: Kolebka kapitalizmu};
+
+\item Maciej Janowski, \textit{Narodziny inteligencji: 1750--1831};
+
+\item Jerzy Jedlicki, \textit{Jakiej cywilizacji Polacy potrzebują:
+    studia z dziejów idei i~wyobraźni XIX wieku};
+
+\item Jerzy Jedlicki, \textit{Droga do narodowej klęski};
+
+\item Jerzy Jedlicki, \textit{Błędne koło: 1832-1864};
+
+\item Jerzy Jedlicki, \textit{Nieudana próba kapitalistycznej
+    industrializacji: analiza państwowego gospodarstwa przemysłowego
+    w~Królestwie Polskim XIX w.};
+
+\item Jerzy Jedlicki, \textit{Klejnot i~bariery społeczne: przeobrażenia
+    szlachectwa polskiego w~schyłkowym okresie feudalizmu};
+
+\item Jerzy Jedlicki, \textit{Świat zwyrodniały: lęki i~wyroki krytyków
+    nowoczesności};
+
+\item Rob Riemen, \textit{Wieczny powrót faszyzmu};
+
+\item Łukasz A. Plesnar, \textit{Twarze Westernu};
+
+\item S. Prat, \textit{Język C++. Szkoła programowania};
+
+\item L. Strauss, \textit{Prawo naturalne w~świetle historii};
+
+\item Oskar Halecki, \textit{Tysiąc lat polski katolickiej};
+
+\item Krzysztof Mazur, \textit{Przekroczyć nowoczesność. Projekt
+    polityczny ruchu społecznego Solidarność};
+
+\item Marian Henryk Serejski, \textit{Europa a rozbiory Polski: studium
+    historiograficzne};
+
+\item Jerzy Łanowski, \textit{Antologia anegdoty antycznej: teraz trzeci
+    raz wydane historyjki budujące i niebudujące z autorów greckich i
+    rzymskich};
+
+\item Artur Domosłowski, \textit{Kapuściński non-fiction};
+
+\item Michael Moran, \textit{Kraj z Księżyca: podróże do serca Polski};
+
+\item Pierre Hadot, \textit{Filozofia jako ćwiczenie duchowe};
+
+\item Robert D. Richtmayer, \textit{Principles of advanced mathematical
+    physics};
+
+\item Walter Burkert, \textit{Stwarzanie świętości. Ślady biologii
+    we~wczesnych wierzeniach religijnych};
+
+\item A. I. Anselm, \textit{Podstawy fizyki statystycznej
+    i~termodynamiki};
+
+\item Z. Krasnodębski, \textit{Demokracja peryferii};
+
+\item Maria Dzielska, \textit{Hypatia z~Aleksandrii};
+
+\item Paweł Śpiewak, \textit{Spór o~Polskę, 1989--99};
+
+\item Tadeusz Zieliński, \textit{Religia starożytnej Grecji};
+
+\item Ernest Gellner, \textit{Postmodernizm, rozum i~religia};
+
+\item Daniel Beauvois, \textit{Polacy na Ukrainie 1831-1863. Szlachta
+    polska na Wołyniu, Podolu i Kijowszczyźnie};
+
+\item \textit{Polskie mity polityczne XIX i XX wieku};
+
+\item \textit{O nas bez nas. Historia Polski w historiografiach
+    obcojęzycznych};
+
+\item Leibniz, \textit{Wyznanie wiary filozofa, Rozprawa metafizyczna;
+    Monadologia; Zasady natury i łaski oraz inne pisma filozoficzne};
+
+\item Hanna Świda-Ziemba, \textit{Człowiek wewnętrznie zniewolony.
+    Mechanizmy i konsekwencje minionej formacji --~analiza
+    psychologiczna};
+
+\item Paul Johnson, \textit{Historia świata XX wieku};
+
+\item Braudel Fernand, \textit{Dynamika kapitalizmu};
+
+\item I. Berlin, \textit{Korzenie romantyzmu};
+
+\item Bod Rens, \textit{Historia humanistyki};
+
+\item \textit{Teologia i filozofia żydowska wobec Holocaustu};
+
+\item Acton, \textit{Historia wolności: wybór esejów};
+
+\item Andrzej Żbikowski, \textit{Żydzi};
+
+\item Stefan Bartkowski, \textit{Pod wspólnym niebem: krótka historia
+    Żydów w~Polsce i~stosunków polsko-żydowskich};
+
+\item Arystoteles, \textit{Retoryka};
+
+\item Agnieszka Urbańczyk, Diamentowy Grant, \textit{Polityczność
+    science fiction w recepcji fanowskie};
+
+\item \textit{Lech Wzbudzony};
+
+\item \textit{Unintended Reformation};
+
+\item J. Polit, \textit{Chiny};
+
+\item Paweł Śpiewak, \textit{Teologia i~filozofia żydowska wobec
+    Holocaustu};
+
+\item J.K. Fairbank, \textit{Historia Chin. Nowe spojrzenie};
+
+\item \textit{Nowożytna historia Chin}, red. R. Sławiński;
+
+\item R. Sławiński, \textit{Geneza Chińskiej Republiki Ludowej};
+
+\item K. Seitz, \textit{Chiny. Powrót Olbrzyma};
+
+\item A. Bolesta, \textit{Chiny w okresie transformacji};
+
+\item \textit{Chiny. Przemiany państwa i społeczeństwa w okresie reform
+    1978--2000}, red. K. Tomala;
+
+\item Andrzej Napiórkowski OSPPE, \textit{Teologie XX i~XXI wieku};
+
+\item Alfred V.~Aho, Jeffrey D.~Ullman, \textit{Wykłady z~informatyki
+    z~przykładami w~języku~C};
+
+\item Jerzy Eisler, \textit{Co nam zostało z tamtych lat. Dziedzictwo
+    PRL};
+
+\item Peter Burke;
+
+\item B. Kozera, \textit{Literatura a~religia. Polska współczesna
+    powieść katolicka};
+
+\item \textit{Physics of living systems};
+
+\item Jadwiga Staniszkis, \textit{Samoograniczająca~się rewolucja};
+
+\item Jadwiga Staniszkis, \textit{Postkomunizm. Próba opisu};
+
+\item Z. Wójcik, \textit{Dzikie Pola w~ogniu. O~Kozaczyźnie w~dawnej
+    Rzeczypospolitej};
+
+\item Jan Kofman, Wojciech Roszkowski, \textit{Transformacja
+    i~postkomunizm};
+
+\item M. Gołaszewska, \textit{Estetyka współczesna};
+
+\item E. Badinter, \textit{XY~-- tożsamość mężczyzny};
+
+\item R. Bly, \textit{Żelazny Jan. Rzecz o~mężczyznach};
+
+\item Z. Wójcik, \textit{Wojny kozackie w dawnej Polsce};
+
+\item Z. Wójcik, \textit{Dzieje Rosji: 1533-1801};
+
+\item Vigarello Georges, \textit{Historia gwałtu};
+
+\item Tannahill Reay, \textit{Historia kuchni};
+
+\item Éliphas Lévi, \textit{Historia magii};
+
+\item Meyer Michel (red.), \textit{Historia retoryki od Greków do dziś};
+
+\item Simmel Georg, \textit{Filozofia pieniądza};
+
+\item Dahl Robert, \textit{Demokracja i~jej krytycy};
+
+\item Z. Wojcik, \textit{Jan Sobieski: 1629-1696};
+
+\item Z. Wójcik, \textit{Jan III Sobieski};
+
+\item Ariès Philippe, \textit{Historia dzieciństwa. Dziecko i rodzina w
+    czasach ancien régime’u};
+
+\item Bataille Georges, \textit{Historia erotyzmu};
+
+\item Vigarello Georges, \textit{Historia otyłości};
+
+\item Flandrin Jean-Louis, \textit{Historia rodziny};
+
+\item Z. Wójcik, \textit{Jan Kazimierz Waza};
+
+\item Z. Wójcik, \textit{Józef Piłsudski 1867-1935};
+
+\item \textit{Legendy uświęcone. Twórczość J. R. R. Tolkiena a
+    chrześcijaństwo};
+
+\item Stefan Bratkowski, \textit{Nieco inna historia cywilizacji: dzieje
+    banków, bankierów i obrotu pieniężnego};
+
+\item Izrael Szahad, \textit{Żydowskie dzieje i religia; Żydzi i goje –
+    XXX wieków historii};
+
+\item Izrael Szahak, \textit{Tel Awiw za zamkniętymi drzwiami};
+
+\item Andrzej Żbikowski, \textit{Ideologia antysemicka w~Polsce
+    1848-1918};
+
+\item Władysław Bruliński, \textit{Antykościół};
+
+\item Władysław Bruliński, \textit{Co to jest marksizm?};
+
+\item Władysław Bruliński, \textit{Czerwone palmy historii};
+
+\item Władysław Bruliński, \textit{Dokąd idziesz Polsko?};
+
+\item \textit{Żydzi i judaizm we współczesnych badaniach polskich};
+
+\item Artur Eisenbach, \textit{Emancypacja Żydów na ziemiach polskich
+    1785-1870 na tle europejskim};
+
+\item Artur Eisenbach, \textit{Z dziejów ludności żydowskiej w Polsce w
+    XVIII i XIX w.};
+
+\item Artur Eisenbach, \textit{Kwestia równouprawnienia Żydów w
+    Królestwie Polskim};
+
+\item Marian Fuks, \textit{Humor Żydów polskich (do 1939 r.)};
+
+\item Marian Fuks, \textit{Żydzi w Polsce – Dawniej i dziś};
+
+\item Marian Fuks, \textit{Prasa żydowska w Warszawie 1823-1939};
+
+\item Marian Fuks, \textit{Z dziejów wielkiej katastrofy narodu
+    żydowskiego};
+
+\item August Grabski, \textit{Studia z dziejów i kultury Żydów w Polsce
+    po 1945 r.};
+
+\item Robert Fabbri, \textit{Wespazjan, trybun Rzymu};
+
+\item Michael Hesemann, \textit{Kłamstwa Hitlera};
+
+\item David Hockney, \textit{Wiedza tajemna. Sekrety technik malarskich
+    Dawnych Mistrzów};
+
+\item Anna Magdalena Mandrela, \textit{Tomizm Garrigou-Lagrange’a wobec
+    wizji filozoficznej Teilharda de Chardin};
+
+\item Leonie Swann, \textit{Powiększ Sprawiedliwość owiec. Filozoficzna
+    powieść kryminalna};
+
+\item Antoine de Saint-Exupéry, \textit{Twierdza};
+
+\item Umberto Eco, \textit{Historia brzydoty};
+
+\item Brian Reynolds Myers, \textit{Najczystsza rasa: Propaganda Korei
+    Północnej};
+
+\item Tomasz Strzyżewski, \textit{Wielka księga cenzury PRL w
+    dokumentach};
+
+\item Orlando Figes, \textit{Tragedia narodu. Rewolucja rosyjska
+    1891-1924};
+
+\item Jon Savage, \textit{Teenage: The Creation of Youth Culture};
+
+\item Lawrence Weschler, \textit{Mr. Wilson's Cabinet of Wonder: Pronged
+    Ants, Horned Humans, Mice on Toast, and Other Marvels of Jurassic
+    Technology};
+
+\item Christophe Galfard, \textit{Wszechświat w twojej dłoni};
+
+\item Swietłana Aleksijewicz, \textit{Cynkowi chłopcy};
+
+\item Aleksander Hertz, \textit{Amerykańskie stronnictwa polityczne};
+
+\item Aleksander Hertz, \textit{Żydzi w kulturze polskiej};
+
+\item Aleksander Hertz, \textit{Wyznania starego człowieka};
+
+\item Maurycy Horn, \textit{Żydowskie bractwa rzemieślnicze na ziemiach
+    polskich, litewskich, białoruskich i ukraińskich w latach
+    1613-1850};
+
+\item Maurycy Horn, \textit{Walka chłopów czerwonoruskich z wyzyskiem
+    feudalnym w latach 1600-1643};
+
+
+\item Adam Kaźmierczyk, \textit{Sejmy i sejmiki szlacheckie wobec Żydów
+    w II połowie XVII wieku};
+
+\item Adam Kaźmierczyk, \textit{Żydzi w dobrach prywatnych. W świetle
+    sądowniczej i administracyjnej praktyki dóbr magnackich w wiekach
+    XVI-XVIII};
+
+\item Krystyna Kersten, \textit{Polacy-Żydzi-Komunizm. Anatomia półprawd
+    1939-1968};
+
+\item Krystyna Kersten, \textit{Pogrom Żydów w Kielcach 4 lipca 1946
+    r.};
+
+\item Andrzej Sulima Kamiński, \textit{Historia Rzeczypospolitej Wielu
+    Narodów 1505-1795. Obywatele, ich państwa, społeczeństwo,
+    kultura};
+
+\item Cynarski S., \textit{Zygmunt August};
+
+\item Cyra A., \textit{Rotmistrz Pilecki. Ochotnik do Auschwitz};
+
+\item \textit{Czy ktoś przebije ten mur? Sprawa Pyjasa};
+
+\item Dudek A., Zblewski Z., \textit{Utopia nad Wisłą. Historia
+    Peerelu};
+
+\item Czapliński W., \textit{Władysław IV i jego czasy};
+
+\item Dybiec J., \textit{Nie tylko szablą. Nauka i kultura polska w
+    walce o~utrzymanie tożsamości narodowej 1795--1918};
+
+\item Eisler J., \textit{Zarys dziejów politycznych Polski 1944--1989};
+
+\item Grzybowski S., \textit{Henryk Walezy};
+
+\item Ignatowicz I., \textit{Społeczeństwo polskie 1864--1914};
+
+\item \textit{Inteligencja polska XIX i XX wieku. Studia}, red. R.
+  Czapulis-Rastenis, t.1-6;
+
+\item Jedynak B., \textit{Obyczaje domu polskiego w~czasach niewoli
+    1795--1918};
+
+\item Kaczmarczyk J., \textit{Bohdan Chmielnicki};
+
+\item Kawalec K., \textit{Roman Dmowski};
+
+\item \textit{Kobieta i kultura życia codziennego. Wiek XIX i XX. Zbiór
+    studiów}, red. A. Żarnowska, A. Szwarc;
+
+\item \textit{Kobieta i społeczeństwo na ziemiach polskich w XIX wieku,
+    zbiór studiów}, red. A. Żarnowska, A. Szwarc;
+
+\item Konopczyński W., \textit{Dzieje Polski nowożytnej};
+
+\item Kowecka E., \textit{W salonie i w kuchni. Opowieść o kulturze
+    materialnej pałaców i dworów polskich w XIX wieku};
+
+\item Krawczak T., \textit{W szlacheckim zaścianku};
+
+\item Kuchowicz Z., \textit{Miłość staropolska};
+
+\item Kuchowicz Z., \textit{Obyczaje staropolskie XVII-XVIII w.};
+
+\item Litak S., \textit{Od reformacji do Oświecenia. Kościół katolicki
+    w~Polsce nowożytnej};
+
+\item Mączak A., \textit{Klientela. Nieformalne systemy władzy w Polsce
+    Europie XVI-XVIII w.};
+
+\item Łuczak C., \textit{Polska i Polacy w drugiej wojnie światowej};
+
+\item Molenda J., \textit{Chłopi. Naród. Niepodległość. Kształtowanie
+    się postaw narodowych i~obywatelskich chłopów w~Galicji
+    i~Królestwie polskim w~przededniu odrodzenia Polski};
+
+\item Możdżyńska-Nawotka M., \textit{O~modach i~strojach};
+
+\item \textit{Obyczaje w Polsce. Od średniowiecza do czasów
+    współczesnych};
+
+\item Olszewski D., \textit{Polska kultura religijna na przełomie XIX
+    i~XX wieku};
+
+\item Olszewski H., \textit{O skutecznym rad sposobie};
+
+\item \textit{Polska XVII wieku. Państwo, społeczeństwo, kultura}, red.
+  J. Tazbir;
+
+\item Paczkowski A., \textit{Pół wieku dziejów Polski, 1939--1989};
+
+\item \textit{Polska na przestrzeni wieków}, red. J. Tazbir;
+
+\item Przyboś A., \textit{Michał Korybut Wiśniowiecki 1640-1673};
+
+\item Rok B., \textit{Człowiek wobec śmierci w kulturze staropolskiej};
+
+\item \textit{Rzeczpospolita wielu narodów i jej tradycje}, red. M.
+  Markiewicz, A. Link-Lenczewski;
+
+\item \textit{Społeczeństwo polskie od X do XX wieku}, red. I.
+  Ignatowicz, A. Mączak, B. Zientara, J. Żarnowski;
+
+\item Staszewski J., \textit{August II Mocny};
+
+\item Staszewski J., \textit{August III Sas};
+
+\item Suleja W., \textit{Józef Piłsudski};
+
+\item Szubarczyk P., \textit{Inka. Zachowałam się jak trzeba\ldots};
+
+\item Topolski J., \textit{Polska w czasach nowożytnych. Od europejskiej
+    potęgi do utraty niepodległości};
+
+\item Terlecki R., \textit{Miecz i tarcza komunizmu. Historia aparatu
+    bezpieczeństwa 1944--1990};
+
+\item \textit{Tradycje polityczne dawnej Polski}, red. A.
+  Sucheni-Grabowska, A. Dybowska;
+
+\item Wandycz P., \textit{Pod zaborami. Ziemie Rzeczypospolitej w latach
+    1795--1918};
+
+\item Wisner H., \textit{Władysław IV Waza};
+
+\item Wisner H., \textit{Zygmunt III Waza};
+
+\item Zielińska Z., \textit{Ostatnie lata Pierwszej Rzeczypospolitej};
+
+\item Zblewski Z, \textit{Abecadło Peerelu};
+
+\item Zienkowska K., \textit{Stanisław August Poniatowski};
+
+\item Zdrada J., \textit{Historia Polski 1795--1914};
+
+\item Żarnowski, J., \textit{Polska 1918--1939. Praca, technika,
+    społeczeństwo};
+
+\item Ziejka F., \textit{Złota legenda chłopów polskich};
+
+\item Żołądź D., \textit{Ideały edukacyjne doby staropolskiej. Stanowe
+    modele i potrzeby edukacyjne szesnastego i siedemnastego wieku};
+
+\item R. Wapiński, \textit{Historia polskiej myśli politycznej XIX
+    i~XX~wieku};
+
+\item R.R. Ludwikowski, \textit{Historia polskiej myśli politycznej};
+
+\item W. Bernacki, \textit{Liberalizm polski};
+
+\item B. Szlachta, \textit{Z dziejów polskiego konserwatyzmu};
+
+\item M. Śliwa, \textit{Polska myśl socjalistyczna 1892--1948};
+
+\item Z. Ogonowski, \textit{Filozofia polityczna w~Polsce XVII w.
+    i~tradycje demokracji europejskiej};
+
+\item S. Tarnowski, \textit{Pisarze polityczni XVI wieku};
+
+\item S. Tarnowski, \textit{Historia literatury polskiej, t.2};
+
+\item W. Konopczyński, \textit{Polscy pisarze polityczni XVIII w.};
+
+\item H. Olszewski, \textit{Doktryny prawno-ustrojowe czasów saskich};
+\item K. Waliszewski, \textit{Potoccy i Czartoryscy, walka stronnictw i
+    programów politycznych przed upadkiem Rzeczypospolitej 1734--1763};
+
+\item Red. Tomasz Dołęgowski, \textit{Przewodnik po moralnym
+    kapitalizmie};
+
+\item Besala J., \textit{Stefan Batory};
+
+\item Cieślak E., \textit{Stanisław Leszczyński};
+
+\item Bogucka M., \textit{Staropolskie obyczaje XVI-XVII w};
+
+\item Cz. Michalski, \textit{Western};
+
+\item A. Chwalba, \textit{III Rzeczpospolita~-- raport specjalny};
+
+\item Jean-Paul Bled, \textit{Bismarck. Żelazny kanclerz};
+
+\item Marcin Król, \textit{Byliśmy głupi};
+
+\item J. Wójcik, \textit{Labirynt światła};
+
+\item A. Chwalba, \textit{Historia Polski 1795-1918};
+
+\item Brzoza C., Sowa A., \textit{Historia Polski 1918-1945};
+
+\item Cz. Michalski, \textit{Western i~jego bohaterowie};
+
+\item Rafał Marszałek, \textit{Pamflet na kino codzienne};
+
+\item Rafał Marszałek, \textit{Polska wojna w obcym filmie};
+
+\item Rafał Marszałek, \textit{Filmowa pop-historia};
+
+\item Rafał Marszałek, \textit{Kino rzeczy znalezionych};
+
+\item J. Skwara, \textit{Western odrzuca legendę};
+
+\item Władysław Konopczyński, \textit{Konfederacja barska};
+
+\item Michał Łuczewski, \textit{Odwieczny naród. Polak i~katolik
+    w~Żmiącej};
+
+\item Alan Bullock, \textit{Hitler. Studium tyrani};
+
+\item Tadeusz Lubelski, \textit{Historia Kina Polskiego, Twórcy, Filmy,
+    Konteksty};
+
+\item Marek Haltof, \textit{Kino polskie};
+
+\item \textit{Kino bez tajemnic};
+
+\item David Bordwell, Kristin Thompson, \textit{Film Art. Sztuka
+    filmowa. Wprowadzenie};
+
+\item W. Stróżewski, \textit{Estetyka};
+
+\item Vigarello Georges, \textit{Historia czystości i brudu};
+
+\item Muchembled Robert, \textit{Orgazm i Zachód};
+
+\item Sloterdijk Peter, \textit{Pogarda mas};
+
+\item Gately Iain, \textit{Kulturowa historia alkoholu};
+
+\item Eco Umberto, \textit{Poszukiwanie języka doskonałego w kulturze
+    europejskiej};
+
+\item Coogan Michael, \textit{Bóg i~seks. Co naprawdę mówi Biblia};
+
+\item Secher Reynald, \textit{Ludobójstwo francusko-francuskie};
+
+\item Vigarello Georges, \textit{Historia urody};
+
+\item Higman B.W., \textit{Historia żywności};
+
+\item Tannahill Reay, \textit{Historia seksu};
+
+\item Ramamurti Rajaraman, \textit{Solitons and~instantons};
+
+\item Wilson Edward O., \textit{Znaczenie ludzkiego istnienia};
+
+\item Karl Loewith, \textit{Historia powszechna i dzieje zbawienia};
+
+\item Tony Judt, \textit{Historia niedokończona. Francuscy
+    intelektualiści 1944-1956};
+
+\item Karl Loewith, \textit{Od Hegla do Nietzschego. Rewolucyjny przełom
+    w myśli XIX wieku};
+
+\item J. Fiske \textit{Zrozumieć kulturę popularną};
+
+\item Anatol Taras, \textit{Anatomia nienawiści};
+
+\item R. Rodes, \textit{Jak powstała bomba atomowa?};
+
+\item A. Tarski;
+
+\item Karol Buczek, \textit{Studia z dziejów ustroju
+    społeczno-gospodarczego Polski piastowskiej};
+
+\item Red. S. Kowalczyk, E. Balawajder, \textit{Jacques Maritain,
+    prekursor soborowego humanizmu};
+
+\item T. M. Jaroszewski, \textit{Osobowość i wspólnota. Problemy
+    osobowości we współczesnej antropologii filozoficznej --~marksizm,
+    strukturalizm, egzystencjalizm, personalizm chrześcijański};
+
+\item Roman Graczyk, \textit{Od uwikłania do autentyczności. Biografia
+    polityczna Tadeusza Mazowieckiego};
+
+\item S. Wiggins, \textit{Introduction to Applied Nonlinear Dynamical
+    Systems and Chaos};
+
+\item Władymir Arnold, \textit{Catastrophe Theory};
+
+\item Red. Christian B\"{a}r, Klaus Fredenhagen, \textit{Quantum Field
+    Theory on Curved Spacetimes};
+
+\item Sholmo Sternberg, \textit{Semi-Riemann Geometry and General
+    Relativity};
+
+\item Peter B. Gilkey, \textit{Invariance theory, the heat equation, and
+    the Atiyah-Singer Index Theorem};
+
+\item Richard S. Palais, \textit{A Modern Course on Curves and
+    Surfaces};
+
+\item J\"{u}rgen Jost, \textit{Geometry and physics};
+
+\item Charles Freeman, \textit{A New History of Early Christianity};
+
+\item Bart D. Ehrman, \textit{Whose Word is it. The Story Behind who
+    changed the New Testament and why};
+
+\item Robert V. Huber, Stephen M. Miller \textit{Historia Biblii};
+
+\item John Galindo, Owen F. Cummings, \textit{Duchowość, intymność i
+    seksualność};
+
+\item James L. Papandrea, \textit{Depozyt wiary};
+
+\item Anadijiban Das, Andrew DeBenedictis, \textit{The general theory of relativity. A mathematical exposition};
+
+\item Sergio A. Albeverio, Raphael J. H\o egh-Krohn, Sonia Mazzucchi, \textit{Mathematical theory of Feynman path integrals};
+
+  % \item
+
+  % \item
+
+  % \item
+
+\item Donald Ritchie, \textit{The Films of Akira Kurosawa};
+
+\item Martin Konings, \textit{The Emotional Logic of Capitalism. What
+    Progressives Have Missed};
+
+\item David Sloan Wilson, \textit{Darwin's Cathedral: Evolution,
+    Religion, and the~Nature~of Society};
+
+\item Ch.~R.~Browning, \textit{Zwykli ludzie. 101~Policyjny Batalion
+    Rezerwowy i~„ostateczne rozwiązanie” w~Polsce}
+
+\item Viviana A. Zelizer, \textit{The Social Meaning of Money: Pin
+    Money, Paychecks, Poor Relief, and Other Currencies};
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+\item I. Wallerstein, \textit{Europejski uniwersalizm. Retoryka władzy};
+
+\item Abbé Jacques Meinvielle, \textit{De Lamennais ŕ Maritain};
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\end{enumerate}
+
+
+
+
+
+
+
+
+
+
+% ######################################
+\newpage
+\section{Zaczęte i~nieskończone}
+
+\vspace{\spaceTwo}
+% ######################################
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+% ######################################
+\newpage
+\section{Articles}
+
+\vspace{\spaceTwo}
+% ######################################
+
+
+
+\begin{enumerate}
+
+\item Edward Witten, \textit{Notes on Some Entanglement Properties of
+    Quantum Field Theory},
+  \href{https://arxiv.org/abs/1803.04993}{arXiv:1803.04993};
+
+\item Jeff Bezanson et al, "Julia: dynamism and performance reconciled
+  by design"
+  \href{https://doi.org/10.1145/3276490}{https://doi.org/10.1145/3276490};
+
+\item Francesco Zappa Nardelli et al., "Julia subtyping: a rational
+  reconstruction",
+  \href{https://doi.org/10.1145/3276914}{https://doi.org/10.1145/3276914};
+
+\item Artem Pelenitsyn et al., "Type Stability in Julia: Avoiding
+  Performance Pathologies in JIT Compilation",
+  https://doi.org/10.1145/3485527,
+  \href{arXiv:2109.01950}{https://arxiv.org/abs/2109.01950};
+
+\item \textit{How SQLite Is Tested},
+  \href{https://www.sqlite.org/testing.html}{https://www.sqlite.org/testing.html};
+
+\item \textit{SpotBugs},
+  \href{https://spotbugs.github.io/}{https://spotbugs.github.io/};
+
+\item \textit{A tool to detect bugs in Java and C/C++/Objective-C code
+    before it ships},
+  \href{https://fbinfer.com/}{https://fbinfer.com/la};
+
+\item \textit{Go 1 and the Future of Go Programs},
+  \href{https://go.dev/doc/go1compat}{https://go.dev/doc/go1compat};
+
+\item \textit{SD-8: Standard Library Compatibility},
+  \href{https://isocpp.org/std/standing-documents/sd-8-standard-library-compatibility}{https://isocpp.org/std/standing-documents/sd-8-standard-library-compatibility};
+
+\item \textit{GNU General Public License},
+  \href{https://www.gnu.org/licenses/gpl-3.0.html}{https://www.gnu.org/licenses/gpl-3.0.html};
+
+\item \textit{Reflections on trusting trust},
+  \href{https://dl.acm.org/doi/10.1145/358198.358210}{https://dl.acm.org/doi/10.1145/358198.358210};
+
+\item \textit{Go \& Versioning},
+  \href{https://research.swtch.com/vgo}{https://research.swtch.com/vgo};
+
+\item \textit{Why Google stores billions of lines of code in a single
+    repository},
+  \href{https://dl.acm.org/doi/10.1145/2854146}{https://dl.acm.org/doi/10.1145/2854146};
+
+\item \textit{Testing Chromium: ThreadSanitizer v2, a next-gen data
+    race
+    detector}, \\
+  \href{https://blog.chromium.org/2014/04/testing-chromium-threadsanitizer-v2.html}{https://blog.chromium.org/2014/04/testing-chromium-threadsanitizer-v2.html};
+
+\item \textit{Search Vulnerability Database},
+  \href{https://nvd.nist.gov/vuln/search}{https://nvd.nist.gov/vuln/search};
+
+\item \textit{Regular Expression Matching with a Trigram Index or How
+    Google Code Search Worked}, \\
+  \href{https://swtch.com/~rsc/regexp/regexp4.html}{https://swtch.com/~rsc/regexp/regexp4.html};
+
+\item \textit{Licenses},
+  \href{https://opensource.google/docs/thirdparty/licenses}{https://opensource.google/docs/thirdparty/licenses};
+
+\item \textit{ImperialViolet},
+  \href{https://www.imperialviolet.org/2009/08/26/seccomp.html}{https://www.imperialviolet.org/2009/08/26/seccomp.html};
+
+\item \textit{Multi-process Architecture},
+  \href{https://blog.chromium.org/2008/09/multi-process-architecture.html}{https://blog.chromium.org/2008/09/multi-process-architecture.html};
+
+\item \textit{A single Node of failure},
+  \href{https://lwn.net/Articles/681410/}{https://lwn.net/Articles/681410/};
+
+\item \textit{Interpreting the Data: Parallel Analysis with Sawzall},
+  \href{https://www.hindawi.com/journals/sp/2005/962135/}{https://www.hindawi.com/journals/sp/2005/962135/};
+
+\item \textit{Go Proverbs},
+  \href{https://go-proverbs.github.io/}{https://go-proverbs.github.io/};
+
+\item \textit{RE2: a principled approach to regular expression
+    matching}, \\
+  \href{https://opensource.googleblog.com/2010/03/re2-principled-approach-to-regular.html}{https://opensource.googleblog.com/2010/03/re2-principled-approach-to-regular.html};
+
+\item \textit{Details about the event-stream incident}, \\
+  \href{https://blog.npmjs.org/post/180565383195/details-about-the-event-stream-incident}{https://blog.npmjs.org/post/180565383195/details-about-the-event-stream-incident};
+
+\item \textit{Open-sourcing gVisor, a sandboxed container runtime}, \\
+  \href{https://cloud.google.com/blog/products/identity-security/open-sourcing-gvisor-a-sandboxed-container-runtime}{https://cloud.google.com/blog/products/identity-security/open-sourcing-gvisor-a-sandboxed-container-runtime};
+
+\item Samuel R. Buss, Alexander S. Kechris, Anand Pillay, Richard A.
+  Shore, \textit{The prospects for mathematical logic in the
+    twenty-first century},
+  \href{https://arxiv.org/abs/cs/0205003v1}{arXiv:cs/0205003v1};
+
+\item Christian Retore, \textit{On the system F as a glue language for
+    natural-language compositional-semantics},
+  \href{https://arxiv.org/abs/1108.5084}{arXiv:1108.5084};
+
+\item Robert Harper, \textit{An Equational Logical Framework for Type
+    Theories},
+  \href{https://arxiv.org/abs/2106.01484}{arXiv:2106.01484};
+
+\item Jan Leike, et al., \textit{AI Safety Gridworlds},
+  \href{https://arxiv.org/abs/1711.09883}{arXiv:1711.09883v2};
+
+\item Sergei Gukov, Edward Witten, \textit{Branes and Quantization},
+  \href{https://arxiv.org/abs/0809.0305}{https://arxiv.org/abs/0809.0305};
+
+\item R. Estrada, J. M. Gracia-Bondia, J. C. Varilly, \textit{On
+    summability of distributions and spectral geometry},
+  \href{https://arxiv.org/abs/funct-an/9702001v1}{arXiv:funct-an/9702001};
+
+\item Ghanashyam Date, \textit{Lectures on Constrained Systems},
+  \href{https://arxiv.org/abs/1010.2062v1}{arXiv:1010.2062};
+
+\item Frank Wilczek, \textit{Quantum Field Theory},
+  \href{https://arxiv.org/abs/hep-th/9803075v2}{arXiv:hep-th/9803075};
+
+\item Karl Michael Schmidt, Karl Michael Schmidt, \textit{Schnol’s
+    Theorem and Spectral Properties of Massless Dirac Operators with
+    Scalar Potentials};
+
+\item Peter J. Olver, \textit{Dirac’s theory of constraints in fields
+    theory and the canonical form of Hamiltonian differential
+    operators};
+
+
+\item Lorenzo Iorio, \textit{Editorial for the Special Issue 100 Years
+    of Chronogeometrodynamics: The Status of the Einstein's Theory of
+    Gravitation in Its Centennial Year},
+  \href{https://arxiv.org/abs/1504.05789v2}{arXiv:1504.05789};
+
+\item B. Mutet, P. Grang\'{e}, E. Werner, \textit{Taylor–Lagrange
+    renormalization and gauge theories in four dimensions};
+
+
+\item \textit{Surviving Software Dependencies},
+  \href{https://queue.acm.org/detail.cfm?id=3344149}{https://queue.acm.org/detail.cfm?id=3344149};
+
+\item Clifford M. Will, \textit{The Confrontation between General
+    Relativity and Experiment};
+
+\item Paul Lopes, \textit{Culture and Stigma: Popular Culture and the
+    Case of Comic Books};
+
+\item Marina S.Butuzova 1, Alexander B. Pushkarev, \textit{Is OJ 287 a
+    Single Supermassive Black Hole?};
+
+\item Peter Selinger, \textit{Lecture notes on the lambda calculus},
+  \href{https://arxiv.org/abs/0804.3434v2}{arXiv:0804.3434};
+
+\item Alex Eskin, Maryam Mirzakhani, \textit{Counting closed geodesics
+    in Moduli space},
+  \href{https://arxiv.org/abs/0811.2362v3}{arXiv:0811.2362};
+
+\item Jacques Carette, James H. Davenport, \textit{The Power of
+    Vocabulary: The Case of Cyclotomic Polynomials},
+  \href{https://arxiv.org/abs/1002.0012v1}{arXiv:1002.0012};
+
+\item Chris Kapulkin, Peter LeFanu Lumsdaine, \textit{The Simplicial
+    Model of Univalent Foundations (after Voevodsky)},
+  \href{https://arxiv.org/abs/1211.2851v5}{arXiv:1211.2851};
+
+\item Christopher J. Fewster, Rainer Verch, \textit{Quantum fields and
+    local measurements},
+  \href{https://arxiv.org/abs/1810.06512}{arXiv:1810.06512};
+
+\item Paweł Duch, \textit{Infrared problem in perturbative quantum
+    field theory},
+  \href{https://arxiv.org/abs/1906.00940}{arXiv:1906.00940};
+
+\item Christopher J. Fewster, \textit{A generally covariant
+    measurement scheme for quantum field theory in curved spacetimes},
+  \href{https://arxiv.org/abs/1904.06944v1}{arXiv:1904.06944};
+
+\item Jacob Lurie, \textit{Higher Topos Theory},
+  \href{https://arxiv.org/abs/math/0608040v4}{arXiv:math/0608040};
+
+\item Konrad Osterwalder, and Robert Schrader, \textit{Axioms for
+    Euclidean Green's Functions};
+
+\item Vladimir Voevodsky, \textit{A very short note on homotopy
+    $\lambda$-calculus};
+
+\item Charles Rezk, \textit{Toposes and homotopy toposes};
+
+\item Fredrik Nordvall Forsberg, Anton Setzer, \textit{A finite
+    axiomatisation of inductive-inductive definitions};
+
+\item Egbert Rilke, \textit{Introduction to homotopy type theory};
+
+\item \'{A}lvaro Pelayo, Michael A. Warren, \textit{Homotopy type
+    theory and Voevodsky’s Univalent Foundations};
+
+\item H. Simmons, A. Schalk, \textit{An introduction to
+    $\lambda$-calculi and arithmetics};
+
+\item Roderich Tumulka, \textit{Lecture Notes on Mathematical
+    Statistical Physics};
+
+\item Martin Hofmann, \textit{Extensional concepts in intensional type
+    theory};
+
+\item Eugenio Moggi, \textit{Computational $\lambda$-calculus and monads};
+
+\item \textit{Proof-theoretic semantics. Assessment and Future
+    Perspectives};
+
+\item Philip Walder, \textit{Propostions as Types};
+
+\item Egbert Rijke, \textit{Homotopy type theory};
+
+\item Eugenio Moggi, \textit{Notions of computation and monads};
+
+\item Bruno Barras, Thierry Coquand and Simon Huber, \textit{A
+    Generalization of Takeuti-Gandy Interpretation};
+
+\item Michael Alton Warren, \textit{Homotopy Theoretic Aspects of
+    Constructive Type Theory};
+
+\item Vladimir Voevodsky, \textit{A universe polymorphic type system};
+
+\item S. Marmi, \textit{An Introduction To Small Divisors},
+  \href{https://arxiv.org/abs/math/0009232v1}{arXiv:math/0009232};
+
+\item Paweł Duch, Michael Duetsch, Jose M. Gracia-Bondia,
+  \textit{Diphoton decay of the higgs from the Epstein--Glaser
+    viewpoint},
+  \href{https://arxiv.org/abs/2011.12675v2}{arXiv:2011.12675};
+
+\item Juliette Kennedy, Menachem Magidor, Jouko V\"{a}\"{a}n\"{a}nen,
+  \textit{Inner Models from Extended Logics: Part 1},
+  \href{https://arxiv.org/abs/2007.10764}{arXiv:2007.10764};
+
+\item Paul W. Gross, P. Robert Kotiuga, \textit{Electromagnetic Theory
+    and Computation: A Topological Approach};
+
+\item Andreas R. Blass, Jeffry L. Hirst, and Stephen G. Simpson,
+  Logical analysis of some theorems of combinatorics and topological
+  dynamics, Logic and combinatorics (Arcata, Calif., 1985), Contemp.
+  Math., vol. 65, Amer. Math. Soc., Providence, RI, 1987, pp. 125–156.
+
+\item Jared Corduan, Marcia Groszek, and Joseph Mileti, Draft: A note
+  on reverse mathematics and partitions of trees.
+
+\item Jennifer Chubb, Jeffry Hirst, and Tim McNichol, Reverse
+  mathematics and partitions of trees. To appear in J. Symbolic Logic.
+
+\item Damir Dzhafarov and Jeffry Hirst, The polarized Ramsey theorem.
+  Archive for Math. Logic, Online First: 2008.
+
+\item Neil Hindman, The existence of certain ultra-filters on N and a
+  conjecture of Graham and Rothschild, Proc. Amer. Math. Soc. 36
+  (1972), 341–346.
+
+\item Jeffry L. Hirst, Hindman’s theorem, ultrafilters, and reverse
+  mathematics, J. Symbolic Logic 69 (2004), no. 1, 65–72.
+
+\item Carl G. Jockusch Jr., Ramsey’s theorem and recursion theory, J.
+  Symbolic Logic 37 (1972), 268–280.
+
+\item J. Mileti, Partition theory and computability theory. Ph.D.
+  Thesis.
+
+\item Alexander Lange, \textit{The Epstein-Glaser approach to pQFT:
+    graphs and Hopf algebras},
+  \href{https://arxiv.org/abs/hep-th/0403246v4}{arXiv:hep-th/0403246v4};
+
+\item Michael Murray, \textit{Line bundles};
+
+\item Andrzej Dragan, \textit{Niezwykle szczególna teoria
+    względności};
+
+\item J\"{o}rg Frauendiener, \textit{Conformal infinity};
+
+\item J\o rgen Bang-Jensen, Gregory Gutin, \textit{Digraphs Theory,
+    Algorithms and Applications};
+
+\item Liviu I. Nicolaescu, \textit{Notes on the Atiyah-Singer Index
+    Theorem};
+
+\item Bert Schroer, \textit{A note on Infraparticles and Unparticles},
+  \href{https://arxiv.org/abs/0804.3563}{arXiv:0804.3563};
+
+\item Bert Schroer, \textit{Wigner's infinite spin representations and
+    inert matter},
+  \href{https://arxiv.org/abs/1601.02477}{arXiv:1601.02477};
+
+\item
+
+\item
+
+\item
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\end{enumerate}
+% \bibliographystyle{alpha} \bibliography{Bibliography}{}
+
+
+
+
+
+
+
+
+
+
+% ############################
+
+% Koniec dokumentu
+\end{document}
