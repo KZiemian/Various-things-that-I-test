@@ -1,0 +1,3020 @@
+% ---------------------------------------------------------------------
+% Podstawowe ustawienia i pakiety
+% ---------------------------------------------------------------------
+\RequirePackage[l2tabu, orthodox]{nag} % Wykrywa przestarzałe i niewłaściwe
+% sposoby używania LaTeXa. Więcej jest w l2tabu English version.
+\documentclass[a4paper,11pt]{article}
+% {rozmiar papieru, rozmiar fontu}[klasa dokumentu]
+\usepackage[MeX]{polski} % Polonizacja LaTeXa, bez niej będzie pracował
+% w języku angielskim.
+\usepackage[utf8]{inputenc} % Włączenie kodowania UTF-8, co daje dostęp
+% do polskich znaków.
+\usepackage{lmodern} % Wprowadza fonty Latin Modern.
+\usepackage[T1]{fontenc} % Potrzebne do używania fontów Latin Modern.
+
+
+
+% ---------------------------------------
+% Podstawowe pakiety (niezwiązane z ustawieniami języka)
+% ---------------------------------------
+\usepackage{microtype} % Twierdzi, że poprawi rozmiar odstępów w tekście.
+% \usepackage{graphicx} % Wprowadza bardzo potrzebne komendy do wstawiania
+% grafiki.
+% \usepackage{verbatim} % Poprawia otoczenie VERBATIME.
+% \usepackage{textcomp} % Dodaje takie symbole jak stopnie Celsiusa,
+% wprowadzane bezpośrednio w tekście.
+\usepackage{vmargin} % Pozwala na prostą kontrolę rozmiaru marginesów,
+% za pomocą komend poniżej. Rozmiar odstępów jest mierzony w calach.
+% ---------------------------------------
+% MARGINS
+% ---------------------------------------
+\setmarginsrb
+{ 0.7in}  % left margin
+{ 0.6in}  % top margin
+{ 0.7in}  % right margin
+{ 0.8in}  % bottom margin
+{  20pt}  % head height
+{0.25in}  % head sep
+{   9pt}  % foot height
+{ 0.3in}  % foot sep
+
+
+
+% ---------------------------------------
+% Często używane pakiety
+% ---------------------------------------
+% \usepackage{csquotes} % Pozwala w prosty sposób wstawiać cytaty do tekstu.
+
+
+
+% ---------------------------------------
+% Pakiety do tekstów z nauk przyrodniczych
+% ---------------------------------------
+\let\lll\undefined % Amsmath gryzie się z językiem pakietami do języka
+% % polskiego, bo oba definiują komendę \lll. Aby rozwiązać ten problem
+% % oddefiniowuję tę komendę, ale może tym samym pozbywam się dużego Ł.
+\usepackage[intlimits]{amsmath} % Podstawowe wsparcie od American
+% Mathematical Society (w skrócie AMS)
+\usepackage{amsfonts, amssymb, amscd, amsthm} % Dalsze wsparcie od AMS
+% % \usepackage{siunitx} % Dla prostszego pisania jednostek fizycznych
+\usepackage{upgreek} % Ładniejsze greckie litery
+% % Przykładowa składnia: pi = \uppi
+\usepackage{siunitx}
+% \usepackage{slashed} % Pozwala w prosty sposób pisać slash Feynmana.
+% \usepackage{calrsfs} % Zmienia czcionkę kaligraficzną w \mathcal
+% % na ładniejszą. Może w innych miejscach robi to samo, ale o tym nic
+% % nie wiem.
+
+
+
+
+
+% ---------------------------------------
+% Dodatkowe ustawienia dla języka polskiego
+% ---------------------------------------
+\renewcommand{\thesection}{\arabic{section}.}
+% Kropki po numerach rozdziału (polski zwyczaj topograficzny)
+\renewcommand{\thesubsection}{\thesection\arabic{subsection}}
+% Brak kropki po numerach podrozdziału
+
+
+
+% ---------------------------------------
+% Pakiety napisane przez użytkownika.
+% Mają być w tym samym katalogu to ten plik .tex
+% ---------------------------------------
+\usepackage{mathcommands}
+\usepackage{functionalanalysiscommands}
+
+
+
+
+
+% ---------------------------------------
+% Pakiet "hyperref"
+% Polecano by umieszczać go na końcu preambuły.
+% ---------------------------------------
+\usepackage{hyperref} % Pozwala tworzyć hiperlinki i zamienia odwołania
+% do bibliografii na hiperlinki.
+
+
+
+
+
+
+
+
+
+
+% ---------------------------------------------------------------------
+% Tytuł tekstu
+\title{Problemy do zrobienia z~fizyki}
+
+% \author{}
+% \date{}
+% ---------------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+% ####################################################################
+% Początek dokumentu
+\begin{document}
+% ####################################################################
+
+
+
+
+
+% ######################################
+\maketitle  % Tytuł całego tekstu
+% ######################################
+
+
+
+
+
+% ######################################
+\section{Mechanika teoretyczna, problemy do zrobienia}
+
+% \vspace{\spaceTwo}
+
+% ######################################
+
+
+
+% ##################
+\begin{enumerate}
+
+  \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+\end{enumerate}
+% ##################
+
+
+
+
+
+
+
+
+
+
+% ######################################
+\section{Elektromagnetyzm, problemy do zrobienia}
+
+% \vspace{\spaceTwo}
+
+% ######################################
+
+
+
+% ##################
+\begin{enumerate}
+
+\item W wierzchołkach wieloboku foremnego o liczbie boków $n$ i o
+  długości boku $a$ znajdują się (jednakowe) ujemne ładunki $e$. Jaką
+  pracę należy wykonać, aby dwukrotnie zmniejszyć liniowe rozmiary
+  wieloboku dla $n = 2$ (odcinek, oba ładunki $e$ na końcach),
+  $n = 3$, $n = 4$, $n > 4$.
+
+\item Proszę znaleźć potencjał oraz pole elektryczne wytwarzane przez
+  dipol (ładunki $-q$ i $-q$ odległe o $l$): wzdłuż linii dipola, na
+  symetralnej, w dowolnym punkcie.
+
+\item Proszę policzyć z definicji pojemność kondensatora: płaskiego,
+  zbudowanego z dwóch współśrodkowych sfer o promieniach $r_{ 1 }$ i
+  $r_{ 2 }$, zbudowanego z dwóch współosiowych walców o promieniach
+  $r_{ 1 }$ i $r_{ 2 }$ oraz długości $l$.
+
+\item W odległości $2D$ od płaskiej, cienkiej, przewodzącej,
+  uziemionej, nieskończonej płyty (nieskończonej płaszczyzny) znajduje
+  się ładunek $e$. Wprowadzamy układ $xyz$ w taki sposób, że osie $xy$
+  leżą w płaszczyźnie, a oś $z$ przechodzi przez $e$. Na osi $z$
+  umieszczamy ładunek $q$, w odległości $D$ od płyty, czyli w połowie
+  odległości między $e$ i płytą. Proszę policzyć jaka siła działa na
+  ładunek $e$ i znaleźć wartość $q$, dla której ta siła się zeruje.
+
+\item W powyższym zadaniu ładunek $e$ ponownie znajduje się w
+  odległości $2D$ od płaszczyzny, ale ładunek $q$ proszę umieścić na
+  osi $z$ w odległości $Z$ od płaszczyzny. Proszę założyć, że ładunek
+  $q$ ma taki sam znak oraz wartość jak ładunek $e$ ($q = e$). Proszę
+  znaleźć wszystkie możliwe położenia ładunku $q$ na osi $z$
+  (wszystkie możliwe odległości $Z$) dla których siła działa na
+  ładunek $e$ się zeruje.
+
+\item Wewnątrz metalowej, przewodzącej, elektrycznie neutralnej,
+  nieuziemionej sfery o promieniu $R$ (o grubości sferycznej powłoki
+  $r$ znacznie mniejszej od promienia $R$ sfery, $r \ll R$, czyli
+  zaniedbywalnie małej grubości skorupy) umieszczono ładunek punktowy,
+  w pierwszym przypadku w środku sfery, w drugim w odległości od
+  środka sfery $d < R$. Proszę policzyć potencjał wewnątrz i na
+  zewnątrz sfery. Proszę policzyć i narysować pole na zewnątrz sfery.
+
+\item Proszę policzyć z definicji pojemność kondensatora (A)
+  płaskiego, (B) zbudowanego z dwóch współśrodkowych sfer o
+  promieniach $r_{ 1 }$ i $r_{ 2 }$, (C) zbudowanego z dwóch
+  współosiowych walców o promieniach $r_{ 1 }$ i $r_{ 2 }$ oraz
+  długości $l$. Kondensatory są wypełnione dielektrykiem o
+  przenikalności elektrycznej $\epsilon$.
+
+\end{enumerate}
+% ##################
+
+
+
+
+
+
+
+
+
+
+% ######################################
+\section{Mechanika kwantowa, problemy do zrobienia}
+
+% \vspace{\spaceTwo}
+
+% ######################################
+
+
+
+% ##################
+\begin{enumerate}
+
+\item Dystrybucję $\delta( x )$ Diraca można określić jako granicę
+  funkcji regularnych
+  \begin{equation}
+    \label{QM:01}
+    \delta( x ) = \lim_{ a \to 0 } \rho_{ a }( x ), \qquad
+    \rho_{ a }( x ) =
+    \frac{ 1 }{ a \sqrt{ \pi } } e^{ -\frac{ x^{ 2 } }{ a^{ 2 } } }.
+  \end{equation}
+  Mówimy, że ciąg funkcji $\rho_{ a }( x )$ jest modelem dla funkcji
+  $\delta( x )$. Udowodnić, że $\delta( x )$ ma następujące własności
+  \begin{align}
+    &\int_{ a }^{ b } \delta( x - x_{ 0 } ) \, dx = 1, \qquad
+      x_{ 0 } \in ( a, b ) \\
+    &\int_{ a }^{ b } \delta( x - x_{ 0 } ) \, dx = 0, \qquad
+      x_{ 0 } \notin ( a, b ) \\
+    &\int_{ -\infty }^{ +\infty } \delta( x - x_{ 0 } ) \phi( x ) \, dx = \phi( x_{ 0 } )
+  \end{align}
+  dla dowolnej funkcji próbnej (tj. regularnej) $\phi( x )$. \\
+  Wykorzystując ostatnią własność, oraz właściwości odwrotnej
+  transformaty Fouriera udowodnić, że
+  \begin{equation}
+    \label{QM:02}
+    \delta( x ) = \frac{ 1 }{ 2\pi } \int_{ -\infty }^{ +\infty } e^{ i p x } \, dp
+  \end{equation}
+  Zapisując ostatnią całkę jako
+  \begin{equation}
+    \label{QM:03}
+    \lim_{ \varepsilon \to 0 } \frac{ 1 }{ 2\pi } \int_{ -\infty }^{ +\infty } e^{ ipx - \varepsilon | p | } \, dp,
+  \end{equation}
+  udowodnić inną, równoważną, reprezentację dystrybucji $\delta( x )$
+  \begin{equation}
+    \label{QM:04}
+    \delta( x ) = \lim_{ \varepsilon \to 0 } f_{ \varepsilon }( x ), \qquad
+    f_{ \varepsilon }( x ) = \frac{ 1 }{ \pi } \frac{ \varepsilon }{ x^{ 2 } + \varepsilon^{ 2 } }
+  \end{equation}
+
+  Wykreślić funkcje modelujące dla kilku wartości $\varepsilon$.
+  Uzasadnić, że rzeczywiście jest to dobry model funkcji $\delta$.
+  W~szczególności, sprawdzić warunek normalizacji oraz że dla dowolnej
+  funkcji próbnej zachodzi
+  \begin{equation}
+    \label{QM:05}
+    \lim_{ \varepsilon \to 0 } \int_{ -\infty }^{ +\infty } f_{ \varepsilon }( x - x_{ 0 } ) \phi( x ) \, dx
+    =
+    \phi( x_{ 0 } )
+  \end{equation}
+  Ostatnią całkę wykonać metodą residuów zakładając wystarczająco
+  szybkie znikanie funkcji próbnej na dużych okręgach.
+
+  Udowodnić, że fale płaskie są znormalizowane do $\delta$ Diraca.
+
+\item Rozwiązać zależne od czasu równanie Schr\"{o}dingera dla cząstki
+  swobodnej w jednym i trzech wymiarach, za pomocą separacji
+  zmiennych. Jako warunek początkowy przyjąć, że gęstość
+  prawdopodobieństwa znalezienia cząstki w~przestrzeni ma rozkład
+  gaussowski o~dyspersji $\sigma^{ 2 } = a^{ 2 }$ i że pakiet ma
+  średnią prędkość $v_{ 0 }$. Wykonać \textit{explicite} wszystkie
+  transformaty Fouriera i~uzyskać jawne wyrażenie na $\Psi( x, t )$.
+  Obliczyć gęstość prawdopodobieństwa $\rho( x, t )$ i gęstość
+  strumienia prawdopodobieństwa $\vec{ j }( x, t )$. Sprawdzić
+  równanie ciągłości. Wyprowadzić analogiczne wzory (np. na
+  $\vec{ j }( x, t )$) dla zbioru cząstek klasycznych.
+
+\item Show that if the spinors $w^{ r }( \vec{ p } )$ satisfy the
+  normalization
+  $w^{ r }( \epsilon_{ r } \vec{ p } )^{ \dagger } w^{ r' }(
+  \epsilon'_{ r } \vec{ p } ) = 2 E_{ p } \delta_{ r, \, r' }$ it
+  follows that
+  $\bar{w}^{ r }( \vec{ p } ) w^{ r' }( \vec{ p } ) = 2 \epsilon_{ r }
+  m c^{ 2 } \delta_{ r,\, r' }$. Here
+  \begin{equation}
+    \label{QM:06}
+    \bar{w}^{ r }( \vec{ p } )
+    = w^{ r }( \vec{ p } )^{ \dagger } \gamma^{ 0 }.
+  \end{equation}
+  Calculate quantities
+  \begin{equation}
+    \label{QM:07}
+    a_{ r }^{ \mu }
+    = \bar{w}^{ r }( \vec{ p } ) \gamma^{ \mu } w^{ r }( \vec{ p } ), \quad
+    b_{ r }^{ \mu \nu }
+    = \bar{w}^{ r }( \vec{ p } ) \sigma^{ \mu \nu } w^{ r }( \vec{ p } ), \quad
+    c_{ r }
+    = \bar{w}^{ r }( \vec{ p } ) \gamma_{ 5 } w^{ r }( \vec{ p } ).
+  \end{equation}
+
+\item Show that if we boost the solution of the Dirac equation
+  \begin{equation}
+    \label{QM:08}
+    \Psi_{ \vec{ p } }^{ r }( x )
+    = e^{ -i \epsilon_{ r } m c^{ 2 } t } w^{ r }( \vec{ p } = 0 )
+  \end{equation}
+  to a reference frame $x'$ where the particle has momentum
+  $\vec{ p }$ we obtain
+  \begin{equation}
+    \label{QM:09}
+    \Psi_{ \vec{ p } }^{ r }( x )
+    \to e^{ -i \epsilon_{ r } p_{ \mu } x'^{ \mu } } w^{ r }( \vec{ p } ).
+  \end{equation}
+  \textbf{Hint.} We need a boost in a direction
+  $\vec{ n } = -\vec{ p } / \lvert \vec{ p } \lvert$ with a bost
+  parameter which transforms $m c^{ 2 }$ to $E_{ p }$.
+
+\item The parity transformation $P$ transforms coordinate
+  $x = \{ x^{ 0 }, x^{ 1 }, x^{ 2 }, x^{ 3 } \}$ to
+  $\widetilde{x} = \{ x^{ 0 }, -x^{ 1 }, -x^{ 2 }, -x^{ 3 } \}$. Find
+  a form of the transformation $U_{ P }$ such that
+  \begin{equation}
+    \label{QM:10}
+    \widetilde{\Psi}( \widetilde{x} ) = U_{ P } \Psi( x )
+  \end{equation}
+  which preserves a form of the Dirac equation
+  \begin{equation}
+    \label{QM:11}
+    \left( i \hbar c \gamma^{ \mu } \partial_{ \mu } - m c^{ 2 } \right) \Psi( x ) = 0.
+  \end{equation}
+  Determine how this transformation changes special solutions
+  \begin{equation}
+    \label{QM:12}
+    \Psi_{ \vec{ p } }^{ r }( x )
+    = e^{ -i \epsilon_{ r } p_{ \mu } x^{ \mu } } w^{ r }( \vec{ p } ).
+  \end{equation}
+
+\item The charge conjugation transformation $C$ transform a spinor
+  $\Psi( x )$ to $\Psi_{ C }( x ) = U_{ C } \Psi^{ * }( x )$. Find a
+  form of the transformation $U_{ C }$ which preserves a form of the
+  Dirac equation. Determine how this transformation changes special
+  solutions
+  \begin{equation}
+    \label{QM:13}
+    \Psi_{ \vec{ p } }^{ r }( x )
+    = e^{ -i \epsilon_{ r } p_{ \mu } x^{ \mu } } w^{ r }( \vec{ p } )
+  \end{equation}
+  \textbf{Note.} Here $*$ means complex conjugation and not Herimitian
+  conjugation!
+
+\item The time inversion transformation $T$ transforms coordinates
+  $x = \{ x^{ 0 }, x^{ 1 }, x^{ 2 }, x^{ 3 } \}$ to
+  $x' = \{ -x^{ 0 }, x^{ 1 }, x^{ 2 }, x^{ 3 } \}$. Find a form of the
+  transformation $U_{ T }$ such that
+  \begin{equation}
+    \label{QM:14}
+    \Psi_{ T }( x' ) = U_{ T } \Psi^{ * }( x )
+  \end{equation}
+  which preserves a form of the Dirac equation
+  \begin{equation}
+    \label{QM:15}
+    \left( i\hbar c \gamma^{ \mu } \partial_{ \mu } - m c^{ 2 } \right) \Psi( x ) = 0.
+  \end{equation}
+  Determine how this transformation changes special solutions
+  \begin{equation}
+    \label{QM:16}
+    \Psi_{ \vec{ p } }^{ r }( x )
+    = e^{ -i\epsilon_{ r } p_{ \mu } x^{ \mu } } w^{ r }( \vec{ p } \, ).
+  \end{equation}
+
+\item We define matrices
+  \begin{equation}
+    \label{QM:17}
+    \Lambda_{ \pm }( p )
+    = \frac{ \pm\gamma^{ \mu } p_{ \mu } + m c^{ 2 } }{ 2 m c^{ 2 } }.
+  \end{equation}
+  Show that these matrices are projections in the space of spinors,
+  i.e.
+  \begin{equation}
+    \label{QM:18}
+    \Lambda_{ + }^{ \, 2 } = \Lambda_{ + }, \quad
+    \Lambda_{ - }^{ \, 2 } = \Lambda_{ - }, \quad
+    \Lambda_{ + } \cdot \Lambda_{ - } = 0.
+  \end{equation}
+  Check the result of $\Lambda_{ \pm } w^{ r }( \vec{ p } \,a )$.
+
+\item Repeat the properties of the Pauli matrices $\sigma_{ i }$,
+  $i = 1, 2, 3$
+  \begin{equation}
+    \label{QM:19}
+    \sigma_{ i } \sigma_{ j } = \delta_{ i j } + i \epsilon_{ i j k } \sigma_{ k }, \quad
+    \left( \vec{ \sigma } \cdot \vec{ a } \right)
+    \left( \vec{ \sigma } \cdot \vec{ b } \, \right)
+    =
+    \vec{ a } \cdot \vec{ b }
+    + i \vec{ \sigma } \cdot \left( \vec{ a } \times \vec{ b } \, \right).
+  \end{equation}
+
+\item Start with the Dirac equation in the form:
+  \begin{equation}
+    \label{QM:20}
+    i \hbar \partial \Psi( x )
+    =
+    \left( -ic\hbar \left( \vec{ \alpha } \cdot \vec{ \nabla } \right)
+      + \beta m c^{ 2 } + V( x ) \right) \Psi( x ).
+  \end{equation}
+  Show that.
+
+  \textbf{a)} This equations can be interpreted as describing
+  interaction of the electron with the electromagnetic field
+  ($\partial_{ \mu } \to D_{ \mu }$) in the case $\vec{ A }( x ) = 0$,
+  $V( x ) = e A_{ 0 }( x )$.
+
+  \textbf{b)} Show that the equation is invariant under
+  $\vec{ x } \to -\vec{ x }$ and
+  $\Psi( \vec{ x }, t ) \to \beta \Psi( -\vec{ x }, t )$.
+
+  \textbf{c)} Rewrite the equation as an equation for a stationary
+  state and show that the Hamiltionia commutes with the rotation
+  operators $J_{ i } = L_{ i } + S_{ i }$, where
+  \begin{equation}
+    \label{QM:21}
+    S_{ i } = \frac{ \hbar }{ 2 } \Sigma_{ i }, \quad
+    \Sigma_{ i }
+    =
+    \begin{pmatrix}
+      \sigma_{ i } & 0 \\
+      0 & \sigma_{ i }
+    \end{pmatrix}.
+  \end{equation}
+
+  \textbf{d)} Using the operators $2 \times 2$:
+  $j_{ i } = L_{ i } + \hbar \sigma_{ i } / 2$ construct the
+  eigenstates $\vec{ j }^{ 2 }$, $\vec{ L }^{ 2 }$, $j_{ 3 }$ in the
+  form
+  \begin{equation}
+    \label{QM:22}
+    \Omega_{ j l m } =
+    \begin{pmatrix}
+      \alpha_{ 1 } Y_{ l, \, m - 1/2 }( \theta, \phi ) \\
+      \alpha_{ 2 } Y_{ l, \, m + 1/2 }( \theta, \phi )
+    \end{pmatrix}
+  \end{equation}
+  find the eigenvalues $\alpha_{ 1 }$ and $\alpha_{ 2 }$. What is the
+  eigenvalue of $j_{ 3 }$? Show that eigenstates with a given $j$ can
+  be constructed only from $l$ or $l'$ with $l + l' = 2j$, i.e.
+  $l, l' = j \pm \frac{ 1 }{ 2 }$.
+
+  \textbf{e)} Find a form of the Dirac equation in the parametrization
+  \begin{equation}
+    \label{QM:23}
+    \Psi( \vec{ x }, t ) =
+    e^{ -\frac{ i }{ \hbar } E t }
+    \begin{pmatrix}
+      f( r ) \Omega_{ j, l, m } \\
+      g( r ) \Omega_{ j, l', m }
+    \end{pmatrix}
+  \end{equation}
+  where $l' = 2j - l$ and determine the set of equations for $f( r )$
+  and $g( r )$.
+
+  \textbf{Hint.} Assume a simplified relation (without referring to
+  the standard phase factor convention):
+  \begin{equation}
+    \label{QM:24}
+    \frac{ \vec{ \sigma } \cdot \vec{ r } }{ r } \Omega_{ j, l, m }
+    = \Omega_{ j, l', m }, \quad
+    \frac{ \vec{ \sigma } \cdot \vec{ r } }{ r } \Omega_{ j, l', m }
+    = \Omega_{ j, l, m }
+  \end{equation}
+  where $l + l' = 2 j$.
+
+\item Using the reduced from of the Dirac equation analyze the
+  eigenvalue spectrum of the ``hydrogen-like'' atom
+  $V( \vec{ x } ) = -Z e^{ 2 } / r$:
+
+  \textbf{a)} Rewrite the Dirac equation as a set of two equations
+  satisfied by functions $f( r )$ and $g( r )$ at fixed values of
+  quantum numbers $j, m, l, l' = 2j - l$.
+
+  \textbf{b)} Check the asymptotic behavior at $r \to \infty$. What
+  restriction should be satisfied by the localized eigenstate? Show
+  that in this limit $f( r )$ and $g( r )$ should behave as
+  $e^{ -kr }$. Calculate $k$. Check the asymptotics $r \to 0$
+  (behavior $\varpropto r^{ \alpha }$).
+
+  \textbf{c)} Find a form of the reduced equation (eliminating the
+  asymptotic behavior at $r \to \infty$) for $F( r )$ i~$G( r )$
+  (where $f( r ) = F( r ) e^{ -kr }$, similarly $G( r )$).
+
+  \textbf{d)} Determine the recurrence equation for coefficients of
+  the power expansion
+  \begin{equation}
+    \label{QM:24}
+    F( r ) = \sum_{ n } f_{ n } r^{ n + \alpha } \quad \textrm{and} \quad
+    G( r ) = \sum_{ n } g_{ n } r^{ n + \alpha }
+  \end{equation}
+  as a two-component matrix equation
+  \begin{equation}
+    \label{QM:25}
+    \begin{pmatrix}
+      f_{ n + 1 } \\
+      g_{ n + 1 }
+    \end{pmatrix}
+    =
+    A_{ n }
+    \begin{pmatrix}
+      f_{ n } \\
+      g_{ n }
+    \end{pmatrix}.
+  \end{equation}
+  Find eigenvalues $A_{ n }$ and show that this equation permits a
+  determination of the spectrum of localized states.
+
+\item Strumień cząstek pada z lewej strony na próg potencjału $E < U$.
+  Pokazać, że funkcję falową w obszarze dopuszczalnym klasycznie można
+  zapisać jako
+  \begin{equation}
+    \label{QM:26}
+    \psi( x ) = e^{ ikx } + e^{ -ikx + 2 i \delta( x ) }.
+  \end{equation}
+  Wyjaśnić czemu jest to możliwe? Obliczyć zależność przesunięcia
+  fazowego $\delta( E )$ od energii.
+
+\item Przedyskutować rozpraszanie na progu potencjału zależnego od
+  czasu \textit{pakietu falowego} (Messiah, rozdział II.3 i III.3).
+  Obliczyć opóźnienie kwantowe występujące przy odbiciu i powiązać je
+  z przesunięciem fazowym $\delta( E )$.
+
+\item Wykonując poniższą całkę metodą residuów
+  \begin{equation}
+    \label{QM:27}
+    \lim_{ \varepsilon \to 0 } \int_{ -\infty }^{ \infty } \frac{ f( x ) }{ x - x_{ 0 } + i \varepsilon },
+  \end{equation}
+  udowodnić tożsamość dystrybucyjną
+  \begin{equation}
+    \label{QM:28}
+    \lim_{ \varepsilon \to 0 } \frac{ 1 }{ x - x_{ 0 } + i \varepsilon } =
+    P \frac{ 1 }{ x - x_{ 0 } } - i \pi \delta( x - x_{ 0 } ),
+  \end{equation}
+  gdzie $P( 1 / x )$ oznacza dystrybucję znaną jako wartość główna
+  całki.
+  \begin{equation}
+    \label{QM:29}
+    P \frac{ 1 }{ x } \equiv
+    \lim_{ \varepsilon \to 0 } \left( \int_{ -\infty }^{ -i \varepsilon } dx \, \frac{ 1 }{ x }
+      + \int_{ i \varepsilon }^{ \infty } dx \, \frac{ 1 }{ x } \right).
+  \end{equation}
+  Wykorzystujący ten związek (i model delty dany przez krzywą
+  Lorentza) podać model dla wartości głównej. Przeanalizować jego
+  wykres dla kilku wartości $\varepsilon$.
+
+\item Operatory kreacji i anihilacji dla oscylatora harmonicznego
+  definiuje się jako
+  \begin{equation}
+    \label{QM:30}
+    a =
+    \sqrt{ \frac{ m \omega }{ 2 \hbar } } x
+    + \frac{ i }{ \sqrt{ 2 m \omega \hbar } } p, \quad
+    a^{ \dagger } =
+    \sqrt{ \frac{ m \omega }{ 2 \hbar } } x
+    - \frac{ i }{ \sqrt{ 2 m \omega \hbar } } p.
+  \end{equation}
+  Obliczyć, metodą algebraiczną tzn. wykorzystując tylko reguły
+  komutacji operatorów pędu i~położenia, następujące komutatory
+  \begin{equation}
+    \label{QM:31}
+    [ a, a ], \quad [ a^{ \dagger }, a^{ \dagger } ], \quad [ a, a^{ \dagger } ], \quad
+    [ a, N ], \quad [ a^{ \dagger }, N ]
+  \end{equation}
+  gdzie $N = a^{ \dagger } a$ jest operatorem „liczby kwantów”.
+
+\item Wyprowadzić te same reguły komutacji używając reprezentacji
+  położeń dla operatorów kreacji i anihilacji. Wsk. Użyć zmiennej
+  bezwymiarowej $\zeta = \sqrt{ m \omega / 2 \hbar } x$.
+
+\item Obliczyć wartość oczekiwaną $L_{ z }^{ 2 }$ ($L_{ i }$ to
+  składowe operator momentu pędu) w stanie opisany funkcją falową
+  $\psi( r, \theta, \psi ) = \sqrt{ 4 / ( 3 \pi ) } ( \sin \phi )^{ 2
+  }$, $0 \leq \phi \leq 2\pi$.
+
+\item Pokazać, że relacja $\vec{ L }^{ 2 } = l ( l + 1 )$ może zostać
+  otrzymana na podstawie elementarnej wiedzy z rachunku
+  prawdopodobieństwa. Założyć, że jedyne możliwe wartości rzutu na
+  dowolnie wybraną oś to $m = -l, l + 1, \ldots, l$ i że
+  prawdopodobieństwo otrzymania tych wartości są takie same, zaś wybór
+  osi jest symetryczny.
+
+\item Obliczyć ślady następujących macierzy: $L_{ i }$,
+  $L_{ i } L_{ k }$, $L_{ i } L_{ j } L_{ k }$,
+  $L_{ i } L_{ j } L_{ k } L_{ m }$. Gdzie $L_{ i }$ to składowa
+  momentu pędu.
+
+\item Operator mnożenia przez kąt biegunowy $\phi$ i operator
+  składowej $z$ momentu pędu $L_{ z }$ spełniają kanoniczną relację
+  komutacji $[ L_{ z }, \widehat{ \phi } ] = -i\hbar$. Czy zachodzi
+  odpowiednia zasada nieoznaczoności Heisenberga dla tej pary?
+
+\item Zbudować jawnie operator $\vec{ s }_{ \vec{ n } }$ odpowiadający
+  rzutowi spinu $1 / 2$ na kierunku $\vec{ n }$. Dla stanu o ustalonej
+  wartości spinu na kierunek $z$, znaleźć średnią dla
+  $\vec{ s }_{ \vec{ n } }$ i prawdopodobieństwo, że wartość rzutu na
+  kierunek $\vec{ n }$ będzie wynosić $\pm 1 / 2$.
+
+\item Rozważmy trzy macierze $M_{ x }$, $M_{ y }$, $M_{ z }$ o
+  wymiarach 256 na 256 każda. Macierze spełniają relacje komutacji
+  $[ M_{ x }, M_{ y } ] = i M_{ z }$ (oraz ich cykliczne permutacje
+  względem $x$, $y$, $z$). Macierz $M_{ x }$ ma wartości własne:
+  $\pm 2$ (niezdegenerowane), $\pm 3 / 2$ (ośmiokrotnie
+  zdegenerowane), $\pm 1$ (28-krotnie zdegenerowane), $\pm 1 / 2$
+  (56-krotnie zdegenerowane) oraz 0 (70-krotnie zdegenerowane).
+  Obliczyć wartości własne macierzy
+  $M^{ 2 } = M_{ x }^{ 2 } + M_{ y }^{ 2 } + M_{ z }^{ 2 }$.
+
+\item Consider special solutions of Klein-Gordon equation
+  \begin{equation}
+    \label{eq:4}
+    ( \hbar^{ 2 } g^{ \mu \nu } \partial_{ \mu } \partial_{ \nu } + m^{ 2 } c^{ 4 } ) \Psi( \vecx, t )
+    = 0
+  \end{equation}
+  in a form
+  \begin{equation}
+    \label{eq:5}
+    \Psi^{ \pm }_{ \vecp }( \vecx, t ) =
+    e^{ \mp \frac{ i }{ \hbar } E_{ p } t + \frac{ i }{ \hbar } \vecp \cdot \vecx }, \qquad
+    E_{ p } = +\sqrt{ \vecp^{ 2 } c^{ 2 } + m^{ 2 } c^{ 4 } }.
+  \end{equation}
+  Check the norm of these states, i.e. calculate
+  \begin{equation}
+    \label{eq:11}
+    \int d^{ 3 } x \, i \hbar
+    \left( \Psi^{ \pm }_{ \vecq }( \vecx, t )
+      ( \partial_{ t } \Psi^{ \pm }_{ \vecp }( \vecx, t ) )
+      - ( \partial \Psi^{ \pm }_{ \vecq }( \vecx, t ) ) \Psi^{ \pm }_{ \vecp }( \vecx, t )
+    \right)
+  \end{equation}
+
+  How this norm transforms under orthochronous Lorentz
+  transformations?
+
+  What are the transformation rules for: $d^{ 3 } p$,
+  $d^{ 3 } p / ( 2 E_{ p } )$.
+
+\item We introduce interaction to the K-G equation:
+  \begin{equation}
+    \label{eq:12}
+    ( \hbar^{ 2 } g^{ \mu \nu } \partial_{ \mu } \partial_{ \nu } + m^{ 2 } c^{ 4 } + W( \vecx, t ) )
+    \Psi( \vecx, t )
+    = 0,
+  \end{equation}
+  where $W( \vecx, t )$ is a given function. Let us assume a
+  particular form of this function
+  \begin{equation}
+    \label{eq:13}
+    W( \vecx, t ) = -\frac{ C }{ r }
+  \end{equation}
+  (which means it is time independent and spherically symmetric, with
+  some constant $C$). We are looking for special solutions of this
+  equation in a form
+  \begin{equation}
+    \label{eq:14}
+    \Psi_{ E }( \vecx, t ) = e^{ -\frac{ i }{ \hbar } E t } \Phi_{ E }( \vecx ).
+  \end{equation}
+
+  Check if there are localized states ($\Phi_{ E }( \vecx )$ vanish in
+  spatial infinity). For which $C$? Is energy negative for these
+  states?
+
+  Find the energy spectrum of localized states. How are these energies
+  related to $m c^{ 2 }$?
+
+  Check if there are restrictions on the admissible values of $C$?
+
+  Check the transformation properties of solutions with respect to
+  $\Cbold$, $\Pbold$, $\Tbold$.
+
+  Find the non-relativistic limit of solutions (expand in $c$ around
+  $c = \infty$). Give the first 3 therms of the expansion.
+
+  \textbf{Hint.} Use the analogy with the nonrelativistic
+  Schr\"{o}dinger equation for the hydrogen atom. \textit{Do not}
+  derive the form of the spherical functions
+  $Y_{ l m }( \theta, \phi )$, only use their properties.
+
+\item We introduce electromagnetic interactions with an external field
+  $A_{ \mu }( \vecx, t )$ defining a \textit{covariant derivative}
+  \begin{equation}
+    \label{eq:15}
+    D_{ \mu } = \partial_{ \mu } + \frac{ i e }{ \hbar c } A_{ \mu },
+  \end{equation}
+  where $e$ is a \textit{charge} of the field. The modified K-G
+  equation has a form
+  \begin{equation}
+    \label{eq:16}
+    ( \hbar^{ 2 } g^{ \mu \nu } D_{ \mu } D_{ \nu } + m^{ 2 } c^{ 2 } ) \Psi( \vecx, t )
+    = 0.
+  \end{equation}
+  Check that this equation is invariant under a local gauge
+  transformation
+  \begin{align}
+    \Psi( \vecx, t )
+    &= e^{ \frac{ i e }{ \hbar c } \chi( \vecx, t ) } \Psi'( \vecx, t ), \\
+    A_{ \mu }( \vecx, t )
+    &= A_{ \mu }'( \vecx, t ) - \partial_{ \mu } \chi( \vecx, t ).
+  \end{align}
+
+\item Consider a special case of equation from the one of the previous
+  exercises, for which $A_{ \mu }( x )$ in some gauge have a form:
+  \begin{equation}
+    \label{eq:17}
+    A_{ 0 } = -\frac{ Z e }{ r }, \quad
+    A_{ i } = 0.
+  \end{equation}
+  Similarly as in one of previous exercises, find the stationary
+  solutions
+  \begin{equation}
+    \label{eq:18}
+    \Psi_{ E }( \vecx, t ) = e^{ -\frac{ i }{ \hbar } E t } \Phi_{ E }( \vecx ).
+  \end{equation}
+  Find the energy spectrum of these localized solutions.
+
+  Do we have localized states with positive and negative energy? How
+  does it depend on $Z$?
+
+  Are there constraints on $Z$?
+
+  Check the transformation of solutions under $\Cbold$, $\Pbold$ and
+  $\Tbold$.
+
+  Find the non-relativistic limit of solutions (expand in $c$ round
+  $c = \infty$). Give the first 3 terms of the expansion.
+
+\item We assume that the one-particle non-relativistic hamiltonian $H$
+  has discrete eigenstates $| n \rangle$
+  \begin{equation}
+    \label{eq:1}
+    H | n \rangle = E_{ n } | n \rangle, \quad
+    \langle n | m \rangle = \delta_{ n m }.
+  \end{equation}
+  A set of $N$ identical, indistinguishable particles of this type is
+  described by a hamiltonian $\Hcal$
+  \begin{equation}
+    \label{eq:2}
+    \Hcal = \sum_{ j = 1 }^{ N } H_{ j },
+  \end{equation}
+  where $H_{ j }$ is a hamiltonian for the particle $j$. The
+  eigenstates of $\Hcal$ in the Fock space have a form
+  $| N_{ 1 }, N_{ 2 }, \ldots, N_{ k }, \ldots \rangle$, where
+  $N_{ k } = 0, 1, 2, \ldots$ is a number of particles in the state
+  $k$. The \textit{vacuum} state
+  $| 0 \rangle = | 0, 0, \ldots, 0, \ldots \rangle$ is defined as a state without particles
+  with a norm $\langle 0 | 0 \rangle = 1$.
+
+  A one-particle state in the eigenstate
+  $| n \rangle \equiv | 0, 0, \ldots, 1_{ n }, 0, \ldots \rangle$ can be obtained acting
+  with a \textit{creation} operator $a_{ n }^{ \dagger } | 0 \rangle$. Defining a
+  conjugate operator of \textit{annihilation} $a_{ n }$ we assume that
+  \begin{equation}
+    \label{eq:3}
+    a_{ n } | 0 \rangle = 0.
+  \end{equation}
+  Operator of creation and annihilation of one-particle states satisfy
+  \begin{align}
+    &[ a_{ i }, a_{ j } ] = [ a_{ i }^{ \dagger }, a_{ j }^{ \dagger } ] = 0, \quad
+      [ a_{ i }, a_{ j }^{ \dagger } ] = \delta_{ i j }, \quad
+      \textrm{for bosons}, \\
+    &\{ a_{ i }, a_{ j } \} = \{ a_{ i }^{ \dagger }, a_{ j }^{ \dagger } \} = 0, \quad
+      \{ a_{ i }, a_{ j }^{ \dagger } \} = \delta_{ i j }, \quad
+      \textrm{for fermions}.
+  \end{align}
+
+  How can we construct an arbitrary state
+  $| N_{ 1 }, N_{ 2 }, \ldots, N_{ k }, \ldots \rangle$ acting with creation operators
+  on a vacuum state (both bosonic and fermionic case)? States should
+  be normalized to unity.
+
+  Show that both for bosons and fermions the hamiltonian is
+  \begin{equation}
+    \label{eq:19}
+    \Hcal = \sum_{ k } E_{ k } a_{ k }^{ \dagger } a_{ k }.
+  \end{equation}
+
+  Above definitions are for the Schr\"{o}dinger picture, where the states of the system depend on time and satisfy the Schr\"{o}dinger equation. In the Heisenberg picture states are time independent, but operators depend on time. Find the form of creation and annihilation operators in the Heisenberg picture (bosons and fermions).
+
+  Show that
+  \begin{equation}
+    \label{eq:22}
+    \Psi_{ n }( \vecx \, ) =
+    \langle 0 | \Phi( \vecx \, ) | 0, 0, \ldots, 0, 1_{ n }, 0, \ldots \rangle
+    = \langle \Phi( \vecx ) a_{ n }^{ \dagger } | 0 \rangle.
+  \end{equation}
+
+  The operator conjugate to $\Phi( \vecx \, )$ is
+  \begin{equation}
+    \label{eq:23}
+    \Phi^{ \dagger }( \vecx \, ) =
+    \sum_{ n } \Psi_{ n }^{ * }( \vecx \, ) a_{ n }^{ \dagger }.
+  \end{equation}
+  This operator acting on a vacuum state generates a one-particle state $| \vecx \rangle$ localized in the $\vecx$. Show that
+  \begin{align}
+    \textrm{for bosons} \;
+    &[ \Phi( \vecx \, ), \Phi( \vecx' \, ) ] = 0, \quad
+      [ \Phi( \vecx \, ), \Phi^{ \dagger }( \vecx' \, ) ]
+      = \delta^{ ( 3 ) }( \vecx - \vecx' \, ), \\
+    \textrm{for fermions}
+    &\{ \Phi( \vecx \, ), \Phi( \vecx' \, ) \} = 0, \quad
+    \{ \Phi( \vecx \, ), \Phi^{ \dagger }( \vecx' \, ) \}
+    = \delta^{ ( 3 ) }( \vecx - \vecx' \, ).
+  \end{align}
+
+  Show that in both cases $\langle \vecx | \vecy \rangle = \delta^{ ( 3 ) }( \vecx - \vecy \, )$.
+
+  Assuming that in a position representation the one-particle hamiltonian has a form
+  \begin{equation}
+    \label{eq:24}
+    H = -\frac{ \hbar^{ 2 } }{ 2m } \Delta_{ x } + V( \vecx \, ).
+  \end{equation}
+  Show that
+  \begin{equation}
+    \label{eq:25}
+    \Hcal =
+    \int d^{ 3 } x \, \Phi^{ \dagger }( \vecx \, ) \,
+    \left( -\frac{ \hbar^{ 2 } }{ 2m } \Delta_{ x } + V( \vecx \, ) \right)
+    \Phi( \vecx \, ).
+  \end{equation}
+
+  Find a form of $\Phi_{ H }( \vecx, t )$ in the Heisenberg picture.
+  Show that the operator in the Heisenberg picture $\Phi_{ H }( \vecx, t )$ satisfies the Schr\"{o}dinger equation
+  \begin{equation}
+    \label{eq:26}
+    i \hbar \frac{ \partial }{ \partial t } \Phi_{ H }( \vecx, t )
+    =
+    \left( -\frac{ \hbar^{ 2 } }{ 2m } \Delta_{ x } + V( \vecx \, ) \right)
+    \Phi_{ H }( \vecx, t ).
+  \end{equation}
+
+\item Find a form of a two-particle wave function (bosons and fermions)
+  \begin{equation}
+    \label{eq:27}
+    \Psi_{ n_{ 1 }, n_{ 2 } }( \vecx_{ 1 }, \vecx_{ 2 } ) =
+    \langle 0 | \Phi( \vecx_{ 1 } \, ) \Phi( \vecx_{ 2 } \, )
+    a_{ n_{ 1 } }^{ \dagger } a_{ n_{ 2 } }^{ \dagger } | 0 \rangle.
+  \end{equation}
+  Check the normalization.
+
+\item Particular case: a system contains \textit{free} particles in a cubic box with the edge $L$ (assuming periodic boundary conditions). Write explicit form of the field operator $\Phi( \vecx \, )$ in this case. Check what happens in the limit $L \to \infty$, when the discrete sum over the eigenstates should be replaced by the integral. How should we define the one-particle creation and annihilation operators and their (anit)commutation rules?
+
+  \textbf{Hint.} We aim at a new normalization of the one-particle states $| \vecp \, \rangle$ of a form
+  \begin{equation}
+    \label{eq:28}
+    \langle \vecp | \vecq \rangle = ( 2\pi \hbar )^{ 3 } \delta^{ ( 3 ) }( \vecp - \vecq ).
+  \end{equation}
+  Why?
+
+\item The wave function of the one-particle eigenstate $| n \rangle$ is defined by
+  \begin{equation}
+    \label{eq:20}
+    \Psi_{ n }( vecx ) = \langle \vecx \, | n \rangle.
+  \end{equation}
+  In the Schr\"{o}dinger picture we define a field operator
+  \begin{equation}
+    \label{eq:21}
+    \Phi( \vecx \, ) = \sum_{ n } \Psi_{ n }( \vecx \, ) a_{ n }.
+  \end{equation}
+
+\item Repeat the derivation of the Euler-Lagrange equations. The
+  action $S$ is given by
+  \begin{equation}
+    \label{eq:QM32}
+    S = \int\limits_{ t_{ 1 } }^{ t_{ 2 } } dt \, L
+  \end{equation}
+  where the Lagrangian $L$
+  \begin{equation}
+    \label{eq:QM33}
+    L =
+    \int d^{ 3 } x \, \Lcal\left( \Psi_{ \sigma }( \vecx, t ),
+      \frac{ \partial \Psi_{ \sigma }( \vecx, t ) }{ \partial x^{ \mu } } \right), \quad
+    \mu = 0, 1, 2, 3.
+  \end{equation}
+  $\Lcal$ is the Lagrangian \textit{density} and numbers the
+  \textit{fields}.
+
+  Show that from the variational principle $\delta S = 0$ under conditions
+  $\delta \Psi_{ \sigma }( \vecx, t_{ 1 } ) = \delta \Psi_{ \sigma }(
+  \vecx, t_{ 2 } ) = 0$ leads to
+  \begin{equation}
+    \label{eq:QM34}
+    \partial_{ \mu } \frac{ \partial \Lcal }{ \partial \big( \partial_{ \mu } \Psi_{ \sigma }( \vecx, t ) \big) }
+    - \frac{ \partial \Lcal }{ \partial \Psi_{ \sigma }( \vecx, t ) }
+    = 0.
+  \end{equation}
+  What are these equations if $x^{ 0 }$ is expressed by time $t$ and
+  spatial coordinates $\vecx$? We assume that fields
+  $\Psi_{ \sigma }( \vecx, t )$ vanish sufficiently fast for all $t$
+  when $\vecx \to \infty$.
+
+\item Show that if a Lagrangian density has a form
+  \begin{equation}
+    \label{eq:QM35}
+    \Lcal =
+    \frac{ \hbar^{ 2 } }{ 2m } \big( \partial_{ i } \Psi^{ * }( \vecx, t ) \big)
+    \big( \partial_{ i } \Psi( \vecx, t ) \big)
+    - \Psi^{ * }( \vecx, t ) V( \vecx ) \Psi( \vecx, t )
+    + \frac{ i \hbar }{ 2 } \left( \Psi^{ * } \frac{ \partial \Psi }{ \partial t }
+      - \frac{ \partial \Psi^{ * } }{ \partial t } \Psi \right)
+  \end{equation}
+  and assuming fields $\Psi$ and $\Psi^{ * }$ are independent, the E-L
+  equations are identical to the one-particle Schr\"{o}dinger equation
+  (both for $\Psi$ and $\Psi^{ * }$).
+
+  Check that the same equations are obtained if the term with time
+  derivatives is replaced by
+  \begin{equation}
+    \label{eq:QM36}
+    \textrm{a)} i \hbar \left( \Psi^{ * } \frac{ \partial \Psi }{ \partial t } \right), \qquad
+    \textrm{b)} -i \hbar \left( \frac{ \partial \Psi^{ * } }{ \partial t } \Psi \right).
+  \end{equation}
+  Why?
+
+\item Assume that the Lagrangian density has a form b) from previous
+  exercises. Perform the canonical quantization in this case: find the
+  canonical momentum conjugate to $\Psi^{ * }( \vecx, t )$, determine
+  the canonical relations, find the Hamiltonian and show that result
+  is the same as for the case presented on the lecture.
+
+\item Assume that the Lagrangian density has a form
+  \begin{equation}
+    \label{eq:QM37}
+    \Lcal =
+    \hbar^{ 2 } c^{ 2 } g^{ \mu \nu } \big( \partial_{ \mu } \phi^{ * }( x ) \big)
+    \big( \partial_{ \nu } \phi( x ) \big)
+    - m^{ 2 } c^{ 4 } \phi^{ * }( x ) \phi( x )
+  \end{equation}
+  with $x = \{ x^{ 0 }, x^{ 1 }, x^{ 2 }, x^{ 3 } \}$,
+  $x^{ 0 } = c t$.
+
+  Determine the E-L equations assuming that fields $\phi^{ * }$ and
+  $\phi$ are independent.
+
+  Rewrite the Lagrangian explicitly in time and space derivatives and
+  fields. Find canoncial momenta $\pi( x )$ and $\pi^{ * }( x )$
+  conjugate respectively to $\phi( x )$ and $\phi^{ * }( x )$.
+
+  Derive a form of the Hamiltonian.
+
+  \textbf{Hint.} Use the concept of a variational derivative
+  $\delta L / \delta \big( \partial_{ t } \phi( x ) \big)$.
+
+\item Assume that the Lagrangian density has a form
+  \begin{equation}
+    \label{eq:QM38}
+    \Lcal =
+    \frac{ \hbar^{ 2 } c^{ 2 } }{ 2 } g^{ \mu \nu }
+    \big( \partial_{ \mu } \phi( x ) \big) \big( \partial_{ \nu } \phi( x ) \big)
+    - \frac{ m^{ 2 } c^{ 4 } }{ 2 } \phi( x )^{ 2 }
+  \end{equation}
+  with $x = \{ x^{ 0 }, x^{ 1 }, x^{ 2 }, x^{ 3 } \}$, $x^{ 0 } = c t$
+  and $\phi( x )$ a real scalar field.
+
+  Determine the E-L equation.
+
+  Rewrite the Lagrangian explicitly in time and space derivatives of
+  fields. Assume that field $\phi( x )$ is periodic in a spatial box
+  $L \times L \times L$. Decompose field $\phi( x )$ as a combination
+  of momentum eigenstates in a periodic box
+  \begin{equation}
+    \label{eq:QM39}
+    \phi( x ) =
+    \sum_{ \vecn } c_{ \vecn }( t ) \psi_{ \vecn }( \vecx ), \qquad
+    \psi_{ \vecn }( \vecx ) =
+    \frac{ 1 }{ L^{ 3 / 2 } } e^{ i 2\pi \vecn \cdot \vecx / L }.
+  \end{equation}
+  What relations between coefficients $c_{ \vecn }( t )$ follow from
+  the fact that field $\phi( x )$ is real?
+
+  Derive a form of the Hamiltonian.
+
+  Find independent degrees of freedom and quantize the system.
+
+\end{enumerate}
+% ##################
+
+
+
+
+
+
+
+
+
+
+% ######################################
+\section{Fizyka fazy skondensowanej, problemy do zrobienia}
+
+% \vspace{\spaceTwo}
+
+% ######################################
+
+
+
+% ##################
+\begin{enumerate}
+
+\item Wyznaczyć relacje dyspersji dla jednowymiarowej sieci złożonej z
+  identycznych atomów przy założeniu, że stałe siłowe opisujące
+  oddziaływanie par atomów są na przemian równe $C_{ 1 }$ i~$C_{ 2 }$
+  ($C_{ 1 } \neq C_{ 2 }$).
+
+\item Oblicz $c_{ V }( T )$ przyjmujące
+  $D( \omega ) = 3 N \delta( \omega - \omega_{ E } )$, gdzie $N$ to
+  liczba atomów w~krysztale. Dla $T \to \infty$ pokaż, że
+  $c_{ V }( T )$ spełnia prawo Dulonga-Petita.
+
+\item Pokaż, że dla $N$ atomów w sześcianie o~bloku $L$, gęstość stanów w~przestrzeni pędów jest dana przez $\rho( k ) = \left( \frac{ L }{ 2\pi } \right)^{ 3 }$. \\
+  Używając zależności dyspersyjnej $\omega = \nu k$, pokaż że
+  $D( \omega ) = \frac{ 3 \omega^{ 2 } L^{ 3 } }{ 2\pi^{ 2 } \nu^{ 3 }
+  }$ dla
+  $\omega < \omega_{ D } = ( 6 \pi^{ 2 } N )^{ \frac{ 1 }{ 3 } }
+  \frac{ V }{ L }$. Oblicz $c_{ V }( T )$ i pokaż, że dla
+  $T \searrow 0$, $c_{ V }( T ) \propto T^{ 3 }$.
+\item Obliczyć odległości między sąsiadującymi jonami w sieci CsCl,
+  stała sieci: $a = 4.11$ \AA{} (albo $a = 3.55$ \AA), NaCl,
+  $a = 5.63$ \AA{} albo $a = 2.82$ \AA{} oraz KBr o strukturze NaCl,
+  $a = 6.59$ \AA{} albo $a = 3.29$ \AA{} na podstawie danych struktury
+  krystalicznych i~porównać je z~odległościami wyznaczonymi przy
+  pomocy odpowiednich promieni standardowych jonów oraz poprawek
+  zależnych od liczby koordynacyjnej (zobacz jakieś tabele).
+
+\item Podobnie jak w poprzednim zadaniu, porównać odległość między
+  jonami dla związków o~strukturze ZnS (blendy cynkowej): CuF, stała
+  sieci $a = 4.26$ \AA, ZnS, stała sieci $a = 5.41$ \AA{} i~InSb,
+  stała sieci $a = 6.46$ \AA, biorąc pod uwagę promienie atomów przy
+  tetraedrycznym wiązaniu kowalencyjnym.
+
+\item Używając potencjału Lennarda-Jonesa, oblicz stosunek energii
+  wiązania kryształu gazu szlachetnego krystalizującego w~strukturach
+  \textbf{bcc} i~\textbf{fcc}.
+
+\item Oszacować wartość stałej Madelunga dla struktury NaCl na trzy
+  sposoby.
+
+  \begin{itemize}
+  \item[a)] Stosując dodawanie energii oddziaływania kolejnych
+    ładunków całkowitych, wyliczyć kilka pierwszych wyrazów szeregu
+    wprost z~definicji.
+
+  \item[b)] Wyliczyć stałą Madelunga numerycznie.
+
+  \item[c)] Stosując metodę Evjena (ułamkowych ładunków) dla sześcianu
+    zawierającego 26 ładunków.
+
+  \end{itemize}
+
+\item Znaleźć graficznie pierwsze 4 strefy Brillouina dla sieci
+  płaskiej utworzonej z~kwadratów o~boku~$a$. Sprawdzić, że wszystkie
+  strefy Brillouina mogą być sprowadzone do pierwszej strefy tzn.
+  że~powierzchnia ich jest identyczna.
+
+\item \textbf{Metoda Laueego.} W~metodzie Laueego bada się ugięcie
+  polichromatycznej wiązki promieniowania X na płaszczyznę
+  nieruchomego monokryształu. W~trakcie pomiaru kąt podania promieni X
+  na kryształ jest wielkością stałą. Rozważ wiązkę rentgenowską
+  o~długości $\lambda$ z~przedziału, określonego frakcjami stałej $a$ sieci
+  regularnej, $\frac{ a }{ 3 } \leq \lambda \leq \frac{ 2a }{ 3 }$ i padającą na
+  tę sieć wzdłuż kierunku $[-100]$. Korzystając z~konstrukcji Ewalda
+  znajdź płaszczyzny typu $(hk0)$ od których obserwuje~się refleksy.
+
+\item W kamerze obrotu pojedynczego kryształu o~średnicy
+  $2R = 57.3 \, \si{mm}$ jest umieszczony monokryształ obracający~się
+  wokół osi $a$ (patrz rysunek poniżej). Na monokryształ pada wiązka
+  promieniowania o~długości fali $\lambda = 1.5418 \, \si{\r{A}}$. Otrzymano
+  warstwice zerową i~cztery warstwice wyższego rzędu. Odstępy między
+  symetrycznymi warstwicami wynoszą odpowiednio:
+  $2 h_{ 1 } = 10.2 \, \si{mm}$, $2 h_{ 2 } = 21.6 \, \si{mm}$,
+  $2 h_{ 3 } = 35.3 \, \si{mm}$, $2 h_{ 4 } = 56.6 \, \si{mm}$. Oblicz
+  stałą sieciową $a_{ 0 }$.
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+\end{enumerate}
+% ##################
+
+
+
+
+
+
+
+
+
+
+% ######################################
+\section{QFT, problemy do zrobienia}
+
+% \vspace{\spaceTwo}
+
+% ######################################
+
+
+% ##################
+\begin{enumerate}
+\item Dla zespolonego pola skalarnego (postać operatora tego pola
+  zawiera poprzedni zestaw zadań) proszę wyznaczyć (w~postaci
+  \textit{czterowymiarowej} całki Fourierowskiej) postać propagatora
+  \begin{equation}
+    \label{eq:6}
+    i \Delta_{ F }( x - y )
+    =
+    \left\langle 0 \left| T\left( \widehat{\phi}( x ) \widehat{\phi}^{ \dagger }( x )
+        \right) \right| 0 \right\rangle,
+  \end{equation}
+  gdzie $T$ jest operatorem uporządkowania chronologicznego.
+  \begin{equation}
+    \label{eq:7}
+    T\left( \widehat{\phi}( x^{ 0 }, \vecxbold )
+      \widehat{\phi}^{ \dagger }( y^{ 0 }, \vecybold ) \right)
+    =
+    \widehat{\phi}( x^{ 0 }, \vecxbold ) \widehat{\phi}^{ \dagger }( y^{ 0 }, \vecybold)
+    \theta( x^{ 0 } - y^{ 0 } )
+    +
+    \widehat{\phi}^{ \dagger }( y^{ 0 }, \vecybold ) \widehat{\phi}( x^{ 0 }, \vecxbold )
+    \theta( y^{ 0 } - x^{ 0 } )
+  \end{equation}
+
+\item Prosty model (bezspinowego) pola nukleonów oddziałującego
+  z~polem skalarnym pionów opisany jest hamiltonianem
+  \begin{align}
+    H &= H_{ 0 } + H_{ I }, \\
+    H_{ 0 }
+      &=
+        m_{ 0 } \int d^{ 3 }\vecpbold \, \psi^{ \dagger }( \vecpbold )
+        \psi( \vecpbold )
+        + \int d^{ 3 } \veckbold \, \omega( \veckbold ) a^{ \dagger }( \veckbold )
+        a( \veckbold ),
+        \quad
+        \omega( \veckbold ) = \sqrt{ \veckbold^{ 2 } + \mu^{ 2 } }, \\
+    H_{ I }
+      &=
+        \frac{ \lambda }{ \sqrt{ 2\pi }^{ 3 } }
+        \int d^{ 3 } \vecpbold
+        \int \frac{ d^{ 3 } \veckbold }{ \sqrt{ 2\omega( \veckbold ) } }
+        f( \veckbold^{ 2 } ) \psi^{ \dagger }( \vecpbold + \veckbold )
+        \psi( \vecpbold )
+        \left( a( \veckbold ) + a^{ \dagger }( \veckbold ) \right),
+  \end{align}
+  gdzie $f( \veckbold^{ 2 } )$ jest funkcją opisującą strukturę
+  elektronu. Zakładamy, że~$f( \veckbold^{ 2 } )$ dostatecznie szybko
+  znika dla duży wartości $\veckbold^{ 2 }$. Operatory
+  $a( \veckbold )$, $a^{ \dagger }( \veckbold )$, $\psi( \vecpbold )$,
+  $\psi^{ \dagger }( \vecpbold )$ spełniają reguły komutacji i~antykomutacji
+  \begin{align}
+    \left[ \psi( \vecpbold ), \psi^{ \dagger }( \vecpbold ) \right]_{ + }
+    &= \delta^{ ( 3 ) }( \vecpbold - \vecpbold' ), \\
+    \left[ \psi( \vecpbold ), \psi( \vecpbold' ) \right]_{ + }
+    &=
+      \left[ \psi^{ \dagger }( \vecpbold ), \psi^{ \dagger }( \vecpbold' ) \right]_{ + }
+      = 0, \\
+    \left[ a( \veckbold ), a^{ \dagger }( \veckbold' ) \right]
+    &= \delta^{ ( 3 ) }( \veckbold - \veckbold' ), \\
+    \left[ a( \veckbold), a( \veckbold' ) \right]
+    &=
+      \left[ a^{ \dagger }( \veckbold ), a^{ \dagger }( \veckbold' ) \right] = 0, \\
+    \left[ \psi( \vecpbold ), a( \veckbold ) \right]
+    = \left[ \psi( \vecpbold ), a^{ \dagger }( \veckbold ) \right]
+    &=
+      \left[ \psi^{ \dagger }( \vecpbold ), a( \veckbold ) \right]
+      = \left[ \psi^{ \dagger }( \vecpbold ), a^{ \dagger }( \veckbold ) \right].
+  \end{align}
+
+  \textbf{a)} Proszę pokazać, że~pęd oraz liczba nukleonów są w~tym
+  modelu wielkościami zachowanymi, t.j. że~operator
+  \begin{equation}
+    \vecPbold
+    =
+    \int d^{ 3 } \vecpbold \, \vecpbold \, \psi^{ \dagger }( \vecpbold )
+    \psi( \vecpbold )
+    + \int d^{ 3 } \veckbold \, \veckbold \, a^{ \dagger }( \veckbold )
+    a( \veckbold ), \quad
+    N_{ \psi } = \int d^{ 3 } \vecpbold \, \psi^{ \dagger }( \vecpbold ) \psi( \vecpbold ),
+  \end{equation}
+  komutują z~\textit{pełnym} hamiltonianem $H$.
+
+  \textbf{b)} Proszę pokazać, że~stan perturbacyjny próżni
+  $| 0 \rangle$ zdefiniowany poprze
+  \begin{equation}
+    \label{eq:8}
+    \psi( \vecpbold ) | 0 \rangle = a( \veckbold ) | 0 \rangle = 0, \quad
+    \forall \, \vecpbold, \veckbold
+  \end{equation}
+  oraz stan jednomezonowy
+  \begin{equation}
+    \label{eq:9}
+    | \veckbold \rangle = a^{ \dagger }( \veckbold ) | 0 \rangle
+  \end{equation}
+  są stanami własnymi $H$.
+
+  \textbf{c)} Proszę pokazać, że~stanem własnym hamiltonianu $H$,
+  będącym równocześnie stanem własnym operatorem $N_{ \psi }$
+  z~wartością własną 1, czyli stanem własnym pełnego hamiltonianu
+  zawierającego jeden nukleon) jest
+  \begin{equation}
+    \label{eq:10}
+    | \Psi^{ ( 1 ) }( \vecpbold ) \rangle
+    =
+    \frac{ \sqrt{ Z } }{ ( 2\pi )^{ 3 } }
+    \int d^{ 3 } \vecpbold \int d^{ 3 } \vecxbold
+    e^{ i ( \vecqbold - \vecpbold ) \cdot \vecxbold }
+    \exp \left\{ \int \frac{ d^{ 3 } \veckbold }{ 2 ( 2\pi )^{ 3 }
+        \omega^{ 3 }( \veckbold ) } f( \veckbold^{ 2 } )
+      e^{ i \veckbold \cdot \vecxbold } a^{ \dagger }( \veckbold ) \right\}
+    \psi^{ \dagger }( \vecqbold ) | 0 \rangle.
+  \end{equation}
+
+\item Gaussian integrals.
+
+  \textbf{a)} Let $D_{ nm }$ be a symmetric positive-definite square
+  matrix. Show that
+  \begin{equation}
+    \label{eq:32}
+    \int \prod_{ n } d\phi_{ n } \, \exp\left( -\sum_{ n,\, m } \phi_{ n } D_{ nm }
+      \phi_{ m } \right)
+    = \pi^{ n/2 } ( \det D )^{ -1/2 }.
+  \end{equation}
+
+  \textbf{b)} Show that
+  \begin{equation}
+    \label{eq:33}
+    \det{ }^{ -1/2 } ( 2 \pi D ) \int \prod_{ n } d\phi_{ n } \,
+    \exp\left( -\frac{ 1 }{ 2 } \sum_{ n,\, m } \phi_{ n } D_{ nm }^{ -1 }
+      \phi_{ m } + i \sum_{ n } J^{ n } \phi_{ n } \right)
+    =
+    \exp\left( -\frac{ 1 }{ 2 } \sum_{ n,\, m } J^{ n } D_{ nm } J^{ m } \right)
+  \end{equation}
+  and verify that, up to the determinant, the result is exactly what
+  you would expect from the method of the steepest descent (evaluate
+  the integrated at the extremum of the argument inside the
+  exponential).
+
+\item From the Hamiltonian to the Lagrangian path integral. Assume
+  that the Hamiltonian is quadratic in $\vec{ \pi }$, and that the
+  coefficients of such quadratic terms do not depend on
+  $\vec{ \phi }$. Show that
+  \begin{equation}
+    \label{eq:34}
+    \int \Dcal \phi \Dcal \pi \, \exp\left( i \int dt \left( ( \vec{ \pi }
+        \cdot \dot{ \vec{ \phi } } ) - H( \vec{ \phi }, \vec{ \pi }, t )
+      \right) \right)
+    =
+    \Ncal \int \Dcal \phi \, \exp\left( L( \vec{ \phi }, \dot{ \vec{ \phi } }, t )
+    \right)
+  \end{equation}
+  where $\Ncal$ is a constant.
+
+\item Let us consider the one-dimensional harmonic oscillator
+  interacting with an external source (forced oscillator):
+  \begin{equation}
+    \label{eq:35}
+    L =
+    \frac{ m \dot{ x }^{ 2 } }{ 2 } - \frac{ k^{ 2 } x^{ 2 } }{ 2 } + J x
+  \end{equation}
+  where $J( t )$ is a time dependent external source (e.g., an
+  electric field if the oscillator is supposed to carry an electric
+  charge). Evaluate the path integral for such a system using the
+  saddle point approximation under assumption that
+  $J( 0 ) = J( T ) = 0$.
+
+\item A formal substitution $\tau = it$ defines the Euclidean real time
+  $\tau$. One could imagine this transformation as the analytic
+  continuation from the Minkowski space with coordinates $( x, t )$ to
+  the Euclidean space.
+
+  \textbf{a)} Write the corresponding Euclidean action of the forced
+  harmonic oscillator which arises as a results of such an analytic
+  continuation. What becomes of the corresponding Schr\"{o}dinger
+  equation? Discuss the properties of the corresponding Green
+  functions in the Euclidean space.
+
+  \textbf{b)} The group of the space-time symmetry of
+  $( 3 + 1 )$-dimensional Minkowski space is the group of hyperbolic
+  rotations $\SO( 3, 1 )$. What is the group of symmetry of Euclidean
+  space?
+
+\item Let us consider the non-relativistic Hamiltonian operator in
+  one-dimensional space
+  $H = -\frac{ \hbar^{ 2 } }{ 2m } \frac{ d^{ 2 } }{ dx^{ 2 } } + V( x )$
+  where the double-well potential is
+  \begin{equation}
+    \label{eq:36}
+    V( x ) = \lambda ( x^{ 2 } - a^{ 2 } )^{ 2 }
+  \end{equation}
+  and $\lambda$ and $a$ are some constants. The operator of spacial parity
+  $P$ which commutes with the Hamiltonian has its eigenfunctions
+  $\psi( x )$. It action is defined as
+  $P : \psi( x ) = \pm\psi( -x )$. What are the corresponding eigenstates of
+  the Hamiltonian.
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item Olszewski H., \emph{O skutecznym rad sposobie};
+
+  % \item \emph{Polska XVII wieku. Państwo, społeczeństwo, kultura},
+  %   red. J. Tazbir;
+
+  % \item Paczkowski A., \emph{Pół wieku dziejów Polski, 1939--1989};
+
+  % \item \emph{Polska na przestrzeni wieków}, red. J. Tazbir;
+
+  % \item Przyboś A., \emph{Michał Korybut Wiśniowiecki 1640-1673};
+
+  % \item Rok B., \emph{Człowiek wobec śmierci w kulturze
+  %   staropolskiej};
+
+  % \item \emph{Rzeczpospolita wielu narodów i jej tradycje}, red. M.
+  %   Markiewicz, A. Link-Lenczewski;
+
+  % \item \emph{Społeczeństwo polskie od X do XX wieku}, red. I.
+  %   Ignatowicz, A. Mączak, B. Zientara, J. Żarnowski;
+
+  % \item Staszewski J., \emph{August II Mocny};
+
+  % \item Staszewski J., \emph{August III Sas};
+
+  % \item Suleja W., \emph{Józef Piłsudski};
+
+  % \item Szubarczyk P., \emph{Inka. Zachowałam się jak trzeba\ldots};
+
+  % \item Topolski J., \emph{Polska w czasach nowożytnych. Od
+  %   europejskiej potęgi do utraty niepodległości};
+
+  % \item Terlecki R., \emph{Miecz i tarcza komunizmu. Historia
+  %   aparatu bezpieczeństwa 1944--1990};
+
+  % \item \emph{Tradycje polityczne dawnej Polski}, red. A.
+  %   Sucheni-Grabowska, A. Dybowska;
+
+  % \item Wandycz P., \emph{Pod zaborami. Ziemie Rzeczypospolitej w
+  %   latach 1795--1918};
+
+  % \item Wisner H., \emph{Władysław IV Waza};
+
+  % \item Wisner H., \emph{Zygmunt III Waza};
+
+  % \item Zielińska Z., \emph{Ostatnie lata Pierwszej
+  %   Rzeczypospolitej};
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+  % \item
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\end{enumerate}
+% ##################
+
+
+
+
+
+
+
+
+
+
+% ######################################
+\section{Teoria grup i fizyka, problem do zrobienia}
+
+% \vspace{\spaceTwo}
+
+% ######################################
+
+
+% ##################
+\begin{enumerate}
+
+\item Rozważmy reprezentację grupy $\SO( 3 )$ przez macierze
+  $\SU( 2 )$ w przestrzeni spinorów. W tej reprezentacji definiujemy
+  algebrę operatorów liniowych $\operatorA = A^{ i } \sigma_{ i }$, gdzie
+  $A^{ i }$ to zespolone współczynniki, $\sigma_{ i }$, $i = 1, 2, 3$ to
+  macierze Pauliego (stosujemy konwencję sumacyjną Einsteina).
+  Transformacje grupy $\SU( 2 )$ parametryzujemy wzorem
+  $U( \vecn ) = \exp( i \vec{ \sigma } \vecn )$. Proszę obliczyć jak
+  transformuje się operator $\operatorA$ przy obrotach. Czy operator
+  $\operatorA$ jest operatorem tensorowym?
+
+\item Analogicznie do poprzedniego zadania, definiujemy operator
+  $\operatorC = A^{ i } B^{ j } \sigma_{ i } \sigma_{ j }$. Proszę sprawdzić,
+  jak transformują się składowe tego operatora przy operatorach.
+  Proszę pokazać, że algebra operatorów $\operatorC$ tworzy
+  reprezentację redukowalną, przywiedlną grupy $\SO( 3 )$. Ze
+  składowych $A^{ i } B^{ j }$ proszę zbudować operatory tensorowe
+  transformują się w nieredukowalnych reprezentacjach $\SO( 3 )$.
+
+  \textbf{Wskazówka.} Przykładem reprezentacji nieredukowalnych
+  reprezentacji grupy obrotów o całkowitych wartościach krętu $j$ są
+  funkcje kuliste.
+
+\item Obroty $R( \alpha, \beta, \gamma )$ w przestrzeni trójwymiarowej można
+  sparametryzować za pomocą kątów Eulera $0 < \alpha < 2\pi$,
+  $0 < \beta < \pi$, $0 < \gamma < 2\pi$ w następujący sposób:
+  $R( \alpha, \beta, \gamma ) = R_{ z_{ 2 } }( \gamma ) R_{ y_{ 1 } }( \beta ) R_{ z }( \alpha )$,
+  gdzie $y_{ 1 }$ jest osią otrzymaną z osi $y$ po obrocie
+  $R_{ z }( \alpha )$ względem osi $z$, a $z_{ 2 }$ osią, w którą
+  przechodzi oś $z$ po dwóch obrotach, względem osi $z$ i $y_{ 1 }$.
+  Proszę wyliczyć jak transformują się składowe wektora $\vecr$ przy
+  obrotach $R( \alpha, \beta, \gamma )$. Czy taka transformacja ma wektory
+  niezmiennicze.
+
+\item Wiadomo z kursu mechaniki kwantowej, że operatory momentu pędu $\vecJ$ są proporcjonalne do generatorów grupy obrotów, czyli operatory obrotów skończonych można zapisać jako $\exp( -i \vec{ \theta } \vecJ \, )$ (przyjmujemy $\hbar = 1$), gdzie składowe $\vec{ \theta }$ parametryzują dowolny obrót. Pamiętając o tym, że w reprezentacji spinowej, dla $J = \frac{ 1 }{ 2 }$, $\vecJ = \vec{ \sigma } / 2$, proszę wyliczyć macierze operatorów obrotów $R( \alpha, \beta, \gamma )$ w tej reprezentacji.
+
+\item Proszę, korzystając ze znanych z mechaniki kwantowej wyników dla wartości elementów macierzowych operatorów $\vecJ$ w bazie $| j, m \rangle$ stanów własnych $\operatorJ^{ \; 2 }$ i $\operatorJ_{ z }^{ \; 2 }$, wyliczy macierze reprezentujące obroty skończone $R( \alpha, \beta, \gamma )$ w bazie $| j, m \rangle$, dla $j = 1$.
+
+  \textbf{Wskazówka.} Proszę pokazać, że dla $j = 1$, potęgę operatora $( \vec{ \theta } \vecJ \, )^{ n }$ dla $n > 2$ można wyrazić przez kombinację liniową wyrazów z $n = 0, 1$ i $2$.
+
+\item
+
+\end{enumerate}
+% ##################
+
+
+% % ######################################
+% \newpage
+% \section{Zaczęte i~nieskończone}
+
+% \vspace{\spaceTwo}
+% % ######################################
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+% % ######################################
+% \newpage
+% \section{Articles}
+
+% \vspace{\spaceTwo}
+% % ######################################
+
+
+
+% \begin{enumerate}
+
+% \item
+
+
+
+% \item
+
+
+% \item
+
+
+
+% \item
+
+% \item
+
+% \item
+
+% \item
+
+% \item
+
+% \item
+
+% \item
+
+% \item
+
+% \item
+
+% \item
+
+% \item
+
+% \item
+
+% \item
+
+% \item
+
+% \item
+
+% \item
+
+% \item
+
+% \item
+
+% \item
+
+% \item
+
+% \item
+
+% \item
+
+% \item
+
+% \item
+
+% \item
+
+% \item
+
+% \item
+
+% \item
+
+% \item
+
+% \item
+
+% \item
+
+% \item
+
+
+% \item
+
+% \item
+
+% \item
+
+% \item
+
+% \item
+
+% \item
+
+% \item
+
+% \item
+
+% \item
+
+% \item
+
+% \item
+
+% \item
+
+% \item
+
+% \item
+
+% \item
+
+% \item
+
+% \item
+
+% \item
+
+% \item
+
+% \item
+
+% \item
+
+% \item
+
+% \item
+
+% \item
+
+% \item
+
+% \item
+
+% \item
+
+% \item
+
+% \item
+
+% \item
+
+% \item
+
+% \item
+
+% \item
+
+% \item
+
+% \item
+
+% \item
+
+% \item
+
+% \item
+
+% \item
+
+% \item
+
+% \item
+
+% \item
+
+% \item
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+% \end{enumerate}
+
+
+
+
+
+
+
+
+
+
+% ############################
+
+% Koniec dokumentu
+\end{document}
