@@ -62,8 +62,18 @@ COMPUTERSCIENCEEXERCISESPATH="$EXERCISESLISTSPATH/Informatyka-listy-zadań"
 
 
 ####################
+# Works on culture path
+
+CULTUREANALYSISPATH="$ERRORSANDCOMMENTSPATH/Pozostałe-dziedziny-błędy-i-uwagi/Kultura-błędy-i-uwagi"
+####################
+
+
+
+####################
 # Economics paths
 ECONOMICSPATH="$ERRORSANDCOMMENTSPATH/Pozostałe-dziedziny-błędy-i-uwagi/Ekonomia-błędy-i-uwagi"
+
+# echo $ECONOMICSPATH
 ####################
 
 
@@ -177,7 +187,7 @@ NOTESONEPATH="$HOME/Good-things/Various-writings/Notatki-do-oddziaływań-elektr
 ####################
 # Various temporary paths
 
-VERYSIMPLEBOOKSABOUTSCIENCEPATH="$ERRORSANDCOMMENTSPATH/"
+VERYSIMPLEBOOKSABOUTSCIENCEPATH="$ERRORSANDCOMMENTSPATH/Pozostałe-dziedziny-błędy-i-uwagi/Bardzo-proste-książki-o-nauce-błędy-i-uwagi"
 ####################
 
 
@@ -207,12 +217,45 @@ rsync $LATEXFILEPATH $MATHEMATICALANALYSISPATH
 
 
 ####################
+# Synchronization of file "AudiovisualArtsBooks"
+LATEXFILEPATH="$BIBLIOGRAPHYPATH/AudiovisualArtsBooks.bib"
+
+
+# Works on culture directory
+rsync $LATEXFILEPATH $CULTUREANALYSISPATH
+####################
+
+
+
+####################
+# Synchronization of file "CivilizationCultureBooks.bib"
+LATEXFILEPATH="$BIBLIOGRAPHYPATH/CivilizationCultureBooks.bib"
+
+
+# Works on culture directory
+rsync $LATEXFILEPATH $CULTUREANALYSISPATH
+####################
+
+
+
+####################
 # Synchronization of file "HistoryBooks.bib"
 LATEXFILEPATH="$BIBLIOGRAPHYPATH/HistoryBooks.bib"
 
 
 # History directory
-rsync $LATEXFILE $HISTORYPATH
+rsync $LATEXFILEPATH $HISTORYPATH
+####################
+
+
+
+####################
+# Synchronization of file "LiteraryStudiesBooks.bib"
+LATEXFILEPATH="$BIBLIOGRAPHYPATH/LiteraryStudiesBooks.bib"
+
+
+# Works on culture directory
+rsync $LATEXFILEPATH $CULTUREANALYSISPATH
 ####################
 
 
@@ -249,6 +292,24 @@ rsync $LATEXFILEPATH $MATHEMATICALANALYSISPATH
 rsync $LATEXFILEPATH $NONCOMMUTATIVEGEOMETRYPATH
 
 rsync $LATEXFILEPATH $PROBABILTYTHEORYPATH
+
+##########
+
+
+# Very simple books about science directory
+rsync $LATEXFILEPATH $VERYSIMPLEBOOKSABOUTSCIENCEPATH
+
+####################
+
+
+
+####################
+# Synchronization of file "MusicBooks.bib"
+LATEXFILEPATH="$BIBLIOGRAPHYPATH/MusicBooks.bib"
+
+
+# Works on culture directory
+rsync $LATEXFILEPATH $CULTUREANALYSISPATH
 ####################
 
 
@@ -262,11 +323,14 @@ LATEXFILEPATH="$BIBLIOGRAPHYPATH/PhilNaturBooks.bib"
 rsync $LATEXFILEPATH $PHYSICSEXERCISESPATH
 
 
+
 ##########
 # Mathematical directories
 
 # Functional analysis directory
 rsync $LATEXFILEPATH $FUNCTIONALANALYSISPATH
+##########
+
 
 
 ##########
@@ -304,26 +368,12 @@ rsync $LATEXFILEPATH $QUANTUMMECHANICSPATH
 
 # Thermostatic, thermodynamics and statistical physics
 rsync $LATEXFILEPATH $TERMOSTATICSETCPATH
-####################
+##########
 
 
 
-####################
-# Synchronization of file "VisualArtsBooks.bib"
-LATEXFILEPATH="$BIBLIOGRAPHYPATH/VisualArtsBooks.bib"
-
-
-# # Economics directory
-# rsync $LATEXFILEPATH $ECONOMICSPATH
-
-# # Essays and jurnalism directory
-# rsync $LATEXFILEPATH $ESSAYSANDJOURNALISMPATH
-
-# # History directory
-# rsync $LATEXFILEPATH $HISTORYPATH
-
-# Comics and graphics novels directory
-rsync $LATEXFILEPATH $COMICSGRAPHICNOVELSPATH
+# Very simple books about science directory
+rsync $LATEXFILEPATH $VERYSIMPLEBOOKSABOUTSCIENCEPATH
 ####################
 
 
@@ -332,6 +382,12 @@ rsync $LATEXFILEPATH $COMICSGRAPHICNOVELSPATH
 # Synchronization of file "VariousFieldsBooks.bib"
 LATEXFILEPATH="$BIBLIOGRAPHYPATH/VariousFieldsBooks.bib"
 
+
+# Works on culture directory
+rsync $LATEXFILEPATH $CULTUREANALYSISPATH
+
+# Economics directory
+rsync $LATEXFILEPATH $ECONOMICSPATH
 
 # Economics directory
 rsync $LATEXFILEPATH $ECONOMICSPATH
@@ -345,6 +401,26 @@ rsync $LATEXFILEPATH $HISTORYPATH
 # Various books directory
 rsync $LATEXFILEPATH $VARIOUSBOOKSPATH
 ####################
+
+
+
+####################
+# Synchronization of file "VisualArtsBooks.bib"
+LATEXFILEPATH="$BIBLIOGRAPHYPATH/VisualArtsBooks.bib"
+
+
+# # Economics directory
+# rsync $LATEXFILEPATH $ECONOMICSPATH
+
+# Comics and graphics novels directory
+rsync $LATEXFILEPATH $COMICSGRAPHICNOVELSPATH
+
+# Works on culture directory
+rsync $LATEXFILEPATH $CULTUREANALYSISPATH
+####################
+
+
+
 
 
 
@@ -363,6 +439,9 @@ LATEXFILEPATH="$BIBLIOGRAPHYPATH/latexgeneralcommands.sty"
 
 # DEUS and philosophy directory
 rsync $LATEXFILEPATH $DEUSPHILOSOPHYPATH
+
+# Works on culture directory
+rsync $LATEXFILEPATH $CULTUREANALYSISPATH
 
 # Comics and graphics novels directory
 rsync $LATEXFILEPATH $COMICSGRAPHICNOVELSPATH
@@ -391,6 +470,10 @@ rsync $LATEXFILEPATH $PHYSICSEXERCISESPATH
 # Various books directory
 rsync $LATEXFILEPATH $VARIOUSBOOKSPATH
 
+# Very simple books about science directory
+rsync $LATEXFILEPATH $VERYSIMPLEBOOKSABOUTSCIENCEPATH
+
+
 
 ##########
 # Mathematical directories
@@ -418,6 +501,8 @@ rsync $LATEXFILEPATH $NONCOMMUTATIVEGEOMETRYPATH
 
 # Probability theory directory
 rsync $LATEXFILEPATH $PROBABILTYTHEORYPATH
+##########
+
 
 
 ##########
