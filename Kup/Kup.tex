@@ -1,1 +1,342 @@
-Test
+% Autor: Kamil Ziemian
+
+% ---------------------------------------------------------------------
+% Podstawowe ustawienia i pakiety
+% ---------------------------------------------------------------------
+\RequirePackage[l2tabu, orthodox]{nag}  % Wykrywa przestarzałe i niewłaściwe
+% sposoby używania LaTeXa. Więcej jest w l2tabu English version.
+\documentclass[a4paper,11pt]{article}
+% {rozmiar papieru, rozmiar fontu}[klasa dokumentu]
+\usepackage[MeX]{polski}  % Polonizacja LaTeXa, bez niej będzie pracował
+% w języku angielskim.
+\usepackage[utf8]{inputenc}  % Włączenie kodowania UTF-8, co daje dostęp
+% do polskich znaków.
+\usepackage{lmodern}  % Wprowadza fonty Latin Modern.
+\usepackage[T1]{fontenc}  % Potrzebne do używania fontów Latin Modern.
+
+
+
+% ---------------------------------------
+% Podstawowe pakiety (niezwiązane z ustawieniami języka)
+% ---------------------------------------
+\usepackage{microtype}  % Twierdzi, że poprawi rozmiar odstępów w tekście.
+% \usepackage{graphicx}  % Wprowadza bardzo potrzebne komendy do wstawiania
+% % grafiki.
+\usepackage{xcolor}
+% \usepackage{verbatim}  % Poprawia otoczenie VERBATIME.
+% \usepackage{textcomp}  % Dodaje takie symbole jak stopnie Celsiusa,
+% % wprowadzane bezpośrednio w tekście.
+\usepackage{vmargin}  % Pozwala na prostą kontrolę rozmiaru marginesów,
+% za pomocą komend poniżej. Rozmiar odstępów jest mierzony w calach.
+% ---------------------------------------
+% MARGINS
+% ---------------------------------------
+\setmarginsrb
+{ 0.7in} % left margin
+{ 0.6in} % top margin
+{ 0.7in} % right margin
+{ 0.8in} % bottom margin
+{  20pt} % head height
+{0.25in} % head sep
+{   9pt} % foot height
+{ 0.3in} % foot sep
+
+
+
+% ---------------------------------------
+% Często przydatne pakiety
+% ---------------------------------------
+% \usepackage{csquotes}  % Pozwala w prosty sposób wstawiać cytaty do tekstu.
+% \usepackage{xcolor}  % Pozwala używać kolorowych czcionek (zapewne dużo
+% więcej, ale ja nie potrafię nic o tym powiedzieć).
+
+
+
+% ---------------------------------------
+% Pakiety do tekstów z nauk przyrodniczych
+% ---------------------------------------
+\let\lll\undefined  % Amsmath gryzie się z pakietami do języka
+% polskiego, bo oba definiują komendę \lll. Aby rozwiązać ten problem
+% oddefiniowuje tę komendę, ale może tym samym pozbywam się dużego Ł.
+\usepackage[intlimits]{amsmath}  % Podstawowe wsparcie od American
+% Mathematical Society (w skrócie AMS)
+\usepackage{amsfonts, amssymb, amscd, amsthm} % Dalsze wsparcie od AMS
+% \usepackage{siunitx}  % Do prostszego pisania jednostek fizycznych
+\usepackage{upgreek}  % Ładniejsze greckie litery
+% Przykładowa składnia: pi = \uppi
+\usepackage{slashed}  % Pozwala w prosty sposób pisać slash Feynmana.
+\usepackage{calrsfs}  % Zmienia czcionkę kaligraficzną w \mathcal
+% na ładniejszą. Może w innych miejscach robi to samo, ale o tym nic
+% nie wiem.
+
+
+
+% ##########
+% Tworzenie otoczeń "Twierdzenie", "Definicja", "Lemat", etc.
+\newtheorem{theorem}{Twierdzenie}  % Komenda wprowadzająca otoczenie
+% „theorem” do pisania twierdzeń matematycznych
+\newtheorem{definition}{Definicja}  % Analogicznie jak powyżej
+\newtheorem{corollary}{Wniosek}
+
+
+
+% ---------------------------------------
+% Pakiety napisane przez użytkownika.
+% Mają być w tym samym katalogu to ten plik .tex
+% ---------------------------------------
+% \usepackage{latexgeneralcommands}
+% \usepackage{mathcommands}
+% \usepackage{calculuscommands}
+% \usepackage{SchwartzBooksCommands}  % Pakiet napisany m.in. dla tego pliku.
+
+
+
+
+% ---------------------------------------------------------------------
+% Dodatkowe ustawienia dla języka polskiego
+% ---------------------------------------------------------------------
+\renewcommand{\thesection}{\arabic{section}.}
+% Kropki po numerach rozdziału (polski zwyczaj topograficzny)
+\renewcommand{\thesubsection}{\thesection\arabic{subsection}}
+% Brak kropki po numerach podrozdziału
+
+
+
+% ---------------------------------------
+% Ustawienia różnych parametrów tekstu
+% ---------------------------------------
+\renewcommand{\arraystretch}{1.2}  % Ustawienie szerokości odstępów między
+% wierszami w tabelach.
+
+
+
+% ---------------------------------------
+% Pakiet „hyperref”
+% Polecano by umieszczać go na końcu preambuły.
+% ---------------------------------------
+\usepackage{hyperref}  % Pozwala tworzyć hiperlinki i zamienia odwołania
+% do bibliografii na hiperlinki.
+
+
+
+
+
+
+
+
+
+
+% ---------------------------------------------------------------------
+% Tytuł, autor, data
+\title{Rzeczy które należy kupić}
+
+% \author{}
+% \date{}
+% ---------------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+% ####################################################################
+\begin{document}
+% ####################################################################
+
+
+
+
+
+% ######################################
+\maketitle % Tytuł całego tekstu
+% ######################################
+
+
+
+
+
+% ############################
+\section{Gry}
+% ############################
+
+
+\begin{itemize}
+\item[--] \textit{Oni},
+
+\item[--] \textit{Soul Reaver II},
+
+\item[--] \textit{Curse of Monkey Island},
+
+\item[--] \textit{Escape from Monkey Island},
+
+\item[--] \textit{Black and White},
+
+\item[--] \textit{Chrono Trigger},
+
+\item[--] \textit{Heroes of Might and Magic V},
+
+\item[--] \textit{The Thing},
+
+\item[--] \textit{Diablo II},
+
+\end{itemize}
+
+
+
+
+
+
+
+
+
+
+% ############################
+\section{Filmy}
+% ############################
+
+
+\begin{itemize}
+\item[--] Kubrick,
+
+\item[--] \textit{Lot nad kukułczym gniazdem},
+
+\item[--] \textit{Trylogia dolarów},
+
+\item[--] \textit{Napoleon Dynamite},
+
+\item[--] \textit{Pan Tadeusz},
+
+\item[--] John Woo,
+
+\item[--] \textit{Citezan Kane},
+
+\item[--] Akira Kurosawa,
+
+\item[--] \textit{Ludzka skaza},
+
+\item[--] Chaplin, \textit{Dyktator},
+
+\item[--] \textit{Poszukiwacze},
+
+\item[--] Fellini,
+
+\item[--] I. Bergman,
+
+\item[--] Dokument, \textit{Shoah},
+
+\end{itemize}
+
+
+
+
+
+
+
+
+
+
+% ############################
+\section{Muzyka}
+% ############################
+
+
+\begin{itemize}
+\item[--] Bach,
+
+\item[--] Mozart,
+
+\item[--] Iron Savior,
+
+\item[--] The Beatles,
+
+\item[--] Metallica,
+
+\item[--] Angelo Branduardi,
+
+\item[--] Papa dance??, \textit{Panorama Tatr},
+
+\item[--] Beethoven,
+
+\end{itemize}
+
+
+
+
+
+
+
+
+
+
+% ############################
+\section{Seriale}
+% ############################
+
+
+\begin{itemize}
+\item[--] \textit{Rzym},
+
+\item[--] \textit{True Blood},
+
+\item[--] \textit{Yes, Minister},
+
+\item[--] \textit{Big Bang Theory},
+
+\item[--] \textit{Neon Genesis Evangelion},
+
+\item[--] \textit{Elfen Lied},
+
+\item[--] \textit{Eureka},
+
+\item[--] \textit{The Big Bang Theory},
+
+\item[--] \textit{Chuck},
+
+\item[--] \textit{Walking Dead}, pierwszy sezon,
+
+\end{itemize}
+
+
+
+
+
+
+
+
+
+
+% ############################
+\section{Komiksy}
+% ############################
+
+
+\begin{itemize}
+\item[--] \textit{Monster} (manga),
+
+\item[--] \textit{Władcy Chmielu},
+
+\item[--] Pierwsze komiksy o Batmanie i Supermenie,
+
+\item[--] \textit{Walking Dead},
+
+\item[--] \textit{XIII},
+
+\end{itemize}
+
+
+
+
+
+
+
+
+
+
+% ############################
+
+% Koniec dokumentu
+\end{document}
