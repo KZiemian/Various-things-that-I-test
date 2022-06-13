@@ -84,8 +84,11 @@
 \usepackage{latexgeneralcommands}
 % \usepackage{mathcommands}
 % \usepackage{calculuscommands}
-\newcommand{\attribA}[1]{#1}
-\newcommand{\attribB}[1]{#1}
+
+\newcommand{\attribA}[1]{%
+  \nopagebreak{\vspace{2mm}\raggedleft\footnotesize #1\par\vspace{2em}}}
+\newcommand{\attribB}[1]{%
+  \nopagebreak{\raggedleft\footnotesize #1\par \vspace{2em}}}
 % \usepackage{SchwartzBooksCommands}  % Pakiet napisany m.in. dla tego pliku.
 
 
@@ -174,8 +177,9 @@ swej wewnętrznej pustce był ów drewniany, pełen wojowników koń
 trojański! I~łuna Troi! I~„samej Kreuzy cień\ldots”.
 
 
-\attribA{Św. Augustyn \textit{Wyznania}, księga I, 13. \\
-  O~swojej miłości do Wergiliusza i~literatury.}
+\attribA{ % Autor i lokalizacja cytatu.
+  Św. Augustyn \textit{Wyznania}, księga I, 13. \\
+  O~swojej miłości do Wergiliusza i~literatury. }
 % ##################
 
 \vspace{\spaceThree}
@@ -191,7 +195,8 @@ i~groźnemu, trudnemu do przebycia, nawet dla tych którzy do drzewa
 Krzyża przywarli?
 
 
-\attribA{Św. Augustyn \textit{Wyznania}, księga I, 16}
+\attribA{ % Autor i lokalizacja cytatu.
+  Św. Augustyn \textit{Wyznania}, księga I, 16 }
 % ##################
 
 \vspace{\spaceThree}
@@ -207,7 +212,8 @@ spokojnie słuchać, jak inny z~takiego samego miotu biedak woła:
 o,~czemuż nie boskie do nas\ldots”
 
 
-\attribA{Św. Augustyn \textit{Wyznania}, księga I, 16.}
+\attribA{ % Autor i lokalizacja cytatu.
+  Św. Augustyn \textit{Wyznania}, księga I, 16. }
 % ##################
 
 \vspace{\spaceThree}
@@ -382,7 +388,8 @@ niedociągnięć, będziemy usiłowali krótko i~jasno -- o~ile na to sama
 rzecz pozwoli -- wyłożyć wszystko, co zakresem swoim obejmuje nauka
 święta.
 
-% \attribA{Św. Tomasz z Akwinu, wstęp do „Sumy teologicznej”}
+
+\attribA{Św. Tomasz z Akwinu, wstęp do \textit{Sumy teologicznej}}
 % ##################
 
 \vspace{\spaceThree}
@@ -398,8 +405,9 @@ własnej czci, boleją, jeśli ktoś naucza prawdy. Przeciw nim powiada
 Grzegorz: „Umysł pobożnego pasterza chce, aby~inni nauczali prawdy,
 której on sam nie jest w~stanie uczyć”.
 
-% \attribA{Św. Tomasz z Akwinu, „Komentarz do Ewangelii Jana”,
-% rozdział trzeci, wykład piąty, 511.}
+
+\attribA{Św. Tomasz z Akwinu, \textit{Komentarz do Ewangelii Jana},
+rozdział trzeci, wykład piąty, 511.}
 % ##################
 
 \vspace{\spaceThree}
@@ -416,11 +424,13 @@ Uzasadnieniem takiego stanu rzeczy jest fakt, iż~człowiek jest istotą
 o~słabej i~kruchej naturze i~gdy ktoś z~nim długo obcuje, poznaje
 jakąś jego słabość i~stąd zmniejsza się w nim szacunek do niego.
 
-% \attribA{Św. Tomasz z Akwinu, „Komentarz do Ewangelii Jana”,
-% rozdział czwarty, wykład szósty, 667.}
+
+\attribA{Św. Tomasz z Akwinu, \textit{Komentarz do Ewangelii Jana},
+rozdział czwarty, wykład szósty, 667.}
 % ##################
 
 \vspace{\spaceThree}
+
 
 
 
@@ -431,8 +441,9 @@ niczego, co można by tutaj zrobić, poszedł do Niego. W~podobny sposób
 rodzice rozpaczając nad ocaleniem dzieci, wzywają także
 niesprawdzonych lekarzy.
 
-% \attribA{Św. Tomasz z Akwinu, „Komentarz do Ewangelii Jana”,
-% rozdział czwarty, wykład siódmy, 684.}
+
+\attribA{Św. Tomasz z Akwinu, \textit{Komentarz do Ewangelii Jana},
+rozdział czwarty, wykład siódmy, 684.}
 % ##################
 
 \vspace{\spaceThree}
@@ -445,55 +456,57 @@ Trzeba nam iść do przodu, ponieważ ten, kto stoi, wystawia się na
 niebezpieczeństwo, że~nie będzie mógł zachować życia łaski. Na drodze
 ku Bogu bowiem nie~iść do przodu oznacza cofać się.
 
-% \attribA{Św. Tomasz z Akwinu „Komentarz do Ewangelii Jana”, rozdział
-%   czwarty, wykład siódmy, 690.}
+
+\attribA{Św. Tomasz z Akwinu \textit{Komentarz do Ewangelii Jana}, rozdział
+  czwarty, wykład siódmy, 690.}
 % ##################
 
+\vspace{\spaceThree}
 
 
 
-% Po trzecie, przez świątynię można rozumieć duszę duchową, jak
-% powiedziano w 1 Kor 3, 17: \emph{Świątynia Boga jest święta, a wy nią
-%   jesteście.} Wtedy człowiek sprzedaje w~świątyni owce, woły
-% i~gołębie, gdy w~duszy zachowa zwierzęce poruszenia, dla których
-% zaprzedaje~się diabłu. Albowiem woły, które służą uprawie roli,
-% symbolizują ziemskie pragnienia, owce, które są zwierzętami głupimi,
-% symbolizują ludzką tępotę, gołębie zaś ludzi niestałych. I~to wszystko
-% Bóg wypędził z~serc ludzi.
+% ##################
+Po trzecie, przez świątynię można rozumieć duszę duchową, jak
+powiedziano w 1 Kor 3, 17: \textit{Świątynia Boga jest święta, a wy nią
+  jesteście.} Wtedy człowiek sprzedaje w~świątyni owce, woły
+i~gołębie, gdy w~duszy zachowa zwierzęce poruszenia, dla których
+zaprzedaje~się diabłu. Albowiem woły, które służą uprawie roli,
+symbolizują ziemskie pragnienia, owce, które są zwierzętami głupimi,
+symbolizują ludzką tępotę, gołębie zaś ludzi niestałych. I~to wszystko
+Bóg wypędził z~serc ludzi.
 
-% \attribA{Św. Tomasz z Akwinu, ,,Komentarz do Ewangelii Jana'',
-%   rozdział drugi, wykład drugi, 191.}
 
-% \noi I~teraz bowiem wiadomo, że~ludzie tej samej profesji odnoszą~się
-% do~siebie w~sposób podstępny i~zawistny. Garncarz zazdrości
-% garncarzowi, a~nie stolarzowi. W~ten sposób także nauczyciele szukając
-% własnej czci, boleją, jeśli ktoś naucza prawdy. Przeciw nim powiada
-% Grzegorz: ,,Umysł pobożnego pasterza chce, aby~inni nauczali prawdy,
-% której on sam nie jest w~stanie uczyć''.
+\attribA{Św. Tomasz z Akwinu, \textit{Komentarz do Ewangelii Jana},
+  rozdział drugi, wykład drugi, 191.}
+% ##################
 
-% \attribA{Św. Tomasz z Akwinu, ,,Komentarz do Ewangelii Jana'',
-%   rozdział trzeci, wykład piąty, 511.}
+\vspace{\spaceThree}
 
-% \noi Albowiem stałe obcowanie z ludźmi i~zbytnia zażyłość, pomniejsza
-% szacunek i~rodzi pogardę. Dlatego mamy zwyczaj mniej szanować tych,
-% z~którymi łączy nas bardziej zażyła więź, a~bardziej szanujemy ludzi,
-% z~którymi nie~możemy połączyć~się więzią zażyłości. Natomiast
-% w~odniesieniu do Boga dzieje~się coś przeciwnego. Albowiem im bardziej
-% ktoś przez miłość i~kontemplację zwiąże~się z~Bogiem więzią zażyłości,
-% tym bardziej uznaje Go za wyniesionego i~bardziej szanuje, siebie
-% samego uznając za mniejszego, Hi~42, 5--6: \emph{Słuchałem ucha
-%   słyszałem cię, a~teraz oko moje cię widzi: przeto sam siebie winię
-%   i~czynię pokutę w~prochu i~w~popiele.}  Uzasadnieniem takiego stanu
-% rzeczy jest fakt, iż~człowiek jest istotą o~słabej i~kruchej naturze
-% i~gdy ktoś z~nim długo obcuje, poznaje jakąś jego słabość i~stąd
-% zmniejsza się w nim szacunek do niego. A~w~odniesieniu do Boga, który
-% jest istotą o~niezmierzonej doskonałości, człowiek o~ile postąpi
-% w~poznaniu Go, o~tyle bardziej podziwia wyniesienie jego doskonałości
-% i~bardziej Go szanuje.
 
-% \attribA{Św. Tomasz z Akwinu, ,,Komentarz do Ewangelii Jana'',
-%   rozdział czwarty, wykład szósty, 667.}
 
+% ##################
+\noindent
+Albowiem stałe obcowanie z ludźmi i~zbytnia zażyłość, pomniejsza
+szacunek i~rodzi pogardę. Dlatego mamy zwyczaj mniej szanować tych,
+z~którymi łączy nas bardziej zażyła więź, a~bardziej szanujemy ludzi,
+z~którymi nie~możemy połączyć~się więzią zażyłości. Natomiast
+w~odniesieniu do Boga dzieje~się coś przeciwnego. Albowiem im bardziej
+ktoś przez miłość i~kontemplację zwiąże~się z~Bogiem więzią zażyłości,
+tym bardziej uznaje Go za wyniesionego i~bardziej szanuje, siebie
+samego uznając za mniejszego, Hi~42, 5--6: \textit{Słuchałem ucha
+  słyszałem cię, a~teraz oko moje cię widzi: przeto sam siebie winię
+  i~czynię pokutę w~prochu i~w~popiele.}  Uzasadnieniem takiego stanu
+rzeczy jest fakt, iż~człowiek jest istotą o~słabej i~kruchej naturze
+i~gdy ktoś z~nim długo obcuje, poznaje jakąś jego słabość i~stąd
+zmniejsza się w nim szacunek do niego. A~w~odniesieniu do Boga, który
+jest istotą o~niezmierzonej doskonałości, człowiek o~ile postąpi
+w~poznaniu Go, o~tyle bardziej podziwia wyniesienie jego doskonałości
+i~bardziej Go szanuje.
+
+\attribA{ % Autor i lokalizacja cytatu.
+  Św. Tomasz z Akwinu, \textit{Komentarz do Ewangelii Jana},
+  rozdział czwarty, wykład szósty, 667. }
+% ##################
 
 
 % \noi Grzeszyłem w~latach chłopięcych, gdy niedorzeczności ceniłem
@@ -562,19 +575,7 @@ ku Bogu bowiem nie~iść do przodu oznacza cofać się.
 %   św. Monice.}
 
 
-% \noi I~tą nadzieją~się weselę, ilekroć~się weselę zbawiennie. A~inne
-% tego życia sprawy? Tym mniej zasługują na łzy, im częściej się na nimi
-% płacze. Tym bardziej się powinno nad nimi płakać, im mniej~się nad
-% nimi łez leje.
 
-% \attribA{Św. Augustyn ,,Wyznania'', księga X, 1.}
-
-% \noi Jakże skwapliwie ludzie badają cudze życie, a~jak~się opieszale
-% zabierają do naprawienia swojego. Czemu chcą~się ode mnie dowiedzieć,
-% jakim jestem człowiekiem, skoro nie pragną usłyszeć od Ciebie, jacy
-% oni sami naprawdę~są?
-
-% \attribA{Św. Augustyn ,,Wyznania'', księga X, 3.}
 
 
 
@@ -587,7 +588,7 @@ ku Bogu bowiem nie~iść do przodu oznacza cofać się.
 % Bibliografia
 \bibliographystyle{plalpha}
 
-\bibliography{MathComScienceBooks}{}
+\bibliography{}{}
 
 
 
