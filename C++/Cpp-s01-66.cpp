@@ -12,6 +12,7 @@ int main() {
   }
 
   std::cout << "\nAnother for loop\n";
+
   for (const std::string& x : vect) {
     std::cout << "x = " << x << '\n';
   }
