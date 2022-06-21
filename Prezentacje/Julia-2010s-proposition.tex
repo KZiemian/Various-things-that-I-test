@@ -170,7 +170,7 @@
 
     \centering
 
-    \includegraphics[scale=0.30]{./PresentationPictures/JuliaCreators.png}
+    \includegraphics[scale=0.30]{./PresentationPictures/Julia_creators.png}
 
   \end{figure}
 
@@ -196,7 +196,8 @@
 
   \begin{figure}
 
-    \includegraphics[scale=0.16]{./PresentationPictures/LLVMLogo.png}
+    \includegraphics[scale=0.16]{./PresentationPictures/LLVM_logo.png}
+
 
     \caption{LLVM logo}
 
@@ -409,7 +410,7 @@
     \centering
 
     \includegraphics[scale=0.29]
-    {./PresentationPictures/JuliaMicroBenchmarks.png}
+    {./PresentationPictures/Julia_micro_benchmarks.png}
 
 
     \caption{\textbf{Warning!} Python code use numpy libraries that
@@ -525,11 +526,11 @@
     \centering
 
     \includegraphics[scale=0.27]
-    {./PresentationPictures/BigPlayersUsingJulia.png}
+    {./PresentationPictures/Big_players_using_Julia.png}
 
 
     \caption{From \colorhref{https://juliacomputing.com/}{Julia
-        Computing} page.}
+        Computing} page}
 
   \end{figure}
 
@@ -621,7 +622,7 @@
 
     \centering
 
-    \includegraphics[scale=0.17]{./PresentationPictures/PaddleBattle.png}
+    \includegraphics[scale=0.17]{./PresentationPictures/Paddle_Battle.png}
 
   \end{figure}
 
@@ -752,7 +753,7 @@
 
     \centering
 
-    \includegraphics[scale=0.22]{./PresentationPictures/KSResult.png}
+    \includegraphics[scale=0.22]{./PresentationPictures/KS_result.png}
 
 
     \caption{Kuramoto-Sivashinsky heat evolution in~1~dimension}
@@ -775,7 +776,8 @@
 
     \centering
 
-    \includegraphics[scale=0.22]{./PresentationPictures/JFGLinearScale.png}
+    \includegraphics[scale=0.22]
+    {./PresentationPictures/JFG_benchmarks_linear_scale.png}
 
 
     \caption{Results for $N_{ x }$ points on $x$ axis, CPU time in
@@ -801,7 +803,7 @@
     \centering
 
     \includegraphics[scale=0.22]
-    {./PresentationPictures/JFGLogarithmScale.png}
+    {./PresentationPictures/JFG_benchmarks_logarithm_scale_01.png}
 
 
     \caption{Results for $N_{ x }$ points on $x$ axis, CPU time in
@@ -869,7 +871,8 @@
 
     \centering
 
-    \includegraphics[scale=0.22]{./PresentationPictures/JFGTimeOverCode.png}
+    \includegraphics[scale=0.22]
+    {./PresentationPictures/JFG_time_over_code.png}
 
 
     \caption{Compression~of time and~lines~of code}
@@ -893,7 +896,7 @@
     \centering
 
     \includegraphics[scale=0.22]
-    {./PresentationPictures/JFGSpeedOverCode.png}
+    {./PresentationPictures/JFG_speed_over_code_01.png}
 
 
     \caption{Compression~of ratio~of speed to the lines~of code}
@@ -1326,7 +1329,8 @@
 
     \centering
 
-    \includegraphics[scale=0.17]{./PresentationPictures/PaddleBattle.png}
+    \includegraphics[scale=0.17]
+    {./PresentationPictures/Paddle_Battle.png}
 
   \end{figure}
 
@@ -1385,315 +1389,405 @@
 
 
 
-% % % ##################
-% % \begin{frame}
-% %   \frametitle{Few interesting things for which there is no time
-% %   here}
+% ##################
+\begin{frame}
+  \frametitle{Few interesting things for which there is no time
+    here}
 
 
-% %   {Things that are important or~promising}
-% %   \begin{itemize}
-% %   \item Type system,
-% %     \colorlink{https://www.youtube.com/watch?v=Z2LtJUe1q8c}.
+  Things that are important or~promising
+  \begin{itemize}
 
-% %   \item Metaprogramming and~how use it to make code efficient,
-% %     \colorlink{https://www.youtube.com/watch?v=SeqAQHKLNj4}.
+  \item Type system,
+    \colorhref{https://www.youtube.com/watch?v=Z2LtJUe1q8c}
+    {https://www.youtube.com/watch?v=Z2LtJUe1q8c};
 
-% %   \item Multiple dispatch as rare way of Object Oriented Programming
-% %     (I~don't want holy war over this statement),
-% %     \colorlink{https://www.youtube.com/watch?v=gZJFHrYopxw}.
+  \item Metaprogramming and~how use it to make code efficient,
+    \colorhref{https://www.youtube.com/watch?v=SeqAQHKLNj4}
+    {https://www.youtube.com/watch?v=SeqAQHKLNj4};
 
-% %   \item Using GPU,
-% %     \colorlink{https://www.youtube.com/watch?v=6ntJ_al4oXA}.
+  \item Multiple dispatch as rare way of Object Oriented Programming
+    (I~don't want holy war over this statement),
+    \colorhref{https://www.youtube.com/watch?v=gZJFHrYopxw}
+    {https://www.youtube.com/watch?v=gZJFHrYopxw};
 
-% %   \item Julia package manager,
-% %     \colorlink{https://www.youtube.com/watch?v=HgFmiT5p0zU}.
+  \item Using GPU,
+    \colorhref{https://www.youtube.com/watch?v=6ntJ\_al4oXA}
+    {https://www.youtube.com/watch?v=6ntJ\_al4oXA};
 
-% %   \item Symbolic computing like in~Wolfram Mathematica,
-% %     \colorlink{https://www.youtube.com/watch?v=M742_73edLA}.
+  \item Julia package manager,
+    \colorhref{https://www.youtube.com/watch?v=HgFmiT5p0zU}
+    {https://www.youtube.com/watch?v=HgFmiT5p0zU};
 
-% %   \item Monte Carlo, very immature,
-% %     \colorlink{https://www.youtube.com/watch?v=BmVd7pw6Trc}.
+  \item Symbolic computing like in~Wolfram Mathematica,
+    \colorhref{https://www.youtube.com/watch?v=M742\_73edLA}
+    {https://www.youtube.com/watch?v=M742\_73edLA};
 
-% %   \item Writing fast code,
-% %     \colorlink{https://www.youtube.com/watch?v=szE4txAD8mk}
+  \item Monte Carlo, very immature,
+    \colorhref{https://www.youtube.com/watch?v=BmVd7pw6Trc}
+    {https://www.youtube.com/watch?v=BmVd7pw6Trc}.
 
-% %   \item Parallel computing,
-% %     \colorlink{https://www.youtube.com/watch?v=euZkvgx0fG8}.
+  \end{itemize}
 
-% %   \item Regulars expressions,
-% %     \colorlink{https://docs.julialang.org/en/v1/manual/strings/}.
+\end{frame}
+% ##################
 
-% %   \item Tensor compilers,
-% %     \colorlink{https://www.youtube.com/watch?v=Rp7sTl9oPNI}.
 
-% %   \item How Julia work inside,
-% %     \colorlink{https://www.youtube.com/watch?v=7KGZ_9D_DbI}.
 
-% %   \end{itemize}
 
-% % \end{frame}
-% % % ##################
 
+% ##################
+\begin{frame}
+  \frametitle{Few interesting things for which there is no time
+    here}
 
 
+  Things that are important or~promising
+  \begin{itemize}
 
+  \item Writing fast code,
+    \colorhref{https://www.youtube.com/watch?v=szE4txAD8mk}
+    {https://www.youtube.com/watch?v=szE4txAD8mk};
 
-% % % % ##################
-% % % \begin{frame}
-% % %   \frametitle{Lies, big lies and benchmarks from 2017}
+  \item Parallel computing,
+    \colorhref{https://www.youtube.com/watch?v=euZkvgx0fG8}
+    {https://www.youtube.com/watch?v=euZkvgx0fG8};
 
+  \item Regulars expressions,
+    \colorhref{https://docs.julialang.org/en/v1/manual/strings/}
+    {https://docs.julialang.org/en/v1/manual/strings/};
 
-% % %   \begin{block}{They are outdated now, but there aren't any newer}
-% % %     \begin{figure}
-% % %       \centering
+  \item Tensor compilers,
+    \colorhref{https://www.youtube.com/watch?v=Rp7sTl9oPNI}
+    {https://www.youtube.com/watch?v=Rp7sTl9oPNI};
 
-% % %       \includegraphics[scale=0.7]{benchmarks_QO.pdf}
-% % %       \caption{QuTiP --~Quantum Toolbox in Python.}
-% % %     \end{figure}
-% % %     More benchmarks on page ?????
-% % %   \end{block}
+  \item How Julia work inside,
+    \colorhref{https://www.youtube.com/watch?v=7KGZ\_9D\_DbI}
+    {https://www.youtube.com/watch?v=7KGZ\_9D\_DbI}.
 
-% % %   \begin{block}{Article to cite}
+  \end{itemize}
 
-% % %   \end{block}
+\end{frame}
+% ##################
 
-% % % \end{frame}
-% % % % ##################
 
 
 
 
+% ##################
+\begin{frame}
+  \frametitle{Lies, big lies and benchmarks from 2017}
 
 
+  {They are outdated now, but there aren't any newer}
 
 
+  \begin{figure}
 
+    \centering
 
+    \includegraphics[scale=0.7]{benchmarks_QO.pdf}
 
+    \caption{QuTiP~-- Quantum Toolbox in Python}
 
+  \end{figure}
 
+\end{frame}
+% ##################
 
 
-% % % ##################
-% % \begin{frame}
-% %   \frametitle{Learning materials}
 
 
-% %   \begin{block}{Basics materials}
-% %     Most~of them are more or~less outdated, since they were created
-% %     before release~of Julia 1.x.
-% %     \begin{itemize}
-% %     \item JuliaBoxTutorials, version 1.x, GitHub
-% %       \colorhref{https://github.com/JuliaComputing/JuliaBoxTutorials}{JuliaComputing/JuliaBoxTutorials}.
-% %       Good starting point.
-% %     \item Julia 1.x Documentation. Always~up to~date, really good
-% %       written in~comparison to~others manuals,
-% %       \colorhref{https://docs.julialang.org/en/v1/}{https://docs.julialang.org/en/v1/}.
-% %     \item David P.~Sanders, \emph{Introduction to~Julia
-% %       for~scientific Computing (Workshop)}, 2015. Outdated, but very
-% %       good introduction to~language,
-% %       \YouTube{https://www.youtube.com/watch?v=gQ1y5NUD_RI}.
-% %     \item The Julia Language channel
-% %       on~\colorhref{https://www.youtube.com/user/JuliaLanguage}{YouTube}.
-% %       Contains dozens videos from JuliaCons and hold regulars
-% %       \emph{Intro to~Julia}, keeping it up to date. You~can find
-% %       next \emph{Intro to~Julia} and other introductions
-% %       on~\colorhref{https://www.facebook.com/Learn-Julia-529467964069525/?eid=ARDnSanRh6e3_6NQanjfziNeMYt3-hRUqje-5xOvRidGM5bmm6ZGCZ49fy5CZ1AYX9T503OEdMUMRlOe}{Facebook}.
-% %     \item Ben Lauwens, Allen Downey, \emph{Think Julia: How to~Think
-% %       Like a~Computer Scientist},
-% %       \colorlink{https://benlauwens.github.io/ThinkJulia.jl/latest/book.html}.
-% %     \end{itemize}
-% %   \end{block}
 
-% % \end{frame}
-% % % ##################
+% ##################
+\begin{frame}
+  \frametitle{Basics learning materials}
 
 
+  Most~of them are more or~less outdated, since they were created
+  before release~of Julia 1.x.
+  \begin{itemize}
 
+  \item JuliaBoxTutorials, version 1.x, GitHub
+    \colorhref{https://github.com/JuliaComputing/JuliaBoxTutorials}
+    {JuliaComputing/JuliaBoxTutorials}.
+    Good starting point.
 
+  \item Julia 1.x Documentation. Always~up to~date, really good
+    written in~comparison to~others manuals,
+    \colorhref{https://docs.julialang.org/en/v1/}
+    {https://docs.julialang.org/en/v1/}.
 
-% % % ##################
-% % \begin{frame}
-% %   \frametitle{Learning materials}
+  \item David P.~Sanders, \textit{Introduction to~Julia
+      for~scientific Computing (Workshop)}, 2015. Outdated, but very
+    good introduction to~language,
+    \colorhref{https://www.youtube.com/watch?v=gQ1y5NUD\_RI}
+    {https://www.youtube.com/watch?v=gQ1y5NUD\_RI}.
 
+  % \item The Julia Language channel
+  %   on~\colorhref{https://www.youtube.com/user/JuliaLanguage}{YouTube}.
+  %   Contains dozens videos from JuliaCons and hold regulars
+  %   \textit{Intro to~Julia}, keeping it up to date. You~can find
+  %   next \textit{Intro to~Julia} and other introductions
+  %   on~\colorhref{https://www.facebook.com/Learn-Julia-529467964069525/?eid=ARDnSanRh6e3_6NQanjfziNeMYt3-hRUqje-5xOvRidGM5bmm6ZGCZ49fy5CZ1AYX9T503OEdMUMRlOe}{Facebook}.
 
-% %   \begin{block}{Practical introductions to many different topics}
-% %     JuliaCon is annual conference on~Julia language which start
-% %     at~2014.
-% %     \begin{itemize}
-% %     \item Stefan Karpinski and~Kristoffer Carlsson,
-% %       \emph{Pkg3:~The~new Julia package manager}, JuliaCon 2018,
-% %       \YouTube{https://www.youtube.com/watch?v=HgFmiT5p0zU}.
+  % \item Ben Lauwens, Allen Downey, \textit{Think Julia: How to~Think
+  %     Like a~Computer Scientist},
+  %   \colorhref{https://benlauwens.github.io/ThinkJulia.jl/latest/book.html}
+  %   {https://benlauwens.github.io/ThinkJulia.jl/latest/book.html}.
 
-% %     \item Arch D. Robison, \emph{Introduction to~Writing High
-% %       Performance Julia (Workshop)}, JuliaCon 2016,
-% %       \YouTube{https://www.youtube.com/watch?v=szE4txAD8mk}.
+  \end{itemize}
 
-% %     \item Andy Ferris, \emph{A~practical introduction
-% %       to~metaprogramming in~Julia}, JuliaCon 2018,
-% %       \YouTube{https://www.youtube.com/watch?v=SeqAQHKLNj4}.
+\end{frame}
+% ##################
 
-% %     \item Chris Rackauckas, \emph{Intro to solving differential
-% %       equations in Julia},
-% %       \YouTube{https://www.youtube.com/watch?v=KPEqYtEd-zY}.
 
-% %     \item DiffEqTutorials.jl. Tutorials~of JuliaDiffEq project,
-% %       GitHub
-% %       \colorhref{https://github.com/JuliaDiffEq/DiffEqTutorials.jl}{JuliaDiffEq/DiffEqTutorials.jl}.
-% %     \end{itemize}
-% %   \end{block}
 
-% % \end{frame}
-% % % ##################
 
 
+% ##################
+\begin{frame}
+  \frametitle{Basics learning materials}
 
 
+  Most~of them are more or~less outdated, since they were created
+  before release~of Julia 1.x.
+  \begin{itemize}
 
-% % % ##################
-% % \begin{frame}
-% %   \frametitle{Learning materials}
+  % \item JuliaBoxTutorials, version 1.x, GitHub
+  %   \colorhref{https://github.com/JuliaComputing/JuliaBoxTutorials}
+  %   {JuliaComputing/JuliaBoxTutorials}.
+  %   Good starting point.
 
+  % \item Julia 1.x Documentation. Always~up to~date, really good
+  %   written in~comparison to~others manuals,
+  %   \colorhref{https://docs.julialang.org/en/v1/}
+  %   {https://docs.julialang.org/en/v1/}.
 
-% %   \begin{block}{More theoretical, less practical materials}
-% %     \begin{itemize}
-% %     \item Jeff Bezanson, \emph{Why is~Julia fast?}, 2015,
-% %       \YouTube{https://www.youtube.com/watch?v=cjzcYM9YhwA}.
+  % \item David P.~Sanders, \textit{Introduction to~Julia
+  %     for~scientific Computing (Workshop)}, 2015. Outdated, but very
+  %   good introduction to~language,
+  %   \colorhref{https://www.youtube.com/watch?v=gQ1y5NUD\_RI}
+  %   {https://www.youtube.com/watch?v=gQ1y5NUD\_RI}.
 
-% %     \item Jeff Bezanson, \emph{The~State~of the~Type System},
-% %       JuliaCon 2017,
-% %       \YouTube{https://www.youtube.com/watch?v=Z2LtJUe1q8c}.
+  \item The Julia Language channel
+    on~\colorhref{https://www.youtube.com/user/JuliaLanguage}{YouTube}.
+    Contains dozens videos from JuliaCons and hold regulars
+    \textit{Intro to~Julia}, keeping it up to date. You~can find
+    next \textit{Intro to~Julia} and other introductions
+    on~\colorhref{https://www.facebook.com/Learn-Julia-529467964069525/?eid=ARDnSanRh6e3_6NQanjfziNeMYt3-hRUqje-5xOvRidGM5bmm6ZGCZ49fy5CZ1AYX9T503OEdMUMRlOe}{Facebook}.
 
-% %     \item Jiahao Chen, \emph{Why language matters: Julia
-% %       and~multiple dispatch}, 2016,
-% %       \YouTube{https://www.youtube.com/watch?v=gZJFHrYopxw}.
+  \item Ben Lauwens, Allen Downey, \textit{Think Julia: How to~Think
+      Like a~Computer Scientist},
+    \colorhref{https://benlauwens.github.io/ThinkJulia.jl/latest/book.html}
+    {https://benlauwens.github.io/ThinkJulia.jl/latest/book.html}.
 
-% %     \item Jameson Nash, \emph{AoT or~JIT: How Does Julia Work?},
-% %       (AoT --~Ahead~of Time compilation, JIT --~Just In~Time
-% %       compilation), JuliaCon 2017,
-% %       \YouTube{https://www.youtube.com/watch?v=7KGZ_9D_DbI}.
+  \end{itemize}
 
-% %     \item John Lapyre, \emph{Symbolic Mathematics in Julia},
-% %       JuliaCon 2018,
-% %       \YouTube{https://www.youtube.com/watch?v=M742_73edLA}.
+\end{frame}
+% ##################
 
-% %     \item Julia Lab at~MIT, \emph{Parallel Computing (Workshop)},
-% %       JuliaCon 2016,
-% %       \YouTube{https://www.youtube.com/watch?v=euZkvgx0fG8}.
 
-% %     \item Tim Besard, Valentin Churavy and Simon Danisch,
-% %       \emph{GPU~Programming with~Julia}, JuliaCon 2017,
-% %       \YouTube{https://www.youtube.com/watch?v=6ntJ_al4oXA}.
 
-% %     \end{itemize}
-% %   \end{block}
 
-% % \end{frame}
-% % % ##################
 
+% ##################
+\begin{frame}
+  \frametitle{Learning materials}
 
 
+  {Practical introductions to many different topics}
+  JuliaCon is annual conference on~Julia language which start
+  at~2014.
+  \begin{itemize}
 
+  \item Stefan Karpinski and~Kristoffer Carlsson,
+    \textit{Pkg3:~The~new Julia package manager}, JuliaCon 2018,
+    \colorhref{https://www.youtube.com/watch?v=HgFmiT5p0zU}
+    {https://www.youtube.com/watch?v=HgFmiT5p0zU}.
 
-% % % ##################
-% % \begin{frame}
-% %   \frametitle{Learning materials}
+  \item Arch D. Robison, \textit{Introduction to~Writing High
+      Performance Julia (Workshop)}, JuliaCon 2016,
+    \colorhref{https://www.youtube.com/watch?v=szE4txAD8mk}
+    {https://www.youtube.com/watch?v=szE4txAD8mk}.
 
+  \item Andy Ferris, \textit{A~practical introduction
+      to~metaprogramming in~Julia}, JuliaCon 2018,
+    \colorhref{https://www.youtube.com/watch?v=SeqAQHKLNj4}
+    {https://www.youtube.com/watch?v=SeqAQHKLNj4}.
 
-% %   \begin{block}{More theoretical, less practical materials}
-% %     \begin{itemize}
-% %     \item Peter Ahrens, \emph{For~Loops~2.0: Index Notation
-% %       And~The~Future~Of Tensor Compilers}, JuliaCon 2018,
-% %       \YouTube{https://www.youtube.com/watch?v=Rp7sTl9oPNI}.
+  \item Chris Rackauckas, \textit{Intro to solving differential
+      equations in Julia},
+    \colorhref{https://www.youtube.com/watch?v=KPEqYtEd-zY}
+    {https://www.youtube.com/watch?v=KPEqYtEd-zY}.
 
-% %     \item Carsten Bauer, \emph{Julia for Physics: Quantum Monte
-% %       Carlo}, JuliaCon 2018,
-% %       \YouTube{https://www.youtube.com/watch?v=BmVd7pw6Trc}.
+  \item DiffEqTutorials.jl. Tutorials~of JuliaDiffEq project,
+    GitHub
+    \colorhref{https://github.com/JuliaDiffEq/DiffEqTutorials.jl}{JuliaDiffEq/DiffEqTutorials.jl}.
 
-% %     \item George Datseris, \emph{Why Julia is the most suitable
-% %       language for science}, case study~of project JuliaDynamics,
-% %       \colorlink{https://www.youtube.com/watch?v=7y-ahkUsIrY}.
+  \end{itemize}
 
-% %     \item Nick Higham, \emph{Tricks and~Tips in~Numerical
-% %       Computing}, JuliaCon 2018,
-% %       \YouTube{https://www.youtube.com/watch?v=Q9OLOqEhc64}.
-% %     \end{itemize}
-% %   \end{block}
+\end{frame}
+% ##################
 
-% % \end{frame}
-% % % ##################
 
 
 
 
+% ##################
+\begin{frame}
+  \frametitle{Learning materials}
 
 
+  {More theoretical, less practical materials}
+  \begin{itemize}
 
+  \item Jeff Bezanson, \textit{Why is~Julia fast?}, 2015,
+    \colorhref{https://www.youtube.com/watch?v=cjzcYM9YhwA}
+    {https://www.youtube.com/watch?v=cjzcYM9YhwA}.
 
+  \item Jeff Bezanson, \textit{The~State~of the~Type System},
+    JuliaCon 2017,
+    \colorhref{https://www.youtube.com/watch?v=Z2LtJUe1q8c}
+    {https://www.youtube.com/watch?v=Z2LtJUe1q8c}.
 
+  \item Jiahao Chen, \textit{Why language matters: Julia
+      and~multiple dispatch}, 2016,
+    \colorhref{https://www.youtube.com/watch?v=gZJFHrYopxw}
+    {https://www.youtube.com/watch?v=gZJFHrYopxw}.
 
-% % % ######################################
-% % \section[]{Additional information and topics}
-% % % ######################################
+  \item Jameson Nash, \textit{AoT or~JIT: How Does Julia Work?},
+    (AoT --~Ahead~of Time compilation, JIT --~Just In~Time
+    compilation), JuliaCon 2017,
+    \colorhref{https://www.youtube.com/watch?v=7KGZ\_9D\_DbI}
+    {https://www.youtube.com/watch?v=7KGZ\_9D\_DbI}.
 
+  \item John Lapyre, \textit{Symbolic Mathematics in Julia},
+    JuliaCon 2018,
+    \colorhref{https://www.youtube.com/watch?v=M742\_73edLA}
+    {https://www.youtube.com/watch?v=M742\_73edLA}.
 
+  \item Julia Lab at~MIT, \textit{Parallel Computing (Workshop)},
+    JuliaCon 2016,
+    \colorhref{https://www.youtube.com/watch?v=euZkvgx0fG8}
+    {https://www.youtube.com/watch?v=euZkvgx0fG8}.
 
+  \item Tim Besard, Valentin Churavy and Simon Danisch,
+    \textit{GPU~Programming with~Julia}, JuliaCon 2017,
+    \colorhref{https://www.youtube.com/watch?v=6ntJ\_al4oXA}
+    {https://www.youtube.com/watch?v=6ntJ\_al4oXA}.
 
+  \end{itemize}
 
+\end{frame}
+% ##################
 
 
 
 
 
-% % ##################
-% % \begin{frame}
-% %   \frametitle{Cxx.jl (probably still broken in~1.x)}
+% ##################
+\begin{frame}
+  \frametitle{Learning materials}
 
-% %   \begin{block}{RELP for C++}
-% %     \begin{figure}
-% %       \centering
 
-% %       \includegraphics[scale=0.29]{Cxx-jl.png}
-% %       \caption{Compression~of ratio~of speed to the lines~of code.}
-% %     \end{figure}
-% %   \end{block}
+  {More theoretical, less practical materials}
+  \begin{itemize}
 
-% % \end{frame}
-% % ##################
+  \item Peter Ahrens, \emph{For~Loops~2.0: Index Notation
+      And~The~Future~Of Tensor Compilers}, JuliaCon 2018,
+    \colorhref{https://www.youtube.com/watch?v=Rp7sTl9oPNI}
+    {https://www.youtube.com/watch?v=Rp7sTl9oPNI}.
 
+  \item Carsten Bauer, \emph{Julia for Physics: Quantum Monte
+      Carlo}, JuliaCon 2018,
+    \colorhref{https://www.youtube.com/watch?v=BmVd7pw6Trc}
+    {https://www.youtube.com/watch?v=BmVd7pw6Trc}.
 
+  \item George Datseris, \emph{Why Julia is the most suitable
+      language for science}, case study~of project JuliaDynamics,
+    \colorhref{https://www.youtube.com/watch?v=7y-ahkUsIrY}
+    {https://www.youtube.com/watch?v=7y-ahkUsIrY}.
 
+  \item Nick Higham, \emph{Tricks and~Tips in~Numerical
+      Computing}, JuliaCon 2018,
+    \colorhref{https://www.youtube.com/watch?v=Q9OLOqEhc64}
+    {https://www.youtube.com/watch?v=Q9OLOqEhc64}.
 
+  \end{itemize}
 
+\end{frame}
+% ##################
 
 
 
 
-% % % ##################
-% % \begin{frame}
-% %   \frametitle{Mentioned projects and articles}
 
 
-% %   \begin{block}{Written Julia if not mentioned otherwise}
-% %     Still many~of them don't work in Julia 1.x.
-% %     \begin{itemize}
-% %     \item[--] Channelflow (written in~C++),
-% %       \colorhref{http://channelflow.org/}{http://channelflow.org/}.
-% %     \item[--] DynamicalSystems.jl, GitHub
-% %       \colorhref{https://github.com/JuliaDynamics/DynamicalSystems.jl}{JuliaDynamics/DynamicalSystems.jl}.
-% %     \item[--] QuantumOptics.jl. Numerical framework for numerical
-% %       solving open quantum systems, more on this page
-% %       \colorhref{https://qojulia.org/}{https://qojulia.org/}.
-% %     \item[--] REPL (shell) for C++ (broken in Julia 1.x), GitHub
-% %       \colorhref{https://github.com/NHDaly/PaddleBattleJL}{Keno/Cxx.jl}.
-% %     \item[--] Game and educational tool \emph{Paddle Battle}, GitHub
-% %       \colorhref{https://github.com/NHDaly/PaddleBattleJL}{NHDaly/PaddleBattleJL}.
-% %     \end{itemize}
-% %   \end{block}
 
-% % \end{frame}
-% % % ##################
+
+
+
+% ######################################
+\section[]{Additional information and topics}
+% ######################################
+
+
+
+% ##################
+\begin{frame}
+  \frametitle{Cxx.jl (probably still broken in~1.x)}
+
+
+  \begin{figure}
+
+    \centering
+
+    \includegraphics[scale=0.29]{./PresentationPictures/Cxx_jl.png}
+
+
+    \caption{RELP for C++}
+
+  \end{figure}
+
+\end{frame}
+% ##################
+
+
+
+
+
+% ##################
+\begin{frame}
+  \frametitle{Mentioned projects and articles}
+
+
+  {Written Julia if not mentioned otherwise}
+  Still many~of them don't work in Julia 1.x.
+  \begin{itemize}
+
+  \item \textit{Channelflow} (written in~C++),
+    \colorhref{http://channelflow.org/}{http://channelflow.org/}.
+
+  \item DynamicalSystems.jl, GitHub
+    \colorhref{https://github.com/JuliaDynamics/DynamicalSystems.jl}
+    {JuliaDynamics/DynamicalSystems.jl}.
+
+  \item QuantumOptics.jl. Numerical framework for numerical
+    solving open quantum systems, more on this page
+    \colorhref{https://qojulia.org/}{https://qojulia.org/}.
+
+  \item REPL (shell) for C++ (broken in Julia 1.x), GitHub
+    \colorhref{https://github.com/NHDaly/PaddleBattleJL}{Keno/Cxx.jl}.
+
+  \item Game and educational tool, \textit{Paddle Battle}, GitHub
+    \colorhref{https://github.com/NHDaly/PaddleBattleJL}
+    {NHDaly/PaddleBattleJL}.
+
+  \end{itemize}
+
+\end{frame}
+% ##################
 
 
 
