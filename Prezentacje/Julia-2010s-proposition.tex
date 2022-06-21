@@ -149,7 +149,7 @@
   \item Today one~of main center~of development~of the~language
     is~Julia Lab at~MIT, with Alan Edelman as it current head.
 
-  \item They co-founded Julia Computing \emph{to develop products that
+  \item They co-founded Julia Computing \textit{to develop products that
       make Julia easy to~use, easy to~deploy and easy to~scale}.
 
   \end{itemize}
@@ -316,1010 +316,1070 @@
 
 
 
-% % ##################
-% \begin{frame}
-%   \frametitle{Why use Julia?}
+% ##################
+\begin{frame}
+  \frametitle{Why use Julia?}
 
 
-%   \begin{itemize}
-%   \item Allows high productivity~of writing code (compilers can make
-%     more for~us, than in the 1990s).
+  \begin{itemize}
 
-%   \item Give you good opportunity to write readable code (Python
-%     or~MATLAB like).
+  \item Allows high productivity~of writing code (compilers can make
+    more for~us, than in the 1990s).
 
-%   \item After you write your code, in \alert{most cases} you can
-%     optimize it~to, achieve 35\%--~105\% speed~of FORTRAN, C or~C++.
+  \item Give you good opportunity to write readable code (Python
+    or~MATLAB like).
 
-%   \item Most~of the~time it allows a~seamless incorporation~of code
-%     written in~FORTRAN, C, C++, Python,~R and~Java code.
+  \item After you write your code, in \alert{most cases} you can
+    optimize it~to, achieve 35\%--~105\% speed~of FORTRAN, C or~C++.
 
-%   \item Julia code is very reusable, even in strange situations.
-%     And~in many situation work just as~you want.
+  \item Most~of the~time it allows a~seamless incorporation~of code
+    written in~FORTRAN, C, C++, Python,~R and~Java code.
 
-%   \item You can write code closely to~Python way with~REPL (shell like
-%     thing) and~``scripting'' or~in~browser (I~will \alert{show} this
-%     in the~minute).
+  \item Julia code is very reusable, even in strange situations.
+    And~in many situation work just as~you want.
 
-%   % \item Most languages we used are really old. They were created
-%   %   in~1990s, 1980s, 1970s, 1960s and~1950s. They were designed for
-%   %   very, very different computers, environments, to solve different
-%   %   problems and~at~different stage~of computer science development.
+  \item You can write code closely to~Python way with~REPL (shell like
+    thing) and~``scripting'' or~in~browser (I~will \alert{show} this
+    in the~minute).
 
-%   \end{itemize}
+  % \item Most languages we used are really old. They were created
+  %   in~1990s, 1980s, 1970s, 1960s and~1950s. They were designed for
+  %   very, very different computers, environments, to solve different
+  %   problems and~at~different stage~of computer science development.
 
-% \end{frame}
-% % ##################
+  \end{itemize}
 
+\end{frame}
+% ##################
 
 
 
 
-% % ##################
-% \begin{frame}
-%   \frametitle{Why use Julia?}
 
+% ##################
+\begin{frame}
+  \frametitle{Why use Julia?}
 
-%   \begin{itemize}
-%   % \item Julia code is very reusable, even in strange situations.
-%   %   And~in many situation work just as~you want.
 
-%   % \item You can write code closely to~Python way with~REPL (shell like
-%   %   thing) and~``scripting'' or~in~browser (I~will \alert{show} this
-%   %   in the~minute).
+  \begin{itemize}
 
-%   % \item If there is a~small mistake in~MATLAB, you probably must learn
-%   %   to live with that and walk around it. In Julia you can correct it
-%   %   yourself on GitHub.
+  \item Julia code is very reusable, even in strange situations.
+    And~in many situation work just as~you want.
 
-%   \item \emph{Is~Julia the~next big programming language? MIT thinks
-%       so, as~version~1.0 lands}, see~full TechRepublic article from 2018
-%     \colorhref{https://www.techrepublic.com/article/is-julia-the-next-big-programming-language-mit-thinks-so-as-version-1-0-lands/}{here}. \\
-%     Updating \emph{Pan Tadeusz}: What American invent, Pole will like.
+  \item You can write code closely to~Python way with~REPL (shell like
+    thing) and~``scripting'' or~in~browser (I~will \alert{show} this
+    in the~minute).
 
-%     %   \item In Poland we often talking about modernization, so~this is
-%     % good thing to watch what happened at~world level.
+  \item If there is a~small mistake in~MATLAB, you probably must learn
+    to live with that and walk around it. In Julia you can correct it
+    yourself on GitHub.
 
-%   \item Community is~very welcoming and~helpful.
+  \item \textit{Is~Julia the~next big programming language? MIT thinks
+      so, as~version~1.0 lands}, see~full TechRepublic article from 2018
+    \colorhref{https://www.techrepublic.com/article/is-julia-the-next-big-programming-language-mit-thinks-so-as-version-1-0-lands/}{here}. \\
+    Updating \textit{Pan Tadeusz}: What American invent, Pole will like.
 
-%   \item Very easy to use package manager.
+    % \item In Poland we often talking about modernization, so~this is
+    %   good thing to watch what happened at~world level.
 
-%   \item Few more.
+  \item Community is~very welcoming and~helpful.
 
-%   \end{itemize}
+  \item Very easy to use package manager.
 
-% \end{frame}
-% % ##################
+  \item Few more.
 
+  \end{itemize}
 
+\end{frame}
+% ##################
 
 
 
-% % ##################
-% \begin{frame}
-%   \frametitle{There are lies, big lies and benchmarks}
 
-%   \vspace{-1em}
 
+% ##################
+\begin{frame}
+  \frametitle{There are lies, big lies and benchmarks}
 
-%   \begin{figure}
-%     \centering
+  \vspace{-1em}
 
-%     \includegraphics[scale=0.29]
-%     {./SeminarPictures/JuliaMicroBenchmarks.png}
 
-%     \caption{\textbf{Warning!} Python code use numpy libraries that
-%       is~written 52.8\% in C (state of GitHub repository at~4
-%       January~2019).}
-%   \end{figure}
+  \begin{figure}
 
-% \end{frame}
-% % ##################
+    \centering
 
+    \includegraphics[scale=0.29]
+    {./PresentationPictures/JuliaMicroBenchmarks.png}
 
 
+    \caption{\textbf{Warning!} Python code use numpy libraries that
+      is~written 52.8\% in C (state of GitHub repository at~4
+      January~2019)}
 
+  \end{figure}
 
+\end{frame}
+% ##################
 
 
 
 
-% % % ##################
-% % \begin{frame}
-% %   \frametitle{Why use Julia?}
 
 
-% %   \begin{itemize}
-% %   \item In Poland we often talking about modernization, so~this is
-% %     good thing to watch what happened at~world level.
 
-% %   % \item New style of programming == new opportunities. You~can to some
-% %   %   extant write domain specific language.
 
-% %   % \item Community is~very welcoming and~helpful.
 
-% %   \item Few more.
+% ##################
+\begin{frame}
+  \frametitle{Why use Julia?}
 
-% %   \end{itemize}
 
-% % \end{frame}
-% % % ##################
+  \begin{itemize}
 
+  \item In Poland we often talking about modernization, so~this is
+    good thing to watch what happened at~world level.
 
+  % \item New style of programming == new opportunities. You~can to some
+  %   extant write domain specific language.
 
+  % \item Community is~very welcoming and~helpful.
 
+  \item Few more.
 
-% % ##################
-% \begin{frame}
-%   \frametitle{Bad code is~\alert{slow}, good code is~\alert{mostly}
-%     fast}
+  \end{itemize}
 
+\end{frame}
+% ##################
 
-%   I can't stress this point enough. Difference in~speed~of good
-%   and~bad Julia code can be~in~\alert{orders~of magnitude}. And~you
-%   \alert{must} learn Julia way of writing good code.
 
-%   So~while you testing how fast is~Julia, make sure that you check
-%   tips for~high performance.
 
-%   I will give example of good and bad code in the next part of the
-%   talk.
 
-% \end{frame}
-% % ##################
 
+% ##################
+\begin{frame}
+  \frametitle{Bad code is~\alert{slow}, good code is~\alert{mostly}
+    fast}
 
 
+  I can't stress this point enough. Difference in~speed~of good
+  and~bad Julia code can be~in~\alert{orders~of magnitude}. And~you
+  \alert{must} learn Julia way of writing good code.
 
+  So~while you testing how fast is~Julia, make sure that you check
+  tips for~high performance.
 
-% % ##################
-% \begin{frame}
-%   \frametitle{What make Julia code good?}
+  I will give example of good and bad code in the next part of the
+  talk.
 
+\end{frame}
+% ##################
 
-%   \begin{itemize}
-%   \item Write ``\alert{type-stable}'' functions.
 
-%   \item Avoid global variables. There are exception to this.
 
-%   \item Avoid changing the type of a variable.
 
-%   \item Avoid containers with abstract type parameters.
 
-%   \item Avoid fields with abstract type.
+% ##################
+\begin{frame}
+  \frametitle{What make Julia code good?}
 
-%   \item Access arrays in memory order, along columns.
 
-%   \item More dots: Fuse vectorized operations.
+  \begin{itemize}
 
-%   \item \ldots
-%   \end{itemize}
+  \item Write ``\alert{type-stable}'' functions.
 
-%   More on \colorhref{https://docs.julialang.org/en/v1.2/manual/performance-tips/}{Julia Documentation: Performance Tips}.
+  \item Avoid global variables. There are exception to this.
 
-% \end{frame}
-% % ##################
+  \item Avoid changing the type of a variable.
 
+  \item Avoid containers with abstract type parameters.
 
+  \item Avoid fields with abstract type.
 
+  \item Access arrays in memory order, along columns.
 
+  \item More dots: Fuse vectorized operations.
 
-% % ##################
-% \begin{frame}
-%   \frametitle{Who use Julia?}
+  \item \ldots
 
+  \end{itemize}
 
-%   \begin{figure}
-%     \includegraphics[scale=0.27]
-%     {./SeminarPictures/BigPlayersUsingJulia.png}
 
-%     \caption{From \colorhref{https://juliacomputing.com/}{Julia
-%         Computing} page.}
-%   \end{figure}
+  More on
+  \colorhref{https://docs.julialang.org/en/v1.2/manual/performance-tips/}
+  {Julia Documentation: Performance Tips}.
 
+\end{frame}
+% ##################
 
-%   % List of institutions, to give some scope
 
-%   % MIT Robot Locomotion Group, USA Federal Aviation Administration,
-%   % Federal Reserve Bank of New York, The Brazilian National
-%   % Institute for~Space Research, AOT Energy (energy trading), PSR
-%   % (global electricity and~natural gas consulting, analytic
-%   % and~technology firm), University of Auckland Electric Power
-%   % Optimization Centre (The Milk Output Optimizer), Voxel8 (3D
-%   % printing), University of Copenhagen, Peking University and
-%   % Imperial College London collaboration on \emph{An~Anthropocene
-%   % Map~of Genetic Diversity} (Science, vol 343, issue 6307, pp.
-%   % 1532-1535), Path BioAnalytics (medicine).
 
-%   % See for more cases and details here
-%   % \colorlink{https://juliacomputing.com/case-studies/} and here
-%   % \colorlink{https://www.forbes.com/sites/suparnadutt/2017/09/20/this-startup-created-a-new-programming-language-now-used-by-the-worlds-biggest-companies/\#7f322c907de2}.
 
-% \end{frame}
-% % ##################
 
+% ##################
+\begin{frame}
+  \frametitle{Who use Julia?}
 
 
+  \begin{figure}
 
+    \centering
 
-% % ##################
-% \begin{frame}
-%   \frametitle{Celeste.jl}
+    \includegraphics[scale=0.27]
+    {./PresentationPictures/BigPlayersUsingJulia.png}
 
 
-%   Project written at~National Energy Research Scientific Computing
-%   Center (NERSC) at Lawrence Berkeley National Laboratory (Berkeley
-%   Lab). Aim: analyzing data from 35\% of visible sky gathered by~Sloan
-%   Digital Sky Survey.
+    \caption{From \colorhref{https://juliacomputing.com/}{Julia
+        Computing} page.}
 
-%   Peak performance of 1.54 petaflops ($10^{ 15 }$ flops) using 1.3
-%   million threads on 9,300 Knights Landing nodes~of the Cori
-%   supercomputer at~NERSC. They say that only assembler, C, C++ and
-%   FORTRAN achieved previously over 1~petaflops performance.
+  \end{figure}
 
-%   Loaded approximately 178 terabytes of image data and give
-%   parameters estimates for 188 millions stars and galaxies \\
-%   in~14.6 minutes.
 
-% \end{frame}
-% % ##################
+  List of institutions, to give some scope
 
+  MIT Robot Locomotion Group, USA Federal Aviation Administration,
+  Federal Reserve Bank of New York, The Brazilian National
+  Institute for~Space Research, AOT Energy (energy trading), PSR
+  (global electricity and~natural gas consulting, analytic
+  and~technology firm), University of Auckland Electric Power
+  Optimization Centre (The Milk Output Optimizer), Voxel8 (3D
+  printing), University of Copenhagen, Peking University and
+  Imperial College London collaboration on \textit{An~Anthropocene
+  Map~of Genetic Diversity} (Science, vol 343, issue 6307, pp.
+  1532-1535), Path BioAnalytics (medicine).
 
+  See for more cases and details here
+  \colorhref{https://juliacomputing.com/case-studies/}
+  {https://juliacomputing.com/case-studies/} and here
+  \colorhref{https://www.forbes.com/sites/suparnadutt/2017/09/20/this-startup-created-a-new-programming-language-now-used-by-the-worlds-biggest-companies/\#7f322c907de2}
+  {https://www.forbes.com/sites/suparnadutt/2017/09/20/this-startup-created-a-new-programming-language-now-used-by-the-worlds-biggest-companies/\#7f322c907de2}.
 
+\end{frame}
+% ##################
 
 
-% % ##################
-% \begin{frame}
-%   \frametitle{Celeste.jl}
 
 
-%   It is worth noting that this computation was performed before 2018,
-%   so~it used 0.x version of the language (probably 0.4 or~0.5), which
-%   had unstable syntax.
 
-%   For more information see~article: \\
-%   Jeffrey Regier, et~al.,
-%   \emph{Cataloging the~Visible Universe through Bayesian Inference
-%     at~Petascale},
-%   \arXiv{https://arxiv.org/abs/1801.10277}{1801.10277 [cs.DC]}.
+% ##################
+\begin{frame}
+  \frametitle{Celeste.jl}
 
-%   Celeste.jl GitHub repositor
-%   \colorhref{https://github.com/jeff-regier/Celeste.jl}{https://github.com/jeff-regier/Celeste.jl}.
 
-% \end{frame}
-% % ##################
+  Project written at~National Energy Research Scientific Computing
+  Center (NERSC) at Lawrence Berkeley National Laboratory (Berkeley
+  Lab). Aim: analyzing data from 35\% of visible sky gathered by~Sloan
+  Digital Sky Survey.
 
+  Peak performance of 1.54 petaflops ($10^{ 15 }$ flops) using 1.3
+  million threads on 9,300 Knights Landing nodes~of the Cori
+  supercomputer at~NERSC. They say that only assembler, C, C++ and
+  FORTRAN achieved previously over 1~petaflops performance.
 
+  Loaded approximately 178 terabytes of image data and give
+  parameters estimates for 188 millions stars and galaxies \\
+  in~14.6 minutes.
 
+\end{frame}
+% ##################
 
 
-% % % ##################
-% % \begin{frame}
-% %   \frametitle{Gamedev in Julia is almost not existing}
 
 
-% %   \begin{figure}
-% %     \centering
 
-% %     \includegraphics[scale=0.17]{./SeminarPictures/PaddleBattle.png}
-% %   \end{figure}
+% ##################
+\begin{frame}
+  \frametitle{Celeste.jl}
 
-% %   Nathan Daly write simple pong game using 96.6\% Julia and 3.5\%
-% %   Shell code and SDL2 library (Simple DirectMedia Layer) to~show that
-% %   if~you want, you~can do it quite easily. After that he put it on~Mac
-% %   App Store with. Code of game is available
-% %   \colorhref{https://github.com/NHDaly/PaddleBattleJL}{here}.
 
-% % \end{frame}
-% % % ##################
+  It is worth noting that this computation was performed before 2018,
+  so~it used 0.x version of the language (probably 0.4 or~0.5), which
+  had unstable syntax.
 
+  For more information see~article: \\
+  Jeffrey Regier, et~al.,
+  \textit{Cataloging the~Visible Universe through Bayesian Inference
+    at~Petascale},
+  \colorhref{https://arxiv.org/abs/1801.10277}{arXiv: 1801.10277 [cs.DC]}.
 
+  Celeste.jl GitHub repositor
+  \colorhref{https://github.com/jeff-regier/Celeste.jl}
+  {https://github.com/jeff-regier/Celeste.jl}.
 
+\end{frame}
+% ##################
 
 
 
 
 
+% ##################
+\begin{frame}
+  \frametitle{Gamedev in Julia is almost not existing}
 
 
-% % ######################################
-% \section{Live coding in Julia}
+  \begin{figure}
 
-% \addtocounter{framenumber}{1}
-% % ######################################
+    \centering
 
+    \includegraphics[scale=0.17]{./PresentationPictures/PaddleBattle.png}
 
+  \end{figure}
 
 
+  Nathan Daly write simple pong game using 96.6\% Julia and 3.5\%
+  Shell code and SDL2 library (Simple DirectMedia Layer) to~show that
+  if~you want, you~can do it quite easily. After that he put it on~Mac
+  App Store with. Code of game is available
+  \colorhref{https://github.com/NHDaly/PaddleBattleJL}{here}.
 
+\end{frame}
+% ##################
 
 
 
 
 
-% % ######################################
-% \section{Lies, big lies and~PDE benchmarks}
 
-% \addtocounter{framenumber}{1}
-% % ######################################
 
 
 
-% % ##################
-% \begin{frame}
-%   \frametitle{Solving Kuramoto-Sivashinsky PDE
-%     in~$\beamermathcolorwhite{1 + 1}$ dimensions}
 
+% ######################################
+\section{Live coding in Julia}
+% ######################################
 
-%   Following benchmarks were crated by~John F.~Gibson, Dept.
-%   Mathematics and~Statistics, University~of New Hampshire, main
-%   author~of \textbf{Channelflow}: \emph{a~set of high-level software
-%     tools and~libraries for research in~turbulence in~channel
-%     geometries} written in~C++, \colorlink{http://channelflow.org/}.
-%   Full list~of people that contribute to~benchmarks is
-%   \colorhref{https://github.com/johnfgibson/julia-pde-benchmark/blob/master/1-Kuramoto-Sivashinksy-benchmark.ipynb}{here}.
 
-%   They were created in November 2019 using Julia 1.2.
 
-% \end{frame}
-% % ##################
 
 
 
 
 
-% % ##################
-% \begin{frame}
-%   \frametitle{Solving Kuramoto-Sivashinsky PDE
-%     in~$\beamermathcolorwhite{1 + 1}$ dimensions}
 
 
-%   Kuramoto-Sivashinsky equation is nonlinear (more precisely:
-%   semilinear) partial differential equation, which in $1 + 1$
-%   dimension takes form
+% ######################################
+\section{Lies, big lies and~PDE benchmarks}
+% ######################################
 
-%   \begin{equation}
-%     \label{eq:Julia-Proposition-01}
-%     \pd{ }{ u( t, x ) }{ t } + \pd{ 4 }{ u( t, x ) }{ x }
-%     + \pd{ 2 }{ u( t, x ) }{ x } + u( t, x ) \pd{ }{ u( t, x ) }{ x }
-%     = 0.
-%   \end{equation}
 
-%   Full $1 + 3$ dimensional version~of this equation was proposed
-%   to~\emph{model the~diffusion instabilities in~a~laminar flame
-%     front}
-%   (from
-%   \colorhref{https://en.wikipedia.org/wiki/Kuramoto\%E2\%80\%93Sivashinsky_equation}{Wikipedia}).
 
-% \end{frame}
-% % ##################
+% ##################
+\begin{frame}
+  \frametitle{Solving Kuramoto-Sivashinsky PDE
+    in~$\MathTextFrametitleFGColor{1 + 1}$ dimensions}
 
 
+  Following benchmarks were crated by~John F.~Gibson, Dept.
+  Mathematics and~Statistics, University~of New Hampshire, main
+  author~of \textbf{Channelflow}: \textit{a~set of high-level software
+    tools and~libraries for research in~turbulence in~channel
+    geometries} written in~C++, \colorhref{http://channelflow.org/}.
+  Full list~of people that contribute to~benchmarks is
+  \colorhref{https://github.com/johnfgibson/julia-pde-benchmark/blob/master/1-Kuramoto-Sivashinksy-benchmark.ipynb}{here}.
 
+  They were created in November 2019 using Julia 1.2.
 
+\end{frame}
+% ##################
 
 
 
 
 
+% ##################
+\begin{frame}
+  \frametitle{Solving Kuramoto-Sivashinsky PDE
+    in~$\MathTextFrametitleFGColor{1 + 1}$ dimensions}
 
 
+  Kuramoto-Sivashinsky equation is nonlinear (more precisely:
+  semilinear) partial differential equation, which in $1 + 1$
+  dimension takes form
 
+  \begin{equation}
+    \label{eq:Julia-Proposition-01}
+    \frac{ \partial u( t, x ) }{ \partial t }
+    + \frac{ \partial^{ 4 } u( t, x ) }{ \partial x^{ 4 } }
+    + \frac{ \partial^{ 2 } u( t, x ) }{ \partial x^{ 2 } }
+    + u( t, x ) \frac{ \partial u( t, x ) }{ \partial x }
+    = 0.
+  \end{equation}
 
 
+  Full $1 + 3$ dimensional version~of this equation was proposed
+  to~\textit{model the~diffusion instabilities in~a~laminar flame
+    front}
+  (from
+  \colorhref{https://en.wikipedia.org/wiki/Kuramoto\%E2\%80\%93Sivashinsky_equation}{Wikipedia}).
 
+\end{frame}
+% ##################
 
 
 
-% % ##################
-% \begin{frame}
-%   \frametitle{Solving Kuramoto-Sivashinsky PDE
-%     in~$\beamermathcolorwhite{1 + 1}$ dimensions}
 
 
-%   \emph{The KS-CNAB2 benchmark algorithm is~a~simple numerical
-%     integration scheme for~the~KS [Kuramoto-Sivashinsky] equation that
-%     uses Fourier expansion in~space [All codes call this same Fourier
-%     Transform external library.], collocation calculation~of
-%     the~nonlinear term $u( t, x ) u_{ x }( t, x )$,
-%     and~finite-differencing in~time, specifically 2nd-order
-%     Crank-Nicolson Adams-Bashforth (CNAB2) timestepping.}
+% ##################
+\begin{frame}
+  \frametitle{Solving Kuramoto-Sivashinsky PDE
+    in~$\MathTextFrametitleFGColor{1 + 1}$ dimensions}
 
-%   \flushright{John F. Gibson}
 
-% \end{frame}
-% % ##################
+  \textit{The KS-CNAB2 benchmark algorithm is~a~simple numerical
+    integration scheme for~the~KS [Kuramoto-Sivashinsky] equation that
+    uses Fourier expansion in~space [All codes call this same Fourier
+    Transform external library.], collocation calculation~of
+    the~nonlinear term $u( t, x ) u_{ x }( t, x )$,
+    and~finite-differencing in~time, specifically 2nd-order
+    Crank-Nicolson Adams-Bashforth (CNAB2) timestepping.}
 
+  \flushright{John F. Gibson}
 
+\end{frame}
+% ##################
 
 
 
-% % ##################
-% \begin{frame}
-%   \frametitle{Solving Kuramoto-Sivashinsky PDE
-%     in~$\beamermathcolorwhite{1 + 1}$ dimensions}
 
 
-%   \begin{figure}
-%     \centering
+% ##################
+\begin{frame}
+  \frametitle{Solving Kuramoto-Sivashinsky PDE
+    in~$\MathTextFrametitleFGColor{1 + 1}$ dimensions}
 
-%     \includegraphics[scale=0.22]{./SeminarPictures/KSResult.png}
 
-%     \caption{Kuramoto-Sivashinsky heat evolution in~1~dimension.}
-%   \end{figure}
+  \begin{figure}
 
-% \end{frame}
-% % ##################
+    \centering
 
+    \includegraphics[scale=0.22]{./PresentationPictures/KSResult.png}
 
 
+    \caption{Kuramoto-Sivashinsky heat evolution in~1~dimension}
 
+  \end{figure}
 
-% % ##################
-% \begin{frame}
-%   \frametitle{Chart with linear scale}
+\end{frame}
+% ##################
 
 
-%   \begin{figure}
-%     \centering
 
-%     \includegraphics[scale=0.22]{./SeminarPictures/JFGLinearScale.png}
 
-%     \caption{Results for $N_{ x }$ points on $x$ axis, CPU time in
-%       seconds.}
-%   \end{figure}
 
+% ##################
+\begin{frame}
+  \frametitle{Chart with linear scale}
 
-% \end{frame}
-% % ##################
 
+  \begin{figure}
 
+    \centering
 
+    \includegraphics[scale=0.22]{./PresentationPictures/JFGLinearScale.png}
 
 
-% % ##################
-% \begin{frame}
-%   \frametitle{Chart with logarithmic scale}
+    \caption{Results for $N_{ x }$ points on $x$ axis, CPU time in
+      seconds}
 
+  \end{figure}
 
-%   \begin{figure}
-%     \centering
 
-%     \includegraphics[scale=0.22]{./SeminarPictures/JFGLogarithmScale.png}
+\end{frame}
+% ##################
 
-%     \caption{Results for $N_{ x }$ points on $x$ axis, CPU time in
-%       seconds.}
-%   \end{figure}
 
-% \end{frame}
-% % ##################
 
 
 
+% ##################
+\begin{frame}
+  \frametitle{Chart with logarithmic scale}
 
 
-% % ##################
-% \begin{frame}
-%   \frametitle{Time for maximal
-%     $\beamermathcolorwhite{N_{ x } = 2^{ 17 } = 131072}$ used
-%     in~computation}
+  \begin{figure}
 
+    \centering
 
-%   \begin{table}
-%     \centering
+    \includegraphics[scale=0.22]
+    {./PresentationPictures/JFGLogarithmScale.png}
 
-%     \begin{tabular}{|l|r|r|}
-%       \hline
-%       Language & CPU time [s] & Ratio to~C \\
-%       \hline
-%       Fortran & 13.0 & 0.90 \\
-%       \hline
-%       C++ & 14.4 & 0.99 \\
-%       \hline
-%       C & 14.6 & 1.00 \\
-%       \hline
-%       Julia unrolled & 15.2 & 1.04 \\
-%       \hline
-%       Julia in-place & 15.5 & 1.06 \\
-%       \hline
-%       Julia naive & 25.9 & 1.77 \\
-%       \hline
-%       MATLAB & 26.8 & 1.83 \\
-%       \hline
-%       Python & 35.7 & 2.45 \\
-%       \hline
-%     \end{tabular}
 
-%     \caption{From the~fastest to~the~slowest code.}
-%   \end{table}
+    \caption{Results for $N_{ x }$ points on $x$ axis, CPU time in
+      seconds}
 
-% \end{frame}
-% % ##################
+  \end{figure}
 
+\end{frame}
+% ##################
 
 
 
 
-% % ##################
-% \begin{frame}
-%   \frametitle{Time over~line~of code}
 
+% ##################
+\begin{frame}
+  \frametitle{Time for maximal
+    $\MathTextFrametitleFGColor{N_{ x } = 2^{ 17 } = 131072}$ used
+    in~computation}
 
-%   \begin{figure}
-%     \centering
 
-%     \includegraphics[scale=0.22]{./SeminarPictures/JFGTimeOverCode.png}
+  \begin{table}
 
-%     \caption{Compression~of time and~lines~of code.}
-%   \end{figure}
+    \centering
 
-% \end{frame}
-% % ##################
+    \begin{tabular}{|l|r|r|}
+      \hline
+      Language & CPU time [s] & Ratio to~C \\
+      \hline
+      Fortran & 13.0 & 0.90 \\
+      \hline
+      C++ & 14.4 & 0.99 \\
+      \hline
+      C & 14.6 & 1.00 \\
+      \hline
+      Julia unrolled & 15.2 & 1.04 \\
+      \hline
+      Julia in-place & 15.5 & 1.06 \\
+      \hline
+      Julia naive & 25.9 & 1.77 \\
+      \hline
+      MATLAB & 26.8 & 1.83 \\
+      \hline
+      Python & 35.7 & 2.45 \\
+      \hline
+    \end{tabular}
 
+    \caption{From the~fastest to~the~slowest code}
 
+  \end{table}
 
+\end{frame}
+% ##################
 
 
-% % ##################
-% \begin{frame}
-%   \frametitle{Speed/lines~of code}
 
 
-%   \begin{figure}
-%     \centering
 
-%     \includegraphics[scale=0.22]{./SeminarPictures/JFGSpeedOverCode.png}
+% ##################
+\begin{frame}
+  \frametitle{Time over~line~of code}
 
-%     \caption{Compression~of ratio~of speed to the lines~of code.}
-%   \end{figure}
 
-% \end{frame}
-% % ##################
+  \begin{figure}
 
+    \centering
 
+    \includegraphics[scale=0.22]{./PresentationPictures/JFGTimeOverCode.png}
 
 
+    \caption{Compression~of time and~lines~of code}
 
+  \end{figure}
 
+\end{frame}
+% ##################
 
 
 
 
-% % ######################################
-% \section{Live coding with JuliaDiffEq}
 
-% \addtocounter{framenumber}{1}
-% % ######################################
+% ##################
+\begin{frame}
+  \frametitle{Speed/lines~of code}
 
 
+  \begin{figure}
 
+    \centering
 
+    \includegraphics[scale=0.22]
+    {./PresentationPictures/JFGSpeedOverCode.png}
 
 
+    \caption{Compression~of ratio~of speed to the lines~of code}
 
+  \end{figure}
 
+\end{frame}
+% ##################
 
 
-% % ######################################
-% \section{Closing remarks}
 
-% \addtocounter{framenumber}{1}
-% % ######################################
 
 
 
-% % ##################
-% \begin{frame}
-%   \frametitle{Is someone doing\ldots}
 
 
-%   \begin{itemize}
-%   \item machine learning:
-%     \colorhref{https://github.com/FluxML/Flux.jl}{Flux.jl};
 
-%   \item deep learning:
-%     \colorhref{https://github.com/denizyuret/Knet.jl}{Knet.jl};
 
-%     \item dynamical systems: \colorhref{https://github.com/JuliaDynamics/DynamicalSystems.jl}{DynamicalSystems.jl};
+% ######################################
+\section{Live coding with JuliaDiffEq}
+% ######################################
 
-%   \item optimization:
-%     \colorhref{https://github.com/JuliaOpt/JuMP.jl}{JuMP.jl};
 
-%   \item quantum algorithm design:
-%     \colorhref{https://github.com/QuantumBFS/Yao.jl}{Yoa.jl};
 
-%   \item quantum information:
-%     \colorhref{https://github.com/iitis/QuantumInformation.jl}{QuantumInformation.jl};
 
-%   \item biology: \colorhref{https://github.com/BioJulia}{BioJulia };
 
-%     \item milk output optimization: \colorhref{https://github.com/odow/MOO}{MOO: the Milk Output Optimizer}.
-%   \end{itemize}
 
-%   Basically, google what you are interested and check if you find some project.
 
-% \end{frame}
-% % ##################
 
 
 
+% ######################################
+\section{Closing remarks}
+% ######################################
 
 
-% % ##################
-% \begin{frame}
-%   \frametitle{Reflections}
 
+% ##################
+\begin{frame}
+  \frametitle{Is someone doing\ldots}
 
-%   \emph{Julia is still not great when you want import some libraries
-%     and use them. It~is great when you must write new library.}
 
-%   \flushright{Dr Chris Rackauckas, Applied Mathematics Instructor
-%     at~MIT. \\ From~Julia Discourse.}
+  \begin{itemize}
+  \item machine learning:
+    \colorhref{https://github.com/FluxML/Flux.jl}{Flux.jl};
 
+  \item deep learning:
+    \colorhref{https://github.com/denizyuret/Knet.jl}{Knet.jl};
 
-%   \flushleft{\textbf{My reflections}}
+    \item dynamical systems: \colorhref{https://github.com/JuliaDynamics/DynamicalSystems.jl}{DynamicalSystems.jl};
 
-%   \begin{itemize}
-%   \item Julia proved that it~can be~used to~make serious scientific
-%     work in~various fields, including numerical computations relevant
-%     to~field theory.
+  \item optimization:
+    \colorhref{https://github.com/JuliaOpt/JuMP.jl}{JuMP.jl};
 
-%   \item Pedagogical perspective. Learning and~using it~is comparable
-%     to~Python (in my~opinion), which is~starting language for computer
-%     scientists on~MIT and~at~the same time is~more deep as~computer
-%     language and~have more computational power.
+  \item quantum algorithm design:
+    \colorhref{https://github.com/QuantumBFS/Yao.jl}{Yoa.jl};
 
-%   \item Have potential to~make money outside academic world.
-%   \end{itemize}
+  \item quantum information:
+    \colorhref{https://github.com/iitis/QuantumInformation.jl}{QuantumInformation.jl};
 
-% \end{frame}
-% % ##################
+  \item biology: \colorhref{https://github.com/BioJulia}{BioJulia};
 
+    \item milk output optimization: \colorhref{https://github.com/odow/MOO}{MOO: the Milk Output Optimizer}.
+  \end{itemize}
 
+  Basically, google what you are interested and check if you find some
+  project.
 
+\end{frame}
+% ##################
 
 
-% % ##################
-% \begin{frame}
-%   \frametitle{Remember}
 
-%   \alert{If you use it in your research} creators of it ask you for
-%   citing paper \textbf{Julia: A~Fresh Approach to Numerical
-%     Computing}, Jeff Bezanson, Alan Edelman, Stefan Karpinski
-%   and~Viral B.~Shah~(2017) SIAM Review, 59:~65--98 and to add your
-%   paper to the list
-%   \colorhref{https://julialang.org/publications/}{https://julialang.org/publications/}.
 
-%   \vspace{1em}
 
+% ##################
+\begin{frame}
+  \frametitle{Reflections}
 
 
-%   \textbf{I want to thank these people for help and discusions}
-%   \begin{itemize}
-%   \item Tamas Papp;
+  \textit{Julia is still not great when you want import some libraries
+    and use them. It~is great when you must write new library.}
 
-%   \item John F. Gibson;
+  \flushright{Dr Chris Rackauckas, Applied Mathematics Instructor
+    at~MIT \\
+    From~Julia Discourse}
 
-%   \item Yakir Luc Gagnon;
 
-%   \item Antoine Levitt;
+  \flushleft{\textbf{My reflections}}
 
-%   \item Krzysztof Musiał.
-%   \end{itemize}
+  \begin{itemize}
 
-%   With most of them I converse on Julia Discourse,
-%   \colorlink{https://discourse.julialang.org/}.
+  \item Julia proved that it~can be~used to~make serious scientific
+    work in~various fields, including numerical computations relevant
+    to~field theory.
 
+  \item Pedagogical perspective. Learning and~using it~is comparable
+    to~Python (in my~opinion), which is~starting language for computer
+    scientists on~MIT and~at~the same time is~more deep as~computer
+    language and~have more computational power.
 
-% \end{frame}
-% % ##################
+  \item Have potential to~make money outside academic world.
 
+  \end{itemize}
 
+\end{frame}
+% ##################
 
 
 
 
 
+% ##################
+\begin{frame}
+  \frametitle{Remember}
 
 
+  \alert{If you use it in your research} creators of it ask you for
+  citing paper \textbf{Julia: A~Fresh Approach to Numerical
+    Computing}, Jeff Bezanson, Alan Edelman, Stefan Karpinski
+  and~Viral B.~Shah~(2017) SIAM Review, 59:~65--98 and to add your
+  paper to the list
+  \colorhref{https://julialang.org/publications/}{https://julialang.org/publications/}.
 
-% % ######################################
-% \appendix
-% % ######################################
+  \vspace{1em}
 
 
 
+  \textbf{I want to thank these people for help and discusions}
+  \begin{itemize}
 
+  \item Tamas Papp;
 
-% % ##################
-% \begin{frame}[standout]
+  \item John F. Gibson;
 
-%   {\color{jStrongWhite} Thank you. Questions?}
+  \item Yakir Luc Gagnon;
 
-% \end{frame}
-% % ##################
+  \item Antoine Levitt;
 
+  \item Krzysztof Musiał.
 
+  \end{itemize}
 
+  With most of them I converse on Julia Discourse,
+  \colorhref{https://discourse.julialang.org/}
+  {https://discourse.julialang.org/}.
 
 
+\end{frame}
+% ##################
 
 
 
 
 
 
-% % ######################################
-% \section{Bibliography and~resources}
-% % ######################################
 
 
 
-% % ##################
-% \begin{frame}
-%   \frametitle{Relevant articles}
 
+% ######################################
+\appendix
+% ######################################
 
-%   \begin{itemize}
-%   \item Jeff Bezanson, Alan Edelman, Stefan Karpinski and~Viral
-%     B.~Shah, \emph{Julia: A~Fresh Approach to Numerical Computing},
-%     (2017) SIAM Review, 59:~65--98. doi:~10.1137/141000671,
-%     url:~http://julialang.org/publications/julia-fresh-approach
-%     -BEKS.pdf,
-%     \colorlink{https://julialang.org/publications/julia-fresh-approach-BEKS.pdf}.
 
-%   \item Chistopher Rackauckas and Qing~Nie,
-%     \emph{DifferentialEquations.jl --~A~Performant and~Feature-Rich
-%       Ecosystem for Solving Differential Equations in~Julia}.
-%     Journal~of Open Research Software (2017), 5(1), p.~15. Doi:
-%     http://doi.org/10.5334/jors.151,
-%     \colorlink{https://openresearchsoftware.metajnl.com/articles/10.5334/jors.151/}.
 
-%   % \item Keno Fischer, Elliot Saba, \emph{Automatic Full Compilation~of
-%   %     Julia Programs and~ML Models to~Cloud TPUs},
-%   %   \arXiv{https://arxiv.org/abs/1810.09868}{1810.09868}.
+% ##################
+\begin{frame}[standout]
 
-%   \item Nick Heath, \emph{Is~Julia the~next big programming
-%       language? \\
-%       MIT thinks so, as~version~1.0~lands}. \\
-%     TechRepublic, August~29, 2018,
-%     \colorlink{https://www.techrepublic.com/article/is-julia-the-next-big-programming-language-mit-thinks-so-as-version-1-0-lands/}.
-%   \end{itemize}
 
-% \end{frame}
-% % ##################
+  { \color{jBackgroundStyleLight} Thank you. Questions? }
 
+\end{frame}
+% ##################
 
 
 
 
-% % ##################
-% \begin{frame}
-%   \frametitle{Netography}
 
 
-%   \begin{itemize}
-%   \item JuliaLang/julia -- Julia GitHub repository,
-%     \colorlink{https://github.com/JuliaLang/julia}.
 
-%   \item All code in all languages used for creating benchmarks for
-%     Kuramoto-Sivashinsky PDE is~available on~GitHub
-%     \colorhref{https://github.com/johnfgibson/julia-pde-benchmark}{johnfgibson/julia-pde-benchmark}.
-%     Description of used numerical algorithm can be~founded
-%     \colorhref{https://github.com/johnfgibson/julia-pde-benchmark/blob/master/1-Kuramoto-Sivashinksy-benchmark.ipynb}{here}.
 
-%     % \item numpy/numpy -- \texttt{numpy} GitHub repository,
-%     %   \colorlink{https://github.com/numpy/numpy}.
 
-%   \item John F.~Gibson, \emph{Why~Julia}, GitHub
-%     \colorhref{https://github.com/johnfgibson/whyjulia/blob/master/1-whyjulia.ipynb}{johnfgibson/whyjulia}.
 
-%   \item Alan Edelman homepage
-%     \colorhref{http://math.mit.edu/~edelman/}{http://math.mit.edu/$\sim$ edelman/}.
 
+% ######################################
+\section{Bibliography and~resources}
+% ######################################
 
-%   \end{itemize}
 
-% \end{frame}
-% % ##################
 
+% ##################
+\begin{frame}
+  \frametitle{Relevant articles}
 
 
+  \begin{itemize}
 
+  \item Jeff Bezanson, Alan Edelman, Stefan Karpinski and~Viral
+    B.~Shah, \textit{Julia: A~Fresh Approach to Numerical Computing},
+    (2017) SIAM Review, 59:~65--98. doi:~10.1137/141000671,
+    url:~http://julialang.org/publications/julia-fresh-approach
+    -BEKS.pdf,
+    \colorhref{https://julialang.org/publications/julia-fresh-approach-BEKS.pdf}
+    {https://julialang.org/publications/julia-fresh-approach-BEKS.pdf}.
 
-% % ##################
-% \begin{frame}
-%   \frametitle{Netography}
+  \item Chistopher Rackauckas and Qing~Nie,
+    \textit{DifferentialEquations.jl --~A~Performant and~Feature-Rich
+      Ecosystem for Solving Differential Equations in~Julia}.
+    Journal~of Open Research Software (2017), 5(1), p.~15. Doi:
+    http://doi.org/10.5334/jors.151,
+    \colorhref{https://openresearchsoftware.metajnl.com/articles/10.5334/jors.151/}
+    {https://openresearchsoftware.metajnl.com/articles/10.5334/jors.151/}.
 
+  \item Keno Fischer, Elliot Saba, \textit{Automatic Full Compilation~of
+      Julia Programs and~ML Models to~Cloud TPUs},
+    \colorhref{https://arxiv.org/abs/1810.09868}{arXiv: 1810.09868}.
 
-%   \begin{itemize}
-%   \item Picture on slide \emph{Lies, big lies and benchmarks} taken from
-%     page \emph{Julia Micro-Benchmarks},
-%     \colorhref{https://julialang.org/benchmarks/}{https://julialang.org/benchmarks/}.
+  \item Nick Heath, \textit{Is~Julia the~next big programming
+      language? \\
+      MIT thinks so, as~version~1.0~lands}. \\
+    TechRepublic, August~29, 2018,
+    \colorhref{https://www.techrepublic.com/article/is-julia-the-next-big-programming-language-mit-thinks-so-as-version-1-0-lands/}
+    {https://www.techrepublic.com/article/is-julia-the-next-big-programming-language-mit-thinks-so-as-version-1-0-lands/}.
 
-%   \item Picture of Julia creators taken from MIT News page: \colorhref{http://news.mit.edu/2018/julia-language-co-creators-win-james-wilkinson-prize-numerical-software-1226}{http://news.mit.edu/2018/julia-language-co-creators-win-james-wilkinson-prize-numerical-software-1226}.
+  \end{itemize}
 
-%   \item Picture of companies using Julia taken from Julia Computing page \colorhref{https://juliacomputing.com/}{https://juliacomputing.com/}.
-%   \end{itemize}
+\end{frame}
+% ##################
 
-% \end{frame}
-% % ##################
 
 
 
 
+% ##################
+\begin{frame}
+  \frametitle{Netography}
 
-% % ##################
-% \begin{frame}
-%   \frametitle{Mentioned projects and articles}
 
+  \begin{itemize}
 
-%     \begin{itemize}
-%     \item Channelflow (written in~C++),
-%       \colorhref{http://channelflow.org/}{http://channelflow.org/}.
+  \item JuliaLang/julia -- Julia GitHub repository,
+    \colorhref{https://github.com/JuliaLang/julia}
+    {https://github.com/JuliaLang/julia}.
 
-%     % \item DynamicalSystems.jl, GitHub
-%     %   \colorhref{https://github.com/JuliaDynamics/DynamicalSystems.jl}{JuliaDynamics/DynamicalSystems.jl}.
+  \item All code in all languages used for creating benchmarks for
+    Kuramoto-Sivashinsky PDE is~available on~GitHub
+    \colorhref{https://github.com/johnfgibson/julia-pde-benchmark}
+    {johnfgibson/julia-pde-benchmark}.
+    Description of used numerical algorithm can be~founded
+    \colorhref{https://github.com/johnfgibson/julia-pde-benchmark/blob/master/1-Kuramoto-Sivashinksy-benchmark.ipynb}{here}.
 
-%     % \item QuantumOptics.jl. Numerical framework for numerical
-%     %   solving open quantum systems, more on this page
-%     %   \colorhref{https://qojulia.org/}{https://qojulia.org/}.
+    \item numpy/numpy -- \texttt{numpy} GitHub repository,
+      \colorhref{https://github.com/numpy/numpy}
+      {https://github.com/numpy/numpy}.
 
-%     % \item REPL (shell) for C++ (broken in Julia 1.x), GitHub
-%     %   \colorhref{https://github.com/NHDaly/PaddleBattleJL}{Keno/Cxx.jl}.
+  \item John F.~Gibson, \textit{Why~Julia}, GitHub
+    \colorhref{https://github.com/johnfgibson/whyjulia/blob/master/1-whyjulia.ipynb}{johnfgibson/whyjulia}.
 
-%     \item Game and educational tool \emph{Paddle Battle}, GitHub
-%       \colorhref{https://github.com/NHDaly/PaddleBattleJL}{NHDaly/PaddleBattleJL}.
-%     \end{itemize}
+  \item Alan Edelman homepage
+    \colorhref{http://math.mit.edu/~edelman/}
+    {http://math.mit.edu/$\sim$ edelman/}.
 
+  \end{itemize}
 
-% \end{frame}
-% % ##################
+\end{frame}
+% ##################
 
 
 
 
 
+% ##################
+\begin{frame}
+  \frametitle{Netography}
 
 
+  \begin{itemize}
 
+  \item Picture on slide \textit{Lies, big lies and benchmarks} taken from
+    page \textit{Julia Micro-Benchmarks},
+    \colorhref{https://julialang.org/benchmarks/}
+    {https://julialang.org/benchmarks/}.
 
+  \item Picture of Julia creators taken from MIT News page: \colorhref{http://news.mit.edu/2018/julia-language-co-creators-win-james-wilkinson-prize-numerical-software-1226}
+    {http://news.mit.edu/2018/julia-language-co-creators-win-james-wilkinson-prize-numerical-software-1226}.
 
-% % ######################################
-% \section{Additional information}
-% % ######################################
+  \item Picture of companies using Julia taken from Julia Computing page \colorhref{https://juliacomputing.com/}{https://juliacomputing.com/}.
 
+  \end{itemize}
 
+\end{frame}
+% ##################
 
-% % ##################
-% \begin{frame}
-%   \frametitle{Some statistics}
 
 
-%   \begin{itemize}
-%   \item Google Scholar: 1043 papers about Julia or using it in research
-%     (state at~October~2019). See also topic \emph{Research}
-%     at~Julia Language page https://julialang.org/publications/,
-%     \colorlink{https://julialang.org/publications/}.
 
-%   \item TIOBE Index for December 2019: 43.
 
-%   \item Used in some way in over 1,000 universities.
+% ##################
+\begin{frame}
+  \frametitle{Mentioned projects and articles}
 
-%   \item Ecosystem of over 3,000 packages for wide are of topics.
 
-%   \item Over 10~millions downloads.
+    \begin{itemize}
 
-%   \item Over 80,000 GitHub stars for language and packages.
+    \item Channelflow (written in~C++),
+      \colorhref{http://channelflow.org/}{http://channelflow.org/}.
 
-%   \item 130\% annual growth (based on~downloads).
-%   \end{itemize}
-%   Outside two first positions rest was taken from Julia
-%   Computing and~dated from September~2019.
+    \item DynamicalSystems.jl, GitHub
+      \colorhref{https://github.com/JuliaDynamics/DynamicalSystems.jl}
+      {JuliaDynamics/DynamicalSystems.jl}.
 
-% \end{frame}
-% % ##################
+    \item QuantumOptics.jl. Numerical framework for numerical
+      solving open quantum systems, more on this page
+      \colorhref{https://qojulia.org/}{https://qojulia.org/}.
 
+    \item REPL (shell) for C++ (broken in Julia 1.x), GitHub
+      \colorhref{https://github.com/NHDaly/PaddleBattleJL}{Keno/Cxx.jl}.
 
+    \item Game and educational tool \textit{Paddle Battle}, GitHub
+      \colorhref{https://github.com/NHDaly/PaddleBattleJL}
+      {NHDaly/PaddleBattleJL}.
 
+    \end{itemize}
 
 
-% % ##################
-% \begin{frame}
-%   \frametitle{Julia source code}
+\end{frame}
+% ##################
 
 
-%   \begin{table}
-%     \centering
 
-%       \begin{tabular}{|l|r|r|}
-%         \hline
-%         Language & Percent of code \\
-%         \hline
-%         Julia & 68.6\% \\
-%         \hline
-%         C & 16.3\% \\
-%         \hline
-%         C++ & 9.9\% \\
-%         \hline
-%         Scheme & 3.2\% \\
-%         \hline
-%         Makefile & 0.7\% \\
-%         \hline
-%         LLVM & 0.4\% \\
-%         \hline
-%         Other & 0.9\% \\
-%         \hline
-%       \end{tabular}
 
-%       \caption{Numbers from \colorhref{GitHub JuliaLang/julia}{https://github.com/JuliaLang/julia}, 3~October~2019.}
 
-%     \end{table}
 
-% \end{frame}
-% % ##################
 
 
 
 
+% ######################################
+\section{Additional information}
+% ######################################
 
-% % ##################
-% \begin{frame}
-%   \frametitle{Gamedev in Julia is almost not existing}
 
 
-%   \begin{figure}
-%     \centering
+% ##################
+\begin{frame}
+  \frametitle{Some statistics}
 
-%     \includegraphics[scale=0.17]{./SeminarPictures/PaddleBattle.png}
-%   \end{figure}
 
-%   Nathan Daly write simple pong game using 96.6\% Julia and 3.5\%
-%   Shell code and SDL2 library (Simple DirectMedia Layer) to~show that
-%   if~you want, you~can do it quite easily. After that he put it on~Mac
-%   App Store with. Code of game is available
-%   \colorhref{https://github.com/NHDaly/PaddleBattleJL}{here}.
+  \begin{itemize}
 
-% \end{frame}
-% % ##################
+  \item Google Scholar: 1043 papers about Julia or using it in research
+    (state at~October~2019). See also topic \textit{Research}
+    at~Julia Language page
+    \colorhref{https://julialang.org/publications/}
+    {https://julialang.org/publications/}.
 
+  \item TIOBE Index for December 2019: 43.
 
+  \item Used in some way in over 1,000 universities.
 
+  \item Ecosystem of over 3,000 packages for wide are of topics.
 
+  \item Over 10~millions downloads.
 
-% % % ##################
-% % \begin{frame}
-% %   \frametitle{Few interesting things for which there is no time
-% %   here}
+  \item Over 80,000 GitHub stars for language and packages.
 
+  \item 130\% annual growth (based on~downloads).
 
-% %   \begin{block}{Packages and projects}
-% %     \begin{itemize}
-% %     \item DynamicalSystems.jl, GitHub
-% %       \colorhref{https://github.com/JuliaDynamics/DynamicalSystems.jl}{JuliaDynamics/DynamicalSystems.jl}.
-% %       Winner~of one~of three main prizes of The~Dynamical System Web
-% %       in~2018.
-% %     \item QuantumOptics.jl. Numerical framework for numerical
-% %       solving open quantum systems, more on this page
-% %       \colorhref{https://qojulia.org/}{https://qojulia.org/}.
-% %     \item Machine Learning on Google's Cloud TPUs (tensor processing
-% %       units). \\
-% %       \emph{Targeting TPUs using our compiler, we are able to
-% %       evaluate the~VGG19 forward pass on~a~batch~of 100 images
-% %       in~0.23s which compares favorably to~the~52.4s required
-% %       for~the~original model on~the~CPU. Our implementation is~less
-% %       than 1000
-% %       lines~of Julia, \\
-% %       with no~TPU specific changes made to~the~core
-% %       Julia compiler \\
-% %       or~any other Julia packages.} Whole article by Keno Fischer
-% %       and Elliot Saba
-% %       \colorhref{https://arxiv.org/abs/1810.09868}{here}.
-% %     \end{itemize}
-% %   \end{block}
+  \end{itemize}
 
-% % \end{frame}
-% % % ##################
+
+  Outside two first positions rest was taken from Julia
+  Computing and~dated from September~2019.
+
+\end{frame}
+% ##################
+
+
+
+
+
+% ##################
+\begin{frame}
+  \frametitle{Julia source code}
+
+
+  \begin{table}
+
+    \centering
+
+    \begin{tabular}{|l|r|r|}
+      \hline
+      Language & Percent of code \\
+      \hline
+      Julia & 68.6\% \\
+      \hline
+      C & 16.3\% \\
+      \hline
+      C++ & 9.9\% \\
+      \hline
+      Scheme & 3.2\% \\
+      \hline
+      Makefile & 0.7\% \\
+      \hline
+      LLVM & 0.4\% \\
+      \hline
+      Other & 0.9\% \\
+      \hline
+    \end{tabular}
+
+    \caption{Numbers from \colorhref{GitHub JuliaLang/julia}
+      {https://github.com/JuliaLang/julia}, 3~October~2019}
+
+  \end{table}
+
+\end{frame}
+% ##################
+
+
+
+
+
+% ##################
+\begin{frame}
+  \frametitle{Gamedev in Julia is almost not existing}
+
+
+  \begin{figure}
+
+    \centering
+
+    \includegraphics[scale=0.17]{./PresentationPictures/PaddleBattle.png}
+
+  \end{figure}
+
+
+  Nathan Daly write simple pong game using 96.6\% Julia and 3.5\%
+  Shell code and SDL2 library (Simple DirectMedia Layer) to~show that
+  if~you want, you~can do it quite easily. After that he put it on~Mac
+  App Store with. Code of game is available
+  \colorhref{https://github.com/NHDaly/PaddleBattleJL}{here}.
+
+\end{frame}
+% ##################
+
+
+
+
+
+% ##################
+\begin{frame}
+  \frametitle{Few interesting things for which there is no time
+    here}
+
+
+  Packages and projects
+
+  \begin{itemize}
+
+  \item DynamicalSystems.jl, GitHub
+    \colorhref{https://github.com/JuliaDynamics/DynamicalSystems.jl}
+    {JuliaDynamics/DynamicalSystems.jl}.
+    Winner~of one~of three main prizes of The~Dynamical System Web
+    in~2018.
+
+  \item QuantumOptics.jl. Numerical framework for numerical
+    solving open quantum systems, more on this page
+    \colorhref{https://qojulia.org/}{https://qojulia.org/}.
+
+  \item Machine Learning on Google's Cloud TPUs (tensor processing
+    units). \\
+    \textit{Targeting TPUs using our compiler, we are able to
+      evaluate the~VGG19 forward pass on~a~batch~of 100 images
+      in~0.23s which compares favorably to~the~52.4s required
+      for~the~original model on~the~CPU. Our implementation is~less
+      than 1000 lines~of Julia, \\
+      with no~TPU specific changes made to~the~core Julia compiler \\
+      or~any other Julia packages.} Whole article by Keno Fischer
+    and Elliot Saba
+    \colorhref{https://arxiv.org/abs/1810.09868}{here}.
+
+  \end{itemize}
+
+\end{frame}
+% ##################
 
 
 
