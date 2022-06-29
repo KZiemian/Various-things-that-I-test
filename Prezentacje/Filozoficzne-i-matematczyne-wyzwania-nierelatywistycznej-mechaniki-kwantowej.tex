@@ -1,0 +1,111 @@
+% ---------------------------------------------------------------------
+% Basic configuration of Beamera and Jagiellonian
+% ---------------------------------------------------------------------
+\RequirePackage[l2tabu, orthodox]{nag}
+
+
+
+\ifx\PresentationStyle\notset
+\def\PresentationStyle{dark}
+\fi
+
+
+
+\documentclass[10pt,t]{beamer}
+\mode<presentation>
+\usetheme[style=\PresentationStyle,logoLang=Latin,logoColor=monochromaticJUwhite,JUlogotitle=yes]{jagiellonian}
+
+
+
+% ---------------------------------------
+% Configuration files of Jagiellonian loceted in catalog preambule
+% ---------------------------------------
+\input{./preambule/LanguageSettings/JagiellonianPolishLanguageSettings.tex}
+\input{./preambule/TextposConfiguration/TextposConfiguration.tex}
+
+\input{./preambule/JagiellonianCustomizationGeneral.tex}
+\input{./preambule/JagiellonianCustomizationCommands.tex}
+
+
+
+
+
+
+
+
+
+
+% ---------------------------------------
+% Packages, libraries and their configuration
+% ---------------------------------------
+
+
+
+
+
+% ---------------------------------------
+% Configuration for this particular presentation
+% ---------------------------------------
+
+
+
+
+
+
+
+
+
+
+% ---------------------------------------------------------------------
+\title{Filozoficzne i~matematyczne wyzwania nierelatywistycznej mechaniki
+  kwantowej}
+
+\author{Kamil Ziemian \\
+  \texttt{kziemianfvt@gmail.com}}
+
+% \date{}
+% ---------------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+% ####################################################################
+% Początek dokumentu
+\begin{document}
+% ####################################################################
+
+
+
+
+
+% Wyrównanie do lewej z łamaniem wyrazów
+
+\RaggedRight
+
+
+
+
+
+% ######################################
+\maketitle
+% ######################################
+
+
+
+
+
+
+
+
+
+
+% ############################
+
+% Koniec dokumentu
+\end{document}
