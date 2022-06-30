@@ -1,0 +1,1648 @@
+% ---------------------------------------------------------------------
+% Basic configuration of Beamera and Jagiellonian
+% ---------------------------------------------------------------------
+\RequirePackage[l2tabu, orthodox]{nag}
+
+
+
+\ifx\PresentationStyle\notset
+\def\PresentationStyle{dark}
+\fi
+
+
+
+\documentclass[10pt,t]{beamer}
+\mode<presentation>
+\usetheme[style=\PresentationStyle,logoLang=Latin,logoColor=monochromaticJUwhite,JUlogotitle=yes]{jagiellonian}
+
+
+
+% ---------------------------------------
+% Configuration files of Jagiellonian loceted in catalog preambule
+% ---------------------------------------
+\input{./preambule/LanguageSettings/JagiellonianPolishLanguageSettings.tex}
+\input{./preambule/TextposConfiguration/TextposConfiguration.tex}
+
+\input{./preambule/JagiellonianCustomizationGeneral.tex}
+\input{./preambule/JagiellonianCustomizationCommands.tex}
+
+
+
+
+
+
+
+
+
+
+% ---------------------------------------
+% Packages, libraries and their configuration
+% ---------------------------------------
+% \usepackage{graphicx}% Pozwala wstawiać grafikę.
+\usepackage{verse}
+% \usepackage{verbatim}
+% \usepackage{xy} % Pozwala rysować grafy.
+\usepackage{tikz-feynman}
+\usepackage{chemfig}
+% \usepackage{skak}
+% \usepackage{lmodern}
+
+
+
+
+
+% ---------------------------------------
+% Configuration for this particular presentation
+% ---------------------------------------
+
+
+
+
+
+
+
+
+
+
+% ---------------------------------------------------------------------
+\title{Wstęp do \LaTeX} %Spotkanie pierwsze oby nie ostatnie.
+\subtitle{Kilka uwag o~jego używaniu}
+
+\author{Kamil Ziemian \\
+  \texttt{kziemianfvt@gmail.com}}
+
+
+\institute{Uniwersytet Jagielloński w Krakowie}
+\date[10 XII 2016]{10 grudnia 2016}
+% ---------------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+% ####################################################################
+% Początek dokumentu
+\begin{document}
+% ####################################################################
+
+
+
+
+
+% Wyrównanie do lewej z łamaniem wyrazów
+
+\RaggedRight
+
+
+
+
+
+% ######################################
+\maketitle % Tytuł całego tekstu
+% ######################################
+
+
+
+
+
+% ######################################
+\section{\TeX{} i~\LaTeX}
+% ######################################
+
+
+
+% ##################
+\begin{frame}
+  \frametitle{Za i~przeciw używania \LaTeX a}
+
+
+  Przeciw
+  \begin{enumerate}
+    \RaggedRight
+
+  \item Mój kolega miał wygłosić seminarium na temat
+    \textit{O~wyższości pisania w~Wordzie nad \LaTeX em}; niestety
+    pozostało ono w~sferze planów, więc konkretnych argumentów nie
+    znam.
+
+  \item Aby móc go używać, trzeba~się trochę rzeczy nauczyć.
+
+  \item Na początku pliki bez przerwy nie będą ci~się działać.
+
+  \item A~jak już~zadziałają, to nie będą zawierać tego co chciałeś.
+
+  \item Rozdziela formę od treści.
+
+  \end{enumerate}
+
+\end{frame}
+% ##################
+
+
+
+
+
+% ##################
+\begin{frame}
+  \frametitle{Za i~przeciw używania \LaTeX a}
+
+
+  Za (ta prezentacja jest zrobiona w~\LaTeX u)
+  \begin{enumerate}
+    \RaggedRight
+
+  \item Jest naprawdę ładny.
+
+  \item Kiedy~się go nauczysz, większość rzeczy zrobi za ciebie.
+
+  \item Możesz w~nim zmienić praktycznie wszystko co chcesz.
+
+  \item Ponieważ ktoś zapewne już zrobił to za ciebie, więc musisz
+    tylko użyć {\color{blue} doktora Google}.
+
+  \item Przy odrobinie sprytu, znacznie upraszcza życie.
+
+  \item Rozdziela formę od treści.
+
+  \end{enumerate}
+
+\end{frame}
+% ##################
+
+
+
+
+
+% ##################
+\begin{frame}
+  \frametitle{Komiks na dobry początek}
+
+
+  \begin{figure}
+
+    \centering
+
+    \includegraphics[height=4cm]
+    {./PresentationPictures/Programing_languages.jpg}
+
+
+    \caption{Cała prawda o~\LaTeX u,
+      \colorhref{http://www.buzzfeed.com/lukelewis/28-things-only-developers-will-find-funny}{http://www.buzzfeed.com/lukelewis/28-things-only-developers-will-find-funny} (kliknij w ten link) }
+
+  \end{figure}
+
+\end{frame}
+% ##################
+
+
+
+
+
+% ##################
+\begin{frame}
+  \frametitle{Co można zrobić w~\LaTeX u?}
+
+
+  Na~przykład
+  \begin{itemize}
+    \RaggedRight
+
+  \item Tą prezentację.
+
+  \item Pracę licencjacką, magisterską, doktorską, etc.
+
+  \item Artykuły, eseje, felietony.
+
+  \item Sprawozdania na pracownię.
+
+  \item Książkę.
+
+  \item Erratę do~książki ;).
+
+  \item Grafikę matematyczną:
+
+    \begin{center}
+
+      \setlength{\unitlength}{0.65mm}
+
+      \begin{picture}
+        (60,40)
+        \put(30,20){\vector(1,0){30}}
+        \put(30,20){\vector(4,1){20}} \put(30,20){\vector(3,1){25}}
+        \put(30,20){\vector(2,1){30}} \put(30,20){\vector(1,2){10}}
+        \thicklines \put(30,20){\vector(-4,1){30}}
+        \put(30,20){\vector(-1,4){5}} \thinlines
+        \put(30,20){\vector(-1,-1){5}}
+        \put(30,20){\vector(-1,-4){5}}
+      \end{picture}
+
+    \end{center}
+
+  \end{itemize}
+
+\end{frame}
+% ##################
+
+
+
+
+
+% ##################
+\begin{frame}
+  \frametitle{Co można robić w~\LaTeX u?}
+
+
+  Na~przykład
+  \begin{itemize}
+    \RaggedRight
+
+  \item Grafy Feynmana (choć to sprawa niebanalna):
+
+    \begin{center}
+      \feynmandiagram [horizontal=a to b]
+      { i1 -- [fermion] a -- [fermion] i2, a -- [photon] b, f1 --
+        [fermion] b -- [fermion] f2, };
+    \end{center}
+
+  \item Wzory chemiczne:
+
+    \begin{center}
+
+      \chemfig{A*5(-B=C-D-E=)}
+
+    \end{center}
+
+  \item Jak~się postarać, to można pisać po~hebrajsku
+    (hieroglify też~się da).
+
+  \item Ogólnie rzecz biorąc wszystko, tylko trzeba
+    {\color{purple} pogooglować}.
+
+  \end{itemize}
+
+\end{frame}
+% ##################
+
+
+
+
+
+% ##################
+\begin{frame}
+  \frametitle{Kolena edycja sporu NKFu o~poezję}
+
+
+
+  \settowidth{\versewidth}{Zarówno, gdyś spełniona, jak i
+    zawiedziona!}{
+
+    \tiny
+
+    \begin{verse}[\versewidth]
+      \setlength{\vrightskip}{-10em} \poemlines{30}
+
+      C o w l e y \\
+      \vin Nadziejo, której kruchy żywot kona \\
+      Zarówno, gdyś spełniona, jak i zawiedziona! \\
+      Ty, którą Zło i Dobro niszczy w równej mierze, \\
+      A Los wiecznie na rogi alternatyw bierze. \\
+      \vin Czczym cieniem jesteś: doszczętnie niknąca \\
+      \vin Tak w noc najgłębszą, jak przy blasku słońca. \\
+      \vin Ze wszelkich błogosławieństw, które Los nam rodzi, \\
+      \vin\vin Żadne cię nie nagrodzi. \\
+      Jeśli sądzić po skutkach wszystko, co istnieje, \\
+      Najbardziej beznadziejne są ludzkie nadzieje. \\!
+
+      C r a s h a w \\
+      \vin Nadziejo! Tyś jest Niebios długiem, Ziemi darem, \\
+      Nie zaistniałych rzeczy realnych wymiarem. \\
+      Najpewniejsza, choć najmniej uchwytna! Zaiste, \\
+      Dzięki tobie Nic nasze jest tak wyraziste. \\
+      \vin Chmuro z ognia, i cieniem i światłem będąca, \\
+      \vin Tyś naszym życiem w śmierci, w nocy -- blaskiem słońca. \\
+      \vin Ze wszelakich nieszczęść, które Los w nadmiarze płodzi, \\
+      \vin\vin Żadne ci nie zaszkodzi. \\
+      Los na twój widok chowa swoje tępe rogi, \\
+      Jak słabowity księżyc w czas poranku błogi. \\!
+
+    \end{verse}
+  }
+
+
+
+  O~nadziei: dialog w pytaniach i~odpowiedziach pomiędzy
+  A.~Cowleyem i~R.~Crashawem, fragment (tłumaczył Stanisław
+  Barańczak)
+
+\end{frame}
+% ##################
+
+
+
+
+
+% ##################
+\begin{frame}
+  \frametitle{Odrobina historii}
+
+
+  Dzieło Mistrza. W~1977 roku Donald E.~Knuth, legenda informatyki,
+  stwierdził,
+  że~aby w~pełni wykorzystać potencjał, coraz szerzej stosownego
+  wtedy składu cyfrowego oraz przeciwdziałać obniżającej~się jakości
+  typograficznej (wprowadzenie nowej lepszej i~prostszej technologi
+  zwykle obniża jakość wykonania), stworzył własny język
+  programowania i~program do~składu tekstu. Temu programowi nadał
+  nazwę \TeX. Kolejne wersje \TeX a~są zbieżne do $\pi$, obecna to
+  3.14159265 (to typowe dla Knutha).
+
+
+  O wymowie. \TeX{} to zapisana w~alfabecie łacińskim pierwsza sylaba
+  ($\tau \varepsilon \chi$) słowa $\tau \varepsilon \chi \nu \eta$ (techne), od~którego pochodzi słowo technika
+  i~technologia. Po grecku to oznacza czynności takie jak budowa statków,
+  kowalstwo, malowanie, rzeźbienie czy hodowla koni. $\pi o \iota \eta \sigma \iota \zeta$,
+  \textit{poiesis} = gr.~robić, jest czymś innym, może dlatego, że~jak
+  powiada Platon w~pierwszym przykładzie fanowskiego dziennikarstwa
+  muzycznego, dialogu „Ion”, poeci nic nie umieją.
+
+\end{frame}
+% ##################
+
+
+
+
+
+% ##################
+\begin{frame}
+  \frametitle{Odrobina historia}
+
+
+  Przybywa Lampart.
+  Zapewne dlatego, że~pisanie w~samym \TeX u jest zbyt skomplikowane
+  jak~na~tworzenie plików tekstowych, na początku lat 80 XX~wieku,
+  Leslie Lamport tworzy nakładkę na~\TeX a, która zajmuje~się za~nas
+  większością \TeX nicznych szczegółów (teraz możecie odetchnąć
+  z~ulgą). Otrzymany w~ten sposób system składu nosi nazwę \LaTeX,
+  obecna wersja to~\LaTeX{} 2$_{ \varepsilon }$.
+
+  Wymowa. \textit{La} jest od Lamporta, stąd powinno~się mówić
+  \textit{la-tech} ewentualnie \textit{lej\dywiz tech}. Sam Donald Knuth
+  nie wiedział jak popranie należy wymawiać nazwę. \LaTeX{}
+  2$_{ \varepsilon }$ czyta się jako \textit{la-tech dwa~i}.
+
+\end{frame}
+% ##################
+
+
+
+
+
+% ##################
+\begin{frame}
+  \frametitle{Odrobina historia}
+
+
+  Hello World!
+
+  \begin{figure}
+
+    \centering
+
+    \includegraphics[height=4cm]
+    {./PresentationPictures/Donald_Ervin_Knuth.jpg}
+    \includegraphics[height=4cm]{./PresentationPictures/Leslie_Lamport.jpg}
+
+
+    \caption{Donald Ervin Knuth (ur. 1938), Leslie Lamport
+      (ur. 1941)}
+
+  \end{figure}
+
+\end{frame}
+% ##################
+
+
+
+
+
+% ##################
+\begin{frame}
+  \frametitle{Zanim zaczniemy}
+
+
+  Typy procesorów tekstu (brr, co za groźne nazwa)
+  \begin{itemize}
+    \RaggedRight
+
+  \item WYSIWYG = \textit{what you see is what you get} (to co
+    widzisz, jest tym co~dostaniesz). Przykłady: MS Word,
+    OpenOffice.
+
+  \item WYSIWYM = \textit{what you see is what you mean} (to co
+    widzisz, to jest to o~czym myślałeś). Przykłady: \LaTeX.
+
+  \end{itemize}
+
+
+
+  Tak naprawdę
+  jeśli zaczynasz pisać w~\LaTeX u, to jest to raczej WYWINWYG =
+  \textit{what you want is not what you get} (to czego chciałeś, to
+  nie jest to co dostałeś). Ale~od tego~są te~warsztaty, aby~ułatwić
+  wam przejście tego trudnego początkowego etapu. Jak w~takim
+  wypadku wygląda plika \LaTeX a?
+
+\end{frame}
+% ##################
+
+
+
+
+
+
+
+
+
+
+% ######################################
+\section{Jak pisać w~\LaTeX u?}
+% ######################################
+
+
+
+% ##################
+\begin{frame}
+  \frametitle{Kilka rad na~dobry początek}
+
+
+  Mądrości programistów.
+  Tworzenie tekstu w~\LaTeX u to trochę jak programowanie, więc
+  warto pamiętać o~kilku mądrościach programistów.
+  \begin{itemize}
+    \RaggedRight
+
+  \item Najtrudniejsza rzecz to skompilować pierwszy tekst do
+    PDFa. Potem jest już z~górki.
+
+  \item Aby nauczyć~się pisać w~\LaTeX u, trzeba pisać w~\LaTeX u.
+
+  \item Twój główny wróg na samym początku to literówki,
+    np.~\textbf{\textbackslash beign} zamiast \textbf{\textbackslash
+      begin}. Nie zniechęcaj~się tym.
+
+  \item To jak „kody” \LaTeX a wygląda ma znaczenie. Pisz go
+    tak, by w~jakimś stopniu oddawał logikę tekstu.
+
+  \end{itemize}
+
+  Przykład. Niech będzie nim ten slajd.
+
+\end{frame}
+% ##################
+
+
+
+
+
+% ##################
+\begin{frame}
+  \frametitle{Kilka rad na~dobry początek}
+
+
+  Mądrości programistów
+  \begin{itemize}
+    \RaggedRight
+
+  \item Naucz~się pisać bezwzrokowo, to wcale nie jest trudne.
+
+  \item Dobre środowisko to skarb. Poznaj jego podstawowe skróty
+    klawiszowe i~możliwości.
+
+  \end{itemize}
+
+  Polecane środowiska
+  \begin{enumerate}
+    \RaggedRight
+
+  \item \TeX Maker;
+
+  \item Kile (warto połączyć z~następnym);
+
+  \item Share\LaTeX.com,
+    \colorhref{https://www.sharelatex.com/}{https://www.sharelatex.com/};
+
+  \item WinEdit;
+
+  \item OverLeaf.com,
+    \colorhref{https://www.overleaf.com/}{https://www.overleaf.com/};
+
+  \item Vim z~\LaTeX suite i~Vim-\LaTeX;
+
+  \item Lyx;
+
+  \item Emacs z~AUC\TeX-em.
+
+  \end{enumerate}
+
+\end{frame}
+% ##################
+
+
+
+
+
+% ##################
+\begin{frame}[fragile]
+  \frametitle{Nasz pierwszy tekst}
+
+
+  Plik źródłowy.
+  W~edytorze tekstu (MS Word, OpenOffice~się nie nadają) należy
+  utworzyć plik z~rozszerzeniem „.tex”, tak zwany plik źródłowy.
+  Niech nosi nazwę „Nasz-pierwszy-tekst-w-LaTeXu.tex”. Niektóre
+  dystrybucje \LaTeX a nie zaakceptują pliku „Nasz pierwszy tekst
+  w~LaTeXu.tex”.
+
+  Kompilacja.
+  Aby powstał gotowy dokument, najlepiej w~formacie PDF, musimy
+  skompilować (groźne słowo związane z~takimi rzeczami jak C/C++
+  i~Java, ale~nie musicie~się tego bać) plik źródłowy. Zwykle to~się
+  nam nie uda i~kompilator wyrzuci komunikat o~błędach.
+
+  W~dobrze skonfigurowany środowisku.
+  Wystarczy wcisnąć jeden klawisz, aby~skompilować plik i~wieloma
+  rzeczami nie trzeba~się martwić. W~\TeX Makerze jest to~F1.
+
+\end{frame}
+% ##################
+
+
+
+
+
+% ##################
+\begin{frame}[fragile]
+  \frametitle{Nasz pierwszy tekst}
+
+
+  Klasyczna szkoła
+\begin{verbatim}
+\documentclass{article}
+
+
+
+\begin{document}
+
+
+
+Hello World!
+
+
+
+\end{document}
+\end{verbatim}
+
+\end{frame}
+% ##################
+
+
+
+
+
+% ##################
+\begin{frame}[fragile]
+  \frametitle{Nasz pierwszy tekst}
+
+
+  Nowa szkoła (w~pierwszej linii jest L2TABU)
+\begin{verbatim}
+\RequirePackage[l2tabu, orthodox]{nag}
+\documentclass{article}
+
+
+
+\begin{document}
+
+
+
+Hello World!
+
+
+
+\end{document}
+\end{verbatim}
+
+\end{frame}
+% ##################
+
+
+
+
+
+% ##################
+\begin{frame}
+  \frametitle{Wynik kompilacji}
+
+
+  Pliki generowane.
+  \LaTeX{} tworząc plik PDFa produkuje masę plików z~rozszerzeniami
+  „.aux”, „.bbl”, „.blg”, „.log”, „.nav”, na~szczęście
+  w~większości przypadków nie musimy~się nimi przejmować.
+
+  Ale czasem. Rzadko, bo rzadko, ale~się zdarza, że~choć wszystko w~pliku
+  źródłowym jest~dobrze, to~z~powodu błędu w~którymś z~tych
+  dodatkowych plików, kompilacja nie może dojść do skutku. Wtedy
+  trzeba usunąć je wszystkie i~skompilować jeszcze raz plik
+  źródłowy.
+
+  \textbf{Uwaga.}
+  Pamiętajcie by~przy okazji nie usunąć pliku z~rozszerzeniem
+  \textbf{„.tex”!!!} Dobre środowisko ma wbudowaną opcję, usunięcia
+  wszystkich zbędnych plików za nas. Np.~w~\TeX Makerze mamy: Narzędzia
+  $\to$ Wyczyść.
+
+\end{frame}
+% ##################
+
+
+
+
+
+% ##################
+\begin{frame}[fragile]
+  \frametitle{Nasz pierwszy tekst}
+
+
+  Podział pliku źródłowego
+  \begin{enumerate}
+    \RaggedRight
+
+  \item Preambuła.
+
+  \item Część główna.
+
+  \end{enumerate}
+
+
+
+  Preambuła.
+  Preambuła zaczyna~się w~pierwszej linii pliku, zaś kończy na
+  {\color{purple} \verb+\begin{document}+}. Zawiera informacje,
+    które służą \LaTeX owi stworzenia gotowego tekstu, rozszerzają
+    jego standardowe możliwości (na chyba nieograniczoną liczbę sposobów)
+    oraz komendy które sami zdefiniowaliśmy.
+
+
+
+\begin{verbatim}
+\RequirePackage[l2tabu, orthodox]{nag}
+\documentclass{article}
+
+\begin{document}
+\end{verbatim}
+
+
+\end{frame}
+% ##################
+
+
+
+
+
+% ##################
+\begin{frame}[fragile]
+  \frametitle{Co robi ta preambuła?}
+
+
+  Linia po linii.
+  \begin{enumerate}
+    \RaggedRight
+
+  \item \verb+\RequirePackage[l2tabu, orthodox]{nag}+~-- na razie
+    najlepiej potraktować to jako magię dla zaawansowanych.
+    W~procesie kompilacji wykrywa przestarzała lub niepotrzebne
+    paczki, które od~czasów starożytnych mistrzów \LaTeX a kopiujemy
+    do~swojej preambuły oraz~błędnie stosowane komendy \LaTeX a,
+    wszystko to~według standardów opisanych w~\textit{An essential guide
+      to \LaTeX$2_{ \varepsilon }$ usage} Marka Trettina (popularnie
+    l2tabu,
+    \colorhref{ftp://sunsite.icm.edu.pl/pub/CTAN/info/l2tabu/english/l2tabuen.pdf}{ftp://sunsite.icm.edu.pl/pub/CTAN/info/l2tabu/english/l2tabuen.pdf}).
+    Np.~w~tej prezentacji \textbf{nag} wykrył, że~paczka „epsfig” jest
+    przestarzała i~należy ją zmienić na „graphicx”.
+
+  \item \verb+\documentclass{article}+~-- definiuje klasę dokumentu
+    (co za odkrycie), czyli najbardziej ogólne reguły tworzenia
+    danego dokumentu przez \LaTeX a. Podstawowe, klasyczne klasy
+    \LaTeX a to \textbf{article}, \textbf{report}, \textbf{book},
+    \textbf{letter}, plus niekończenie wiele dodatkowych, a~jeśli jesteś
+    odpowiednio dobry, możesz napisać też swoją.
+
+    Ja używam \textbf{article} w~99.99\% przypadków.
+
+  \end{enumerate}
+
+\end{frame}
+% ##################
+
+
+
+
+
+% ##################
+\begin{frame}[fragile]
+  \frametitle{Co robi ta preambuła?}
+
+
+  Polecenia \LaTeX a.
+  \LaTeX, jak przystało na język programowania, posiada odpowiednie
+  polecenia, które zawsze zaczynają~się od znaku „\textbackslash”
+  (backslash, „w-tył-ciach”). Co zaczyna~się symbolem
+  „\textbackslash” jest poleceniem \LaTeX a. Widzimy więc,
+  że~poleceniami~są \verb+\RequirePackage[l2tabu, orthodox]{nag}+
+  i~\verb+\documentclass{article}+.
+
+
+
+  Polecenia w~preambule. Najbardziej podstawowe wyglądają tak
+
+  \begin{center}
+
+    \verb+\nazwa-polecenia+[\textit{argumenty-dodatkowe}]
+    \{\textit{argumenty-obowiązkowe}\}
+
+  \end{center}
+
+  Argumenty dodatkowe należy oddzielać przecinkami i~można podawać
+  w~dowolnej kolejności.
+
+\end{frame}
+% ##################
+
+
+
+
+
+% ##################
+\begin{frame}[fragile]
+  \frametitle{Pierwsza przeróbka preambuły}
+
+
+  Polecenia w~preambule.
+  Najbardziej podstawowe wyglądają tak
+
+  \begin{center}
+
+    \verb+\nazwa-polecenia+[\textit{argumenty-dodatkowe}]
+    \{\textit{argumenty-obowiązkowe}\}
+
+  \end{center}
+
+  Argumenty dodatkowe należy oddzielać przecinkami i~można podawać
+  w~dowolnej kolejności.
+
+  Zróbmy coś takiego. \verb+\documentclass[a4paper, 12pt]{article}+
+  Widzicie różnicę? Pt = point, jednak ze standardowych jednostek
+  składu tekstu, równa 1/72 cala. Cal to 2.54 centymetra, więc
+  w~bardziej zrozumiałych jednostkach 1 pt = 3.52 mm.
+
+\end{frame}
+% ##################
+
+
+
+
+
+% ##################
+\begin{frame}[fragile]
+  \frametitle{Wróćmy do~tekstu}
+
+
+  Część główna. Zawiera tekst, który (po obrobieniu przez \LaTeX a)
+  znajdzie~się w~gotowym dokumencie.
+
+\begin{verbatim}
+\begin{document}
+
+
+
+Hello World!
+
+
+
+\end{document}
+\end{verbatim}
+
+\end{frame}
+% ##################
+
+
+
+
+
+% ##################
+\begin{frame}
+  \frametitle{Białe znaki w~\LaTeX u}
+
+
+  Białe znaki to \textbf{spacja}, \textbf{tab} i~\textbf{enter}. \LaTeX{}
+  traktuje jedną spację i~100 spacji tak samo: jako jeden odstęp.
+  Tab traktuje jako spację. Przejście do nowej linii, {\color{red} traktuje
+    jako jeden odstęp.} Jedną pustą linię traktuje jako komendę,
+  że~w~tym miejscu ma {\color{red} skończyć akapit} (częsty błąd
+  początkujących), zaś~100 pustych linii jak jedną pustą linię.
+
+\end{frame}
+% ##################
+
+
+
+
+
+% ##################
+\begin{frame}
+  \frametitle{Białe znaki w~\LaTeX u}
+
+
+  Organizacja tekstu za pomocą białych znaków.
+  Plik dobrze napisany, to plik który łatwiej~się poprawia. A~każdy
+  musi go~poprawiać.
+  \begin{itemize}
+    \RaggedRight
+
+  \item W~preambule białe znaki nie mają znaczenie, co nie
+    znaczy, że~nie należy ich używać. Wręcz przeciwnie!
+
+  \item Ponieważ przejście do~nowej to tyle samo co spacja,
+    warto dzielić tekst na~krótsze linie (ja stosuje standard 79
+    znaków). Dzięki temu nie musimy scrolować tekstu by~go zmienić,
+    wszystko jest na ekranie.
+    Poza tym komentarze lepiej działają, ale~o~tym za chwilę.
+
+  \item Ja wyznaję zasadę, że~dwie ważne części pliku źródłowego
+    powinien oddzielać odstęp 3~pustych linii.
+
+  \item Pomiędzy mniej ważnymi fragmentami powinny znajdować~się
+    2~lub~1 puste linie. Przy założeniu, że~przejście do~nowego
+    akapitu nie psuje wyglądu tekstu.
+
+  \end{itemize}
+
+\end{frame}
+% ##################
+
+
+
+
+
+% ##################
+\begin{frame}[fragile]
+  \frametitle{Przykład}
+
+
+  Stąd taki dziki wygląd tego pliku
+
+\begin{verbatim}
+\RequirePackage[l2tabu, orthodox]{nag}
+\documentclass{article}
+
+
+
+\begin{document}
+
+
+
+Hello World!
+
+
+
+\end{document}
+\end{verbatim}
+
+\end{frame}
+% ##################
+
+
+
+
+
+% ##################
+\begin{frame}
+  \frametitle{Białe znaki w~\LaTeX u}
+
+
+  Organizacja tekstu za pomocą białych znaków.
+  Plik dobrze napisany, to plik który łatwiej~się poprawia. A~każdy
+  musi go~poprawiać.
+  \begin{itemize}
+    \RaggedRight
+
+  \item Ponieważ przejście do~nowej to tyle samo co spacja,
+    warto dzielić tekst na~krótsze linie (ja stosuje standard 79
+    znaków). Dzięki temu nie musimy scrolować tekstu by~go zmienić,
+    wszystko jest na ekranie.
+    Poza tym komentarze lepiej działają, ale~o~tym za chwilę.
+
+  \item Ja wyznaję zasadę, że~dwie ważne części pliku źródłowego
+    powinien oddzielać odstęp 3~pustych linii.
+
+  \item Pomiędzy mniej ważnymi fragmentami powinny znajdować~się
+    2~lub~1 puste linie. Przy założeniu, że~przejście do~nowego
+    akapitu nie psuje wyglądu tekstu.
+
+  \end{itemize}
+
+
+
+  Ważne. Nie musicie tego robić tak jak ja, jednak gorąco polecam przyjąć
+  jakiś standard. To~niezmiernie ułatwia pracę z~plikiem źródłowym.
+
+\end{frame}
+% ##################
+
+
+
+
+
+% ##################
+\begin{frame}[fragile]
+  \frametitle{Polskie znaki}
+
+
+  Na razie pewnie nie da~się ich pisać. \LaTeX{} został stworzony do pracy
+  z~językiem angielskim, stąd aby~używać wygodnie znaków polskich, należy
+  rozszerzyć jego możliwości.
+
+  Mądrość starożytnych, znaleziona w~bibliotece dr.~Google. Powiada
+  że~należy tak zmodyfikować preambułę
+
+
+
+\begin{verbatim}
+\documentclass[a4paper,11pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[polish]{babel}
+\usepackage[MeX]{polski}
+\end{verbatim}
+
+
+
+  \textbackslash usepackage. Dosłownie „użyj paczki”. Importuje paczkę,
+  która rozszerza możliwości bazowego \LaTeX a.
+
+\end{frame}
+% ##################
+
+
+
+
+
+% ##################
+\begin{frame}[fragile]
+  \frametitle{Co warto zawsze mieć w~preambule?}
+
+
+  Według mnie to
+\begin{verbatim}
+\let\lll\undefined
+\usepackage{amsmath, amsfonts, amssymb, amscd, amsthm}
+\usepackage{calrsfs}
+\usepackage{xcolor}
+\end{verbatim}
+
+\end{frame}
+% ##################
+
+
+
+
+
+% ##################
+\begin{frame}[fragile]
+  \frametitle{Co warto zawsze mieć w~preambule?}
+
+
+\begin{verbatim}
+\usepackage{vmargin}
+% ------------------------------------------------------
+% MARGINS
+% ------------------------------------------------------
+\setmarginsrb
+{ 0.7in} % left margin
+{ 0.6in} % top margin
+{ 0.7in} % right margin
+{ 0.8in} % bottom margin
+{  20pt} % head height
+{0.25in} % head sep
+{   9pt} % foot height
+{ 0.3in} % foot sep
+
+\usepackage{hyperref}
+\usepackage{cleveref}
+\end{verbatim}
+
+\end{frame}
+% ##################
+
+
+
+
+
+% ##################
+\begin{frame}[fragile]
+  \frametitle{Polecenia w~części głównej}
+
+
+  Składnia. Polecenie zaczyna~się „\textbackslash” zaś kończy
+  \textbf{spacją} lub nawiasem wąsatym „\}”. Spacja w~pierwszym przypadku
+  \textbf{nie oznacza} odstępu, lecz koniec polecenia.
+
+  Wpiszcie taki tekst \verb+\TeX i~\LaTeX to \textit{nie} jest to samo.+
+  Dlaczego?
+
+  WYWINWYG~= to czego chcesz, to nie jest to co dostajesz. Ponieważ
+  spacja po \verb+\TeX+ nie oznacza odstępu, tylko koniec polecenia
+  \LaTeX{} rozumiem, że~odstępu ma tam nie być. Danie dwóch spacji
+  nic nie da, bo dla niego 1 spacja = $N$ spacji = koniec komendy.
+  Są różne szkoły radzenia sobie z~tym:
+  \begin{itemize}
+
+  \item[--] \verb+\TeX{} i~\LaTeX{} to+;
+
+  \item[--] \verb+{\TeX} i~{\LaTeX} to+.
+
+  \end{itemize}
+
+\end{frame}
+% ##################
+
+
+
+
+
+% ##################
+\begin{frame}[fragile]
+  \frametitle{Wdowy i~sieroty}
+
+
+  Po co ta $\sim$? Przyimki takie jak „a”, „w”, „u”, „z”, czy też zaimek
+  zwrotny „się” źle wyglądają na końcu lub początku linii, bo~nie mają
+  sensu bez słów które~są zaraz obok. Podobno określa~się je jako wdowy
+  i~sieroty. \LaTeX{} sam decyduje jak rozłożyć graficznie słowa
+  „na~kartce”, więc często produkuje takie kwiatki. Aby temu zapobiec,
+  należy użyć \textbf{twardej spacji}. Od zwykłe spacji
+  różni~się tym, że~\LaTeX{} zrobi wszystko, by~te słowa
+  znalazły~się w~jednej linii, oznacza ją właśnie \verb+~+.
+
+  Porównanie
+  \begin{itemize}
+
+  \item[--] \textbf{Poprawnie:} \verb+zrobi~się+.
+
+  \item[--] \textbf{Niepoprawnie:} \verb+zrobi się+.
+
+  \end{itemize}
+
+  Dłuższe wyrażenia. Jeśli chcemy by jakiś ciąg słów nigdy nie został
+  rozbity między dwie linie, to~piszemy np.~\verb+\mbox{coś tam, coś tam}+.
+
+\end{frame}
+% ##################
+
+
+
+
+
+% ##################
+\begin{frame}[fragile]
+  \frametitle{\% --~nasz najlepszy przyjaciel w~\LaTeX u}
+
+
+  O~co chodzi z~tym~\%? Jak każdy dobry język programowania, \LaTeX{}
+  posiada komentarze. Wszystko od znaku \%, do końca linii jest zupełnie
+  przez niego ignorowane. Jeśli chcemy mieć znak procenta w~tekście trzeba
+  napisać \verb+\%+.
+
+  Podstawowe rady
+  \begin{itemize}
+
+  \item Jeżeli dopiero zaczynasz pisać w~\LaTeX u i~uznałeś,
+    że~chcesz usunąć tekst z~pliku źródłowego, to~najlepiej go
+    wykomentuj. Zaraz dojdziesz do~wniosku, że~by ci~się przydał.
+
+  \item Komentarz to najlepszy debugger na świecie, dzięki
+    znanej już Platonowi, to jest bodaj w~dialogu \textit{Sofista},
+    metodzie bisekcji. Za~sekundę do~tego wrócimy.
+
+  \end{itemize}
+
+  Skorzystaj z~możliwości swojego środowiska.
+  Każde środowisko ma skrót klawiszowy odpowiedzialne
+  za~wykomentowanie i~odkomentowanie dowolnego bloku tekstu.
+  Dla~\TeX Makera: Ctrl-T, Ctrl-U.
+
+\end{frame}
+% ##################
+
+
+
+
+
+% ##################
+\begin{frame}[fragile]
+  \frametitle{Plik~się nie kompiluje}
+
+
+  Początkujący powinien powiesić to nad łóżkiem. Skróty klawiszowe
+  do~komentowania i~odkomentowania bloków tekstu. Dla \TeX Makera:
+  \begin{itemize}
+
+  \item wykomentuj~-- Ctrl-T;
+
+  \item odkomentuj~-- Ctrl-U.
+
+  \end{itemize}
+
+  Skoro już przy tym jesteśmy, to~trzeba powiedzieć o~trybie
+  matematycznym.
+
+  Jeśli mamy błąd kompilacji i~nie wiesz jaki
+  \begin{enumerate}
+
+  \item Kompilator podaje nam linię w~której jest błąd, ale
+    często~się myli w~zakresie 10~linii. Jeśli linie~są relatywnie
+    krótkie, to~jest większa szansa, że~poda poprawną.
+
+  \item Odkomentowujemy tekst, gdzie kompilator wskazuje błąd.
+
+  \item Kompilujemy jeszcze raz. Jeśli błąd jest wciąż obecny, to
+    znaczy, że~błędów jest więcej albo~wykomentowaliśmy zły
+    fragment.
+
+  \item Powtarzamy krok 2, aż~kompilator zadziała.
+
+  \end{enumerate}
+
+\end{frame}
+% ##################
+
+
+
+
+
+% ##################
+\begin{frame}[fragile]
+  \frametitle{Plik~się nie kompiluje}
+
+
+  Jeśli mamy błąd kompilacji i~nie wiesz jaki
+  \begin{enumerate}
+
+  \item Kompilator podaje nam linię w~której jest błąd, ale
+    często~się myli w~zakresie 10~linii. Jeśli linie~są relatywnie
+    krótkie, to~jest większa szansa, że~poda poprawną.
+
+  \item Odkomentowujemy tekst, gdzie kompilator wskazuje błąd.
+
+  \item Kompilujemy jeszcze raz. Jeśli błąd jest wciąż obecny, to
+    znaczy, że~błędów jest więcej albo~zakomentowaliśmy zły fragment.
+
+  \item Powtarzamy krok 2, aż~kompilator zadziała.
+
+  \item Przyglądamy~się krótkiemu fragmentowi zakomentowanego
+    tekstu, jeśli~znajdziemy w~nim błąd to go poprawiamy, jeśli nie
+    to go~odkomentowujemy.
+
+  \item Jeśli zadziałał, to powtarzamy krok 5, jeśli nie, to znaczy,
+    że~przeoczyliśmy błąd i~musimy dokładnie przeanalizować
+    odkomentowany fragment.
+
+  \item Stosujemy tę procedurę, aż~wszystko działa.
+
+  \end{enumerate}
+
+\end{frame}
+% ##################
+
+
+
+
+
+% ##################
+\begin{frame}[fragile]
+  \frametitle{Warto robić wcięcia}
+
+  Dlaczego warto skracać linie? Relatywnie krótkie linie w~pliku źródłowym
+  pozwalają pracować na małych fragmentach tekstu, a~znacznie łatwiej
+  znaleźć błąd w~krótkim fragmencie tekstu niż w~długim.
+
+  Przykład trybu matematycznego
+  \begin{equation}
+    \label{eq:Wstep-do-LaTeXa-01}
+    \epsilon > 0, \quad \varepsilon > 0.
+  \end{equation}
+
+  Aby to otrzymać piszemy
+\begin{verbatim}
+\begin{equation}
+  \label{eq:Wstep-do-LaTeXa-01}
+  \epsilon > 0, \quad \varepsilon > 0.
+\end{equation}
+\end{verbatim}
+
+  Wcięcia bardzo ułatwiają później pracę z~\LaTeX em, dobre
+  środowisko zrobi je za was. A~o~trybie matematyczny, więcej opowie
+  wam Wojtek.
+
+\end{frame}
+% ##################
+
+
+
+
+
+% ##################
+\begin{frame}[fragile]
+  \frametitle{Tryb matematyczny}
+
+
+  Chcemy mieć
+  \begin{equation}
+    \label{eq:Wstep-do-LaTeXa-02}
+    \frac{ \partial^{ 2 } u( x, t ) }{ \partial x^{ 2 } }
+    - \frac{ 1 }{ c^{ 2 } }
+    \frac{ \partial^{ 2 } u( x, t ) }{ \partial t^{ 2 } }
+    = 0.
+  \end{equation}
+  Będzie trochę roboty, ale~potem pokażemy jak zmniejszyć jej
+  ilość do~rozsądnych rozmiarów.
+
+  Słownik
+  \begin{itemize}
+
+  \item potęga --~\verb+a^{ 2 }+ = $a^{ 2 }$;
+
+  \item ułamek --~\verb+\frac{ 1 }{ 2 }+ = $\frac{ 1 }{ 2 }$;
+
+  \item pochodna cząstkowa --~\verb+\partial+ = $\partial$.
+
+  \end{itemize}
+
+\end{frame}
+% ##################
+
+
+
+
+
+% ##################
+\begin{frame}[fragile]
+  \frametitle{Tryb matematyczny}
+
+
+  Musimy napisać
+\begin{verbatim}
+\begin{equation}
+  \label{eq:Wstep-do-LaTeXa-02}
+  \frac{ \partial^{ 2 } u( x, t ) }{ \partial x^{ 2 } }
+  - \frac{ 1 }{ c^{ 2 } } \frac{ \partial^{ 2 } u( x, t ) }
+  { \partial t^{ 2 } }  = 0
+\end{equation}
+\end{verbatim}
+
+  Większość białych znaków jest tu niepotrzebna, dodałem je dla
+  własnej wygody. Tak samo podział na linie. W~trybie
+  matematycznym {\color{red} nie wolno} zostawiać pustych linii!!!
+
+\end{frame}
+% ##################
+
+
+
+
+
+% ##################
+\begin{frame}[fragile]
+  \frametitle{Tryb matematyczny}
+
+
+  Jeśli mamy błąd kompilacji i~nie wiesz jaki.
+  \begin{enumerate}
+
+  \item Kompilator podaje nam linię w~której jest błąd, ale
+    często~się myli o~jakieś 10~linii. Jeśli linie~są relatywnie
+    krótkie, to~jest większa szansa, że~poda poprawną.
+
+  \item Odkomentowujemy tekst, gdzie kompilator wskazuje błąd.
+
+  \item Kompilujemy jeszcze raz. Jeśli błąd jest wciąż obecny, to
+    znaczy, że~błędów jest więcej albo ~zakomentowaliśmy zły
+    fragment.
+
+  \item Powtarzamy krok 2, aż~kompilator zadziała.
+
+  \item Przyglądamy~się krótkiemu fragmentowi zakomentowanego
+    tekstu, jeśli~znajdziemy w~nim błąd to go poprawiamy, jeśli
+    nie to go~odkomentowujemy.
+
+  \item Jeśli zadziałał, to powtarzamy krok 5, jeśli nie, to
+    znaczy, że~przeoczyliśmy błąd i~musimy dokładnie
+    przeanalizować odkomentowany fragment.
+
+  \item Stosujemy tę procedurę, aż~wszystko działa.
+
+  \end{enumerate}
+
+\end{frame}
+% ##################
+
+
+
+
+
+% ##################
+\begin{frame}[fragile]
+  \frametitle{Uprośćmy sobie życie}
+
+
+  Dlaczego warto skracać linie?
+  Relatywnie krótkie linie w~pliku źródłowym pozwalają pracować na
+  małych fragmentach tekstu, a~znacznie łatwiej znaleźć błąd w~krótkiej
+  części tekstu niż w~długiej.
+
+
+  Przy odrobinie sprytu życie jest prostsze
+  Chcemy mieć % (trochę to brzydkie, ale~kod prosty)
+  \begin{equation}
+    \label{eq:Wstep-do-LaTeXa-03}
+    \epsilon > 0, \varepsilon > 0.
+  \end{equation}
+  Aby to uzyskać trzeba napisać
+\begin{verbatim}
+\begin{equation}
+  \label{eq:Wstep-do-LaTeXa-03}
+  \epsilon > 0, \varepsilon > 0.
+\end{equation}
+\end{verbatim}
+
+  Nie ma potrzeby tyle pisać.
+
+\end{frame}
+% ##################
+
+
+
+
+
+% ##################
+\begin{frame}[fragile]
+  \frametitle{Uprośćmy sobie życie}
+
+
+  \textbackslash newcommand. Wstawiamy do preambuły, najlepiej po ostatnim
+  \verb+\usepackage+, linię
+\begin{verbatim}
+\newcommand{\eps}{\epsilon}
+\end{verbatim}
+
+  Jeżeli dobrze rozumiem, a~to rozumowanie jeszcze mnie nie
+  zawiodło, urządzenie zwane preprocesorem zamieni w~tekście „na
+  chama” każde wystąpienie \verb+\eps+ na \verb+\epsilon+.
+
+  Analogicznie
+\begin{verbatim}
+\newcommand{\veps}{\varepsilon}
+\end{verbatim}
+
+  Od razu lepiej:).
+
+\end{frame}
+% ##################
+
+
+
+
+
+% ##################
+\begin{frame}[fragile]
+  \frametitle{Uprośćmy sobie życie}
+
+
+  Pochodna cząstkowa. Wstawiamy do~preambuły
+\begin{verbatim}
+\newcommand{\pd}[3]{\frac{ \partial^{ #1 } { #2 } }
+{ \partial { #3 }^{ #1 } }}
+\end{verbatim}
+
+  Lepiej nie rozdzielać, choć można, tej komendy na dwie linie jak
+  powyżej, zrobiłem to, aby tekst ładnie mieścił~się na~slajdzie.
+  Nawiasy wąsate wokół „\#liczba”, nie~są konieczne, ale~bez
+  nich \LaTeX{} czasem protestuje.
+
+  Piszemy
+\begin{verbatim}
+\pd{ 2 }{ u( x, t ) }{ x }
+- \frac{ 1 }{ c^{ 2 } } \pd{ 2 }{ u( x, t ) }{ t } = 0
+\end{verbatim}
+  Która wersja jest prostsza?
+
+\end{frame}
+% ##################
+
+
+
+
+
+% ##################
+\begin{frame}[fragile]
+  \frametitle{Uprośćmy sobie życie}
+
+
+  Objaśnienie
+\begin{verbatim}
+\newcommand{\nazwa-komendy}[ilość-argumentów]
+{treść komendy #1 #2 #3,...}
+\end{verbatim}
+
+  Nazwa komendy to chyba jasne. Jeśli komenda ma nie przyjmować
+  żadnych argumentów, jak komenda \verb+\LaTeX+, to pomijamy
+  nawias kwadratowy. Jeśli ma przyjmować np.~5 argumentów, to
+  piszemy [5]. W~treści komendy \LaTeX{} podstawi „na chama”
+  pierwszy argument za „\#1”, drugi za~„\#2”, etc.
+
+  Tutaj też lepiej nie rozbijać \verb+\newcommand+ na~dwie linie.
+
+  Użycie komendy
+\begin{verbatim}
+\nazwa-komendy{pierwszy-argument}{drugi-argument}...
+\end{verbatim}
+
+\end{frame}
+% ##################
+
+
+
+
+
+% ##################
+\begin{frame}[fragile]
+  \frametitle{Uprośćmy sobie życie}
+
+
+  Czy rozumiecie już jak działa
+\begin{verbatim}
+\newcommand{\pd}[3]{\frac{ \partial^{ #1 } { #2 } }
+{ \partial { #3 }^{ #1 } } }
+\pd{ 2 }{ u( x, t ) }{ x }
+\end{verbatim}
+  ta komenda?
+
+  {\color{red} Ważne}, \verb+\pd{ }{ u( x, t ) }{ x }+ też działa.
+
+  Inny przykład. \verb+\newcommand{\sizeOne}{8pt}+~-- definicja rozmiaru
+  czcionki.
+
+  Osobiste doświadczenie.
+  Potrafię mieć 40 \verb+\newcommand+ w~jednym pliku źródłowym,
+  tak bardzo upraszczają mi życie. Np.~jeśli chcę mieć znak $\to$,
+  to po co mam pisać \verb+\rightarrow+, kiedy mogę \verb+\ra+?
+
+\end{frame}
+% ##################
+
+
+
+
+
+% ##################
+\begin{frame}
+  \frametitle{Nie pytaj co możesz zrobić dla swojego środowiska}
+
+
+  To środowisko ma zrobić coś dla ciebie :) Podstawowe skróty i~polecenia,
+  na przykładzie \TeX Makera.
+  \begin{itemize}
+
+  \item Ctrl-T~-- zakomentuj blok tekstu;
+
+  \item Ctrl-U~-- odkomentuj blok tekstu;
+
+  \item Ctrl-$>$~-- wcięcie bloku;
+
+  \item Ctrl-$<$~-- usunięcie wcięcia bloku;
+
+  \item Ctrl-R~-- zastąp;
+
+  \item Ctrl-F~-- znajdź;
+
+  \item Ctrl-M~-- znajdź następny;
+
+  \item Ctrl-G~-- przejdź do linii;
+
+  \item Narzędzia $\to$ Wyczyść.
+  \end{itemize}
+
+  Sprawdź jakie są w~twoim i~ich używaj :).
+
+\end{frame}
+% ##################
+
+
+
+
+
+% ##################
+\begin{frame}
+  \frametitle{Co warto zrobić dalej?}
+
+
+  Rady
+  \begin{itemize}
+
+  \item Posłuchać następnych wystąpień :).
+
+  \item Przeczytać \textit{Nie za~krótkie wprowadzenie do~systemu
+      \LaTeX a}.
+
+  \item Nauczyć~się Bib\TeX a (chyba, że~jest już jakieś lepsze
+    rozwiązanie).
+
+  \item Pogooglować i~poeksperymentować.
+
+  \end{itemize}
+
+\end{frame}
+% ##################
+
+
+
+
+
+% ##################
+\begin{frame}
+  \frametitle{Literatura}
+
+
+  Podstawowa
+  \begin{itemize}
+
+  \item Tobias Oetiker et.al, \textit{Nie za~krótkie wprowadzenie
+      do~systemu \LaTeX{}~2$_{ \varepsilon }$''},
+    \colorhref{http://texdoc.net/texmf-dist/doc/latex/lshort-polish/lshort2e.pdf}{http://texdoc.net/texmf-dist/doc/latex/lshort-polish/lshort2e.pdf}.
+
+  \item \textit{\LaTeX. Wikibooks},
+    \colorhref{https://en.wikibooks.org/wiki/LaTeX}.
+
+  \item \emph{Share\LaTeX{} guides},
+    \colorhref{https://www.sharelatex.com/learn/Main_Page}.
+
+  \item Włodzimierz Macewicz, Stanisław Wawrykiewicz,
+    \textit{Wirtualna Akademia \TeX owa},
+    \colorhref{http://www.gust.org.pl/projects/wirtualna-akademia-texowa}
+    {http://www.gust.org.pl/projects/wirtualna-akademia-texowa}.
+
+  \item Scott Pakin, \textit{The Comprehensive \LaTeX{} Symbol
+      List},
+    \colorhref{http://tug.ctan.org/info/symbols/comprehensive/symbols-a4.pdf}
+    {http://tug.ctan.org/info/symbols/comprehensive/symbols-a4.pdf}.
+
+  \end{itemize}
+
+  Zaawansowana (sam jej nie rozumiem).
+  \begin{itemize}
+
+  \item Christian Feuers\"{a}nger, \textit{Notes On Programming in
+      \TeX},
+    \colorhref{http://pgfplots.sourceforge.net/TeX-programming-notes.pdf}
+    {http://pgfplots.sourceforge.net/TeX-programming-notes.pdf}.
+
+  \item Mark Trettin, \textit{An~essential guide to
+      \LaTeX{}~2$_{ \varepsilon }$ usage},
+    \colorhref{ftp://sunsite.icm.edu.pl/pub/CTAN/info/l2tabu/english/l2tabuen.pdf}{ftp://sunsite.icm.edu.pl/pub/CTAN/info/l2tabu/english/l2tabuen.pdf}.
+
+  \end{itemize}
+
+\end{frame}
+% ##################
+
+
+
+
+
+% ######################################
+\EndingSlide{Teraz cała przygoda z~\LaTeX em przed wami :)!\\
+  \vspace{1em} Dziękuję.}
+% ######################################
+
+
+
+
+
+% ############################
+
+% Koniec dokumentu
+\end{document}
