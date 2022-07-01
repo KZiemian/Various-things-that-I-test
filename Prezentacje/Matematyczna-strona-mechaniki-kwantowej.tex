@@ -273,196 +273,275 @@
     $\Vert \, f \Vert_{ 0 } = \sup_{ x \in [ 0, 1 ] } | \, f( x ) |$.
 
   \item Zbiór funkcji ciągłych określonych na odcinku $[ 0, 1 ]$ z~normą
-    $\Vert \, f ||_{ 1 } = \sup_{ x \in [0, 1] } |f(x)| $.
-Przestrzeń tą oznaczamy $\mathcal{ C } [0, 1]$.
-\pause
-\item[--]Przestrzeń $L^{ 2 }( \mathbb{ R }^{ n }, dx) $. Jest to najczęściej używana przestrzeń w nierelatywistycznej mechanice kwantowej.
-\end{itemize}
+    $\Vert \, f \Vert_{ 1 } = \sup_{ x \in [ 0, 1 ] } | \, f( x ) |$.
+    Przestrzeń tą oznaczamy $\Ccal[ 0, 1 ]$.
+
+  \item Przestrzeń $L^{ 2 }( \Rbb^{ n }, dx) $. Jest to najczęściej używana
+    przestrzeń w~nierelatywistycznej mechanice kwantowej.
+
+  \end{itemize}
 
 \end{frame}
 % ##################
 
 
-% \section[Postulaty MK]{Postulaty mechaniki kwantowej}
 
 
 
-% \begin{frame}
-% \frametitle{Postulaty mechaniki kwantowej}
-% \pause
-
-
-% \begin{block}{}
-% Postulaty te pochodzą z książki Stevena Weinberga ,,Teoria pól kwantowych. Tom I Podstawy.''
-% \end{block}
-% \pause
-
-% \begin{block}{Postulat I}
-% Stany fizyczne są reprezentowane przez promienie w przestrzeni Hilberta.
-% \end{block}
-% \pause
-
-% \begin{block}{Postulat II}
-% Obserwable są reprezentowane przez operatory samosprzężone. Stan reprezentowany przez promień $\mathcal{ R }(\psi)$ ma określoną wartość $\alpha$ obserwabli reprezentowanej przez operator $A$, jeżeli
-% $$A \psi = \alpha \psi \textrm{.}$$
-% \end{block}
-
-% \end{frame}
-
-
-% \begin{frame}
-% \frametitle{Postulaty mechaniki kwantowej}
-
-
-% \begin{block}{Postulat III}
-% Jeśli układ jest w stanie reprezentowanym przez promień $\mathcal{ R }$ i przeprowadzane jest doświadczenie sprawdzające, czy jest on w jednym ze stanów reprezentowanych przez wzajemnie ortogonalne promienie $\mathcal{ R }_{ 1 }, \mathcal{ R }_{ 2 }, \ldots$, to prawdopodobieństwo znalezienia go w stanie reprezentowanym przez $\mathcal{ R }_{ n }$ wynosi:
-% $$\mathcal{ P }(\mathcal{ R } \rightarrow \mathcal{ R }_{ n }) = |(\psi, \psi_{ n })|^{ 2 } \textrm{.}$$
-% \end{block}
-
-% \end{frame}
 
 
 
-% \section[FM a MK]{Fizyka matematyczna a mechanika kwantowa}
+
+
+% ######################################
+\section{Postulaty mechaniki kwantowej}
+% ######################################
 
 
 
-% \begin{frame}
-% \frametitle{Fizyka matematyczna a mechanika kwantowa}
+% ##################
+\begin{frame}
+  \frametitle{Postulaty mechaniki kwantowej}
 
 
-% \begin{block}{Pytanie}
-% Co można zakwestionować w tych postulatach?
-% \end{block}
-% \pause
-% \begin{block}{Z punktu widzenia matematyki\ldots}
-% \begin{itemize}
-% \pause
-% \item[--]\ldots czy przestrzeń Hilberta ma jakąś dodatkową strukturę?
-% \pause
-% \item[--]\ldots jakimi dokładnie operatorami są obserwable?
-% \end{itemize}
-
-% \end{block}
-
-% \end{frame}
+  Postulaty te pochodzą z książki Stevena Weinberga \textit{Teoria pól
+    kwantowych. Tom I: Podstawy},
+  \cite{WeinbergTeoriaPolKwantowychPodstawy2012}.
 
 
-% \begin{frame}
-% \frametitle{Operatory samosprzężone}
+  \textbf{Postulat~I.}
+  Stany fizyczne są reprezentowane przez promienie w~przestrzeni Hilberta.
+
+  \textbf{Postulat II.}
+  Obserwable są reprezentowane przez operatory samosprzężone. Stan
+  reprezentowany przez promień $\Rcal( \psi )$ ma określoną wartość $\alpha \in \Rbb$
+  obserwabli reprezentowanej przez operator $A$, jeżeli
+  \begin{equation}
+    \label{eq:Matematyczna-strona-01}
+    A \psi = \alpha \psi.
+  \end{equation}
+
+\end{frame}
+% ##################
 
 
-% \begin{block}{}
-% W przestrzeni Hilberta istnieją trzy podstawowe klasy operatorów, mających diametralnie różne własności. Musimy więc ustalić, do której z tych klas należą operatory reprezentujące obserwable.
-% \end{block}
-% \pause
-
-% \begin{block}{Klasy operatorów}
-% \begin{itemize}
-% \item[--]Operatory zwarte.
-% \item[--]Operatory ograniczone.
-% \item[--]Operatory nieograniczone.
-% \end{itemize}
-
-% \end{block}
-
-% \end{frame}
 
 
-% \begin{frame}{Operatory samosprzężone}
+
+% ##################
+\begin{frame}
+  \frametitle{Postulaty mechaniki kwantowej}
 
 
-% \begin{block}{Uwagi}
-% \begin{itemize}
-% \pause
-% \item[--]Dla operatora ograniczonego $A$ można zdefiniować normę operatora $|| A || < \infty$ jako najmniejszą liczbę spełniającą:
-% $$|| A x || \leq || A || \; || x ||, \forall x \in \mathcal{ H } \textrm{.}$$
-% \pause
-% \item[--]Operatory zwarte są ograniczone.
-% \pause
-% \item[--]Matematycznie trzeba inaczej traktować wartości własne i widmo ciągłe.
-% \end{itemize}
+  \textbf{Postulat III.}
+  Jeśli układ jest w stanie reprezentowanym przez promień $\Rcal$
+  i~przeprowadzane jest doświadczenie sprawdzające, czy jest on w~jednym ze
+  stanów reprezentowanych przez wzajemnie ortogonalne promienie
+  $\Rcal_{ 1 }, \Rcal_{ 2 }, \ldots$, to prawdopodobieństwo znalezienia go w~stanie
+  reprezentowanym przez $\Rcal_{ n }$ wynosi:
+  \begin{equation}
+    \label{eq:Matematyczna-strona-02}
+    \Pcal( \Rcal \rightarrow \Rcal_{ n }) = | ( \psi, \psi_{ n } ) |^{ 2 }.
+  \end{equation}
 
-% \end{block}
-
-% \end{frame}
-
-
-% \begin{frame}{Operatory zwarte}
+\end{frame}
+% ##################
 
 
-% \begin{block}{Twierdzenie Riesza o rozkładzie spektralnym}
-% \pause
-% \emph{Widmo samosprzężonego operatora zwartego składa się z samych wartości własnych, zawartych w odcinku $[ -|| A ||, || A ||]$. Zbiór wartości własnych jest skończony lub można go ustawić w ciąg $\lambda_{ 1 } \geq \lambda_{ 2 } \geq \lambda_{ 3 } \geq \ldots \rightarrow 0$. Ponadto, może z wyjątkiem $\lambda = 0$, wszystkie podprzestrzenie własne mają wymiar skończony.}
-
-% \end{block}
-% \end{frame}
 
 
-% \begin{frame}
 
 
-% \begin{block}{Wnioski}
-% \begin{itemize}
-% \pause
-% \item[--]Operatory zwarte samosprzężone są najbliższymi krewnymi macierzy hermitowskich w przypadku, gdy wymiar $\mathcal{ H }$ jest nieskończony.
-% \pause
-% \item[--]Działanie operatora zwartego $\mathcal{ L }$ można w poprawnie matematyczny sposób zapisać jako:
-% $$\mathcal{ L } | V \rangle = \sum_{ \lambda } \lambda a_{\lambda} | \lambda \rangle \textrm{.}$$
-% \pause
-% \item[--]Absolutnie nie nadają się jako kandydaci na obserwable takie jak: $\hat{ P }, \, \hat{ X }, \, a^{ \dagger }, \, a $, etc.
-% \end{itemize}
-
-% \end{block}
-% \pause
-
-% \begin{block}{Dlaczego?}
-% \pause
-% Ograniczoność widma operatorów zwartych nie zgadza się z dobrze znanymi własnościami tych obserwabli.
-
-% \end{block}
-
-% \end{frame}
 
 
-% \begin{frame}{Czy w takim razie operatory zwarte nie mają tu zastosowań?}
-% \pause
 
 
-% \begin{block}{Kontrprzykład}
-% \pause
-% Załóżmy, że nie wiemy w jakim konkretnie stanie znaduje się nasz układ, wiemy jednak, że z prawdopodobieństwem $p_{ i }$ znajduje się w stanie $\psi_{i}$. Ponieważ $p_{ i }$ są nieujemne i ich suma jest równa jeden, operator dany wzorem
-% $$\rho = \sum_{ i = 0 }^{ \infty } p_ { i }\; (\psi, \cdot) \psi$$
-% jest poprawnie określony i jest operatorem zwartym.
-% \end{block}
-% \pause
-
-% \begin{block}{}
-% Z tego względu teoria operatorów okazała się wartościowym podejściem do problemów kwantowej fizyki statystycznej.
-% \end{block}
-
-% \end{frame}
-
-% \begin{frame}{Operatory nieograniczone}
-% \pause
+% ######################################
+\section{Fizyka matematyczna a~mechanika kwantowa}
+% ######################################
 
 
-% \begin{block}{}
-% Ponieważ dla ograniczonych operatorów samosprzężonych istnieje analogiczne twierdzenie o lokalizacji widma na odcinku $[ -|| A ||, || A ||]$, pozostaje nam zająć się operatorami nieograniczonymi.
-% \end{block}
-% \pause
 
-% \begin{block}{Rozwiązanie}
-% Rzeczywiście okazuje się, że większość operatorów znanych z mechaniki kwantowej, takich jak $\hat{ P }, \, \hat{ X }, \, a^{ \dagger }, \, a $ et ct., okazuje się być samosprzężonymi operatorami nieograniczonymi.
-% \end{block}
-% \pause
+% ##################
+\begin{frame}
+  \frametitle{Fizyka matematyczna a~mechanika kwantowa}
 
-% \begin{block}{}
-% Z punktu widzenia fizyki matematycznej to krótkie stwierdzenie zawiera w sobie ogromną ilość skomplikowanej matematyki i nietrywialnych/ciekawych/irytujących problemów do rozwiązania.
-% \end{block}
 
-% \end{frame}
+  Pytanie: co można zakwestionować w tych postulatach?
 
+
+  Z punktu widzenia matematyki\ldots
+  \begin{itemize}
+
+  \item czy przestrzeń Hilberta ma jakąś dodatkową strukturę?
+
+  \item jakimi dokładnie operatorami są obserwable?
+
+  \end{itemize}
+
+\end{frame}
+% ##################
+
+
+
+
+
+% ##################
+\begin{frame}
+  \frametitle{Operatory samosprzężone}
+
+
+  W~przestrzeni Hilberta istnieją trzy podstawowe klasy operatorów, mających
+  diametralnie różne własności. Musimy więc ustalić, do której z~tych klas
+  należą operatory reprezentujące obserwable.
+
+  Klasy operatorów
+  \begin{itemize}
+
+  \item Operatory zwarte.
+
+  \item Operatory ograniczone.
+
+  \item Operatory nieograniczone.
+
+  \end{itemize}
+
+\end{frame}
+% ##################
+
+
+
+
+
+% ##################
+\begin{frame}
+  \frametitle{Operatory samosprzężone}
+
+
+  Uwagi
+  \begin{itemize}
+
+  \item Dla operatora ograniczonego $A$ można zdefiniować normę operatora
+    $\Vert A \Vert < \infty$ jako najmniejszą liczbę spełniającą:
+    \begin{equation}
+      \label{eq:Matematyczna-strona-03}
+      \Vert A x \Vert \leq \Vert A \Vert \, || x ||, \quad
+      \forall x \in \Hcal.
+    \end{equation}
+
+  \item Operatory zwarte są ograniczone.
+
+  \item Matematycznie trzeba inaczej traktować wartości własne i~widmo
+    ciągłe.
+
+  \end{itemize}
+
+\end{frame}
+% ##################
+
+
+
+
+
+% ##################
+\begin{frame}
+  \frametitle{Operatory zwarte}
+
+
+  \textbf{Twierdzenie Riesza o rozkładzie spektralnym}
+
+  Widmo samosprzężonego operatora zwartego składa się z samych wartości
+  własnych, zawartych w~odcinku $[ -\Vert A \Vert, \Vert A \Vert ]$. Zbiór wartości
+  własnych jest albo skończony albo można go ustawić w~ciąg
+  $\lambda_{ 1 } \geq \lambda_{ 2 } \geq \lambda_{ 3 } \geq \ldots \to 0$. Ponadto wszystkie podprzestrzenie
+  do wartości własnej $\lambda_{ n } \neq 0$ mają wymiar skończony.
+
+\end{frame}
+% ##################
+
+
+
+
+
+% ##################
+\begin{frame}
+  \frametitle{Operatory samosprzężone, wnioski}
+
+
+  \begin{itemize}
+
+  \item Operatory zwarte samosprzężone są najbliższymi krewnymi macierzy
+    hermitowskich w~przypadku, gdy wymiar $\Hcal$ jest nieskończony.
+
+  \item Działanie operatora zwartego $\Lcal$ można w poprawnie matematyczny
+    sposób zapisać jako:
+    \begin{equation}
+      \label{eq:Matematyczna-strona-03}
+      \Lcal | V \rangle = \sum_{ \lambda } \lambda \, a_{ \lambda } \, | \lambda \rangle
+    \end{equation}
+
+  \item Absolutnie nie nadają się jako kandydaci na obserwable takie jak:
+    $\widehat{ P }$, $\widehat{ X }$, $a$, $a^{ \dagger }$, etc.
+
+  \end{itemize}
+
+  \textbf{Dlaczego?} Ograniczoność widma operatorów zwartych nie zgadza~się
+  z~dobrze znanymi własnościami tych obserwabli.
+
+\end{frame}
+% ##################
+
+
+
+
+
+% ##################
+\begin{frame}
+  \frametitle{Czy w takim razie operatory zwarte nie mają tu zastosowań?}
+
+
+  \textbf{Kontrprzykład.}
+
+  Załóżmy, że nie wiemy w jakim konkretnie stanie znaduje się nasz układ,
+  wiemy jednak, że z prawdopodobieństwem $p_{ i }$ znajduje się w stanie
+  $\psi_{ i }$. Ponieważ $p_{ i }$ są nieujemne i ich suma jest równa jeden,
+  operator dany wzorem
+  \begin{equation}
+    \label{eq:Matematyczna-strona-04}
+    \rho = \sum_{ i = 0 }^{ \infty } p_ { i } \, ( \psi, \cdot \, ) \, \psi.
+  \end{equation}
+  jest poprawnie określony i~jest operatorem zwartym.
+
+  Z~tego względu teoria operatorów okazała się wartościowym podejściem
+  do~problemów kwantowej fizyki statystycznej.
+
+\end{frame}
+% ##################
+
+
+
+
+
+% ##################
+\begin{frame}
+  \frametitle{Operatory nieograniczone}
+
+
+  Ponieważ dla ograniczonych operatorów samosprzężonych istnieje analogiczne
+  twierdzenie o~lokalizacji widma na odcinku $[ -\Vert A \Vert, \Vert A \Vert ]$,
+  pozostaje nam zająć się operatorami nieograniczonymi.
+
+  \textbf{Rozwiązanie.}
+  Rzeczywiście okazuje się, że większość operatorów znanych z mechaniki
+  kwantowej, takich jak $\widehat{ P }$, $\widehat{ X }$, $a$, $a^{ \dagger }$,
+  etc., okazuje~się być samosprzężonymi operatorami nieograniczonymi.
+
+  Z~punktu widzenia fizyki matematycznej to krótkie stwierdzenie zawiera
+  w~sobie ogromną ilość skomplikowanej matematyki
+  i~nietrywialnych/ciekawych/irytujących problemów do rozwiązania.
+
+\end{frame}
+% ##################
 
 % \begin{frame}{Źródło problemów}
 % \pause
