@@ -61,8 +61,78 @@ rsync $JAGIELLONIANTEXTPOSPATH \
       $PRESENTATIONPATH/preambule/TextposConfiguration/
 
 
+
 # Path to "Computational condensed matter physics with Julia" presentation
 PRESENTATIONPATH="$PRESENTATIONSNEEDSIMPROVEMENTSPATH/Computational-condensed-matter-physics-Julia"
+
+rsync $JAGIELLONIANTHEMEPATH/*sty $PRESENTATIONPATH
+rsync $JAGIELLONIANCUSTOMIZATIONCOMMANDSPATH $PRESENTATIONPATH/preambule/
+rsync $JAGIELLONIANCUSTOMIZATIONGENERALPATH $PRESENTATIONPATH/preambule/
+rsync $JAGIELLONIANLANGUAGESETTINGSPATH \
+      $PRESENTATIONPATH/preambule/LanguageSettings/
+rsync $JAGIELLONIANTEXTPOSPATH \
+      $PRESENTATIONPATH/preambule/TextposConfiguration/
+
+
+
+# Path to "Czemu rozważanie cząstek w zakrzywionej czasoprzestrzeni
+# może być błędem?" presentation
+PRESENTATIONPATH="$PRESENTATIONSNEEDSIMPROVEMENTSPATH/Czemu-rozważanie-cząstek-w-zakrzywionej-czasoprzestrzeni-może-być-błędem"
+
+rsync $JAGIELLONIANTHEMEPATH/*sty $PRESENTATIONPATH
+rsync $JAGIELLONIANCUSTOMIZATIONCOMMANDSPATH $PRESENTATIONPATH/preambule/
+rsync $JAGIELLONIANCUSTOMIZATIONGENERALPATH $PRESENTATIONPATH/preambule/
+rsync $JAGIELLONIANLANGUAGESETTINGSPATH \
+      $PRESENTATIONPATH/preambule/LanguageSettings/
+rsync $JAGIELLONIANTEXTPOSPATH \
+      $PRESENTATIONPATH/preambule/TextposConfiguration/
+
+
+
+# Path to "Filozofia współczesna. Wprowadzenie" presentation
+PRESENTATIONPATH="$PRESENTATIONSNEEDSIMPROVEMENTSPATH/Filozofia-współczesna-Wprowadzenie"
+
+rsync $JAGIELLONIANTHEMEPATH/*sty $PRESENTATIONPATH
+rsync $JAGIELLONIANCUSTOMIZATIONCOMMANDSPATH $PRESENTATIONPATH/preambule/
+rsync $JAGIELLONIANCUSTOMIZATIONGENERALPATH $PRESENTATIONPATH/preambule/
+rsync $JAGIELLONIANLANGUAGESETTINGSPATH \
+      $PRESENTATIONPATH/preambule/LanguageSettings/
+rsync $JAGIELLONIANTEXTPOSPATH \
+      $PRESENTATIONPATH/preambule/TextposConfiguration/
+
+
+
+# Path to "Filozofia i matematyczne wyzwania nieralatywitycznej mechaniki
+# kwantowej" presentation
+PRESENTATIONPATH="$PRESENTATIONSNEEDSIMPROVEMENTSPATH/Filozoficzne-i-matematyczne-wyzwania-nierelatywistycznej-mechaniki-kwantowej"
+
+rsync $JAGIELLONIANTHEMEPATH/*sty $PRESENTATIONPATH
+rsync $JAGIELLONIANCUSTOMIZATIONCOMMANDSPATH $PRESENTATIONPATH/preambule/
+rsync $JAGIELLONIANCUSTOMIZATIONGENERALPATH $PRESENTATIONPATH/preambule/
+rsync $JAGIELLONIANLANGUAGESETTINGSPATH \
+      $PRESENTATIONPATH/preambule/LanguageSettings/
+rsync $JAGIELLONIANTEXTPOSPATH \
+      $PRESENTATIONPATH/preambule/TextposConfiguration/
+
+
+
+# Path to "Grafen, czyli dynamika relatywistyczna przy trochę mniejszych
+# prędkościach" presentation
+PRESENTATIONPATH="$PRESENTATIONSNEEDSIMPROVEMENTSPATH/Grafen-czyli-dynamika-relatywistyczna-przy"
+
+rsync $JAGIELLONIANTHEMEPATH/*sty $PRESENTATIONPATH
+rsync $JAGIELLONIANCUSTOMIZATIONCOMMANDSPATH $PRESENTATIONPATH/preambule/
+rsync $JAGIELLONIANCUSTOMIZATIONGENERALPATH $PRESENTATIONPATH/preambule/
+rsync $JAGIELLONIANLANGUAGESETTINGSPATH \
+      $PRESENTATIONPATH/preambule/LanguageSettings/
+rsync $JAGIELLONIANTEXTPOSPATH \
+      $PRESENTATIONPATH/preambule/TextposConfiguration/
+
+
+
+# Path to "Julia: 2010s proposition for scientific (and other) programming"
+# presentation
+PRESENTATIONPATH="$PRESENTATIONSNEEDSIMPROVEMENTSPATH/Herdegens-algebraic-approach-to-Casimir-effect"
 
 rsync $JAGIELLONIANTHEMEPATH/*sty $PRESENTATIONPATH
 rsync $JAGIELLONIANCUSTOMIZATIONCOMMANDSPATH $PRESENTATIONPATH/preambule/
@@ -77,6 +147,47 @@ rsync $JAGIELLONIANTEXTPOSPATH \
 # Path to "Julia: 2010s proposition for scientific (and other) programming"
 # presentation
 PRESENTATIONPATH="$PRESENTATIONSNEEDSIMPROVEMENTSPATH/Julia-2010s-proposition"
+
+rsync $JAGIELLONIANTHEMEPATH/*sty $PRESENTATIONPATH
+rsync $JAGIELLONIANCUSTOMIZATIONCOMMANDSPATH $PRESENTATIONPATH/preambule/
+rsync $JAGIELLONIANCUSTOMIZATIONGENERALPATH $PRESENTATIONPATH/preambule/
+rsync $JAGIELLONIANLANGUAGESETTINGSPATH \
+      $PRESENTATIONPATH/preambule/LanguageSettings/
+rsync $JAGIELLONIANTEXTPOSPATH \
+      $PRESENTATIONPATH/preambule/TextposConfiguration/
+
+
+
+# Path to "Matematyczna strona mechaniki kwantowej" presentation
+PRESENTATIONPATH="$PRESENTATIONSNEEDSIMPROVEMENTSPATH/Matematyczna-strona-mechaniki-kwantowej"
+
+rsync $JAGIELLONIANTHEMEPATH/*sty $PRESENTATIONPATH
+rsync $JAGIELLONIANCUSTOMIZATIONCOMMANDSPATH $PRESENTATIONPATH/preambule/
+rsync $JAGIELLONIANCUSTOMIZATIONGENERALPATH $PRESENTATIONPATH/preambule/
+rsync $JAGIELLONIANLANGUAGESETTINGSPATH \
+      $PRESENTATIONPATH/preambule/LanguageSettings/
+rsync $JAGIELLONIANTEXTPOSPATH \
+      $PRESENTATIONPATH/preambule/TextposConfiguration/
+
+
+
+# Path to "Wstęp do LaTeXa. Kilka uwag o używaniu LaTeXa"
+# presentation
+PRESENTATIONPATH="$PRESENTATIONSNEEDSIMPROVEMENTSPATH/Kilka-uwag-o-używaniu-LaTeXa"
+
+rsync $JAGIELLONIANTHEMEPATH/*sty $PRESENTATIONPATH
+rsync $JAGIELLONIANCUSTOMIZATIONCOMMANDSPATH $PRESENTATIONPATH/preambule/
+rsync $JAGIELLONIANCUSTOMIZATIONGENERALPATH $PRESENTATIONPATH/preambule/
+rsync $JAGIELLONIANLANGUAGESETTINGSPATH \
+      $PRESENTATIONPATH/preambule/LanguageSettings/
+rsync $JAGIELLONIANTEXTPOSPATH \
+      $PRESENTATIONPATH/preambule/TextposConfiguration/
+
+
+
+# Path to "Podejście Herdegena do efektu Casimira-I"
+# presentation
+PRESENTATIONPATH="$PRESENTATIONSNEEDSIMPROVEMENTSPATH/Podejście-Herdegena-do-efektu-Casimira-I"
 
 rsync $JAGIELLONIANTHEMEPATH/*sty $PRESENTATIONPATH
 rsync $JAGIELLONIANCUSTOMIZATIONCOMMANDSPATH $PRESENTATIONPATH/preambule/
