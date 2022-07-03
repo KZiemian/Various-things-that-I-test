@@ -1,0 +1,1134 @@
+% ---------------------------------------------------------------------
+% Basic configuration of Beamera and Jagiellonian
+% ---------------------------------------------------------------------
+\RequirePackage[l2tabu, orthodox]{nag}
+
+
+
+\ifx\PresentationStyle\notset
+\def\PresentationStyle{dark}
+\fi
+
+
+
+\documentclass[10pt,t]{beamer}
+\mode<presentation>
+\usetheme[style=\PresentationStyle,logoLang=Latin,logoColor=monochromaticJUwhite,JUlogotitle=yes]{jagiellonian}
+
+
+
+% ---------------------------------------
+% Configuration files of Jagiellonian loceted in catalog preambule
+% ---------------------------------------
+\input{./preambule/LanguageSettings/JagiellonianPolishLanguageSettings.tex}
+\input{./preambule/TextposConfiguration/TextposConfiguration.tex}
+
+\input{./preambule/JagiellonianCustomizationGeneral.tex}
+\input{./preambule/JagiellonianCustomizationCommands.tex}
+
+
+
+
+
+
+
+
+
+
+% ---------------------------------------
+% Packages, libraries and their configuration
+% ---------------------------------------
+\usepackage{mathcommands}
+
+
+
+
+
+% ---------------------------------------
+% Configuration for this particular presentation
+% ---------------------------------------
+
+
+
+
+
+
+
+
+
+
+% ---------------------------------------------------------------------
+\title{Niespodziewane teoretyczne trudności kwantowej teorii pola w~OTW}
+
+\author{Kamil Ziemian \\
+  \texttt{kziemianfvt@gmail.com} }
+
+
+% \institute{Jagiellonian University in~Cracow}
+
+% \date[23 November 2018]{Seminar~of Field Theory Department \\
+%   23 November 2018}
+% --------------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+% ####################################################################
+% Początek dokumentu
+\begin{document}
+% ####################################################################
+
+
+
+
+
+% Wyrównanie do lewej z łamaniem wyrazów
+
+\RaggedRight
+
+
+
+
+
+% ######################################
+\maketitle % Tytuł całego tekstu
+% ######################################
+
+
+
+
+
+% ######################################
+\begin{frame}
+  \frametitle{Spis treści}
+
+
+  \tableofcontents % Spis treści
+
+\end{frame}
+% ######################################
+
+
+
+
+% ##################
+\begin{frame}
+  \frametitle{Problem przed którym stajemy}
+
+
+  Będziemy rozważać problem sformułowania teorii pola kwantowego,
+  żyjącego na ustalonej, klasycznej, zakrzywionej czasoprzestrzeni.
+  Pomijamy więc zupełnie jego wkład do pola grawitacyjnego.
+
+  Jest to umiarkowanie ambitny cel. Lecz i~on napotyka na szereg
+  głębokich problemów.
+
+\end{frame}
+% ##################
+
+
+
+
+
+% ##################
+\begin{frame}
+  \frametitle{Będę upraszczał}
+
+
+  Dzisiaj nie ma ani czas ani prelegenta, by zagłębiać~się we wszystko
+  z~pełną precyzją. Dlatego część rzeczy pominę, część uproszczę mniej
+  lub bardziej.
+
+\end{frame}
+% ##################
+
+
+
+
+
+% ##################
+\begin{frame}
+  \frametitle{Uwaga techniczna}
+
+
+  Istnieje tylko \alert{jedna} przestrzeń Hilberta $\Hcal$ dla
+  nierelatywistycznej mechaniki kwantowej. Dla kwantowej teorii pola
+  jest ich nieprzeliczalnie wiele, albo więcej.
+
+  Trochę bardziej ściśle. Twierdzenie Stone’a-von Neumanna głosi, że
+  mechanika kwantowa żyje w~ośrodkowej przestrzeni Hilberta, a~ta jest
+  tylko jedna (z~dokładnością do transformacji unitarnych).
+
+  Kwantowej teorii pola nie można sformułować w~ośrodkowej przestrzeni
+  Hilberta, a~przestrzeni nieośrodkowych znamy już nieprzeliczalnie
+  wiele. Co więcej skonstruowano już nieprzeliczalnie wiele kwantowych
+  teorii pola żyjących w~unitarnie nierównoważnych przestrzeniach
+  Hilberta.
+
+\end{frame}
+% ##################
+
+
+
+
+
+% ##################
+\begin{frame}
+  \frametitle{Pole elektromagnetyczne}
+
+
+  Elektrodynamika Clerka Maxwella bez ładunków i~prądów jest teorią
+  czysto geometryczną, więc przeniesienie jej do OTW nie stwarza
+  problemu.
+
+  Pole zapisujemy za pomocą tensora Clerka Maxwell.
+  \begin{equation}
+    \label{eq:Niespodziewane-teoretyczne-01}
+    F_{ \mu \nu }( x )
+    =
+    \begin{pmatrix}
+      \hphantom{-} 0 & \frac{ 1 }{ c } E_{ x }( x ) & \frac{ 1 }{ c }
+      E_{ y }( x )
+      & \frac{ 1 }{ c } E_{ z }( x ) \\
+      -\frac{ 1 }{ c } E_{ x }( x ) & \hphantom{-} 0 & -B_{ z }( x )
+      & \hphantom{-} B_{ y }( x ) \\
+      -\frac{ 1 }{ c } E_{ y }( x ) & \hphantom{-} B_{ z }( x )
+      & \hphantom{-} 0 & -B_{ z }( x ) \\
+      -\frac{ 1 }{ c } E_{ z }( x ) & -B_{ y }( x ) & \hphantom{-} B_{
+        x }( x ) & \hphantom{-} 0
+    \end{pmatrix}
+  \end{equation}
+
+  Jeśli wprowadzimy czteroformę pola
+  $F( x ) = F_{ \mu \nu }( x ) \, dx^{ \mu } \wedge dx^{ \nu }$
+  i~czteroformę potencjału $A( x ) = A_{ \mu }( x ) \, dx^{ \mu }$ to
+  równania Clerka Maxwella przyjmują formę (trochę upraszczam)
+  \begin{equation}
+    \label{eq:Niespodziewane-teoretyczne-02}
+    F( x ) = dA( x ), \quad
+    dF( x ) = 0.
+  \end{equation}
+
+\end{frame}
+% ##################
+
+
+
+
+
+% ##################
+\begin{frame}
+  \frametitle{Uproszczona kwantyzacja w~czasoprzestrzeni Minkowskiego}
+
+
+  1. Wybierz inercjalny układ współrzędnych.
+
+  2. Wypisz w~nim równania Clerka Maxwella.
+  \begin{equation}
+    \label{eq:Niespodziewane-teoretyczne-03}
+    \square \, A_{ \mu }( x ) = 0, \quad
+    \partial^{ \nu } A_{ \nu } = 0
+  \end{equation}
+
+  3. Zapisz rozwiązanie równań Clerka Maxwella jako
+  \begin{equation}
+    \label{eq:Niespodziewane-teoretyczne-04}
+    \begin{split}
+      A( x )
+      &=
+        \int d^{ 3 }k \, \sum_{ \mu = \pm 1 } \frac{ 1 }{ \omega( \veck ) }
+        \big( \vec{ e }^{ ( \mu ) }( \veck ) a_{ \veck }^{ ( \mu ) }( t )
+        e^{ -i \omega( \veck ) t + i \veck \cdot \vecx } \, + \\
+      &\hphantom{=} + \, \overline{ \vece }^{ ( \mu ) }( \veck )
+        \overline{ a }_{ \veck }^{ ( \mu ) }( t )
+        e^{ i \omega( \veck ) t - i \veck \cdot \vecx } \big)
+    \end{split}
+  \end{equation}
+
+  4. Podnieś $A( x )$, $a_{ \veck }^{ ( \mu ) }$ do rangi operatorów.
+
+\end{frame}
+% ##################
+
+
+
+
+
+% ##################
+\begin{frame}
+  \frametitle{Uproszczona kwantyzacja w~czasoprzestrzeni Minkowskiego}
+
+
+  \begin{equation}
+    \label{eq:Niespodziewane-teoretyczne-05}
+    \begin{split}
+      \widehat{A}( x )
+      &=
+        \int d^{ 3 }k \, \sum_{ \mu = \pm 1 } \frac{ 1 }{ \omega( \veck ) }
+        \big( \vec{ e }^{ ( \mu ) }( \veck )
+        \widehat{a}_{ \veck }^{ ( \mu ) }( t )
+        e^{ -i \omega( \veck ) t + i \veck \cdot \vecx } \, + \\
+      &\hphantom{=} + \, \overline{ \vece }^{ ( \mu ) }( \veck )
+        \widehat{a}_{ \veck }^{ \dagger \, ( \mu ) }( t )
+        e^{ i \omega( \veck ) t - i \veck \cdot \vecx } \big)
+    \end{split}
+  \end{equation}
+
+  5. Zinterpretuj operator przy
+  $\exp( -i \omega( \veck ) t + i \veck \cdot \vecx )$
+  jako operator anihilacji. Znajdź więc stan, taki że
+  \begin{equation}
+    \label{eq:Niespodziewane-teoretyczne-06}
+    \widehat{a}_{ \vec{ k } }^{ ( \mu ) }( t ) | 0 \rangle = 0, \quad
+    \forall \vec{ k }, \mu.
+  \end{equation}
+
+  6. Zbuduj przestrzeń Hilberta ze stanów zawierających 0, 1, 2, 3,
+  \ldots, cząstek.
+  \begin{equation}
+    \label{eq:Niespodziewane-teoretyczne-07}
+    | 0 \rangle, \widehat{a}^{ \dagger \, ( \mu ) }_{ \veck }( t ) | 0 \rangle,
+    \widehat{a}^{ \dagger \, ( \mu ) }_{ \veck }( t )
+    \widehat{a}^{ \dagger \, ( \nu ) }_{ \veck' }( t ) | 0 \rangle,
+    \widehat{a}^{ \dagger \, ( \mu ) }_{ \veck }( t )
+    \widehat{a}^{ \dagger \, ( \nu ) }_{ \veck' }( t )
+    \widehat{a}^{ \dagger \, ( \rho ) }_{ \veck'' }( t ) | 0 \rangle, \ldots
+  \end{equation}
+
+\end{frame}
+% ##################
+
+
+
+
+
+% ##################
+\begin{frame}
+  \frametitle{Co może pójść nie tak?}
+
+
+  \begin{equation}
+    \label{eq:Niespodziewane-teoretyczne-08}
+    \widehat{a}_{ \veck }^{ ( \mu ) }( t ) | 0 \rangle = 0, \quad
+    \forall \veck, \mu.
+  \end{equation}
+  Jest zbyt wiele stanów spełniających tą relację. Wybór każdego
+  z~nich daje inną przestrzeń Hilberta budowanej wedle przepisu
+  \begin{equation}
+    \label{eq:Niespodziewane-teoretyczne-09}
+    | 0 \rangle,
+    \widehat{a}^{ \dagger \, ( \mu ) }_{ \veck }( t ) | 0 \rangle,
+    \widehat{a}^{ \dagger \, ( \mu ) }_{ \veck }( t )
+    \widehat{a}^{ \dagger \, ( \nu ) }_{ \veck' }( t ) | 0 \rangle,
+    \widehat{a}^{ \dagger \, ( \mu ) }_{ \veck }( t )
+    \widehat{a}^{ \dagger \, ( \nu ) }_{ \veck' }( t )
+    \widehat{a}^{ \dagger \, ( \rho ) }_{ \veck'' }( t ) | 0 \rangle, \ldots
+  \end{equation}
+  Każda taka przestrzeń to inna fizyka.
+
+  Ale istnieje tylko \alert{jeden} stan $| 0 \rangle$ który jest taki
+  sam w~każdym inercjalnym układzie współrzędnych. Inaczej mówiąc,
+  który spełnia relację:
+  \begin{equation}
+    \label{eq:Niespodziewane-teoretyczne-10}
+    U( L, \veca ) | 0 \rangle = | 0 \rangle,
+  \end{equation}
+  gdzie $L$ to transformacja Lorentza, a~$\veca$ to czterowektor
+  translacji.
+
+\end{frame}
+% ##################
+
+
+
+
+
+% ##################
+\begin{frame}
+  \frametitle{Trochę szczegółów}
+
+
+  Pole kwantowe $\widehat{A}( x )$ wygląda tak samo w~każdym
+  inercjalnym układzie współrzędnych i~istnieje tylko jeden stan
+  $| 0 \rangle$, który wygląda tak samo w~każdym z~tych układów.
+
+  Mówiąc prościej, może nawet za prosto. Jest tylko jeden „stan
+  próżni”, który jest pusty w~\alert{każdym} inercjalnym układzie
+  odniesienia. Pozostałe są puste w~jednych, a~zawierają cząstki
+  w~innych. „Dziwne stany próżni”.
+
+  Dobrze nam znane pojęcie cząstki jest uratowane!
+
+\end{frame}
+% ##################
+
+
+
+
+
+% ##################
+\begin{frame}
+  \frametitle{Teraz widać co się może popsuć}
+
+
+  Na zakrzywionej czasoprzestrzeni nie można liczyć na istnienie grupy
+  symetria tak dużej, jak grupa Poincar\'{e}’ego. Tym samym nie jest
+  możliwe znalezienie stanu próżni który jest wszędzie pusty. Bardzo
+  dziwne.
+
+  W~zakrzywionej czasoprzestrzeni takiego uniwersalnego stanu próżni
+  nie da~się zwykle znaleźć, w~jednych układach będzie pusty w~innych
+  nie. To w~istocie leży u~podstaw słynnego promieniowania czarnych
+  dziur (miało dobry marketing).
+
+\end{frame}
+% ##################
+
+
+
+
+
+% ##################
+\begin{frame}
+  \frametitle{Dlaczego nie można liczyć na uniwersalną próżnię?}
+
+
+  W~czasoprzestrzenni Minkowskiego zbiór operatorów anihilacji
+  $\widehat{a}^{ ( \mu ) }_{ \veck }( t )$ wszystkich układów
+  inercjalnych jest stosunkowo mały. Ogranicza go warunek równoważny
+  niezmienniczości próżni:
+  \begin{equation}
+    \label{eq:Niespodziewane-teoretyczne-11}
+    \widehat{U}^{ \dagger }( L, a ) \, \widehat{a}^{ ( \mu ) }_{ \veck }( t ) \,
+    \widehat{U}( L, a )
+    =
+    \widehat{a}^{ ( \mu ) }_{ \veck' }( t' ),
+  \end{equation}
+  przy czym $( L, a )$ przekształca $t$, $\veck$ na $t'$, $\veck'$.
+
+  W~zakrzywionej czasoprzestrzenie zwykle nie będzie żadnego takiego
+  ograniczenia, więc klasa operatorów anihilacji będzie zbyt duża, by
+  znaleźć dla nich wspólną próżnię, różną od wektora $0$.
+
+\end{frame}
+% ##################
+
+
+
+
+
+% ##################
+\begin{frame}
+  \frametitle{Lista problemów}
+
+
+  \begin{itemize}
+    \RaggedRight
+
+  \item Brak dobrego stanu próżni $| 0 \rangle$.
+
+  \item Brak dobrej przestrzeni Hilberta zbudowanej ze stanu próżni.
+
+  \item Bez dobrej przestrzeni Hilberta i grupy Poincar\'{e}’ego nie
+    podamy stanów cząstek swobodnych.
+
+  \item Jak nie ma cząstek swobodnych, to nie ma też macierzy $S$.
+
+  \item W~skutek poprzednich niewiadoma jak wybrać propagatora
+    Feynmana.
+
+  \end{itemize}
+
+\end{frame}
+% ##################
+
+
+
+
+
+% ##################
+\begin{frame}
+  \frametitle{Uwagi}
+
+
+  W~wystąpieniu postaram się ominąć wszystkie sprawy techniczne,
+  które nie~są potrzebne do zrozumienia teorii. Z~tego względu część
+  wzorów nie jest „dobrze określona”, ale~wszystkie te problemy
+  można obejść.
+
+  Notacja stosowana w~cytowanych pracach jest dość hermetyczna. Będę
+  wypisywał formuły możliwie jawnie.
+
+  Z~podobnego ducha wyrasta podejście do QFT na~zakrzywionych
+  czasoprzestrzeniach oparte o~OPE. Zagadnienie relacji
+  tych sformułowań nie będzie poruszane.
+
+\end{frame}
+% ##################
+
+
+
+
+
+% ##################
+\begin{frame}
+  \frametitle{Uwagi}
+
+
+  Najbardziej interesujący aspekt prezentowanej teorii,
+  czyli przepisy rachunkowe~są obecnie dynamiczne rozwijane tak,
+  że~mówienie o~nich w~chwili obecnej musi chyba oscylować między
+  Scyllą przesadnie skomplikowanych rachunków, a~Charybdą być może
+  płonnych nadziei.
+
+  Zagadnienie rozbieżności podczerwonych jest będzie zupełnie
+  pominięte w~rozważaniach.
+
+\end{frame}
+% ##################
+
+
+
+
+
+% ##################
+\begin{frame}
+  \frametitle{Motywacje}
+
+
+  Obecny stan teorii fizycznych wskazuje na potrzebę istnienia
+  kwantowej teorii grawitacji. Jednak pomimo istnienia podejść
+  takich jak teoria strun czy grawitacja pętlowa, oraz opisania
+  pewnych efektów kwantowych na zakrzywionych czasoprzestrzeniach
+  (promieniowanie Hawkinga), zadowalająca teoria nie jest znana.
+
+  Zamiast radykalnego przebudowania teorii, można pójść bardziej
+  tradycyjną drogą i~spróbować najpierw przenieść QFT na zadane
+  zakrzywione czasoprzestrzenie.
+
+\end{frame}
+% ##################
+
+
+
+
+
+% ##################
+\begin{frame}
+  \frametitle{Algebraiczna QFT $\MathTextFrametitleFGColor{\subset}$
+    Lokalna Fizyka Kwantowa}
+
+
+  Jest to pewne podejście, które pozawala obejść trudności o~których
+  mówiłem. Mówię akurat o~nim z~prostego powodu: tylko na nim~się coś
+  znam.
+
+  Wadą tego podejścia jest to, że~nie udało~się na razie wyciągnąć
+  z~niego konkretnych wniosków, które dałoby~się porównać
+  z~eksperymentem. Tak było przynajmniej do 2018 roku, bo nowszych
+  źródeł nie udało mi~się przejrzeć.
+
+
+  Podejście to zostało zaproponowane przez Rudolfa Haaga (1922--2016)
+  w~latach 50 i~60 XX wieku. U~podstaw leżała chęć „redukcji teorii
+  do~wielkości obserwowalnych„ i~ograniczyć „nadmiarowość”
+  przestrzeni Hilberta w~teoriach z~regułami nadwyboru. Przykładowo
+  jak mamy regułę nadwyboru ładunku elektrycznego.
+
+\end{frame}
+% ##################
+
+
+
+
+
+% ##################
+\begin{frame}
+  \frametitle{Algebraiczna QFT $\MathTextFrametitleFGColor{\subset}$
+    Lokalna Fizyka Kwantowa}
+
+
+  Konsekwencje
+  \begin{itemize}
+    \RaggedRight
+
+  \item Lokalność („zasada-bliskiego-działania”).
+
+  \item Algebry z~inwolucją jako centralny obiekt teorii.
+
+  \end{itemize}
+
+\end{frame}
+% ##################
+
+
+
+
+
+% ##################
+\begin{frame}
+  \frametitle{Algebraiczna QFT $\MathTextFrametitleFGColor{\subset}$
+    Lokalna Fizyka Kwantowa}
+
+
+  Rozważmy czasoprzestrzeń $M$, może to być czasoprzestrzeń
+  Minkowskiego albo zakrzywiona.
+
+  Za podstawową zjawiska fizycznego uznajemy, że~zdarzyło się
+  „w~jakimś miejscu i~jakimś czasie”. Tą własność lokalności zjawisk
+  („zasada-bliskiego-działania”), formalizujemy następująco.
+
+  Niech $O$ będzie otwartym podzbiorem $M$, którego domknięcie jest
+  zwarte. Niech $\Acal( O )$ będzie zbiorem wszystkim obserwabli
+  = rodzajów zjawisk które możemy zmierzyć w~zbiorze $O$.
+
+  Przyjmujemy, że~$\Acal( O )$ tworzy algebrę z~gwiazdką albo
+  $C^{ * }$-algebrę.
+
+\end{frame}
+% ##################
+
+
+
+
+
+% ##################
+\begin{frame}
+  \frametitle{Algebraiczna QFT $\MathTextFrametitleFGColor{\subset}$
+    Lokalna Fizyka Kwantowa}
+
+
+  Spróbuje to uczynić bardziej dotykalnym. W~mechanice kwantowej
+  w~reprezentacji położeń mamy $X = x$
+  i~$P = -i \, \hbar \, \partial_{ x }$. Rachunkowo łatwo (przymykając
+  oczy na matematykę) pokazać:
+  \begin{equation}
+    \label{eq:Niespodziewane-teoretyczne-12}
+    X P - P X = i \, \hbar \, I.
+  \end{equation}
+  Wybór tych operatorów nie jest jednak jednoznaczny, możemy bowiem
+  wziąć $X = i \, \hbar \, \partial_{ p }$ i~$P = p$. Oba opisy są
+  równoważne.
+
+  Możemy spojrzeć na to w~następujący sposób: podstawowym obiektem
+  jest algebra definiowana przez relację
+  \eqref{eq:Niespodziewane-teoretyczne-12}, którą można ją
+  przetłumaczyć na przestrzenie Hilberta na wiele różnych sposobów.
+
+\end{frame}
+% ##################
+
+
+
+
+
+% ##################
+\begin{frame}
+  \frametitle{Algebraiczna QFT $\MathTextFrametitleFGColor{\subset}$
+    Lokalna Fizyka Kwantowa}
+
+
+  Rozważmy przestrzeń dualną do $\Acal( O )$, jako do
+  przestrzeni wektorowej: $\Acal^{ * }( O )$.
+
+  „Dobre” elementy $\Acal^{ * }( O )$ mają interpretację
+  stanów układu fizycznego. Wynika to z~tego, że jeśli
+  $a \in \Acal( O )$, $\omega \in \Acal^{ * }( O )$ to
+  $\omega( a )$ jest liczbą, którą rozumiemy jak wartość oczekiwaną
+  pomiarów zjawiska $a$, np. prędkości elektronu, w~stanie $\omega$.
+  \begin{equation}
+    \label{eq:Niespodziewane-teoretyczne-13}
+    \langle a \rangle_{ \omega } = \omega( a )
+  \end{equation}
+
+  Pełen rozkład prawdopodobieństwa da się odtworzyć jeśli znamy
+  wszystkie momenty: $\langle a^{ n } \rangle_{ \omega }$,
+  $n = 1, 2, 3, \ldots$.
+
+  Jeśli mamy stan $\omega$ to konstrukcje takie jak GNS mówią nam, że
+  możemy algebrę $\Acal( O )$ przenieść na przestrzeń Hilberta,
+  tak że $a \in \Acal( O )$ stają się operatorami,
+  a~$\omega \in \Acal^{ * }( O )$ wektorami stanu.
+
+\end{frame}
+% ##################
+
+
+
+
+
+% ##################
+\begin{frame}
+  \frametitle{Algebraiczna QFT $\MathTextFrametitleFGColor{\subset}$
+    Lokalna Fizyka Kwantowa}
+
+
+  \textbf{Lokalne algebry.}
+  Każdemu „ograniczonemu” obszarowi $\Ocal \subset M$ przypisujemy algebrę
+  $\Ufrak( \Ocal ) \subset \Ufrak( M )$~-- zbiór obserwabli które można w~nim
+  zmierzyć. Jeśli dwa obszary $\Ocal_{ 1 }$ i~$\Ocal_{ 2 }$ są rozdzielone
+  przestrzennie to elementy ich algebr komutują. Plus pewne
+  ograniczenia fizyczne.
+
+  \textbf{Konsekwencje.}
+  Formalizm ten daje na tyle dużą swobodę, że~pomimo sporych technicznych
+  trudności wymagających „uogólnienia symetrii teorii” formalizm ten ma
+  sens na interesujących nas czasoprzestrzeniach.
+
+\end{frame}
+% ##################
+
+
+
+
+
+% ##################
+\begin{frame}
+  \frametitle{Przyczynowość}
+
+
+  Niech zbiory $O_{ 1 }$ i $O_{ 2 }$ będą przestrzenie rozdzielone.
+  Istnieje wspólna algebra zawierająca $\Acal( O_{ 1 } )$
+  i~$\Acal( O_{ 1 } )$, do tego mnożenie argumentów między tymi
+  algebrami jest przemienne. Równoważnie, komutator operatorów znika.
+
+  W~podobny sposób da się zakodować inne własności fizyczne w~tych
+  lokalnych algebrach.
+
+\end{frame}
+% ##################
+
+
+
+
+
+% ###################
+\begin{frame}
+  \frametitle{Konstrukcja teorii}
+
+
+  Element klasyczny
+  \begin{equation}
+    \label{eq:Niespodziewane-teoretyczne-14}
+    S_{ \mathrm{Free} }( \varphi ) =
+    \int d \mathrm{vol}( x )\, \big( g_{ \mu \nu }( x ) \nabla^{ \mu } \varphi( x )
+    \nabla^{ \nu } \varphi( x ) - ( m^{ 2 } + \xi R ) \varphi^{ 2 }( x ) \big),
+  \end{equation}
+  prowadzi do równania:
+  \begin{equation}
+    \label{eq:Niespodziewane-teoretyczne-15}
+    ( \Box  + m^{ 2 } + \xi R ) \varphi = 0.
+  \end{equation}
+  Przy przyjętych założeniach ma ono dobrze określony propagator
+  przyśpieszony i~opóźniony $\Delta^{ A, R }$.
+
+  Możemy teraz utworzyć:
+  \begin{subequations}
+    \begin{align}
+      \label{eq:Niespodziewane-teoretyczne-16-A}
+      \Delta( x, y )
+      &= \Delta^{ A }( x, y ) - \Delta^{ R }( x, y ), \\
+      \label{eq:Niespodziewane-teoretyczne-16-B}
+      \Delta( x, y )
+      &= \frac{ 1 }{ 2 } \big( \Delta( x, y ) + i H( x, y ) \big).
+    \end{align}
+  \end{subequations}
+
+\end{frame}
+% ##################
+
+
+
+
+
+% ##################
+\begin{frame}
+  \frametitle{Uproszczenie formalne}
+
+
+  Niech $F$ będzie, w~ogólności nieliniowym, funkcjonałem:
+  \begin{equation}
+    \label{eq:Niespodziewane-teoretyczne-17}
+    F: \Ccal^{ \infty }( M ) \rightarrow \Cbb,
+  \end{equation}
+  takimi, że
+  \begin{equation}
+    \label{eq:Niespodziewane-teoretyczne-18}
+    \frac{ d }{ d \lambda } F( \varphi + \lambda h ) = \langle F^{ ( 1 ) }( \varphi ), h \rangle =
+    \int d \mathrm{vol}( x )\, \big( F^{ ( 1 ) }( \varphi ) \big)( x ) h( x ),
+  \end{equation}
+  i~analogicznie dla wyższych pochodnych.
+
+  Każdy funkcjonał utożsamiamy z~formalnym szeregiem potęgowym:
+  \begin{equation}
+    \label{eq:Niespodziewane-teoretyczne-19}
+    F :=
+    \sum\limits_{ i = 0 }^{ \infty } \frac{ i^{ n } \, \hbar^{ n } }{ n! } F^{ ( n ) }.
+  \end{equation}
+
+\end{frame}
+% ##################
+
+
+
+
+
+% ##################
+\begin{frame}
+  \frametitle{Konstrukcja teorii swobodnej}
+
+
+  Wówczas
+  \begin{equation}
+    \label{eq:Niespodziewane-teoretyczne-20}
+    \begin{split}
+      \left\langle F^{ ( 1 ) }, \frac{ 1 }{ 2 } \Delta G^{ ( 1 ) } \right\rangle( \varphi )
+      &=
+        \frac{ 1 }{ 2 }
+        \int d \mathrm{vol}( x ) \, d \mathrm{vol}( y ) \,
+        F^{ ( 1 ) }( \varphi )( x ) \\
+      &\hspace{3em} \times \Delta( x, y ) G^{ ( 1 ) }( \varphi )( y ).
+    \end{split}
+  \end{equation}
+  ma przynajmniej formalny sense. Analogicznie robimy dla wyższych
+  pochodnych.
+
+  Możemy teraz zdefiniować operację $\star$:
+  \begin{equation}
+    \label{eq:Niespodziewane-teoretyczne-21}
+    F \star G =
+    \sum\limits_{ i = 0 }^{ \infty } \frac{ i^{ n } \hbar^{ n } }{ n! }
+    \left\langle F^{ ( n ) }, \left( \tfrac{ 1 }{ 2 } \Delta \right)^{ \otimes n }
+      G^{ ( n ) } \right\rangle.
+    \end{equation}
+
+\end{frame}
+% ##################
+
+
+
+
+
+% ##################
+\begin{frame}
+  \frametitle{Konstrukcja teorii swobodnej}
+
+  Inwolucja.
+  \begin{equation}
+    \label{eq:Niespodziewane-teoretyczne-22}
+    F^{ * }( \varphi ) = \overline{ F( \varphi ) }.
+  \end{equation}
+
+  \textbf{Ważne.}
+  Do końca prezentacji będziemy pracować na poziomie tej algebry.
+
+  \textbf{Uwaga.}
+  Niemożliwość ograniczania~się do funkcjonałów liniowych wynika
+  z~własności grupy renormalizacji.
+
+\end{frame}
+% ##################
+
+
+
+
+
+% ##################
+\begin{frame}
+  \frametitle{Konstrukcja teorii z~oddziaływaniem}
+
+
+  Algebra pełnej teorii
+  \begin{equation}
+    \label{eq:Niespodziewane-teoretyczne-23}
+    S_{ \mathrm{Full} } = S_{ \mathrm{Free} } + S_{ \mathrm{I} }.
+  \end{equation}
+  Aby otrzymać teorię z~oddziaływaniem potrzebujemy jedynie
+  zmienić iloczyn $\star = \star_{ \mathrm{Free} }$ na
+  $\star_{ \mathrm{I} } = \star_{ \mathrm{Full} }$. Biorąc wzór z teorii
+  rozpraszania, możemy to zrobić za pomocą operatorów M\o llera
+  $R_{ S_{ I } }$:
+  \begin{equation}
+    \label{eq:Niespodziewane-teoretyczne-24}
+    F \star_{ \mathrm{I} } G :=
+    R_{ S_{ \mathrm{I} } }^{ -1 }( R_{ S_{ \mathrm{I} } } F
+    \star R_{ S_{ \mathrm{I} } } G ).
+  \end{equation}
+  Ale aby zdefiniować operatory M\o llera potrzebujemy iloczynu
+  chronologicznego.
+
+  \textbf{Problem.}
+  Iloczyn chronologiczny wymaga brania iloczynów dystrybucji, co skutkuje
+  pojawieniem się rozbieżności ultrafioletowych.
+
+\end{frame}
+% ##################
+
+
+
+
+
+% ##################
+\begin{frame}
+  \frametitle{Rozwinięcie perturbacyjne}
+
+  \textbf{Zagadnienie renormalizacji.}
+  Czasoprzestrzeń zakrzywiona nie ma określonej przestrzeni pędów,
+  jednak można podać odpowiednią procedurę w przestrzeni położeń.
+  Taką procedurę dla przypadku czasoprzestrzeni Minkowskiego
+  podali Epstain i~Glaser [EG73].
+
+  Została ona uogólniona na zadane zakrzywione czasoprzestrzenie
+  przez Brunettiego i~Fredenhagena [BF00].
+
+\end{frame}
+% ##################
+
+
+
+
+
+% ##################
+\begin{frame}
+  \frametitle{Rozwinięcie perturbacyjne}
+
+
+  Renormalizacja przyczynowa Epstaina-Glasera [EG73].
+  Polega na indukcyjnej konstrukcji iloczynów chronologicznych
+  $\Tcal_{ n }$ przy której nie pojawiają się żadne
+  rozbieżności w~ultrafiolecie. Konkretniej, rządamy by:
+  \begin{itemize}
+    \RaggedRight
+
+  \item[1.] $\Tcal_{ 0 } = 1$.
+
+  \item[2.]
+    $\Tcal_{ 1 } = \exp\left( \int d \mathrm{vol}( x ) \,
+      d \mathrm{vol}( y ) \, H( x, y )
+      \frac{ \delta^{ 2 } }{ \delta \varphi( x ) \delta \varphi( y ) } \right)$.
+
+  \item[3.]
+    $\Tcal_{ n }( F_{ 1 }, \ldots, F_{ n } ) =
+    \Tcal_{ k }( F_{ 1 }, \ldots, F_{ k } )
+    \star \Tcal_{ n - k }( F_{ k + 1 },\ldots, F_{ n } )$ jeżeli funkcjonały
+    $F_{ 1 }, \ldots, F_{ k }$ i~$F_{ k + 1 }, \ldots, F_{ n }$ są
+    „rozdzielone przestrzennie”.
+
+  \end{itemize}
+
+
+  \textbf{Grupa renormalizacji.}
+  Niejednoznaczność powyższej konstrukcji jest scharakteryzowana
+  przez grupę renormalizacji St\"{u}ckelberga-Petermana.
+
+\end{frame}
+% ##################
+
+
+
+
+
+% ##################
+\begin{frame}
+  \frametitle{Rozwinięcie perturbacyjne}
+
+
+  Formalne rozwiązanie procedury Epstaina-Glasera [FR12]
+  \begin{subequations}
+    \begin{equation}
+      \label{eq:Niespodziewane-teoretyczne-25-A}
+      \Tcal_{ n }( F_{ 1 },\ldots, F_{ n } )( \varphi ) =
+      e^{ \sum_{ i < j } D_{ i, j } } F( \varphi_{ 1 } ) \cdot \ldots
+      \cdot F_{ n }( \varphi_{ n } ) |_{ \varphi_{ 1 } = \ldots = \varphi_{ n } = \varphi }.
+    \end{equation}
+
+    \vspace{-3em}
+
+
+
+    \begin{equation}
+      \begin{split}
+        D_{ i j }
+        &= i \, \hbar \left\langle \Delta^{ F }, \frac{ \delta^{ 2 } }{ \delta \varphi_{ i } \delta \varphi_{ j } }
+          \right\rangle \\
+        &= i \, \hbar \int d \mathrm{vol}( x ) \, d \mathrm{vol}( y ) \,
+        \Delta^{ F }( x, y ) \frac{ \delta^{ 2 } }{ \delta \varphi_{ i }( x ) \delta \varphi_{ j }( y ) }.
+      \end{split}
+    \end{equation}
+  \end{subequations}
+
+  Można to oczywiście zapisać za pomocą grafów Feynmana.
+
+\end{frame}
+% ##################
+
+
+
+
+
+% ##################
+\begin{frame}
+  \frametitle{Podsumowanie i~perspektywy}
+
+
+  \begin{itemize}
+    \RaggedRight
+
+  \item Praca na poziomie algebraiczny pozwala ominąć wiele
+    trudności.
+
+  \item Istnieją prace dotyczące kwasiklasycznej reakcji pola
+    na~czasoprzestrzeń.
+
+  \item Można w~tym formalizmie opisać klasyczną teorię pola
+    i~wówczas da się otrzymać wyniki o zbieżności badanych
+    szeregów.
+
+  \item Pełna Renormalizacja Epstaina-Glasera jest dobrze umotywowana
+    fizycznie, lecz w~realnych obliczeniach jest niezwykle skomplikowana.
+    Kluczowe więc dla całego podejścia jest to czy da się uprościć tę
+    część teorii. Najnowsze prace skupiają się nad możliwością użycia
+    kombinacji procedury E-G z~renormalizacją wymiarową, jednak nad
+    zakrzywionych czasoprzestrzeniach wymaga to sformułowania
+    w~reprezentacji położeń. Do tej pory osiągnięto pozytywne efekty
+    w~czasoprzestrzeni Minkowskiego [DFKR13].
+
+  \end{itemize}
+
+\end{frame}
+% ##################
+
+
+
+
+
+% ##################
+\begin{frame}[standout]
+
+
+  { \color{jFrametitleFGColor} Nietypowe problemy mogą wymagać
+    niestandardowych rozwiązań. Czy to konkretne jest właściwe to czas
+    pokaże. }
+
+\end{frame}
+% ##################
+
+
+
+
+
+
+
+
+
+
+% ##################
+\EndingSlide{Pytania? Dziękuję za uwagę.}
+% ##################
+
+
+
+
+
+
+
+
+
+
+% ##################
+\begin{frame}
+  \frametitle{Bibliografia}
+
+
+  \begin{itemize}
+    \RaggedRight
+
+  \item [Fre09] K. Fredenhagen, \textit{The impact of~the~algebraic
+      approach on perturbative quantum field theory}.
+    Wystąpienie na \textit{Algebraic Quantum Field Theory~– the first 50
+      Years}, G\"{o}ttingen 2009.
+
+  \item [Wal09] R. M. Wald, textit{Axiomatic Quantum Field Theory
+      in~Curved Spacetime}. Wystąpienie na \textit{Algebraic
+      Quantum Field Theory~– the first 50 Years}, G\"{o}ttingen 2009.
+
+  \item [Haa09] R. Haag, \textit{Local Algebras: A~look back at
+    the~early years and~at~some successes and~missed opportunitie}.
+    Wystąpienie na \textit{Algebraic Quantum Field Theory~– the first 50
+    Years}, G\"{o}ttingen 2009.
+
+  \item [FR12] K. Fredenhagen, K. Rejzner, \textit{Perturbative
+    algebraic quantum field theory}, arXiv: 1208.1428.
+
+  \end{itemize}
+
+\end{frame}
+% ##################
+
+
+
+
+
+% ##################
+\begin{frame}
+  \frametitle{Bibliografia}
+
+
+  \begin{itemize}
+    \RaggedRight
+
+  \item [EG73] H. Epstein, V. Glaser, \textit{The role of locality
+    in~perturbation theory}, Ann. Inst. H. Poincar\'{e} A
+    \textbf{19} (1973) 211.
+
+  \item [BF00] R. Brunetti, K. Fredenhagen, \textit{Microlocal Analysis
+    and~Interacting Quantum Field Theories: Renormalization
+    on~Physical Backgrounds}, Commun.Math.Phys, \textbf{208} (2000)
+    623-661, arXiv: 9903.028.
+
+  \item [BF09] R. Brunetti, K. Fredenhagen, \textit{Quantum Field
+    Theory on~Curved Backgrounds}, Proceedings of the
+    Kompaktkurs \textit{Quantenfeldtheorie auf gekruemmten Raumzeiten} held
+    at~Universitaet Potsdam, Germany, in 8.-12.10.2007, arXiv:
+    0901.2063.
+
+  \item [DFKR13] M. D\"{u}etsch, K. Fredenhagen, K. J. Keller,
+    K.~Rejzner, \textit{Dimensional Regularization in Position Space,
+      and~a Forest Formula for Epstein-Glaser Renormalization}, arXiv:
+    1311.5424.
+
+  \end{itemize}
+
+\end{frame}
+% ##################
+
+
+
+
+
+
+
+
+
+
+% #####################################################################
+% #####################################################################
+% Bibliografia
+\bibliographystyle{plalpha}
+
+\bibliography{PhilNaturBooks}{}
+
+
+
+
+
+% ############################
+
+% Koniec dokumentu
+\end{document}
