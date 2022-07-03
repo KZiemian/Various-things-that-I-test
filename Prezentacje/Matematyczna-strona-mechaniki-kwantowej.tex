@@ -81,10 +81,6 @@
 % %\usecolortheme{fly}
 % %\usecolortheme{seagull}
 % %\usecolortheme{lily}
-% \usecolortheme{orchid}
-% %\usecolortheme{whale}
-% %\usecolortheme{seahorse}
-% \usepackage[]{graphicx}
 % \usepackage{tensor}
 % \usepackage{subfigure}%Pozwala dzielić figury na podfigury.
 % \usepackage[polish]{babel}%Tłumaczy na polski teksty automatyczne LaTeXa i pomaga z typografią.
@@ -215,6 +211,7 @@
 
   Słownik pojęć, ciąg dalszy.
   \begin{itemize}
+    \RaggedRight
 
   \item Ciąg Cauchy’ego $x_{ n }$: $\forall \; \varepsilon > 0, \exists \; N: \forall \; n, m > N$, $
     \rho ( x_{ n }, x_{ m } ) < \varepsilon $.
@@ -227,9 +224,10 @@
 
   \end{itemize}
 
+
+
   \textbf{Uwaga.}
   Od tej pory $X$ jest zawsze przestrzenią wektorową nad $\Cbb$ lub $\Rbb$.
-
 
 \end{frame}
 % ##################
@@ -372,6 +370,7 @@
 
   Z punktu widzenia matematyki\ldots
   \begin{itemize}
+    \RaggedRight
 
   \item czy przestrzeń Hilberta ma jakąś dodatkową strukturę?
 
@@ -397,6 +396,7 @@
 
   Klasy operatorów
   \begin{itemize}
+    \RaggedRight
 
   \item Operatory zwarte.
 
@@ -420,12 +420,13 @@
 
   Uwagi
   \begin{itemize}
+    \RaggedRight
 
   \item Dla operatora ograniczonego $A$ można zdefiniować normę operatora
     $\Vert A \Vert < \infty$ jako najmniejszą liczbę spełniającą:
     \begin{equation}
       \label{eq:Matematyczna-strona-03}
-      \Vert A x \Vert \leq \Vert A \Vert \, || x ||, \quad
+      \Vert A x \Vert \leq \Vert A \Vert \, \Vert x \Vert, \quad
       \forall x \in \Hcal.
     \end{equation}
 
@@ -448,7 +449,7 @@
   \frametitle{Operatory zwarte}
 
 
-  \textbf{Twierdzenie Riesza o rozkładzie spektralnym}
+  \textbf{Twierdzenie Riesza o~rozkładzie spektralnym}
 
   Widmo samosprzężonego operatora zwartego składa się z samych wartości
   własnych, zawartych w~odcinku $[ -\Vert A \Vert, \Vert A \Vert ]$. Zbiór wartości
@@ -469,6 +470,7 @@
 
 
   \begin{itemize}
+    \RaggedRight
 
   \item Operatory zwarte samosprzężone są najbliższymi krewnymi macierzy
     hermitowskich w~przypadku, gdy wymiar $\Hcal$ jest nieskończony.
@@ -543,179 +545,290 @@
 \end{frame}
 % ##################
 
-% \begin{frame}{Źródło problemów}
-% \pause
-
-
-% \begin{block}{Twierdzenie Hellingera - Toeplitza}
-% Operator samosprzężony określony na całej przestrzeni Hilberta jest ograniczony.
-% \end{block}
-% \pause
-
-% \begin{block}{Konsekwencje}
-% Operator reprezentujący najbardziej podstawowe obserwable możemy określić jedynie na podprzestrzeniach wektorowych, które są gęste w $\mathcal{ H }$. Podprzestrzenie takie będziemy oznaczać jako $\mathcal{ D }$, zaś dziedzinę obserwabli $A$ przez $\mathcal{ D }( A )$.
-% \end{block}
-
-% \begin{block}{Własności gęstych podprzestrzeni}
-% W przestrzeni skończenie wymiarowej takie podprzestrzenie nie istnieją. Gdy zaś istnieją, potrafią mieć bardzo nieoczekiwane i wyjątkowe własności. W szczególności nie można z nich wnioskować o własnościach całej przestrzeni.
-% \end{block}
-
-% \end{frame}
-
-
-% \begin{frame}{Podprzestrzenie gęste}
-% \pause
-
-
-% \begin{block}{Własności gęstych podprzestrzeni}
-% W przestrzeni skończenie wymiarowej takie podprzestrzenie nie istnieją. Gdy zaś istnieją, potrafią mieć bardzo nieoczekiwane i wyjątkowe własności.
-% \end{block}
-% \pause
-
-% \begin{block}{Przykład z przestrzeni Banacha}
-% W przestrzeni Banacha $\mathcal{ C } [0, 1]$ z normą $||f|| = \sup_{ x \in [0, 1] } |f(x)| $, wielomiany tworzą podprzestrzeń gęstą na mocy klasycznego twierdzenia Weierstrassa o aproksymacji funkcji ciągłych.
-% \end{block}
-% \pause
-
-% \begin{block}{}
-% Z drugiej strony Banach udowodnił, że większość funkcji ciągłych nie posiada pochodnych w żadnym punkcie swojej dziedziny. Widzimy więc, że z faktu, iż możemy jakąś funkcję z dowolną dokładnością przybliżyć funkcją analityczną (wielomianem!), nie wynika nawet jej różniczkowalność.
-% \end{block}
-
-% \end{frame}
-
-
-% \begin{frame}{Problemy w mechanice kwantowej}
-% \pause
-
-
-% \begin{block}{Podstawowe problemy}
-% \begin{itemize}
-% \item[--]Korzystając z reguł Borna, nic nie wiem o dziedzinach danych obserwabli.
-% \pause
-% \item[--]Może się zdarzyć, że $D( A ) \cap D( B ) = {0}$, więc suma dwóch obserwabli $A$ i $B$, może mieć sens tylko w działaniu na wektor zerowy.
-% \pause
-% \item[--]W szczególności nic nie wiem o tym, na jakim zbiorze mają być spełnione relacje komutacji $[\hat{ X }, \hat{ P }] = i \hbar$. Co więcej, można pokazać, że na odpowiednio sensownej dziedzinie nie istnieją operatory ograniczone realizujące te związki.
-% \pause
-% \item[--]Widmo takiego operatora zależy od wyboru dziedziny.
-% \item[--]Tak samo jak samosprzężoność.
-% \end{itemize}
-% \end{block}
-
-% \end{frame}
-
-
-% \begin{frame}
-
-
-% \begin{block}{Ciekawsze problemy}
-% \begin{itemize}
-% \item[--]Załóżmy, że mamy standardowy problem, w którym hamiltonian ma postać $H = H_{ 0 } + V$, gdzie $V$ jest odpowiednią poprawką i znamy $\mathcal{ D }(H_{ 0 })$. Dodanie takiej poprawki może sprawić, że $\mathcal{ D }(H) \neq \mathcal{ D }(H_{ 0 })$.
-% \pause
-% \item[--]Jeżeli hamiltonian (jak to zwykle bywa) jest nieograniczony, to równanie Schr\"{o}dingera
-% $$i \hbar \partial_{ t } | \psi \rangle = H | \psi \rangle$$
-% jest dla wielu wektorów po prostu pozbawione sensu.
-% \end{itemize}
-% \end{block}
-
-% \begin{block}{Osiągnięcia}
-% W ramach operatorowego podejścia do mechaniki kwantowej wiele z tych problemów udało się w dużym stopniu rozwiązać.
-% \end{block}
-
-% \end{frame}
 
 
 
-% \section[]{Podejście algebraiczne}
+
+% ##################
+\begin{frame}
+  \frametitle{Źródło problemów}
+
+
+  \textbf{Twierdzenie Hellingera-Toeplitza.}
+  Operator samosprzężony określony na całej przestrzeni Hilberta jest
+  ograniczony.
+
+  \textbf{Konsekwencje}
+  Operator reprezentujący najbardziej podstawowe obserwable możemy określić
+  jedynie na podprzestrzeniach wektorowych, które są gęste w~$\Hcal$.
+  Podprzestrzenie takie będziemy oznaczać jako $\Dcal$, zaś dziedzinę
+  obserwabli $A$ przez $\Dcal( A )$.
+
+  \textbf{Własności gęstych podprzestrzeni.}
+  W~przestrzeni skończenie wymiarowej takie podprzestrzenie nie istnieją.
+  Gdy zaś istnieją, potrafią mieć bardzo nieoczekiwane i~wyjątkowe
+  własności. W~szczególności nie można z nich wnioskować o własnościach
+  całej przestrzeni.
+
+\end{frame}
+% ##################
 
 
 
-% \begin{frame}{Podejście algebraiczne}
 
 
-% \begin{block}{Podsumowanie teorii operatorów}
-% Zapoczątkowana przez John von Neumanna teoria operatorów nieograniczonych stanowi do dziś najpotężniejsze podejście do uzyskiwania matematycznych rozwiązań problemów mechaniki kwantowej. Z innych jej osiągnięć warto wspomnieć rozwiniętą przez T. Kato teorię zaburzeń.
-% \end{block}
-
-% \begin{block}{Alternatywne podejście}
-% Formalizm ten jest jednak jak widać dość delikatny. Pytanie, czy można znaleźć formalizm, który jest bardziej stabilny.
-% Poprawną odpowiedź na to pytanie zapoczątkował pomysł wielkiego XX w. matematyka H. Weyla.
-% \end{block}
-
-% \end{frame}
-
-% \begin{frame}{Podejście algebraiczne}
+% ##################
+\begin{frame}
+  \frametitle{Podprzestrzenie gęste}
 
 
-% \begin{block}{Związki Weyla}
-% Weyl, wspierając się na poprzednich pracach von Neumanna, zauważył, że korzystając rachunku operatorowego i funkcji ograniczonej możemy zbudować operatory ograniczone z operatorów $ \hat{ X } $ i $ \hat{ P } $. Korzystając z funkcji ograniczonych $\exp(i p x)$, związki komutacji przechodzą w następujące \emph{związki Weyla} dla operatorów ograniczonych:
-% \pause
-% $$e^{ i \alpha \hat{ X } } e^{ i \beta \hat{ P } } e^{ -i \alpha \hat{ X } } = e^{ i \beta (\hat{ P } - \alpha) } \textrm{.}$$
+  \textbf{Własności gęstych podprzestrzeni.}
+  W~przestrzeni skończenie wymiarowej takie podprzestrzenie nie istnieją.
+  Gdy zaś istnieją, potrafią mieć bardzo nieoczekiwane i wyjątkowe własności.
 
-% \end{block}
-% \pause
+  \textbf{Przykład z przestrzeni Banacha}
+  W~przestrzeni Banacha $\Ccal[ 0, 1 ]$ z~normą
+  $\Vert \, f \Vert = \sup_{ x \in [ 0, 1 ] } | \, f( x ) |$, wielomiany tworzą
+  podprzestrzeń gęstą na mocy klasycznego twierdzenia Weierstrassa
+  o~aproksymacji funkcji ciągłych.
 
-% \begin{block}{}
-% Można pokazać, że tak zdefiniowane operatory zwierają tyle samo informacji co pierwotne $\hat{ X }$ i $\hat{ P }$, które można otrzymać z form eksponencjalnych poprzez różniczkowanie.
-% \end{block}
+  Z drugiej strony Banach udowodnił, że większość funkcji ciągłych nie
+  posiada pochodnych w żadnym punkcie swojej dziedziny. Widzimy więc, że
+  z~faktu, iż możemy jakąś funkcję z dowolną dokładnością przybliżyć funkcją
+  analityczną (wielomianem!), nie wynika nawet jej różniczkowalność.
 
-% \end{frame}
-
-
-% \begin{frame}{Podejście algebraiczne}
-
-
-% \begin{block}{}
-% Sytuacja ta wraz z równoważnością różnych realizacji mechaniki kwantowej, takich jak reprezentacja położeniowa, pędowa, czy obsadzeń w przypadku oscylatora, zasugerowało następujące podejście.
-% \end{block}
-% \pause
-
-% \begin{block}{Algebraiczna mechanika kwantowa}
-% Podstawowym obiektem jest odpowiednia algebra $\mathcal{ A }$ (*-algebra\linebreak lub $C^{*}$), stany zaś odpowiadają funkcjonałom liniowym na $\mathcal{ A }$. Przy wybraniu pewnej reprezentacji elementy algebry przechodzą w operatory na przestrzeni Hilbert, a stany w wektory tej przestrzeni. Reprezentacje równoważne odpowiadają tej samej sytuacji fizycznej.
-% \end{block}
-
-% \end{frame}
-
-
-% \begin{frame}{AQFT}
-
-
-% \begin{block}{AQFT}
-% To podejście zostało zastosowane do QFT m.in. prze Haaga, Kastlera, Wightmana i Gardinga, w rezultacie czego otrzymano teorie zwaną algebraiczną kwantową teorią pola.
-% \end{block}
-% \pause
-
-% \begin{block}{}
-% Przedstawione tu sformułowanie mechaniki kwantowej jest chyba najbardziej udaną teorią we współczesnej fizyce matematycznej. Jednak w przypadku QFT sytuacja nie jest już tak dobra.
-% \end{block}
-% \pause
-
-% \end{frame}
-
-
-% \begin{frame}{Sukcesy i porażki}
-
-
-% \begin{block}{Sukcesy i porażki}
-% \begin{itemize}
-% \pause
-% \item[--]Nie istnieje pełne algebraiczne sformułowanie jakiejkolwiek rzeczywistej teorii pola.
-% \pause
-% \item[--]Istnieją modele konkretnych realnych efektów.
-% \pause
-% \item[--]Bliski związek z teorią grup.
-% \pause
-% \item[--]Kwantyzacja pola Diraca.
-% \pause
-% \item[--]Reguły nadwyboru.
-% \pause
-% \item[--]Brak nieskończoności.
-% \pause
-% \item[--]Brak nieskończoności.
-% \end{itemize}
-% \end{block}
-
-% \end{frame}
+\end{frame}
+% ##################
 
 
 
+
+
+% ##################
+\begin{frame}
+  \frametitle{Problemy w mechanice kwantowej}
+
+
+  Podstawowe problemy
+  \begin{itemize}
+    \RaggedRight
+
+  \item Korzystając z reguł Borna, nic nie wiem o dziedzinach danych
+    obserwabli.
+
+  \item Może się zdarzyć, że $D( A ) \cap D( B ) = {0}$, więc suma dwóch
+    obserwabli $A$ i~$B$, może mieć sens tylko w działaniu na wektor zerowy.
+
+  \item W~szczególności nic nie wiem o tym, na jakim zbiorze mają być
+    spełnione relacje komutacji $[ \widehat{ X }, \widehat{ P } ] = i \hbar$.
+    Co więcej, można pokazać, że na odpowiednio sensownej dziedzinie nie
+    istnieją operatory ograniczone realizujące te związki.
+
+  \item Widmo takiego operatora zależy od wyboru dziedziny.
+
+  \item Tak samo jak samosprzężoność.
+
+  \end{itemize}
+
+\end{frame}
+% ##################
+
+
+
+
+
+% ##################
+\begin{frame}
+  \frametitle{Ciekawsze problemy}
+
+
+  \begin{itemize}
+    \RaggedRight
+
+  \item Załóżmy, że mamy standardowy problem, w którym hamiltonian ma postać
+    $H = H_{ 0 } + V$, gdzie $V$ jest odpowiednią poprawką i~znamy
+    $\Dcal( H_{ 0 } )$. Dodanie takiej poprawki może sprawić,
+    że~$\Dcal( H ) \neq \Dcal( H_{ 0 } )$.
+
+  \item Jeżeli hamiltonian (jak to zwykle bywa) jest nieograniczony, to
+    równanie Schr\"{o}dingera
+    \begin{equation}
+      \label{eq:Matematyczna-strona-05}
+      i \hbar \partial_{ t } | \psi \rangle = H | \psi \rangle
+    \end{equation}
+    jest dla wielu wektorów po prostu pozbawione sensu.
+
+  \end{itemize}
+
+
+
+  \textbf{Osiągnięcia.} W~ramach operatorowego podejścia do mechaniki
+  kwantowej wiele z~tych problemów udało się w dużym stopniu rozwiązać.
+
+\end{frame}
+% ##################
+
+
+
+
+
+
+
+
+
+
+% ######################################
+\section{Podejście algebraiczne}
+% ######################################
+
+
+
+% ##################
+\begin{frame}
+  \frametitle{Podejście algebraiczne}
+
+
+  \textbf{Podsumowanie teorii operatorów.}
+  Zapoczątkowana przez John von Neumanna teoria operatorów nieograniczonych
+  stanowi do dziś najpotężniejsze podejście do uzyskiwania matematycznych
+  rozwiązań problemów mechaniki kwantowej. Z innych jej osiągnięć warto
+  wspomnieć rozwiniętą przez T. Kato teorię zaburzeń.
+
+  \textbf{Alternatywne podejście.}
+  Formalizm ten jest jednak jak widać dość delikatny. Pytanie, czy można
+  znaleźć formalizm, który jest bardziej stabilny. Poprawną odpowiedź
+  na to pytanie zapoczątkował pomysł wielkiego XX w. matematyka H.~Weyla.
+
+\end{frame}
+% ##################
+
+
+
+
+
+% ##################
+\begin{frame}{Podejście algebraiczne}
+
+
+  \textbf{Związki Weyla.}
+  Weyl, wspierając się na poprzednich pracach von Neumanna, zauważył,
+  że~korzystając rachunku operatorowego i~funkcji ograniczonej możemy
+  zbudować operatory ograniczone z operatorów $\widehat{ X }$
+  i~$\widehat{ P }$. Korzystając z funkcji ograniczonych $\exp( i p x )$,
+  związki komutacji przechodzą w~następujące \textit{związki Weyla} dla
+  operatorów ograniczonych:
+  \begin{equation}
+    \label{eq:Matematyczna-strona-06}
+    e^{ i \alpha \widehat{ X } } e^{ i \beta \widehat{ P } }
+    e^{ -i \alpha \widehat{ X } }
+    = e^{ i \beta ( \widehat{ P } - \alpha) }
+  \end{equation}
+
+  Można pokazać, że tak zdefiniowane operatory zwierają tyle samo informacji
+  co pierwotne $\widehat{ X }$ i~$\widehat{ P }$, które można otrzymać z~form
+  eksponencjalnych poprzez różniczkowanie.
+
+\end{frame}
+% ##################
+
+
+
+
+
+% ##################
+\begin{frame}
+  \frametitle{Podejście algebraiczne}
+
+
+  Sytuacja ta wraz z równoważnością różnych realizacji mechaniki kwantowej,
+  takich jak reprezentacja położeniowa, pędowa, czy obsadzeń w przypadku
+  oscylatora, zasugerowało następujące podejście.
+
+
+  \textbf{Algebraiczna mechanika kwantowa.}
+  Podstawowym obiektem jest odpowiednia algebra $\Acal$ ($*$-algebra lub
+  $C^{*}$), stany zaś odpowiadają funkcjonałom liniowym na $\Acal$. Przy
+  wybraniu pewnej reprezentacji elementy algebry przechodzą w~operatory na
+  przestrzeni Hilbert, a~stany w wektory tej przestrzeni. Reprezentacje
+  równoważne odpowiadają tej samej sytuacji fizycznej.
+
+\end{frame}
+% ##################
+
+
+
+
+
+% ##################
+\begin{frame}
+  \frametitle{AQFT}
+
+
+  \textbf{AQFT.}
+  To podejście zostało zastosowane do QFT m.in. prze Haaga, Kastlera,
+  Wightmana i~Gardinga, w rezultacie czego otrzymano teorie zwaną
+  algebraiczną kwantową teorią pola.
+
+  Przedstawione tu sformułowanie mechaniki kwantowej jest chyba najbardziej
+  udaną teorią we współczesnej fizyce matematycznej. Jednak w przypadku QFT
+  sytuacja nie jest już tak dobra.
+
+\end{frame}
+% ##################
+
+
+
+
+
+% ##################
+\begin{frame}
+  \frametitle{Sukcesy i~porażki}
+
+
+  \begin{itemize}
+    \RaggedRight
+
+  \item Nie istnieje pełne algebraiczne sformułowanie jakiejkolwiek
+    rzeczywistej teorii pola.
+
+  \item Istnieją modele konkretnych realnych efektów.
+
+  \item Bliski związek z teorią grup.
+
+  \item Kwantyzacja pola Diraca.
+
+  \item Reguły nadwyboru.
+
+  \item Brak nieskończoności.
+
+  \item Brak nieskończoności.
+
+  \end{itemize}
+
+\end{frame}
+% ##################
+
+
+
+
+
+
+
+
+
+
+% #####################################################################
+% #####################################################################
+% Bibliografia
+\bibliographystyle{plalpha}
+
+\bibliography{PhilNaturBooks}{}
+
+
+
+
+
+% ############################
+
+% Koniec dokumentu
 \end{document}
