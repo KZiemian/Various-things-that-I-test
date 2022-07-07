@@ -1,0 +1,1081 @@
+% ---------------------------------------------------------------------
+% Basic configuration of Beamera and Jagiellonian
+% ---------------------------------------------------------------------
+\RequirePackage[l2tabu, orthodox]{nag}
+
+
+
+\ifx\PresentationStyle\notset
+\def\PresentationStyle{dark}
+\fi
+
+
+
+\documentclass[10pt,t]{beamer}
+\mode<presentation>
+\usetheme[style=\PresentationStyle,logoLang=Latin,logoColor=monochromaticJUwhite,JUlogotitle=yes]{jagiellonian}
+
+
+
+% ---------------------------------------
+% Configuration files of Jagiellonian loceted in catalog preambule
+% ---------------------------------------
+\input{./preambule/LanguageSettings/JagiellonianPolishLanguageSettings.tex}
+\input{./preambule/TextposConfiguration/TextposConfiguration.tex}
+
+\input{./preambule/JagiellonianCustomizationGeneral.tex}
+\input{./preambule/JagiellonianCustomizationCommands.tex}
+
+
+
+
+
+
+
+
+
+
+% ---------------------------------------
+% Packages, libraries and their configuration
+% ---------------------------------------
+\usepackage{mathcommands}
+
+
+
+
+
+% ---------------------------------------
+% Configuration for this particular presentation
+% ---------------------------------------
+
+
+
+
+
+% \documentclass[handout]{beamer} \mode<presentation>
+% % \usepackage{beamerthemesplit}
+% \usepackage{epsfig}
+% \usetheme{Warsaw}
+% \usecolortheme{orchid}
+% \usepackage[utf8]{inputenc}
+% \usepackage[polish]{babel}
+% \usepackage[MeX]{polski}
+
+% \usepackage{verbatim}
+% \usepackage{subfigure}%Pozwala dzielić figury na podfigury.
+% \usepackage{amsfonts, amsmath}
+
+
+% \usepackage{amscd}% Jeszcze wsparcie od AMS.
+% \usepackage{latexsym}% Więcej symboli.
+% \usepackage{textcomp}% Pakiet z dziwnymi symbolami.
+% \usepackage{xy}% Pozwala rysować grafy.
+% \usepackage{tensor}% Pozwala prosto używać notacji tensorowej. Albo nawet pięknej notacji %tensorowej:).
+% \usepackage{graphicx}% Pozwala wstawiać grafikę.
+% \usepackage{xcolor}
+% \usepackage{hyperref}
+% \usepackage{verse}
+% \usepackage{siunitx}
+% \newcommand{\de}[1]{\mathrm{d} #1 \;}
+% \newcommand{\lra}{\longrightarrow}
+% \newcommand{\tbs}{\textbackslash}
+% \newcommand{\Google}[3]{\begin{frame}
+% \frametitle{#1}
+% \begin{block}{Wszystko co warto wiedzieć o~\LaTeX u}
+% {Da się {\color{#2} wygooglować}.}
+% \end{block}
+
+% #3
+
+% \end{frame}}
+% \newcommand{\pd}[3]{\frac{ \partial^{ #1 } #2 }{ \partial {#3}^{ #1 }}}
+
+% \newcommand{\tb}{\textbf}
+
+% \newcommand{\attribA}[1]{%
+%   \nopagebreak{\vspace{2mm}\raggedleft\footnotesize #1\par\vspace{2em}}}
+% \newcommand{\attribB}[1]{%
+%   \nopagebreak{\raggedleft\footnotesize #1\par \vspace{2em}}}
+
+\LetLtxMacro{\oldsqrt}{\sqrt}
+\def\sqrt{\mathpalette\DHLhksqrt}
+\def\DHLhksqrt#1#2{%
+\setbox0=\hbox{$#1\oldsqrt{#2\,}$}\dimen0=\ht0
+\advance\dimen0-0.2\ht0
+\setbox2=\hbox{\vrule height\ht0 depth -\dimen0}%
+{\box0\lower0.4pt\box2}}
+
+% \setbeamertemplate{navigation symbols}{}
+% \setbeamertemplate{headline}{}
+% \setbeamersize{text margin left=3mm}
+% \setbeamersize{text margin right=3mm}
+
+
+
+
+
+
+
+
+
+
+% ---------------------------------------------------------------------
+\title{O~różnych spojrzeniach na~QFT i~efekt Casimira}
+
+\author{Kamil Ziemian \\
+  \texttt{kziemianfvt@gmail.com} }
+
+
+\date[21 I 2016]{21 stycznia 2016 r.}
+% ---------------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+% ####################################################################
+% Początek dokumentu
+\begin{document}
+% ####################################################################
+
+
+
+
+
+% Wyrównanie do lewej z łamaniem wyrazów
+
+\RaggedRight
+
+
+
+
+
+% ######################################
+\maketitle
+% ######################################
+
+
+
+
+
+% ######################################
+\section{Osobiste poglądy}
+% ######################################
+
+
+
+% ##################
+\begin{frame}
+  \frametitle{Ostrzeżenie i~osobiste przemyślenia}
+
+
+  To wystąpienie to bardziej zbiór pytań niż odpowiedzi. Może ktoś z~was
+  będzie umiał powiedzieć jak je~rozwiązać, ja~nie jestem w~stanie.
+
+  Celem nauk przyrodniczych nie jest
+  \begin{itemize}
+
+  \item zajęcie bardziej prestiżowego miejsca w~społeczeństwie;
+
+  \item zdawanie egzaminów;
+
+  \item zrobienie kariery naukowej;
+
+  \item zdobycie ogromnych grantów;
+
+  \item stanie~się sławnym;
+
+  \item podrywanie kobiet;
+
+  \item picie alkoholu w~dobrym/niedobrym towarzystwie;
+
+  \item oglądanie seriali, granie w~gry video (mea culpa), etc.;
+
+  \item zajmowanie~się czymś, bo na Zachodzie się tym zajmują
+    („Co~ Francuz wymyśli to Polak polubi”, \textit{Pan Tadeusz}, Adam~M.);
+
+  \item nie zajmowanie~się czymś, bo lepsi od nas tego nie
+    robili.
+
+  \end{itemize}
+
+\end{frame}
+% ##################
+
+
+
+
+
+% ##################
+\begin{frame}
+  \frametitle{Ostrzeżenie i~osobiste przemyślenia}
+
+
+  Celem nauk przyrodniczych nie jest
+  \begin{itemize}
+
+  \item nabicie wysokiego indeksu Hirscha;
+
+  \item ani nawet, szukanie zastosowań technologicznych (to nie
+    {\color{red} \textit{cel}}, acz też jest ważne).
+
+  \end{itemize}
+
+\end{frame}
+% ##################
+
+
+
+
+
+% ##################
+\begin{frame}
+  \frametitle{Ostrzeżenie i~osobiste przemyślenia}
+
+
+  Cel pierwszy i~najważniejszy: lepsze zrozumienie otaczającego nas świata.
+
+  Cel drugorzędny: zrozumienie wszystkich konsekwencji, jakie z~tej wiedzy
+  naprawdę wynikają. To łączy~się z~pytaniami o~zastosowania.
+
+  Po cóż jest więc kwantowa teorii pola{\LARGE \color{red} ???}
+
+  Uwaga o~kryteriach filozoficznych i~estetycznych.
+  Absurdalność, matematyczna nonsensowność i~największa nawet
+  brzydota, nie~są dobrymi powodami by~odrzucić teorię która
+  w~poprawny sposób opisuje świat wokół nas. Tym bardziej, jeśli żadna
+  inna nie~była w~stanie powtórzyć jej sukcesów.
+
+\end{frame}
+% ##################
+
+
+
+
+
+
+
+
+
+
+% ######################################
+\section{QFT}
+% ######################################
+
+
+
+% ##################
+\begin{frame}
+  \frametitle{Potrzeba istnienia jakiejś teorii}
+
+
+  Fakty doświadczalne
+  \begin{itemize}
+
+  \item Widma atomowe.
+
+  \item Istnieją elektrony.
+
+  \item Istnieje pole elektromagnetyczne, bardzo dobrze
+    opisywane teorią Clerka-Maxwella.
+
+  \item Cząstki mogą być kreowane lub anihilowanie (dziwne).
+
+  \item Cząstki mogą kreować cząstki innych typów (bardzo
+    dziwne).
+
+  \end{itemize}
+
+  Wnioski
+  \begin{itemize}
+
+  \item Widma atomowe i~elektrony $\Rightarrow$ mechanika kwantowa.
+
+  \item Pole elektromagnetyczne $\Rightarrow$ szczególna teoria względności.
+
+  \end{itemize}
+
+
+
+  Problemy
+  \begin{itemize}
+
+  \item Co~się dzieje, gdy elektron porusza~się naprawdę szybko?
+
+  \item Skoro cząstki~są kwantowe, to czy pole elektromagnetyczne też?
+
+  \end{itemize}
+
+\end{frame}
+% ##################
+
+
+
+
+
+% ##################
+\begin{frame}
+  \frametitle{Potrzeba istnienia jakiejś teorii}
+
+
+  Problem profesora Sadzikowskiego.
+  Jeśli by ktoś podszedł i~walnął bardzo szybko patelnią w~ścianę
+  wydziału FAIS, to~nie~oczekuję, że~zostanie po tym laptop, lody
+  cytrynowe, dwie zapałki i~długopis, lecące we wszystkie strony z~dużą
+  prędkością.
+
+\end{frame}
+% ##################
+
+
+
+
+
+% ##################
+\begin{frame}
+  \frametitle{Standardowe podejście do QFT}
+
+
+  Lagranżjan elektrodynamiki kwantowej (QED)
+  \begin{equation}
+    \label{eq:O-roznych-01}
+    \Lcal =
+    -\frac{ 1 }{ 4 } F_{ \mu \nu }( x ) F^{ \mu \nu }( x )
+    + i \overline{\psi( x )} ( \gamma^{ \mu } \partial_{ \mu } - m ) \psi( x )
+    - e \overline{\psi( x )} \gamma^{ \mu } A_{ \mu }( x ) \psi( x ).
+  \end{equation}
+
+  Uwagi
+  \begin{itemize}
+
+  \item \textbf{SWOBODNE} i~\textbf{PRAWIE SWOBODNE} pole
+    elektromagnetyczne $F_{ \mu \nu }( x )$ można rozłożyć na fotony.
+
+  \item Jeśli chodzi o~naprawdę oddziałujące, to nie~wiem czy ktoś potrafi
+    rozstrzygnąć czy również jest to wykonalne (może jestem ignorantem).
+
+  \item \textbf{SWOBODNE} i~\textbf{PRAWIE SWOBODNE} pole Diraca $\psi( x )$
+    można rozłożyć na elektrony i~pozytony.
+
+  \item Reszta jak powyżej.
+
+  \end{itemize}
+
+\end{frame}
+% ##################
+
+
+
+
+
+% ##################
+\begin{frame}
+  \frametitle{Standardowe podejście do QFT}
+
+
+  Uwagi cd.
+  \begin{itemize}
+
+  \item Jeżeli ma sens powiedzenie, że~foton jest kwantem pola
+    elektromagnetycznego, to elektron i~pozyton~są kwantami pola
+    Diraca. Jest to dobra wiadomość, bowiem wyjaśnia dlaczego
+    elektrony w~przyrodzie są tak podobne do siebie.
+
+  \item Każde pole kwantowe kreuje i~anihiluje cząstki.
+
+  \item Teoria ta działa rewelacyjnie, choć trzeba renormalizować.
+
+  \item Dirac ją odrzucił twierdząc, że~jest brzydka.
+
+  \end{itemize}
+
+
+
+  \textbf{Odpowiedź fizyka.} Obiektem który reprezentuje cząstki.
+
+  Więcej~się nie dowiedziałem, ale może za~mało pytałem?
+
+\end{frame}
+% ##################
+
+
+
+
+
+% ##################
+\begin{frame}
+  \frametitle{Moja ulubiona, nieudana, odpowiedź}
+
+
+  Aksjomaty Wightmana.
+  $M$ „$=$” $\Rbb^{ 4 }$ przestrzeń Minkowskiego, $\Hcal$ przestrzeń
+  Hilberta, $S( M )$ przestrzeń „dobrych” funkcji zespolonych, najlepiej
+  klasy Schwartza (jeden z~powodów dlaczego prof. Herdegen je tak lubi).
+  Pole kwantowe $F_{ \mu \nu }( x )$ to dystrybucja która funkcji
+  $f( x ) \in S( M )$ przyporządkowuje operator $F_{ \mu \nu }( f( x ) )$ na
+  $\Hcal$.
+
+  Aksjomatów tych jest więcej, ale~nam nie będą one potrzebne.
+
+  { \color{red} Porażka. }
+  Do dziś nikt nie był w~stanie podać w~ramach podejścia Wightmana
+  teorii w~czterech wymiarach, która nie jest \textbf{swobodna}!!!
+
+\end{frame}
+% ##################
+
+
+
+
+
+% ##################
+\begin{frame}
+  \frametitle{Moja ulubiona, nieudana, odpowiedź}
+
+
+  Dobre strony podejścia Wightmana i~pokrewnych
+  \begin{itemize}
+
+  \item Mówi czym pole kwantowe jest :).
+
+  \item W~mechanice kwantowej fundamentem jest przestrzeń
+    Hilberta $\Hcal$ i~czas $t$, przestrzeń pojawia~się jako
+    sposób diagonalizacji operatorów~$\widehat{x}_{ i }$. Podejście
+    Wightmana w~przejrzysty sposób pokazuje, że~w~QFT musimy
+    dołączyć nowy byt: czasoprzestrzeń Minkowskiego.
+
+  \item \textbf{Udowodniono} twierdzenia CPT i~o związku spinu ze~statystyką.
+
+  \item Udało~się sformułować najlepsze, w~mojej opinii, wersje
+    QFT na zadanych zakrzywionych czasoprzestrzeniach.
+
+  \end{itemize}
+
+\end{frame}
+% ##################
+
+
+
+
+
+% ##################
+\begin{frame}
+  \frametitle{Zaraz, zaraz, ty coś ściemniasz}
+
+
+  Przecież napisałeś
+  \begin{equation}
+    \label{eq:O-roznych-02}
+    \Lcal =
+    -\frac{ 1 }{ 4 } F_{ \mu \nu }( x ) F^{ \mu \nu }( x )
+    + i \overline{\psi( x )} ( \gamma^{ \mu } \partial_{ \mu } - m ) \psi( x )
+    - e \overline{\psi( x )} \gamma^{ \mu } A_{ \mu }( x ) \psi( x ),
+  \end{equation}
+  a~przecież ktoś taki jak ty, powinien wiedzieć, że~dystrybucji~się
+  nie~mnoży.
+
+  Zgadza~się.
+  Co najmniej od lat 50 XX wieku, wielu autorów, że~właśnie mnożenie
+  dystrybucji jest przyczyną istnienia rozbieżności w~ultrafiolecie,
+  podczas gdy~rozbieżności podczerwone niosą treść fizyczną.
+
+  Osiągnięcia.
+  Epstein i~Glaser w~latach 70 XX wieku pokazali, że~na poziomie
+  grafów Feynmana używając poprawnej teorii mnożenia i~rozszerzania
+  dystrybucji można wyeliminować wszystkie rozbieżności
+  w~ultrafiolecie.
+
+\end{frame}
+% ##################
+
+
+
+
+
+
+
+
+
+
+% ######################################
+\section{Efekt Casimira -- standardowe podejście}
+% ######################################
+
+
+
+% ##################
+\begin{frame}
+  \frametitle{Efekt Casimira -- standardowe podejście}
+
+
+  Masywne pole skalarne.
+  Lagrażjan:
+  \begin{equation}
+    \label{eq:O-roznych-03}
+    \Lcal =
+    \partial_{ \mu } \varphi( t, x ) \partial^{ \mu } \varphi( t, x )
+    + \frac{ m^{ 2 } c^{ 2 } }{ \hbar^{ 2 } } \varphi^{ 2 }( t, x ).
+  \end{equation}
+
+  Równanie Kleina-Gordona:
+  \begin{equation}
+    \label{eq:O-roznych-04}
+    \frac{ 1 }{ c^{ 2 } }
+    \frac{ \partial^{ 2 } \varphi( t, x ) }{ \partial t^{ 2 } }
+    - \frac{ \partial^{ 2 } \varphi( t, x ) }{ \partial x^{ 2 } }
+    + \frac{ m^{ 2 } c^{ 2 } }{ \hbar^{ 2 } } \varphi( t, x ) = 0.
+  \end{equation}
+
+  Hamiltonian bezpośredni skwantowanej teorii w~przestrzeni pędów
+  \begin{subequations}
+    \begin{equation}
+      \label{eq:O-roznych-04-A}
+      \widehat{H} =
+      \frac{ 1 }{ 2 } \int dk \, dk' \, \hbar
+      \sqrt{ \omega_{ k } \omega_{ k' } } ( a_{ k' }^{ \dagger } a_{ k } + a_{ k' } a_{ k }^{ \dagger } ),
+    \end{equation}
+    \begin{equation}
+      \label{eq:O-roznych-04-B}
+      \omega_{ k } = \sqrt{ c^{ 2 } k^{ 2 } + m^{ 2 } c^{ 4 } }.
+    \end{equation}
+  \end{subequations}
+
+\end{frame}
+% ##################
+
+
+
+
+
+% ##################
+\begin{frame}
+  \frametitle{Efekt Casimira -- standardowe podejście}
+
+
+  Z~tamtym hamiltonianem ciężko cokolwiek zrobić.
+  Standardowa rozwiązanie (ja nie umiem inaczej):
+  \begin{equation}
+    \label{eq:O-roznych-05}
+    \widehat{H} =
+    \int dk \; \hbar \, \omega_{ k } a_{ k }^{ \dagger } a_{ k }
+    + \frac{ \hbar }{ 2 } \int dk \, \omega_{ k }.
+  \end{equation}
+  Co zrobić z~nieskończoną energią stanu podstawowego (zwaną zwykle
+  energią próżni)?
+
+  Recepta Diraca.
+  „Ponieważ w~fizyce mają znaczenie tylko różnice energii,
+  więc~energię stanu podstawowego należy przyjąć za punkt
+  odniesienia i~położyć 0.”
+
+  Riposta Pauli’ego. „Tylko dlatego, że~coś jest nieskończone, to jeszcze
+  nie~znaczy, że~możesz je przyjąć równe zeru.”n
+
+\end{frame}
+% ##################
+
+
+
+
+
+% ##################
+\begin{frame}
+  \frametitle{Efekt Casimira -- standardowe podejście}
+
+
+  W~praktyce recepta Diraca prawie zawsze działa. Efekt Casimira to jeden
+  z~przypadków, gdy nie działa.
+
+  Jeżeli ustawimy w~punktach $x = 0$ i~$x = a$, dwie płyty metalowe,
+  to pole $\varphi$ musi na nich znikać (bo ma~się zachowywać jak
+  pole elektryczne na granicy przewodnika):
+  \begin{equation}
+    \label{eq:O-roznych-06}
+    \varphi( t, 0 ) = \varphi( t, a ) = 0.
+  \end{equation}
+
+  Takie pole ma postać:
+  \begin{subequations}
+    \begin{equation}
+      \label{eq:O-roznych-07-A}
+      \varphi_{ n }^{ ( \pm ) }( t, x ) =
+      \left( \frac{ c }{ a \omega_{ n } } \right)^{ 1 / 2 }
+      e^{ \pm i \omega_{ k } t } \sin( k_{ n } x );
+    \end{equation}
+    \begin{equation}
+      \label{eq:O-roznych-07-B}
+      \omega_{ n } =
+      \left( \frac{ m^{ 2 } c^{ 4 } }{ \hbar^{ 2 } } \right)^{ 1 / 2 }, \quad
+      k_{ n } = \frac{ n \pi }{ a }, \quad n = 1, 2, 3, \ldots
+    \end{equation}
+  \end{subequations}
+
+\end{frame}
+% ##################
+
+
+
+
+
+% ##################
+\begin{frame}
+  \frametitle{Efekt Casimira -- standardowe podejście}
+
+
+  Nieskończona energia próżni na odcinku $( 0, a )$
+  \begin{equation}
+    \label{eq:O-roznych-08}
+    E_{ 0 }( a ) = \frac{ \hbar }{ 2 } \sum_{ n = 1 }^{ \infty } \omega_{ n }.
+  \end{equation}
+
+  Hendrik Casimir stwierdził, że~nieskończoność nieskończoności nie~równa,
+  więc jeśli \textit{nieskończone} energia pustej przestrzeni przypadająca
+  na przedział $( 0, a )$, jest różna od \textit{nieskończonej} energii
+  między płytami, powinna pojawić~się siła dążąca do korzystniejszej
+  konfiguracji energetycznej.
+
+\end{frame}
+% ##################
+
+
+
+
+
+% ##################
+\begin{frame}
+  \frametitle{Efekt Casimira -- standardowe podejście}
+
+
+  Aby odjąć dwie nieskończoności, trzeba najpierw uczynić je skończonymi
+  \begin{equation}
+    \label{eq:O-roznych-09}
+    E( \textrm{prostej} ) =
+    L \frac{ \hbar }{ 2 \pi } \int\limits_{ 0 }^{ +\infty } dk \, \omega_{ k },
+  \end{equation}
+  gdzie $L$, to długość prostej. Na rozpatrywanym odcinku
+  zgromadzona jest energia:
+  \begin{equation}
+    \label{eq:O-roznych-10}
+    \frac{ a }{ L } E( \textrm{prostej} ) =
+    \frac{ \hbar a }{ 2 \pi } \int\limits_{ 0 }^{ +\infty } dk \, \omega_{ k }.
+  \end{equation}
+
+  No, już trochę lepiej, ale wciąż jest za duża. Przyjmijmy dla
+  prostoty $m = 0$
+  \begin{equation}
+    \label{eq:O-roznych-11}
+    \frac{ \hbar a }{ 2 \pi } \int\limits_{ 0 }^{ +\infty } dk \, \omega_{ k } =
+    \lim_{ \delta \rightarrow 0 } \frac{ \hbar c a }{ 2 \pi } \int\limits_{ 0 }^{ +\infty } dk \,
+    k e^{ -\delta c k }
+    =
+    \lim_{ \delta \rightarrow 0 } \frac{ \hbar a }{ 2 \pi c \delta^{ 2 } }.
+  \end{equation}
+
+\end{frame}
+% ##################
+
+
+
+
+
+% ##################
+\begin{frame}
+  \frametitle{Efekt Casimira -- standardowe podejście}
+
+
+  Potrzebujemy zregularyzować jeszcze jedną nieskończoność
+  \begin{equation}
+    \label{eq:O-roznych-12}
+    E( \textrm{odcinak} ) =
+    \frac{ \hbar }{ 2 } \sum_{ n = 1 }^{ \infty } \frac{ c \pi n }{ a } \lim_{ \delta \rightarrow 0 }
+    \exp\left( -\frac{ \delta c \pi n }{ a } \right)
+  \end{equation}
+  Znów $m = 0$.
+
+  Wychodzi
+  \begin{equation}
+    \label{eq:O-roznych-13}
+    E( a ) =
+    \lim_{ \delta \rightarrow 0 } [ E( \textrm{odcinek}, \delta)
+    - E( \textrm{prosta}, \delta ) ]
+    = -\frac{ \pi \hbar c }{ 24 a }.
+  \end{equation}
+
+  Co daje siłę:
+  \begin{equation}
+    \label{eq:O-roznych-14}
+    F( a ) =
+    -\frac{ \partial^{ 2 } E( a ) }{ \partial a^{ 2 } } =
+    -\frac{ \pi \hbar c }{ 24 a^{ 2 } }.
+  \end{equation}
+
+\end{frame}
+% ##################
+
+
+
+
+
+% ##################
+\begin{frame}
+  \frametitle{Efekt Casimira -- standardowe podejście}
+
+
+  Problemy i~uwagi
+  \begin{itemize}
+
+  \item Bardzo dobrze zgadza~się z~rzeczywistością.
+
+  \item Ponieważ liczymy tylko energię zawartą w~naszym odcinku,
+    to nie~jest zaskakujące, że~opłaca mu~się kurczyć. To co mogłoby
+    być dziwne, to~fakt, iż~ta energia ta dąży do $-\infty$.
+
+  \item Pole swobodne ma~zawsze „więcej” częstości niż~zamknięte
+    w~pudle, „dlatego” ma~wyższą energię.
+
+  \end{itemize}
+
+\end{frame}
+% ##################
+
+% % \section{Podejście prof. Herdegena}
+
+
+% % \begin{frame}
+% %   \frametitle{Algebraiczna kwantowa teoria pola}
+
+% %   \begin{block}{Matematyczne zawiłości na bok}
+% %     Rozpatrywany system jest opisywany przez
+% %   \end{block}
+
+% % \end{frame}
+
+
+% % \usepackage{vmargin}
+% % % ---------------------------------------------------
+% % MARGINS
+% % % ---------------------------------------------------
+% % \setmarginsrb { 0.7in} % left margin
+% % { 0.6in} % top margin
+% % { 0.7in} % right margin
+% % { 0.8in} % bottom margin
+% % { 20pt} % head height
+% % {0.25in} % head sep
+% % { 9pt} % foot height
+% % { 0.3in} % foot sep
+% % \end{verbatim}
+% % \end{block}
+
+% % \end{frame}
+
+
+% % \begin{frame}[fragile]
+% %   \frametitle{Ciekawostka: verse}
+
+% %   \begin{block}{Wpisujemy}
+% %     {\tiny
+% % \begin{verbatim}
+% % \settowidth{\versewidth}{Haniebnym marnotrawstwem sił ducha i ciała}
+% % \begin{verse}[\versewidth]
+% %   \poemlines{20}
+
+% %   Haniebnym marnotrawstwem sił ducha i ciała \\
+% %   Jest żądza, gdy osiąga cel; przedtem zaś skłania \\
+% %   Do kłamstwa, morderstw, podłości -- zaborcza, zuchwała, \\
+% %   Dzika, sroga, niegodna krztyny zaufania; \\
+% %   Ledwie rozkosz przyniesie, już czyni ją wstrętem; \\
+% %   Ledwie w obłędnych łowach dopadnie zwierzyny -- \\
+% %   Z obłędną nienawiścią widzi w niej przynętę, \\
+% %   Co szaleństwem skaziła jej plany i czyny: \\
+% %   Burzy się, gdy chce posiąść i gdy już posiada; \\
+% %   Sama szalona, chętkom folguje szalonym; \\
+% %   Jęk szczęścia, ledwie zabrzmiał, przemienia w jęk ,,Biada!'', \\
+% %   Marzenie w jednej chwili czyni snem prześnionym. \\
+% %   \vin Wszystko to wiemy; lecz choć wiemy, wciąż nas wściekła \\
+% %   \vin Żądza, raj obiecując, wiedzie w otchłań piekła.
+% % \end{verse}
+% % \attribB{W. Shakespeare \emph{Sonet 129}. \\
+% %   Tłumaczył S. Barańczak.}
+% % \end{verbatim}
+% %   }
+
+% %   \end{block}
+
+% % \end{frame}
+
+% % \begin{frame}[fragile]
+% %   \frametitle{Ciekawostka: verse}
+
+% %   {\tiny \settowidth{\versewidth}{Haniebnym marnotrawstwem sił ducha
+% %   i ciała}
+% %   \begin{verse}[\versewidth]
+% %     \poemlines{20}
+
+% %     Haniebnym marnotrawstwem sił ducha i ciała \\
+% %     Jest żądza, gdy osiąga cel; przedtem zaś skłania \\
+% %     Do kłamstwa, morderstw, podłości -- zaborcza, zuchwała, \\
+% %     Dzika, sroga, niegodna krztyny zaufania; \\
+% %     Ledwie rozkosz przyniesie, już czyni ją wstrętem; \\
+% %     Ledwie w obłędnych łowach dopadnie zwierzyny -- \\
+% %     Z obłędną nienawiścią widzi w niej przynętę, \\
+% %     Co szaleństwem skaziła jej plany i czyny: \\
+% %     Burzy się, gdy chce posiąść i gdy już posiada; \\
+% %     Sama szalona, chętkom folguje szalonym; \\
+% %     Jęk szczęścia, ledwie zabrzmiał, przemienia w jęk ,,Biada!'', \\
+% %     Marzenie w jednej chwili czyni snem prześnionym. \\
+% %     \vin Wszystko to wiemy; lecz choć wiemy, wciąż nas wściekła \\
+% %     \vin Żądza, raj obiecując, wiedzie w otchłań piekła.
+% %   \end{verse}
+% % }
+% %   \attribB{\tiny W. Shakespeare \emph{Sonet 129}. \\
+% %   Tłumaczył S. Barańczak.}
+
+% % \end{frame}
+
+
+% % \section{Praca z~,,kodem''}
+
+% % \begin{frame}
+% %   \frametitle{Przykładowy slajd}
+
+% %   \begin{block}{Uwagi o Python}
+% %     \begin{itemize}
+% %     \item[--] Jest dwustandardowy: 2.7x, 3.x (3.3.x). Wersje te nie
+% %       są wstecznie kompatybilne.
+% %     \item[--] ,,Rzeczy niebezpieczne mają być utrudnione, lecz nie
+% %       zabronione.''
+% %     \item[--] Doświadczenie z nauki można łatwo przenieść na wiele
+% %       innych języków.
+% %     \end{itemize}
+% %   \end{block}
+
+% %   \begin{block}{Uwagi o Terrarium}
+% %     \begin{itemize}
+% %     \item[--] Będzie trochę matematyki.
+% %     \item[--] Prowadzący spotkania nie jest najlepszy. Za to ma
+% %       oddane wsparcie.
+% %     \end{itemize}
+% %   \end{block}
+% % \end{frame}
+
+
+
+% % \begin{frame}[fragile]
+% %   \frametitle{Dobrych wcięć nigdy nie~za~wiele}
+
+% %   \begin{block}{,,Kod'' poprzedniego slajdu może wyglądać tak}
+% %     {\tiny
+% % \begin{verbatim}
+% % \begin{frame}
+% %   \frametitle{Przykładowy slajd}
+% %   \begin{block}{Uwagi o Python}
+% %     \begin{itemize}
+% %     \item[--] Jest dwustandardowy: 2.7x, 3.x (3.3.x). Wersje te nie
+% %       są wstecznie kompatybilne.
+% %     \item[--] ,,Rzeczy niebezpieczne mają być utrudnione, lecz nie
+% %       zabronione.''
+% %     \item[--] Doświadczenie z nauki można łatwo przenieść na wiele
+% %       innych języków.
+% %     \end{itemize}
+% %   \end{block}
+% %   \begin{block}{Uwagi o Terrarium}
+% %     \begin{itemize}
+% %     \item[--] Będzie trochę matematyki.
+% %     \item[--] Prowadzący spotkania nie jest najlepszy. Za to ma
+% %       oddane wsparcie.
+% %     \end{itemize}
+% %   \end{block}
+% % \end{verbatim}
+% % }
+% % \end{block}
+
+% % \end{frame}
+
+% % \begin{frame}[fragile]
+% %   \frametitle{Dobrych wcięć nigdy nie~za~wiele}
+
+% %   \begin{block}{Albo tak}
+% %     {\tiny
+% % \begin{verbatim}
+% % \begin{frame}
+% %   \frametitle{Przykładowy slajd}
+
+% %   \begin{block}{Uwagi o Python}
+% %     \begin{itemize}
+% %     \item[--] Jest dwustandardowy: 2.7x, 3.x (3.3.x). Wersje te nie
+% %       są wstecznie kompatybilne.
+% %     \item[--] ,,Rzeczy niebezpieczne mają być utrudnione, lecz nie
+% %       zabronione.''
+% %     \item[--] Doświadczenie z nauki można łatwo przenieść na wiele
+% %       innych języków.
+% %     \end{itemize}
+% %   \end{block}
+
+% %   \begin{block}{Uwagi o Terrarium}
+% %     \begin{itemize}
+% %     \item[--] Będzie trochę matematyki.
+% %     \item[--] Prowadzący spotkania nie jest najlepszy. Za to ma
+% %       oddane wsparcie.
+% %     \end{itemize}
+% %   \end{block}
+% % \end{verbatim}
+% % }
+% % \end{block}
+
+% % \begin{block}{Edytor może pomóc}
+% %   -- Wcięcie ,,kodu'' (dla \TeX Makera): Ctrl-$>$; \\
+% %   -- cofnięcie ,,kodu'': Ctrl-$<$.
+% % \end{block}
+
+% % \end{frame}
+
+% % \Google{Podstawowa technika usuwania błędów kompilacji}{teal}{
+
+% % \begin{block}{Czytelny ,,kod''}
+% %   Pozwala zorientować~się co gdzie jest. Ponieważ często nie umiemy
+% %   od razu zlokalizować zbyt źródła najlepiej jest wykomentować
+% %   podejrzane partie ,,kodu'', aż~kompilator ruszy. Gdy już wiemy
+% %   gdzie jest błąd, jego znalezienie jest prostsze.
+% % \end{block}
+
+% % \begin{block}{Edytor może pomóc}
+% %   W~\TeX Makerze: \\
+% %   -- komentarz: Ctrl-T; \\
+% %   -- odkomentowanie: Ctrl-U.
+% % \end{block}
+
+% % }
+
+% %   \begin{frame}[fragile]
+% %     \frametitle{\LaTeX{} i~\TeX{} to również języki programowania}
+
+% %     \begin{block}{Wszystko co warto wiedzieć o~\LaTeX u} {Da się
+% %       {\color{olive} wygooglować}.}
+% %     \end{block}
+
+% %     \begin{block}{I~czasem trzeba użyć fragmentu kodu}
+% %       \begin{itemize}
+% %       \item[--] Pozbyć~się z~tej prezentacji niepotrzebnych dodatków
+% %         beamera, które zajmują potrzebne miejsce.
+% %         \begin{itemize}
+% %         \item[1)] Niepotrzebny spis treści na górze:
+% %           \verb+\setbeamertemplate{navigation symbols}{}+
+
+% %         \item[2)] Przez nikogo nie używane ikonki na dole:
+% %           \verb+\setbeamertemplate{navigation symbols}{}+.
+% %         \end{itemize}
+% %         Można było użyć stylu ,,Cracków'', ale~to rozwiązanie było
+% %         prostsze.
+% %       \item[--] Zwiększyć odstęp między wierszami w~tabeli:
+% %         \verb+\renewcommand{\arraystretch}{1.2}+. Wartość~1.0
+% %         to~standardowy ostęp.
+% %       \end{itemize}
+
+
+
+% ##################
+\begin{frame}[standout]
+
+
+  { \color{jFrametitleFGColor} Warto zajmować się fizyką. Jest w~niej
+    wiele ciekawych problemów do rozwiązania :). }
+
+  \vspace{5em}
+
+
+
+  { \Large \color{jFrametitleFGColor} Dziękuję! Pytania? }
+
+\end{frame}
+% ##################
+
+
+
+
+
+
+
+
+
+
+% ##################
+\begin{frame}
+  \frametitle{Bibliografia}
+
+
+  \begin{itemize}
+
+  \item R. F. Streater, A. S. Wightman, \textit{PCT, Spin and
+    Statistics and All That} -- aksjomatyka Wightmana (zaskoczeni);
+
+  \item R. F. Streater,
+    \href{http://www.scholarpedia.org/article/Wightman_quantum_field_theory}
+    {\textit{Wightman quantum field theory}};
+
+  \item S. Hollands, R. M. Wald,
+    \href{http://arxiv.org/abs/0803.2003}{\textit{Axiomatic quantum field
+        theory in~curved spacetime}},
+    \href{http://arxiv.org/abs/1401.2026}{\textit{Quantum fields in~curved
+        spacetime}} -- QFT na zakrzywionych czasoprzestrzeniach;
+
+  \item K. J. Keller,
+    \href{http://arxiv.org/abs/1006.2148}{\textit{Dimensional
+        Regularization in~Position Space and~a~Forest Formula for
+        Regularized Epstein-Glaser Renormalization}};
+
+  \item M. Duetsch, K. Fredenhagen, K. J. Keller, K. Rejzner,
+    \href{http://arxiv.org/abs/1311.5424}{\textit{Dimensional
+        Regularization in~Position Space, and a~Forest Formula for
+        Epstein-Glaser Renormalization}};
+
+  \item M. Bordag, U. Mohideen, V.M. Mostepanenko,
+    \href{http://arxiv.org/abs/quant-ph/0106045}{\textit{New Developments
+      in the Casimir Effect}}, standardowe podejście do efektu
+    Casimira.
+
+  \end{itemize}
+
+\end{frame}
+% ##################
+
+
+
+
+
+% ##################
+\begin{frame}
+  \frametitle{Bibliografia}
+
+
+  \begin{itemize}
+
+  \item R. Haag,
+    \href{http://link.springer.com/book/10.1007/978-3-642-61458-3}
+    {\textit{Local Quantum Physics. Fields, Particles, Algebras}} --
+    algebraiczne sformułowanie teorii pola.
+    http://link.springer.com/book/10.1007/978-3-642-61458-3. Można
+    pobrać z~komputera UJ, lub logując~się przez Extranet.
+
+  \end{itemize}
+
+\end{frame}
+% ##################
+
+
+
+
+
+
+
+
+
+
+% ############################
+
+% Koniec dokumentu
+\end{document}
