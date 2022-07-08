@@ -1,0 +1,3 @@
+Czemu rozważanie cząstek w zakrzywionej czasoprzestrzeni może być błędem?
+
+Analiza prób stworzenia wersji Modelu Standardowego, która obowiązywałaby w zakrzywionej czasoprzestrzeni OTW, przyniosła kilka dość niespodziewanych wniosków teoretycznych. Jednym z nich jest sugestia, że koncepcja cząstki może nie być jednym z jej fundamentalnych składników, lecz efektem użytych przybliżeń, zasadnych dla prawie płaskich geometrii. W wystąpieniu postaram się pokrótce wyjaśnić jakie problemy napotyka używanie pojęcia cząstki w takich warunkach oraz zreferuję jedną propozycję obowiązującej w takich warunkach „teorię cząstek bez cząstek”.
