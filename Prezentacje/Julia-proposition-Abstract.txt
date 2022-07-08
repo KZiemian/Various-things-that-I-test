@@ -1,9 +1,0 @@
-Julia. 2010s proposition for scientific (and other) programming
-
-Abstract:
-Most of most common used programming languages dated from 1950s to beginning of 1990s. As such they was not designed to used full potentials of today's computers and don't benefit from much of development in computer science in last three decades. This talk want to present Julia, one of new languages that try to close that gap, designed for scientific computing. Presentation consisted of both talking and live coding will discus advantages and downsides of using Julia, scientific and not project which use it, touch a problem of its approach to programming and making written code fast.
-
-
-Tamas Papp
-
-Julia is a modern open source language which aims to make it easy to write reusable, high level code that is also very fast. It has a sophisticated parametric type system and multimethods, and compiles functions with specific concrete type signatures into highly efficient machine code using the LLVM backend. Calling code from C, Fortran is natively supported, while Matlab, R and Python interfaces are provided by libraries. It has a rich and rapidly developing ecosystem of packages, including differential equations, automatic differentiation, and MCMC.
