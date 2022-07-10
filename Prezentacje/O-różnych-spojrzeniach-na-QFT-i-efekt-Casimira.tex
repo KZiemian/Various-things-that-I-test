@@ -52,63 +52,6 @@
 
 
 
-% \documentclass[handout]{beamer} \mode<presentation>
-% % \usepackage{beamerthemesplit}
-% \usepackage{epsfig}
-% \usetheme{Warsaw}
-% \usecolortheme{orchid}
-% \usepackage[utf8]{inputenc}
-% \usepackage[polish]{babel}
-% \usepackage[MeX]{polski}
-
-% \usepackage{verbatim}
-% \usepackage{subfigure}%Pozwala dzielić figury na podfigury.
-% \usepackage{amsfonts, amsmath}
-
-
-% \usepackage{amscd}% Jeszcze wsparcie od AMS.
-% \usepackage{latexsym}% Więcej symboli.
-% \usepackage{textcomp}% Pakiet z dziwnymi symbolami.
-% \usepackage{xy}% Pozwala rysować grafy.
-% \usepackage{tensor}% Pozwala prosto używać notacji tensorowej. Albo nawet pięknej notacji %tensorowej:).
-% \usepackage{graphicx}% Pozwala wstawiać grafikę.
-% \usepackage{xcolor}
-% \usepackage{hyperref}
-% \usepackage{verse}
-% \usepackage{siunitx}
-% \newcommand{\de}[1]{\mathrm{d} #1 \;}
-% \newcommand{\lra}{\longrightarrow}
-% \newcommand{\tbs}{\textbackslash}
-% \newcommand{\Google}[3]{\begin{frame}
-% \frametitle{#1}
-% \begin{block}{Wszystko co warto wiedzieć o~\LaTeX u}
-% {Da się {\color{#2} wygooglować}.}
-% \end{block}
-
-% #3
-
-% \end{frame}}
-% \newcommand{\pd}[3]{\frac{ \partial^{ #1 } #2 }{ \partial {#3}^{ #1 }}}
-
-% \newcommand{\tb}{\textbf}
-
-% \newcommand{\attribA}[1]{%
-%   \nopagebreak{\vspace{2mm}\raggedleft\footnotesize #1\par\vspace{2em}}}
-% \newcommand{\attribB}[1]{%
-%   \nopagebreak{\raggedleft\footnotesize #1\par \vspace{2em}}}
-
-\LetLtxMacro{\oldsqrt}{\sqrt}
-\def\sqrt{\mathpalette\DHLhksqrt}
-\def\DHLhksqrt#1#2{%
-\setbox0=\hbox{$#1\oldsqrt{#2\,}$}\dimen0=\ht0
-\advance\dimen0-0.2\ht0
-\setbox2=\hbox{\vrule height\ht0 depth -\dimen0}%
-{\box0\lower0.4pt\box2}}
-
-
-
-
-
 
 
 
@@ -738,256 +681,38 @@
 \end{frame}
 % ##################
 
-% % \section{Podejście prof. Herdegena}
-
-
-% % \begin{frame}
-% %   \frametitle{Algebraiczna kwantowa teoria pola}
-
-% %   \begin{block}{Matematyczne zawiłości na bok}
-% %     Rozpatrywany system jest opisywany przez
-% %   \end{block}
-
-% % \end{frame}
-
-
-% % \usepackage{vmargin}
-% % % ---------------------------------------------------
-% % MARGINS
-% % % ---------------------------------------------------
-% % \setmarginsrb { 0.7in} % left margin
-% % { 0.6in} % top margin
-% % { 0.7in} % right margin
-% % { 0.8in} % bottom margin
-% % { 20pt} % head height
-% % {0.25in} % head sep
-% % { 9pt} % foot height
-% % { 0.3in} % foot sep
-% % \end{verbatim}
-% % \end{block}
-
-% % \end{frame}
-
-
-% % \begin{frame}[fragile]
-% %   \frametitle{Ciekawostka: verse}
-
-% %   \begin{block}{Wpisujemy}
-% %     {\tiny
-% % \begin{verbatim}
-% % \settowidth{\versewidth}{Haniebnym marnotrawstwem sił ducha i ciała}
-% % \begin{verse}[\versewidth]
-% %   \poemlines{20}
-
-% %   Haniebnym marnotrawstwem sił ducha i ciała \\
-% %   Jest żądza, gdy osiąga cel; przedtem zaś skłania \\
-% %   Do kłamstwa, morderstw, podłości -- zaborcza, zuchwała, \\
-% %   Dzika, sroga, niegodna krztyny zaufania; \\
-% %   Ledwie rozkosz przyniesie, już czyni ją wstrętem; \\
-% %   Ledwie w obłędnych łowach dopadnie zwierzyny -- \\
-% %   Z obłędną nienawiścią widzi w niej przynętę, \\
-% %   Co szaleństwem skaziła jej plany i czyny: \\
-% %   Burzy się, gdy chce posiąść i gdy już posiada; \\
-% %   Sama szalona, chętkom folguje szalonym; \\
-% %   Jęk szczęścia, ledwie zabrzmiał, przemienia w jęk ,,Biada!'', \\
-% %   Marzenie w jednej chwili czyni snem prześnionym. \\
-% %   \vin Wszystko to wiemy; lecz choć wiemy, wciąż nas wściekła \\
-% %   \vin Żądza, raj obiecując, wiedzie w otchłań piekła.
-% % \end{verse}
-% % \attribB{W. Shakespeare \emph{Sonet 129}. \\
-% %   Tłumaczył S. Barańczak.}
-% % \end{verbatim}
-% %   }
-
-% %   \end{block}
-
-% % \end{frame}
-
-% % \begin{frame}[fragile]
-% %   \frametitle{Ciekawostka: verse}
-
-% %   {\tiny \settowidth{\versewidth}{Haniebnym marnotrawstwem sił ducha
-% %   i ciała}
-% %   \begin{verse}[\versewidth]
-% %     \poemlines{20}
-
-% %     Haniebnym marnotrawstwem sił ducha i ciała \\
-% %     Jest żądza, gdy osiąga cel; przedtem zaś skłania \\
-% %     Do kłamstwa, morderstw, podłości -- zaborcza, zuchwała, \\
-% %     Dzika, sroga, niegodna krztyny zaufania; \\
-% %     Ledwie rozkosz przyniesie, już czyni ją wstrętem; \\
-% %     Ledwie w obłędnych łowach dopadnie zwierzyny -- \\
-% %     Z obłędną nienawiścią widzi w niej przynętę, \\
-% %     Co szaleństwem skaziła jej plany i czyny: \\
-% %     Burzy się, gdy chce posiąść i gdy już posiada; \\
-% %     Sama szalona, chętkom folguje szalonym; \\
-% %     Jęk szczęścia, ledwie zabrzmiał, przemienia w jęk ,,Biada!'', \\
-% %     Marzenie w jednej chwili czyni snem prześnionym. \\
-% %     \vin Wszystko to wiemy; lecz choć wiemy, wciąż nas wściekła \\
-% %     \vin Żądza, raj obiecując, wiedzie w otchłań piekła.
-% %   \end{verse}
-% % }
-% %   \attribB{\tiny W. Shakespeare \emph{Sonet 129}. \\
-% %   Tłumaczył S. Barańczak.}
-
-% % \end{frame}
-
-
-% % \section{Praca z~,,kodem''}
-
-% % \begin{frame}
-% %   \frametitle{Przykładowy slajd}
-
-% %   \begin{block}{Uwagi o Python}
-% %     \begin{itemize}
-% %     \item[--] Jest dwustandardowy: 2.7x, 3.x (3.3.x). Wersje te nie
-% %       są wstecznie kompatybilne.
-% %     \item[--] ,,Rzeczy niebezpieczne mają być utrudnione, lecz nie
-% %       zabronione.''
-% %     \item[--] Doświadczenie z nauki można łatwo przenieść na wiele
-% %       innych języków.
-% %     \end{itemize}
-% %   \end{block}
-
-% %   \begin{block}{Uwagi o Terrarium}
-% %     \begin{itemize}
-% %     \item[--] Będzie trochę matematyki.
-% %     \item[--] Prowadzący spotkania nie jest najlepszy. Za to ma
-% %       oddane wsparcie.
-% %     \end{itemize}
-% %   \end{block}
-% % \end{frame}
 
 
 
-% % \begin{frame}[fragile]
-% %   \frametitle{Dobrych wcięć nigdy nie~za~wiele}
-
-% %   \begin{block}{,,Kod'' poprzedniego slajdu może wyglądać tak}
-% %     {\tiny
-% % \begin{verbatim}
-% % \begin{frame}
-% %   \frametitle{Przykładowy slajd}
-% %   \begin{block}{Uwagi o Python}
-% %     \begin{itemize}
-% %     \item[--] Jest dwustandardowy: 2.7x, 3.x (3.3.x). Wersje te nie
-% %       są wstecznie kompatybilne.
-% %     \item[--] ,,Rzeczy niebezpieczne mają być utrudnione, lecz nie
-% %       zabronione.''
-% %     \item[--] Doświadczenie z nauki można łatwo przenieść na wiele
-% %       innych języków.
-% %     \end{itemize}
-% %   \end{block}
-% %   \begin{block}{Uwagi o Terrarium}
-% %     \begin{itemize}
-% %     \item[--] Będzie trochę matematyki.
-% %     \item[--] Prowadzący spotkania nie jest najlepszy. Za to ma
-% %       oddane wsparcie.
-% %     \end{itemize}
-% %   \end{block}
-% % \end{verbatim}
-% % }
-% % \end{block}
-
-% % \end{frame}
-
-% % \begin{frame}[fragile]
-% %   \frametitle{Dobrych wcięć nigdy nie~za~wiele}
-
-% %   \begin{block}{Albo tak}
-% %     {\tiny
-% % \begin{verbatim}
-% % \begin{frame}
-% %   \frametitle{Przykładowy slajd}
-
-% %   \begin{block}{Uwagi o Python}
-% %     \begin{itemize}
-% %     \item[--] Jest dwustandardowy: 2.7x, 3.x (3.3.x). Wersje te nie
-% %       są wstecznie kompatybilne.
-% %     \item[--] ,,Rzeczy niebezpieczne mają być utrudnione, lecz nie
-% %       zabronione.''
-% %     \item[--] Doświadczenie z nauki można łatwo przenieść na wiele
-% %       innych języków.
-% %     \end{itemize}
-% %   \end{block}
-
-% %   \begin{block}{Uwagi o Terrarium}
-% %     \begin{itemize}
-% %     \item[--] Będzie trochę matematyki.
-% %     \item[--] Prowadzący spotkania nie jest najlepszy. Za to ma
-% %       oddane wsparcie.
-% %     \end{itemize}
-% %   \end{block}
-% % \end{verbatim}
-% % }
-% % \end{block}
-
-% % \begin{block}{Edytor może pomóc}
-% %   -- Wcięcie ,,kodu'' (dla \TeX Makera): Ctrl-$>$; \\
-% %   -- cofnięcie ,,kodu'': Ctrl-$<$.
-% % \end{block}
-
-% % \end{frame}
-
-% % \Google{Podstawowa technika usuwania błędów kompilacji}{teal}{
-
-% % \begin{block}{Czytelny ,,kod''}
-% %   Pozwala zorientować~się co gdzie jest. Ponieważ często nie umiemy
-% %   od razu zlokalizować zbyt źródła najlepiej jest wykomentować
-% %   podejrzane partie ,,kodu'', aż~kompilator ruszy. Gdy już wiemy
-% %   gdzie jest błąd, jego znalezienie jest prostsze.
-% % \end{block}
-
-% % \begin{block}{Edytor może pomóc}
-% %   W~\TeX Makerze: \\
-% %   -- komentarz: Ctrl-T; \\
-% %   -- odkomentowanie: Ctrl-U.
-% % \end{block}
-
-% % }
-
-% %   \begin{frame}[fragile]
-% %     \frametitle{\LaTeX{} i~\TeX{} to również języki programowania}
-
-% %     \begin{block}{Wszystko co warto wiedzieć o~\LaTeX u} {Da się
-% %       {\color{olive} wygooglować}.}
-% %     \end{block}
-
-% %     \begin{block}{I~czasem trzeba użyć fragmentu kodu}
-% %       \begin{itemize}
-% %       \item[--] Pozbyć~się z~tej prezentacji niepotrzebnych dodatków
-% %         beamera, które zajmują potrzebne miejsce.
-% %         \begin{itemize}
-% %         \item[1)] Niepotrzebny spis treści na górze:
-% %           \verb+\setbeamertemplate{navigation symbols}{}+
-
-% %         \item[2)] Przez nikogo nie używane ikonki na dole:
-% %           \verb+\setbeamertemplate{navigation symbols}{}+.
-% %         \end{itemize}
-% %         Można było użyć stylu ,,Cracków'', ale~to rozwiązanie było
-% %         prostsze.
-% %       \item[--] Zwiększyć odstęp między wierszami w~tabeli:
-% %         \verb+\renewcommand{\arraystretch}{1.2}+. Wartość~1.0
-% %         to~standardowy ostęp.
-% %       \end{itemize}
 
 
 
-% ##################
+
+
+
+% ######################################
+\appendix
+% ######################################
+
+
+
+
+
+% ######################################
 \begin{frame}[standout]
 
 
   { \color{jFrametitleFGColor} Warto zajmować się fizyką. Jest w~niej
     wiele ciekawych problemów do rozwiązania :). }
 
-  \vspace{5em}
+  \vspace{3em}
 
 
 
   { \Large \color{jFrametitleFGColor} Dziękuję! Pytania? }
 
 \end{frame}
-% ##################
+% ######################################
 
 
 
