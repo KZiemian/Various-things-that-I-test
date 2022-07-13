@@ -1,0 +1,560 @@
+% ---------------------------------------------------------------------
+% Basic configuration of Beamera and Jagiellonian
+% ---------------------------------------------------------------------
+\RequirePackage[l2tabu, orthodox]{nag}
+
+
+
+\ifx\PresentationStyle\notset
+\def\PresentationStyle{dark}
+\fi
+
+
+
+\documentclass[10pt,t]{beamer}
+\mode<presentation>
+\usetheme[style=\PresentationStyle,logoLang=Latin,logoColor=monochromaticJUwhite,JUlogotitle=yes]{jagiellonian}
+
+
+
+% ---------------------------------------
+% Configuration files of Jagiellonian loceted in catalog preambule
+% ---------------------------------------
+\input{./preambule/LanguageSettings/JagiellonianEnglishLanguageSettings.tex}
+\input{./preambule/TextposConfiguration/TextposConfiguration.tex}
+
+\input{./preambule/JagiellonianCustomizationGeneral.tex}
+\input{./preambule/JagiellonianCustomizationCommands.tex}
+
+
+
+
+
+
+
+
+
+
+% ---------------------------------------
+% Packages, libraries and their configuration
+% ---------------------------------------
+
+
+
+
+
+% ---------------------------------------
+% Configuration for this particular presentation
+% ---------------------------------------
+
+
+
+
+
+
+
+
+
+
+% ---------------------------------------------------------------------
+\title{QuantumOptics.jl}
+\subtitle{Simulating quantum mechanics in modern programming language}
+
+\author{Kamil Ziemian \\
+  \texttt{kziemianfvt@gmail.com}}
+
+
+\institute{Field Theory Department, Jagiellonian University in~Cracow}
+
+\date[4 March 2019]{Seminar of Atomic Optics Department}
+% ---------------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+% ####################################################################
+% Początek dokumentu
+\begin{document}
+% ####################################################################
+
+
+
+
+
+% Wyrównanie do lewej z łamaniem wyrazów
+
+\RaggedRight
+
+
+
+
+
+% ######################################
+\maketitle % Tytuł całego tekstu
+% ######################################
+
+
+
+
+
+% ######################################
+\begin{frame}
+  \frametitle{Table of contents}
+
+
+  \tableofcontents % Spis treści
+
+\end{frame}
+% ######################################
+
+
+
+
+
+
+
+
+
+
+% ######################################
+\section{Basic information}
+% ######################################
+
+
+
+% ##################
+\begin{frame}
+  \frametitle{Basic information}
+
+
+  \textbf{QuantumOptics.jl.e}
+  Is~open source project developed by Helmut Ritsch's CQED (Cavity
+  Quantum Electrodynamics) group from~the~Institute for~Theoretical
+  Physics~of the~University~of Innsbruck, with Sebastian Kr\"{a}mer
+  as~leader. Takes inspiration from Quantum Optics Toolbox
+  for~MATLAB and~the~Python framework Quantum Toolbox in Python
+  (QuTiP).
+
+  Description.
+  ``Built exclusively in~Julia and~based on~standard quantum optics
+  notation, the~toolbox offers speed comparable to~low-level
+  statically typed languages, without compromising
+  on~the~accessibility and~code readability found in~dynamic
+  languages.''
+
+\end{frame}
+% ##################
+
+
+
+
+
+% ##################
+\begin{frame}
+  \frametitle{Basic information}
+
+
+  \begin{itemize}
+    \RaggedRight
+
+  \item Belongs to the family~of languages which works base on~LLVM
+    (previusly \textit{Low Level Virtual Machine}) like~Go (Google),
+    Swift (Apple) and~Rust (Mozilla).
+
+  \item Created by~MIT group. Today Julia Lab at~this institute
+    is~one~of leading facilities in~research and~development~of
+    Julia language.
+
+  \item Release~of version~1.0: 8~August~2018.
+
+  \item Current version, 25 February 2019: 1.1.0.
+
+  \item 3,4 million downloads (February 2019,
+    \colorhref{https://juliacomputing.com/}{https://juliacomputing.com/}).
+
+  \item 2,400 registered packages (February 2019,
+    \colorhref{https://juliacomputing.com/}{https://juliacomputing.com/}).
+
+  \item Use multiple dispatch (generic functions) and~sophisticated
+    type system approach to~object oriented programming (if~someone
+    disagree, I~will not protest).
+
+  \item Number~of papers about Julia or~using it~at~Google Scholar
+    (25~February 2019): 722.
+
+  \end{itemize}
+
+\end{frame}
+% ##################
+
+
+
+
+
+% ##################
+\begin{frame}
+  \frametitle{Aims of Julia}
+
+
+  Advertisment time. Easy as MATLAB, flexible as Python, deep as LISP,
+  fast as Fortran.
+
+  \vspace{1em}
+
+  John F.~Gibson,
+  \colorhref{https://github.com/johnfgibson/whyjulia/blob/master/1-whyjulia.ipynb}{WhyJulia}
+
+
+  Aims of language: code that is
+  \begin{itemize}
+    \RaggedRight
+
+  \item easy to~read (unicode);
+
+  \item fast to~write;
+
+  \item in~most cases can be~optimized to~run at~0.35 to~1.05
+    speed~of FORTRAN or~C code;
+
+  \item both compiled and dynamical (not interpreted) in~use,
+    by~REPL (shell) or~notebook;
+
+  \item seamless incorporation~of FORTRAN, C, C++, Python, R, etc., code;
+
+  \item give native support for~parallelism and~GPU;
+
+  \item and~easy access to~documentation.
+
+  \end{itemize}
+
+\end{frame}
+% ##################
+
+
+
+
+
+% ##################
+\begin{frame}
+  \frametitle{There are lies, big lies and benchmarks}
+
+
+  \begin{figure}
+
+    \centering
+
+    \includegraphics[scale=0.22]
+    {./PresentationPictures/Julia_micro_benchmarks.png}
+
+
+    \caption{From page \textit{Julia Micro-Benchmarks},
+      \colorhref{https://julialang.org/benchmarks/}{https://julialang.org/benchmarks/}}
+
+  \end{figure}
+
+  \textbf{Warning!} Python code use \texttt{numpy} libraries that
+  is~written 52.8\% in~C (state of GitHub repository at~4
+  January~2019).
+
+\end{frame}
+% ##################
+
+
+
+
+
+% ##################
+\begin{frame}
+  \frametitle{Warnings!!!}
+
+
+  Outdated. Because version 1.0 is~from August 2018, most~of benchmarks
+  and~many tutorials are less or~more outdated.
+
+  Julia is~still to new. Language is~now mature, but~programming tools
+  and~package ecosystems as~whole, are~not.
+
+\end{frame}
+% ##################
+
+
+
+
+
+% ##################
+\begin{frame}
+  \frametitle{About packages}
+
+
+  Packages ecosystem.
+  Is~immature, but~these don't mean that it~isn't rich. With 2,400
+  registered packages you can google one for~vast area~of scientific
+  topics and~beyond. Like MOO = Milk Output Optimizer for~New
+  Zealand diary farming. \\
+  \colorhref{https://www.youtube.com/watch?v=LDgNmsOCl1A}
+  {https://www.youtube.com/watch?v=LDgNmsOCl1A}
+
+  Proof. Few days ago, while preparing for~that presentation I~decide~to
+  Google ``Quantum Informatics Julia'' and~find two packages.
+
+\end{frame}
+% ##################
+
+
+
+
+
+% ##################
+\begin{frame}
+  \frametitle{About packages}
+
+
+  Quantum informatics and~Julia
+  \begin{itemize}
+    \RaggedRight
+
+  \item \texttt{Yao.jl}, \textit{Extensible, Efficient Quantum
+      Algorithm Design for Humans}, by~QuantumBFS (Bao~Fu~Si =
+    ang.~Tempel). Members are~associated among others with~Chinese
+    Academy~of Sciences, Tsinghua University, University~of Chinese
+    Academy~of Sciences. There is~also \texttt{CUYao.jl} for~GPU.
+
+  \item \texttt{QuantumInformation.jl}, \textit{a~Julia package
+      for~numerical computation in~quantum information theory},
+    by~Piotr Gawron, Dariusz Kurzyk, Łukasz Pawela from Institute~of
+    Theoretical and Applied Informatics, Polish Academy~of Sciences,
+    Gliwice. \textit{Our goal while designing QuantumInformation.jl
+      library was to~follow principles presented in~book ``Geometry
+      of Quantum States''} by~I.~Bengtsson, K.~Życzkowski.
+
+  \end{itemize}
+
+\end{frame}
+% ##################
+
+
+
+
+
+% ##################
+\begin{frame}
+  \frametitle{QuantumOptics.jl proper}
+
+
+  Lies, big lies and benchmarks from~2017
+  \begin{figure}
+
+    \centering
+
+    \includegraphics[scale=0.7]{./PresentationPictures/benchmarks_QO.pdf}
+
+
+    \caption{QuTiP~-- Quantum Toolbox in Python}
+
+  \end{figure}
+
+
+
+  More benchmarks on~the~project side
+  \colorhref{https://qojulia.org/}{https://qojulia.org/}. I~talk
+  with authors about this~benchmarks, they said that both on~picture
+  and~page are~outdated both by~release~of Julia~1.x and~changing~of
+  internals. Now they expect better performance~of \texttt{QO.jl}.
+
+\end{frame}
+% ##################
+
+
+
+
+
+% ##################
+\begin{frame}
+  \frametitle{Closing remarks}
+
+
+  If you use QuantumOptics.jl. They ask you for citing paper
+  \textbf{QuantumOptics.jl: A~Julia framework for~simulating open quantum
+    systems}, Sebastian Kr\"{a}mer, David Plankensteiner, Laurin Ostermann,
+  Helmut Ritsch, Computer Physics Communications, Volume 227, June 2018,
+  pages 109-116,
+  \colorhref{https://doi.org/10.1016/j.cpc.2018.02.004}{https://doi.org/10.1016/j.cpc.2018.02.004}.
+
+  If you use Julia in~your research. They ask you for citing paper
+  \textbf{Julia: A Fresh Approach to Numerical Computing}, Jeff Bezanson,
+  Alan Edelman, Stefan Karpinski and~Viral B.~Shah~(2017) SIAM Review,
+  59:~65--98. doi:~10.1137/141000671.
+  url:~http://julialang.org/publications/julia-fresh-approach-BEKS.pdf,
+  \colorhref{https://julialang.org/publications/julia-fresh-approach-BEKS.pdf}{https://julialang.org/publications/julia-fresh-approach-BEKS.pdf}.
+  And add you paper to the following list
+  https://julialang.org/publications/,
+  \colorhref{https://julialang.org/research/}{https://julialang.org/research/}.
+
+\end{frame}
+% ##################
+
+
+
+
+
+% ##################
+\begin{frame}
+  \frametitle{Closing remarks}
+
+
+  People who in~various ways help prepare this seminar.
+  \begin{itemize}
+    \RaggedRight
+
+  \item QuantumOptics group.
+
+  \item Tamas Papp.
+
+  \item John F. Gibson.
+
+  \item Yakir Luc Gagnon.
+
+  \item Antoine Levitt.
+
+    % \item Krzysztof Musiał.
+
+  \end{itemize}
+
+\end{frame}
+% ##################
+
+
+
+
+
+
+
+
+
+
+% ######################################
+\appendix
+% ######################################
+
+
+
+
+
+% ######################################
+\EndingSlide{Thank you! Quastions?}
+% ######################################
+
+
+
+
+
+
+
+
+
+
+% ##################
+\begin{frame}
+  \frametitle{Bibliography and netography}
+
+
+  Articles
+  \begin{itemize}
+    \RaggedRight
+
+  \item Sebastian Kr\"{a}mer, David Plankensteiner, Laurin
+    Ostermann, Helmut Ritsch, \textit{QuantumOptics.jl: A~Julia
+      framework for~simulating open quantum systems}, Computer
+    Physics Communications, Volume 227, June 2018, pages 109-116,
+    \colorhref{https://doi.org/10.1016/j.cpc.2018.02.004}{https://doi.org/10.1016/j.cpc.2018.02.004}.
+
+  \item Piotr Gawron, Dariusz Kurzyk, Łukasz Pawela,
+    \textit{QuantumInformation.jl -- a Julia package for numerical
+      computation in quantum information theory}, Public Library of
+    Science, volume 13, number 12,
+    \colorhref{https://arxiv.org/pdf/1806.11464.pdf}{arXiv: 1806.11464}.
+
+  \item Jeff Bezanson, Alan Edelman, Stefan Karpinski and~Viral
+    B.~Shah, \textit{Julia: A Fresh Approach to Numerical Computing},
+    (2017) SIAM Review, 59:~65--98. doi:~10.1137/141000671.
+    url:~http://julialang.org/publications/julia-fresh-approach-BEKS.pdf,
+    \colorhref{https://julialang.org/publications/julia-fresh-approach-BEKS.pdf}
+    {https://julialang.org/publications/julia-fresh-approach-BEKS.pdf}.
+
+  \end{itemize}
+
+\end{frame}
+% ##################
+
+
+
+
+
+% ##################
+\begin{frame}
+  \frametitle{Bibliography and netography}
+
+
+  Internet pages and code repositories
+  \begin{itemize}
+    \RaggedRight
+
+  \item \textit{Julia Micro-Benchmarks},
+    \colorhref{https://julialang.org/benchmarks/}{https://julialang.org/benchmarks/}.
+
+  \item QuantumBFS, \colorhref{https://github.com/QuantumBFS}{https://github.com/QuantumBFS}.
+
+  \item \texttt{QuantumInformation.jl},
+    \colorhref{https://github.com/ZKSI/QuantumInformation.jl}
+    {https://github.com/ZKSI/QuantumInformation.jl}.
+
+  \item Milk Output Optimizer (MOO),
+    \colorhref{https://juliacomputing.com/case-studies/moo.html}
+    {https://juliacomputing.com/case-studies/moo.html}.
+
+  \item numpy/numpy -- \texttt{numpy} GitHub repository, \\
+    \colorhref{https://github.com/numpy/numpy}
+    {https://github.com/numpy/numpy}.
+
+  \item John F.~Gibson, \textit{julia-pde-benchmark}, \\
+    GitHub
+    \colorhref{https://github.com/johnfgibson/julia-pde-benchmark}{johnfgibson/julia-pde-benchmark}.
+
+  \item John F.~Gibson, \textit{Why~Julia}, GitHub
+    \colorhref{https://github.com/johnfgibson/whyjulia/blob/master/1-whyjulia.ipynb}{johnfgibson/whyjulia}.
+
+  \end{itemize}
+
+\end{frame}
+% ##################
+
+
+
+
+
+
+
+
+
+
+% ####################################################################
+% ####################################################################
+% Bibliografia
+\bibliographystyle{plalpha}
+
+\bibliography{}{}
+
+
+
+
+
+% ############################
+
+% Koniec dokumentu
+\end{document}
