@@ -1,0 +1,1 @@
+Dla utworzenia pliku.
