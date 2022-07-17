@@ -1,0 +1,1180 @@
+% ---------------------------------------------------------------------
+% Basic configuration of Beamera and Jagiellonian
+% ---------------------------------------------------------------------
+\RequirePackage[l2tabu, orthodox]{nag}
+
+
+
+\ifx\PresentationStyle\notset
+\def\PresentationStyle{dark}
+\fi
+
+
+
+\documentclass[10pt,t]{beamer}
+\mode<presentation>
+\usetheme[style=\PresentationStyle,logoLang=Latin,logoColor=monochromaticJUwhite,JUlogotitle=yes]{jagiellonian}
+
+
+
+% ---------------------------------------
+% Configuration files of Jagiellonian loceted in catalog preambule
+% ---------------------------------------
+\input{./preambule/LanguageSettings/JagiellonianPolishLanguageSettings.tex}
+\input{./preambule/TextposConfiguration/TextposConfiguration.tex}
+
+\input{./preambule/JagiellonianCustomizationGeneral.tex}
+\input{./preambule/JagiellonianCustomizationCommands.tex}
+
+
+
+
+
+
+
+
+
+
+% ---------------------------------------
+% Packages, libraries and their configuration
+% ---------------------------------------
+\usepackage{mathcommands}
+
+
+
+
+
+% ---------------------------------------
+% Configuration for this particular presentation
+% ---------------------------------------
+
+
+
+
+
+
+
+
+
+
+% ---------------------------------------------------------------------
+\title{Efekt Casimira dla dwóch quasipunktów}
+\subtitle{Pytania, problemy, wątpliwości}
+
+\author{Kamil Ziemian \\
+  \textit{kziemianfvt@gmail.com}}
+
+
+%\institute{Uniwersytet Jagielloński w Krakowie}
+
+\date[3 VI 2016]{3 czerwca 2016}
+% ---------------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+% ####################################################################
+% Początek dokumentu
+\begin{document}
+% ####################################################################
+
+
+
+
+
+% Wyrównanie do lewej z łamaniem wyrazów
+
+\RaggedRight
+
+
+
+
+
+% ######################################
+\maketitle % Tytuł całego tekstu
+% ######################################
+
+
+
+
+
+% ######################################
+\begin{frame}
+  \frametitle{Plan prezentacji}
+
+
+  \tableofcontents % Spis treści
+
+\end{frame}
+% ######################################
+
+
+
+
+
+
+
+
+
+
+% ######################################
+\section{Czym jest efekt Casimira?}
+% ######################################
+
+
+
+% ##################
+\begin{frame}
+  \frametitle{Popularny obraz efektu Casimira}
+
+
+  \begin{figure}
+
+    \centering
+
+    \includegraphics[scale=0.6]{./PresentationPictures/CasimirForce.jpg}
+
+
+    \caption{Pobrany ze strony
+        \colorhref{https://www.ameslab.gov/dmse/research-takes-frictionless-machines-one-step-closer}
+      {https://www.ameslab.gov/dmse/research-takes-frictionless-machines-one-step-closer}}
+
+  \end{figure}
+
+\end{frame}
+% ##################
+
+
+
+
+
+% ##################
+\begin{frame}
+  \frametitle{Jak to obliczyć?}
+
+
+  Kantując pole swobodne zwykle dostajemy
+  \begin{equation}
+    \label{eq:Efekt-Casimira-01}
+    \widehat{H} =
+    \frac{ 1 }{ 2 } \int dk \, dk' \,
+    \sqrt{ \omega_{ k } \, \omega_{ k' } } \left( a_{ k' }^{ \dagger } a_{ k }
+    + a_{ k' } a_{ k }^{ \dagger } \right).
+  \end{equation}
+
+  Aby sobie z~tym poradzić przekomutowujemy $a^{ \dagger }$ oraz~$a$.
+  W~konsekwencji czego:
+  \begin{equation}
+    \label{eq:Efekt-Casimira-02}
+    \langle 0 | \widehat{H} | 0 \rangle =
+    \frac{ 1 }{ 2 } \int\limits_{ 0 }^{ +\infty } dk \, \omega_{ k }.
+  \end{equation}
+
+\end{frame}
+% ##################
+
+
+
+
+
+% ##################
+\begin{frame}
+  \frametitle{Pochodzenie efektu}
+
+
+  Efekt Casimira kryje~się w~„nieskończonej stałej” mającej sens
+  energii próżni:
+  \begin{equation}
+    \label{eq:Efekt-Casimira-03}
+    E_{ 0 } =
+    \frac{ 1 }{ 2 } \int\limits_{ 0 }^{ +\infty } dk \, \omega_{ k },
+  \end{equation}
+  która w~standardowym rachunku zaburzeń jest do zaniedbania. \\
+  Np. Peskin i~Schroeder dyskutują jej możliwy sens fizyczny dopiero
+  w~\textit{Epilogu}, czyli tak gdzieś po 800 stronie, swojej książki.
+
+  Łatwiej chyba dotrzeć do Bieguna Południowego niż do tej strony
+  (mnie~się to chyba nigdy nie uda).
+
+\end{frame}
+% ##################
+
+
+
+
+
+% ##################
+\begin{frame}
+  \frametitle{Dwie nieskończone płyty}
+
+
+  Makroskopowe płyty wprowadzają warunki brzegowe w~$x = 0$ i~$x = a$:
+  \begin{subequations}
+    \begin{align}
+      \label{eq:Efekt-Casimira-04-A}
+      E'_{ 0 }
+      &= \frac{ 1 }{ 2 } \sum_{ n } \omega_{ n, a }, \\
+      \label{eq:Efekt-Casimira-04-B}
+      E_{ a }
+      &=
+        \frac{ 1 }{ 2 } \sum_{ n } \omega_{ n, a }
+        - \frac{ 1 }{ 2 } \int dk \, \omega_{ k }.
+    \end{align}
+  \end{subequations}
+
+  Siła Casimira
+  \begin{equation}
+    \label{eq:Efekt-Casimira-05}
+    F_{ a } = -\frac{ d }{ da } E_{ a }
+  \end{equation}
+
+\end{frame}
+% ##################
+
+
+
+
+
+% ##################
+\begin{frame}
+  \frametitle{Siła Casimira}
+
+
+  \begin{equation}
+    \label{eq:Efekt-Casimira-06}
+    F_{ a } = -\frac{ d }{ da } E_{ a }
+  \end{equation}
+
+
+
+  To wyrażenie można skrytykować z~kilku różnych powodów.
+
+  Chętnie usłyszę Państwa opinię na temat tych zarzutów.
+  \begin{itemize}
+    \RaggedRight
+
+  \item To postępowanie sugeruje fizyczny sens nieskończonej
+    energii próżni, brak jednak interpretacji fizycznej.
+
+  \item Zaniedbanie „nieskończonej stałej” dla pól swobodnych
+    i~problemów rozpraszania staje~się bardziej dyskusyjne.
+
+  \item „Renormalizowane” są~\textbf{liniowe} równania pola.
+
+  \item W~rachunku zaburzeń znane są matematyczne podstawy
+    rozbieżności w~UV i~IR. Bogoliubow, Epstein i~Glaser: mnożenie
+    dystrybucji i~obcięcie adiabatyczne; tu brak takich podstaw.
+
+  \end{itemize}
+
+\end{frame}
+% ##################
+
+
+
+
+
+% ##################
+\begin{frame}
+  \frametitle{Dalszy ciąg krytyki}
+
+
+  \begin{equation}
+    \label{eq:Efekt-Casimira-07}
+    F_{ a } = -\frac{ d }{ da } E_{ a }.
+  \end{equation}
+
+
+
+  \begin{itemize}
+    \RaggedRight
+
+  \item Zdarza~się, że~po skwantowaniu pojawiają~się niefizyczne
+    efekty w~skutek „użycia nie najlepszych wyrażeń klasycznych”,
+    co stawia całą procedurę w~złym świetle.
+
+  \item Nie istnieje chyba operator $\widehat{ H }_{ a }$, by
+    zachodziło
+    \begin{equation}
+      \label{eq:Efekt-Casimira-08}
+      E_{ a } = \langle 0 | \widehat{ H }_{ a } - \widehat{ H }_{ 0 } | 0 \rangle,
+    \end{equation}
+    choć niektóre prace zdają~się to sugerować.
+
+  \end{itemize}
+
+\end{frame}
+% ##################
+
+
+
+
+
+% ##################
+\begin{frame}
+  \frametitle{Podejście Herdegena, podstawy fizyczne i~jego cele}
+
+
+  \begin{enumerate}
+    \RaggedRight
+
+  \item Siła Casimira jest odpowiedzią na \textbf{adiabatyczną} zmianę
+    położenia ciał makroskopowych.
+
+  \item Pole swobodne i~z~warunkami Dirichleta, to dwa różne systemy
+    których nie~można fizycznie porównać.
+
+  \item Ponieważ obliczenia dla warunków Dirichleta dają wynik dobrze
+    zgodny z~rzeczywistością, należy jakoś wyjaśnić ten fenomen.
+
+  \item $E_{ a }$ powinna być wartością oczekiwaną konkretnego,
+    niezmiennego operatora.
+
+  \end{enumerate}
+
+\end{frame}
+% ##################
+
+
+
+
+
+% ##################
+\begin{frame}
+  \frametitle{Podejście Herdegena, podstawy fizyczne}
+
+
+  \begin{itemize}
+    \RaggedRight
+
+  \item Warunki brzegowe, np. typu Dirichleta, są niefizyczne,
+    należy je odpowiednio „rozmyć”.
+
+  \item Ostre warunki brzegowe powinny być odtworzone w~sensie
+    granicy rezolwentowej.
+
+  \item Energia Casmira, jest dana jako wartość oczekiwana operatora
+    \textbf{swobodnego} pola, w~stanie podstawowym zależny od
+    rozmieszczenia ciał makroskopowych:
+    \begin{equation}
+      \label{eq:Efekt-Casimira-09}
+      E_{ a } = \langle \Omega_{ a } | H_{ 0 } | \Omega_{ a } \rangle.
+    \end{equation}
+
+  \end{itemize}
+
+
+
+  Jeden z~rezultatów. Otrzymane opis efektu Casimir przewiduje
+  pojawienie~się odpowiedniej siły również w~problemie o~skończonej
+  liczbie stopni swobody. Ilość stopni swobody tutaj, to wymiar
+  przestrzeni układu klasycznego.
+
+\end{frame}
+% ##################
+
+
+
+
+
+% ##################
+\begin{frame}
+  \frametitle{Formalizm algebraicznej QFT}
+
+
+  Formalizm algebraiczny. Układ kwantowy, o~skończonej bądź nie ilości
+  stopni swobody, definiuje algebra $\Acal$, przestrzeń Hilberta $\Hcal$
+  oraz reprezentacja:
+  \begin{equation}
+    \label{eq:Efekt-Casimira-10}
+    \pi: \Acal \to \Hcal.
+  \end{equation}
+  Dwa układy możemy porównać wtedy, gdy ich algebra $\Acal$ jest
+  identyczna, zaś reprezentacje są równoważne.
+
+
+
+  A. Herdegen, \textit{Quantum backreaction (Casimir) effect~I.
+    What are admissible idealizations?} arXiv:hep-th/0412132 (2004).
+  Podana tam została złożona konstrukcja odpowiedniej algebry,
+  przestrzeni Hilberta i~reprezentacji $\pi$ dla efektu Casimira,
+  w~oparciu o~\textbf{rzeczywistą} przestrzeń Hilberta $\Kcal$ i~dodatni
+  operator~$h$.
+
+\end{frame}
+% ##################
+
+
+
+
+
+% ##################
+\begin{frame}
+  \frametitle{Jak to obliczyć?}
+
+
+  Do konstrukcji teorii swobodnego pola skalarnego $( \Acal, \Hcal, \pi )$
+  potrzebujemy operator:
+  \begin{equation}
+    \label{eq:Efekt-Casimira-11}
+    h^{ 2 } = -\Delta, \quad
+    h = \sqrt{ -\Delta }.
+  \end{equation}
+
+  Wprowadzamy obiekty makroskopowe
+  \begin{equation}
+    \label{eq:Efekt-Casimira-12}
+    h_{ a }^{ 2 } = -\Delta + V_{ a }, \quad
+    h_{ a } = \sqrt{ h_{ a }^{ 2 } }.
+  \end{equation}
+  Operator $V_{ a }$ jest konsekwencją wprowadzenia ciał
+  makroskopowych do układu. To zamiana prowadzi do konstrukcji
+  $( \Acal, \Hcal, \pi_{ a } )$. W~trakcie jej przeprowadzanie potrzebny
+  jest m.~in. operator $\sqrt{ h_{ a } }$.
+
+  Uwaga. Sytuacja staje~się subtelniejsza, bo musimy zagwarantować,
+  że~$h_{ a }^{ 2 }$ nie ma stanów związanych o~ujemnej energii.
+  Stany o~energii 0, nie stanowią problemu.
+
+\end{frame}
+% ##################
+
+
+
+
+
+% ##################
+\begin{frame}
+  \frametitle{????}
+
+
+  Warunek równoważności reprezentacji. Wprowadzenie ciał makroskopowych,
+  może wygenerować tylko skończoną liczbę cząstek swobodnych. Nie całkiem
+  banalna analiza prowadzi do wzoru:
+  \begin{equation}
+    \label{eq:Efekt-Casimira-13}
+    \Ncal_{ a } =
+    \frac{ 1 }{ 4 } \Tr\left[ h^{ -1/2 } ( h_{ a } - h ) h_{ a }^{ -1 }
+      ( h_{ a } - h ) h^{ -1/2 } \right]
+    < +\infty.
+  \end{equation}
+
+
+
+  Energia Casimira. Korzystając z~założenia o~\textbf{adiabatyczności}
+  ruchu ciał makroskopowych, po~nie całkiem elementarnej analizie
+  otrzymujemy:
+  \begin{equation}
+    \label{eq:Efekt-Casimira-14}
+    \Ecal_{ a } =
+    \langle \Omega_{ a } | h^{ 2 } | \Omega_{ a } \rangle =
+    \frac{ 1 }{ 4 } \Tr\left[ ( h_{ a } - h ) h_{ a }^{ -1 }
+      ( h_{ a } - h ) \right].
+  \end{equation}
+  Skończona wartość tego wyrażenia, jest dodatkowym warunkiem na
+  fizyczną porównywalność obu układów.
+
+\end{frame}
+% ##################
+
+
+
+
+
+% ##################
+\begin{frame}
+  \frametitle{Problem dwóch punktów}
+
+
+  Pomysł zajęcia~się tym problemem wyszedł od dr. Bogdana Damskiego.
+
+  Rozwiązanie z~literatury. A. Scardicchio, \textit{Casimir dynamic:
+    Interactions~of surface with codimension $> 1$ due to quantum
+    fluctuations}, (2005), na pracę wskazał dr Damski.
+
+  Korzystając ze~wzoru:
+  \begin{equation}
+    \label{eq:Efekt-Casimira-15}
+    E_{ a } =
+    \frac{ 1 }{ 2 } \int\limits_{ 0 }^{ \Lambda } dE \, \sqrt{E} \rho( E ),
+  \end{equation}
+  odejmując od niego odpowiednie człony
+  i~$\Lambda \to +\infty$ otrzymał on wzór:
+  \begin{equation}
+    \label{eq:Efekt-Casimira-16}
+    \Fcal_{ a } =
+    -\frac{ 5 }{ 4 } \frac{ L_{ c }^{ 4 } }{ \pi a^{ 6 } }.
+  \end{equation}
+  Jeżeli dwa punkty są w~odległości $L_{ c }$ wówczas pojawia~się
+  stan związany o~$E < 0$ i~„próżnia staje~się niestabilna”.
+
+\end{frame}
+% ##################
+
+
+
+
+
+% ##################
+\begin{frame}
+  \frametitle{Problem dwóch płyt}
+
+
+  Wyniki. W~ramach tego podejścia problem został obliczony, dla dwóch
+  różnych sposobów modyfikowania operatora $h^{ 2 } = -\Delta$.
+  \begin{itemize}
+    \RaggedRight
+
+  \item[1.)] Poprzez modyfikację zachowanie $h^{ 2 } = -\Delta$
+    dla mały $k$ w~przestrzeni pędów. A. Herdegen (2005).
+
+  \item[2.)] Poprzez dodanie odpowiedniego pseudopotencjału:
+    \begin{equation}
+      \label{eq:Efekt-Casimira-17}
+      h_{ a }^{ 2 } = -\Delta + V_{ a }.
+    \end{equation}
+    A. Herdegen, M. Stop, \textit{Global vs local Casimir effect}, \\
+    arXiv:1007.2139, (2010).
+
+  \end{itemize}
+
+\end{frame}
+% ##################
+
+
+
+
+
+% ##################
+\begin{frame}
+  \frametitle{Problem dwóch płyt}
+
+
+  Wynik z~pracy Herdegena i~Stopy.
+  \begin{equation}
+    \label{eq:Efekt-Casimira-18}
+    \Fcal_{ a } =
+    \frac{ 2 c }{ \lambda } - \frac{ \pi^{ 2 } }{ 240 a^{ 4 } }
+    + ( \textrm{wyrazy} \xrightarrow[ \lambda \to 0 ]{} 0 ).
+  \end{equation}
+  Symbole $c$ i~$\lambda$, to parametry zależne od kształtu „rozmytych” warunków
+  brzegowych.
+
+\end{frame}
+% ##################
+
+
+
+
+
+% ##################
+\begin{frame}
+  \frametitle{Skalowanie modelu}
+
+
+  Ta procedura powinna odtwarzać siłę Casimira między dwoma punktami,
+  czyli gdy $V_{ a }$ jest quasipotencjałem typu delty Diraca. Wprowadźmy
+  parametr $\lambda$, tak by zachodziło:
+  \begin{equation}
+    \label{eq:Efekt-Casimira-19}
+    h_{ a,\, \lambda }^{ 2 } \xrightarrow[ \lambda \to 0 ]{}
+    h_{ a,\, \textrm{DP} }^{ 2 }.
+  \end{equation}
+  Ponieważ $h_{ a,\, \lambda }^{ 2 }$, $h_{ a,\, \textrm{DP} }^{ 2 }$ są
+  nieograniczone, odpowiedź na pytanie o~to co znaczy taka granica
+  nie jest oczywiste.
+
+  Granica rezolwentowa. Dla $w^{ 2 }$ spoza widma $h_{ a,\, \lambda }^{ 2 }$
+  i~$h_{ a,\, \textrm{DP} }^{ 2 }$ ich rezolwenty są operatorami
+  ograniczonymi, można więc postawić pytanie czy punktowo zachodzi:
+  \begin{equation}
+    \label{eq:Efekt-Casimira-20}
+    ( w^{ 2 } - h_{ a,\, \lambda }^{ 2 } )^{ -1 }
+    \xrightarrow[ \lambda \to 0 ]{}
+    ( w^{ 2 } - h_{ a,\, \textrm{DP} }^{ 2 } )^{ -1 }.
+  \end{equation}
+
+\end{frame}
+% ##################
+
+
+
+
+
+% ##################
+\begin{frame}
+  \frametitle{Model dla dwóch punktów, oznaczenia}
+
+
+  \begin{itemize}
+    \RaggedRight
+
+  \item $g( \vecx )$ funkcja zespolona, gładka o~nośniku
+    zawartym w~kuli o~promieniu $d$ i~środku w~$0 \in \Rbb^{ 3 }$;
+
+  \item $g_{ \vec{ v } }( x ) = g( \vec{ x } - \vec{ v } )$;
+
+  \item $g_{ \lambda }( \vecx ) = \lambda^{ -\gamma } g\left( \frac{ \vecx }{ \lambda } \right)$,
+    $\gamma > 0$;
+
+  \item $\veca$ -- odległość między punktami materialnymi,
+    $a = \absOne{ \veca }$;
+
+  \item $\vecb = \frac{ 1 }{ 2 } \veca$, $b = \absOne{ \vecb }$.
+
+  \end{itemize}
+
+
+
+  Pseudopotencjał
+  \begin{subequations}
+    \begin{align}
+      \label{eq:Efekt-Casimira-21-A}
+      | g \rangle \langle g | \psi \rangle
+      &= g( x ) \int\limits_{ \Rbb^{ 3 } } d^{ 3 } x \; \overline{ g( x ) } \;
+        \psi( x ) \\
+      \label{eq:Efekt-Casimira-21-B}
+      V_{ a,\, \lambda }
+      &=
+        \sigma( \lambda ) \left( | g_{ \vecb,\, \lambda } \rangle \langle g_{ \vecb,\, \lambda } |
+        + | g_{ -\vecb,\, \lambda } \rangle \langle g_{ -\vecb,\, \lambda } | \right)
+    \end{align}
+  \end{subequations}
+
+\end{frame}
+% ##################
+
+
+
+
+
+% ##################
+\begin{frame}
+  \frametitle{Model dla dwóch punktów}
+
+
+  Podstawowe obiekty modelu
+  \begin{subequations}
+    \begin{align}
+      \label{eq:Efekt-Casimira-22-A}
+      h^{ 2 } &= -\Delta, \\
+      \label{eq:Efekt-Casimira-22-B}
+      g_{ \lambda }( \vecx )
+              &= \lambda^{ -\gamma } g\left( \frac{ \vecx }{ \lambda } \right), \quad
+                \gamma > 0, \\
+      \label{eq:Efekt-Casimira-22-C}
+      V_{ a, \lambda } =
+      \sigma( \lambda )
+              &\left( | g_{ \vecb, \lambda } \rangle
+                \langle g_{ \vecb, \lambda } | + | g_{ -\vecb, \lambda } \rangle
+                \langle g_{ -\vecb, \lambda } | \right), \\
+      \label{eq:Efekt-Casimira-22-D}
+      h_{ a }^{ 2 } &= h^{ 2 } + V_{ a }.
+    \end{align}
+  \end{subequations}
+
+  Komentarz. $V_{ a }$ jest nielokalnym pseudopotencjałem. To postępowanie
+  zostało zaproponowane w~pracy A.~Herdegena i~M.~Stopy, \textit{Global
+    vs~local Casimir effect}, (2010) arXiv: 1007.2139v1, gdyż
+  wprowadzenie potencjału lokalnego prowadziło do~rozbieżnych
+  wyrażeń na ślady odpowiednich operatorów.
+
+\end{frame}
+% ##################
+
+
+
+
+
+% ##################
+\begin{frame}
+  \frametitle{Wreszcie coś liczymy}
+
+
+  Wynik. Niech dane będą dane stany własne $h$ i~$h_{ a }$:
+  \begin{equation}
+    \label{eq:Efekt-Casimira-23}
+    h | p \rangle = p | p \rangle, \quad
+    h_{ a } | k+ \rangle = k | k+ \rangle.
+  \end{equation}
+    Za pomocą tych stanów możemy obliczyć energię Casimira
+    w~następujący sposób:
+    \begin{equation}
+      \label{eq:Efekt-Casimira-24}
+      \Ecal_{ a } =
+      \frac{ 1 }{ 4 } \Tr\left[ ( h_{ a } - h ) h_{ a }^{ -1 }
+        ( h_{ a } - h ) \right]
+      =
+      \frac{ 1 }{ 4 } \int\limits d^{ 3 } k \, d^{ 3 } p \,
+      \frac{ ( \absOne{ k } - \absOne{ p } )^{ 2 } }{ \absOne{ k } }
+      \absOne{ \langle p | k+ \rangle }^{ 2 }.
+    \end{equation}
+
+    Teraz potrzebujemy znaleźć $\langle p | k+ \rangle$. W~dalszym
+    ciągu jest $k$ zamiast $\absOne{ k }$.
+
+    Z~pomocą przychodzi teoria rozpraszania
+    \begin{equation}
+      \label{eq:Efekt-Casimira-25}
+      \langle p | k + \rangle =
+      \delta(p - k)
+      + \frac{ \langle p | T( k^{ 2 } + i0 ) | k \rangle}{ k^{ 2 } - p^{ 2 } + i0 }.
+    \end{equation}
+
+\end{frame}
+% ##################
+
+
+
+
+
+% ##################
+\begin{frame}
+  \frametitle{Wreszcie coś liczymy}
+
+
+  Oznaczenia
+  \begin{equation}
+    \label{eq:Efekt-Casimira-26}
+    G_{ 0 }( w^{ 2 } ) = ( w^{ 2 } - h^{ 2 } )^{ -1 }, \quad
+    G_{ \lambda }( w^{ 2 } ) = ( w^{ 2 } - h_{ \lambda }^{ 2 } ).
+  \end{equation}
+  Tutaj pomijam indeks $a$.
+
+
+  Wzory z~teorii rozpraszania
+  \begin{align}
+    \label{eq:Efekt-Casimira-27-A}
+    G( w^{ 2 } )
+    &=
+      G_{ 0 }( w^{ 2 } ) + G_{ 0 }( w^{ 2 } ) T( w^{ 2 } ) G_{ 0 }( w^{ 2 } ), \\
+    \label{eq:Efekt-Casimira-27-B}
+    T( w^{2 } ) &= V + V G_{ 0 }( w^{ 2 } ) T( w^{ 2 } ).
+  \end{align}
+  $G_{ 0 }( w^{ 2 } )$ to rezolwenta laplasjanu, więc znamy ten operator
+  bardzo dobrze.
+
+  Postulujemy
+  \begin{equation}
+    \label{eq:Efekt-Casimira-28}
+    T_{ \lambda }( w^{ 2 } ) =
+    \left( | g_{ \vecb,\, \lambda } \rangle | g_{ -\vecb,\, \lambda } \rangle \right)
+    \Tcal_{ \lambda }( w^{ 2 } )
+    \begin{pmatrix}
+      \langle g_{ \vecb, \lambda } | \\
+      \langle g_{ -\vecb,\, \lambda } |
+    \end{pmatrix}
+  \end{equation}
+
+\end{frame}
+% ##################
+
+
+
+
+
+% ##################
+\begin{frame}
+  \frametitle{Wreszcie coś liczymy}
+
+
+  Postulujemy
+  \begin{equation}
+    \label{eq:Efekt-Casimira-29}
+    T_{ \lambda }( w^{ 2 } ) =
+    \left( | g_{ \vecb,\, \lambda } \rangle | g_{ -\vecb,\, \lambda } \rangle \right)
+    \Tcal_{ \lambda }( w^{ 2 } )
+    \begin{pmatrix}
+      \langle g_{ \vecb, \lambda } | \\
+      \langle g_{ -\vecb, \lambda } |
+    \end{pmatrix}.
+  \end{equation}
+
+  Rozwiązanie
+  \begin{subequations}
+    \begin{align}
+      \label{eq:Efekt-Casimira-30-A}
+      &\Tcal_{ \lambda }( w^{ 2 } ) =
+      \begin{bmatrix}
+        \sigma^{ -1 }( \lambda )
+        - ( g_{ \lambda }, G_{ 0 }( w^{ 2 } ) g_{ \lambda } )
+        & -( U_{ \veca } g_{ \lambda }, G_{ 0 }( w^{ 2 } ) g_{ \lambda } ) \\
+        -( U_{ \veca } g_{ \lambda }, G_{ 0 }( w^{ 2 } ) g_{ \lambda } )
+        & \sigma^{ -1 }( \lambda )
+          - ( g_{ \lambda }, G_{ 0 }( w^{ 2 } ) g_{ \lambda } )
+      \end{bmatrix}^{ -1 }, \\
+      \label{eq:Efekt-Casimira-30-B}
+      &g_{ \lambda }( \vecx ) =
+      \lambda^{ -\gamma } g\left( \tfrac{ \vecx }{ \lambda } \right).
+    \end{align}
+  \end{subequations}
+
+  Możemy teraz obliczyć
+  \begin{equation}
+    \label{eq:Efekt-Casimira-31}
+    \langle \vecp | G_{ \lambda }( w^{ 2 } ) - G_{ 0 }( w^{ 2 } ) | \vecq \rangle.
+  \end{equation}
+
+\end{frame}
+% ##################
+
+
+
+
+
+% ##################
+\begin{frame}
+  \frametitle{Funkcja $\sigma( \lambda )$}
+
+
+  Wzory
+  \begin{subequations}
+    \begin{align}
+      \label{eq:Efekt-Casimira-32-A}
+      \widehat{g}( \vecp ) = \widehat{g}( | \vecp | ) = \widehat{g}( p )
+      &=
+        \frac{ 1 }{ \sqrt{ 2 \pi }^{ 3 } }
+        \int\limits_{ \Rbb^{ 3 } } d^{ 3 } x \, e^{ -i \vecp \cdot \vecx } g( \vecx ), \\
+      \label{eq:Efekt-Casimira-32-B}
+      M_{ p } &= \absOne{ \widehat{g}( p ) }^{ 2 }, \\
+      \label{eq:Efekt-Casimira-32-C}
+      \beta &= 2( 3 - \gamma ).
+    \end{align}
+  \end{subequations}
+
+
+  Zagadnienie funkcji $\sigma( \lambda )$. Chcieliśmy granicę rezolwentową, która
+  jest zupełnie niezależne od funkcji $g( \vecx )$. Udało mi~się znaleźć
+  tylko jedną \textbf{nietrywialną} granicę która spełnia ten warunek.
+  Aby~ją otrzymać należy dodatkowo przyjąć:
+  \begin{equation}
+    \label{eq:Efekt-Casimira-33}
+    \sigma^{ -1 }( \lambda ) =
+    \alpha M_{ 0 } \lambda^{ \beta } - \lambda^{ \beta - 1 } \int\limits_{ -\infty }^{ +\infty } M_{ q } \, dq.
+  \end{equation}
+
+\end{frame}
+% ##################
+
+
+
+
+
+% ##################
+\begin{frame}
+  \frametitle{Granica rezolwentowa}
+
+
+  \begin{equation}
+    \label{eq:Efekt-Casimira-34}
+    \begin{split}
+      &\lim_{ \lambda \searrow 0 }\langle \vecp | G_{ \lambda }( w^{ 2 } ) - G_{ 0 }( w^{ 2 } )
+        | \vecq \rangle
+        = \\
+      &= \frac{ 1 }{ ( -\tfrac{ \alpha } { 2 \pi^{ 2 } } + iw )^{ 2 }
+        - \left( \tfrac{ e^{ i aw } }{ a } \right)^{ 2 } }
+        \frac{ 1 }{ w^{ 2 } - \vecp^{ 2 } }
+        \frac{ 1 }{ w^{ 2 } - \vecq^{ 2 } } \times \\
+      &\hphantom{=}
+        \times \Big[ ( -\tfrac{ \alpha }{ 2 \pi^{ 2 } } + i w ) e^{ -i \vecb \cdot \vecp }
+        e^{ i \vecb \cdot \vecq }
+        - \frac{ e^{ i aw } }{ a } e^{ i \vecb \cdot \vecp }
+        e^{ i \vecb \cdot \vecq } -\frac{ e^{ i aw } }{ a } e^{ -i \vecb \cdot \vecp }
+        e^{ -i \vecb \cdot \vecq } \, + \\
+      &\hphantom{=}
+        + \, ( -\tfrac{ \alpha }{ 2 \pi^{ 2 } } + i w ) e^{ i \vecb \cdot \vecp }
+        e^{ -i \vecb \cdot \vecq } \Big].
+    \end{split}
+  \end{equation}
+
+  Sens granicy. Jest to rezolwenta potencjału dwóch delt Diraca
+  znajdujących~się w~punktach $\vec{ b }$ i~$-\vec{ b }$, $\alpha$ mierzy siłę
+  oddziaływania tego potencjału.
+
+\end{frame}
+% ##################
+
+
+
+
+
+% ##################
+\begin{frame}
+  \frametitle{Granica rezolwentowa}
+
+
+  \begin{equation}
+    \label{eq:Efekt-Casimira-35}
+    \begin{split}
+      &\lim_{ \lambda \searrow 0 }\langle \vecp | G_{ \lambda }( w^{ 2 } ) - G_{ 0 }( w^{ 2 } )
+        | \vecq \rangle
+        = \\
+      &= \frac{ 1 }{ ( -\tfrac{ \alpha } { 2 \pi^{ 2 } } + iw )^{ 2 }
+        - \left( \tfrac{ e^{ i aw } }{ a } \right)^{ 2 } }
+        \frac{ 1 }{ w^{ 2 } - \vecp^{ 2 } }
+        \frac{ 1 }{ w^{ 2 } - \vecq^{ 2 } } \times \\
+      &\hphantom{=}
+        \times \Big[ ( -\tfrac{ \alpha }{ 2 \pi^{ 2 } } + i w ) e^{ -i \vecb \cdot \vecp }
+        e^{ i \vecb \cdot \vecq }
+        - \frac{ e^{ i aw } }{ a } e^{ i \vecb \cdot \vecp }
+        e^{ i \vecb \cdot \vecq } -\frac{ e^{ i aw } }{ a } e^{ -i \vecb \cdot \vecp }
+        e^{ -i \vecb \cdot \vecq } \, + \\
+      &\hphantom{=}
+        + \, ( -\tfrac{ \alpha }{ 2 \pi^{ 2 } } + i w ) e^{ i \vecb \cdot \vecp }
+        e^{ -i \vecb \cdot \vecq } \Big].
+    \end{split}
+  \end{equation}
+
+  Uwaga matematyczna. Zdefiniowanie w~sposób poprawny matematycznie
+  potencjałów będących sumą $\delta( x )$ wymaga zastanowienia. Do tej pory
+  ostatecznym słowem nauki jakie znam zostały przedstawione przez grupę
+  Sergia Albeverio. Dr.~Damski zwrócił nam uwagę na książkę S. Albeverio
+
+\end{frame}
+% ##################
+
+
+
+
+
+% ##################
+\begin{frame}
+  \frametitle{Zagadnienie stanów związanych}
+
+
+  Problem dla formalizmu. Jeżeli zachodzi związek
+  \begin{equation}
+    \label{eq:Efekt-Casimira-36}
+    \alpha a \leq 2 \pi^{ 2 },
+  \end{equation}
+  to dla potencjału dwóch $\delta( x )$ pojawia~się stan związany dla
+  ujemnej energii. Ten fenomen zidentyfikowali już Albeverio et. al.,
+  w~kontekście problemu Casimira dyskutował go Scardicchio
+  („destabilizacja próżni przez tachiony”).
+
+  Przypuszczenie. Jeżeli $\alpha a \leq 2 \pi^{ 2 }$, to istnieje ryzyko, że~dla
+  $\lambda \in ( 0, \eta )$, również pojawia~się stan związany do ujemnej energii.
+  Wtedy granica $\lambda \searrow 0$ nie ma sensu. W~tej chwili nie wiemy, czy tak
+  rzeczywiście jest.
+
+\end{frame}
+% ##################
+
+
+
+
+
+% ##################
+\begin{frame}
+  \frametitle{Energia Casimira}
+
+
+  Stan obecny. Korzystając z~wzoru na operator $T_{ \lambda }( w^{ 2 } )$, chcemy
+  obliczyć graniczną postać $E_{ a, \lambda }$. Ostatnie wyrażenie jakie do tej
+  pory uzyskaliśmy ma postać:
+  \begin{equation}
+    \label{eq:Efekt-Casimira-37}
+    E_{ a, \lambda } = 4 \lambda^{ -1 } f( \lambda, a ).
+  \end{equation}
+
+  Wynik Herdegena, Stopy
+  \begin{equation}
+    \label{eq:Efekt-Casimira-38}
+    \Fcal_{ a, \lambda } =
+    \frac{ 2 c }{ \lambda } - \frac{ \pi^{ 2 } }{ 240 a^{ 4 } }
+    + ( \textrm{wyrazy} \xrightarrow[ \lambda \searrow 0 ]{} 0 ).
+  \end{equation}
+  $c$ może być różne od 0, w~ogólności zależy od funkcji
+  $g( \vecx )$.
+
+\end{frame}
+% ##################
+
+
+
+
+
+% ##################
+\begin{frame}
+  \frametitle{Obecny stan pracy}
+
+
+  Energia Casimira. Korzystając z~wzoru na operator $T_{ \lambda }( w^{ 2 } )$,
+  chcemy obliczyć graniczną postać $E_{ a, \lambda }$. Ostatnie wyrażenie jakie
+  do tej pory uzyskaliśmy ma postać:
+  \begin{equation}
+    \label{eq:Efekt-Casimira-39}
+    E_{ a, \lambda } = 4 \lambda^{ -1 } f( \lambda, a ).
+  \end{equation}
+
+
+  Postać $f( \lambda, a )$
+  \begin{equation}
+    \label{eq:Efekt-Casimira-40}
+    \begin{split}
+      f( \lambda, a )
+      &=
+        f( \lambda )
+        - \frac{ 1 }{ M_{ 0 } }
+        \left( \int\limits_{ 0 }^{ +\infty } dp M_{ p } \right)
+        \left( \frac{ 2 \pi^{ 2 } }{ a } \right)^{ 2 n } \\
+      &\times \Imag \sum\limits_{ n = 1 }^{ \infty } \int\limits_{ 0 }^{ \infty }
+        \frac{ 1 }{ ( -\alpha + i 2 \pi^{ 2 } \rho )^{ 2n + 1 } }
+        e^{ i 2 na \rho } d\rho.
+      \end{split}
+    \end{equation}
+
+    Na razie brak satysfakcjonującej postaci tego wyrażenia. Wstępne
+    badania z~pomocą Mathematici sugerują, że~powyższe całki
+    stają~się rozbieżne, gdy $\alpha a \leq 2 \pi^{ 2 }$
+
+\end{frame}
+% ##################
+
+
+
+
+
+% ##################
+\begin{frame}
+  \frametitle{Obecny stan pracy}
+
+
+  \begin{subequations}
+    \begin{equation}
+      \label{eq:Efekt-Casimira-41-A}
+      \widehat{g}( p ) =
+      \frac{ 1 }{ \sqrt{ 2 \pi }^{ 3 } } \int\limits_{ \Rbb^{ 3 } } d^{ 3 } x \,
+      e^{ -i \vecp \cdot \vecx } g( \vecx ), \quad
+      M_{ p } = \absOne{ \widehat{g}( p ) }^{ 2 }.
+    \end{equation}
+    \begin{equation}
+      \begin{split}
+        f( \lambda, a )
+        &= f( \lambda )
+          - \frac{ 1 }{ M_{ 0 } }
+          \left( \int\limits_{ 0 }^{ +\infty } dp M_{ p } \right)
+          \left( \frac{ 2 \pi^{ 2 } } { a } \right)^{ 2 n } \\
+        &\hphantom{=}
+          \times \Imag \sum\limits_{ n = 1 }^{ \infty }
+          \int\limits_{ 0 }^{ \infty }
+          \frac{ 1 }{ ( -\alpha + i 2 \pi^{ 2 } \rho )^{ 2n + 1 } } e^{ i 2 na \rho } d\rho.
+      \end{split}
+    \end{equation}
+  \end{subequations}
+
+
+
+  Na razie brak satysfakcjonującej postaci tego wyrażenia. Wstępne
+  badania z~pomocą Mathematici sugerują, że~powyższe całki stają~się
+  rozbieżne, gdy $\alpha a \leq 2 \pi^{ 2 }$
+
+\end{frame}
+% ##################
+
+
+
+
+
+% ##################
+\begin{frame}
+  \frametitle{Pytania, problemy, wątpliwości}
+
+
+  \begin{itemize}
+    \RaggedRight
+
+  \item Jak przedstawiona tu teoria ma~się do tego co istnieje
+    w~przyrodzie?
+
+  \item Czy dla $\lambda \in ( 0, \eta )$ również istnieją stany związane?
+
+  \item Jaka jest fizyka tych układów, gdy pojawia~się stan
+    związany o~ujemnej energii?
+
+  \item W~otrzymanych wzorach nie widać jakiegoś uniwersalnego
+    zachowania. Czy to oznacza, że~podejście jest niepoprawne,
+    wyprowadzenie otrzymanych wyników zawiera błąd, czy też
+    takie uniwersalne zachowanie w~naturze nie
+    zachodzi?
+
+  \item Dlaczego energia Casimira tak silnie zależy od kształtu
+    pseudopotencjału?
+
+  \end{itemize}
+
+\end{frame}
+% ##################
+
+
+
+
+
+
+
+
+
+
+% ######################################
+\appendix
+% ######################################
+
+
+
+
+
+% ######################################
+\EndingSlide{Dziękuję! Pytania?}
+% ######################################
+
+
+
+
+
+
+
+
+
+
+% ##################
+\begin{frame}
+  \frametitle{Bibliografia}
+
+
+  \begin{itemize}
+    \RaggedRight
+
+  \item Andrzej Herdegen, \textit{Quantum backreaction (Casimir) effect~I.
+      What are admissible idealization}, arXiv:~hep-th/0412132 (2004).
+
+  \item Andrzej Herdegen, \textit{Quantum backreaction (Casimir) effect~II.
+      Scalar and~electric fields}, arXiv:~hep-th/0507023v1 (2005).
+
+  \item A~Herdegen, M.~Stopa, \textit{Global vs~local Casimir effect},
+    arXiv:~1007.2139v1 (2010).
+
+  \item A. Scardicchio, \textit{Casimir dynamic: Interactions~of
+      surface with codi >1 due to quantum fluctuations}, Physical
+    Reviev D 5004 (2005).
+
+  \item John Taylor, \textit{Scatering theory}.
+
+  \end{itemize}
+
+\end{frame}
+% ##################
+
+
+
+
+
+% ############################
+
+% Koniec dokumentu
+\end{document}
