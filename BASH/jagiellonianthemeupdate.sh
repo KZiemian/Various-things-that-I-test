@@ -77,7 +77,7 @@ rsync $JAGIELLONIANTEXTPOSPATH \
 
 # Path to "Czemu rozważanie cząstek w zakrzywionej czasoprzestrzeni
 # może być błędem?" presentation
-PRESENTATIONPATH="$PRESENTATIONSNEEDSIMPROVEMENTSPATH/Czemu-rozważanie-cząstek-w-zakrzywionej-czasoprzestrzeni-może-być-błędem"
+PRESENTATIONPATH="$PRESENTATIONSNEEDSIMPROVEMENTSPATH/Czemu-rozważanie-cząstek-w-zakrzywionej-ETC"
 
 rsync $JAGIELLONIANTHEMEPATH/*sty $PRESENTATIONPATH
 rsync $JAGIELLONIANCUSTOMIZATIONCOMMANDSPATH $PRESENTATIONPATH/preambule/
@@ -89,8 +89,9 @@ rsync $JAGIELLONIANTEXTPOSPATH \
 
 
 
-# Path to "Geometria 3D dla projektantów gier wideo" presentation
-PRESENTATIONPATH="$HOME/Good-things/Geometria3D-wykłady/Wykłady-Geometria3D-PL"
+# Path to "Efekt Casimira dla dwóch quasipunktowych ciał. Pytania,
+# problemy, wątpliwości" presentation
+PRESENTATIONPATH="$PRESENTATIONSNEEDSIMPROVEMENTSPATH/Efekt-Casimira-dla-dwóch-quasipunktowych-ciał-ETC"
 
 rsync $JAGIELLONIANTHEMEPATH/*sty $PRESENTATIONPATH
 rsync $JAGIELLONIANCUSTOMIZATIONCOMMANDSPATH $PRESENTATIONPATH/preambule/
@@ -117,7 +118,7 @@ rsync $JAGIELLONIANTEXTPOSPATH \
 
 # Path to "Filozofia i matematyczne wyzwania nieralatywitycznej mechaniki
 # kwantowej" presentation
-PRESENTATIONPATH="$PRESENTATIONSNEEDSIMPROVEMENTSPATH/Filozoficzne-i-matematyczne-wyzwania-nierelatywistycznej-mechaniki-kwantowej"
+PRESENTATIONPATH="$PRESENTATIONSNEEDSIMPROVEMENTSPATH/Filozoficzne-i-matematyczne-wyzwania-ETC"
 
 rsync $JAGIELLONIANTHEMEPATH/*sty $PRESENTATIONPATH
 rsync $JAGIELLONIANCUSTOMIZATIONCOMMANDSPATH $PRESENTATIONPATH/preambule/
@@ -131,11 +132,24 @@ rsync $JAGIELLONIANTEXTPOSPATH \
 
 # Path to "Grafen, czyli dynamika relatywistyczna przy trochę mniejszych
 # prędkościach" presentation
-PRESENTATIONPATH="$PRESENTATIONSNEEDSIMPROVEMENTSPATH/Grafen-czyli-dynamika-relatywistyczna-przy"
+PRESENTATIONPATH="$PRESENTATIONSNEEDSIMPROVEMENTSPATH/Grafen-czyli-dynamika-relatywistyczna-ETC"
 
 rsync $JAGIELLONIANTHEMEPATH/*sty $PRESENTATIONPATH
 rsync $JAGIELLONIANCUSTOMIZATIONCOMMANDSPATH $PRESENTATIONPATH/preambule/
 rsync $JAGIELLONIANCUSTOMIZATIONGENERALPATH $PRESENTATIONPATH/preambule/
+rsync $JAGIELLONIANLANGUAGESETTINGSPATH \
+      $PRESENTATIONPATH/preambule/LanguageSettings/
+rsync $JAGIELLONIANTEXTPOSPATH \
+      $PRESENTATIONPATH/preambule/TextposConfiguration/
+
+
+
+# Path to "Geometria 3D dla projektantów gier wideo" presentation
+PRESENTATIONPATH="$HOME/Good-things/Geometria3D-wykłady/Wykłady-Geometria3D-PL"
+
+rsync $JAGIELLONIANTHEMEPATH/*sty $PRESENTATIONPATH
+# rsync $JAGIELLONIANCUSTOMIZATIONCOMMANDSPATH $PRESENTATIONPATH/preambule/
+# rsync $JAGIELLONIANCUSTOMIZATIONGENERALPATH $PRESENTATIONPATH/preambule/
 rsync $JAGIELLONIANLANGUAGESETTINGSPATH \
       $PRESENTATIONPATH/preambule/LanguageSettings/
 rsync $JAGIELLONIANTEXTPOSPATH \
@@ -157,9 +171,23 @@ rsync $JAGIELLONIANTEXTPOSPATH \
 
 
 
+# Path to "Jak pisać w LaTeXu?"
+# presentation
+PRESENTATIONPATH="$PRESENTATIONSNEEDSIMPROVEMENTSPATH/Jak-pisać-w-LaTeXu"
+
+rsync $JAGIELLONIANTHEMEPATH/*sty $PRESENTATIONPATH
+rsync $JAGIELLONIANCUSTOMIZATIONCOMMANDSPATH $PRESENTATIONPATH/preambule/
+rsync $JAGIELLONIANCUSTOMIZATIONGENERALPATH $PRESENTATIONPATH/preambule/
+rsync $JAGIELLONIANLANGUAGESETTINGSPATH \
+      $PRESENTATIONPATH/preambule/LanguageSettings/
+rsync $JAGIELLONIANTEXTPOSPATH \
+      $PRESENTATIONPATH/preambule/TextposConfiguration/
+
+
+
 # Path to "Julia: 2010s proposition for scientific (and other) programming"
 # presentation
-PRESENTATIONPATH="$PRESENTATIONSNEEDSIMPROVEMENTSPATH/Julia-2010s-proposition"
+PRESENTATIONPATH="$PRESENTATIONSNEEDSIMPROVEMENTSPATH/Julia-2010s-proposition-ETC"
 
 rsync $JAGIELLONIANTHEMEPATH/*sty $PRESENTATIONPATH
 rsync $JAGIELLONIANCUSTOMIZATIONCOMMANDSPATH $PRESENTATIONPATH/preambule/
@@ -185,7 +213,7 @@ rsync $JAGIELLONIANTEXTPOSPATH \
 
 
 # Path to "Matematyczna strona mechaniki kwantowej" presentation
-PRESENTATIONPATH="$PRESENTATIONSNEEDSIMPROVEMENTSPATH/Niespodziewane-teoretyczne-trudności-kwantowej-teorii-pola-w-OTW"
+PRESENTATIONPATH="$PRESENTATIONSNEEDSIMPROVEMENTSPATH/Niespodziewane-teoretyczne-trudności-kwantowej-ETC"
 
 rsync $JAGIELLONIANTHEMEPATH/*sty $PRESENTATIONPATH
 rsync $JAGIELLONIANCUSTOMIZATIONCOMMANDSPATH $PRESENTATIONPATH/preambule/
