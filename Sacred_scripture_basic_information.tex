@@ -1,0 +1,328 @@
+% ---------------------------------------------------------------------
+% Podstawowe ustawienia i pakiety
+% ---------------------------------------------------------------------
+\RequirePackage[l2tabu, orthodox]{nag} % Wykrywa przestarzałe i niewłaściwe
+% sposoby używania LaTeXa. Więcej jest w l2tabu English version.
+\documentclass[a4paper,11pt]{article}
+% \usepackage{babel}
+% {rozmiar papieru, rozmiar fontu}[klasa dokumentu]
+% w języku angielskim.
+% \usepackage[utf8]{inputenc} % Włączenie kodowania UTF-8, co daje dostęp
+% % do polskich znaków.
+\usepackage{fontspec}
+\setmainfont{Latin Modern Roman}
+
+\usepackage{polyglossia}
+\setdefaultlanguage{english}
+\setotherlanguage{hebrew}
+
+
+\newfontfamily{\hebrewfont}{FreeSerif}[
+  Extension=.otf,
+  Path=/usr/local/texlive/2022/texmf-dist/fonts/opentype/public/gnu-freefont/,
+  UprightFont=*,
+  ItalicFont=*Italic,
+  BoldFont=*Bold,
+  BoldItalicFont=*BoldItalic,
+]
+
+
+
+
+
+% ------------------------------
+% Podstawowe pakiety (niezwiązane z ustawieniami języka)
+% ------------------------------
+\usepackage{microtype} % Twierdzi, że poprawi rozmiar odstępów w tekście.
+\usepackage{graphicx} % Wprowadza bardzo potrzebne komendy do wstawiania
+% grafiki.
+\usepackage{verbatim} % Poprawia otoczenie VERBATIME.
+\usepackage{textcomp} % Dodaje takie symbole jak stopnie Celsiusa,
+% wprowadzane bezpośrednio w tekście.
+\usepackage{vmargin} % Pozwala na prostą kontrolę rozmiaru marginesów,
+% za pomocą komend poniżej. Rozmiar odstępów jest mierzony w calach.
+% ------------------------------
+% MARGINS
+% ------------------------------
+\setmarginsrb
+{ 0.7in}  % left margin
+{ 0.6in}  % top margin
+{ 0.7in}  % right margin
+{ 0.8in}  % bottom margin
+{  20pt}  % head height
+{0.25in}  % head sep
+{   9pt}  % foot height
+{ 0.3in}  % foot sep
+
+
+
+% ------------------------------
+% Często przydatne pakiety
+% ------------------------------
+\usepackage{csquotes} % Pozwala w prosty sposób wstawiać cytaty do tekstu.
+\usepackage{xcolor} % Pozwala używać kolorowych czcionek (zapewne dużo
+% więcej, ale ja nie potrafię nic o tym powiedzieć).
+
+
+
+% ------------------------------
+% Pakiety do tekstów z nauk przyrodniczych
+% ------------------------------
+\let\lll\undefined % Amsmath gryzie się z językiem pakietami do języka
+% polskiego, bo oba definiują komendę \lll. Aby rozwiązać ten problem
+% oddefiniowuję tę komendę, ale może tym samym pozbywam się dużego Ł.
+\usepackage[intlimits]{amsmath} % Podstawowe wsparcie od American
+% Mathematical Society (w skrócie AMS)
+\usepackage{amsfonts, amssymb, amscd, amsthm} % Dalsze wsparcie od AMS
+% \usepackage{siunitx} % Dla prostszego pisania jednostek fizycznych
+\usepackage{upgreek} % Ładniejsze greckie litery
+% Przykładowa składnia: pi = \uppi
+\usepackage{slashed} % Pozwala w prosty sposób pisać slash Feynmana.
+\usepackage{calrsfs} % Zmienia czcionkę kaligraficzną w \mathcal
+% na ładniejszą. Może w innych miejscach robi to samo, ale o tym nic
+% nie wiem.
+
+
+
+% ##########
+% Tworzenie otoczeń "Twierdzenie", "Definicja", "Lemat", etc.
+\newtheorem{theorem}{Twierdzenie}  % Komenda wprowadzająca otoczenie
+% „theorem” do pisania twierdzeń matematycznych
+\newtheorem{definition}{Definicja}  % Analogicznie jak powyżej
+\newtheorem{corollary}{Wniosek}
+
+
+
+% ---------------------------------------
+% Pakiety napisane przez użytkownika.
+% Mają być w tym samym katalogu to ten plik .tex
+% ---------------------------------------
+% \usepackage{latexgeneralcommands}
+% \usepackage{mathcommands}
+% % \usepackage{calculuscommands}
+% \newcommand{\conca}{\textrm{conca}}
+% \usepackage{SchwartzBooksCommands}  % Pakiet napisany m.in. dla tego pliku.
+
+
+
+% ---------------------------------------------------------------------
+% Dodatkowe ustawienia dla języka polskiego
+% ---------------------------------------------------------------------
+\renewcommand{\thesection}{\arabic{section}.}
+% Kropki po numerach rozdziału (polski zwyczaj topograficzny)
+\renewcommand{\thesubsection}{\thesection\arabic{subsection}}
+% Brak kropki po numerach podrozdziału
+
+
+
+% ------------------------------
+% Ustawienia różnych parametrów tekstu
+% ------------------------------
+\renewcommand{\arraystretch}{1.2} % Ustawienie szerokości odstępów między
+% wierszami w tabelach.
+
+
+
+% ------------------------------
+% Pakiet "hyperref"
+% Polecano by umieszczać go na końcu preambuły.
+% ------------------------------
+\usepackage{hyperref} % Pozwala tworzyć hiperlinki i zamienia odwołania
+% do bibliografii na hiperlinki.
+
+
+
+
+
+
+
+
+
+
+% ---------------------------------------------------------------------
+% Tytuł i autor tekstu
+\title{Basic information about languages in Sacred Scipture}
+
+
+% \date{}
+% ---------------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+% ####################################################################
+\begin{document}
+% ####################################################################
+
+
+
+
+
+% ######################################
+\maketitle % Tytuł całego tekstu
+% ######################################
+
+
+
+
+
+% ######################################
+\section{Languages} % Tytuł całego tekstu
+% ######################################
+
+
+
+Basic fact. We are using Latin alphabet, which was created by the
+Romans\footnote{Name \textit{latin}, comes from the fact that region of the
+  city of Rome was called Latium.}. Bible was written in mainly three
+languages each one have its own alphabet, so they basically unreadable to
+the most of us. These languages are Old Hebrew, Old Aramaic and one of the
+version of Greek language known as Koine Greek or Alexandrian Greek. Bible
+was written over the span that is usually count as 1000 years, so languages
+changes during this time. But this is separate topic
+
+Try to read John Milton now and he is only 400 or so years old.
+
+Old Hebrew and Old Aramaic are similar in few ways. Both you read from
+right-to-left and they alphabet consists of symbols only for consonants.
+This is a bit more complicated when you encounter things like Hebrew letter
+\begin{hebrew} א \end{hebrew}, but basically, there is no vowels in the
+text, reader must to add it himself/herself.
+
+Around 900 years after the time of Jesus, things called \textit{nekkudots}
+that show which vowel is where, was added to the Hebrew script. But things
+are far more complicated.
+
+Basic Old Hebrew alphabet: \begin{hebrew} א \end{hebrew} (alef),
+\begin{hebrew} ב‎ \end{hebrew} (bet), \begin{hebrew} ג‎ \end{hebrew} (gimel),
+\begin{hebrew} ד‎ \end{hebrew} (dalet), \begin{hebrew} ה‎ \end{hebrew} (he),
+\begin{hebrew} ו‎ \end{hebrew} (waw), \begin{hebrew} ז \end{hebrew} (zayin),
+\begin{hebrew} ח \end{hebrew} (chet), \begin{hebrew} ט‎ \end{hebrew} (tet),
+\begin{hebrew} י \end{hebrew} (yod), \begin{hebrew} כ‎, ך \end{hebrew} (kaf),
+\begin{hebrew} ל‎ \end{hebrew} (lamed), \begin{hebrew} מ, ם \end{hebrew}
+(mem), \begin{hebrew} נ, ן‎ \end{hebrew} (nun), \begin{hebrew} ס‎ \end{hebrew}
+(samech), \begin{hebrew} ע \end{hebrew} (ayin),
+\begin{hebrew} ע, ף‎ \end{hebrew} (pe), \begin{hebrew} צ, ץ‎ \end{hebrew}
+\begin{hebrew} ק \end{hebrew} (qof), \begin{hebrew} ר \end{hebrew} (resh),
+\begin{hebrew} ש \end{hebrew} (shin), \begin{hebrew} ת \end{hebrew} (tav).
+
+Very crude way of reading Hebrew: for letters other than
+\begin{hebrew} א, ע‎ \end{hebrew} read first consonant in the name. Again,
+you basically must remember where and which vowels are in the world.
+
+I won't show you Aramaic alphabet, because it was already hard to make my
+computer accept Hebrew alphabet. You can find it e.g. on Wikipedia page
+``Aramaic alphabet''.
+
+Basic Greek alphabet: A, $\alpha$ (alpha), B, $\beta$ (beta), $\Gamma$, $\gamma$ (gamma),
+$\Delta$, $\delta$ (delta), E, $\varepsilon$ (epsilon), Z, $\zeta$ (zeta), H, $\eta$ (eta), $\Theta$, $\theta$
+(theta), I, $\iota$ (iota), K, $\kappa$ (kappa), $\Lambda$, $\lambda$ (lambda), M, $\mu$ (mu), N,
+$\nu$ (nu), $\Xi$, $\xi$ (xi), O, o (omicron), $\Pi$, $\pi$ (pi), $\Sigma$, $\sigma$, $\xi$
+(sigma), T, $\tau$ (tau), Y, $\upsilon$ (upsilon), $\Phi$, $\varphi$ (phi), X, $\chi$, $\Psi$, $\psi$
+(psi), $\Omega$, $\omega$ (omega).
+
+Crude way of reading Greek: just read first letter of the name.
+
+There is much more to Hebrew and Greek that this letters. You can various
+additional symbols, but since using them is beyond me, I will omit them.
+
+
+
+
+
+
+
+
+
+
+% ######################################
+\section{Names} % Tytuł całego tekstu
+% ######################################
+
+
+
+``Bible'' comes from Koine Greek $\tau \alpha$ $\beta \iota \beta \lambda \iota \alpha$, ``ta biblia'', meaning
+``the books''\footnote{Note that in English we still have
+  ``bibliography''.}. ``Sacred Scripture'' comes from Latin, it means
+``sacred writing''\footnote{Note in English we have words as ``scribe'' and
+  ``scribbling''.}.
+
+Old Testament is called by Jews \begin{hebrew} תנך \end{hebrew} (Tanakh) or
+\begin{hebrew} מקרא \end{hebrew} (Mikra). It is divided in three parts:
+\begin{hebrew} תורה \end{hebrew} (Torah, en. ``Teachings''),
+\begin{hebrew} נביאים \end{hebrew} (Nevi'im, en. ``Spokeperson'') and
+\begin{hebrew} כתובים \end{hebrew} (Ketuvim, en. ``Writing'').
+
+Torah \begin{hebrew} תורה \end{hebrew} contains Five Books of Moses. Nevi'im
+\begin{hebrew} נביאים \end{hebrew} you can say it contains
+prophets, but live is not so simple. I don't even try to characterize
+Ketuvim \begin{hebrew} כתובים \end{hebrew}. Name ``Tanakh''
+\begin{hebrew} תנך \end{hebrew} is quasi anagram of first letters of Tora,
+Nevi'im and Ketuvim.
+
+Five Books of Moses derives they Hebrew names from their first word.
+\begin{itemize}
+
+\item \begin{hebrew} בראשית \end{hebrew}, Bereshit, en. ``In the beginning''.
+  In Greek $\Gamma \varepsilon \nu \varepsilon \sigma \iota \zeta$, Genesis, en. ``Creation''\footnote{Note words
+    like ``genetics'' or ``genealogy''}.
+
+\item \begin{hebrew} שמות \end{hebrew}, Shemot, en. ``Names''. In Greek E$\xi$o$\delta$o$\zeta$, Exodos, en. ``Exit''.
+
+\item \begin{hebrew} וקרא \end{hebrew}, Vayikra, en. ``And He called''. In Greek $\Lambda \varepsilon \upsilon \iota \tau \iota \kappa$o$\nu$, Leutikon, en. ``Relating to the Levites''.
+
+\item \begin{hebrew} \end{hebrew}
+
+\end{itemize}
+
+
+
+
+
+\begin{hebrew} א ב‎ \end{hebrew} (bet), \begin{hebrew} ג‎ \end{hebrew} (gimel),
+\begin{hebrew} ד‎ \end{hebrew} (dalet), \begin{hebrew} ה‎ \end{hebrew} (he),
+\begin{hebrew} ו‎ \end{hebrew} (waw), \begin{hebrew} ז \end{hebrew} (zayin),
+\begin{hebrew} ח \end{hebrew} (chet), \begin{hebrew} ט‎ \end{hebrew} (tet),
+\begin{hebrew} י \end{hebrew} (yod), \begin{hebrew} כ‎, ך \end{hebrew} (kaf),
+\begin{hebrew} ל‎ \end{hebrew} (lamed), \begin{hebrew} מ, ם \end{hebrew},
+\begin{hebrew} נ, ן‎ \end{hebrew} (nun), \begin{hebrew} ס‎ \end{hebrew}
+(samech), \begin{hebrew} ע \end{hebrew} (ayin),
+\begin{hebrew} ע, ף‎ \end{hebrew} (pe), \begin{hebrew} צ‎, ץ \end{hebrew}
+(tsadi), \begin{hebrew} ק \end{hebrew} (Qof), \begin{hebrew} ר \end{hebrew}
+(resh), \begin{hebrew} ש \end{hebrew} (shin), \begin{hebrew} ת \end{hebrew} (tav).
+
+
+
+
+% ######################################
+\section{Songs} % Tytuł całego tekstu
+% ######################################
+
+
+
+Depending on whom published your Bible,
+
+
+
+
+% #####################################################################
+% #####################################################################
+% Bibliografia
+\bibliographystyle{plalpha}
+
+\bibliography{MathComScienceBooks}{}
+
+
+
+
+
+% ############################
+
+% Koniec dokumentu
+\end{document}
