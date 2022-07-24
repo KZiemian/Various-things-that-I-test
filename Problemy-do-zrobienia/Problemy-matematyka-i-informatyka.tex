@@ -142,6 +142,61 @@
 
 
 % ######################################
+\section{Teoria grup i~ich reprezentacji}
+
+% \vspace{\spaceTwo}
+
+% ######################################
+
+
+
+% ##################
+\begin{enumerate}
+
+\item Podstawowe definicje: grupa, rodzaje grup, podgrupy, warstwy, grupy
+  ilorazowe, iloczyny grup, grupy proste i~półproste, sprzężenie, klasy
+  sprzężenia.
+
+\item Homomorfizm i~izomorfizm grup, twierdzenie o~izomorfizmach.
+
+\item Działania grupy na zbiorach, definicje, własności.
+
+\item Reprezentacje: definicje, przywiedlność, redukowalność, iloczyny
+  tensorowe reprezentacji.
+
+\item Lemat Schura.
+
+\item Operatory tensorowe, twierdzenie Eckarta-Wignera.
+
+\item Grupy dyskretne: grupa permutacji, cykle, klasy sprzężenia,
+  twierdzenie Cayleya.
+
+\item Reprezentacje grupy symetrycznej: charaktery, reprezentacja regularna, twierdzenie o~ortogonalności reprezentacji i~charakterów, rozkład reprezentacji redukowalnych na nieredukowalne.
+
+\item Reprezentacje nieredukowalne grupy symetrycznej: diagramy i~tabele Younga, operatory rzutowe, wymiary reprezentacji.
+
+\item Grupy Liego: podstawowe definicje i~własności topologiczne.
+
+\item Algebra Liego: konstrukcja, własności.
+
+\item Trzecie twierdzenie Liego, eksponencjacja algebry.
+
+\item Reprezentacje grup i~algebry Liego: definicje, własności, generatory,
+  podalgebry, ideały, stałe struktury
+
+\item Reprezentacja dołączona: konstrukcja, własności.
+
+\item
+
+\end{enumerate}
+% ##################
+
+
+
+
+
+
+% ######################################
 \section{Algebra symboliczna, problemy do zrobienia}
 
 % \vspace{\spaceTwo}
@@ -287,19 +342,19 @@
 
 \item Wyznaczyć parametr naturalny krzywej
   \begin{equation}
-    \label{DiffGeo:01}
+    \label{eq:DiffGeo-01}
     \gamma( u ) = \left[ e^{ -u } \cos u, e^{ -u } \sin u, 1 - e^{ -u } \right]
   \end{equation}
 
 \item Dana jest krzywa
   \begin{equation}
-    \label{DiffGeo:02}
+    \label{eq:DiffGeo-02}
     \delta( t ) =
     \big[ a ( t - \sin t ), a ( 1 - \cos t ), 4a \sin \frac{ t }{ 2 } \big]
   \end{equation}
   Obliczyć krzywiznę i~skręcenie krzywej
   \begin{equation}
-    \label{DiffGeo:03}
+    \label{eq:DiffGeo-03}
     \gamma( t ) =
     \delta( t )
     + a \vecnbold \sqrt{ 1 + \left( \sin \frac{ t }{ 2 } \right)^{ 2 } }
@@ -308,16 +363,15 @@
 \item Wykazać, że dla krzywej $\alpha( s )$ klasy $\Ccal^{ 4 }$ zachodzi
   tożsamość
   \begin{equation}
-    \label{DiffGeo:04}
-    \left( \frac{ d^{ 3 } \alpha }{ d s^{ 3 } } \right)^{ 2 }
-    =
+    \label{eq:DiffGeo-04}
+    \left( \frac{ d^{ 3 } \alpha }{ d s^{ 3 } } \right)^{ 2 } =
     \kappa^{ 4 } + \kappa^{ 2 } \tau^{ 2 } + \left( \frac{ d \kappa }{ d s } \right)^{ 2 }
   \end{equation}
 
 \item Znaleźć repery Freneta $\vectbold$, $\vecnbold$, $\vecbbold$ w
   punkcie $P = (1, 1, 1)$ krzywej powstałej z~przecięcia powierzchni
   \begin{equation}
-    \label{DiffGeo:05}
+    \label{eq:DiffGeo-05}
     z^{ 2 } = xy, \quad
     x^{ 2 } + y^{ 2 } - z^{ 2 } = 1
   \end{equation}
@@ -370,7 +424,7 @@
   \v{C}ech cocyle, and let $A_{ i j }$ be a collections of one forms
   that satisfy:
   \begin{equation}
-    \label{DiffGeo:07}
+    \label{eq:DiffGeo-07}
     A_{ i j } + A_{ j k } + A_{ k i } = d\lambda_{ i j k },
   \end{equation}
   and $F_{ i }$ collection of two-forms such that
@@ -382,7 +436,7 @@
   that $P \times V / \sim$ is a vector bundle over $M$. Relation
   $\sim$ is defined by
   \begin{equation}
-    \label{DiffGeo:09}
+    \label{eq:DiffGeo-09}
     ( p, v ) \sim \left( pg, \rho\left( g^{ -1 } \right) v \right).
   \end{equation}
 
@@ -403,7 +457,7 @@
 \item For the sphere parametrized by $z \in \Cbb$ and the line bundle
   defined through the Bott projector
   \begin{equation}
-    \label{DiffGeo:10}
+    \label{eq:DiffGeo-10}
     p( z ) =
     \frac{ 1 }{ 1 + \abs{ z }^{ 2 } }
     \begin{pmatrix}
@@ -480,7 +534,7 @@
 \item Show that for a bundle $E \to M$ with fibre $V = \Cbb^{ n }$
   relation below hold:
   \begin{equation}
-    \label{DiffGeo:11}
+    \label{eq:DiffGeo-11}
     \ch( E ) =
     V + c_{ 1 }( E )
     + \frac{ 1 }{ 2 } ( c_{ 1 }( E )^{ 2 } - 2 c_{ 2 }( E ) )
