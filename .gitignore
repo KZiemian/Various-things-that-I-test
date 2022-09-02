@@ -1,0 +1,19 @@
+# ignore all PDF files
+*.pdf
+
+# ignore auxiliary files created by pdfLaTeX
+*.aux
+*.log
+*.nav
+*.out
+*.snm
+*.toc
+
+# ignore Emacs backup files
+*~
+
+# ignore graphic files
+*.jpg
+
+# ignore auxiliary catalogs
+auto/
