@@ -1,0 +1,431 @@
+% ---------------------------------------------------------------------
+% Podstawowe ustawienia i pakiety
+% ---------------------------------------------------------------------
+\RequirePackage[l2tabu, orthodox]{nag}  % Wykrywa przestarzałe i niewłaściwe
+% sposoby używania LaTeXa. Więcej jest w l2tabu English version.
+\documentclass[a4paper,11pt]{article}
+% {rozmiar papieru, rozmiar fontu}[klasa dokumentu]
+\usepackage[MeX]{polski}  % Polonizacja LaTeXa, bez niej będzie pracował
+% w języku angielskim.
+\usepackage[utf8]{inputenc} % Włączenie kodowania UTF-8, co daje dostęp
+% do polskich znaków.
+\usepackage{lmodern}  % Wprowadza fonty Latin Modern.
+\usepackage[T1]{fontenc}  % Potrzebne do używania fontów Latin Modern.
+
+
+
+% ------------------------------
+% Podstawowe pakiety (niezwiązane z ustawieniami języka)
+% ------------------------------
+\usepackage{microtype}  % Twierdzi, że poprawi rozmiar odstępów w tekście.
+\usepackage{graphicx}  % Wprowadza bardzo potrzebne komendy do wstawiania
+% grafiki.
+% \usepackage{verbatim}  % Poprawia otoczenie VERBATIME.
+% \usepackage{textcomp}  % Dodaje takie symbole jak stopnie Celsiusa,
+% wprowadzane bezpośrednio w tekście.
+\usepackage{vmargin}  % Pozwala na prostą kontrolę rozmiaru marginesów,
+% za pomocą komend poniżej. Rozmiar odstępów jest mierzony w calach.
+% ------------------------------
+% MARGINS
+% ------------------------------
+\setmarginsrb
+{ 0.7in} % left margin
+{ 0.6in} % top margin
+{ 0.7in} % right margin
+{ 0.8in} % bottom margin
+{  20pt} % head height
+{0.25in} % head sep
+{   9pt} % foot height
+{ 0.3in} % foot sep
+
+
+
+% ------------------------------
+% Często przydatne pakiety
+% ------------------------------
+% \usepackage{csquotes}  % Pozwala w prosty sposób wstawiać cytaty do tekstu.
+
+
+
+
+% ------------------------------
+% Pakiety do tekstów z nauk przyrodniczych
+% ------------------------------
+\let\lll\undefined  % Amsmath gryzie się z pakietami do języka
+% polskiego, bo oba definiują komendę \lll. Aby rozwiązać ten problem
+% oddefiniowuję tę komendę, ale może tym samym pozbywam się dużego Ł.
+\usepackage[intlimits]{amsmath}  % Podstawowe wsparcie od American
+% Mathematical Society (w skrócie AMS)
+\usepackage{amsfonts, amssymb, amscd, amsthm}  % Dalsze wsparcie od AMS
+% \usepackage{siunitx}  % Do prostszego pisania jednostek fizycznych
+\usepackage{upgreek}  % Ładniejsze greckie litery
+% Przykładowa składnia: pi = \uppi
+% \usepackage{slashed}  % Pozwala w prosty sposób pisać slash Feynmana.
+\usepackage{calrsfs}  % Zmienia czcionkę kaligraficzną w \mathcal
+% na ładniejszą. Może w innych miejscach robi to samo, ale o tym nic
+% nie wiem.
+
+
+
+
+
+% ------------------------------
+% Paczki, biblioteki i ich ustawienia dla tego pliku
+% ------------------------------
+\usepackage{tikz}  % Wspaniały pakiet PGF/TikZ
+
+
+
+
+
+
+
+% ------------------------------
+% Pakiet „hyperref”
+% Polecano by umieszczać go na końcu preambuły
+% ------------------------------
+\usepackage{hyperref}  % Pozwala tworzyć hiperlinki i zamienia odwołania
+% do bibliografii na hiperlinki
+
+
+
+
+
+
+
+
+
+
+% ---------------------------------------------------------------------
+% Tytuł, autor, data
+\title{Ti\emph{k}Z \& PGF \\
+  \href{http://piotrkosoft.net/pub/mirrors/CTAN/graphics/pgf/base/doc/pgfmanual.pdf}{Manual for version 3.1.9a} \\
+  1~Introduction}
+% \href{http://piotrkosoft.net/pub/mirrors/CTAN/graphics/pgf/base/doc/pgfmanual.pdf}{Ti\emph{k}Z \& PGF Manual, v. 3.1.8b} \\
+%   14~Syntax for Path Specifications, part~I}
+
+\author{}
+
+
+% \date{}
+% ---------------------------------------------------------------------
+
+
+
+
+
+
+
+% ####################################################################
+\begin{document}
+% ####################################################################
+
+
+
+
+
+% ######################################
+\maketitle % Tytuł całego tekstu
+% ######################################
+
+
+
+
+
+
+% ##################
+\begin{figure}[ht]
+
+  \centering
+
+  \begin{tikzpicture}
+
+
+
+  \end{tikzpicture}
+
+  \caption{Ti\textit{k}Z \& PGF Manula. Rysunek ze~strony tytułowej}
+
+\end{figure}
+% ##################
+
+
+
+
+
+\newpage
+
+
+
+
+
+
+
+% % ##################
+% \begin{figure}[ht]
+
+%   \centering
+
+%   \begin{tikzpicture}
+
+
+
+%   \end{tikzpicture}
+
+%   \caption{Ti\textit{k}Z \& PGF Manula. Introduction,~1}
+
+% \end{figure}
+% % ##################
+
+
+
+
+
+% % ##################
+% \begin{figure}[ht]
+
+%   \centering
+
+%   \begin{tikzpicture}
+
+
+
+%   \end{tikzpicture}
+
+%   \caption
+
+% \end{figure}
+% % ##################
+
+
+
+
+
+% % ##################
+% \begin{figure}[ht]
+
+%   \centering
+
+%   \begin{tikzpicture}
+
+
+
+%   \end{tikzpicture}
+
+%   \caption
+
+% \end{figure}
+% % ##################
+
+
+
+
+
+% % ##################
+% \begin{figure}[ht]
+
+%   \centering
+
+%   \begin{tikzpicture}
+
+
+
+%   \end{tikzpicture}
+
+%   \caption
+
+% \end{figure}
+% % ##################
+
+
+
+
+
+% % ##################
+% \begin{figure}[ht]
+
+%   \centering
+
+%   \begin{tikzpicture}
+
+
+
+%   \end{tikzpicture}
+
+%   \caption
+
+% \end{figure}
+% % ##################
+
+
+
+
+
+% % ##################
+% \begin{figure}[ht]
+
+%   \centering
+
+%   \begin{tikzpicture}
+
+
+
+%   \end{tikzpicture}
+
+%   \caption
+
+% \end{figure}
+% % ##################
+
+
+
+
+
+% % ##################
+% \begin{figure}[ht]
+
+%   \centering
+
+%   \begin{tikzpicture}
+
+
+
+%   \end{tikzpicture}
+
+%   \caption
+
+% \end{figure}
+% % ##################
+
+
+
+
+
+% % ##################
+% \begin{figure}[ht]
+
+%   \centering
+
+%   \begin{tikzpicture}
+
+
+
+%   \end{tikzpicture}
+
+%   \caption
+
+% \end{figure}
+% % ##################
+
+
+
+
+
+% % ##################
+% \begin{figure}[ht]
+%   \centering
+
+%   \begin{tikzpicture}
+
+
+
+%   \end{tikzpicture}
+
+%   \caption
+
+% \end{figure}
+% % ##################
+
+
+
+
+
+% % ##################
+% \begin{figure}[ht]
+
+%   \centering
+
+%   \begin{tikzpicture}
+
+
+
+%   \end{tikzpicture}
+
+%   \caption
+
+% \end{figure}
+% % ##################
+
+
+
+
+
+% % ##################
+% \begin{figure}[ht]
+
+%   \centering
+
+%   \begin{tikzpicture}
+
+
+
+%   \end{tikzpicture}
+
+%   \caption
+
+% \end{figure}
+% % ##################
+
+
+
+
+
+% % ##################
+% \begin{figure}[ht]
+
+%   \centering
+
+%   \begin{tikzpicture}
+
+
+
+%   \end{tikzpicture}
+
+%   \caption
+
+% \end{figure}
+% % ##################
+
+
+
+
+30 rysunek ma być ostatnim w pliku.
+% % ##################
+% \begin{figure}[ht]
+
+%   \centering
+
+%   \begin{tikzpicture}
+
+
+
+%   \end{tikzpicture}
+
+%   \caption
+
+% \end{figure}
+% % ##################
+
+
+
+
+
+
+
+
+
+
+% ############################
+
+% Koniec dokumentu
+\end{document}

@@ -1,0 +1,20 @@
+Błędy do wprowadzenia do wersji manuala PGF/TikZa 3.1.9a.
+
+Page 4.
+"At Syntax" czy lepiej coś w stylu "at Syntax". To samo w tytule tutorialu.
+
+Dobrze by było, gdyby dało się przerzucić „II Installation and Configuration” na drugą 5.
+
+
+
+Page 5.
+„under This License”. Jakie są zasady, które słowo jest z dużej, a które z małej litery?
+
+To samo dla „Applicability and definitions”, „independent Works”, „How to use this License for your documents”.
+
+„III TikZ ist kein Zeichenprogramm” na dole strony.
+
+
+
+Page 6.
+„For Specifying Points” i „for Graphics Parameters”.

@@ -1,0 +1,455 @@
+Page 50, 51.
+
+Still "arrows" not "arrows.meta".
+
+Page 54.
+
+Raz jest „waiting 1” i „critical 1”, raz „waiting” i „critical”.
+
+Page 55.
+
+$s\le 3$ czy $s \le 3$
+
+Page 56.
+
+Na pierwszy obrazku strzałka jest wciąż w złą stronę.
+
+Page 60.
+
+Drugi rysunek. Do tej pory było blue!50 i black!50, teraz jest nagle blue!75 i black!75.
+
+Page 67.
+
+For this reason, TikZ supports some simplifications. First, there is a simple syntax for computing a point that is “partway” on a line from p to q: You place these two points in a coordinate calculation – remember, they start with ($ and end with $) – and then combine them using !hparti!. A hparti of 0 refers to the first coordinate, a hparti of 1 refers to the second coordinate, and a value in between refers to a point on the line from p to q.
+
+Co z wartościami < 0 i > 1.
+
+Page 72, 73.
+
+W pewnych rysunkach brakuje "text height=1.5ex,text depth=0.25ex"
+
+
+The computation of the point D in Euclid’s second proposition is a bit more complicated. It can be expressed as follows: Consider the line from X to B. Suppose we rotate this line around X for 90 ◦ and then stretch it by a factor of sin(60 ◦ ) · 2. This yields the desired point D.
+
+Czemu by nie obrócić odcinek BA o kąt 60 stopni wokół A? (PRZESUŃ W DOBRE MIEJSCE)
+
+
+Page 75.
+
+Coś za duże wychodzą mi punkty. To problem z tym, że aby mieć kropkę na odpowiedniej wysokości muszę przyjąć text height i text depth.
+
+W kodzie rysunku jest "\node (minus)[terminal] {-};".
+
+"(p2) edge [->,skip loop=5mm] (p6)" zamienić na "(p2) edge [->,skip loop=5mm] (p5)".
+
+Page 76.
+
+Są jakieś problemy z rozmiarami węzłów, bo są zbyt duże. To problem z tym, że aby mieć kropkę na odpowiedniej wysokości muszę przyjąć text height i text depth.
+
+Page 77.
+
+Brakuje w kodzie "text height=1.5ex,text depth=0.25ex".
+
+Page 77 i 78.
+
+W dwóch rysunkach nie ma strzałki prowadzącej do drugiego "unsigned integer".
+
+Trzeba dodać text height=1.5ex i text depth=0.25ex tylko do stylu terminal.
+
+
+Page 82.
+
+"trees" libraries chyba nie jest potrzebna.
+
+Page 83.
+
+"siblings angle" jest najpierw użyty w rysunku, a dopiero potem omówiony.
+
+
+Page 84. Co oznacza "[root concept]".
+
+Page 85.
+
+"++ (-4,5)" -> "++(-4,5)"
+
+rather than just, say, node [fill=red.
+
+Wyrównacie linii w drugim kodzie.
+
+Page 87.
+
+Dlaczego "\begin{scope}[".
+
+Page 88.
+
+"++ (4,5)" -> "++(4,5)"
+
+Bad numbers in cliping "\clip (-5,-5) rectangle ++(4,5);". Lepsze parametry to "\clip (-5.3,-3) rectangle ++(4.1,5);".
+
+Page 89.
+
+Przesunięcie wierzchołków o 20 jest raczej za duże.
+
+
+Page 90.
+Przykład nie działa bo nigdzie nie jest zdefiniowany węzeł (Computational Problems), nie ma więc sensu pisanie Compuattional Problems.north. Ja napisałem tylko 0,0.
+
+Page 91.
+Ten sam problem co na stronie 90.
+
+Z pierwszego kodu z rozdziału 6.7 usunąć "% As before:", "% New:"
+
+W ostatnim kodzie na tej stronie po "\begin{tikzpicture}" brakuje "[every annotation/.style={fill=white}]". Czy może lepiej było umieścić tu "mindmap", a nie po "\begin[scope]"?
+
+Page 92.
+
+"(problem Domains)" powinno być "(Problem Domains)".
+
+Page 93.
+W kodzie "% The large rectangles" jest jedną spację za bardzo w prawo.
+
+
+Page 129.
+
+"that the upper end is at .5ex + .5pt." Chyba powinno być ".5ex + .2pt"
+
+
+Page 134, 135.
+Przydałby się przykład ilustrujący, jak używać 2 i więcej parametrów stylu. To samo dla przypadku /.default handler.
+
+
+Page 137.
+
+"\draw[->] (0,0) -- (xyz cs:z=1);" don't produce arrow tip.
+
+Czy układ xyz daje nam układ trójwymiarowy w rzucie perspektywicznym?
+
+
+Page 138.
+
+"\tikz \draw (0,0) --(2ex,0pt) --+(up:1ex);" Brzydko wygląda.
+
+
+Page 139.
+
+Dlaczego w pierwszym przykładzie ustawiamy: [x=1.5cm,y=1cm]. Spróbuj zrobić alternatywny przykład.
+
+Page 139.
+
+Dlaczego w drugim przykładzie mamy: [x={(0cm,1cm)},y={(-1cm,0cm)}].
+
+
+Page 141.
+
+Pierwszy rysunek. Czemu na rysunki nie widać znaków „|” z „|class Shape|”.
+
+Trzeci rysunek "node(a)" -> "node (a)"
+
+Dlaczego "{|class Shape|}" i tak dalej?
+
+Dlaczego w pierwszym rysunku rzeczy są na zielono?
+
+
+Page 142.
+
+Pierwszy rysunek 142, "node(x)" -> "node (x)".
+
+Gdzie jest powiedziane, że w komendzie "\draw (0,0) .. controls +(1,1) and
++(-1,1) .. (2,0);" wyrażenie "+(1,1)" dodaje się do pierwszego punktu krzywej (czyli 0,0), a "+(-1,1)" do ostatniego (czyli 2,0)? Na stronie 147, „Specifying Relative Coordinates”.
+
+
+Page 143.
+
+"should be have"???
+
+
+Page 145.
+Pierwszy rysunek, czy nie powinno być "\draw[help lines] (0,0) grid (3,2);"?
+
+Drugi rysunek, czy nie powinno być "\foreach \s in {1,...,\t}{(i-\s) circle (2pt) node {\footnotesize\s}};".
+
+
+Page 146.
+Ostatni rysunek. „(0,-.5) -- (1,2) ;” -> „(0,-.5) -- (1,2) ;”.
+
+
+Page 147.
+Trzeci rysunek. Strzałki są bardzo małe i trudno je zobaczyć na rysunku.
+
+
+Page 148.
+Drugi rysunek. "{(0,0) (1,1) (2,0) (3,0) }" -> "{(0,0) (1,1) (2,0) (3,0)}".
+
+
+Page 154.
+Niezrozumiałe zdanie "The hpathi is added before any earlier paths added using either append after command or prefix after command."
+
+Page 156.
+Pierwszy paragraf "moveto" -> "move-to".
+
+Drugi rysunek.
+"\draw (0,0) node (a) [draw] {A}  (1,1) node (b) [draw] {B};" -> "\path (0,0) node (a) [draw] {A}  (1,1) node (b) [draw] {B};"
+
+
+Page 161.
+\draw[step=1mm] (0,0) grid (2,2); czemu to nie jest zapisane jako \draw (0,0) grid[step=1mm] (2,2); i czemu grid pobiera opcję która jest zaraz po \draw?
+
+
+Page 162.
+Lepiej opisać opcje bend i bend pos.
+
+Page 163.
+Dwa pierwsze rysunki
+\draw (-1,0) -> draw(0,0)???
+
+
+Page 164.
+Czemu mamy "\usetikzlibrary{svg.path}". Jest potrzebne żeby przykład działał.
+
+Page 192.
+"\tikz [<->] \draw [tips=on proper draw] (0,0) -- (1,0) (2,0);" czy "[tips=proper]"?
+
+Page 199.
+"bit so that the end of the “fat line” as inside the arrow tip and we get a “clear” arrow tip."???
+
+
+Page 204.
+Coś mi nie gra w tym tekście.
+
+There is, however, one possible problem with the flex option: The arrow tip no longer points along the tangent of the end of the path. This may or may not be a problem, put especially for larger arrow tips readers will use the orientation of the arrow head to gauge the direction of the tangent of the line. If this tangent is important (for example, if it should be horizontal), then it may be necessary to enforce that the arrow tip “really points in the direction of the tangent”.
+
+Page 205.
+W przedostatnim rysunku brakuje "\usetikzlibrary {arrows.meta}".
+
+Page 205 i 206.
+Coś mi nie gra, gdy chodzi o spójność logiczną tekstu.
+
+Page 211.
+Dlaczego jest podpisane "thin" i "thick", ale nie "ultra thick"?
+
+
+Page 215 i 216.
+
+Mam wrażenie, że rysunki dla Classical TikZ Rightarrow i Computer Modern Rightarrow są zamienione miejscami.
+
+Page 218.
+
+Nie widzę efektu komendy Kite[length=6pt,width=4pt,inset=1.5pt].
+
+Page 219.
+
+Nie widzę efektu komendy Stealth[length=6pt,width=4pt,inset=1.5pt]
+
+Page 220.
+As for Round Cap, the length parameter dictates the length is the length of the “main part”, the inset sets the length of a line that comes before this tip.
+
+Czy ma być "-Butt Cap" czy "-Butt Cap[]"?
+
+
+Page 224.
+Ten tekst nie jest wystarczający jasny.
+"Note that behind path only applies to the current path; not to the current scope or picture. To put a node “behind everything” you need to use layers and options like on background layer, see the backgrounds library in Section 45."
+
+
+Page 227.
+
+"This option causes <code> to be executed at the beginning of a node." Chodzi o to, że kod jest uruchamiany na początku wykonywania jakiegoś kodu węzła. Tylko jakiego kodu.
+
+Page 228.
+"(0cm,4em) node[fill=yellow!80!black]     {default};"
+
+Page 230.
+Dlaczego w ostatnim kodzie jest \tikzset, które chyba ustawi "every node" dla całego dalszego ciągu pliku.
+
+Ostatni rysunek jest zbyt ściśnięty, gdy rysuje go na komputerze.
+
+Page 244.
+Co to jest \usepgfmodule{nonlineartransformations}? W tym kodzie chyba nie jest potrzebny. Biblioteka curvilinear chyba też nie jest potrzebne w tym przykładzie, dopiero w pierwszym na stronie 245.
+
+W ostatnim kodzie można chyba zastąpić \draw przez \path, bo \draw chyba i tak nic nie robi.
+
+Page 262.
+"\fill [fill=blue!20]" -> "\fill [color=blue!20]"??? Nie.
+
+
+Page 264.
+
+"The options of a node." or "The options of a pic."?
+
+
+
+Page 265-266.
+
+"In detail, if node and pic are both used repeatedly on a path, in the resulting picture we first see all nodes and pics with the behind path option set in the order they appear on the path (nodes and pics are interchangeable in this regard), then comes the path, and then come all nodes and pics that are in front of the path in the order they appeared."
+
+Podejrzewam, że powinno być ""we first draw all nodes" not "see all nodes".
+
+
+
+Page 266.
+
+"\draw (-left wing) to [bend left] (0,0) (-head) to [bend left] (-right wing);" czy "\draw (-left wing) to [bend left] (-head) to [bend left] (-right wing);"???
+
+"Styles for pics. The following styles influence how nodes are rendered:"
+Powinno chyba być "pics are rendered".
+
+
+
+Plots of functions 22.
+Różnica między "\draw[color=red] plot coordinates {(0,0), (1,1) (2,0)};", a "\draw plot[color=red] coordinates {(0,0), (1,1) (2,0)};".
+
+Page 343.
+"\draw plot coordinates {(0,0), (1,1) (2,0)};" czy "\draw plot coordinates{(0,0) (1,1) (2,0)};"? Wolę pierwszą wersję.
+
+Page 349, 350,
+"\tikz\draw plot[smooth] file{plots/pgfmanual-sine.table};" -> "\tikz \draw plot[smooth] file{plots/pgfmanual-sine.table};".
+
+
+Page 351.
+"\tikz\draw plot[jump mark left, mark=*] file{plots/pgfmanual-sine.table};" -> "\tikz \draw plot[jump mark left,mark=*] file{plots/pgfmanual-sine.table};"?
+
+
+Page 352.
+"\tikz\draw[ultra thick] plot[ycomb,thin,mark=*] file{plots/pgfmanual-sine.table};" -> "\tikz \draw[ultra thick] plot[ycomb,thin,mark=*] file{plots/pgfmanual-sine.table};"
+
+Page 353.
+
+,,the option fill opacity (documented in Section 15.5.3.'' should be ,,,,the option fill opacity (documented in Section 15.5.3).''.
+
+Poza tym Section 15.5.3 zawiera tylko jedno zdanie, które przekierowuje nas do tego rozdziału.
+
+
+Page 358.
+
+"Turning a fading picture into a normal picture is achieved" I think should be "Turning a normal picture into a fading picture is achieved".
+
+
+Page 359.
+
+"{\fontencoding{T1}\fontfamily{ptm}\fontsize{45}{45}\bfseries\selectfont Ti\emph{k}Z};" wychodzi z kolorowego prostokąta.
+
+
+Page 359.
+
+"\path [pattern=checkerboard,pattern color=black!30] (-1.2,-1.2) rectangle (1.2,1.2);" czy "\pattern [pattern=checkerboard,pattern color=black!30]
+    (-1.2,-1.2) rectangle (1.2,1.2);"?
+
+
+Page 832.
+Ma być "decorate { decorate{ decorate{ decrate{ (0,0) -- (2,0) } } } };", czy
+"decorate { decorate { decorate { decrate { (0,0) -- (2,0) } } } };"?
+
+
+Page 835.
+"For a spy-on node this is not a good approach since the" Czy nie powinno być spy-in?
+
+Page 835 i 836.
+
+Ostatni kod na stronie 835 jest napisany w bardziej skomplikowany sposób, niż ten na stronie 836, a jeśli to możliwe, powinno być na odwrót.
+
+
+
+
+
+
+Wersja 3.1.8b
+
+Note: There also exists an older syntax for circles, where the radius of the circle is given in parentheses
+right after the circle command as in circle (1pt). Although this syntax is a bit more succinct, it
+is harder to understand for readers of the code and the use of parentheses for something other than a
+coordinate is ill-chosen.
+
+Przykład Shading 2.14, strona 40.
+
+
+This command has exactly the same effect as circle. The older syntax for this command is ellipse
+(hx radiusi and hy radiusi). As for the circle command, this syntax is not as good as the standard
+syntax.
+
+
+Page 160.
+Dodaj komentarz o działaniu arc.
+
+Drugi rysunek, beta za wysoko.
+
+Proposition: changing old syntax for circle and ellipse to new in manual
+
+I recently read in manual that syntax for drawing of circle
+`\draw (0,0) circle (10pt);`
+is valid, but one should use new form
+`\draw (0,0) circle [radius=10pt];`
+the same for ellipse.
+
+I personally try to avoid first form, since its more cryptic, but it is still very popular in various code snippets that you can find on web. Also, you can find it in manual itself, like at the beginning of the section "2.14 Shading" (part of "Tutorial: A Picture for Karl’s Students", page 39 in PDF of v. 3.1.8b), when we have:
+`\tikz \shade (0,0) rectangle (2,1) (3,0.5) circle (.5cm);`
+
+I don't know how development of PGF/TikZ works and I don't waste developers time with unneeded PR, so I want propose it first. If it is desirable I can look through manual and replace every place when I find old syntax for circle or ellipse with new, always checking if after copy-past produce desired result.
+
+If you want me to due that, I only need to ask, should I edit .tex files in GitHub pgf/doc/generic/pgf/text-en/ or somewhere else. This may be silly question, but in the past I was changing on GitHub documentation in files .md, when true documentation was in other format, from which .md files were generated. I don' want make this blunder again.
+
+Also, if some other code should be updated I can try do it also, but to this moment I found in manual information about `circle` and `ellipse`.
+
+Page 186.
+Czy już było wyjaśnione pojęcie "nonzero winding number".
+
+
+Page 344.
+"f(x) =x" -> "f(x) = x".
+
+"_r_adians" -> "radians".
+
+Page 349.
+"\tikz \fill[fill=blue!20]
+plot[mark=triangle*,mark options={color=blue,rotate=180}]
+file{plots/pgfmanual-sine.table} |- (0,0);"
+Czy to nie lepiej zmienić na poniższe?
+\tikz \fill[color=blue!20]
+plot[mark=triangle*,mark options={color=blue,rotate=180}]
+file {plots/pgfmanual-sine.table} |- (0,0);".
+
+Coś nie działa z opcją "mark=triangle*".
+
+Page 352.
+Coś nie tak również z "mark=pentagon*".
+
+"\tikz\draw[draw=blue,fill=blue!60!black] plot[ybar] file{plots/pgfmanual-sine.table};" Czemu „draw=blue,fill=blue!60!black”.
+
+
+Page 573.
+"have the name of the style" ?-> "have the name of the node".
+
+
+Page 575.
+"\node[state,accepting](q_3) [below right=of q_1]  {$q_{ 3 }$};" -> "\node[state,accepting] (q_3) [below right=of q_1]  {$q_{ 3 }$};"
+
+Page 576.
+"\begin{tikzpicture}[shorten >=1pt,node distance=2cm,on grid,>={Stealth[round]},thick," -> "\begin{tikzpicture}
+[shorten >=1pt,node distance=2cm,on grid,>={Stealth[round]},thick,"
+
+Page 577.
+"\begin{tikzpicture}[shorten >=1pt,node distance=2cm,on grid,>={Stealth[round]},thick," -> "\begin{tikzpicture}
+[shorten >=1pt,node distance=2cm,on grid,>={Stealth[round]},thick,"
+
+"\begin{tikzpicture}[->,>={Stealth[round]},shorten >=1pt,%" Niepotrzebny "%".
+
+
+
+Page 1003.
+W pierwszym kodzie linie zawierająca tylko średnik wygląda koszmarnie.
+
+Czemu w drugim kodzie jest "{(\p,1)--(\p,3) (1,\p)--(3,\p)};" a nie "{(\p,0)--(\p,2) (0,\p)--(2,\p)};".
+
+
+Page 1004.
+"node{\textsf{\label}}" -> "node {\textsf{\label}}".
+
+"\end{tikzpicture}%" -> "\end{tikzpicture}".
+
+"\foreach \x [evaluate=\x] in {2^0,2^...,2^8}{$\x$, }" -> "\foreach \x [evaluate=\x] in {2^0,2^...,2^8} {$\x$, }"
+
+"\foreach \x [evaluate=\x as \xeval] in {2^0,2^...,2^8}{$\x=\xeval$, }" -> "\foreach \x [evaluate=\x as \xeval] in {2^0,2^...,2^8} {$\x = \xeval$, }"
+
+
+Page 1005.
+
+"\tikz\foreach" -> "\tikz \foreach".

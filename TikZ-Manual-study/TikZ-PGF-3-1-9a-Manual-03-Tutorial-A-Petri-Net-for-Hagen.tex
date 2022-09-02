@@ -1,0 +1,727 @@
+% Autor: Kamil Ziemian
+
+% ---------------------------------------------------------------------
+% Podstawowe ustawienia i pakiety
+% ---------------------------------------------------------------------
+\RequirePackage[l2tabu, orthodox]{nag}  % Wykrywa przestarzałe i niewłaściwe
+% sposoby używania LaTeXa. Więcej jest w l2tabu English version.
+\documentclass[a4paper,11pt]{article}
+% {rozmiar papieru, rozmiar fontu}[klasa dokumentu]
+\usepackage[MeX]{polski}  % Polonizacja LaTeXa, bez niej będzie pracował
+% w języku angielskim.
+\usepackage[utf8]{inputenc} % Włączenie kodowania UTF-8, co daje dostęp
+% do polskich znaków.
+\usepackage{lmodern}  % Wprowadza fonty Latin Modern.
+\usepackage[T1]{fontenc}  % Potrzebne do używania fontów Latin Modern.
+
+
+
+% ------------------------------
+% Podstawowe pakiety (niezwiązane z ustawieniami języka)
+% ------------------------------
+\usepackage{microtype}  % Twierdzi, że poprawi rozmiar odstępów w tekście.
+\usepackage{vmargin}  % Pozwala na prostą kontrolę rozmiaru marginesów,
+% za pomocą komend poniżej. Rozmiar odstępów jest mierzony w calach.
+% ------------------------------
+% MARGINS
+% ------------------------------
+\setmarginsrb
+{ 0.7in}  % left margin
+{ 0.6in}  % top margin
+{ 0.7in}  % right margin
+{ 0.8in}  % bottom margin
+{  20pt}  % head height
+{0.25in}  % head sep
+{   9pt}  % foot height
+{ 0.3in}  % foot sep
+
+
+
+
+
+% ------------------------------
+% Paczki, biblioteki i ich ustawienia dla tego pliku
+% ------------------------------
+\usepackage{tikz}  % Wspaniały pakiet PGF/TikZ
+
+\usetikzlibrary{positioning}
+\usetikzlibrary{arrows.meta}
+\usetikzlibrary{decorations.pathmorphing}
+\usetikzlibrary{backgrounds}
+\usetikzlibrary{fit}
+\usetikzlibrary{petri}
+
+
+
+
+
+
+
+% ------------------------------
+% Pakiet „hyperref”
+% Polecano by umieszczać go na końcu preambuły
+% ------------------------------
+\usepackage{hyperref}  % Pozwala tworzyć hiperlinki i zamienia odwołania
+% do bibliografii na hiperlinki
+
+
+
+
+
+
+
+
+
+
+% ---------------------------------------------------------------------
+% Tytuł, autor, data
+\title{
+  \href{http://piotrkosoft.net/pub/mirrors/CTAN/graphics/pgf/base/doc/pgfmanual.pdf}{Ti\emph{k}Z \& PGF Manual, v. 3.1.9a} \\
+  3~Tutorial: A~Petri-Net for Hagen}
+
+\author{}
+
+% \date{}
+% ---------------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+% ####################################################################
+\begin{document}
+% ####################################################################
+
+
+
+
+
+% ######################################
+\maketitle % Tytuł całego tekstu
+% ######################################
+
+
+
+
+
+\newpage
+
+
+
+
+
+% ##################
+\begin{figure}[ht]
+
+  \centering
+
+  \begin{tikzpicture}
+
+
+
+  \end{tikzpicture}
+
+  \caption{Ti\emph{k}Z Manula. A~Petri-Net for Hagen,~1}
+
+\end{figure}
+% ##################
+
+
+
+
+
+% ##################
+\begin{figure}[ht]
+
+  \centering
+
+  \begin{tikzpicture}
+
+
+
+  \end{tikzpicture}
+
+  \caption{Ti\emph{k}Z Manula. A~Petri-Net for Hagen,~2}
+
+\end{figure}
+% ##################
+
+
+
+
+
+% ##################
+\begin{figure}[ht]
+
+  \centering
+
+  \begin{tikzpicture}
+
+
+
+  \end{tikzpicture}
+
+  \caption{Ti\emph{k}Z Manula. A~Petri-Net for Hagen,~3}
+
+\end{figure}
+% ##################
+
+
+
+
+
+% ##################
+\begin{figure}[ht]
+
+  \centering
+
+  \begin{tikzpicture}
+
+
+
+  \end{tikzpicture}
+
+  \caption{Ti\emph{k}Z Manula. A~Petri-Net for Hagen,~4}
+
+\end{figure}
+% ##################
+
+
+
+
+
+% ##################
+\begin{figure}[ht]
+
+  \centering
+
+  \begin{tikzpicture}
+
+
+
+  \end{tikzpicture}
+
+  \caption{Ti\emph{k}Z Manula. A~Petri-Net for Hagen,~5}
+
+\end{figure}
+% ##################
+
+
+
+
+
+% ##################
+\begin{figure}[ht]
+
+  \centering
+
+  \begin{tikzpicture}
+
+
+
+  \end{tikzpicture}
+
+  \caption{Ti\emph{k}Z Manula. A~Petri-Net for Hagen,~6}
+
+\end{figure}
+% ##################
+
+
+
+
+
+% ##################
+\begin{figure}[ht]
+
+  \centering
+
+  \begin{tikzpicture}
+
+
+
+  \end{tikzpicture}
+
+  \caption{Ti\emph{k}Z Manula. A~Petri-Net for Hagen,~7}
+
+\end{figure}
+% ##################
+
+
+
+
+
+% ##################
+\begin{figure}[ht]
+
+  \centering
+
+  \begin{tikzpicture}
+
+
+
+  \end{tikzpicture}
+
+  \caption{Ti\emph{k}Z Manula. A~Petri-Net for Hagen,~8}
+
+\end{figure}
+% ##################
+
+
+
+
+
+% ##################
+\begin{figure}[ht]
+
+  \centering
+
+  \begin{tikzpicture}
+
+
+
+  \end{tikzpicture}
+
+  \caption{Ti\emph{k}Z Manula. A~Petri-Net for Hagen,~9}
+
+\end{figure}
+% ##################
+
+
+
+
+
+% ##################
+\begin{figure}[ht]
+
+  \centering
+
+  \begin{tikzpicture}
+
+
+
+  \end{tikzpicture}
+
+  \caption{Ti\emph{k}Z Manula. A~Petri-Net for Hagen,~10}
+
+\end{figure}
+% ##################
+
+
+
+
+
+% ##################
+\begin{figure}[ht]
+
+  \centering
+
+  \begin{tikzpicture}
+
+
+
+  \end{tikzpicture}
+
+    \caption{Ti\emph{k}Z Manula. A~Petri-Net for Hagen,~11}
+
+\end{figure}
+% ##################
+
+
+
+
+
+% ##################
+\begin{figure}[ht]
+
+  \centering
+
+  \begin{tikzpicture}
+
+
+
+  \end{tikzpicture}
+
+  \caption{Ti\emph{k}Z Manula. A~Petri-Net for Hagen,~12}
+
+\end{figure}
+% ##################
+
+
+
+
+
+% ##################
+\begin{figure}[ht]
+
+  \centering
+
+  \begin{tikzpicture}
+
+
+
+  \end{tikzpicture}
+
+  \caption{Ti\emph{k}Z Manula. A~Petri-Net for Hagen,~13}
+
+\end{figure}
+% ##################
+
+
+
+
+
+% ##################
+\begin{figure}[ht]
+
+  \centering
+
+  \begin{tikzpicture}
+
+
+
+  \end{tikzpicture}
+
+  \caption{Ti\emph{k}Z Manula. A~Petri-Net for Hagen,~14}
+
+\end{figure}
+% ##################
+
+
+
+
+
+% ##################
+\begin{figure}[ht]
+
+  \centering
+
+  \begin{tikzpicture}
+
+
+
+  \end{tikzpicture}
+
+  \caption{Ti\emph{k}Z Manula. A~Petri-Net for Hagen,~15}
+
+\end{figure}
+% ##################
+
+
+
+
+
+% ##################
+\begin{figure}[ht]
+
+  \centering
+
+  \begin{tikzpicture}
+
+
+
+  \end{tikzpicture}
+
+  \caption{Ti\emph{k}Z Manula. A~Petri-Net for Hagen,~16}
+
+\end{figure}
+% ##################
+
+
+
+
+
+% ##################
+\begin{figure}[ht]
+
+  \centering
+
+  \begin{tikzpicture}
+
+
+
+  \end{tikzpicture}
+
+  \caption{Ti\emph{k}Z Manula. A~Petri-Net for Hagen,~17}
+
+\end{figure}
+% ##################
+
+
+
+
+
+% ##################
+\begin{figure}[ht]
+
+  \centering
+
+  \begin{tikzpicture}
+
+
+
+  \end{tikzpicture}
+
+  \caption{Ti\emph{k}Z Manula. A~Petri-Net for Hagen,~18}
+
+\end{figure}
+% ##################
+
+
+
+
+
+% ##################
+\begin{figure}[ht]
+
+  \centering
+
+  \begin{tikzpicture}
+
+
+
+  \end{tikzpicture}
+
+  \caption{Ti\emph{k}Z Manula. A~Petri-Net for Hagen,~19}
+
+\end{figure}
+% ##################
+
+
+
+
+
+% ##################
+\begin{figure}[ht]
+
+  \centering
+
+
+  \begin{tikzpicture}
+
+
+
+  \end{tikzpicture}
+
+  \caption{Ti\emph{k}Z Manula. A~Petri-Net for Hagen,~20}
+
+\end{figure}
+% ##################
+
+
+
+
+
+% ##################
+\begin{figure}[ht]
+
+  \centering
+
+  \begin{tikzpicture}
+
+
+
+  \end{tikzpicture}
+
+  \caption{Ti\emph{k}Z Manula. A~Petri-Net for Hagen,~21}
+
+\end{figure}
+% ##################
+
+
+
+
+
+% ##################
+\begin{figure}[ht]
+
+  \centering
+
+  \begin{tikzpicture}
+
+
+
+  \end{tikzpicture}
+
+  \caption{Ti\emph{k}Z Manula. A~Petri-Net for Hagen,~22}
+
+\end{figure}
+% ##################
+
+
+
+
+
+% ##################
+\begin{figure}[ht]
+
+  \centering
+
+  \begin{tikzpicture}
+
+
+
+  \end{tikzpicture}
+
+  \caption{Ti\emph{k}Z Manula. A~Petri-Net for Hagen,~23}
+
+\end{figure}
+% ##################
+
+
+
+
+
+% ##################
+\begin{figure}[ht]
+
+  \centering
+
+  \begin{tikzpicture}
+
+
+
+  \end{tikzpicture}
+
+  \caption{Ti\emph{k}Z Manula. A~Petri-Net for Hagen,~24}
+
+\end{figure}
+% ##################
+
+
+
+
+
+% ##################
+\begin{figure}[ht]
+
+  \centering
+
+  \begin{tikzpicture}
+
+
+
+  \end{tikzpicture}
+
+  \caption{Ti\emph{k}Z Manula. A~Petri-Net for Hagen,~25}
+
+\end{figure}
+% ##################
+
+
+
+
+
+% ##################
+\begin{figure}[ht]
+
+  \centering
+
+  \begin{tikzpicture}
+
+
+
+  \end{tikzpicture}
+
+  \caption{Ti\emph{k}Z Manula. A~Petri-Net for Hagen,~26}
+
+\end{figure}
+% ##################
+
+
+
+
+
+% ##################
+\begin{figure}[ht]
+
+  \centering
+
+  \begin{tikzpicture}
+
+
+
+  \end{tikzpicture}
+
+  \caption{Ti\emph{k}Z Manula. A~Petri-Net for Hagen,~27}
+
+\end{figure}
+% ##################
+
+
+
+
+
+% ##################
+\begin{figure}[ht]
+
+  \centering
+
+  \begin{tikzpicture}
+
+
+
+  \end{tikzpicture}
+
+  \caption{Ti\emph{k}Z Manula. A~Petri-Net for Hagen,~28}
+
+\end{figure}
+% ##################
+
+
+
+
+
+% ##################
+\begin{figure}[ht]
+
+  \centering
+
+  \begin{tikzpicture}
+
+
+
+  \end{tikzpicture}
+
+  \caption{Ti\emph{k}Z Manula. A~Petri-Net for Hagen,~29}
+
+\end{figure}
+% ##################
+
+
+
+
+
+% ##################
+\begin{figure}[ht]
+
+  \centering
+
+  \begin{tikzpicture}
+
+
+
+  \end{tikzpicture}
+
+  \caption{Ti\emph{k}Z Manula. A~Petri-Net for Hagen,~30}
+
+\end{figure}
+% ##################
+
+
+
+
+
+
+
+
+
+
+% ############################
+
+% Koniec dokumentu
+\end{document}

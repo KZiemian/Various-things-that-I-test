@@ -1,0 +1,18 @@
+Version: <!-- Please insert the version from the title page -->
+
+<!-- Please state what is wrong and on which page. -->
+
+
+Code illustrating "/tikz/ever pic" is not related to pic mechanics.
+
+Version: 3.1.4b.
+
+Section "18.2 The Pic Syntax", pages 262.
+
+Code that should illustrate usage of "/tikz/every pic" is
+```
+\begin{tikzpicture}[every node/.style={draw}]
+\draw (0,0) node {A} -- (1,1) node {B};
+\end{tikzpicture}
+```
+have no relation to pic and is probably copy from chapter on the nodes.
