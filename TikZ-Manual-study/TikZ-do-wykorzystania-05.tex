@@ -1,0 +1,1443 @@
+% ---------------------------------------------------------------------
+% Podstawowe ustawienia i pakiety
+% ---------------------------------------------------------------------
+\RequirePackage[l2tabu, orthodox]{nag}  % Wykrywa przestarzałe i niewłaściwe
+% sposoby używania LaTeXa. Więcej jest w l2tabu English version.
+\documentclass[a4paper,11pt]{article}
+% {rozmiar papieru, rozmiar fontu}[klasa dokumentu]
+\usepackage[MeX]{polski}  % Polonizacja LaTeXa, bez niej będzie pracował
+% w języku angielskim.
+\usepackage[utf8]{inputenc} % Włączenie kodowania UTF-8, co daje dostęp
+% do polskich znaków.
+\usepackage{lmodern}  % Wprowadza fonty Latin Modern.
+\usepackage[T1]{fontenc}  % Potrzebne do używania fontów Latin Modern.
+
+
+
+% ------------------------------
+% Podstawowe pakiety (niezwiązane z ustawieniami języka)
+% ------------------------------
+\usepackage{microtype}  % Twierdzi, że poprawi rozmiar odstępów w tekście.
+% \usepackage{graphicx}  % Wprowadza bardzo potrzebne komendy do wstawiania
+% % grafiki.
+\usepackage{vmargin}  % Pozwala na prostą kontrolę rozmiaru marginesów,
+% za pomocą komend poniżej. Rozmiar odstępów jest mierzony w calach.
+% ------------------------------
+% MARGINS
+% ------------------------------
+\setmarginsrb
+{ 0.7in} % left margin
+{ 0.6in} % top margin
+{ 0.7in} % right margin
+{ 0.8in} % bottom margin
+{  20pt} % head height
+{0.25in} % head sep
+{   9pt} % foot height
+{ 0.3in} % foot sep
+
+
+
+
+
+
+% ------------------------------
+% Paczki, biblioteki i ich ustawienia dla tego pliku
+% ------------------------------
+\usepackage{tikz}  % Wspaniały pakiet PGF/TikZ.
+% \usetikzlibrary{}
+
+\usepackage{./packages/ColorsForTikZPictures}
+\usepackage{./packages/JagiellonianColors}
+
+
+
+
+
+% ------------------------------
+% TikZ. Pics i inne ustawienia dla tego pliku
+% ------------------------------
+\tikzset{
+  point/.pic={
+    \fill[color=\MathFGColor] (0,0) circle [radius=0.1];
+  },
+  cube/.pic={
+    \fill[black] (-0.5,0.5,0) -- (0.5,0.5,0) -- (0.5,0.5,-1) -- (-0.5,0.5,-1)
+    -- cycle;
+
+    \fill[black!90] (-0.5,0.5,0) -- (0.5,0.5,0) -- (0.5,-0.5,0)
+    -- (-0.5,-0.5,0) -- cycle;
+
+    \fill[black!80] (0.5,-0.5,-1) -- (0.5,0.5,-1) -- (0.5,0.5,0)
+    -- (0.5,-0.5,0) -- cycle;
+
+    % \draw[black] (-0.5,0.5,0) -- (0.5,0.5,0) -- (0.5,0.5,-0.99);
+
+    % \draw[black!90] (0.5,0.5,0) -- (0.5,-0.49,0);
+  },
+  cube 2/.pic={
+    \fill[black] (0,1) -- (-0.4,1.388) -- (0.6,1.388) -- (1,1) -- cycle;
+
+    \fill[black!90] (0,1) -- (1,1) -- (1,0) -- (0,0) -- cycle;
+
+    \fill[black!80] (0,0) -- (0,1) -- (-0.4,1.388) -- (-0.4,0.4) -- cycle;
+  }
+}
+
+
+
+
+
+
+
+% ------------------------------
+% Ustawienie dla tego konkretnego pliku
+% ------------------------------
+% Light
+\def\StylPliku{1}
+% Dark
+% \def\StylPliku{2}
+
+
+\if\StylPliku1
+\newcommand{\backgroundcolor}{jNormalMathTextBackgroundLight}
+\newcommand{\MathFGColor}{jMathTextForegroundGrey}
+\else
+\newcommand{\backgroundcolor}{jNormalMathTextBackgroundDark}
+\newcommand{\MathFGColor}{jMathTextForegroundWhite}
+\fi
+
+
+
+
+
+
+
+
+
+
+% ------------------------------
+% Pakiet "hyperref"
+% Polecano by umieszczać go na końcu preambuły.
+% ------------------------------
+\usepackage{hyperref}  % Pozwala tworzyć hiperlinki i zamienia odwołania
+% do bibliografii na hiperlinki.
+
+
+
+
+
+
+
+
+
+
+% ---------------------------------------------------------------------
+% Tytuł, autor, data
+\title{Ti\emph{k}Z \& PGF \\
+  3D Shapes, series 01, file 02}
+
+\author{}
+
+% \date{}
+% ---------------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+% ####################################################################
+\begin{document}
+% ####################################################################
+
+
+
+% ######################################
+\maketitle % Tytuł całego tekstu
+% ######################################
+
+
+
+\pagecolor{\backgroundcolor}
+
+
+
+
+% ######################################
+\section{Sześciany}
+
+\vspace{2em}
+
+% ######################################
+
+
+
+
+% % ##################
+% \begin{figure}[ht]
+
+%   \centering
+
+%   \begin{tikzpicture}[line join=round]
+%     \draw[dashed,fill=jNormalMathTextBackgroundLight] (0,0) -- (2,0) -- (2,2);
+%   \end{tikzpicture}
+
+%   \caption{Kwadrat zawierający kolor tła trybu Light}
+
+% \end{figure}
+% % ##################
+
+
+
+
+
+
+
+
+
+
+% % ##################
+% \begin{figure}[ht]
+
+%   \centering
+
+%   \begin{tikzpicture}
+%     \pic at (0,0) {cube};
+%   \end{tikzpicture}
+
+%   \caption{Sześcian (cube),~1}
+
+% \end{figure}
+% % ##################
+
+
+
+
+
+% % ##################
+% \begin{figure}[ht]
+
+%   \centering
+
+%   \begin{tikzpicture}
+%     \pic at (0,0) {cube};
+
+%     \pic at (2,0) {cube};
+
+%     \pic at (0,3) {cube};
+
+%     \pic at (3,2) {cube};
+%   \end{tikzpicture}
+
+%   \caption{Sześcian (cube),~2}
+
+% \end{figure}
+% % ##################
+
+
+
+
+
+% % ##################
+% \begin{figure}[ht]
+
+%   \centering
+
+%   \begin{tikzpicture}
+%     \pic at (0,0) {cube};
+
+%     \pic[scale=1.5] at ( 3,0) {cube};
+
+%     \pic[scale=2]   at ( 6,0) {cube};
+
+%     \pic[scale=3]   at (10,0) {cube};
+%   \end{tikzpicture}
+
+%   \caption{Sześcian (cube),~3}
+
+% \end{figure}
+% % ##################
+
+
+
+
+
+% % ##################
+% \begin{figure}[ht]
+
+%   \centering
+
+%   \begin{tikzpicture}
+%     \pic at (0,0) {cube};
+
+%     \pic[scale=0.9]  at ( 2,0) {cube};
+
+%     \pic[scale=0.75] at ( 4,0) {cube};
+
+%     \pic[scale=0.6]  at ( 6,0) {cube};
+
+%     \pic[scale=0.5]  at ( 8,0) {cube};
+
+%     \pic[scale=0.25] at (10,0) {cube};
+%   \end{tikzpicture}
+
+%   \caption{Sześcian (cube),~4}
+
+% \end{figure}
+% % ##################
+
+
+
+
+
+% % ##################
+% \begin{figure}[ht]
+
+%   \centering
+
+%   \begin{tikzpicture}
+%     \pic at ( 0,0) {cube};
+
+%     \pic[rotate=5]  at ( 2,0) {cube};
+
+%     \pic[rotate=10] at ( 4,0) {cube};
+
+%     \pic[rotate=15] at ( 6,0) {cube};
+
+%     \pic[rotate=20] at ( 8,0) {cube};
+
+%     \pic[rotate=25] at (10,0) {cube};
+%   \end{tikzpicture}
+
+%   \caption{Sześcian (cube),~5}
+
+% \end{figure}
+% % ##################
+
+
+
+
+
+% % ##################
+% \begin{figure}[ht]
+
+%   \centering
+
+%   \begin{tikzpicture}
+%     \pic[rotate=25] at ( 0,0) {cube};
+
+%     \pic[rotate=30] at ( 2,0) {cube};
+
+%     \pic[rotate=35] at ( 4,0) {cube};
+
+%     \pic[rotate=40] at ( 6,0) {cube};
+
+%     \pic[rotate=45] at ( 8,0) {cube};
+
+%     \pic[rotate=50] at (10,0) {cube};
+%   \end{tikzpicture}
+
+%   \caption{Sześcian (cube),~6}
+
+% \end{figure}
+% % ##################
+
+
+
+
+
+% % ##################
+% \begin{figure}[ht]
+
+%   \centering
+
+%   \begin{tikzpicture}
+%     \pic[rotate=50] at ( 0,0) {cube};
+
+%     \pic[rotate=55] at ( 2,0) {cube};
+
+%     \pic[rotate=60] at ( 4,0) {cube};
+
+%     \pic[rotate=65] at ( 6,0) {cube};
+
+%     \pic[rotate=70] at ( 8,0) {cube};
+
+%     \pic[rotate=75] at (10,0) {cube};
+%   \end{tikzpicture}
+
+%   \caption{Sześcian (cube),~7}
+
+% \end{figure}
+% % ##################
+
+
+
+
+
+% % ##################
+% \begin{figure}[ht]
+
+%   \centering
+
+%   \begin{tikzpicture}
+%     \pic[rotate=75]  at ( 0,0) {cube};
+
+%     \pic[rotate=80]  at ( 2,0) {cube};
+
+%     \pic[rotate=85]  at ( 4,0) {cube};
+
+%     \pic[rotate=90]  at ( 6,0) {cube};
+
+%     \pic[rotate=95]  at ( 8,0) {cube};
+
+%     \pic[rotate=100] at (10,0) {cube};
+%   \end{tikzpicture}
+
+%   \caption{Sześcian (cube),~8}
+
+% \end{figure}
+% % ##################
+
+
+
+
+
+% % ##################
+% \begin{figure}[ht]
+
+%   \centering
+
+%   \begin{tikzpicture}
+%     \pic[rotate=100] at ( 0,0) {cube};
+
+%     \pic[rotate=105] at ( 2,0) {cube};
+
+%     \pic[rotate=110] at ( 4,0) {cube};
+
+%     \pic[rotate=115] at ( 6,0) {cube};
+
+%     \pic[rotate=120] at ( 8,0) {cube};
+
+%     \pic[rotate=125] at (10,0) {cube};
+%   \end{tikzpicture}
+
+%   \caption{Sześcian (cube),~9}
+
+% \end{figure}
+% % ##################
+
+
+
+
+
+% % ##################
+% \begin{figure}[ht]
+
+%   \centering
+
+%   \begin{tikzpicture}
+%     \pic[rotate=125] at ( 0,0) {cube};
+
+%     \pic[rotate=130] at ( 2,0) {cube};
+
+%     \pic[rotate=135] at ( 4,0) {cube};
+
+%     \pic[rotate=140] at ( 6,0) {cube};
+
+%     \pic[rotate=145] at ( 8,0) {cube};
+
+%     \pic[rotate=150] at (10,0) {cube};
+%   \end{tikzpicture}
+
+%   \caption{Sześcian (cube),~10}
+
+% \end{figure}
+% % ##################
+
+
+
+
+
+% % ##################
+% \begin{figure}[ht]
+
+%   \centering
+
+%   \begin{tikzpicture}
+%     \pic[rotate=150] at ( 0,0) {cube};
+
+%     \pic[rotate=155] at ( 2,0) {cube};
+
+%     \pic[rotate=160] at ( 4,0) {cube};
+
+%     \pic[rotate=165] at ( 6,0) {cube};
+
+%     \pic[rotate=170] at ( 8,0) {cube};
+
+%     \pic[rotate=175] at (10,0) {cube};
+%   \end{tikzpicture}
+
+%   \caption{Sześcian (cube),~11}
+
+% \end{figure}
+% % ##################
+
+
+
+
+
+% % ##################
+% \begin{figure}[ht]
+
+%   \centering
+
+%   \begin{tikzpicture}
+%     \pic[rotate=175] at ( 0,0) {cube};
+
+%     \pic[rotate=180] at ( 2,0) {cube};
+
+%     \pic[rotate=185] at ( 4,0) {cube};
+
+%     \pic[rotate=190] at ( 6,0) {cube};
+
+%     \pic[rotate=195] at ( 8,0) {cube};
+
+%     \pic[rotate=200] at (10,0) {cube};
+%   \end{tikzpicture}
+
+%   \caption{Sześcian (cube),~12}
+
+% \end{figure}
+% % ##################
+
+
+
+
+
+% % ##################
+% \begin{figure}[ht]
+
+%   \centering
+
+%   \begin{tikzpicture}
+%     \pic[rotate=200] at ( 0,0) {cube};
+
+%     \pic[rotate=205] at ( 2,0) {cube};
+
+%     \pic[rotate=210] at ( 4,0) {cube};
+
+%     \pic[rotate=215] at ( 6,0) {cube};
+
+%     \pic[rotate=220] at ( 8,0) {cube};
+
+%     \pic[rotate=225] at (10,0) {cube};
+%   \end{tikzpicture}
+
+%   \caption{Sześcian (cube),~13}
+
+% \end{figure}
+% % ##################
+
+
+
+
+
+% % ##################
+% \begin{figure}[ht]
+
+%   \centering
+
+%   \begin{tikzpicture}
+%     \pic[rotate=225] at ( 0,0) {cube};
+
+%     \pic[rotate=230] at ( 2,0) {cube};
+
+%     \pic[rotate=235] at ( 4,0) {cube};
+
+%     \pic[rotate=240] at ( 6,0) {cube};
+
+%     \pic[rotate=245] at ( 8,0) {cube};
+
+%     \pic[rotate=250] at (10,0) {cube};
+%   \end{tikzpicture}
+
+%   \caption{Sześcian (cube),~14}
+
+% \end{figure}
+% % ##################
+
+
+
+
+
+% % ##################
+% \begin{figure}[ht]
+
+%   \centering
+
+%   \begin{tikzpicture}
+%     \pic[rotate=250] at ( 0,0) {cube};
+
+%     \pic[rotate=255] at ( 2,0) {cube};
+
+%     \pic[rotate=260] at ( 4,0) {cube};
+
+%     \pic[rotate=265] at ( 6,0) {cube};
+
+%     \pic[rotate=270] at ( 8,0) {cube};
+
+%     \pic[rotate=275] at (10,0) {cube};
+%   \end{tikzpicture}
+
+%   \caption{Sześcian (cube),~15}
+
+% \end{figure}
+% % ##################
+
+
+
+
+
+% % ##################
+% \begin{figure}[ht]
+
+%   \centering
+
+%   \begin{tikzpicture}
+%     \pic[rotate=275] at ( 0,0) {cube};
+
+%     \pic[rotate=280] at ( 2,0) {cube};
+
+%     \pic[rotate=285] at ( 4,0) {cube};
+
+%     \pic[rotate=290] at ( 6,0) {cube};
+
+%     \pic[rotate=295] at ( 8,0) {cube};
+
+%     \pic[rotate=300] at (10,0) {cube};
+%   \end{tikzpicture}
+
+%   \caption{Sześcian (cube),~16}
+
+% \end{figure}
+% % ##################
+
+
+
+
+
+% % ##################
+% \begin{figure}[ht]
+
+%   \centering
+
+%   \begin{tikzpicture}
+%     \pic[rotate=300] at ( 0,0) {cube};
+
+%     \pic[rotate=305] at ( 2,0) {cube};
+
+%     \pic[rotate=310] at ( 4,0) {cube};
+
+%     \pic[rotate=315] at ( 6,0) {cube};
+
+%     \pic[rotate=320] at ( 8,0) {cube};
+
+%     \pic[rotate=325] at (10,0) {cube};
+%   \end{tikzpicture}
+
+%   \caption{Sześcian (cube),~17}
+
+% \end{figure}
+% % ##################
+
+
+
+
+
+% % ##################
+% \begin{figure}[ht]
+
+%   \centering
+
+%   \begin{tikzpicture}
+%     \pic[rotate=325] at ( 0,0) {cube};
+
+%     \pic[rotate=330] at ( 2,0) {cube};
+
+%     \pic[rotate=335] at ( 4,0) {cube};
+
+%     \pic[rotate=340] at ( 6,0) {cube};
+
+%     \pic[rotate=345] at ( 8,0) {cube};
+
+%     \pic[rotate=350] at (10,0) {cube};
+%   \end{tikzpicture}
+
+%   \caption{Sześcian (cube),~18}
+
+% \end{figure}
+% % ##################
+
+
+
+
+
+% % ##################
+% \begin{figure}[ht]
+
+%   \centering
+
+%   \begin{tikzpicture}
+%     \pic[rotate=350] at ( 0,0) {cube};
+
+%     \pic[rotate=355] at ( 2,0) {cube};
+
+%     \pic[rotate=360] at ( 4,0) {cube};
+%   \end{tikzpicture}
+
+%   \caption{Sześcian (cube),~19}
+
+% \end{figure}
+% % ##################
+
+
+
+
+
+% % ##################
+% \begin{figure}[ht]
+
+%   \centering
+
+%   \begin{tikzpicture}
+%     \pic at (0,0) {cube 2};
+%   \end{tikzpicture}
+
+%   \caption{Sześcian (cube 2),~20}
+
+% \end{figure}
+% % ##################
+
+
+
+
+
+% % ##################
+% \begin{figure}[ht]
+
+%   \centering
+
+%   \begin{tikzpicture}
+%     \pic at (0,0) {cube 2};
+
+%     \pic at (2,0) {cube 2};
+
+%     \pic at (0,3) {cube 2};
+
+%     \pic at (3,2) {cube 2};
+%   \end{tikzpicture}
+
+%   \caption{Sześcian (cube 2),~21}
+
+% \end{figure}
+% % ##################
+
+
+
+
+
+% % ##################
+% \begin{figure}[ht]
+
+%   \centering
+
+%   \begin{tikzpicture}
+%     \pic at (0,0) {cube 2};
+
+%     \pic[scale=1.5] at ( 3,0) {cube 2};
+
+%     \pic[scale=2]   at ( 6,0) {cube 2};
+
+%     \pic[scale=3]   at (10,0) {cube 2};
+%   \end{tikzpicture}
+
+%   \caption{Sześcian (cube 2),~22}
+
+% \end{figure}
+% % ##################
+
+
+
+
+
+% % ##################
+% \begin{figure}[ht]
+
+%   \centering
+
+%   \begin{tikzpicture}
+%     \pic at (0,0) {cube 2};
+
+%     \pic[scale=0.9]  at ( 2,0) {cube 2};
+
+%     \pic[scale=0.75] at ( 4,0) {cube 2};
+
+%     \pic[scale=0.6]  at ( 6,0) {cube 2};
+
+%     \pic[scale=0.5]  at ( 8,0) {cube 2};
+
+%     \pic[scale=0.25] at (10,0) {cube 2};
+%   \end{tikzpicture}
+
+%   \caption{Sześciany (cube 2),~23}
+
+% \end{figure}
+% % ##################
+
+
+
+
+
+% ##################
+\begin{figure}[ht]
+
+  \centering
+
+  \begin{tikzpicture}
+    \pic at (0,0) {cube 2};
+
+    \pic[rotate=5]  at ( 2.3,0) {cube 2};
+
+    \pic[rotate=10] at ( 4.6,0) {cube 2};
+
+    \pic[rotate=15] at ( 6.9,0) {cube 2};
+
+    \pic[rotate=20] at ( 9.2,0) {cube 2};
+
+    \pic[rotate=25] at (11.5,0) {cube 2};
+  \end{tikzpicture}
+
+  \caption{Sześcian (cube 2),~24}
+
+\end{figure}
+% ##################
+
+
+
+
+
+% ##################
+\begin{figure}[ht]
+
+  \centering
+
+  \begin{tikzpicture}
+    \pic[rotate=25] at (   0,0) {cube 2};
+
+    \pic[rotate=30] at ( 2.3,0) {cube 2};
+
+    \pic[rotate=35] at ( 4.6,0) {cube 2};
+
+    \pic[rotate=40] at ( 6.9,0) {cube 2};
+
+    \pic[rotate=45] at ( 9.2,0) {cube 2};
+
+    \pic[rotate=50] at (11.5,0) {cube 2};
+  \end{tikzpicture}
+
+  \caption{Sześcian (cube 2),~25}
+
+\end{figure}
+% ##################
+
+
+
+
+
+% ##################
+\begin{figure}[ht]
+
+  \centering
+
+  \begin{tikzpicture}
+    \pic[rotate=50] at (   0,0) {cube 2};
+
+    \pic[rotate=55] at ( 2.3,0) {cube 2};
+
+    \pic[rotate=60] at ( 4.6,0) {cube 2};
+
+    \pic[rotate=65] at ( 6.9,0) {cube 2};
+
+    \pic[rotate=70] at ( 9.2,0) {cube 2}
+  \end{tikzpicture}
+
+  \caption{Sześciany (cube),~25}
+
+\end{figure}
+% ##################
+
+
+
+
+
+% % ##################
+% \begin{figure}[ht]
+
+%   \centering
+
+%   \begin{tikzpicture}[line join=round]
+%     \draw (-3.5,0) .. controls (-3.5,2) and (-1.5,2.5) .. (0,2.5) ..
+%     controls (1.5,2.5) and (3.5,2) .. (3.5,0) .. controls (3.5,-2)
+%     and (1.5,-2.5) .. (0,-2.5) .. controls (-1.5,-2.5) and (-3.5,-2)
+%     .. (-3.5,0);
+
+%     \draw (-2,0.2) .. controls (-1.5,-0.3) and (-1,-0.5) .. (0,-0.5)
+%     .. controls (1,-0.5) and (1.5,-0.3) .. (2,0.2);
+
+%     \draw (-1.75,0) .. controls (-1.5,0.3) and (-1,0.5) .. (0,0.5)
+%     .. controls (1,0.5) and (1.5,0.3) .. (1.75,0);
+%   \end{tikzpicture}
+
+%   \caption{Torus,~1}
+
+% \end{figure}
+% % ##################
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+% % ##################
+% \begin{figure}[ht]
+
+%   \centering
+
+%   \begin{tikzpicture}[line join=round]
+%     \coordinate (A1) at (-2,0,0);
+
+%     \coordinate (A2) at (0.3,-0.1,2);
+
+%     \coordinate (A3) at (2,0,0);
+
+%     \coordinate (A4) at (0,2,0);
+
+
+
+%     \draw[thick,dashed,opacity=0.4] (A1) -- (A3);
+
+
+%     \fill[color=SoftOrange,opacity=0.6] (A1) -- (A2) -- (A4) --
+%     cycle;
+
+%     \fill[color=SoftBlue,opacity=0.6] (A2) -- (A3) -- (A4) -- cycle;
+
+
+
+%     \draw[thick] (A1) -- (A2) -- (A3) -- (A4) -- cycle;
+
+%     \draw[thick] (A2) -- (A4);
+
+
+
+%     %     \node at (A1) {A1};
+
+%     %     \node at (A2) {A2};
+
+%     %     \node at (A3) {A3};
+
+%     %     \node at (A4) {A4};
+%   \end{tikzpicture}
+
+%   \caption{Czworościan,~1}
+
+% \end{figure}
+% % ##################
+
+
+
+
+
+% % ##################
+% \begin{figure}[ht]
+
+%   \centering
+
+%   \begin{tikzpicture}[line join=round]
+%     \coordinate (A1) at (-2,0,0);
+
+%     \coordinate (A2) at (0.3,-0.1,2);
+
+%     \coordinate (A3) at (2,0,-0.4);
+
+%     \coordinate (A4) at (0,2,0);
+
+
+
+%     \draw[thick,dashed,opacity=0.4] (A1) -- (A3);
+
+
+%     \fill[color=SoftOrange,opacity=0.6] (A1) -- (A2) -- (A4) --
+%     cycle;
+
+%     \fill[color=SoftBlue,opacity=0.6] (A2) -- (A3) -- (A4) -- cycle;
+
+
+
+%     \draw[thick] (A1) -- (A2) -- (A3) -- (A4) -- cycle;
+
+%     \draw[thick] (A2) -- (A4);
+
+
+
+%     %     \node at (A1) {A1};
+
+%     %     \node at (A2) {A2};
+
+%     %     \node at (A3) {A3};
+
+%     %     \node at (A4) {A4};
+%   \end{tikzpicture}
+
+%   \caption{Czworościan,~2}
+
+% \end{figure}
+% % ##################
+
+
+
+
+
+% % ##################
+% \begin{figure}[ht]
+
+%   \centering
+
+%   \begin{tikzpicture}[line join=round]
+%     \coordinate (A1) at (-1,0.3,1);
+
+%     \coordinate (A2) at (0,-2.2,0);
+
+%     \coordinate (A3) at (1.9,-0.7,0.1);
+
+%     \coordinate (A4) at (0.8,2,-0.2);
+
+
+
+%     \draw[thick,dashed,opacity=0.4] (A2) -- (A4);
+
+
+%     \fill[color=SoftOrange,opacity=0.6] (A1) -- (A2) -- (A3) --
+%     cycle;
+
+%     \fill[color=SoftBlue,opacity=0.6] (A1) -- (A3) -- (A4) -- cycle;
+
+
+
+%     \draw[thick] (A1) -- (A2) -- (A3) -- (A4) -- cycle;
+
+%     \draw[thick] (A1) -- (A3);
+
+
+
+%     %     \node at (A1) {A1};
+
+%     %     \node at (A2) {A2};
+
+%     %     \node at (A3) {A3};
+
+%     %     \node at (A4) {A4};
+%   \end{tikzpicture}
+
+%   \caption{Czworościan,~3}
+
+% \end{figure}
+% % ##################
+
+
+
+
+
+% % ##################
+% \begin{figure}[ht]
+
+%   \centering
+
+%   \begin{tikzpicture}[scale=5,line join=round]
+%     \coordinate (A1) at (0,0);
+
+%     \coordinate (A2) at (0.4,-0.2);
+
+%     \coordinate (A3) at (1,0);
+
+%     \coordinate (A4) at (0.6,0.2);
+
+%     \coordinate (B1) at (0.5,0.5);
+
+%     \coordinate (B2) at (0.5,-0.5);
+
+
+
+%     \draw[thick,dashed,opacity=0.6] (A1) -- (A4) -- (A3);
+
+%     \draw[thick,dashed,opacity=0.6] (B1) -- (A4) -- (B2);
+
+
+
+%     \fill[color=softorange,opacity=0.6] (A1) -- (A2) -- (B1) --
+%     cycle;
+
+%     \fill[color=strongorange,opacity=0.6] (A1) -- (A2) -- (B2) --
+%     cycle;
+
+%     \fill[color=SoftBlue,opacity=0.6] (A2) -- (A3) -- (B1) -- cycle;
+
+%     \fill[color=StrongBlue,opacity=0.6] (A2) -- (A3) -- (B2) --
+%     cycle;
+
+
+
+%     \draw[thick] (A1) -- (B1) -- (A3) -- (B2) -- cycle;
+
+%     \draw[thick] (A1) -- (A2) -- (B1);
+
+%     \draw[thick] (B2) -- (A2) -- (A3);
+
+
+
+%     %     \node at (A1) {A1};
+
+%     %     \node at (A2) {A2};
+
+%     %     \node at (A3) {A3};
+
+%     %     \node at (A4) {A4};
+
+%     %     \node at (B1) {B1};
+
+%     %     \node at (B2) {B2};
+%   \end{tikzpicture}
+
+%   \caption{Ośmiościan,~1}
+
+% \end{figure}
+% % ##################
+
+
+
+
+
+% % ##################
+% \begin{figure}[ht]
+
+%   \centering
+
+%   \begin{tikzpicture}[line join=round,scale=3,z=-5.5]
+%     \coordinate (A1) at (-1,0,0);
+
+%     \coordinate (A2) at (0,0,1);
+
+%     \coordinate (A3) at (1,0,0);
+
+%     \coordinate (A4) at (0,0,-1);
+
+%     \coordinate (B1) at (0,1,0);
+
+%     \coordinate (B2) at (0,-1,0);
+
+
+
+%     \draw[thick,dashed,opacity=0.6] (A1) -- (A4) -- (B1);
+
+%     \draw[thick,dashed,opacity=0.6] (A3) -- (A4) -- (B2);
+
+
+
+%     \fill[color=softorange,opacity=0.6] (A1) -- (A2) -- (B1) --
+%     cycle;
+
+%     \fill[color=strongorange,opacity=0.6] (A1) -- (A2) -- (B2) --
+%     cycle;
+
+%     \fill[color=SoftBlue,opacity=0.6] (A2) -- (A3) -- (B1) -- cycle;
+
+%     \fill[color=StrongBlue,opacity=0.6] (A2) -- (A3) -- (B2) --
+%     cycle;
+
+
+
+%     \draw[thick] (A1) -- (B1) -- (A3) -- (B2) -- cycle;
+
+%     \draw[thick] (A1) -- (A2) -- (B1);
+
+%     \draw[thick] (A3) -- (A2) -- (B2);
+
+
+
+%     %     \node at (A1) {A1};
+
+%     %     \node at (A2) {A2};
+
+%     %     \node at (A3) {A3};
+
+%     %     \node at (A4) {A4};
+
+%     %     \node at (B1) {B1};
+
+%     %     \node at (B2) {B2};
+%   \end{tikzpicture}
+
+%   \caption{Ośmiościan,~2}
+
+% \end{figure}
+% % ##################
+
+
+
+
+
+% % ##################
+% \begin{figure}[ht]
+
+%   \centering
+
+%   \begin{tikzpicture}[line join=round,scale=3]
+%     \coordinate (A1) at (-1,0,0);
+
+%     \coordinate (A2) at (0,0,1);
+
+%     \coordinate (A3) at (1,0,0);
+
+%     \coordinate (A4) at (0,0,-1);
+
+%     \coordinate (B1) at (0,1,0);
+
+%     \coordinate (B2) at (0,-1,0);
+
+
+
+%     \draw[thick,dashed,opacity=0.6] (A1) -- (A4) -- (B1);
+
+%     \draw[thick,dashed,opacity=0.6] (A3) -- (A4) -- (B2);
+
+
+
+%     \fill[color=softorange,opacity=0.6] (A1) -- (A2) -- (B1) --
+%     cycle;
+
+%     \fill[color=strongorange,opacity=0.6] (A1) -- (A2) -- (B2) --
+%     cycle;
+
+%     \fill[color=SoftBlue,opacity=0.6] (A2) -- (A3) -- (B1) -- cycle;
+
+%     \fill[color=StrongBlue,opacity=0.6] (A2) -- (A3) -- (B2) --
+%     cycle;
+
+
+
+%     \draw[thick] (A1) -- (B1) -- (A3) -- (B2) -- cycle;
+
+%     \draw[thick] (A1) -- (A2) -- (B1);
+
+%     \draw[thick] (A3) -- (A2) -- (B2);
+
+
+
+%     %     \node at (A1) {A1};
+
+%     %     \node at (A2) {A2};
+
+%     %     \node at (A3) {A3};
+
+%     %     \node at (A4) {A4};
+
+%     %     \node at (B1) {B1};
+
+%     %     \node at (B2) {B2};
+%   \end{tikzpicture}
+
+%   \caption{Ośmiościan,~3}
+
+% \end{figure}
+% % ##################
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+% % ##################
+% \begin{figure}[ht]
+
+%   \centering
+
+%   \begin{tikzpicture}
+%     \pic (Emma) {seagull};
+
+%     \pic (Alexandra) at (0,1) {seagull};
+
+
+%     \draw (Emma-left wing) -- (Alexandra-left wing);
+%   \end{tikzpicture}
+
+%   \caption{Ti\emph{k}Z Manula. Pics: Small Pictures on~Paths,~12}
+
+% \end{figure}
+% % ##################
+
+
+
+
+
+% % ##################
+% \begin{figure}[ht]
+
+%   \centering
+%   %   Tu jest błąd
+%   %   \begin{tikzpicture}[flapping seagull/.pic={
+%   %     To nie działa.
+%   %     \draw (0,0) :path={
+%   %     0s= {"{(180:3mm) to [bend left] (0,0) to [bend left]
+%   %     (0:3mm)}"=base},
+%   %     1s= "{(160:3mm) to [bend left] (0,0) to [bend left]
+%   %     (20:3mm)}",
+%   %     2s= "{(180:3mm) to [bend left] (0,0) to [bend left]
+%   %     (0:3mm)}",
+%   %     repeats };
+%   %   }]
+
+
+%   %     \pic :rotate={0s="0", 20s="90"} {flapping seagull};
+
+%   %     \pid at (1.5,1.5) {flapping seagull};
+%   %   \end{tikzpicture}
+
+%   \caption{Ti\emph{k}Z Manula. Pics: Small Pictures on~Paths,~13}
+
+% \end{figure}
+% % ##################
+
+
+
+
+
+% % ##################
+% \begin{figure}[ht]
+
+%   \centering
+
+%   \begin{tikzpicture}
+%     \draw (3,0) coordinate (A) -- (0,1) coordinate (B) -- (1,2)
+%     coordinate (C) pic [draw, "$\alpha$"] {angle};
+%   \end{tikzpicture}
+
+%   \caption{Ti\emph{k}Z Manula. Pics: Small Pictures on~Paths,~14}
+
+% \end{figure}
+% % ##################
+
+
+
+
+
+% % ##################
+% \begin{figure}[ht]
+
+%   \centering
+
+%   \begin{tikzpicture}[fill=blue!30]
+%     \draw (0,0) pic {my circle=2mm} -- (1,1) pic {my circle=5mm};
+%   \end{tikzpicture}
+
+%   \caption{Ti\emph{k}Z Manula. Pics: Small Pictures on~Paths,~15}
+
+% \end{figure}
+% % ##################
+
+
+
+
+
+Główne źródła na których opierają się kod tych rysunków, bądź miejsce
+skąd ich kod został w~praktyce przepisany są następujące. Jeśli nie
+zaznaczono inaczej pochodzą one z~Stack Exchange.
+
+\begin{itemize}
+\item[--]
+  \href{http://mirrors.nic.cz/tex-archive/graphics/pgf/base/doc/pgfmanual.pdf}
+  {\emph{Ti\emph{k}Z \& PFG. Manual for Version 3.1.5b}};
+
+% \item[--]
+%   \href{https://tex.stackexchange.com/questions/348609/draw-a-3d-sphere-with-radius-with-tikz}
+%   {\emph{Draw a~3D sphere with radius with Ti\emph{k}Z}};
+
+% \item[--]
+%   \href{https://tex.stackexchange.com/questions/17204/drawing-polyhedra-using-tikz-with-semi-transparent-and-shading-effect}
+%   {\emph{Drawing polyhedra using Ti\emph{k}Z with semi-transparent
+%       and~shading effect}};
+
+% \item[--]
+%   \href{https://tex.stackexchange.com/questions/42812/3d-bodies-in-tikz}
+%   {\emph{3D bodies in Ti\emph{k}Z}};
+
+% \item[--]
+%   \href{https://tex.stackexchange.com/questions/348/how-to-draw-a-torus}
+%   {\emph{How to draw a~torus}};
+
+\end{itemize}
+
+
+
+
+
+
+
+
+
+
+% ############################
+
+% Koniec dokumentu
+\end{document}
