@@ -44,6 +44,11 @@
 % ------------------------------
 \usepackage{tikz}  % Wspaniały pakiet PGF/TikZ
 
+\usetikzlibrary{calc}
+\usetikzlibrary{through}
+\usetikzlibrary{intersections}
+\usetikzlibrary{backgrounds}
+
 
 
 
@@ -68,9 +73,9 @@
 
 % ---------------------------------------------------------------------
 % Tytuł, autor, data
-\title{
+\title{Ti\textit{k}Z \& PGF \\
   \href{http://piotrkosoft.net/pub/mirrors/CTAN/graphics/pgf/base/doc/pgfmanual.pdf}{Ti\textit{k}Z \& PGF Manual, v. 3.1.9a} \\
-  3~Tutorial: A~Petri-Net for Hagen}
+  4~Tutorial: Euclid's Amber Version~of the~\emph{Elements}}
 
 \author{}
 
@@ -103,12 +108,6 @@
 
 
 
-\newpage
-
-
-
-
-
 % ##################
 \begin{figure}[ht]
 
@@ -120,7 +119,8 @@
 
   \end{tikzpicture}
 
-  \caption{Ti\textit{k}Z Manula. A~Petri-Net for Hagen,~1}
+  \caption{Ti\textit{k}Z Manula. Euclid's Amber Version~of
+    the~\textit{Elements},~1}
 
 \end{figure}
 % ##################
@@ -138,9 +138,14 @@
 
 
 
+
+
+
+
   \end{tikzpicture}
 
-  \caption{Ti\textit{k}Z Manula. A~Petri-Net for Hagen,~2}
+  \caption{Ti\textit{k}Z Manula. Euclid's Amber Version~of
+    the~\emph{Elements},~2}
 
 \end{figure}
 % ##################
@@ -158,9 +163,16 @@
 
 
 
+
+
+
+
+
+
   \end{tikzpicture}
 
-  \caption{Ti\textit{k}Z Manula. A~Petri-Net for Hagen,~3}
+  \caption{Ti\textit{k}Z Manula. Euclid's Amber Version~of
+    the~\textit{Elements},~3}
 
 \end{figure}
 % ##################
@@ -178,9 +190,16 @@
 
 
 
+
+
+
+
+
+
   \end{tikzpicture}
 
-  \caption{Ti\textit{k}Z Manula. A~Petri-Net for Hagen,~4}
+  \caption{Ti\textit{k}Z Manula. Euclid's Amber Version~of
+    the~\textit{Elements},~4}
 
 \end{figure}
 % ##################
@@ -198,9 +217,18 @@
 
 
 
+
+
+
+
+
+
+
+
   \end{tikzpicture}
 
-  \caption{Ti\textit{k}Z Manula. A~Petri-Net for Hagen,~5}
+  \caption{Ti\textit{k}Z Manula. Euclid's Amber Version~of
+    the~\textit{Elements},~5}
 
 \end{figure}
 % ##################
@@ -218,9 +246,20 @@
 
 
 
+
+
+
+
+
+
+
+
+
+
   \end{tikzpicture}
 
-  \caption{Ti\textit{k}Z Manula. A~Petri-Net for Hagen,~6}
+  \caption{Ti\textit{k}Z Manula. Euclid's Amber Version~of
+    the~\textit{Elements},~6}
 
 \end{figure}
 % ##################
@@ -238,9 +277,21 @@
 
 
 
+
+
+
+
+
+
+
+
+
+
+
   \end{tikzpicture}
 
-  \caption{Ti\textit{k}Z Manula. A~Petri-Net for Hagen,~7}
+  \caption{Ti\textit{k}Z Manula. Euclid's Amber Version~of
+    the~\textit{Elements},~7}
 
 \end{figure}
 % ##################
@@ -258,9 +309,16 @@
 
 
 
+
+
+
+
+
+
   \end{tikzpicture}
 
-  \caption{Ti\textit{k}Z Manula. A~Petri-Net for Hagen,~8}
+  \caption{Ti\textit{k}Z Manula. Euclid's Amber Version~of
+    the~\textit{Elements},~8}
 
 \end{figure}
 % ##################
@@ -278,9 +336,31 @@
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   \end{tikzpicture}
 
-  \caption{Ti\textit{k}Z Manula. A~Petri-Net for Hagen,~9}
+  \caption{Ti\textit{k}Z Manula. Euclid's Amber Version~of
+    the~\textit{Elements},~9}
 
 \end{figure}
 % ##################
@@ -298,9 +378,32 @@
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   \end{tikzpicture}
 
-  \caption{Ti\textit{k}Z Manula. A~Petri-Net for Hagen,~10}
+  \caption{Ti\textit{k}Z Manula. Euclid's Amber Version~of
+    the~\textit{Elements},~10}
 
 \end{figure}
 % ##################
@@ -318,9 +421,67 @@
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   \end{tikzpicture}
 
-  \caption{Ti\textit{k}Z Manula. A~Petri-Net for Hagen,~11}
+  \caption{Ti\textit{k}Z Manula. Euclid's Amber Version~of
+    the~\textit{Elements},~11}
 
 \end{figure}
 % ##################
@@ -338,9 +499,17 @@
 
 
 
+
+
+
+
+
+
+
   \end{tikzpicture}
 
-  \caption{Ti\textit{k}Z Manula. A~Petri-Net for Hagen,~12}
+  \caption{Ti\textit{k}Z Manula. Euclid's Amber Version~of
+    the~\textit{Elements},~12}
 
 \end{figure}
 % ##################
@@ -358,9 +527,24 @@
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   \end{tikzpicture}
 
-  \caption{Ti\textit{k}Z Manula. A~Petri-Net for Hagen,~13}
+  \caption{Ti\textit{k}Z Manula. Euclid's Amber Version~of
+    the~\textit{Elements},~13}
 
 \end{figure}
 % ##################
@@ -378,9 +562,21 @@
 
 
 
+
+
+
+
+
+
+
+
+
+
+
   \end{tikzpicture}
 
-  \caption{Ti\textit{k}Z Manula. A~Petri-Net for Hagen,~14}
+  \caption{Ti\textit{k}Z Manula. Euclid's Amber Version~of
+    the~\textit{Elements},~14}
 
 \end{figure}
 % ##################
@@ -398,9 +594,28 @@
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   \end{tikzpicture}
 
-  \caption{Ti\textit{k}Z Manula. A~Petri-Net for Hagen,~15}
+  \caption{Ti\textit{k}Z Manula. Euclid's Amber Version~of
+    the~\textit{Elements},~15}
 
 \end{figure}
 % ##################
@@ -418,9 +633,35 @@
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   \end{tikzpicture}
 
-  \caption{Ti\textit{k}Z Manula. A~Petri-Net for Hagen,~16}
+  \caption{Ti\textit{k}Z Manula. Euclid's Amber Version~of
+    the~\textit{Elements},~16}
 
 \end{figure}
 % ##################
@@ -438,9 +679,36 @@
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   \end{tikzpicture}
 
-  \caption{Ti\textit{k}Z Manula. A~Petri-Net for Hagen,~17}
+  \caption{Ti\textit{k}Z Manula. Euclid's Amber Version~of
+    the~\textit{Elements},~17}
 
 \end{figure}
 % ##################
@@ -458,250 +726,83 @@
 
 
 
-  \end{tikzpicture}
-
-  \caption{Ti\textit{k}Z Manula. A~Petri-Net for Hagen,~18}
-
-\end{figure}
-% ##################
 
 
 
 
 
-% ##################
-\begin{figure}[ht]
-
-  \centering
-
-  \begin{tikzpicture}
-
-
-
-  \end{tikzpicture}
-
-  \caption{Ti\textit{k}Z Manula. A~Petri-Net for Hagen,~19}
-
-\end{figure}
-% ##################
 
 
 
 
 
-% ##################
-\begin{figure}[ht]
-
-  \centering
-
-
-  \begin{tikzpicture}
-
-
-
-  \end{tikzpicture}
-
-  \caption{Ti\textit{k}Z Manula. A~Petri-Net for Hagen,~20}
-
-\end{figure}
-% ##################
 
 
 
 
 
-% ##################
-\begin{figure}[ht]
-
-  \centering
-
-  \begin{tikzpicture}
-
-
-
-  \end{tikzpicture}
-
-  \caption{Ti\textit{k}Z Manula. A~Petri-Net for Hagen,~21}
-
-\end{figure}
-% ##################
 
 
 
 
 
-% ##################
-\begin{figure}[ht]
 
-  \centering
 
-  \begin{tikzpicture}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
   \end{tikzpicture}
 
-  \caption{Ti\textit{k}Z Manula. A~Petri-Net for Hagen,~22}
-
-\end{figure}
-% ##################
-
-
-
-
-
-% ##################
-\begin{figure}[ht]
-
-  \centering
-
-  \begin{tikzpicture}
-
-
-
-  \end{tikzpicture}
-
-  \caption{Ti\textit{k}Z Manula. A~Petri-Net for Hagen,~23}
-
-\end{figure}
-% ##################
-
-
-
-
-
-% ##################
-\begin{figure}[ht]
-
-  \centering
-
-  \begin{tikzpicture}
-
-
-
-  \end{tikzpicture}
-
-  \caption{Ti\textit{k}Z Manula. A~Petri-Net for Hagen,~24}
-
-\end{figure}
-% ##################
-
-
-
-
-
-% ##################
-\begin{figure}[ht]
-
-  \centering
-
-  \begin{tikzpicture}
-
-
-
-  \end{tikzpicture}
-
-  \caption{Ti\textit{k}Z Manula. A~Petri-Net for Hagen,~25}
-
-\end{figure}
-% ##################
-
-
-
-
-
-% ##################
-\begin{figure}[ht]
-
-  \centering
-
-  \begin{tikzpicture}
-
-
-
-  \end{tikzpicture}
-
-  \caption{Ti\textit{k}Z Manula. A~Petri-Net for Hagen,~26}
-
-\end{figure}
-% ##################
-
-
-
-
-
-% ##################
-\begin{figure}[ht]
-
-  \centering
-
-  \begin{tikzpicture}
-
-
-
-  \end{tikzpicture}
-
-  \caption{Ti\textit{k}Z Manula. A~Petri-Net for Hagen,~27}
-
-\end{figure}
-% ##################
-
-
-
-
-
-% ##################
-\begin{figure}[ht]
-
-  \centering
-
-  \begin{tikzpicture}
-
-
-
-  \end{tikzpicture}
-
-  \caption{Ti\textit{k}Z Manula. A~Petri-Net for Hagen,~28}
-
-\end{figure}
-% ##################
-
-
-
-
-
-% ##################
-\begin{figure}[ht]
-
-  \centering
-
-  \begin{tikzpicture}
-
-
-
-  \end{tikzpicture}
-
-  \caption{Ti\textit{k}Z Manula. A~Petri-Net for Hagen,~29}
-
-\end{figure}
-% ##################
-
-
-
-
-
-% ##################
-\begin{figure}[ht]
-
-  \centering
-
-  \begin{tikzpicture}
-
-
-
-  \end{tikzpicture}
-
-  \caption{Ti\textit{k}Z Manula. A~Petri-Net for Hagen,~30}
+  \caption{Ti\textit{k}Z Manula. Euclid's Amber Version~of
+    the~\textit{Elements},~17}
 
 \end{figure}
 % ##################
