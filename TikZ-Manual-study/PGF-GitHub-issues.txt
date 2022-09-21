@@ -1,6 +1,110 @@
 https://github.com/pgf-tikz/pgf
 
+Komenda do generowania manuala.
+time l3build doc -q -H
+
 Lista przeczytanych issues o dokumentacji.
 
+Do zrobienia.
+https://github.com/pgf-tikz/pgf/issues/604
+https://github.com/pgf-tikz/pgf/issues/1142
+https://github.com/pgf-tikz/pgf/issues/1159
+https://github.com/pgf-tikz/pgf/issues/1183
+https://github.com/pgf-tikz/pgf/issues/1191
 
+
+
+Przeczytaj.
+https://github.com/pgf-tikz/pgf/issues/624
+https://github.com/pgf-tikz/pgf/issues/437
+https://github.com/pgf-tikz/pgf/issues/495
+https://github.com/pgf-tikz/pgf/issues/666
+https://github.com/pgf-tikz/pgf/issues/794
+https://github.com/pgf-tikz/pgf/issues/817
+https://github.com/pgf-tikz/pgf/issues/975
+https://github.com/pgf-tikz/pgf/issues/998
+https://github.com/pgf-tikz/pgf/issues/1024
+https://github.com/pgf-tikz/pgf/issues/1059
+https://github.com/pgf-tikz/pgf/issues/1133
+https://github.com/pgf-tikz/pgf/issues/1134
+https://github.com/pgf-tikz/pgf/issues/1161
+
+
+
+
+
+
+
+
+
+
+
+
+
+Tu skończyłem.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Komenda do generowania manuala.
+time l3build doc -q -H
 
