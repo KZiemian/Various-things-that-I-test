@@ -3,6 +3,8 @@ https://github.com/pgf-tikz/pgf
 Komenda do generowania manuala.
 time l3build doc -q -H
 
+time lualatex TikZ-PGF-3-1-9a-Manual-01-Introduction.tex
+
 Lista przeczytanych issues o dokumentacji.
 
 Do zrobienia.
@@ -107,4 +109,3 @@ Tu skończyłem.
 
 Komenda do generowania manuala.
 time l3build doc -q -H
-
