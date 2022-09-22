@@ -1,4 +1,0 @@
-QuantumOptics.jl. Simulating quantum mechanics in modern, open source programming language
-
-Abstract:
-Development of computers and computer science result of arriving around 2010 in new wave of programming languages, from which Julia was designed for numerical and scientific computation. QuantumOptics.jl is numerical framework written in this language that want provide easy to use and at the same time robust tools for simulation of open quantum systems. This presentation consisting of both talking and live coding, wants to give short overview of prospects and achievements of QuantumOptics.jl packages with some background information about Julia language.
