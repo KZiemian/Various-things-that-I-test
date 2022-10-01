@@ -49,42 +49,44 @@ text."
 
 
 
-
 Page 29.
 "This manual describes both the design of TikZ and its usage." What about PGF?
 
 "Second, it might be a good idea to read the tutorial." -> "tutorials"?
 
+"which then really shipped out" czy "which then is really shipped out"???
+
+"the described command, environment or option is printed in red."
+Co w tej książce jest na czerwono???
 
 
 
+Page 31.
+"In TikZ, to draw a picture, at the start of the picture you need to tell TEX or L A TEX that you want to start a picture." Może da się to napisać zgrabniej?
 
 
 
+Page 32.
+„When executed, that is, run via pdflatex or via latex followed by dvips, the resulting will contain something that looks like this:” Co z innymi silnikami takimi jak lualatex???
 
 
 
+Page 33.
+Napisać jaką krzywą Beziera reprezentuje ta skaładnia (P1) .. controls (C1) and (C2) .. (P2).
 
 
 
+Page 34.
+"by a radius in brackets as in the following example: (Note that the previous position is used as the center of the circle.)" Trzeba poprawić interpunkcje.
+
+Wokół jakiego punktu wykonywany jest obrót w komendzie \draw[rotate=30]???
 
 
 
+Page 35.
+"these rectangles and then there is the border that is not “closed”." Nie rozumiem o co chodzi z tą „zamkniętą granicą”???
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+Gdzie jest ustawiony środek siatki (grid)??? W sensie, co ustala, gdzie leży choć jedno przecięci linii poziomej z pionową?
 
 
 
