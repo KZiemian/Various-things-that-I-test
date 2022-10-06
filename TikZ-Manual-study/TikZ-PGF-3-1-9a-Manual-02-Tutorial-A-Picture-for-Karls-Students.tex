@@ -74,6 +74,8 @@
 % ------------------------------
 \usepackage{tikz}  % Wspaniały pakiet PGF/TikZ
 
+% \listfiles
+
 
 
 
@@ -184,10 +186,35 @@ Abc \tikz \draw[rotate=30] (0,0) ellipse [x radius=6pt, y radius=3pt]; def.
 \vspace{2em}
 
 
+
 Abc \tikz \draw[step=2pt] (0,0) grid (10pt,10pt); def.
 
+\vspace{2em}
 
 
+
+Abc \tikz \draw[step=0.5] (0,0) grid (2,2); def.
+
+\vspace{2em}
+
+
+
+Coś tu jest nie tak.
+
+\tikzset{help lines test/.style=very thin}
+
+
+Abc 1 \tikz \draw[help lines,step=0.5] (0,0) grid (2,2); def. \hspace{2em}
+Abc 2 \tikz \draw[help lines,very thin,step=0.5] (0,0) grid (2,2); def.
+\hspace{2em}
+Abc 3 \tikz \draw[help lines test,step=0.5] (0,0) grid (2,2); def.
+
+\vspace{2em}
+
+
+
+Abc 4 \tikz \draw[very thin,step=0.5] (0,0) grid (2,2); def. \hspace{2em}
+Abc 5 \tikz \draw[very thin,help lines,step=0.5] (0,0) grid (2,2); def.
 
 
 
@@ -363,191 +390,468 @@ Abc \tikz \draw[step=2pt] (0,0) grid (10pt,10pt); def.
 
 
 
-% % ##################
-% \begin{figure}[ht]
-%   \centering
+% ##################
+\begin{figure}[ht]
 
-%   \begin{tikzpicture}[line width=2mm]
-%     \draw [arrows = {-Bracket[reversed,line join=round]}]
-%     (0,0) -- (1,0);
-%   \end{tikzpicture}
+  \centering
 
-%   \caption{Ti\emph{k}Z 8.}
-% \end{figure}
-% % ##################
+  \begin{tikzpicture}
 
+    \draw[step=0.5cm,gray,very thin] (-1.4,-1.4) grid (1.4,1.4);
 
+    \draw (-1.5,0) -- (1.5,0);
 
+    \draw (0,-1.5) -- (0,1.5);
 
+    \draw (0,0) circle [radius=1cm];
 
-% % ##################
-% \begin{figure}[ht]
-%   \centering
+  \end{tikzpicture}
 
-%   \begin{tikzpicture}[line width=2mm]
-%     \draw [arrows = {-Computer Modern Rightarrow[round]}]
-%     (0,0) -- (1,0);
-%   \end{tikzpicture}
+  \caption{Ti\textit{k}Z \& PGF Manula. A~Picture for Karl's Students,~8}
 
-%   \caption{Ti\emph{k}Z 9.}
-% \end{figure}
-% % ##################
+\end{figure}
+% ##################
 
 
 
 
 
-% % ##################
-% \begin{figure}[ht]
-%   \centering
+% ##################
+\begin{figure}[ht]
+  \centering
 
-%   \begin{tikzpicture}[line width=2mm]
-%     \draw [arrows = {-Bracket[reversed,round]}] (0,0) -- (1,0);
-%   \end{tikzpicture}
+  \begin{tikzpicture}[help lines/.style={color=blue!50,very thin}]
 
-%   \caption{Ti\emph{k}Z 10.}
-% \end{figure}
-% % ##################
+    \draw[help lines,step=0.5] (0,0) grid (2,2);
 
+  \end{tikzpicture}
 
+  \caption{Ti\textit{k}Z \& PGF Manula. A~Picture for Karl's Students,~9}
 
+\end{figure}
+% ##################
 
 
-% % ##################
-% \begin{figure}[ht]
-%   \centering
 
-%   \begin{tikzpicture}[line width=2mm]
-%     \draw [arrows = {-Computer Modern Rightarrow[sharp]}] (0,0) -- (1,0);
-%   \end{tikzpicture}
 
-%   \caption{Ti\emph{k}Z 11.}
-% \end{figure}
-% % ##################
 
+\tikzset{Karl's grid/.style={help lines,color=blue!50}}
 
+% ##################
+\begin{figure}[ht]
 
+  \centering
 
+  \begin{tikzpicture}
 
-% % ##################
-% \begin{figure}[ht]
-%   \centering
+    \draw[Karl's grid,step=0.5] (0,0) grid (2,2);
 
-%   \begin{tikzpicture}[line width=2mm]
-%     \draw [arrows = {-Bracket[reversed,sharp]}] (0,0) -- (1,0);
-%   \end{tikzpicture}
+  \end{tikzpicture}
 
-%   \caption{Ti\emph{k}Z 12.}
-% \end{figure}
-% % ##################
+  \caption{Ti\textit{k}Z \& PGF Manula. A~Picture for Karl's Students,~10}
 
+\end{figure}
+% ##################
 
 
 
 
-% % ##################
-% \begin{figure}[ht]
-%   \centering
 
-%   \begin{tikzpicture}
-%     \draw [arrows = {-Latex[line width=0.1pt, fill=white, length=10pt]}]
-%     (0,0) -- (1,0);
-%   \end{tikzpicture}
+% ##################
+\begin{figure}[ht]
+  \centering
 
-%   \caption{Ti\emph{k}Z 13.}
-% \end{figure}
-% % ##################
+  \begin{tikzpicture}
+    [Karl's grid one/.style ={help lines,color=#1!50},
+    Karl's grid one/.default=blue]
 
 
+    \draw[Karl's grid one] (0,0) grid (1.5,2);
 
+    \draw[Karl's grid one=red] (2,0) grid (3.5,2);
 
+  \end{tikzpicture}
 
-% % ##################
-% \begin{figure}[ht]
-%   \centering
+  \caption{Ti\textit{k}Z \& PGF Manula. A~Picture for Karl's Students,~11}
 
-%   \begin{tikzpicture}
-%     \draw [arrows = {-Latex[line width=1pt, fill=white, length=10pt]}]
-%     (0,0) -- (1,0);
-%   \end{tikzpicture}
+\end{figure}
+% ##################
 
-%   \caption{Ti\emph{k}Z 14.}
-% \end{figure}
-% % ##################
 
 
 
 
+% ##################
+\begin{figure}[ht]
 
-% % ##################
-% \begin{figure}[ht]
-%   \centering
+  \centering
 
-%   \def\wall{ \fill [fill=black!50] (1,-0.5) rectangle (2,0.5);
-%     \pattern [pattern=bricks] (1,-0.5) rectangle (2,0.5);
-%     \draw [line width=1pt] (1cm+0.5pt,-0.5) -- ++(0,1);
-%   }
+  \begin{tikzpicture}
 
-%   \begin{tikzpicture}
-%     \wall
+    \draw (0,0) -- (4,0);
 
-%     % The "line"
-%     \draw [red,line width=1mm] (-1,0) -- (1,0);
-%   \end{tikzpicture}
+    \node at (2,-0.25) {Normal};
 
-%   \caption{Ti\emph{k}Z 15.}
-% \end{figure}
-% % ##################
 
+    \draw[very thin] (0,1) -- (4,1);
 
+    \node at (2,0.75) {Very thin};
 
 
+    \draw[thin] (0,2) -- (4,2);
 
-% % ##################
-% \begin{figure}[ht]
-%   \centering
+    \node at (2,1.75) {Thin};
 
-%   \def\wall{ \fill [fill=black!50] (1,-0.5) rectangle (2,0.5);
-%     \pattern [pattern=bricks] (1,-0.5) rectangle (2,0.5);
-%     \draw [line width=1pt] (1cm+0.5pt,-0.5) -- ++(0,1);
-%   }
 
-%   \begin{tikzpicture}
-%     \wall
+    \draw[semithick] (0,3) -- (4,3);
 
-%     \draw [red,line width=1mm,-{Stealth[length=1cm,open,blue]}]
-%     (-1,0) -- (1,0);
-%   \end{tikzpicture}
+    \node at (2,2.75) {Semithick};
 
-%   \caption{Ti\emph{k}Z 16.}
-% \end{figure}
-% % ##################
 
+    \draw[thick] (0,4) -- (4,4);
 
+    \node at (2,3.75) {Thick};
 
+  \end{tikzpicture}
 
+  \caption{Ti\textit{k}Z \& PGF Manula. A~Picture for Karl's Students,~12}
 
-% % ##################
-% \begin{figure}[ht]
-%   \centering
+\end{figure}
+% ##################
 
-%   \def\wall{ \fill [fill=black!50] (1,-0.5) rectangle (2,0.5);
-%     \pattern [pattern=bricks] (1,-0.5) rectangle (2,0.5);
-%     \draw [line width=1pt] (1cm+0.5pt,-0.5) -- ++(0,1);
-%   }
 
-%   \begin{tikzpicture}
-%     \wall
 
-%     \draw [red!25,line width=1mm] (-1,0) -- (1,0);
 
-%     \draw [red,line width=1mm]
-%     (-1,-0.5) .. controls (0,-0.5) and (0,0) .. (1,0);
-%   \end{tikzpicture}
 
-%   \caption{Ti\emph{k}Z 17.}
-% \end{figure}
-% % ##################
+% ##################
+\begin{figure}[ht]
+
+  \centering
+
+  \begin{tikzpicture}
+
+    \draw (-3,-3) -- (-0.5,-3) -- (0,-1) -- (2,-1);
+
+    \node at (-2,-3.25) {Normal};
+
+
+    \draw[very thin] (-3,-2) -- (-0.7,-2) -- (0,-0.9) -- (2,-0.9);
+
+    \node at (-2,-2.25) {Very thin};
+
+
+    \draw[thin] (-3,-1) -- (-0.7,-1) -- (0,-0.8) -- (2,-0.8);
+
+    \node at (-2,-1.25) {Thin};
+
+
+    \draw[semithick] (-3,0) -- (-0.7,0) -- (0,-0.7) -- (2,-0.7);
+
+    \node at (-2,-0.25) {Semithick};
+
+
+    \draw[thick] (-3,1) -- (-0.7,1) -- (0,-0.6) -- (2,-0.6);
+
+    \node at (-2,0.75) {Thick};
+
+
+    \draw[very thick] (-3,2) -- (-0.7,2) -- (0.1,-0.5) -- (2,-0.5);
+
+    \node at (-2,1.75) {Very thick};
+
+
+    \draw[ultra thick] (-3,3) -- (-0.7,3) -- (0.2,-0.4) -- (2,-0.4);
+
+    \node at (-2,2.75) {Ultra thick};
+
+  \end{tikzpicture}
+
+  \caption{Ti\textit{k}Z \& PGF Manula. A~Picture for Karl's Students,~13}
+
+\end{figure}
+% ##################
+
+
+
+
+
+% ##################
+\begin{figure}[ht]
+
+  \centering
+
+  \begin{tikzpicture}
+
+    \draw[dashed] (0,-0.5) -- (8,-0.5);
+
+    \draw (0,-0.65) -- (0,-0.35);
+
+    \draw (1,-0.65) -- (1,-0.35);
+
+    \draw (2,-0.65) -- (2,-0.35);
+
+    \draw (3,-0.65) -- (3,-0.35);
+
+    \draw (4,-0.65) -- (4,-0.35);
+
+    \draw (5,-0.65) -- (5,-0.35);
+
+    \draw (6,-0.65) -- (6,-0.35);
+
+    \draw (7,-0.65) -- (7,-0.35);
+
+    \draw (8,-0.65) -- (8,-0.35);
+
+
+    \node[scale=0.7] at (0.5,-0.9) {Ultra thin};
+
+    \node[scale=0.7] at (1.5,-1.3) {Very thin};
+
+    \node[scale=0.7] at (2.5,-0.9) {Thin};
+
+    \node[scale=0.7] at (3.5,-1.3) {Normal};
+
+    \node[scale=0.7] at (4.5,-0.9) {Semithick};
+
+    \node[scale=0.7] at (5.5,-1.3) {Thick};
+
+    \node[scale=0.7] at (6.5,-0.9) {Very thick};
+
+    \node[scale=0.7] at (7.5,-1.3) {Ultra thick};
+
+
+
+    \draw[ultra thin] (0,0) -- (1,0);
+
+    \draw[very thin] (1,0) -- (2,0);
+
+    \draw[thin] (2,0) -- (3,0);
+
+    \draw (3,0) -- (4,0);
+
+    \draw[semithick] (4,0) -- (5,0);
+
+    \draw[thick] (5,0) -- (6,0);
+
+    \draw[very thick] (6,0) -- (7,0);
+
+    \draw[ultra thick] (7,0) -- (8,0);
+
+  \end{tikzpicture}
+
+  \caption{Ti\textit{k}Z \& PGF Manula. A~Picture for Karl's Students,~14}
+
+\end{figure}
+% ##################
+
+
+
+
+
+% ##################
+\begin{figure}[ht]
+
+  \centering
+
+  \begin{tikzpicture}[help lines 1/.style={very thin},]
+
+    \draw[step=0.5] (0,0) grid (1.5,1.5);
+
+    \node at (0.75,-0.5) {Normal};
+
+
+
+    \begin{scope}[xshift=2cm]
+
+      \draw[help lines,step=0.5] (0,0) grid (1.5,1.5);
+
+      \node at (0.75,-0.5) {Help lines};
+
+    \end{scope}
+
+
+
+    \begin{scope}[xshift=4cm]
+
+      \draw[help lines,very thin,step=0.5] (0,0) grid (1.5,1.5);
+
+      \node[align=left] at (0.75,-0.75)
+      {Help lines, \\
+        very thin};
+
+    \end{scope}
+
+
+
+    \begin{scope}[xshift=6cm]
+
+      \draw[very thin,help lines,step=0.5] (0,0) grid (1.5,1.5);
+
+      \node[align=left] at (0.75,-0.75)
+      {Very thin, \\
+        help line};
+
+    \end{scope}
+
+
+
+    \begin{scope}[xshift=8cm]
+
+      \draw[very thin,step=0.5] (0,0) grid (1.5,1.5);
+
+      \node at (0.75,-0.5) {Very thin};
+
+    \end{scope}
+
+
+
+    \begin{scope}[xshift=10cm]
+
+      \draw[help lines 1,step=0.5] (0,0) grid (1.5,1.5);
+
+      \node[align=left] at (0.75,-0.75)
+      {Help \\
+        lines 1};
+
+    \end{scope}
+
+  \end{tikzpicture}
+
+  \caption{Ti\textit{k}Z \& PGF Manula. A~Picture for Karl's Students,~15}
+
+\end{figure}
+% ##################
+
+
+
+
+
+% ##################
+\begin{figure}[ht]
+
+  \centering
+
+  \begin{tikzpicture}
+
+    \draw[step=0.5] (0,0) grid (1.5,1.5);
+
+    \node at (0.75,-0.25) {Normal};
+
+
+
+    \begin{scope}[xshift=2cm]
+
+      \draw[help lines,step=0.5] (0,0) grid (1.5,1.5);
+
+      \node[align=left] at (0.75,-0.5)
+      {Help \\
+        lines};
+
+    \end{scope}
+
+
+
+    \begin{scope}[xshift=4cm]
+
+      \draw[ultra thin,step=0.5] (0,0) grid (1.5,1.5);
+
+      \node at (0.75,-0.5) {Ultra thin};
+
+    \end{scope}
+
+
+
+    \begin{scope}[xshift=6cm]
+
+      \draw[very thin,step=0.5] (0,0) grid (1.5,1.5);
+
+      \node at (0.75,-0.5) {Very thin};
+
+    \end{scope}
+
+
+
+
+
+    \begin{scope}[yshift=-3cm]
+
+      \draw[thin,step=0.5] (0,0) grid (1.5,1.5);
+
+      \node at (0.75,-0.25) {Thin};
+
+    \end{scope}
+
+
+
+    \begin{scope}[xshift=2cm,yshift=-3cm]
+
+      \draw[semithick,step=0.5] (0,0) grid (1.5,1.5);
+
+      \node at (0.75,-0.25) {Semithick};
+
+    \end{scope}
+
+
+
+    \begin{scope}[xshift=4cm,yshift=-3cm]
+
+      \draw[thick,step=0.5] (0,0) grid (1.5,1.5);
+
+      \node at (0.75,-0.25) {Thick};
+
+    \end{scope}
+
+
+
+    \begin{scope}[xshift=6cm,yshift=-3cm]
+
+      \draw[very thick,step=0.5] (0,0) grid (1.5,1.5);
+
+      \node at (0.75,-0.25) {Very thick};
+
+    \end{scope}
+
+
+
+
+
+    \begin{scope}[yshift=-6cm]
+
+      \draw[ultra thick,step=0.5] (0,0) grid (1.5,1.5);
+
+      \node at (0.75,-0.3) {Ultra thick};
+
+    \end{scope}
+
+  \end{tikzpicture}
+
+  \caption{Ti\textit{k}Z \& PGF Manula. A~Picture for Karl's Students,~16}
+
+\end{figure}
+% ##################
+
+
+
+
+
+% ##################
+\begin{figure}[ht]
+
+  \centering
+
+  \begin{tikzpicture}
+
+
+
+
+
+
+  \end{tikzpicture}
+
+  \caption{Ti\textit{k}Z \& PGF Manula. A~Picture for Karl's Students,~17}
+
+\end{figure}
+% ##################
 
 
 

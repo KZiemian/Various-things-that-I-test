@@ -88,19 +88,23 @@ Page 35.
 
 Gdzie jest ustawiony środek siatki (grid)??? W sensie, co ustala, gdzie leży choć jedno przecięci linii poziomej z pionową?
 
+Czy czytelnik będzie rozumiał zapis blue!50???
+
+
+
+Page 36.
+"In this example, the definition of the style Karl's grid is given as an optional argument to the
+{tikzpicture} environment. Additional styles for other elements would follow after a comma. With many
+styles in effect, the optional argument of the environment may easily happen to be longer than the actual
+contents." Co to właściwie znaczy?
+
+Czy czytelnik zrozumie #1 jako pierwszy opcjonalny argument?
 
 
 
 
-
-
-
-
-
-
-
-
-
+tikz.sty    2021/05/15 v3.1.9a (3.1.9a)
+pgf.sty    2021/05/15 v3.1.9a (3.1.9a)
 
 
 
