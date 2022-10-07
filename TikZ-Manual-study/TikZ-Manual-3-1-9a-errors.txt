@@ -108,9 +108,9 @@ pgf.sty    2021/05/15 v3.1.9a (3.1.9a)
 
 
 
+Page 156.
 
-
-
+"using a Bézier curve" -> "using a cubic Bézier curve".
 
 
 

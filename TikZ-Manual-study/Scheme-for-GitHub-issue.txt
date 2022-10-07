@@ -1,0 +1,55 @@
+
+
+OS: Ubuntu 18.04.
+TeX distribution: TeX Live version 2022.
+PGF/TikZ version: 3.1.9a
+Output files created using `lualatex`, LuaHBTeX, version 1.15.0 (TeX Live 2022).
+
+Proposition. Rewriting beginning of section 2.10 (tutorial "A Picture for Karl's Students")
+
+When I was starting learning TikZ, command to draw a circle was very intuitive, while this for drawing arc was quite confusing for a while. I was assuming that to draw the arc you specify center of some circle, circle's radius, start angle and end angel of arc, not the beginning of arc, which results in few confusing moments. To make learning TikZ easier to people like me, I propose how starting paragraph of section 2.10 of manual (page 36 in version 3.1.9a) can be rewritten.
+
+My English is not very good, so I want to write this here, before making any possible PR. If it earn your approval and someone will help with the English, I can make a PR if needed.
+
+For this, the arc path construction operation is useful,
+which draws part of a circle or ellipse. This arc operation is followed by options in brackets that specify
+the arc. An example would be arc[start angle=10, end angle=80, radius=10pt], which means exactly
+what it says. Karl obviously needs an arc from 0◦ to 30◦. The radius should be something relatively small,
+perhaps around one third of the circle’s radius. When one uses the arc path construction operation, the
+specified arc will be added with its starting point at the current position. So, we first have to “get there”.
+
+
+My proposition. Excuse my poor English.
+For this, the arc path construction operation is useful,
+which draws part of a circle or ellipse. This arc operation is followed by options in brackets that specify
+the arc. An example would be `arc[start angle=10, end angle=80, radius=10pt]`. Karl notice that this command works differently that `circle [radius=10pt]`. When drawing circle previous position is taken as its center and circle is drawn around this point, when using arc last point st taken as the beginning of the circle. Karl know that such command would draw arc of the circle with clear stated start and end angle and give radius, but where this circle has its origin?
+
+Karl as a math teacher can of course solves this problem. First you need to draw the straight line l going through the point when arc start and intersecting x line at the angel equal to start angel. If 0 degree < start angle < 180 degree you need go down along the line l, point that is in the distance radius from the starting point of the arc is the center of arc that we seek. When 180 < start angle < 360 we repeated this procedure with only difference that we no going up along the line l. When start angle is equal to 0, we just need to right line parallel to x axis that goes through beginning of the arc and go along it to the left, until we make a distance equal to radius. Case of start angle equal to 180 is as analogous, we only go to the right this time.
+
+Karl find this exercises quite funny. But, he notice that in TikZ angels can be less than 0 degree and greater that 360, so how to find center of the arc then? Of course in such situation you need to write you angle as x + n 360 degree when n is some integer, and repeat what we did before. Karl is happy that TikZ provide you with such mathematical exercises. Karl's students hopes that such problem won't be on the exam.
+
+which means exactly
+what it says. Karl obviously needs an arc from 0 ◦ to 30 ◦ . The radius should be something relatively small,
+perhaps around one third of the circle’s radius. When one uses the arc path construction operation, the
+specified arc will be added with its starting point at the current position. So, we first have to “get there”.
+
+
+
+Proposition. Rewriting in tutorial "A Picture for Karl's Students" paragraph on Bézier curves
+
+Sometimes ago my job was to write in LaTeX some academics lectures and making for them as much graphics in TikZ as possible. When I was doing lectures on  3D graphics for game developers I needed to draw pictures of Bézier curves of various degree. I assumed that `.. controls <point> ..` draws quadratic Bézier curve and `.. controls <point> and <point> ..` draws cubic Bézier curve, as a result I still need to correct this lectures, even if I should already end this job. My current understand of this command is based on section 14.3 "The Curve-To Operation", currently on page 156 of manual.
+
+To avoid anyone such unpleasant experience I suggest to rewrite this part of section 2.4 "Curved Path Construction" to stress even more how this option works. Below is current version and my proposition. Due to my poor English I want to present it here, not making PR with bad English in it.
+
+Current version
+> The general syntax for extending a path in a “curved” way is .. controls <first control point> and
+> <second control point> .. <end point>. You can leave out the and <second control point>, which causes the
+> first one to be used twice.
+
+My proposition
+> The general syntax for extending a path in a “curved” way is .. controls <first control point> and
+> <second control point> .. <end point>. You can leave out the and <second control point>, which causes the
+> first one to be used twice. Karl's learn that more precisely .. controls <first control point> and
+> < second control point> .. <end point> creates cubic Bézier curve with two control point at <first control point> and <second control point>, while
+> .. controls <control point> .. <end point> creates cubic Bézier with both controls point in
+> the same place. He thinks that is good way to create curves. Karl's students don't care, since Bézier curves won't be on the exam.
