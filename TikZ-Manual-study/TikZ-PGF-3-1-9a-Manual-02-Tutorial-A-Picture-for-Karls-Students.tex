@@ -29,14 +29,14 @@
 % MARGINS
 % ------------------------------
 \setmarginsrb
-{ 0.7in} % left margin
-{ 0.6in} % top margin
-{ 0.7in} % right margin
-{ 0.8in} % bottom margin
-{  20pt} % head height
-{0.25in} % head sep
-{   9pt} % foot height
-{ 0.3in} % foot sep
+{ 0.7in}  % left margin
+{ 0.6in}  % top margin
+{ 0.7in}  % right margin
+{ 0.8in}  % bottom margin
+{  20pt}  % head height
+{0.25in}  % head sep
+{   9pt}  % foot height
+{ 0.3in}  % foot sep
 
 
 
@@ -215,6 +215,12 @@ Abc 3 \tikz \draw[help lines test,step=0.5] (0,0) grid (2,2); def.
 
 Abc 4 \tikz \draw[very thin,step=0.5] (0,0) grid (2,2); def. \hspace{2em}
 Abc 5 \tikz \draw[very thin,help lines,step=0.5] (0,0) grid (2,2); def.
+
+\vspace{2em}
+
+
+Abc \tikz \draw (0,0) arc [start angle=0, end angle=315, x radius=1.75cm,
+y radius=1cm]; def.
 
 
 
@@ -845,9 +851,6 @@ Abc 5 \tikz \draw[very thin,help lines,step=0.5] (0,0) grid (2,2); def.
 
     \draw (0,0) -- (1,0) arc [start angle=45,end angle=0,radius=1];
 
-
-
-
   \end{tikzpicture}
 
   \caption{Ti\textit{k}Z \& PGF Manula. A~Picture for Karl's Students,~17}
@@ -859,85 +862,127 @@ Abc 5 \tikz \draw[very thin,help lines,step=0.5] (0,0) grid (2,2); def.
 
 
 
-% % ##################
-% \begin{figure}[ht]
-%   \centering
+% ##################
+\begin{figure}[ht]
 
-%   \def\wall{ \fill [fill=black!50] (1,-0.5) rectangle (2,0.5);
-%     \pattern [pattern=bricks] (1,-0.5) rectangle (2,0.5);
-%     \draw [line width=1pt] (1cm+0.5pt,-0.5) -- ++(0,1);
-%   }
+  \centering
 
-%   \begin{tikzpicture}
-%     \wall
+  \begin{tikzpicture}
 
-%     \draw [red!25,line width=1mm] (-1,0) -- (1,0);
+    \draw[dashed] (0,0) -- (3,0);
 
-%     \draw [red,line width=1mm,-{Stealth[length=1cm,open,blue,quick]}]
-%     (-1,-0.5) .. controls (0,-0.5) and (0,0) .. (1,0);
-%   \end{tikzpicture}
-
-%   \caption{Ti\emph{k}Z 18.}
-% \end{figure}
-% % ##################
+    \node at (1.5,-0.35) {Dashed};
 
 
+    \draw[loosely dashed] (0,1) -- (3,1);
+
+    \node at (1.5,0.65) {Loosely dashed};
 
 
+    \draw[densely dashed] (0,2) -- (3,2);
 
-% % ##################
-% \begin{figure}[ht]
-%   \centering
-
-%   \def\wall{ \fill [fill=black!50] (1,-0.5) rectangle (2,0.5);
-%     \pattern [pattern=bricks] (1,-0.5) rectangle (2,0.5);
-%     \draw [line width=1pt] (1cm+0.5pt,-0.5) -- ++(0,1);
-%   }
-
-%   \begin{tikzpicture}
-%     \wall
-
-%     \draw [red!25,line width=1mm] (-1,0) -- (1,0);
-
-%     \draw [red,line width=1mm,-{[quick,sep]>>>}]
-%     (-1,-0.5) .. controls (0,-0.5) and (0,0) .. (1,0);
-%   \end{tikzpicture}
-
-%   \caption{Ti\emph{k}Z 19.}
-% \end{figure}
-% % ##################
-
-
-Strona 200 bending.
-
-
-% % ##################
-% \begin{figure}[ht]
-%   \centering
-
-%   \begin{tikzpicture}
-
-%   \end{tikzpicture}
-
-%   \caption{Ti\emph{k}Z .}
-% \end{figure}
-% % ##################
+    \node at (1.5,1.65) {Densely dashed};
 
 
 
 
 
-% % ##################
-% \begin{figure}[ht]
-%   \centering
+    \draw[dotted] (4,0) -- (7,0);
 
-%   \begin{tikzpicture}
+    \node at (5.5,-0.35) {Dotted};
 
-%   \end{tikzpicture}
 
-%   \caption{Ti\emph{k}Z .}
-% \end{figure}
-% % ##################
+    \draw[loosely dotted] (4,1) -- (7,1);
+
+    \node at (5.5,0.65) {Loosely dotted};
+
+
+    \draw[densely dotted] (4,2) -- (7,2);
+
+    \node at (5.5,1.65) {Densely dotted};
+
+  \end{tikzpicture}
+
+  \caption{Ti\textit{k}Z \& PGF Manula. A~Picture for Karl's Students,~18}
+
+\end{figure}
+% ##################
+
+
+
+
+
+% ##################
+\begin{figure}[ht]
+
+  \centering
+
+  \begin{tikzpicture}
+
+    \draw[step=0.5cm,gray,very thin] (-1.4,-1.4) grid (1.4,1.4);
+
+
+    \draw (-1.5,0) -- (1.5,0);
+
+    \draw (0,-1.5) -- (0,1.5);
+
+
+    \draw (0,0) circle [radius=1cm];
+
+    \draw (3mm,0mm) arc [start angle=0, end angle=30, radius=3mm];
+
+  \end{tikzpicture}
+
+  \caption{Ti\textit{k}Z \& PGF Manula. A~Picture for Karl's Students,~19}
+
+\end{figure}
+% ##################
+
+
+
+
+
+% ##################
+\begin{figure}[ht]
+
+  \centering
+
+  \begin{tikzpicture}[scale=3]
+
+    \draw[step=0.5cm,gray,very thin] (-1.4,-1.4) grid (1.4,1.4);
+
+    \draw (-1.5,0) -- (1.5,0);
+
+    \draw (0,-1.5) -- (0,1.5);
+
+    \draw (0,0) circle [radius=1cm];
+
+    \draw (3mm,0mm) arc [start angle=0, end angle=30, radius=3mm];
+
+  \end{tikzpicture}
+
+  \caption{Ti\textit{k}Z \& PGF Manula. A~Picture for Karl's Students,~20}
+
+\end{figure}
+% ##################
+
+
+
+
+
+% ##################
+\begin{figure}[ht]
+
+  \centering
+
+  \begin{tikzpicture}
+
+  \end{tikzpicture}
+
+  \caption{Ti\textit{k}Z \& PGF Manula. A~Picture for Karl's Students,~21}
+
+\end{figure}
+% ##################
 
 
 
