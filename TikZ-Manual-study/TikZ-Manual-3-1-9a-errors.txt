@@ -93,6 +93,10 @@ Czy czytelnik będzie rozumiał zapis blue!50???
 
 
 Page 36.
+"In this situation you can use the \tikzset command at the beginning of the document as in" ->
+"Suppose for example that we want change style `help line` so the only things it does is setting line width to `very thin` (more about this kind of option latter). In this situation you can use the \tikzset command at the beginning of the document as in"
+
+
 "In this example, the definition of the style Karl's grid is given as an optional argument to the
 {tikzpicture} environment. Additional styles for other elements would follow after a comma. With many
 styles in effect, the optional argument of the environment may easily happen to be longer than the actual
@@ -103,6 +107,37 @@ Czy czytelnik zrozumie #1 jako pierwszy opcjonalny argument?
 
 Page 37.
 Dodaj opis tego jak wyznaczyć środek elipsy, której fragment rysujemy.
+
+
+Page 38.
+"that the previous current point is at the start" ???
+
+Page 39.
+Notacja na mieszanie kolorów green!20!white została już użyta wcześniej, a dopiero tu jest wyjaśniona.
+
+Page 40.
+
+"Karl now wants to add the sine and cosine lines."
+"For example, we can draw the sine line as follows:"
+Chodzi o linie w trójkącie prostokątnym, których stosunek da nam odpowiednią
+funkcję trygonometryczną. Można by było napisać to jaśniej.
+
+Czy w ostatnim przykładzie nie powinniśmy skorzystać ze składni (<p> |- <q>) i mieć komendę
+\draw[red,very thick] (30:1cm) -- (30:1cm |- 0,0);
+???
+
+
+Page 41.
+Czemu w pierwszych przykładach na tej stronie mamy \def a nie \newcommand.
+
+
+
+
+
+
+
+
+
 
 
 
@@ -291,7 +326,7 @@ Strona 200 bending.
 
 
 
-
+Problem \draw grid nie robi linią join, więc przy większej grubości (thick, semithick), nie wygląda to dobrze. Jak przeczytasz rozdział o grid, to zobaczy czy trzeba otworzyć issue. Może to jest dobry default???
 
 
 

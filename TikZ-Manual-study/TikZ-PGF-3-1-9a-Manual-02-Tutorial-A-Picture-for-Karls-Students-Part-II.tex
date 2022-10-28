@@ -1,0 +1,1243 @@
+% ---------------------------------------------------------------------
+% Podstawowe ustawienia i pakiety
+% ---------------------------------------------------------------------
+\RequirePackage[l2tabu, orthodox]{nag}  % Wykrywa przestarzałe i niewłaściwe
+% sposoby używania LaTeXa. Więcej jest w l2tabu English version.
+\documentclass[a4paper,11pt]{article}
+% {rozmiar papieru, rozmiar fontu}[klasa dokumentu]
+\usepackage[MeX]{polski}  % Polonizacja LaTeXa, bez niej będzie pracował
+% w języku angielskim.
+\usepackage[utf8]{inputenc} % Włączenie kodowania UTF-8, co daje dostęp
+% do polskich znaków.
+\usepackage{lmodern}  % Wprowadza fonty Latin Modern.
+\usepackage[T1]{fontenc}  % Potrzebne do używania fontów Latin Modern.
+
+
+
+% ------------------------------
+% Podstawowe pakiety (niezwiązane z ustawieniami języka)
+% ------------------------------
+\usepackage{microtype}  % Twierdzi, że poprawi rozmiar odstępów w tekście.
+\usepackage{graphicx}  % Wprowadza bardzo potrzebne komendy do wstawiania
+% grafiki.
+% \usepackage{verbatim}  % Poprawia otoczenie VERBATIME.
+% \usepackage{textcomp}  % Dodaje takie symbole jak stopnie Celsiusa,
+% wprowadzane bezpośrednio w tekście.
+\usepackage{vmargin}  % Pozwala na prostą kontrolę rozmiaru marginesów,
+% za pomocą komend poniżej. Rozmiar odstępów jest mierzony w calach.
+% ------------------------------
+% MARGINS
+% ------------------------------
+\setmarginsrb
+{ 0.7in}  % left margin
+{ 0.6in}  % top margin
+{ 0.7in}  % right margin
+{ 0.8in}  % bottom margin
+{  20pt}  % head height
+{0.25in}  % head sep
+{   9pt}  % foot height
+{ 0.3in}  % foot sep
+
+
+
+% ------------------------------
+% Często przydatne pakiety
+% ------------------------------
+% \usepackage{csquotes}  % Pozwala w prosty sposób wstawiać cytaty do tekstu.
+
+
+
+
+% ------------------------------
+% Pakiety do tekstów z nauk przyrodniczych
+% ------------------------------
+\let\lll\undefined  % Amsmath gryzie się z pakietami do języka
+% polskiego, bo oba definiują komendę \lll. Aby rozwiązać ten problem
+% oddefiniowuję tę komendę, ale może tym samym pozbywam się dużego Ł.
+\usepackage[intlimits]{amsmath}  % Podstawowe wsparcie od American
+% Mathematical Society (w skrócie AMS)
+\usepackage{amsfonts, amssymb, amscd, amsthm}  % Dalsze wsparcie od AMS
+% \usepackage{siunitx}  % Do prostszego pisania jednostek fizycznych
+\usepackage{upgreek}  % Ładniejsze greckie litery
+% Przykładowa składnia: pi = \uppi
+% \usepackage{slashed}  % Pozwala w prosty sposób pisać slash Feynmana.
+\usepackage{calrsfs}  % Zmienia czcionkę kaligraficzną w \mathcal
+% na ładniejszą. Może w innych miejscach robi to samo, ale o tym nic
+% nie wiem.
+
+
+
+
+
+% ------------------------------
+% Paczki, biblioteki i ich ustawienia dla tego pliku
+% ------------------------------
+\usepackage{tikz}  % Wspaniały pakiet PGF/TikZ
+
+% \listfiles
+
+
+
+
+
+
+
+% ------------------------------
+% Pakiet „hyperref”
+% Polecano by umieszczać go na końcu preambuły
+% ------------------------------
+\usepackage{hyperref}  % Pozwala tworzyć hiperlinki i zamienia odwołania
+% do bibliografii na hiperlinki
+
+
+
+
+
+
+
+
+
+
+% ---------------------------------------------------------------------
+% Tytuł, autor, data
+\title{Ti\textit{k}Z \& PGF \\
+  \href{http://piotrkosoft.net/pub/mirrors/CTAN/graphics/pgf/base/doc/pgfmanual.pdf}{Manual for version 3.1.9a} \\
+  2~A~Picture for Karl's Students, part~I}
+
+\author{}
+
+
+% \date{}
+% ---------------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+% ####################################################################
+\begin{document}
+% ####################################################################
+
+
+
+
+
+% ######################################
+\maketitle % Tytuł całego tekstu
+% ######################################
+
+
+
+
+
+
+
+
+
+
+% ######################################
+\newpage
+
+\section{2~Tutorial: A~Picture for Karl's Students}
+
+\vspace{2em}
+
+% ######################################
+
+
+
+
+
+% Abc 4 \tikz \draw[very thin,step=0.5] (0,0) grid (2,2); def. \hspace{2em}
+% Abc 5 \tikz \draw[very thin,help lines,step=0.5] (0,0) grid (2,2); def.
+
+\vspace{2em}
+
+
+
+
+
+% ##################
+\begin{figure}[ht]
+
+  \centering
+
+  \begin{tikzpicture}
+
+
+
+
+  \end{tikzpicture}
+
+  \caption{Ti\textit{k}Z \& PGF Manula. A~Picture for Karl's Students,~1}
+
+\end{figure}
+% ##################
+
+
+
+
+
+% ##################
+\begin{figure}[ht]
+
+  \centering
+
+  \begin{tikzpicture}
+
+    \draw (-1.5,0) -- (1.5,0) -- (0,-1.5) -- (0,1.5);
+
+  \end{tikzpicture}
+
+  \caption{Ti\textit{k}Z \& PGF Manula. A~Picture for Karl's Students,~2}
+
+\end{figure}
+% ##################
+
+
+
+
+
+% ##################
+\begin{figure}[ht]
+
+  \centering
+
+  \begin{tikzpicture}
+
+    \filldraw[gray] (0,0) circle [radius=2pt]
+    (1,1) circle [radius=2pt]
+    (2,1) circle [radius=2pt]
+    (2,0) circle [radius=2pt];
+
+    \draw (0,0) .. controls (1,1) and (2,1) .. (2,0);
+
+  \end{tikzpicture}
+
+  \caption{Ti\textit{k}Z \& PGF Manula. A~Picture for Karl's Students,~3}
+
+\end{figure}
+% ##################
+
+
+
+
+
+% ##################
+\begin{figure}[ht]
+
+  \centering
+
+  \begin{tikzpicture}
+
+    \draw (-1.5,0) -- (1.5,0);
+
+    \draw (0,-1.5) -- (0,1.5);
+
+    \draw (-1,0) .. controls (-1,0.555) and (-0.555,1) .. (0,1)
+    .. controls (0.555,1) and (1,0.555) .. (1,0);
+
+  \end{tikzpicture}
+
+  \caption{Ti\textit{k}Z \& PGF Manula. A~Picture for Karl's Students,~4}
+
+\end{figure}
+% ##################
+
+
+
+
+
+% ##################
+\begin{figure}[ht]
+
+  \centering
+
+  \begin{tikzpicture}
+
+    \draw (-1.5,0) -- (1.5,0);
+
+    \draw (0,-1.5) -- (0,1.5);
+
+    \draw (0,0) circle [radius=1cm];
+
+  \end{tikzpicture}
+
+  \caption{Ti\textit{k}Z \& PGF Manula. A~Picture for Karl's Students,~5}
+
+\end{figure}
+% ##################
+
+
+
+
+
+% ##################
+\begin{figure}[ht]
+
+  \centering
+
+  \begin{tikzpicture}
+
+    \draw (-1.5,0) -- (1.5,0);
+
+    \draw (0,-1.5) -- (0,1.5);
+
+    \draw (0,0) circle [radius=1cm];
+
+    \draw (0,0) rectangle (0.5,0.5);
+
+    \draw (-0.5,-0.5) rectangle (-1,-1);
+
+  \end{tikzpicture}
+
+  \caption{Ti\textit{k}Z \& PGF Manula. A~Picture for Karl's Students,~6}
+
+\end{figure}
+% ##################
+
+
+
+
+
+% ##################
+\begin{figure}[ht]
+
+  \centering
+
+  \begin{tikzpicture}
+
+    \draw (-1.5,0) -- (1.5,0);
+
+    \draw (0,-1.5) -- (0,1.5);
+
+    \draw (0,0) circle [radius=1cm];
+
+    \draw[step=0.5cm] (-1.4,-1.4) grid (1.4,1.4);
+
+  \end{tikzpicture}
+
+  \caption{Ti\textit{k}Z \& PGF Manula. A~Picture for Karl's Students,~7}
+
+\end{figure}
+% ##################
+
+
+
+
+
+% ##################
+\begin{figure}[ht]
+
+  \centering
+
+  \begin{tikzpicture}
+
+    \draw[step=0.5cm,gray,very thin] (-1.4,-1.4) grid (1.4,1.4);
+
+    \draw (-1.5,0) -- (1.5,0);
+
+    \draw (0,-1.5) -- (0,1.5);
+
+    \draw (0,0) circle [radius=1cm];
+
+  \end{tikzpicture}
+
+  \caption{Ti\textit{k}Z \& PGF Manula. A~Picture for Karl's Students,~8}
+
+\end{figure}
+% ##################
+
+
+
+
+
+% ##################
+\begin{figure}[ht]
+  \centering
+
+  \begin{tikzpicture}[help lines/.style={color=blue!50,very thin}]
+
+    \draw[help lines,step=0.5] (0,0) grid (2,2);
+
+  \end{tikzpicture}
+
+  \caption{Ti\textit{k}Z \& PGF Manula. A~Picture for Karl's Students,~9}
+
+\end{figure}
+% ##################
+
+
+
+
+
+\tikzset{Karl's grid/.style={help lines,color=blue!50}}
+
+% ##################
+\begin{figure}[ht]
+
+  \centering
+
+  \begin{tikzpicture}
+
+    \draw[Karl's grid,step=0.5] (0,0) grid (2,2);
+
+  \end{tikzpicture}
+
+  \caption{Ti\textit{k}Z \& PGF Manula. A~Picture for Karl's Students,~10}
+
+\end{figure}
+% ##################
+
+
+
+
+
+% ##################
+\begin{figure}[ht]
+  \centering
+
+  \begin{tikzpicture}
+    [Karl's grid one/.style ={help lines,color=#1!50},
+    Karl's grid one/.default=blue]
+
+
+    \draw[Karl's grid one] (0,0) grid (1.5,2);
+
+    \draw[Karl's grid one=red] (2,0) grid (3.5,2);
+
+  \end{tikzpicture}
+
+  \caption{Ti\textit{k}Z \& PGF Manula. A~Picture for Karl's Students,~11}
+
+\end{figure}
+% ##################
+
+
+
+
+
+% ##################
+\begin{figure}[ht]
+
+  \centering
+
+  \begin{tikzpicture}
+
+    \draw (0,0) -- (4,0);
+
+    \node at (2,-0.25) {Normal};
+
+
+    \draw[very thin] (0,1) -- (4,1);
+
+    \node at (2,0.75) {Very thin};
+
+
+    \draw[thin] (0,2) -- (4,2);
+
+    \node at (2,1.75) {Thin};
+
+
+    \draw[semithick] (0,3) -- (4,3);
+
+    \node at (2,2.75) {Semithick};
+
+
+    \draw[thick] (0,4) -- (4,4);
+
+    \node at (2,3.75) {Thick};
+
+  \end{tikzpicture}
+
+  \caption{Ti\textit{k}Z \& PGF Manula. A~Picture for Karl's Students,~12}
+
+\end{figure}
+% ##################
+
+
+
+
+
+% ##################
+\begin{figure}[ht]
+
+  \centering
+
+  \begin{tikzpicture}
+
+    \draw (-3,-3) -- (-0.5,-3) -- (0,-1) -- (2,-1);
+
+    \node at (-2,-3.25) {Normal};
+
+
+    \draw[very thin] (-3,-2) -- (-0.7,-2) -- (0,-0.9) -- (2,-0.9);
+
+    \node at (-2,-2.25) {Very thin};
+
+
+    \draw[thin] (-3,-1) -- (-0.7,-1) -- (0,-0.8) -- (2,-0.8);
+
+    \node at (-2,-1.25) {Thin};
+
+
+    \draw[semithick] (-3,0) -- (-0.7,0) -- (0,-0.7) -- (2,-0.7);
+
+    \node at (-2,-0.25) {Semithick};
+
+
+    \draw[thick] (-3,1) -- (-0.7,1) -- (0,-0.6) -- (2,-0.6);
+
+    \node at (-2,0.75) {Thick};
+
+
+    \draw[very thick] (-3,2) -- (-0.7,2) -- (0.1,-0.5) -- (2,-0.5);
+
+    \node at (-2,1.75) {Very thick};
+
+
+    \draw[ultra thick] (-3,3) -- (-0.7,3) -- (0.2,-0.4) -- (2,-0.4);
+
+    \node at (-2,2.75) {Ultra thick};
+
+  \end{tikzpicture}
+
+  \caption{Ti\textit{k}Z \& PGF Manula. A~Picture for Karl's Students,~13}
+
+\end{figure}
+% ##################
+
+
+
+
+
+% ##################
+\begin{figure}[ht]
+
+  \centering
+
+  \begin{tikzpicture}
+
+    \draw[dashed] (0,-0.5) -- (8,-0.5);
+
+    \draw (0,-0.65) -- (0,-0.35);
+
+    \draw (1,-0.65) -- (1,-0.35);
+
+    \draw (2,-0.65) -- (2,-0.35);
+
+    \draw (3,-0.65) -- (3,-0.35);
+
+    \draw (4,-0.65) -- (4,-0.35);
+
+    \draw (5,-0.65) -- (5,-0.35);
+
+    \draw (6,-0.65) -- (6,-0.35);
+
+    \draw (7,-0.65) -- (7,-0.35);
+
+    \draw (8,-0.65) -- (8,-0.35);
+
+
+    \node[scale=0.7] at (0.5,-0.9) {Ultra thin};
+
+    \node[scale=0.7] at (1.5,-1.3) {Very thin};
+
+    \node[scale=0.7] at (2.5,-0.9) {Thin};
+
+    \node[scale=0.7] at (3.5,-1.3) {Normal};
+
+    \node[scale=0.7] at (4.5,-0.9) {Semithick};
+
+    \node[scale=0.7] at (5.5,-1.3) {Thick};
+
+    \node[scale=0.7] at (6.5,-0.9) {Very thick};
+
+    \node[scale=0.7] at (7.5,-1.3) {Ultra thick};
+
+
+
+    \draw[ultra thin] (0,0) -- (1,0);
+
+    \draw[very thin] (1,0) -- (2,0);
+
+    \draw[thin] (2,0) -- (3,0);
+
+    \draw (3,0) -- (4,0);
+
+    \draw[semithick] (4,0) -- (5,0);
+
+    \draw[thick] (5,0) -- (6,0);
+
+    \draw[very thick] (6,0) -- (7,0);
+
+    \draw[ultra thick] (7,0) -- (8,0);
+
+  \end{tikzpicture}
+
+  \caption{Ti\textit{k}Z \& PGF Manula. A~Picture for Karl's Students,~14}
+
+\end{figure}
+% ##################
+
+
+
+
+
+% ##################
+\begin{figure}[ht]
+
+  \centering
+
+  \begin{tikzpicture}[help lines 1/.style={very thin},]
+
+    \draw[step=0.5] (0,0) grid (1.5,1.5);
+
+    \node at (0.75,-0.5) {Normal};
+
+
+
+    \begin{scope}[xshift=2cm]
+
+      \draw[help lines,step=0.5] (0,0) grid (1.5,1.5);
+
+      \node at (0.75,-0.5) {Help lines};
+
+    \end{scope}
+
+
+
+    \begin{scope}[xshift=4cm]
+
+      \draw[help lines,very thin,step=0.5] (0,0) grid (1.5,1.5);
+
+      \node[align=left] at (0.75,-0.75)
+      {Help lines, \\
+        very thin};
+
+    \end{scope}
+
+
+
+    \begin{scope}[xshift=6cm]
+
+      \draw[very thin,help lines,step=0.5] (0,0) grid (1.5,1.5);
+
+      \node[align=left] at (0.75,-0.75)
+      {Very thin, \\
+        help line};
+
+    \end{scope}
+
+
+
+    \begin{scope}[xshift=8cm]
+
+      \draw[very thin,step=0.5] (0,0) grid (1.5,1.5);
+
+      \node at (0.75,-0.5) {Very thin};
+
+    \end{scope}
+
+
+
+    \begin{scope}[xshift=10cm]
+
+      \draw[help lines 1,step=0.5] (0,0) grid (1.5,1.5);
+
+      \node[align=left] at (0.75,-0.75)
+      {Help \\
+        lines 1};
+
+    \end{scope}
+
+  \end{tikzpicture}
+
+  \caption{Ti\textit{k}Z \& PGF Manula. A~Picture for Karl's Students,~15}
+
+\end{figure}
+% ##################
+
+
+
+
+
+% ##################
+\begin{figure}[ht]
+
+  \centering
+
+  \begin{tikzpicture}
+
+    \draw[step=0.5] (0,0) grid (1.5,1.5);
+
+    \node at (0.75,-0.25) {Normal};
+
+
+
+    \begin{scope}[xshift=2cm]
+
+      \draw[help lines,step=0.5] (0,0) grid (1.5,1.5);
+
+      \node[align=left] at (0.75,-0.5)
+      {Help \\
+        lines};
+
+    \end{scope}
+
+
+
+    \begin{scope}[xshift=4cm]
+
+      \draw[ultra thin,step=0.5] (0,0) grid (1.5,1.5);
+
+      \node at (0.75,-0.5) {Ultra thin};
+
+    \end{scope}
+
+
+
+    \begin{scope}[xshift=6cm]
+
+      \draw[very thin,step=0.5] (0,0) grid (1.5,1.5);
+
+      \node at (0.75,-0.5) {Very thin};
+
+    \end{scope}
+
+
+
+
+
+    \begin{scope}[yshift=-3cm]
+
+      \draw[thin,step=0.5] (0,0) grid (1.5,1.5);
+
+      \node at (0.75,-0.25) {Thin};
+
+    \end{scope}
+
+
+
+    \begin{scope}[xshift=2cm,yshift=-3cm]
+
+      \draw[semithick,step=0.5] (0,0) grid (1.5,1.5);
+
+      \node at (0.75,-0.25) {Semithick};
+
+    \end{scope}
+
+
+
+    \begin{scope}[xshift=4cm,yshift=-3cm]
+
+      \draw[thick,step=0.5] (0,0) grid (1.5,1.5);
+
+      \node at (0.75,-0.25) {Thick};
+
+    \end{scope}
+
+
+
+    \begin{scope}[xshift=6cm,yshift=-3cm]
+
+      \draw[very thick,step=0.5] (0,0) grid (1.5,1.5);
+
+      \node at (0.75,-0.25) {Very thick};
+
+    \end{scope}
+
+
+
+
+
+    \begin{scope}[yshift=-6cm]
+
+      \draw[ultra thick,step=0.5] (0,0) grid (1.5,1.5);
+
+      \node at (0.75,-0.3) {Ultra thick};
+
+    \end{scope}
+
+  \end{tikzpicture}
+
+  \caption{Ti\textit{k}Z \& PGF Manula. A~Picture for Karl's Students,~16}
+
+\end{figure}
+% ##################
+
+
+
+
+
+% ##################
+\begin{figure}[ht]
+
+  \centering
+
+  \begin{tikzpicture}
+
+    \fill[color=green] (1,0) circle [radius=0.1];
+
+    \draw (0,0) -- (1,0) arc [start angle=45,end angle=0,radius=1];
+
+  \end{tikzpicture}
+
+  \caption{Ti\textit{k}Z \& PGF Manula. A~Picture for Karl's Students,~17}
+
+\end{figure}
+% ##################
+
+
+
+
+
+% ##################
+\begin{figure}[ht]
+
+  \centering
+
+  \begin{tikzpicture}
+
+    \draw[dashed] (0,0) -- (3,0);
+
+    \node at (1.5,-0.35) {Dashed};
+
+
+    \draw[loosely dashed] (0,1) -- (3,1);
+
+    \node at (1.5,0.65) {Loosely dashed};
+
+
+    \draw[densely dashed] (0,2) -- (3,2);
+
+    \node at (1.5,1.65) {Densely dashed};
+
+
+
+
+
+    \draw[dotted] (4,0) -- (7,0);
+
+    \node at (5.5,-0.35) {Dotted};
+
+
+    \draw[loosely dotted] (4,1) -- (7,1);
+
+    \node at (5.5,0.65) {Loosely dotted};
+
+
+    \draw[densely dotted] (4,2) -- (7,2);
+
+    \node at (5.5,1.65) {Densely dotted};
+
+  \end{tikzpicture}
+
+  \caption{Ti\textit{k}Z \& PGF Manula. A~Picture for Karl's Students,~18}
+
+\end{figure}
+% ##################
+
+
+
+
+
+% ##################
+\begin{figure}[ht]
+
+  \centering
+
+  \begin{tikzpicture}
+
+    \draw[step=0.5cm,gray,very thin] (-1.4,-1.4) grid (1.4,1.4);
+
+
+    \draw (-1.5,0) -- (1.5,0);
+
+    \draw (0,-1.5) -- (0,1.5);
+
+
+    \draw (0,0) circle [radius=1cm];
+
+    \draw (3mm,0mm) arc [start angle=0, end angle=30, radius=3mm];
+
+  \end{tikzpicture}
+
+  \caption{Ti\textit{k}Z \& PGF Manula. A~Picture for Karl's Students,~19}
+
+\end{figure}
+% ##################
+
+
+
+
+
+% ##################
+\begin{figure}[ht]
+
+  \centering
+
+  \begin{tikzpicture}[scale=3]
+
+    \draw[step=0.5cm,gray,very thin] (-1.4,-1.4) grid (1.4,1.4);
+
+    \draw (-1.5,0) -- (1.5,0);
+
+    \draw (0,-1.5) -- (0,1.5);
+
+    \draw (0,0) circle [radius=1cm];
+
+    \draw (3mm,0mm) arc [start angle=0, end angle=30, radius=3mm];
+
+  \end{tikzpicture}
+
+  \caption{Ti\textit{k}Z \& PGF Manula. A~Picture for Karl's Students,~20}
+
+\end{figure}
+% ##################
+
+
+
+
+
+% ##################
+\begin{figure}[ht]
+
+  \centering
+
+  \begin{tikzpicture}[scale=3]
+
+    \clip (-0.1,-0.2) rectangle (1.1,0.75);
+
+
+
+    \draw[step=0.5cm,gray,very thin] (-1.4,-1.4) grid (1.4,1.4);
+
+    \draw (-1.5,0) -- (1.5,0);
+
+    \draw (0,-1.5) -- (0,1.5);
+
+    \draw (0,0) circle [radius=1cm];
+
+    \draw (3mm,0mm) arc [start angle=0, end angle=30, radius=3mm];
+
+  \end{tikzpicture}
+
+  \caption{Ti\textit{k}Z \& PGF Manula. A~Picture for Karl's Students,~21}
+
+\end{figure}
+% ##################
+
+
+
+
+
+% ##################
+\begin{figure}[ht]
+
+  \centering
+
+  \begin{tikzpicture}[scale=3]
+
+    \clip[draw] (0.5,0.5) circle [radius=0.6cm];
+
+
+
+    \draw[step=0.5cm,gray,very thin] (-1.4,-1.4) grid (1.4,1.4);
+
+    \draw (-1.5,0) -- (1.5,0);
+
+    \draw (0,-1.5) -- (0,1.5);
+
+    \draw (0,0) circle [radius=1cm];
+
+    \draw (3mm,0mm) arc [start angle=0, end angle=30, radius=3mm];
+
+  \end{tikzpicture}
+
+  \caption{Ti\textit{k}Z \& PGF Manula. A~Picture for Karl's Students,~22}
+
+\end{figure}
+% ##################
+
+
+
+
+
+\tikz \draw (0,0) rectangle (1,1)  (0,0) parabola (1,1); \hspace{2em}
+\tikz \draw[x=1pt,y=1pt] (0,0) parabola bend (4,16) (6,12);
+
+A sine \tikz \draw[x=1ex,y=1ex] (0,0) sin (1.57,1); curve. \hspace{2em}
+\tikz \draw[x=1.57ex,y=1ex] (0,0) sin (1,1) cos (2,0) sin (3,-1) cos (4,0)
+(0,1) cos (1,0) sin (2,-1) cos (3,0) sin (4,1);
+
+
+
+
+
+% ##################
+\begin{figure}[ht]
+
+  \centering
+
+  \begin{tikzpicture}[scale=3]
+
+    \clip (-0.1,-0.2) rectangle (1.1,0.75);
+
+
+
+    \draw[step=0.5cm,gray,very thin] (-1.4,-1.4) grid (1.4,1.4);
+
+    \draw (-1.5,0) -- (1.5,0);
+
+    \draw (0,-1.5) -- (0,1.5);
+
+    \draw (0,0) circle [radius=1cm];
+
+    \fill[green!20!white] (0,0) -- (3mm,0mm)
+    arc [start angle=0, end angle=30, radius=3mm] -- (0,0);
+
+  \end{tikzpicture}
+
+  \caption{Ti\textit{k}Z \& PGF Manula. A~Picture for Karl's Students,~23}
+
+\end{figure}
+% ##################
+
+
+
+
+
+% ##################
+\begin{figure}[ht]
+
+  \centering
+
+  \begin{tikzpicture}[line width=5pt]
+
+    \draw (0,0) -- (1,0) -- (1,1) -- (0,0);
+
+    \draw (2,0) -- (3,0) -- (3,1) -- cycle;
+
+    \useasboundingbox (0,1.5);
+
+  \end{tikzpicture}
+
+  \caption{Ti\textit{k}Z \& PGF Manula. A~Picture for Karl's Students,~24}
+
+\end{figure}
+% ##################
+
+
+
+
+
+% ##################
+\begin{figure}[ht]
+  \centering
+
+  \begin{tikzpicture}[scale=3]
+
+    \clip (-0.1,-0.2) rectangle (1.1,0.75);
+
+
+
+    \draw[step=0.5cm,gray,very thin] (-1.4,-1.4) grid (1.4,1.4);
+
+    \draw (-1.5,0) -- (1.5,0);
+
+    \draw (0,-1.5) -- (0,1.5);
+
+    \draw (0,0) circle [radius=1cm];
+
+    \filldraw[fill=green!20!white, draw=green!50!black] (0,0) -- (3mm,0mm)
+    arc [start angle=0, end angle=30, radius=3mm] -- cycle;
+
+  \end{tikzpicture}
+
+  \caption{Ti\textit{k}Z \& PGF Manula. A~Picture for Karl's Students,~25}
+
+\end{figure}
+% ##################
+
+
+
+
+
+\tikz \shade (0,0) rectangle (2,1)  (3,0.5) circle [radius=0.5cm];
+
+
+
+
+
+% ##################
+\begin{figure}[ht]
+
+  \centering
+
+  \begin{tikzpicture}[rounded corners,ultra thick]
+
+    \shade[top color=yellow,bottom color=black] (0,0) rectangle +(2,1);
+
+    \shade[left color=yellow,right color=black] (3,0) rectangle +(2,1);
+
+    \shadedraw[inner color=yellow,outer color=black,draw=yellow]
+    (6,0) rectangle +(2,1);
+
+    \shade[ball color=green] (9,0.5) circle [radius=0.5cm];
+
+  \end{tikzpicture}
+
+  \caption{Ti\textit{k}Z \& PGF Manula. A~Picture for Karl's Students,~26}
+
+\end{figure}
+% ##################
+
+
+
+
+
+% ##################
+\begin{figure}[ht]
+
+  \centering
+
+  \begin{tikzpicture}[scale=3]
+
+    \clip (-0.1,-0.2) rectangle (1.1,0.75);
+
+
+
+    \draw[step=0.5cm,gray,very thin] (-1.4,-1.4) grid (1.4,1.4);
+
+    \draw (-1.5,0) -- (1.5,0);
+
+    \draw (0,-1.5) -- (0,1.5);
+
+    \draw (0,0) circle [radius=1cm];
+
+    \shadedraw[left color=gray,right color=green, draw=green!50!black]
+    (0,0) -- (3mm,0mm)
+    arc [start angle=0, end angle=30, radius=3mm] -- cycle;
+
+  \end{tikzpicture}
+
+  \caption{Ti\textit{k}Z \& PGF Manula. A~Picture for Karl's Students,~27}
+
+\end{figure}
+% ##################
+
+
+
+
+
+% ##################
+\begin{figure}[ht]
+
+  \centering
+
+  \begin{tikzpicture}[scale=3]
+
+    \clip (-0.1,-0.2) rectangle (1.1,0.75);
+
+
+
+    \draw[step=0.5cm,gray,very thin] (-1.4,-1.4) grid (1.4,1.4);
+
+    \draw (-1.5,0) -- (1.5,0);
+
+    \draw (0,-1.5) -- (0,1.5);
+
+    \draw (0,0) circle [radius=1cm];
+
+    \filldraw[fill=green!20,draw=green!50!black] (0,0) -- (3mm,0mm)
+    arc [start angle=0, end angle=30, radius=3mm] -- cycle;
+
+    \draw[red,very thick] (30:1cm) -- +(0,-0.5);
+
+  \end{tikzpicture}
+
+  \caption{Ti\textit{k}Z \& PGF Manula. A~Picture for Karl's Students,~28}
+
+\end{figure}
+% ##################
+
+
+
+
+
+% ##################
+\begin{figure}[ht]
+
+  \centering
+
+  \begin{tikzpicture}[scale=3]
+
+    \clip (-0.1,-0.2) rectangle (1.1,0.75);
+
+
+
+    \draw[step=0.5cm,gray,very thin] (-1.4,-1.4) grid (1.4,1.4);
+
+    \draw (-1.5,0) -- (1.5,0);
+
+    \draw (0,-1.5) -- (0,1.5);
+
+    \draw (0,0) circle [radius=1cm];
+
+    \filldraw[fill=green!20,draw=green!50!black] (0,0) -- (3mm,0mm)
+    arc [start angle=0, end angle=30, radius=3mm] -- cycle;
+
+    \draw[red,very thick] (30:1cm) -- +(0,-0.5);
+
+    \draw[blue,very thick] (30:1cm) ++(0,-0.5) -- (0,0);
+
+  \end{tikzpicture}
+
+  \caption{Ti\textit{k}Z \& PGF Manula. A~Picture for Karl's Students,~29}
+
+\end{figure}
+% ##################
+
+
+
+
+
+% ##################
+\begin{figure}[ht]
+
+  \centering
+
+  \def\rectanglepath{-- ++(1cm,0cm) -- ++(0cm,1cm)  -- ++(-1cm,0cm) -- cycle}
+
+  \begin{tikzpicture}
+
+    \draw (0,0) \rectanglepath;
+
+    \draw (1.5,0) \rectanglepath;
+
+  \end{tikzpicture}
+
+  \caption{Ti\textit{k}Z \& PGF Manula. A~Picture for Karl's Students,~30}
+
+\end{figure}
+% ##################
+
+
+
+
+
+
+
+
+
+
+% ############################
+
+% Koniec dokumentu
+\end{document}
