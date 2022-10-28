@@ -128,7 +128,23 @@ Czy w ostatnim przykładzie nie powinniśmy skorzystać ze składni (<p> |- <q>)
 
 
 Page 41.
-Czemu w pierwszych przykładach na tej stronie mamy \def a nie \newcommand.
+Czemu w pierwszych przykładach na tej stronie mamy \def a nie \newcommand???
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
